@@ -1,0 +1,86 @@
+{
+ "id": "4a_takeout_set",
+ "location": "4A",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.16,
+ "rotation_class": "R1",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "placed on a surface hook (z offset); original generic boxes, red band, no logos",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4a_takeout_set_SW.png",
+   "pivot": [
+    64,
+    74
+   ],
+   "canvas": [
+    128,
+    74
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "pickup",
+     "type": "pickup",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.5
+     ],
+     "offset_px": [
+      0,
+      32
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "eat_takeout",
+     "tags": [
+      "food"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "pickup",
+   "type": "pickup",
+   "pos": [
+    0.5,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "eat_takeout",
+   "tags": [
+    "food"
+   ],
+   "z": 0.0
+  }
+ ]
+}

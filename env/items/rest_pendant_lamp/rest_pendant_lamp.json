@@ -1,0 +1,61 @@
+{
+ "id": "rest_pendant_lamp",
+ "location": "amber_slice",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 2.95,
+ "rotation_class": "R1",
+ "priority": "P1",
+ "mount": "ceiling",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "on",
+  "off"
+ ],
+ "tags": [],
+ "notes": "hanging amber glass pendant over a booth/table (casts a warm floor pool when on)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_pendant_lamp_SW.png",
+   "pivot": [
+    64,
+    254
+   ],
+   "canvas": [
+    128,
+    254
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {
+    "off": {
+     "sprite": "item_rest_pendant_lamp_SW_off.png",
+     "pivot": [
+      64,
+      254
+     ],
+     "canvas": [
+      128,
+      254
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  }
+ },
+ "hooks_canonical": []
+}

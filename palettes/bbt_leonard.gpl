@@ -1,0 +1,32 @@
+GIMP Palette
+Name: BBT Leonard
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+240 207 179	skin_hi
+217 167 137	skin
+173 120  93	skin_sh
+ 74  56  48	hair_hi
+ 58  42  36	hair
+ 28  20  18	hair_sh
+ 26  20  32	glasses
+207 230 242	lens_glint
+132 148 171	hoodie_hi
+111 127 150	hoodie
+ 85  99 119	hoodie_sh
+ 61  72  89	hoodie_xsh
+ 79 138  74	tee
+ 58 107  56	tee_sh
+122  82  54	pants
+ 90  59  38	pants_sh
+ 43  34  51	shoe
+233 230 223	shoe_toe
+122 122  74	jacket_alt
+ 92  92  54	jacket_alt_sh

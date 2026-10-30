@@ -1,0 +1,158 @@
+{
+ "id": "raj_coffee_oval",
+ "location": "raj_apt",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.42,
+ "rotation_class": "R2",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "oval glass-top coffee table on a walnut base",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_raj_coffee_oval_SW.png",
+   "pivot": [
+    128,
+    130
+   ],
+   "canvas": [
+    192,
+    130
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_raj_coffee_oval_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_raj_coffee_oval_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "surface",
+     "type": "place_item",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.5
+     ],
+     "offset_px": [
+      32,
+      21
+     ],
+     "z": 0.42,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": []
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_raj_coffee_oval_SE.png",
+   "pivot": [
+    64,
+    130
+   ],
+   "canvas": [
+    192,
+    130
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_raj_coffee_oval_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_raj_coffee_oval_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "surface",
+     "type": "place_item",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.0
+     ],
+     "offset_px": [
+      -32,
+      21
+     ],
+     "z": 0.42,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": []
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "surface",
+   "type": "place_item",
+   "pos": [
+    1.0,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [],
+   "z": 0.42
+  }
+ ]
+}

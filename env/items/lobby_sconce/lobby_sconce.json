@@ -1,0 +1,43 @@
+{
+ "id": "lobby_sconce",
+ "location": "lobby",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 2.2,
+ "rotation_class": "R1",
+ "priority": "P2",
+ "mount": "wall",
+ "layer": "wall_decal",
+ "blocks_walk": false,
+ "sort_bias": -1,
+ "states": [
+  "on"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lobby_sconce_SW.png",
+   "pivot": [
+    64,
+    200
+   ],
+   "canvas": [
+    128,
+    200
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

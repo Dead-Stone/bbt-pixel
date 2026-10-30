@@ -1,0 +1,352 @@
+{
+ "id": "rest_cake_display",
+ "location": "amber_slice",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.5,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "signature cake case: open-sided glass display on a wood base, two tiers of cakes and pies",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_cake_display_SW.png",
+   "pivot": [
+    64,
+    160
+   ],
+   "canvas": [
+    128,
+    160
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "browse",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.35
+     ],
+     "offset_px": [
+      -54,
+      59
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "look_cakes",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "serve_slice",
+     "type": "work",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.4
+     ],
+     "offset_px": [
+      58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "serve_slice",
+     "tags": [
+      "staff"
+     ],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_rest_cake_display_NW.png",
+   "pivot": [
+    64,
+    160
+   ],
+   "canvas": [
+    128,
+    160
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "browse",
+     "type": "look",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.35,
+      0.5
+     ],
+     "offset_px": [
+      -54,
+      5
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "look_cakes",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "serve_slice",
+     "type": "work",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.5
+     ],
+     "offset_px": [
+      58,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "serve_slice",
+     "tags": [
+      "staff"
+     ],
+     "approach_tile": [
+      2,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_rest_cake_display_NE.png",
+   "pivot": [
+    64,
+    160
+   ],
+   "canvas": [
+    128,
+    160
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "browse",
+     "type": "look",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.35
+     ],
+     "offset_px": [
+      54,
+      5
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "look_cakes",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "serve_slice",
+     "type": "work",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.4
+     ],
+     "offset_px": [
+      -58,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "serve_slice",
+     "tags": [
+      "staff"
+     ],
+     "approach_tile": [
+      1,
+      2
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_rest_cake_display_SE.png",
+   "pivot": [
+    64,
+    160
+   ],
+   "canvas": [
+    128,
+    160
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "browse",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.35,
+      0.5
+     ],
+     "offset_px": [
+      54,
+      59
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "look_cakes",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "serve_slice",
+     "type": "work",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.4,
+      0.5
+     ],
+     "offset_px": [
+      -58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "serve_slice",
+     "tags": [
+      "staff"
+     ],
+     "approach_tile": [
+      -1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "browse",
+   "type": "look",
+   "pos": [
+    0.5,
+    1.35
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "look_cakes",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "serve_slice",
+   "type": "work",
+   "pos": [
+    0.5,
+    -0.4
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "serve_slice",
+   "tags": [
+    "staff"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    -1
+   ]
+  }
+ ]
+}

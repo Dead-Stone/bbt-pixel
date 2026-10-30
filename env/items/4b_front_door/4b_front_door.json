@@ -1,0 +1,793 @@
+{
+ "id": "4b_front_door",
+ "location": "4B",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 2.22,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "wall",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "closed",
+  "open_1",
+  "open_2",
+  "open"
+ ],
+ "tags": [
+  "hall4_door_4b"
+ ],
+ "notes": "alias hall4_door_4b. front = landing side with the brass \"4B\" plate; swings into 4B. Placed SE in the x=8 wall; knock target for Sheldon's knock_knock_penny (NW)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_front_door_SW.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.55
+     ],
+     "offset_px": [
+      -3,
+      34
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.6
+     ],
+     "offset_px": [
+      -6,
+      35
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "knock_knock_penny",
+     "tags": [
+      "knock_x3"
+     ],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "knock_spot_inside",
+     "type": "knock_spot_inside",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.45
+     ],
+     "offset_px": [
+      61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    },
+    {
+     "id": "answer_spot",
+     "type": "answer_spot",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.4
+     ],
+     "offset_px": [
+      58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "door_answer_annoyed",
+     "tags": [],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_4b_front_door_SW_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      140,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open_2": {
+     "sprite": "item_4b_front_door_SW_open_2.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      142,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open": {
+     "sprite": "item_4b_front_door_SW_open.png",
+     "pivot": [
+      64,
+      220
+     ],
+     "canvas": [
+      128,
+      220
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_4b_front_door_NW.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.45,
+      0.5
+     ],
+     "offset_px": [
+      -3,
+      30
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.4,
+      0.5
+     ],
+     "offset_px": [
+      -6,
+      29
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "knock_knock_penny",
+     "tags": [
+      "knock_x3"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "knock_spot_inside",
+     "type": "knock_spot_inside",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.45,
+      0.5
+     ],
+     "offset_px": [
+      61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "answer_spot",
+     "type": "answer_spot",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.5
+     ],
+     "offset_px": [
+      58,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "door_answer_annoyed",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_4b_front_door_NW_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      214
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open_2": {
+     "sprite": "item_4b_front_door_NW_open_2.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      140,
+      216
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open": {
+     "sprite": "item_4b_front_door_NW_open.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      174,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_4b_front_door_NE.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.45
+     ],
+     "offset_px": [
+      3,
+      30
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.4
+     ],
+     "offset_px": [
+      6,
+      29
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "knock_knock_penny",
+     "tags": [
+      "knock_x3"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "knock_spot_inside",
+     "type": "knock_spot_inside",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.45
+     ],
+     "offset_px": [
+      -61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "answer_spot",
+     "type": "answer_spot",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.4
+     ],
+     "offset_px": [
+      -58,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "door_answer_annoyed",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_4b_front_door_NE_open_1.png",
+     "pivot": [
+      76,
+      208
+     ],
+     "canvas": [
+      140,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open_2": {
+     "sprite": "item_4b_front_door_NE_open_2.png",
+     "pivot": [
+      78,
+      208
+     ],
+     "canvas": [
+      142,
+      214
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open": {
+     "sprite": "item_4b_front_door_NE_open.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      232
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_4b_front_door_SE.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.55,
+      0.5
+     ],
+     "offset_px": [
+      3,
+      34
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.5
+     ],
+     "offset_px": [
+      6,
+      35
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "knock_knock_penny",
+     "tags": [
+      "knock_x3"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "knock_spot_inside",
+     "type": "knock_spot_inside",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.45,
+      0.5
+     ],
+     "offset_px": [
+      -61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      -1,
+      1
+     ]
+    },
+    {
+     "id": "answer_spot",
+     "type": "answer_spot",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.4,
+      0.5
+     ],
+     "offset_px": [
+      -58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "door_answer_annoyed",
+     "tags": [],
+     "approach_tile": [
+      -1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_4b_front_door_SE_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open_2": {
+     "sprite": "item_4b_front_door_SE_open_2.png",
+     "pivot": [
+      76,
+      208
+     ],
+     "canvas": [
+      140,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    },
+    "open": {
+     "sprite": "item_4b_front_door_SE_open.png",
+     "pivot": [
+      110,
+      208
+     ],
+     "canvas": [
+      174,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": false
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "door",
+   "type": "door",
+   "pos": [
+    0.5,
+    0.55
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "open_door",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "knock_spot_outside",
+   "type": "knock_spot_outside",
+   "pos": [
+    0.5,
+    0.6
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "knock_knock_penny",
+   "tags": [
+    "knock_x3"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "knock_spot_inside",
+   "type": "knock_spot_inside",
+   "pos": [
+    0.5,
+    -0.45
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "knock",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    -1
+   ]
+  },
+  {
+   "id": "answer_spot",
+   "type": "answer_spot",
+   "pos": [
+    0.5,
+    -0.4
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "door_answer_annoyed",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    -1
+   ]
+  }
+ ]
+}

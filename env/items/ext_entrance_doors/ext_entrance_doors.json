@@ -1,0 +1,424 @@
+{
+ "id": "ext_entrance_doors",
+ "location": "street",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 2.7,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "wall",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "building front doors: double wood/glass doors, transom with the fictional number 2311, stone surround. Placed at z=0.45 on top of ext_entry_steps",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_entrance_doors_SW.png",
+   "pivot": [
+    128,
+    270
+   ],
+   "canvas": [
+    192,
+    270
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entrance_doors_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entrance_doors_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.55
+     ],
+     "offset_px": [
+      29,
+      50
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [
+      "to_lobby"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "buzzer",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.85,
+      0.5
+     ],
+     "offset_px": [
+      86,
+      75
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "press_buzzer",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_entrance_doors_NW.png",
+   "pivot": [
+    64,
+    270
+   ],
+   "canvas": [
+    192,
+    270
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entrance_doors_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entrance_doors_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.45,
+      1.0
+     ],
+     "offset_px": [
+      -35,
+      46
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [
+      "to_lobby"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "buzzer",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.85
+     ],
+     "offset_px": [
+      -86,
+      75
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "press_buzzer",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_entrance_doors_NE.png",
+   "pivot": [
+    128,
+    270
+   ],
+   "canvas": [
+    192,
+    270
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entrance_doors_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entrance_doors_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.45
+     ],
+     "offset_px": [
+      35,
+      46
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [
+      "to_lobby"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "buzzer",
+     "type": "use",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.15,
+      0.5
+     ],
+     "offset_px": [
+      -22,
+      21
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "press_buzzer",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_entrance_doors_SE.png",
+   "pivot": [
+    64,
+    270
+   ],
+   "canvas": [
+    192,
+    270
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entrance_doors_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entrance_doors_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.55,
+      1.0
+     ],
+     "offset_px": [
+      -29,
+      50
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [
+      "to_lobby"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "buzzer",
+     "type": "use",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.15
+     ],
+     "offset_px": [
+      22,
+      21
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "press_buzzer",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "door",
+   "type": "door",
+   "pos": [
+    1.0,
+    0.55
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "open_door",
+   "tags": [
+    "to_lobby"
+   ],
+   "z": 0.0,
+   "approach": [
+    1,
+    0
+   ]
+  },
+  {
+   "id": "buzzer",
+   "type": "use",
+   "pos": [
+    1.85,
+    0.5
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "press_buzzer",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    0
+   ]
+  }
+ ]
+}

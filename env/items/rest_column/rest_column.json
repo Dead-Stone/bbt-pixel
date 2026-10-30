@@ -1,0 +1,43 @@
+{
+ "id": "rest_column",
+ "location": "amber_slice",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 3.0,
+ "rotation_class": "R1",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "faux-stone column with a flared amber capital (signature dining-room piece)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_column_SW.png",
+   "pivot": [
+    64,
+    256
+   ],
+   "canvas": [
+    128,
+    256
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

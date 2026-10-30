@@ -1,0 +1,524 @@
+{
+ "id": "4a_kitchen_island",
+ "location": "4A",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.92,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4a_kitchen_island_SW.png",
+   "pivot": [
+    128,
+    162
+   ],
+   "canvas": [
+    192,
+    162
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_kitchen_island_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_kitchen_island_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "stool0",
+     "type": "perch",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.3
+     ],
+     "offset_px": [
+      -51,
+      10
+     ],
+     "z": 0.75,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "stool1",
+     "type": "perch",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.5,
+      1.3
+     ],
+     "offset_px": [
+      13,
+      42
+     ],
+     "z": 0.75,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.5
+     ],
+     "offset_px": [
+      32,
+      -11
+     ],
+     "z": 0.92,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "takeout"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_4a_kitchen_island_NW.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    192,
+    162
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_kitchen_island_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_kitchen_island_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "stool0",
+     "type": "perch",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.3,
+      0.5
+     ],
+     "offset_px": [
+      -51,
+      -42
+     ],
+     "z": 0.75,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "stool1",
+     "type": "perch",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.3,
+      1.5
+     ],
+     "offset_px": [
+      -115,
+      -10
+     ],
+     "z": 0.75,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.0
+     ],
+     "offset_px": [
+      -32,
+      -11
+     ],
+     "z": 0.92,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "takeout"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_4a_kitchen_island_NE.png",
+   "pivot": [
+    128,
+    162
+   ],
+   "canvas": [
+    192,
+    162
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_kitchen_island_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_kitchen_island_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "stool0",
+     "type": "perch",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.5,
+      -0.3
+     ],
+     "offset_px": [
+      115,
+      -10
+     ],
+     "z": 0.75,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "stool1",
+     "type": "perch",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.3
+     ],
+     "offset_px": [
+      51,
+      -42
+     ],
+     "z": 0.75,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.5
+     ],
+     "offset_px": [
+      32,
+      -11
+     ],
+     "z": 0.92,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "takeout"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4a_kitchen_island_SE.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    192,
+    162
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_kitchen_island_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_kitchen_island_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "stool0",
+     "type": "perch",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.3,
+      1.5
+     ],
+     "offset_px": [
+      -13,
+      42
+     ],
+     "z": 0.75,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "stool1",
+     "type": "perch",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.3,
+      0.5
+     ],
+     "offset_px": [
+      51,
+      10
+     ],
+     "z": 0.75,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.0
+     ],
+     "offset_px": [
+      -32,
+      -11
+     ],
+     "z": 0.92,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "takeout"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "stool0",
+   "type": "perch",
+   "pos": [
+    0.5,
+    1.3
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_stool",
+   "tags": [],
+   "z": 0.75,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "stool1",
+   "type": "perch",
+   "pos": [
+    1.5,
+    1.3
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_stool",
+   "tags": [],
+   "z": 0.75,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "surface0",
+   "type": "place_item",
+   "pos": [
+    1.0,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "takeout"
+   ],
+   "z": 0.92
+  }
+ ]
+}

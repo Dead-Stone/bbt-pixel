@@ -1,0 +1,296 @@
+{
+ "id": "raj_dining_round",
+ "location": "raj_apt",
+ "footprint": [
+  2,
+  2
+ ],
+ "height_m": 0.95,
+ "rotation_class": "R1",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "round walnut dining table with four metallic chairs (built in); holds the glowing-crystal display",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_raj_dining_round_SW.png",
+   "pivot": [
+    128,
+    194
+   ],
+   "canvas": [
+    256,
+    194
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_raj_dining_round_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_raj_dining_round_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_raj_dining_round_SW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_raj_dining_round_SW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.78
+     ],
+     "offset_px": [
+      -50,
+      89
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.78,
+      1.0
+     ],
+     "offset_px": [
+      50,
+      89
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.22
+     ],
+     "offset_px": [
+      50,
+      39
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.22,
+      1.0
+     ],
+     "offset_px": [
+      -50,
+      39
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "centre",
+     "type": "place_item",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.0
+     ],
+     "offset_px": [
+      0,
+      16
+     ],
+     "z": 0.75,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": []
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "sit",
+   "pos": [
+    1.0,
+    1.78
+   ],
+   "facing": [
+    -6.123233995736766e-17,
+    -1.0
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "seat1",
+   "type": "sit",
+   "pos": [
+    1.78,
+    1.0
+   ],
+   "facing": [
+    -1.0,
+    -0.0
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "seat2",
+   "type": "sit",
+   "pos": [
+    1.0,
+    0.21999999999999997
+   ],
+   "facing": [
+    -6.123233995736766e-17,
+    1.0
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    0
+   ]
+  },
+  {
+   "id": "seat3",
+   "type": "sit",
+   "pos": [
+    0.21999999999999997,
+    1.0
+   ],
+   "facing": [
+    1.0,
+    -1.2246467991473532e-16
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "centre",
+   "type": "place_item",
+   "pos": [
+    1.0,
+    1.0
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [],
+   "z": 0.75
+  }
+ ]
+}

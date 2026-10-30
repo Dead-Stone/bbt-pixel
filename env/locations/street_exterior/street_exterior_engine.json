@@ -1,0 +1,982 @@
+{
+ "id": "street_exterior",
+ "name": "2311 building entrance + street (Pasadena)",
+ "kind": "exterior",
+ "size": [
+  16,
+  10
+ ],
+ "tile": [
+  128,
+  64
+ ],
+ "px_per_m": 64,
+ "ztop_m": 6.8,
+ "projection": "sx=(x-y)*64, sy=(x+y)*32-z*64",
+ "zones": {
+  "sidewalk": [
+   0,
+   0,
+   16,
+   3
+  ],
+  "parkway": [
+   0,
+   3,
+   16,
+   1
+  ],
+  "curb": [
+   0,
+   4,
+   16,
+   1
+  ],
+  "street": [
+   0,
+   5,
+   16,
+   5
+  ]
+ },
+ "floor": [
+  [
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk"
+  ],
+  [
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk"
+  ],
+  [
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk"
+  ],
+  [
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_sidewalk",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass",
+   "ground_grass"
+  ],
+  [
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb",
+   "ground_curb"
+  ],
+  [
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt"
+  ],
+  [
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt"
+  ],
+  [
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash",
+   "ground_asphalt_dash"
+  ],
+  [
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt"
+  ],
+  [
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt",
+   "ground_asphalt"
+  ]
+ ],
+ "walkable": [
+  [
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   0,
+   1,
+   0,
+   1,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "blocked_edges": [],
+ "walls": [],
+ "items": [
+  {
+   "item": "ext_building_facade",
+   "x": 0,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_building_facade/ext_building_facade.json"
+  },
+  {
+   "item": "ext_entry_steps",
+   "x": 7,
+   "y": 0.3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_entry_steps/ext_entry_steps.json"
+  },
+  {
+   "item": "ext_entrance_doors",
+   "x": 7,
+   "y": 0.16,
+   "rot": "SW",
+   "state": "default",
+   "z": 0.45,
+   "manifest": "../../items/ext_entrance_doors/ext_entrance_doors.json"
+  },
+  {
+   "item": "ext_wall_lantern",
+   "x": 6.2,
+   "y": 0.3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0.2,
+   "manifest": "../../items/ext_wall_lantern/ext_wall_lantern.json"
+  },
+  {
+   "item": "ext_wall_lantern",
+   "x": 8.8,
+   "y": 0.3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0.2,
+   "manifest": "../../items/ext_wall_lantern/ext_wall_lantern.json"
+  },
+  {
+   "item": "ext_hedge",
+   "x": 1,
+   "y": 0.35,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_hedge/ext_hedge.json"
+  },
+  {
+   "item": "ext_hedge",
+   "x": 3.6,
+   "y": 0.35,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_hedge/ext_hedge.json"
+  },
+  {
+   "item": "ext_hedge",
+   "x": 10.4,
+   "y": 0.35,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_hedge/ext_hedge.json"
+  },
+  {
+   "item": "ext_hedge",
+   "x": 13,
+   "y": 0.35,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_hedge/ext_hedge.json"
+  },
+  {
+   "item": "ext_palm",
+   "x": 2,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_palm/ext_palm.json"
+  },
+  {
+   "item": "ext_jacaranda",
+   "x": 4.5,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_jacaranda/ext_jacaranda.json"
+  },
+  {
+   "item": "ext_jacaranda",
+   "x": 11.5,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_jacaranda/ext_jacaranda.json"
+  },
+  {
+   "item": "ext_palm",
+   "x": 14,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_palm/ext_palm.json"
+  },
+  {
+   "item": "ext_street_lamp",
+   "x": 10,
+   "y": 3,
+   "rot": "SW",
+   "state": "off",
+   "z": 0,
+   "manifest": "../../items/ext_street_lamp/ext_street_lamp.json"
+  },
+  {
+   "item": "ext_hydrant",
+   "x": 6,
+   "y": 3.2,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_hydrant/ext_hydrant.json"
+  },
+  {
+   "item": "ext_street_sign",
+   "x": 15,
+   "y": 2,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_street_sign/ext_street_sign.json"
+  },
+  {
+   "item": "ext_mailbox",
+   "x": 12,
+   "y": 2,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_mailbox/ext_mailbox.json"
+  },
+  {
+   "item": "ext_bench",
+   "x": 4,
+   "y": 1.7,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_bench/ext_bench.json"
+  },
+  {
+   "item": "ext_trash_can",
+   "x": 9.5,
+   "y": 2.1,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_trash_can/ext_trash_can.json"
+  },
+  {
+   "item": "ext_car_hatchback",
+   "x": 2,
+   "y": 5,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/ext_car_hatchback/ext_car_hatchback.json"
+  }
+ ],
+ "hooks": [
+  {
+   "id": "ext_entry_steps#0.climb",
+   "item": "ext_entry_steps",
+   "index": 0,
+   "hook": "climb",
+   "type": "climb_lane_up",
+   "pos": [
+    8.0,
+    1.2
+   ],
+   "tile": [
+    8,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "walk_stairs_up",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    8,
+    1
+   ]
+  },
+  {
+   "id": "ext_entry_steps#0.sit_steps",
+   "item": "ext_entry_steps",
+   "index": 0,
+   "hook": "sit_steps",
+   "type": "sit",
+   "pos": [
+    7.4,
+    1.05
+   ],
+   "tile": [
+    7,
+    1
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_floor",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    7,
+    1
+   ]
+  },
+  {
+   "id": "ext_entrance_doors#0.door",
+   "item": "ext_entrance_doors",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    8.0,
+    0.71
+   ],
+   "tile": [
+    8,
+    0
+   ],
+   "z": 0.45,
+   "facing": "NE",
+   "anim": "open_door",
+   "capacity": 1,
+   "tags": [
+    "to_lobby"
+   ],
+   "approach_tile": [
+    8,
+    0
+   ]
+  },
+  {
+   "id": "ext_entrance_doors#0.buzzer",
+   "item": "ext_entrance_doors",
+   "index": 0,
+   "hook": "buzzer",
+   "type": "use",
+   "pos": [
+    8.85,
+    0.66
+   ],
+   "tile": [
+    8,
+    0
+   ],
+   "z": 0.45,
+   "facing": "NE",
+   "anim": "press_buzzer",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    8,
+    0
+   ]
+  },
+  {
+   "id": "ext_mailbox#0.post",
+   "item": "ext_mailbox",
+   "index": 0,
+   "hook": "post",
+   "type": "use",
+   "pos": [
+    12.5,
+    3.3
+   ],
+   "tile": [
+    12,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "post_letter",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    12,
+    3
+   ]
+  },
+  {
+   "id": "ext_bench#0.seat0",
+   "item": "ext_bench",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    4.6,
+    2.3
+   ],
+   "tile": [
+    4,
+    2
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_bench",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    2
+   ]
+  },
+  {
+   "id": "ext_bench#0.seat1",
+   "item": "ext_bench",
+   "index": 0,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    5.4,
+    2.3
+   ],
+   "tile": [
+    5,
+    2
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_bench",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    5,
+    2
+   ]
+  },
+  {
+   "id": "ext_car_hatchback#0.driver_door",
+   "item": "ext_car_hatchback",
+   "index": 0,
+   "hook": "driver_door",
+   "type": "use",
+   "pos": [
+    4.3,
+    7.35
+   ],
+   "tile": [
+    4,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "enter_car",
+   "capacity": 1,
+   "tags": [
+    "drive"
+   ],
+   "approach_tile": [
+    4,
+    8
+   ]
+  },
+  {
+   "id": "ext_car_hatchback#0.passenger_door",
+   "item": "ext_car_hatchback",
+   "index": 0,
+   "hook": "passenger_door",
+   "type": "use",
+   "pos": [
+    4.3,
+    4.65
+   ],
+   "tile": [
+    4,
+    4
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "enter_car",
+   "capacity": 1,
+   "tags": [
+    "ride"
+   ],
+   "approach_tile": [
+    4,
+    5
+   ]
+  },
+  {
+   "id": "ext_car_hatchback#0.lean",
+   "item": "ext_car_hatchback",
+   "index": 0,
+   "hook": "lean",
+   "type": "stand",
+   "pos": [
+    3.2,
+    4.6
+   ],
+   "tile": [
+    3,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "lean_on_car",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    3,
+    5
+   ]
+  }
+ ],
+ "doors": [
+  {
+   "item": "ext_entrance_doors",
+   "tile": [
+    7,
+    0
+   ],
+   "to": "lobby",
+   "facing": "SW",
+   "note": "doors sit at z=0.45 on the entry steps"
+  }
+ ],
+ "spawns": {
+  "from_lobby": [
+   8.0,
+   1.6
+  ],
+  "from_campus": [
+   5.5,
+   7.0
+  ],
+  "from_restaurant": [
+   15.5,
+   1.5
+  ],
+  "from_raj": [
+   5.5,
+   7.0
+  ],
+  "car_driver": [
+   4.5,
+   4.6
+  ]
+ },
+ "exits": [
+  {
+   "id": "to_lobby",
+   "tiles": [
+    [
+     7,
+     0
+    ],
+    [
+     8,
+     0
+    ]
+   ],
+   "to": "lobby",
+   "to_spawn": "from_street",
+   "via": "door"
+  },
+  {
+   "id": "drive_campus",
+   "tiles": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     4
+    ]
+   ],
+   "to": "ait_cafeteria",
+   "to_spawn": "from_quad",
+   "via": "car"
+  },
+  {
+   "id": "drive_raj",
+   "tiles": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     4
+    ]
+   ],
+   "to": "raj_apartment",
+   "to_spawn": "from_street",
+   "via": "car"
+  },
+  {
+   "id": "walk_restaurant",
+   "tiles": [
+    [
+     15,
+     0
+    ],
+    [
+     15,
+     1
+    ],
+    [
+     15,
+     2
+    ]
+   ],
+   "to": "rest_amber_slice",
+   "to_spawn": "from_street",
+   "via": "sidewalk"
+  }
+ ],
+ "lights": [],
+ "characters": [
+  {
+   "name": "leonard",
+   "pos": [
+    7.0,
+    2.4
+   ],
+   "anim": "walk",
+   "dir": "SE",
+   "hook": ""
+  },
+  {
+   "name": "penny",
+   "pos": [
+    5.4,
+    2.3
+   ],
+   "anim": "idle",
+   "dir": "SE",
+   "hook": ""
+  },
+  {
+   "name": "sheldon",
+   "pos": [
+    8.3,
+    1.75
+   ],
+   "anim": "idle",
+   "dir": "SW",
+   "hook": ""
+  }
+ ],
+ "sort": {
+  "rule": "slice key = tile x+y+1 (+sort_bias*0.1); characters = feet x+y; seated = seat tile x+y+1.5; ceiling items after their footprint; full walls + wall decals before the sorted pass; cutaway stubs keyed x+y+0.45 (left/right) / +0.55 (front)"
+ },
+ "renders": {
+  "x1": "street_exterior_1x.png",
+  "x2": "street_exterior_2x.png"
+ }
+}

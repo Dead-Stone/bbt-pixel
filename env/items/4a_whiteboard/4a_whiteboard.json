@@ -1,0 +1,541 @@
+{
+ "id": "4a_whiteboard",
+ "location": "4A",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.9,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "blank",
+  "equations_a",
+  "equations_b",
+  "equations_c"
+ ],
+ "tags": [],
+ "notes": "free-standing rolling whiteboard; equations are procedural glyph soup (no real text)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4a_whiteboard_SW.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "write",
+     "type": "write",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.25
+     ],
+     "offset_px": [
+      -48,
+      56
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "write_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.7
+     ],
+     "offset_px": [
+      -77,
+      70
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "look_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "equations_a": {
+     "sprite": "item_4a_whiteboard_SW_equations_a.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_b": {
+     "sprite": "item_4a_whiteboard_SW_equations_b.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_c": {
+     "sprite": "item_4a_whiteboard_SW_equations_c.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_4a_whiteboard_NW.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "write",
+     "type": "write",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.25,
+      0.5
+     ],
+     "offset_px": [
+      -48,
+      8
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "write_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.7,
+      0.5
+     ],
+     "offset_px": [
+      -77,
+      -6
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "look_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "equations_a": {
+     "sprite": "item_4a_whiteboard_NW_equations_a.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_b": {
+     "sprite": "item_4a_whiteboard_NW_equations_b.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_c": {
+     "sprite": "item_4a_whiteboard_NW_equations_c.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_4a_whiteboard_NE.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "write",
+     "type": "write",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.25
+     ],
+     "offset_px": [
+      48,
+      8
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "write_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.7
+     ],
+     "offset_px": [
+      77,
+      -6
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "look_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "equations_a": {
+     "sprite": "item_4a_whiteboard_NE_equations_a.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_b": {
+     "sprite": "item_4a_whiteboard_NE_equations_b.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_c": {
+     "sprite": "item_4a_whiteboard_NE_equations_c.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_4a_whiteboard_SE.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "write",
+     "type": "write",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.25,
+      0.5
+     ],
+     "offset_px": [
+      48,
+      56
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "write_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.7,
+      0.5
+     ],
+     "offset_px": [
+      77,
+      70
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "look_whiteboard",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "equations_a": {
+     "sprite": "item_4a_whiteboard_SE_equations_a.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_b": {
+     "sprite": "item_4a_whiteboard_SE_equations_b.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "equations_c": {
+     "sprite": "item_4a_whiteboard_SE_equations_c.png",
+     "pivot": [
+      64,
+      186
+     ],
+     "canvas": [
+      128,
+      186
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "write",
+   "type": "write",
+   "pos": [
+    0.5,
+    1.25
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "write_whiteboard",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "look",
+   "type": "look",
+   "pos": [
+    0.5,
+    1.7
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "look_whiteboard",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

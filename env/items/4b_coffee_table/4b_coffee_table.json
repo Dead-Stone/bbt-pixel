@@ -1,0 +1,289 @@
+{
+ "id": "4b_coffee_table",
+ "location": "4B",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.42,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "painted turquoise legs, magazines, nail polish, a pizza box",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_coffee_table_SW.png",
+   "pivot": [
+    128,
+    128
+   ],
+   "canvas": [
+    192,
+    128
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_coffee_table_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_coffee_table_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.5
+     ],
+     "offset_px": [
+      6,
+      8
+     ],
+     "z": 0.42,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "drinks",
+      "magazines"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_4b_coffee_table_NW.png",
+   "pivot": [
+    64,
+    128
+   ],
+   "canvas": [
+    192,
+    128
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_coffee_table_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_coffee_table_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.6
+     ],
+     "offset_px": [
+      -6,
+      8
+     ],
+     "z": 0.42,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "drinks",
+      "magazines"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_4b_coffee_table_NE.png",
+   "pivot": [
+    128,
+    128
+   ],
+   "canvas": [
+    192,
+    128
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_coffee_table_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_coffee_table_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.5
+     ],
+     "offset_px": [
+      58,
+      34
+     ],
+     "z": 0.42,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "drinks",
+      "magazines"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4b_coffee_table_SE.png",
+   "pivot": [
+    64,
+    128
+   ],
+   "canvas": [
+    192,
+    128
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_coffee_table_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_coffee_table_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.4
+     ],
+     "offset_px": [
+      -58,
+      34
+     ],
+     "z": 0.42,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "drinks",
+      "magazines"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "surface0",
+   "type": "place_item",
+   "pos": [
+    0.6,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "drinks",
+    "magazines"
+   ],
+   "z": 0.42
+  }
+ ]
+}

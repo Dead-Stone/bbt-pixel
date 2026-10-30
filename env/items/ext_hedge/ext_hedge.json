@@ -1,0 +1,169 @@
+{
+ "id": "ext_hedge",
+ "location": "street",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.9,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "clipped boxwood hedge in a low planter",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_hedge_SW.png",
+   "pivot": [
+    128,
+    154
+   ],
+   "canvas": [
+    192,
+    154
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_hedge_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_hedge_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_hedge_NW.png",
+   "pivot": [
+    64,
+    154
+   ],
+   "canvas": [
+    192,
+    154
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_hedge_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_hedge_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_hedge_NE.png",
+   "pivot": [
+    128,
+    154
+   ],
+   "canvas": [
+    192,
+    154
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_hedge_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_hedge_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_hedge_SE.png",
+   "pivot": [
+    64,
+    154
+   ],
+   "canvas": [
+    192,
+    154
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_hedge_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_hedge_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

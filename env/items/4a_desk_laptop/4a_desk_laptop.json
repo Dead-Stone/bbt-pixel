@@ -1,0 +1,585 @@
+{
+ "id": "4a_desk_laptop",
+ "location": "4A",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.75,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "off",
+  "on"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4a_desk_laptop_SW.png",
+   "pivot": [
+    128,
+    178
+   ],
+   "canvas": [
+    192,
+    178
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_desk_laptop_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_desk_laptop_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "use0",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.55,
+      1.15
+     ],
+     "offset_px": [
+      -38,
+      54
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "type_desk",
+     "tags": [
+      "computer",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "use1",
+     "type": "use",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.45,
+      1.15
+     ],
+     "offset_px": [
+      19,
+      83
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "type_laptop",
+     "tags": [
+      "laptop",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_desk_laptop_SW_on.png",
+     "pivot": [
+      128,
+      178
+     ],
+     "canvas": [
+      192,
+      178
+     ],
+     "footprint": [
+      2,
+      1
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_desk_laptop_SW_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_desk_laptop_SW_on_s1.png",
+       "tile": [
+        1,
+        0
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_4a_desk_laptop_NW.png",
+   "pivot": [
+    64,
+    178
+   ],
+   "canvas": [
+    192,
+    178
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_desk_laptop_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_desk_laptop_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "use0",
+     "type": "use",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.15,
+      0.55
+     ],
+     "offset_px": [
+      -45,
+      13
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "type_desk",
+     "tags": [
+      "computer",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "use1",
+     "type": "use",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.15,
+      1.45
+     ],
+     "offset_px": [
+      -102,
+      42
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "type_laptop",
+     "tags": [
+      "laptop",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_desk_laptop_NW_on.png",
+     "pivot": [
+      64,
+      178
+     ],
+     "canvas": [
+      192,
+      178
+     ],
+     "footprint": [
+      1,
+      2
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_desk_laptop_NW_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_desk_laptop_NW_on_s1.png",
+       "tile": [
+        0,
+        1
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_4a_desk_laptop_NE.png",
+   "pivot": [
+    128,
+    178
+   ],
+   "canvas": [
+    192,
+    178
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_desk_laptop_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_desk_laptop_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "use0",
+     "type": "use",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.45,
+      -0.15
+     ],
+     "offset_px": [
+      102,
+      42
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "type_desk",
+     "tags": [
+      "computer",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "use1",
+     "type": "use",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.55,
+      -0.15
+     ],
+     "offset_px": [
+      45,
+      13
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "type_laptop",
+     "tags": [
+      "laptop",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_desk_laptop_NE_on.png",
+     "pivot": [
+      128,
+      178
+     ],
+     "canvas": [
+      192,
+      178
+     ],
+     "footprint": [
+      2,
+      1
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_desk_laptop_NE_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_desk_laptop_NE_on_s1.png",
+       "tile": [
+        1,
+        0
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_4a_desk_laptop_SE.png",
+   "pivot": [
+    64,
+    178
+   ],
+   "canvas": [
+    192,
+    178
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_desk_laptop_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_desk_laptop_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "use0",
+     "type": "use",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.15,
+      1.45
+     ],
+     "offset_px": [
+      -19,
+      83
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "type_desk",
+     "tags": [
+      "computer",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "use1",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.15,
+      0.55
+     ],
+     "offset_px": [
+      38,
+      54
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "type_laptop",
+     "tags": [
+      "laptop",
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_desk_laptop_SE_on.png",
+     "pivot": [
+      64,
+      178
+     ],
+     "canvas": [
+      192,
+      178
+     ],
+     "footprint": [
+      1,
+      2
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_desk_laptop_SE_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_desk_laptop_SE_on_s1.png",
+       "tile": [
+        0,
+        1
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "use0",
+   "type": "use",
+   "pos": [
+    0.55,
+    1.15
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "type_desk",
+   "tags": [
+    "computer",
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "use1",
+   "type": "use",
+   "pos": [
+    1.45,
+    1.15
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "type_laptop",
+   "tags": [
+    "laptop",
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  }
+ ]
+}

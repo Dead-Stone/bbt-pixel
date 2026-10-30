@@ -1,0 +1,97 @@
+{
+ "id": "poster_diploma",
+ "location": "AIT_campus",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 2.0,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "wall",
+ "layer": "wall_decal",
+ "blocks_walk": false,
+ "sort_bias": -1,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "original framed wall art (diploma); no real logos",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_poster_diploma_SW.png",
+   "pivot": [
+    64,
+    172
+   ],
+   "canvas": [
+    128,
+    172
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_poster_diploma_NW.png",
+   "pivot": [
+    64,
+    172
+   ],
+   "canvas": [
+    128,
+    172
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_poster_diploma_NE.png",
+   "pivot": [
+    64,
+    172
+   ],
+   "canvas": [
+    128,
+    172
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_poster_diploma_SE.png",
+   "pivot": [
+    64,
+    172
+   ],
+   "canvas": [
+    128,
+    172
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

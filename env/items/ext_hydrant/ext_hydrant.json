@@ -1,0 +1,43 @@
+{
+ "id": "ext_hydrant",
+ "location": "street",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.8,
+ "rotation_class": "R1",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "yellow fire hydrant",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_hydrant_SW.png",
+   "pivot": [
+    64,
+    116
+   ],
+   "canvas": [
+    128,
+    116
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

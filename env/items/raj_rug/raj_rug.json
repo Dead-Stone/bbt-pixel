@@ -1,0 +1,161 @@
+{
+ "id": "raj_rug",
+ "location": "raj_apt",
+ "footprint": [
+  3,
+  2
+ ],
+ "height_m": 0.012,
+ "rotation_class": "R2",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "floor_decal",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "Indian medallion area rug",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_raj_rug_SW.png",
+   "pivot": [
+    192,
+    162
+   ],
+   "canvas": [
+    320,
+    162
+   ],
+   "footprint": [
+    3,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_raj_rug_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_raj_rug_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_raj_rug_SW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_raj_rug_SW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_raj_rug_SW_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_raj_rug_SW_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 4
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_raj_rug_SE.png",
+   "pivot": [
+    128,
+    162
+   ],
+   "canvas": [
+    320,
+    162
+   ],
+   "footprint": [
+    2,
+    3
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_raj_rug_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_raj_rug_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_raj_rug_SE_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_raj_rug_SE_s3.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_raj_rug_SE_s4.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_raj_rug_SE_s5.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 4
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

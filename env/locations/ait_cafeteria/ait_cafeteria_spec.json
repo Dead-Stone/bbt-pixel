@@ -1,0 +1,386 @@
+{
+ "id": "ait_cafeteria",
+ "name": "AIT Cafeteria (Arroyo Institute of Technology)",
+ "kind": "interior",
+ "size": [
+  12,
+  9
+ ],
+ "floor": [
+  [
+   0,
+   0,
+   12,
+   9,
+   "floor_cafe_lino"
+  ]
+ ],
+ "walls": {
+  "back": [
+   [
+    0,
+    12,
+    "cafe"
+   ]
+  ],
+  "left": [
+   [
+    0,
+    9,
+    "cafe"
+   ]
+  ],
+  "front_cut": "cafe",
+  "right_cut": "cafe",
+  "front_gaps": [
+   5,
+   6
+  ]
+ },
+ "slots": {
+  "back": {
+   "8": "window_day",
+   "9": "window_day",
+   "10": "window_day",
+   "11": "window_day"
+  }
+ },
+ "items": [
+  [
+   "cafe_food_line",
+   1,
+   0,
+   "SW"
+  ],
+  [
+   "cafe_menu_board",
+   1.5,
+   0,
+   "SW"
+  ],
+  [
+   "ait_crest_banner",
+   5,
+   0,
+   "SW"
+  ],
+  [
+   "cafe_drink_station",
+   6,
+   0,
+   "SW"
+  ],
+  [
+   "cafe_trash_bin",
+   7,
+   0,
+   "SW"
+  ],
+  [
+   "cafe_vending_snack",
+   0,
+   1,
+   "SE"
+  ],
+  [
+   "cafe_vending_drink",
+   0,
+   2,
+   "SE"
+  ],
+  [
+   "cafe_vending_coffee",
+   0,
+   3,
+   "SE"
+  ],
+  [
+   "cafe_bulletin_board",
+   0,
+   5,
+   "SE"
+  ],
+  [
+   "off_door",
+   0,
+   6,
+   "SE",
+   "closed"
+  ],
+  [
+   "poster_particles",
+   0,
+   7,
+   "SE"
+  ],
+  [
+   "gen_potted_palm",
+   11,
+   1,
+   "SW"
+  ],
+  [
+   "cafe_table_long",
+   3,
+   3,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   3,
+   2,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   3,
+   4,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   4,
+   2,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   4,
+   4,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   5,
+   2,
+   "SW"
+  ],
+  [
+   "cafe_table_long",
+   3,
+   6,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   3,
+   5,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   4,
+   7,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   5,
+   5,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   5,
+   7,
+   "NE"
+  ],
+  [
+   "cafe_table_long",
+   8,
+   3,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   8,
+   2,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   8,
+   4,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   9,
+   2,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   10,
+   2,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   10,
+   4,
+   "NE"
+  ],
+  [
+   "cafe_table_long",
+   8,
+   6,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   8,
+   5,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   8,
+   7,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   9,
+   5,
+   "SW"
+  ],
+  [
+   "cafe_chair",
+   9,
+   7,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   10,
+   7,
+   "NE"
+  ]
+ ],
+ "lights": [
+  {
+   "pos": [
+    9.9,
+    0.8
+   ],
+   "r": 1.5,
+   "kind": "window",
+   "src": "windows"
+  }
+ ],
+ "chars": [
+  {
+   "cid": "sheldon",
+   "mode": "sit",
+   "hook": [
+    "cafe_table_long",
+    0,
+    "seat0"
+   ]
+  },
+  {
+   "cid": "howard",
+   "mode": "sit",
+   "hook": [
+    "cafe_table_long",
+    0,
+    "seat1"
+   ]
+  },
+  {
+   "cid": "raj",
+   "mode": "sit",
+   "hook": [
+    "cafe_table_long",
+    0,
+    "seat2"
+   ]
+  },
+  {
+   "cid": "leonard",
+   "mode": "stand",
+   "hook": [
+    "cafe_food_line",
+    0,
+    "queue2"
+   ],
+   "dir": "NE"
+  },
+  {
+   "cid": "penny",
+   "mode": "stand",
+   "pos": [
+    6.6,
+    5.0
+   ],
+   "dir": "NW",
+   "anim": "walk",
+   "k": 1
+  }
+ ],
+ "zones": {
+  "dining": [
+   0,
+   0,
+   12,
+   9
+  ]
+ },
+ "spawns": {
+  "from_physics": [
+   1.5,
+   6.5
+  ],
+  "from_quad": [
+   5.5,
+   8.5
+  ],
+  "food_line": [
+   2.5,
+   1.5
+  ]
+ },
+ "doors": [
+  {
+   "item": "off_door",
+   "tile": [
+    0,
+    6
+   ],
+   "to": "ait_physics",
+   "facing": "SE"
+  }
+ ],
+ "exits": [
+  {
+   "id": "to_physics",
+   "tiles": [
+    [
+     0,
+     6
+    ]
+   ],
+   "to": "ait_physics",
+   "to_spawn": "from_cafeteria",
+   "via": "door"
+  },
+  {
+   "id": "to_quad",
+   "tiles": [
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_campus",
+   "via": "car",
+   "note": "campus quad / parking stub; the guys carpool home"
+  }
+ ]
+}

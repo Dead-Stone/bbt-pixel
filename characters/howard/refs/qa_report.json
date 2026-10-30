@@ -1,0 +1,18 @@
+{
+ "palette_violations": 0,
+ "head_top_min": 25,
+ "head_top_max": 28,
+ "idle_S_head_top": 27,
+ "lowest_px_min": 116,
+ "lowest_px_max": 125,
+ "frames": 152,
+ "sheet": [
+  1536,
+  4096
+ ],
+ "alpha_values": [
+  0,
+  255
+ ],
+ "seconds": 212
+}

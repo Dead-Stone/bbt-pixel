@@ -1,0 +1,2425 @@
+{
+ "id": "rest_amber_slice",
+ "name": "The Amber Slice (restaurant)",
+ "kind": "interior",
+ "size": [
+  14,
+  9
+ ],
+ "tile": [
+  128,
+  64
+ ],
+ "px_per_m": 64,
+ "ztop_m": 3.4,
+ "projection": "sx=(x-y)*64, sy=(x+y)*32-z*64",
+ "zones": {
+  "dining": [
+   0,
+   0,
+   9,
+   9
+  ],
+  "bar": [
+   9,
+   0,
+   5,
+   6
+  ],
+  "stage": [
+   11,
+   6,
+   3,
+   2
+  ]
+ },
+ "floor": [
+  [
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_tile",
+   "floor_rest_tile",
+   "floor_rest_tile",
+   "floor_rest_tile",
+   "floor_rest_tile"
+  ],
+  [
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_tile",
+   "floor_rest_tile",
+   "floor_rest_tile",
+   "floor_rest_tile",
+   "floor_rest_tile"
+  ],
+  [
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a"
+  ],
+  [
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a"
+  ],
+  [
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a"
+  ],
+  [
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b"
+  ],
+  [
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b"
+  ],
+  [
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a"
+  ],
+  [
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a",
+   "floor_rest_wood_a",
+   "floor_rest_wood_b",
+   "floor_rest_wood_a"
+  ]
+ ],
+ "walkable": [
+  [
+   1,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   1,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   0,
+   1,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   0,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   0,
+   1,
+   0,
+   1,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "blocked_edges": [],
+ "walls": [
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 8,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 9,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 10,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 11,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 12,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 13,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "rest",
+   "feature": "window_day"
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "rest",
+   "feature": "window_day"
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "rest",
+   "feature": "window_day"
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "rest",
+   "feature": "window_day"
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 8,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 0,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 1,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 2,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 3,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 4,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 5,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 6,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 7,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 8,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 9,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 10,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 11,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 12,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 9,
+   "index": 13,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 0,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 1,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 2,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 3,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 4,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 5,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 6,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 7,
+   "mat": "rest",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 14,
+   "index": 8,
+   "mat": "rest",
+   "feature": null
+  }
+ ],
+ "items": [
+  {
+   "item": "rest_booth",
+   "x": 1,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_booth/rest_booth.json"
+  },
+  {
+   "item": "rest_booth",
+   "x": 4,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_booth/rest_booth.json"
+  },
+  {
+   "item": "rest_wall_sign",
+   "x": 2,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0.45,
+   "manifest": "../../items/rest_wall_sign/rest_wall_sign.json"
+  },
+  {
+   "item": "rest_kitchen_door",
+   "x": 7,
+   "y": 0,
+   "rot": "SW",
+   "state": "closed",
+   "z": 0,
+   "manifest": "../../items/rest_kitchen_door/rest_kitchen_door.json"
+  },
+  {
+   "item": "rest_back_bar",
+   "x": 9,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_back_bar/rest_back_bar.json"
+  },
+  {
+   "item": "rest_server_station",
+   "x": 12,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_server_station/rest_server_station.json"
+  },
+  {
+   "item": "rest_cake_display",
+   "x": 13,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_cake_display/rest_cake_display.json"
+  },
+  {
+   "item": "rest_bar_counter",
+   "x": 9,
+   "y": 2,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_bar_counter/rest_bar_counter.json"
+  },
+  {
+   "item": "rest_bar_stool",
+   "x": 9,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_bar_stool/rest_bar_stool.json"
+  },
+  {
+   "item": "rest_bar_stool",
+   "x": 10,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_bar_stool/rest_bar_stool.json"
+  },
+  {
+   "item": "rest_bar_stool",
+   "x": 11,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_bar_stool/rest_bar_stool.json"
+  },
+  {
+   "item": "rest_bar_stool",
+   "x": 12,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_bar_stool/rest_bar_stool.json"
+  },
+  {
+   "item": "lobby_glass_door",
+   "x": 0,
+   "y": 4,
+   "rot": "SE",
+   "state": "closed",
+   "z": 0,
+   "manifest": "../../items/lobby_glass_door/lobby_glass_door.json"
+  },
+  {
+   "item": "rest_host_stand",
+   "x": 1,
+   "y": 5,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_host_stand/rest_host_stand.json"
+  },
+  {
+   "item": "gen_potted_palm",
+   "x": 0,
+   "y": 8,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/gen_potted_palm/gen_potted_palm.json"
+  },
+  {
+   "item": "gen_potted_palm",
+   "x": 7,
+   "y": 1,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/gen_potted_palm/gen_potted_palm.json"
+  },
+  {
+   "item": "rest_column",
+   "x": 8,
+   "y": 5,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_column/rest_column.json"
+  },
+  {
+   "item": "rest_stage",
+   "x": 11,
+   "y": 6,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_stage/rest_stage.json"
+  },
+  {
+   "item": "rest_table_2top",
+   "x": 3,
+   "y": 4,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_table_2top/rest_table_2top.json"
+  },
+  {
+   "item": "rest_chair",
+   "x": 3,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_chair/rest_chair.json"
+  },
+  {
+   "item": "rest_chair",
+   "x": 3,
+   "y": 5,
+   "rot": "NE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_chair/rest_chair.json"
+  },
+  {
+   "item": "rest_table_2top",
+   "x": 5,
+   "y": 4,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_table_2top/rest_table_2top.json"
+  },
+  {
+   "item": "rest_chair",
+   "x": 5,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_chair/rest_chair.json"
+  },
+  {
+   "item": "rest_chair",
+   "x": 5,
+   "y": 5,
+   "rot": "NE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_chair/rest_chair.json"
+  },
+  {
+   "item": "rest_table_2top",
+   "x": 3,
+   "y": 7,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_table_2top/rest_table_2top.json"
+  },
+  {
+   "item": "rest_chair",
+   "x": 3,
+   "y": 6,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_chair/rest_chair.json"
+  },
+  {
+   "item": "rest_table_2top",
+   "x": 6,
+   "y": 7,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_table_2top/rest_table_2top.json"
+  },
+  {
+   "item": "rest_chair",
+   "x": 6,
+   "y": 6,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/rest_chair/rest_chair.json"
+  },
+  {
+   "item": "rest_pendant_lamp",
+   "x": 1.5,
+   "y": 0.5,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/rest_pendant_lamp/rest_pendant_lamp.json"
+  },
+  {
+   "item": "rest_pendant_lamp",
+   "x": 4.5,
+   "y": 0.5,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/rest_pendant_lamp/rest_pendant_lamp.json"
+  },
+  {
+   "item": "rest_pendant_lamp",
+   "x": 3,
+   "y": 4,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/rest_pendant_lamp/rest_pendant_lamp.json"
+  },
+  {
+   "item": "rest_pendant_lamp",
+   "x": 5,
+   "y": 4,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/rest_pendant_lamp/rest_pendant_lamp.json"
+  },
+  {
+   "item": "rest_pendant_lamp",
+   "x": 10.5,
+   "y": 2,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/rest_pendant_lamp/rest_pendant_lamp.json"
+  }
+ ],
+ "hooks": [
+  {
+   "id": "rest_booth#0.seat0",
+   "item": "rest_booth",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    1.6,
+    0.38
+   ],
+   "tile": [
+    1,
+    0
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    1,
+    0
+   ]
+  },
+  {
+   "id": "rest_booth#0.seat1",
+   "item": "rest_booth",
+   "index": 0,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    2.4,
+    0.38
+   ],
+   "tile": [
+    2,
+    0
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    2,
+    0
+   ]
+  },
+  {
+   "id": "rest_booth#0.seat2",
+   "item": "rest_booth",
+   "index": 0,
+   "hook": "seat2",
+   "type": "sit",
+   "pos": [
+    1.6,
+    1.62
+   ],
+   "tile": [
+    1,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "rest_booth#0.seat3",
+   "item": "rest_booth",
+   "index": 0,
+   "hook": "seat3",
+   "type": "sit",
+   "pos": [
+    2.4,
+    1.62
+   ],
+   "tile": [
+    2,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "rest_booth#0.take_order",
+   "item": "rest_booth",
+   "index": 0,
+   "hook": "take_order",
+   "type": "work",
+   "pos": [
+    3.35,
+    1.0
+   ],
+   "tile": [
+    3,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "take_order",
+   "capacity": 1,
+   "tags": [
+    "waitress",
+    "penny"
+   ],
+   "approach_tile": [
+    3,
+    1
+   ]
+  },
+  {
+   "id": "rest_booth#0.table",
+   "item": "rest_booth",
+   "index": 0,
+   "hook": "table",
+   "type": "place_item",
+   "pos": [
+    2.0,
+    1.0
+   ],
+   "tile": [
+    2,
+    1
+   ],
+   "z": 0.76,
+   "facing": "SW",
+   "anim": "",
+   "capacity": 1,
+   "tags": [
+    "plates",
+    "drinks"
+   ]
+  },
+  {
+   "id": "rest_booth#1.seat0",
+   "item": "rest_booth",
+   "index": 1,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    4.6,
+    0.38
+   ],
+   "tile": [
+    4,
+    0
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    0
+   ]
+  },
+  {
+   "id": "rest_booth#1.seat1",
+   "item": "rest_booth",
+   "index": 1,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    5.4,
+    0.38
+   ],
+   "tile": [
+    5,
+    0
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    5,
+    0
+   ]
+  },
+  {
+   "id": "rest_booth#1.seat2",
+   "item": "rest_booth",
+   "index": 1,
+   "hook": "seat2",
+   "type": "sit",
+   "pos": [
+    4.6,
+    1.62
+   ],
+   "tile": [
+    4,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    1
+   ]
+  },
+  {
+   "id": "rest_booth#1.seat3",
+   "item": "rest_booth",
+   "index": 1,
+   "hook": "seat3",
+   "type": "sit",
+   "pos": [
+    5.4,
+    1.62
+   ],
+   "tile": [
+    5,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_booth",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    5,
+    1
+   ]
+  },
+  {
+   "id": "rest_booth#1.take_order",
+   "item": "rest_booth",
+   "index": 1,
+   "hook": "take_order",
+   "type": "work",
+   "pos": [
+    6.35,
+    1.0
+   ],
+   "tile": [
+    6,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "take_order",
+   "capacity": 1,
+   "tags": [
+    "waitress",
+    "penny"
+   ],
+   "approach_tile": [
+    6,
+    1
+   ]
+  },
+  {
+   "id": "rest_booth#1.table",
+   "item": "rest_booth",
+   "index": 1,
+   "hook": "table",
+   "type": "place_item",
+   "pos": [
+    5.0,
+    1.0
+   ],
+   "tile": [
+    5,
+    1
+   ],
+   "z": 0.76,
+   "facing": "SW",
+   "anim": "",
+   "capacity": 1,
+   "tags": [
+    "plates",
+    "drinks"
+   ]
+  },
+  {
+   "id": "rest_kitchen_door#0.door",
+   "item": "rest_kitchen_door",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    7.5,
+    0.55
+   ],
+   "tile": [
+    7,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "push_door",
+   "capacity": 1,
+   "tags": [
+    "staff"
+   ],
+   "approach_tile": [
+    7,
+    0
+   ]
+  },
+  {
+   "id": "rest_kitchen_door#0.pickup",
+   "item": "rest_kitchen_door",
+   "index": 0,
+   "hook": "pickup",
+   "type": "use",
+   "pos": [
+    7.5,
+    0.9
+   ],
+   "tile": [
+    7,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "pickup_order",
+   "capacity": 1,
+   "tags": [
+    "waitress"
+   ],
+   "approach_tile": [
+    7,
+    0
+   ]
+  },
+  {
+   "id": "rest_back_bar#0.get_bottle",
+   "item": "rest_back_bar",
+   "index": 0,
+   "hook": "get_bottle",
+   "type": "use",
+   "pos": [
+    10.5,
+    1.25
+   ],
+   "tile": [
+    10,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "reach_shelf",
+   "capacity": 1,
+   "tags": [
+    "staff"
+   ],
+   "approach_tile": [
+    10,
+    1
+   ]
+  },
+  {
+   "id": "rest_server_station#0.enter_order",
+   "item": "rest_server_station",
+   "index": 0,
+   "hook": "enter_order",
+   "type": "work",
+   "pos": [
+    12.5,
+    1.35
+   ],
+   "tile": [
+    12,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "enter_order",
+   "capacity": 1,
+   "tags": [
+    "waitress",
+    "penny"
+   ],
+   "approach_tile": [
+    12,
+    1
+   ]
+  },
+  {
+   "id": "rest_cake_display#0.browse",
+   "item": "rest_cake_display",
+   "index": 0,
+   "hook": "browse",
+   "type": "look",
+   "pos": [
+    13.5,
+    1.35
+   ],
+   "tile": [
+    13,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "look_cakes",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    13,
+    1
+   ]
+  },
+  {
+   "id": "rest_cake_display#0.serve_slice",
+   "item": "rest_cake_display",
+   "index": 0,
+   "hook": "serve_slice",
+   "type": "work",
+   "pos": [
+    13.5,
+    -0.4
+   ],
+   "tile": [
+    13,
+    -1
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "serve_slice",
+   "capacity": 1,
+   "tags": [
+    "staff"
+   ],
+   "approach_tile": [
+    13,
+    -1
+   ]
+  },
+  {
+   "id": "rest_bar_counter#0.stool0",
+   "item": "rest_bar_counter",
+   "index": 0,
+   "hook": "stool0",
+   "type": "sit",
+   "pos": [
+    9.5,
+    3.45
+   ],
+   "tile": [
+    9,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [
+    "needs_stool"
+   ],
+   "approach_tile": [
+    9,
+    3
+   ]
+  },
+  {
+   "id": "rest_bar_counter#0.stool1",
+   "item": "rest_bar_counter",
+   "index": 0,
+   "hook": "stool1",
+   "type": "sit",
+   "pos": [
+    10.5,
+    3.45
+   ],
+   "tile": [
+    10,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [
+    "needs_stool"
+   ],
+   "approach_tile": [
+    10,
+    3
+   ]
+  },
+  {
+   "id": "rest_bar_counter#0.stool2",
+   "item": "rest_bar_counter",
+   "index": 0,
+   "hook": "stool2",
+   "type": "sit",
+   "pos": [
+    11.5,
+    3.45
+   ],
+   "tile": [
+    11,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [
+    "needs_stool"
+   ],
+   "approach_tile": [
+    11,
+    3
+   ]
+  },
+  {
+   "id": "rest_bar_counter#0.stool3",
+   "item": "rest_bar_counter",
+   "index": 0,
+   "hook": "stool3",
+   "type": "sit",
+   "pos": [
+    12.5,
+    3.45
+   ],
+   "tile": [
+    12,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [
+    "needs_stool"
+   ],
+   "approach_tile": [
+    12,
+    3
+   ]
+  },
+  {
+   "id": "rest_bar_counter#0.bartend",
+   "item": "rest_bar_counter",
+   "index": 0,
+   "hook": "bartend",
+   "type": "work",
+   "pos": [
+    11.0,
+    1.55
+   ],
+   "tile": [
+    11,
+    1
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "bartend",
+   "capacity": 1,
+   "tags": [
+    "penny",
+    "staff"
+   ],
+   "approach_tile": [
+    11,
+    1
+   ]
+  },
+  {
+   "id": "rest_bar_counter#0.pour",
+   "item": "rest_bar_counter",
+   "index": 0,
+   "hook": "pour",
+   "type": "use",
+   "pos": [
+    9.8,
+    1.55
+   ],
+   "tile": [
+    9,
+    1
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "pour_drink",
+   "capacity": 1,
+   "tags": [
+    "staff"
+   ],
+   "approach_tile": [
+    9,
+    1
+   ]
+  },
+  {
+   "id": "rest_bar_stool#0.seat0",
+   "item": "rest_bar_stool",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    9.5,
+    3.5
+   ],
+   "tile": [
+    9,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    9,
+    4
+   ]
+  },
+  {
+   "id": "rest_bar_stool#1.seat0",
+   "item": "rest_bar_stool",
+   "index": 1,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    10.5,
+    3.5
+   ],
+   "tile": [
+    10,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    10,
+    4
+   ]
+  },
+  {
+   "id": "rest_bar_stool#2.seat0",
+   "item": "rest_bar_stool",
+   "index": 2,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    11.5,
+    3.5
+   ],
+   "tile": [
+    11,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    11,
+    4
+   ]
+  },
+  {
+   "id": "rest_bar_stool#3.seat0",
+   "item": "rest_bar_stool",
+   "index": 3,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    12.5,
+    3.5
+   ],
+   "tile": [
+    12,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_stool_bar",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    12,
+    4
+   ]
+  },
+  {
+   "id": "lobby_glass_door#0.door",
+   "item": "lobby_glass_door",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    0.55,
+    4.5
+   ],
+   "tile": [
+    0,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "open_door",
+   "capacity": 1,
+   "tags": [
+    "to_street"
+   ],
+   "approach_tile": [
+    0,
+    5
+   ]
+  },
+  {
+   "id": "rest_host_stand#0.host",
+   "item": "rest_host_stand",
+   "index": 0,
+   "hook": "host",
+   "type": "work",
+   "pos": [
+    0.6,
+    5.5
+   ],
+   "tile": [
+    0,
+    5
+   ],
+   "z": 0.0,
+   "facing": "SE",
+   "anim": "host_greet",
+   "capacity": 1,
+   "tags": [
+    "penny",
+    "staff"
+   ],
+   "approach_tile": [
+    0,
+    6
+   ]
+  },
+  {
+   "id": "rest_host_stand#0.wait_to_be_seated",
+   "item": "rest_host_stand",
+   "index": 0,
+   "hook": "wait_to_be_seated",
+   "type": "queue",
+   "pos": [
+    2.45,
+    5.5
+   ],
+   "tile": [
+    2,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "stand_wait",
+   "capacity": 4,
+   "tags": [],
+   "approach_tile": [
+    2,
+    6
+   ]
+  },
+  {
+   "id": "rest_stage#0.perform",
+   "item": "rest_stage",
+   "index": 0,
+   "hook": "perform",
+   "type": "stand",
+   "pos": [
+    12.2,
+    7.0
+   ],
+   "tile": [
+    12,
+    7
+   ],
+   "z": 0.3,
+   "facing": "SW",
+   "anim": "sing",
+   "capacity": 1,
+   "tags": [
+    "open_mic"
+   ],
+   "approach_tile": [
+    12,
+    7
+   ]
+  },
+  {
+   "id": "rest_stage#0.play_keys",
+   "item": "rest_stage",
+   "index": 0,
+   "hook": "play_keys",
+   "type": "work",
+   "pos": [
+    13.2,
+    6.35
+   ],
+   "tile": [
+    13,
+    6
+   ],
+   "z": 0.3,
+   "facing": "SW",
+   "anim": "play_keyboard",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    13,
+    6
+   ]
+  },
+  {
+   "id": "rest_table_2top#0.seat0",
+   "item": "rest_table_2top",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    3.5,
+    3.55
+   ],
+   "tile": [
+    3,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    3,
+    3
+   ]
+  },
+  {
+   "id": "rest_table_2top#0.seat1",
+   "item": "rest_table_2top",
+   "index": 0,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    3.5,
+    5.45
+   ],
+   "tile": [
+    3,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    3,
+    5
+   ]
+  },
+  {
+   "id": "rest_table_2top#0.serve",
+   "item": "rest_table_2top",
+   "index": 0,
+   "hook": "serve",
+   "type": "work",
+   "pos": [
+    4.4,
+    4.5
+   ],
+   "tile": [
+    4,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "serve_plate",
+   "capacity": 1,
+   "tags": [
+    "waitress"
+   ],
+   "approach_tile": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "rest_chair#0.seat0",
+   "item": "rest_chair",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    3.5,
+    3.55
+   ],
+   "tile": [
+    3,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    3,
+    4
+   ]
+  },
+  {
+   "id": "rest_chair#1.seat0",
+   "item": "rest_chair",
+   "index": 1,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    3.5,
+    5.45
+   ],
+   "tile": [
+    3,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    5
+   ]
+  },
+  {
+   "id": "rest_table_2top#1.seat0",
+   "item": "rest_table_2top",
+   "index": 1,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    5.5,
+    3.55
+   ],
+   "tile": [
+    5,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    5,
+    3
+   ]
+  },
+  {
+   "id": "rest_table_2top#1.seat1",
+   "item": "rest_table_2top",
+   "index": 1,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    5.5,
+    5.45
+   ],
+   "tile": [
+    5,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    5,
+    5
+   ]
+  },
+  {
+   "id": "rest_table_2top#1.serve",
+   "item": "rest_table_2top",
+   "index": 1,
+   "hook": "serve",
+   "type": "work",
+   "pos": [
+    6.4,
+    4.5
+   ],
+   "tile": [
+    6,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "serve_plate",
+   "capacity": 1,
+   "tags": [
+    "waitress"
+   ],
+   "approach_tile": [
+    6,
+    4
+   ]
+  },
+  {
+   "id": "rest_chair#2.seat0",
+   "item": "rest_chair",
+   "index": 2,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    5.5,
+    3.55
+   ],
+   "tile": [
+    5,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    5,
+    4
+   ]
+  },
+  {
+   "id": "rest_chair#3.seat0",
+   "item": "rest_chair",
+   "index": 3,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    5.5,
+    5.45
+   ],
+   "tile": [
+    5,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    6,
+    5
+   ]
+  },
+  {
+   "id": "rest_table_2top#2.seat0",
+   "item": "rest_table_2top",
+   "index": 2,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    3.5,
+    6.55
+   ],
+   "tile": [
+    3,
+    6
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    3,
+    6
+   ]
+  },
+  {
+   "id": "rest_table_2top#2.seat1",
+   "item": "rest_table_2top",
+   "index": 2,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    3.5,
+    8.45
+   ],
+   "tile": [
+    3,
+    8
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    3,
+    8
+   ]
+  },
+  {
+   "id": "rest_table_2top#2.serve",
+   "item": "rest_table_2top",
+   "index": 2,
+   "hook": "serve",
+   "type": "work",
+   "pos": [
+    4.4,
+    7.5
+   ],
+   "tile": [
+    4,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "serve_plate",
+   "capacity": 1,
+   "tags": [
+    "waitress"
+   ],
+   "approach_tile": [
+    4,
+    7
+   ]
+  },
+  {
+   "id": "rest_chair#4.seat0",
+   "item": "rest_chair",
+   "index": 4,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    3.5,
+    6.55
+   ],
+   "tile": [
+    3,
+    6
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    3,
+    7
+   ]
+  },
+  {
+   "id": "rest_table_2top#3.seat0",
+   "item": "rest_table_2top",
+   "index": 3,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    6.5,
+    6.55
+   ],
+   "tile": [
+    6,
+    6
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "rest_table_2top#3.seat1",
+   "item": "rest_table_2top",
+   "index": 3,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    6.5,
+    8.45
+   ],
+   "tile": [
+    6,
+    8
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [
+    "needs_chair"
+   ],
+   "approach_tile": [
+    6,
+    8
+   ]
+  },
+  {
+   "id": "rest_table_2top#3.serve",
+   "item": "rest_table_2top",
+   "index": 3,
+   "hook": "serve",
+   "type": "work",
+   "pos": [
+    7.4,
+    7.5
+   ],
+   "tile": [
+    7,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "serve_plate",
+   "capacity": 1,
+   "tags": [
+    "waitress"
+   ],
+   "approach_tile": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "rest_chair#5.seat0",
+   "item": "rest_chair",
+   "index": 5,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    6.5,
+    6.55
+   ],
+   "tile": [
+    6,
+    6
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    6,
+    7
+   ]
+  }
+ ],
+ "doors": [
+  {
+   "item": "lobby_glass_door",
+   "tile": [
+    0,
+    4
+   ],
+   "to": "street_exterior",
+   "facing": "SE",
+   "note": "front door (glass)"
+  },
+  {
+   "item": "rest_kitchen_door",
+   "tile": [
+    7,
+    0
+   ],
+   "to": "kitchen (stub)",
+   "facing": "SW"
+  }
+ ],
+ "spawns": {
+  "from_street": [
+   1.5,
+   4.5
+  ],
+  "from_kitchen": [
+   7.5,
+   1.5
+  ],
+  "behind_bar": [
+   10.5,
+   1.5
+  ]
+ },
+ "exits": [
+  {
+   "id": "to_street",
+   "tiles": [
+    [
+     0,
+     4
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_restaurant",
+   "via": "sidewalk"
+  },
+  {
+   "id": "to_kitchen",
+   "tiles": [
+    [
+     7,
+     0
+    ]
+   ],
+   "to": "kitchen_stub",
+   "to_spawn": "",
+   "via": "door"
+  }
+ ],
+ "lights": [
+  {
+   "pos": [
+    2.0,
+    1.0
+   ],
+   "r": 0.8,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    5.0,
+    1.0
+   ],
+   "r": 0.8,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    3.5,
+    4.5
+   ],
+   "r": 0.7,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    5.5,
+    4.5
+   ],
+   "r": 0.7,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    11.0,
+    2.5
+   ],
+   "r": 1.1,
+   "kind": "pendant"
+  }
+ ],
+ "characters": [
+  {
+   "name": "sheldon",
+   "pos": [
+    1.6,
+    0.38
+   ],
+   "anim": "sit (scene-only pose)",
+   "dir": "SW",
+   "hook": "rest_booth.0.seat0"
+  },
+  {
+   "name": "leonard",
+   "pos": [
+    2.4,
+    0.38
+   ],
+   "anim": "sit (scene-only pose)",
+   "dir": "SW",
+   "hook": "rest_booth.0.seat1"
+  },
+  {
+   "name": "penny",
+   "pos": [
+    3.35,
+    1.0
+   ],
+   "anim": "idle",
+   "dir": "NW",
+   "hook": "rest_booth.0.take_order"
+  }
+ ],
+ "sort": {
+  "rule": "slice key = tile x+y+1 (+sort_bias*0.1); characters = feet x+y; seated = seat tile x+y+1.5; ceiling items after their footprint; full walls + wall decals before the sorted pass; cutaway stubs keyed x+y+0.45 (left/right) / +0.55 (front)"
+ },
+ "renders": {
+  "x1": "rest_amber_slice_1x.png",
+  "x2": "rest_amber_slice_2x.png"
+ }
+}

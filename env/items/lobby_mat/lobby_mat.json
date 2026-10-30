@@ -1,0 +1,97 @@
+{
+ "id": "lobby_mat",
+ "location": "lobby",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.012,
+ "rotation_class": "R2",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "floor_decal",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lobby_mat_SW.png",
+   "pivot": [
+    128,
+    98
+   ],
+   "canvas": [
+    192,
+    98
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_mat_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_lobby_mat_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_lobby_mat_SE.png",
+   "pivot": [
+    64,
+    98
+   ],
+   "canvas": [
+    192,
+    98
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_mat_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_lobby_mat_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

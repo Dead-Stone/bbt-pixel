@@ -1,0 +1,414 @@
+{
+ "id": "ext_bench",
+ "location": "street",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.85,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "wood-slat bench on cast-iron legs",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_bench_SW.png",
+   "pivot": [
+    128,
+    152
+   ],
+   "canvas": [
+    192,
+    152
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_bench_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_bench_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.6
+     ],
+     "offset_px": [
+      0,
+      38
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.6
+     ],
+     "offset_px": [
+      51,
+      64
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_bench_NW.png",
+   "pivot": [
+    64,
+    152
+   ],
+   "canvas": [
+    192,
+    152
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_bench_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_bench_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.4,
+      0.6
+     ],
+     "offset_px": [
+      -13,
+      32
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.4,
+      1.4
+     ],
+     "offset_px": [
+      -64,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_bench_NE.png",
+   "pivot": [
+    128,
+    152
+   ],
+   "canvas": [
+    192,
+    152
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_bench_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_bench_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.4
+     ],
+     "offset_px": [
+      64,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.4
+     ],
+     "offset_px": [
+      13,
+      32
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_bench_SE.png",
+   "pivot": [
+    64,
+    152
+   ],
+   "canvas": [
+    192,
+    152
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_bench_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_bench_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.6,
+      1.4
+     ],
+     "offset_px": [
+      -51,
+      64
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.6
+     ],
+     "offset_px": [
+      0,
+      38
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_bench",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "sit",
+   "pos": [
+    0.6,
+    0.6
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_bench",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "seat1",
+   "type": "sit",
+   "pos": [
+    1.4,
+    0.6
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_bench",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  }
+ ]
+}

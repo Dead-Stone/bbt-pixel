@@ -1,0 +1,30 @@
+GIMP Palette
+Name: BBT Sheldon
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+242 208 181	skin_hi
+219 169 138	skin
+176 122  94	skin_sh
+122  90  62	hair_hi
+ 90  63  43	hair
+ 58  40  28	hair_sh
+224  71  60	tee_hi
+210  58  50	tee
+168  40  42	tee_sh
+122  28  34	tee_xsh
+245 197  66	emblem
+201 150  42	emblem_sh
+ 59  79 122	undershirt
+ 42  58  92	undershirt_sh
+185 162 122	pants
+143 122  88	pants_sh
+ 91  60  39	shoes
+107  74  51	bag_strap

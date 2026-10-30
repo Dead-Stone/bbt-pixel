@@ -1,0 +1,169 @@
+{
+ "id": "lab_pegboard",
+ "location": "AIT_campus",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 2.0,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "wall",
+ "layer": "wall_decal",
+ "blocks_walk": false,
+ "sort_bias": -1,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "tool pegboard with silhouettes (wrench, pliers, screwdrivers, hammer)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lab_pegboard_SW.png",
+   "pivot": [
+    128,
+    224
+   ],
+   "canvas": [
+    192,
+    224
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_pegboard_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lab_pegboard_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_lab_pegboard_NW.png",
+   "pivot": [
+    64,
+    224
+   ],
+   "canvas": [
+    192,
+    224
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_pegboard_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lab_pegboard_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_lab_pegboard_NE.png",
+   "pivot": [
+    128,
+    224
+   ],
+   "canvas": [
+    192,
+    224
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_pegboard_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lab_pegboard_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_lab_pegboard_SE.png",
+   "pivot": [
+    64,
+    224
+   ],
+   "canvas": [
+    192,
+    224
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_pegboard_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lab_pegboard_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

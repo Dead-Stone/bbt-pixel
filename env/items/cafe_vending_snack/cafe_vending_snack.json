@@ -1,0 +1,232 @@
+{
+ "id": "cafe_vending_snack",
+ "location": "AIT_campus",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.9,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "original unbranded vending machine",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_cafe_vending_snack_SW.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.35
+     ],
+     "offset_px": [
+      -54,
+      59
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "use_vending",
+     "tags": [
+      "snack"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_cafe_vending_snack_NW.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.35,
+      0.5
+     ],
+     "offset_px": [
+      -54,
+      5
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "use_vending",
+     "tags": [
+      "snack"
+     ],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_cafe_vending_snack_NE.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.35
+     ],
+     "offset_px": [
+      54,
+      5
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "use_vending",
+     "tags": [
+      "snack"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_cafe_vending_snack_SE.png",
+   "pivot": [
+    64,
+    186
+   ],
+   "canvas": [
+    128,
+    186
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.35,
+      0.5
+     ],
+     "offset_px": [
+      54,
+      59
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "use_vending",
+     "tags": [
+      "snack"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "use",
+   "type": "use",
+   "pos": [
+    0.5,
+    1.35
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "use_vending",
+   "tags": [
+    "snack"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

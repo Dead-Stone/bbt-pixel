@@ -1,0 +1,552 @@
+{
+ "id": "rest_stage",
+ "location": "amber_slice",
+ "footprint": [
+  3,
+  2
+ ],
+ "height_m": 1.6,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "small performance stage: keyboard on an X-stand, mic stand, practice amp",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_stage_SW.png",
+   "pivot": [
+    192,
+    264
+   ],
+   "canvas": [
+    320,
+    264
+   ],
+   "footprint": [
+    3,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_stage_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_stage_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_SW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_SW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_SW_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_SW_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 4
+    }
+   ],
+   "hooks": [
+    {
+     "id": "perform",
+     "type": "stand",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.2,
+      1.0
+     ],
+     "offset_px": [
+      13,
+      51
+     ],
+     "z": 0.3,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sing",
+     "tags": [
+      "open_mic"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "play_keys",
+     "type": "work",
+     "tile": [
+      2,
+      0
+     ],
+     "local": [
+      2.2,
+      0.35
+     ],
+     "offset_px": [
+      118,
+      62
+     ],
+     "z": 0.3,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "play_keyboard",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_rest_stage_NW.png",
+   "pivot": [
+    128,
+    264
+   ],
+   "canvas": [
+    320,
+    264
+   ],
+   "footprint": [
+    2,
+    3
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_stage_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_stage_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_NW_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_NW_s3.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_NW_s4.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_NW_s5.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 4
+    }
+   ],
+   "hooks": [
+    {
+     "id": "perform",
+     "type": "stand",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.2
+     ],
+     "offset_px": [
+      -13,
+      51
+     ],
+     "z": 0.3,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sing",
+     "tags": [
+      "open_mic"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "play_keys",
+     "type": "work",
+     "tile": [
+      1,
+      2
+     ],
+     "local": [
+      1.65,
+      2.2
+     ],
+     "offset_px": [
+      -35,
+      104
+     ],
+     "z": 0.3,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "play_keyboard",
+     "tags": [],
+     "approach_tile": [
+      2,
+      2
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_rest_stage_NE.png",
+   "pivot": [
+    192,
+    264
+   ],
+   "canvas": [
+    320,
+    264
+   ],
+   "footprint": [
+    3,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_stage_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_stage_NE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_NE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_NE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_NE_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_NE_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 4
+    }
+   ],
+   "hooks": [
+    {
+     "id": "perform",
+     "type": "stand",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.8,
+      1.0
+     ],
+     "offset_px": [
+      51,
+      70
+     ],
+     "z": 0.3,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sing",
+     "tags": [
+      "open_mic"
+     ],
+     "approach_tile": [
+      2,
+      1
+     ]
+    },
+    {
+     "id": "play_keys",
+     "type": "work",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.8,
+      1.65
+     ],
+     "offset_px": [
+      -54,
+      59
+     ],
+     "z": 0.3,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "play_keyboard",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_rest_stage_SE.png",
+   "pivot": [
+    128,
+    264
+   ],
+   "canvas": [
+    320,
+    264
+   ],
+   "footprint": [
+    2,
+    3
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_stage_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_stage_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_SE_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_SE_s3.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_stage_SE_s4.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_rest_stage_SE_s5.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 4
+    }
+   ],
+   "hooks": [
+    {
+     "id": "perform",
+     "type": "stand",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.8
+     ],
+     "offset_px": [
+      -51,
+      70
+     ],
+     "z": 0.3,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sing",
+     "tags": [
+      "open_mic"
+     ],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "play_keys",
+     "type": "work",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.35,
+      0.8
+     ],
+     "offset_px": [
+      -29,
+      18
+     ],
+     "z": 0.3,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "play_keyboard",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "perform",
+   "type": "stand",
+   "pos": [
+    1.2,
+    1.0
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sing",
+   "tags": [
+    "open_mic"
+   ],
+   "z": 0.3,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "play_keys",
+   "type": "work",
+   "pos": [
+    2.2,
+    0.35
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "play_keyboard",
+   "tags": [],
+   "z": 0.3,
+   "approach": [
+    2,
+    0
+   ]
+  }
+ ]
+}

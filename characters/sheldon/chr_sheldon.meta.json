@@ -1,0 +1,166 @@
+{
+ "id": "chr_sheldon",
+ "version": "v1",
+ "sheet": "chr_sheldon.png",
+ "atlas": "chr_sheldon.json",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot_px": [
+  64,
+  116
+ ],
+ "pivot_norm": [
+  0.5,
+  0.90625
+ ],
+ "body_height_px": 100,
+ "palette": "palettes/bbt_sheldon.gpl",
+ "camera": {
+  "projection": "2:1 dimetric",
+  "elevation_deg": 30,
+  "px_per_unit": 1.122
+ },
+ "dirs": [
+  "S",
+  "SW",
+  "W",
+  "NW",
+  "N",
+  "NE",
+  "E",
+  "SE"
+ ],
+ "mirror": {
+  "NE": "NW",
+  "E": "W",
+  "SE": "SW"
+ },
+ "decals_on_mirror": [
+  "emblem",
+  "shirt_folds",
+  "hair_part"
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 250
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 100
+  },
+  "knock_knock_penny": {
+   "frames": 24,
+   "fps": 8,
+   "loop": false,
+   "dirs": [
+    "SW",
+    "NW",
+    "NE",
+    "SE"
+   ],
+   "frame_ms": 125,
+   "holds_ms": {
+    "7": 375,
+    "13": 375,
+    "19": 375
+   },
+   "bubble_cues": [
+    {
+     "frame": 7,
+     "text": "Penny."
+    },
+    {
+     "frame": 13,
+     "text": "Penny."
+    },
+    {
+     "frame": 19,
+     "text": "Penny."
+    }
+   ],
+   "sequence": [
+    "UP",
+    "A",
+    "K",
+    "A",
+    "K",
+    "A",
+    "K",
+    "H",
+    "K",
+    "A",
+    "K",
+    "A",
+    "K",
+    "H",
+    "K",
+    "A",
+    "K",
+    "A",
+    "K",
+    "H",
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+   ],
+   "knock_hand": {
+    "SW": "right",
+    "NW": "left",
+    "NE": "right (mirror of NW)",
+    "SE": "left (mirror of SW)"
+   },
+   "note": "v1: 24 frames (wind-up, 3 visible knocks + hold per block, x3, 4-frame return); spec \u00a73.1 lists 16 -- update the spec table if approved."
+  },
+  "blink": {
+   "frames": 3,
+   "fps": 12,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 80,
+   "eyes": [
+    "half",
+    "closed",
+    "half"
+   ],
+   "note": "v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
+  }
+ },
+ "notes": "Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation."
+}

@@ -1,0 +1,291 @@
+{
+ "id": "lab_3d_printer",
+ "location": "AIT_campus",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.55,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "printing",
+  "idle"
+ ],
+ "tags": [],
+ "notes": "open-frame 3D printer on a cart",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lab_3d_printer_SW.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.3
+     ],
+     "offset_px": [
+      -51,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "use_printer",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "idle": {
+     "sprite": "item_lab_3d_printer_SW_idle.png",
+     "pivot": [
+      64,
+      162
+     ],
+     "canvas": [
+      128,
+      162
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_lab_3d_printer_NW.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.3,
+      0.5
+     ],
+     "offset_px": [
+      -51,
+      6
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "use_printer",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "idle": {
+     "sprite": "item_lab_3d_printer_NW_idle.png",
+     "pivot": [
+      64,
+      162
+     ],
+     "canvas": [
+      128,
+      162
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_lab_3d_printer_NE.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.3
+     ],
+     "offset_px": [
+      51,
+      6
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "use_printer",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "idle": {
+     "sprite": "item_lab_3d_printer_NE_idle.png",
+     "pivot": [
+      64,
+      162
+     ],
+     "canvas": [
+      128,
+      162
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_lab_3d_printer_SE.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.3,
+      0.5
+     ],
+     "offset_px": [
+      51,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "use_printer",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "idle": {
+     "sprite": "item_lab_3d_printer_SE_idle.png",
+     "pivot": [
+      64,
+      162
+     ],
+     "canvas": [
+      128,
+      162
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "use",
+   "type": "use",
+   "pos": [
+    0.5,
+    1.3
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "use_printer",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

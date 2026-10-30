@@ -1,0 +1,424 @@
+{
+ "id": "hall_elevator_broken",
+ "location": "hall4",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 2.4,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "wall",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": -1,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "wall-mounted elevator doors with caution-tape X and an original hand-lettered OUT OF ORDER / USE STAIRS sign",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_hall_elevator_broken_SW.png",
+   "pivot": [
+    128,
+    250
+   ],
+   "canvas": [
+    192,
+    250
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_hall_elevator_broken_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_hall_elevator_broken_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.9
+     ],
+     "offset_px": [
+      6,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "look_elevator",
+     "tags": [
+      "running_gag"
+     ],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "call_button",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.85,
+      0.8
+     ],
+     "offset_px": [
+      67,
+      85
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "press_button",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_hall_elevator_broken_NW.png",
+   "pivot": [
+    64,
+    250
+   ],
+   "canvas": [
+    192,
+    250
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_hall_elevator_broken_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_hall_elevator_broken_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.1,
+      1.0
+     ],
+     "offset_px": [
+      -58,
+      35
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "look_elevator",
+     "tags": [
+      "running_gag"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "call_button",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.2,
+      1.85
+     ],
+     "offset_px": [
+      -106,
+      66
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "press_button",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_hall_elevator_broken_NE.png",
+   "pivot": [
+    128,
+    250
+   ],
+   "canvas": [
+    192,
+    250
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_hall_elevator_broken_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_hall_elevator_broken_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.1
+     ],
+     "offset_px": [
+      58,
+      35
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "look_elevator",
+     "tags": [
+      "running_gag"
+     ],
+     "approach_tile": [
+      2,
+      1
+     ]
+    },
+    {
+     "id": "call_button",
+     "type": "use",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.15,
+      0.2
+     ],
+     "offset_px": [
+      -3,
+      11
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "press_button",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_hall_elevator_broken_SE.png",
+   "pivot": [
+    64,
+    250
+   ],
+   "canvas": [
+    192,
+    250
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_hall_elevator_broken_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_hall_elevator_broken_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.9,
+      1.0
+     ],
+     "offset_px": [
+      -6,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "look_elevator",
+     "tags": [
+      "running_gag"
+     ],
+     "approach_tile": [
+      0,
+      2
+     ]
+    },
+    {
+     "id": "call_button",
+     "type": "use",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.8,
+      0.15
+     ],
+     "offset_px": [
+      42,
+      30
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "press_button",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "look",
+   "type": "look",
+   "pos": [
+    1.0,
+    0.9
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "look_elevator",
+   "tags": [
+    "running_gag"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "call_button",
+   "type": "use",
+   "pos": [
+    1.85,
+    0.8
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "press_button",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    0
+   ]
+  }
+ ]
+}

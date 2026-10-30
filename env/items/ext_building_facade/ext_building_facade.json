@@ -1,0 +1,173 @@
+{
+ "id": "ext_building_facade",
+ "location": "street",
+ "footprint": [
+  16,
+  1
+ ],
+ "height_m": 6.7,
+ "rotation_class": "R1",
+ "priority": "P0",
+ "mount": "wall",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "front of the (fictional) 2311 apartment building: stucco ground floor with rustication, arched French windows with shutters, iron balconettes, string course, cornice. Drawn as the back plane of street_exterior",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_building_facade_SW.png",
+   "pivot": [
+    1024,
+    976
+   ],
+   "canvas": [
+    1096,
+    976
+   ],
+   "footprint": [
+    16,
+    1
+   ],
+   "formula_ok": false,
+   "slices": [
+    {
+     "sprite": "item_ext_building_facade_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s2.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s3.png",
+     "tile": [
+      3,
+      0
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s4.png",
+     "tile": [
+      4,
+      0
+     ],
+     "sort_key_offset": 5
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s5.png",
+     "tile": [
+      5,
+      0
+     ],
+     "sort_key_offset": 6
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s6.png",
+     "tile": [
+      6,
+      0
+     ],
+     "sort_key_offset": 7
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s7.png",
+     "tile": [
+      7,
+      0
+     ],
+     "sort_key_offset": 8
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s8.png",
+     "tile": [
+      8,
+      0
+     ],
+     "sort_key_offset": 9
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s9.png",
+     "tile": [
+      9,
+      0
+     ],
+     "sort_key_offset": 10
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s10.png",
+     "tile": [
+      10,
+      0
+     ],
+     "sort_key_offset": 11
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s11.png",
+     "tile": [
+      11,
+      0
+     ],
+     "sort_key_offset": 12
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s12.png",
+     "tile": [
+      12,
+      0
+     ],
+     "sort_key_offset": 13
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s13.png",
+     "tile": [
+      13,
+      0
+     ],
+     "sort_key_offset": 14
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s14.png",
+     "tile": [
+      14,
+      0
+     ],
+     "sort_key_offset": 15
+    },
+    {
+     "sprite": "item_ext_building_facade_SW_s15.png",
+     "tile": [
+      15,
+      0
+     ],
+     "sort_key_offset": 16
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

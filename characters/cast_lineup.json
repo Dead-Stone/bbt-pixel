@@ -1,0 +1,33 @@
+{
+ "scale": "Sheldon 185 cm = 100 px; pivot line y=116; heights = idle S head top to pivot",
+ "cast": {
+  "sheldon": {
+   "cm": 185,
+   "px": 100
+  },
+  "leonard": {
+   "cm": 165,
+   "px": 89
+  },
+  "penny": {
+   "cm": 167,
+   "px": 90
+  },
+  "howard": {
+   "cm": 164,
+   "px": 89
+  },
+  "raj": {
+   "cm": 171,
+   "px": 92
+  },
+  "bernadette": {
+   "cm": 149,
+   "px": 81
+  },
+  "amy": {
+   "cm": 163,
+   "px": 88
+  }
+ }
+}

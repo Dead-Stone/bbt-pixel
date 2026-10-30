@@ -1,0 +1,425 @@
+{
+ "id": "raj_telescope_big",
+ "location": "raj_apt",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.75,
+ "rotation_class": "R8",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "big orange-tube catadioptric telescope on a fork mount and tripod; tube points to the item back (window)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "S": {
+   "sprite": "item_raj_telescope_big_S.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.854,
+      0.854
+     ],
+     "offset_px": [
+      0,
+      55
+     ],
+     "z": 0.0,
+     "facing": "N",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SW": {
+   "sprite": "item_raj_telescope_big_SW.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.0
+     ],
+     "offset_px": [
+      -32,
+      48
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "W": {
+   "sprite": "item_raj_telescope_big_W.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.146,
+      0.854
+     ],
+     "offset_px": [
+      -45,
+      32
+     ],
+     "z": 0.0,
+     "facing": "E",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      -1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_raj_telescope_big_NW.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.0,
+      0.5
+     ],
+     "offset_px": [
+      -32,
+      16
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "N": {
+   "sprite": "item_raj_telescope_big_N.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.146,
+      0.146
+     ],
+     "offset_px": [
+      0,
+      9
+     ],
+     "z": 0.0,
+     "facing": "S",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_raj_telescope_big_NE.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.0
+     ],
+     "offset_px": [
+      32,
+      16
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "E": {
+   "sprite": "item_raj_telescope_big_E.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.854,
+      0.146
+     ],
+     "offset_px": [
+      45,
+      32
+     ],
+     "z": 0.0,
+     "facing": "W",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_raj_telescope_big_SE.png",
+   "pivot": [
+    64,
+    164
+   ],
+   "canvas": [
+    128,
+    164
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.5
+     ],
+     "offset_px": [
+      32,
+      48
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [
+      "raj",
+      "stargazing"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "look",
+   "type": "look",
+   "pos": [
+    0.5,
+    1.0
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "look_telescope",
+   "tags": [
+    "raj",
+    "stargazing"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

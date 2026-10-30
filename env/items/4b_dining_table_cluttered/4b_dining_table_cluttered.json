@@ -1,0 +1,473 @@
+{
+ "id": "4b_dining_table_cluttered",
+ "location": "4B",
+ "footprint": [
+  2,
+  2
+ ],
+ "height_m": 1.06,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "table buried in mail, a laundry basket and shopping bags; chair at the back with a sweater over it (2x2 incl. chair)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_dining_table_cluttered_SW.png",
+   "pivot": [
+    128,
+    200
+   ],
+   "canvas": [
+    256,
+    200
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_dining_table_cluttered_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_SW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_SW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "chair0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.75
+     ],
+     "offset_px": [
+      -10,
+      43
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.4,
+      1.4
+     ],
+     "offset_px": [
+      0,
+      42
+     ],
+     "z": 0.75,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "mail",
+      "laundry"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_4b_dining_table_cluttered_NW.png",
+   "pivot": [
+    128,
+    200
+   ],
+   "canvas": [
+    256,
+    200
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_dining_table_cluttered_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_NW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_NW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "chair0",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.25,
+      0.6
+     ],
+     "offset_px": [
+      42,
+      59
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.6,
+      1.4
+     ],
+     "offset_px": [
+      -51,
+      16
+     ],
+     "z": 0.75,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "mail",
+      "laundry"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_4b_dining_table_cluttered_NE.png",
+   "pivot": [
+    128,
+    200
+   ],
+   "canvas": [
+    256,
+    200
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_dining_table_cluttered_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_NE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_NE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_NE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "chair0",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.4,
+      1.25
+     ],
+     "offset_px": [
+      10,
+      85
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      2,
+      2
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.6
+     ],
+     "offset_px": [
+      0,
+      -10
+     ],
+     "z": 0.75,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "mail",
+      "laundry"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4b_dining_table_cluttered_SE.png",
+   "pivot": [
+    128,
+    200
+   ],
+   "canvas": [
+    256,
+    200
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_dining_table_cluttered_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_SE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_dining_table_cluttered_SE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "chair0",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.75,
+      1.4
+     ],
+     "offset_px": [
+      -42,
+      69
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      0,
+      2
+     ]
+    },
+    {
+     "id": "surface0",
+     "type": "place_item",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.6
+     ],
+     "offset_px": [
+      51,
+      16
+     ],
+     "z": 0.75,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "mail",
+      "laundry"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "chair0",
+   "type": "sit",
+   "pos": [
+    0.6,
+    0.75
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "surface0",
+   "type": "place_item",
+   "pos": [
+    1.4,
+    1.4
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "mail",
+    "laundry"
+   ],
+   "z": 0.75
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "id": "raj_ufo_lamp",
+ "location": "raj_apt",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.85,
+ "rotation_class": "R1",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "on",
+  "off"
+ ],
+ "tags": [],
+ "notes": "Raj's one-of-a-kind UFO floor lamp: chrome saucer shade with a ring of lights (original design)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_raj_ufo_lamp_SW.png",
+   "pivot": [
+    64,
+    180
+   ],
+   "canvas": [
+    128,
+    180
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {
+    "off": {
+     "sprite": "item_raj_ufo_lamp_SW_off.png",
+     "pivot": [
+      64,
+      180
+     ],
+     "canvas": [
+      128,
+      180
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  }
+ },
+ "hooks_canonical": []
+}

@@ -1,0 +1,5144 @@
+{
+ "type": "map",
+ "version": "1.10",
+ "tiledversion": "1.10.2",
+ "orientation": "isometric",
+ "renderorder": "right-down",
+ "width": 16,
+ "height": 8,
+ "tilewidth": 128,
+ "tileheight": 64,
+ "infinite": false,
+ "nextlayerid": 10,
+ "nextobjectid": 114,
+ "properties": [
+  {
+   "name": "location",
+   "type": "string",
+   "value": "ait_physics"
+  },
+  {
+   "name": "px_per_m",
+   "type": "int",
+   "value": 64
+  },
+  {
+   "name": "note",
+   "type": "string",
+   "value": "object x,y = world tiles*64 (Tiled iso object space); world_x/world_y in properties"
+  }
+ ],
+ "tilesets": [
+  {
+   "firstgid": 1,
+   "name": "bbt_floors",
+   "tilewidth": 128,
+   "tileheight": 64,
+   "tilecount": 2,
+   "columns": 0,
+   "grid": {
+    "orientation": "isometric",
+    "width": 128,
+    "height": 64
+   },
+   "tiles": [
+    {
+     "id": 0,
+     "image": "../../tiles/floor_lab_vinyl.png",
+     "imagewidth": 128,
+     "imageheight": 64,
+     "properties": [
+      {
+       "name": "name",
+       "type": "string",
+       "value": "floor_lab_vinyl"
+      }
+     ]
+    },
+    {
+     "id": 1,
+     "image": "../../tiles/floor_office_carpet.png",
+     "imagewidth": 128,
+     "imageheight": 64,
+     "properties": [
+      {
+       "name": "name",
+       "type": "string",
+       "value": "floor_office_carpet"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "floor",
+   "type": "tilelayer",
+   "width": 16,
+   "height": 8,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "data": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "id": 2,
+   "name": "zones",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 112,
+     "name": "office_sheldon",
+     "type": "zone",
+     "x": 0,
+     "y": 0,
+     "width": 448,
+     "height": 512,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 113,
+     "name": "lab_shared",
+     "type": "zone",
+     "x": 448,
+     "y": 0,
+     "width": 576,
+     "height": 512,
+     "rotation": 0,
+     "visible": true
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 3,
+   "name": "walls",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 1,
+     "name": "wall_office_backright_full",
+     "type": "wall",
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "wall_office_backright_full",
+     "type": "wall",
+     "x": 64,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "wall_office_backright_full",
+     "type": "wall",
+     "x": 128,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "wall_office_backright_full",
+     "type": "wall",
+     "x": 192,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "wall_office_backright_full",
+     "type": "wall",
+     "x": 256,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "wall_office_backright_full_window_day",
+     "type": "wall",
+     "x": 320,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full_window_day.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "wall_office_backright_full",
+     "type": "wall",
+     "x": 384,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 448,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 512,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 576,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 9
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 640,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 10
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 704,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 11
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 768,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 12
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "wall_lab_backright_full",
+     "type": "wall",
+     "x": 832,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 13
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "wall_lab_backright_full_window_high",
+     "type": "wall",
+     "x": 896,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full_window_high.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 14
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "wall_lab_backright_full_window_high",
+     "type": "wall",
+     "x": 960,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backright_full_window_high.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 15
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 19,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 128,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 21,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 22,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 23,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 24,
+     "name": "wall_office_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 448,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 0,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 26,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 64,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 27,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 128,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 192,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 29,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 256,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 30,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 320,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 31,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 384,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 32,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 33,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 34,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 576,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 9
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 35,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 640,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 10
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 36,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 704,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 11
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 37,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 768,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 12
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 38,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 832,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 13
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 39,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 896,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 14
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 40,
+     "name": "wall_office_backright_cutaway",
+     "type": "wall",
+     "x": 960,
+     "y": 512,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_office_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 15
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 41,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 42,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 43,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 128,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 44,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 45,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 46,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 47,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 48,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 1024,
+     "y": 448,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 16
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 49,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 50,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 51,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 128,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 52,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 53,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 54,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 55,
+     "name": "wall_lab_backleft_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 448,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lab_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 4,
+   "name": "items",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 56,
+     "name": "off_whiteboard_wall",
+     "type": "item",
+     "x": 64,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "off_whiteboard_wall"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "equations_a"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/off_whiteboard_wall/off_whiteboard_wall.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 57,
+     "name": "off_whiteboard_wall",
+     "type": "item",
+     "x": 192,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "off_whiteboard_wall"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "equations_b"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/off_whiteboard_wall/off_whiteboard_wall.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 58,
+     "name": "poster_award",
+     "type": "item",
+     "x": 384,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "poster_award"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 6.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/poster_award/poster_award.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 59,
+     "name": "off_bookshelf",
+     "type": "item",
+     "x": 0,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "off_bookshelf"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 2]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/off_bookshelf/off_bookshelf.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 60,
+     "name": "off_filing_cabinet",
+     "type": "item",
+     "x": 0,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "off_filing_cabinet"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/off_filing_cabinet/off_filing_cabinet.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 61,
+     "name": "off_door",
+     "type": "item",
+     "x": 0,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "off_door"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "closed"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/off_door/off_door.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 62,
+     "name": "poster_diploma",
+     "type": "item",
+     "x": 0,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "poster_diploma"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 4.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/poster_diploma/poster_diploma.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 63,
+     "name": "poster_journal",
+     "type": "item",
+     "x": 0,
+     "y": 448,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "poster_journal"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 7.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/poster_journal/poster_journal.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 64,
+     "name": "off_desk",
+     "type": "item",
+     "x": 192,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "off_desk"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "on"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/off_desk/off_desk.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 65,
+     "name": "4a_office_chair",
+     "type": "item",
+     "x": 256,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_office_chair"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 4.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 4.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/4a_office_chair/4a_office_chair.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 66,
+     "name": "cafe_chair",
+     "type": "item",
+     "x": 64,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "cafe_chair"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 4.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/cafe_chair/cafe_chair.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 67,
+     "name": "lab_bench_electronics",
+     "type": "item",
+     "x": 512,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_bench_electronics"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "on"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 8.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[3, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_bench_electronics/lab_bench_electronics.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 68,
+     "name": "lab_pegboard",
+     "type": "item",
+     "x": 544.0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_pegboard"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 8.5
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_pegboard/lab_pegboard.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 69,
+     "name": "lab_stool",
+     "type": "item",
+     "x": 576,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_stool"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 9.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_stool/lab_stool.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 70,
+     "name": "lab_3d_printer",
+     "type": "item",
+     "x": 704,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_3d_printer"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "printing"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 11.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_3d_printer/lab_3d_printer.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 71,
+     "name": "lab_laser_sign",
+     "type": "item",
+     "x": 768,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_laser_sign"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 12.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_laser_sign/lab_laser_sign.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 72,
+     "name": "lab_tool_chest",
+     "type": "item",
+     "x": 832,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_tool_chest"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 13.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_tool_chest/lab_tool_chest.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 73,
+     "name": "lab_robot_arm",
+     "type": "item",
+     "x": 960,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_robot_arm"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 15.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_robot_arm/lab_robot_arm.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 74,
+     "name": "lab_optical_table",
+     "type": "item",
+     "x": 768,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_optical_table"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "on"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 12.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_optical_table/lab_optical_table.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 75,
+     "name": "lab_rover",
+     "type": "item",
+     "x": 576,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_rover"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 9.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_rover/lab_rover.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 76,
+     "name": "poster_neutrino",
+     "type": "item",
+     "x": 640,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "poster_neutrino"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.25
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 10.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/poster_neutrino/poster_neutrino.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 77,
+     "name": "lab_bench_electronics",
+     "type": "item",
+     "x": 768,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_bench_electronics"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "off"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 12.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 6.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[3, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_bench_electronics/lab_bench_electronics.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 78,
+     "name": "lab_stool",
+     "type": "item",
+     "x": 832,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_stool"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 13.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_stool/lab_stool.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 79,
+     "name": "lab_stool",
+     "type": "item",
+     "x": 512,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lab_stool"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 8.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lab_stool/lab_stool.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "topdown"
+  },
+  {
+   "id": 5,
+   "name": "hooks",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 80,
+     "name": "off_whiteboard_wall#0.write",
+     "type": "hook",
+     "x": 128.0,
+     "y": 38.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "write"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "write_whiteboard"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "sheldon"
+      }
+     ]
+    },
+    {
+     "id": 81,
+     "name": "off_whiteboard_wall#0.ponder",
+     "type": "hook",
+     "x": 128.0,
+     "y": 83.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "look"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "ponder_board"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 82,
+     "name": "off_whiteboard_wall#1.write",
+     "type": "hook",
+     "x": 256.0,
+     "y": 38.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "write"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "write_whiteboard"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "sheldon"
+      }
+     ]
+    },
+    {
+     "id": 83,
+     "name": "off_whiteboard_wall#1.ponder",
+     "type": "hook",
+     "x": 256.0,
+     "y": 83.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "look"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "ponder_board"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 84,
+     "name": "off_bookshelf#0.browse",
+     "type": "hook",
+     "x": 83.2,
+     "y": 128.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "browse"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "browse_shelf"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 85,
+     "name": "off_filing_cabinet#0.use",
+     "type": "hook",
+     "x": 83.2,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "open_drawer"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 86,
+     "name": "off_door#0.door",
+     "type": "hook",
+     "x": 35.2,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "open_door"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 87,
+     "name": "off_door#0.knock_spot_outside",
+     "type": "hook",
+     "x": -28.8,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "knock_spot_outside"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "knock"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 88,
+     "name": "off_desk#0.work",
+     "type": "hook",
+     "x": 256.0,
+     "y": 281.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "type_desk"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "computer,needs_chair"
+      }
+     ]
+    },
+    {
+     "id": 89,
+     "name": "off_desk#0.surface",
+     "type": "hook",
+     "x": 294.4,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "place_item"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.75
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 90,
+     "name": "4a_office_chair#0.seat0",
+     "type": "hook",
+     "x": 288.0,
+     "y": 284.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_desk"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 91,
+     "name": "cafe_chair#0.seat0",
+     "type": "hook",
+     "x": 96.0,
+     "y": 284.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_chair"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 92,
+     "name": "lab_bench_electronics#0.work0",
+     "type": "hook",
+     "x": 563.2,
+     "y": 89.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "solder"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "howard,needs_stool"
+      }
+     ]
+    },
+    {
+     "id": 93,
+     "name": "lab_bench_electronics#0.work1",
+     "type": "hook",
+     "x": 652.8,
+     "y": 89.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "use_scope"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "needs_stool"
+      }
+     ]
+    },
+    {
+     "id": 94,
+     "name": "lab_stool#0.seat0",
+     "type": "hook",
+     "x": 608.0,
+     "y": 96.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_stool"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 95,
+     "name": "lab_3d_printer#0.use",
+     "type": "hook",
+     "x": 736.0,
+     "y": 83.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "use_printer"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 96,
+     "name": "lab_tool_chest#0.use",
+     "type": "hook",
+     "x": 864.0,
+     "y": 83.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "get_tool"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 97,
+     "name": "lab_robot_arm#0.program",
+     "type": "hook",
+     "x": 1046.4,
+     "y": 96.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "program_robot"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "howard"
+      }
+     ]
+    },
+    {
+     "id": 98,
+     "name": "lab_optical_table#0.align",
+     "type": "hook",
+     "x": 832.0,
+     "y": 281.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "align_laser"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "leonard"
+      }
+     ]
+    },
+    {
+     "id": 99,
+     "name": "lab_optical_table#0.observe",
+     "type": "hook",
+     "x": 921.6,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "look"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "look_experiment"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 100,
+     "name": "lab_rover#0.tinker",
+     "type": "hook",
+     "x": 662.4,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "kneel_work"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "howard"
+      }
+     ]
+    },
+    {
+     "id": 101,
+     "name": "lab_bench_electronics#1.work0",
+     "type": "hook",
+     "x": 819.2,
+     "y": 473.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "solder"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "howard,needs_stool"
+      }
+     ]
+    },
+    {
+     "id": 102,
+     "name": "lab_bench_electronics#1.work1",
+     "type": "hook",
+     "x": 908.8,
+     "y": 473.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "work"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "use_scope"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "needs_stool"
+      }
+     ]
+    },
+    {
+     "id": 103,
+     "name": "lab_stool#1.seat0",
+     "type": "hook",
+     "x": 864.0,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_stool"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 104,
+     "name": "lab_stool#2.seat0",
+     "type": "hook",
+     "x": 544.0,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_stool"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 6,
+   "name": "spawns",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 105,
+     "name": "from_cafeteria",
+     "type": "spawn",
+     "x": 96.0,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    },
+    {
+     "id": 106,
+     "name": "office_desk",
+     "type": "spawn",
+     "x": 288.0,
+     "y": 281.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    },
+    {
+     "id": 107,
+     "name": "lab_door",
+     "type": "spawn",
+     "x": 480.0,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 7,
+   "name": "exits",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 108,
+     "name": "to_cafeteria",
+     "type": "exit",
+     "x": 32.0,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "to",
+       "type": "string",
+       "value": "ait_cafeteria"
+      },
+      {
+       "name": "to_spawn",
+       "type": "string",
+       "value": "from_physics"
+      },
+      {
+       "name": "via",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "tiles",
+       "type": "string",
+       "value": "[[0, 5]]"
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 8,
+   "name": "characters",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 109,
+     "name": "sheldon",
+     "type": "character",
+     "x": 128.0,
+     "y": 38.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "idle"
+      },
+      {
+       "name": "dir",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "off_whiteboard_wall.0.write"
+      }
+     ]
+    },
+    {
+     "id": 110,
+     "name": "leonard",
+     "type": "character",
+     "x": 832.0,
+     "y": 281.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "idle"
+      },
+      {
+       "name": "dir",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "lab_optical_table.0.align"
+      }
+     ]
+    },
+    {
+     "id": 111,
+     "name": "howard",
+     "type": "character",
+     "x": 652.8,
+     "y": 147.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "idle"
+      },
+      {
+       "name": "dir",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "topdown"
+  }
+ ]
+}

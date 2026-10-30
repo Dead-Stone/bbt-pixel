@@ -1,0 +1,222 @@
+{
+ "id": "raj_bar_cart",
+ "location": "raj_apt",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.95,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "three-shelf metallic rolling cart: teapot, bottles, the orange owl cookie jar on top",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_raj_bar_cart_SW.png",
+   "pivot": [
+    64,
+    138
+   ],
+   "canvas": [
+    128,
+    138
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.3
+     ],
+     "offset_px": [
+      -51,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "make_tea",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_raj_bar_cart_NW.png",
+   "pivot": [
+    64,
+    138
+   ],
+   "canvas": [
+    128,
+    138
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.3,
+      0.5
+     ],
+     "offset_px": [
+      -51,
+      6
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "make_tea",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_raj_bar_cart_NE.png",
+   "pivot": [
+    64,
+    138
+   ],
+   "canvas": [
+    128,
+    138
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.3
+     ],
+     "offset_px": [
+      51,
+      6
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "make_tea",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_raj_bar_cart_SE.png",
+   "pivot": [
+    64,
+    138
+   ],
+   "canvas": [
+    128,
+    138
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.3,
+      0.5
+     ],
+     "offset_px": [
+      51,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "make_tea",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "use",
+   "type": "use",
+   "pos": [
+    0.5,
+    1.3
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "make_tea",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

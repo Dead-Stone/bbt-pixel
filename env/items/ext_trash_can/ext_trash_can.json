@@ -1,0 +1,43 @@
+{
+ "id": "ext_trash_can",
+ "location": "street",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.95,
+ "rotation_class": "R1",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_trash_can_SW.png",
+   "pivot": [
+    64,
+    126
+   ],
+   "canvas": [
+    128,
+    126
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

@@ -1,0 +1,2199 @@
+{
+ "type": "map",
+ "version": "1.10",
+ "tiledversion": "1.10.2",
+ "orientation": "isometric",
+ "renderorder": "right-down",
+ "width": 8,
+ "height": 6,
+ "tilewidth": 128,
+ "tileheight": 64,
+ "infinite": false,
+ "nextlayerid": 10,
+ "nextobjectid": 50,
+ "properties": [
+  {
+   "name": "location",
+   "type": "string",
+   "value": "lobby"
+  },
+  {
+   "name": "px_per_m",
+   "type": "int",
+   "value": 64
+  },
+  {
+   "name": "note",
+   "type": "string",
+   "value": "object x,y = world tiles*64 (Tiled iso object space); world_x/world_y in properties"
+  }
+ ],
+ "tilesets": [
+  {
+   "firstgid": 1,
+   "name": "bbt_floors",
+   "tilewidth": 128,
+   "tileheight": 64,
+   "tilecount": 1,
+   "columns": 0,
+   "grid": {
+    "orientation": "isometric",
+    "width": 128,
+    "height": 64
+   },
+   "tiles": [
+    {
+     "id": 0,
+     "image": "../../tiles/floor_lobby_tile.png",
+     "imagewidth": 128,
+     "imageheight": 64,
+     "properties": [
+      {
+       "name": "name",
+       "type": "string",
+       "value": "floor_lobby_tile"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "floor",
+   "type": "tilelayer",
+   "width": 8,
+   "height": 6,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "data": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "id": 2,
+   "name": "zones",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 49,
+     "name": "lobby",
+     "type": "zone",
+     "x": 0,
+     "y": 0,
+     "width": 512,
+     "height": 384,
+     "rotation": 0,
+     "visible": true
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 3,
+   "name": "walls",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 1,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 64,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 128,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 192,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 256,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 320,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 384,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "wall_lobby_backright_full",
+     "type": "wall",
+     "x": 448,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "wall_lobby_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "wall_lobby_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "wall_lobby_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 128,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "wall_lobby_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "wall_lobby_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "wall_lobby_backleft_full",
+     "type": "wall",
+     "x": 0,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_full.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "full"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 0,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 64,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 128,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 18,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 192,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 19,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 256,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 20,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 320,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 21,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 384,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 22,
+     "name": "wall_lobby_backright_cutaway",
+     "type": "wall",
+     "x": 448,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backright_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 6
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+x"
+      }
+     ]
+    },
+    {
+     "id": 23,
+     "name": "wall_lobby_backleft_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 0
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 24,
+     "name": "wall_lobby_backleft_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 64,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "wall_lobby_backleft_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 128,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 26,
+     "name": "wall_lobby_backleft_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 3
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 27,
+     "name": "wall_lobby_backleft_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 4
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    },
+    {
+     "id": 28,
+     "name": "wall_lobby_backleft_cutaway",
+     "type": "wall",
+     "x": 512,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "../../tiles/wall_lobby_backleft_cutaway.png"
+      },
+      {
+       "name": "mode",
+       "type": "string",
+       "value": "cut"
+      },
+      {
+       "name": "world_x",
+       "type": "int",
+       "value": 8
+      },
+      {
+       "name": "world_y",
+       "type": "int",
+       "value": 5
+      },
+      {
+       "name": "runs_along",
+       "type": "string",
+       "value": "+y"
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 4,
+   "name": "items",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 29,
+     "name": "lobby_mailboxes",
+     "type": "item",
+     "x": 38.4,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lobby_mailboxes"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.6
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lobby_mailboxes/lobby_mailboxes.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 30,
+     "name": "hall_elevator_broken",
+     "type": "item",
+     "x": 192,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "hall_elevator_broken"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/hall_elevator_broken/hall_elevator_broken.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 31,
+     "name": "lobby_stair_up",
+     "type": "item",
+     "x": 384,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lobby_stair_up"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 6.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 4]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lobby_stair_up/lobby_stair_up.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 32,
+     "name": "lobby_glass_door",
+     "type": "item",
+     "x": 0,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lobby_glass_door"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "closed"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lobby_glass_door/lobby_glass_door.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 33,
+     "name": "lobby_mat",
+     "type": "item",
+     "x": 64,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lobby_mat"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 2]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lobby_mat/lobby_mat.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 34,
+     "name": "lobby_sconce",
+     "type": "item",
+     "x": 153.6,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lobby_sconce"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "on"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 2.4
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lobby_sconce/lobby_sconce.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 35,
+     "name": "lobby_sconce",
+     "type": "item",
+     "x": 0,
+     "y": 76.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "lobby_sconce"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "on"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 1.2
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/lobby_sconce/lobby_sconce.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 36,
+     "name": "gen_potted_palm",
+     "type": "item",
+     "x": 0,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "gen_potted_palm"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../../items/gen_potted_palm/gen_potted_palm.json"
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "topdown"
+  },
+  {
+   "id": 5,
+   "name": "hooks",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 37,
+     "name": "lobby_mailboxes#0.check_mail",
+     "type": "hook",
+     "x": 102.4,
+     "y": 38.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "check_mail"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 2
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 38,
+     "name": "hall_elevator_broken#0.look",
+     "type": "hook",
+     "x": 256.0,
+     "y": 57.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "look"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "look_elevator"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "running_gag"
+      }
+     ]
+    },
+    {
+     "id": 39,
+     "name": "hall_elevator_broken#0.call_button",
+     "type": "hook",
+     "x": 310.4,
+     "y": 51.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "press_button"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 40,
+     "name": "lobby_stair_up#0.climb_lane_up",
+     "type": "hook",
+     "x": 448.0,
+     "y": 246.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "climb_lane_up"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "walk_stairs_up"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 41,
+     "name": "lobby_stair_up#0.climb_lane_down",
+     "type": "hook",
+     "x": 448.0,
+     "y": 12.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "climb_lane_down"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "walk_stairs_down"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 42,
+     "name": "lobby_glass_door#0.door",
+     "type": "hook",
+     "x": 35.2,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "open_door"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "to_street"
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 6,
+   "name": "spawns",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 43,
+     "name": "from_street",
+     "type": "spawn",
+     "x": 96.0,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    },
+    {
+     "id": 44,
+     "name": "from_stairs",
+     "type": "spawn",
+     "x": 441.6,
+     "y": 288.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 7,
+   "name": "exits",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 45,
+     "name": "to_street",
+     "type": "exit",
+     "x": 32.0,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "to",
+       "type": "string",
+       "value": "street_exterior"
+      },
+      {
+       "name": "to_spawn",
+       "type": "string",
+       "value": "from_lobby"
+      },
+      {
+       "name": "via",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "tiles",
+       "type": "string",
+       "value": "[[0, 3]]"
+      }
+     ]
+    },
+    {
+     "id": 46,
+     "name": "stairs_up",
+     "type": "exit",
+     "x": 416.0,
+     "y": 32.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "to",
+       "type": "string",
+       "value": "floor4"
+      },
+      {
+       "name": "to_spawn",
+       "type": "string",
+       "value": "stairs_top (hall_stair_flight)"
+      },
+      {
+       "name": "via",
+       "type": "string",
+       "value": "stairs"
+      },
+      {
+       "name": "tiles",
+       "type": "string",
+       "value": "[[6, 0], [7, 0]]"
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "index"
+  },
+  {
+   "id": 8,
+   "name": "characters",
+   "type": "objectgroup",
+   "objects": [
+    {
+     "id": 47,
+     "name": "sheldon",
+     "type": "character",
+     "x": 256.0,
+     "y": 57.6,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "idle"
+      },
+      {
+       "name": "dir",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "hall_elevator_broken.0.look"
+      }
+     ]
+    },
+    {
+     "id": 48,
+     "name": "leonard",
+     "type": "character",
+     "x": 384.0,
+     "y": 300.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "walk"
+      },
+      {
+       "name": "dir",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "draworder": "topdown"
+  }
+ ]
+}

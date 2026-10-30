@@ -1,0 +1,90 @@
+{
+ "id": "rest_bar_stool",
+ "location": "amber_slice",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.82,
+ "rotation_class": "R1",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_bar_stool_SW.png",
+   "pivot": [
+    64,
+    118
+   ],
+   "canvas": [
+    128,
+    118
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.5
+     ],
+     "offset_px": [
+      0,
+      32
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_stool_bar",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "sit",
+   "pos": [
+    0.5,
+    0.5
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_stool_bar",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

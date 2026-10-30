@@ -1,0 +1,1630 @@
+{
+ "floor": {
+  "floor_4a_wood_a": {
+   "sprite": "floor_4a_wood_a.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_4a_wood_b": {
+   "sprite": "floor_4a_wood_b.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_4a_kitchen": {
+   "sprite": "floor_4a_kitchen.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_hall": {
+   "sprite": "floor_hall.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_4b_wood_a": {
+   "sprite": "floor_4b_wood_a.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_4b_wood_b": {
+   "sprite": "floor_4b_wood_b.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_cafe_lino": {
+   "sprite": "floor_cafe_lino.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_office_carpet": {
+   "sprite": "floor_office_carpet.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_lab_vinyl": {
+   "sprite": "floor_lab_vinyl.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_rest_wood_a": {
+   "sprite": "floor_rest_wood_a.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_rest_wood_b": {
+   "sprite": "floor_rest_wood_b.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_rest_tile": {
+   "sprite": "floor_rest_tile.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_raj_wood_a": {
+   "sprite": "floor_raj_wood_a.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_raj_wood_b": {
+   "sprite": "floor_raj_wood_b.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "floor_lobby_tile": {
+   "sprite": "floor_lobby_tile.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "ground_sidewalk": {
+   "sprite": "ground_sidewalk.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "ground_curb": {
+   "sprite": "ground_curb.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "ground_asphalt": {
+   "sprite": "ground_asphalt.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "ground_asphalt_dash": {
+   "sprite": "ground_asphalt_dash.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  },
+  "ground_grass": {
+   "sprite": "ground_grass.png",
+   "size": [
+    128,
+    64
+   ],
+   "anchor": [
+    64,
+    0
+   ]
+  }
+ },
+ "walls": {
+  "wall_4a_backright_full": {
+   "sprite": "wall_4a_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backright_full_window": {
+   "sprite": "wall_4a_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backright_full_window_day": {
+   "sprite": "wall_4a_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backright_full_doorway": {
+   "sprite": "wall_4a_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backright_cutaway": {
+   "sprite": "wall_4a_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backright_cutaway_doorway": {
+   "sprite": "wall_4a_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backleft_full": {
+   "sprite": "wall_4a_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backleft_full_window": {
+   "sprite": "wall_4a_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backleft_full_window_day": {
+   "sprite": "wall_4a_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backleft_full_doorway": {
+   "sprite": "wall_4a_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backleft_cutaway": {
+   "sprite": "wall_4a_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4a_backleft_cutaway_doorway": {
+   "sprite": "wall_4a_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backright_full": {
+   "sprite": "wall_4b_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backright_full_window": {
+   "sprite": "wall_4b_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backright_full_window_day": {
+   "sprite": "wall_4b_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backright_full_doorway": {
+   "sprite": "wall_4b_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backright_cutaway": {
+   "sprite": "wall_4b_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backright_cutaway_doorway": {
+   "sprite": "wall_4b_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backleft_full": {
+   "sprite": "wall_4b_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backleft_full_window": {
+   "sprite": "wall_4b_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backleft_full_window_day": {
+   "sprite": "wall_4b_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backleft_full_doorway": {
+   "sprite": "wall_4b_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backleft_cutaway": {
+   "sprite": "wall_4b_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_4b_backleft_cutaway_doorway": {
+   "sprite": "wall_4b_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backright_full": {
+   "sprite": "wall_hall_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backright_full_window": {
+   "sprite": "wall_hall_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backright_full_window_day": {
+   "sprite": "wall_hall_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backright_full_doorway": {
+   "sprite": "wall_hall_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backright_cutaway": {
+   "sprite": "wall_hall_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backright_cutaway_doorway": {
+   "sprite": "wall_hall_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backleft_full": {
+   "sprite": "wall_hall_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backleft_full_window": {
+   "sprite": "wall_hall_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backleft_full_window_day": {
+   "sprite": "wall_hall_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backleft_full_doorway": {
+   "sprite": "wall_hall_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backleft_cutaway": {
+   "sprite": "wall_hall_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_hall_backleft_cutaway_doorway": {
+   "sprite": "wall_hall_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backright_full": {
+   "sprite": "wall_cafe_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backright_full_window": {
+   "sprite": "wall_cafe_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backright_full_window_day": {
+   "sprite": "wall_cafe_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backright_full_doorway": {
+   "sprite": "wall_cafe_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backright_cutaway": {
+   "sprite": "wall_cafe_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backright_cutaway_doorway": {
+   "sprite": "wall_cafe_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backleft_full": {
+   "sprite": "wall_cafe_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backleft_full_window": {
+   "sprite": "wall_cafe_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backleft_full_window_day": {
+   "sprite": "wall_cafe_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backleft_full_doorway": {
+   "sprite": "wall_cafe_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backleft_cutaway": {
+   "sprite": "wall_cafe_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_cafe_backleft_cutaway_doorway": {
+   "sprite": "wall_cafe_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backright_full": {
+   "sprite": "wall_office_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backright_full_window": {
+   "sprite": "wall_office_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backright_full_window_day": {
+   "sprite": "wall_office_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backright_full_doorway": {
+   "sprite": "wall_office_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backright_cutaway": {
+   "sprite": "wall_office_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backright_cutaway_doorway": {
+   "sprite": "wall_office_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backleft_full": {
+   "sprite": "wall_office_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backleft_full_window": {
+   "sprite": "wall_office_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backleft_full_window_day": {
+   "sprite": "wall_office_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backleft_full_doorway": {
+   "sprite": "wall_office_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backleft_cutaway": {
+   "sprite": "wall_office_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_office_backleft_cutaway_doorway": {
+   "sprite": "wall_office_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backright_full": {
+   "sprite": "wall_lab_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backright_full_window": {
+   "sprite": "wall_lab_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backright_full_window_day": {
+   "sprite": "wall_lab_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backright_full_doorway": {
+   "sprite": "wall_lab_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backright_cutaway": {
+   "sprite": "wall_lab_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backright_cutaway_doorway": {
+   "sprite": "wall_lab_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backleft_full": {
+   "sprite": "wall_lab_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backleft_full_window": {
+   "sprite": "wall_lab_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backleft_full_window_day": {
+   "sprite": "wall_lab_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backleft_full_doorway": {
+   "sprite": "wall_lab_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backleft_cutaway": {
+   "sprite": "wall_lab_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lab_backleft_cutaway_doorway": {
+   "sprite": "wall_lab_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backright_full": {
+   "sprite": "wall_rest_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backright_full_window": {
+   "sprite": "wall_rest_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backright_full_window_day": {
+   "sprite": "wall_rest_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backright_full_doorway": {
+   "sprite": "wall_rest_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backright_cutaway": {
+   "sprite": "wall_rest_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backright_cutaway_doorway": {
+   "sprite": "wall_rest_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backleft_full": {
+   "sprite": "wall_rest_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backleft_full_window": {
+   "sprite": "wall_rest_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backleft_full_window_day": {
+   "sprite": "wall_rest_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backleft_full_doorway": {
+   "sprite": "wall_rest_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backleft_cutaway": {
+   "sprite": "wall_rest_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_rest_backleft_cutaway_doorway": {
+   "sprite": "wall_rest_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backright_full": {
+   "sprite": "wall_raj_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backright_full_window": {
+   "sprite": "wall_raj_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backright_full_window_day": {
+   "sprite": "wall_raj_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backright_full_doorway": {
+   "sprite": "wall_raj_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backright_cutaway": {
+   "sprite": "wall_raj_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backright_cutaway_doorway": {
+   "sprite": "wall_raj_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backleft_full": {
+   "sprite": "wall_raj_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backleft_full_window": {
+   "sprite": "wall_raj_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backleft_full_window_day": {
+   "sprite": "wall_raj_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backleft_full_doorway": {
+   "sprite": "wall_raj_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backleft_cutaway": {
+   "sprite": "wall_raj_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_raj_backleft_cutaway_doorway": {
+   "sprite": "wall_raj_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backright_full": {
+   "sprite": "wall_lobby_backright_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backright_full_window": {
+   "sprite": "wall_lobby_backright_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backright_full_window_day": {
+   "sprite": "wall_lobby_backright_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backright_full_doorway": {
+   "sprite": "wall_lobby_backright_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    0,
+    192
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backright_cutaway": {
+   "sprite": "wall_lobby_backright_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backright_cutaway_doorway": {
+   "sprite": "wall_lobby_backright_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    0,
+    16
+   ],
+   "runs_along": "+x",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backleft_full": {
+   "sprite": "wall_lobby_backleft_full.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backleft_full_window": {
+   "sprite": "wall_lobby_backleft_full_window.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backleft_full_window_day": {
+   "sprite": "wall_lobby_backleft_full_window_day.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backleft_full_doorway": {
+   "sprite": "wall_lobby_backleft_full_doorway.png",
+   "size": [
+    64,
+    224
+   ],
+   "anchor": [
+    64,
+    192
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backleft_cutaway": {
+   "sprite": "wall_lobby_backleft_cutaway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  },
+  "wall_lobby_backleft_cutaway_doorway": {
+   "sprite": "wall_lobby_backleft_cutaway_doorway.png",
+   "size": [
+    64,
+    48
+   ],
+   "anchor": [
+    64,
+    16
+   ],
+   "runs_along": "+y",
+   "note": "anchor = segment top-vertex at floor level"
+  }
+ }
+}

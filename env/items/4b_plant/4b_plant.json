@@ -1,0 +1,43 @@
+{
+ "id": "4b_plant",
+ "location": "4B",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.0,
+ "rotation_class": "R1",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "slightly neglected potted plant",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_plant_SW.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

@@ -1,0 +1,169 @@
+{
+ "id": "cafe_menu_board",
+ "location": "AIT_campus",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 2.6,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "wall",
+ "layer": "wall_decal",
+ "blocks_walk": false,
+ "sort_bias": -1,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "wall menu over the food line: original daily specials",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_cafe_menu_board_SW.png",
+   "pivot": [
+    128,
+    256
+   ],
+   "canvas": [
+    192,
+    256
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_cafe_menu_board_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_cafe_menu_board_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_cafe_menu_board_NW.png",
+   "pivot": [
+    64,
+    256
+   ],
+   "canvas": [
+    192,
+    256
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_cafe_menu_board_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_cafe_menu_board_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_cafe_menu_board_NE.png",
+   "pivot": [
+    128,
+    256
+   ],
+   "canvas": [
+    192,
+    256
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_cafe_menu_board_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_cafe_menu_board_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_cafe_menu_board_SE.png",
+   "pivot": [
+    64,
+    256
+   ],
+   "canvas": [
+    192,
+    256
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_cafe_menu_board_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_cafe_menu_board_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

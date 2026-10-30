@@ -1,0 +1,541 @@
+{
+ "id": "off_door",
+ "location": "AIT_campus",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 2.22,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "wall",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "closed",
+  "open_1",
+  "open_2",
+  "open"
+ ],
+ "tags": [],
+ "notes": "office door with a brass name plaque on the hallway side (back face) and a small notice card on the inside face",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_off_door_SW.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.55
+     ],
+     "offset_px": [
+      -3,
+      34
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.45
+     ],
+     "offset_px": [
+      61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_off_door_SW_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open_2": {
+     "sprite": "item_off_door_SW_open_2.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open": {
+     "sprite": "item_off_door_SW_open.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_off_door_NW.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.45,
+      0.5
+     ],
+     "offset_px": [
+      -3,
+      30
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.45,
+      0.5
+     ],
+     "offset_px": [
+      61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_off_door_NW_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open_2": {
+     "sprite": "item_off_door_NW_open_2.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open": {
+     "sprite": "item_off_door_NW_open.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_off_door_NE.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.45
+     ],
+     "offset_px": [
+      3,
+      30
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.45
+     ],
+     "offset_px": [
+      -61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_off_door_NE_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open_2": {
+     "sprite": "item_off_door_NE_open_2.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open": {
+     "sprite": "item_off_door_NE_open.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_off_door_SE.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    128,
+    208
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "door",
+     "type": "door",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.55,
+      0.5
+     ],
+     "offset_px": [
+      3,
+      34
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "open_door",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "knock_spot_outside",
+     "type": "knock_spot_outside",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.45,
+      0.5
+     ],
+     "offset_px": [
+      -61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "knock",
+     "tags": [],
+     "approach_tile": [
+      -1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "open_1": {
+     "sprite": "item_off_door_SE_open_1.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open_2": {
+     "sprite": "item_off_door_SE_open_2.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    },
+    "open": {
+     "sprite": "item_off_door_SE_open.png",
+     "pivot": [
+      64,
+      208
+     ],
+     "canvas": [
+      128,
+      208
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "door",
+   "type": "door",
+   "pos": [
+    0.5,
+    0.55
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "open_door",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "knock_spot_outside",
+   "type": "knock_spot_outside",
+   "pos": [
+    0.5,
+    -0.45
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "knock",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    -1
+   ]
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "character": "amy",
+ "generated": "2026-10-30 00:38 (America/Los_Angeles)",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot": [
+  64,
+  116
+ ],
+ "body_height_spec_px": 88,
+ "head_top_spec_y": 28,
+ "idle_S_head_top_y": 28,
+ "idle_S_body_height_px": 88,
+ "idle_S_lowest_px": 119,
+ "head_top_within_2px_of_spec": true,
+ "feet_on_pivot_line_idle": true,
+ "palette_violations": 0,
+ "alpha_values": [
+  0,
+  255
+ ],
+ "frames": 168,
+ "sheet_px": [
+  1536,
+  4096
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "dirs": 8
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "dirs": 8
+  },
+  "blink": {
+   "frames": 3,
+   "fps": 12,
+   "dirs": 8
+  },
+  "neuro_lecture": {
+   "frames": 6,
+   "fps": 8,
+   "dirs": 8
+  }
+ },
+ "mirror_check": {
+  "NE": {
+   "pixels_differing_from_plain_flip": 213,
+   "silhouette_identical": true
+  },
+  "E": {
+   "pixels_differing_from_plain_flip": 150,
+   "silhouette_identical": true
+  },
+  "SE": {
+   "pixels_differing_from_plain_flip": 189,
+   "silhouette_identical": true
+  }
+ },
+ "decal_check": {
+  "S": {
+   "px": 26,
+   "mean_col": 65.76923076923077
+  },
+  "SW": {
+   "px": 22,
+   "mean_col": 62.04545454545455
+  },
+  "W": {
+   "px": 16,
+   "mean_col": 62.5
+  },
+  "SE": {
+   "px": 12,
+   "mean_col": 67.75
+  },
+  "E": {
+   "px": 9,
+   "mean_col": 58.888888888888886
+  }
+ },
+ "idle_S_eye_pixels": 16,
+ "gifs": {
+  "blink_8dir_4x.gif": 4,
+  "idle_8dir_4x.gif": 4,
+  "neuro_lecture_8dir_4x.gif": 7,
+  "walk_8dir_4x.gif": 8,
+  "walk_E_4x.gif": 8,
+  "walk_NE_4x.gif": 8,
+  "walk_NW_4x.gif": 8,
+  "walk_N_4x.gif": 8,
+  "walk_SE_4x.gif": 8,
+  "walk_SW_4x.gif": 8,
+  "walk_S_4x.gif": 8,
+  "walk_W_4x.gif": 8
+ },
+ "walk_8dir_gif_present": true
+}

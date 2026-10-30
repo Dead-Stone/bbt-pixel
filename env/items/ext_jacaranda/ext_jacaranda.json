@@ -1,0 +1,43 @@
+{
+ "id": "ext_jacaranda",
+ "location": "street",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 4.6,
+ "rotation_class": "R1",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "street tree in purple bloom (jacaranda), canopy overhangs neighbouring tiles",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_jacaranda_SW.png",
+   "pivot": [
+    80,
+    342
+   ],
+   "canvas": [
+    160,
+    342
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": false,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

@@ -1,0 +1,446 @@
+{
+ "id": "4b_kitchen_counter",
+ "location": "4B",
+ "footprint": [
+  3,
+  1
+ ],
+ "height_m": 2.0,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "4B kitchen: orange tile backsplash, open mug shelves, dishes piled in the sink",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_kitchen_counter_SW.png",
+   "pivot": [
+    192,
+    250
+   ],
+   "canvas": [
+    256,
+    250
+   ],
+   "footprint": [
+    3,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_kitchen_counter_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_SW_s2.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "cook",
+     "type": "cook",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.8,
+      1.2
+     ],
+     "offset_px": [
+      38,
+      96
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "cook_stove",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "sink",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.6,
+      1.2
+     ],
+     "offset_px": [
+      -38,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "wash_dishes",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_4b_kitchen_counter_NW.png",
+   "pivot": [
+    64,
+    250
+   ],
+   "canvas": [
+    256,
+    250
+   ],
+   "footprint": [
+    1,
+    3
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_kitchen_counter_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_NW_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "cook",
+     "type": "cook",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.2,
+      1.8
+     ],
+     "offset_px": [
+      -128,
+      51
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "cook_stove",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "sink",
+     "type": "use",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.2,
+      0.6
+     ],
+     "offset_px": [
+      -51,
+      13
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "wash_dishes",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_4b_kitchen_counter_NE.png",
+   "pivot": [
+    192,
+    250
+   ],
+   "canvas": [
+    256,
+    250
+   ],
+   "footprint": [
+    3,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_kitchen_counter_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_NE_s2.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "cook",
+     "type": "cook",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.2,
+      -0.2
+     ],
+     "offset_px": [
+      90,
+      32
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "cook_stove",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "sink",
+     "type": "use",
+     "tile": [
+      2,
+      -1
+     ],
+     "local": [
+      2.4,
+      -0.2
+     ],
+     "offset_px": [
+      166,
+      70
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "wash_dishes",
+     "tags": [],
+     "approach_tile": [
+      3,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4b_kitchen_counter_SE.png",
+   "pivot": [
+    64,
+    250
+   ],
+   "canvas": [
+    256,
+    250
+   ],
+   "footprint": [
+    1,
+    3
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_kitchen_counter_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_kitchen_counter_SE_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "cook",
+     "type": "cook",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.2,
+      1.2
+     ],
+     "offset_px": [
+      0,
+      77
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "cook_stove",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "sink",
+     "type": "use",
+     "tile": [
+      1,
+      2
+     ],
+     "local": [
+      1.2,
+      2.4
+     ],
+     "offset_px": [
+      -77,
+      115
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "wash_dishes",
+     "tags": [],
+     "approach_tile": [
+      1,
+      3
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "cook",
+   "type": "cook",
+   "pos": [
+    1.8,
+    1.2
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "cook_stove",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "sink",
+   "type": "use",
+   "pos": [
+    0.6,
+    1.2
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "wash_dishes",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

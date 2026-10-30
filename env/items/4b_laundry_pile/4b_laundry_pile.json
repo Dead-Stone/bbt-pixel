@@ -1,0 +1,94 @@
+{
+ "id": "4b_laundry_pile",
+ "location": "4B",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.38,
+ "rotation_class": "R1",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "clothes clutter heap + a stray boot",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_laundry_pile_SW.png",
+   "pivot": [
+    64,
+    86
+   ],
+   "canvas": [
+    128,
+    86
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "pickup",
+     "type": "pickup",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.95
+     ],
+     "offset_px": [
+      -29,
+      46
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "pickup_clothes",
+     "tags": [
+      "laundry"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "pickup",
+   "type": "pickup",
+   "pos": [
+    0.5,
+    0.95
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "pickup_clothes",
+   "tags": [
+    "laundry"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

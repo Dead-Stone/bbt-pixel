@@ -1,0 +1,353 @@
+{
+ "id": "street_exterior",
+ "name": "2311 building entrance + street (Pasadena)",
+ "kind": "exterior",
+ "size": [
+  16,
+  10
+ ],
+ "ztop": 6.8,
+ "sky": false,
+ "floor": [
+  [
+   0,
+   0,
+   16,
+   3,
+   "ground_sidewalk"
+  ],
+  [
+   0,
+   3,
+   16,
+   4,
+   "ground_grass"
+  ],
+  [
+   0,
+   4,
+   16,
+   5,
+   "ground_curb"
+  ],
+  [
+   0,
+   5,
+   16,
+   10,
+   "ground_asphalt"
+  ],
+  [
+   0,
+   7,
+   16,
+   8,
+   "ground_asphalt_dash"
+  ],
+  [
+   6,
+   3,
+   10,
+   4,
+   "ground_sidewalk"
+  ]
+ ],
+ "walls": {},
+ "items": [
+  [
+   "ext_building_facade",
+   0,
+   0,
+   "SW",
+   null,
+   0,
+   {
+    "layer": 3
+   }
+  ],
+  [
+   "ext_entry_steps",
+   7,
+   0.3,
+   "SW"
+  ],
+  [
+   "ext_entrance_doors",
+   7,
+   0.16,
+   "SW",
+   null,
+   0.45
+  ],
+  [
+   "ext_wall_lantern",
+   6.2,
+   0.3,
+   "SW",
+   null,
+   0.2
+  ],
+  [
+   "ext_wall_lantern",
+   8.8,
+   0.3,
+   "SW",
+   null,
+   0.2
+  ],
+  [
+   "ext_hedge",
+   1,
+   0.35,
+   "SW"
+  ],
+  [
+   "ext_hedge",
+   3.6,
+   0.35,
+   "SW"
+  ],
+  [
+   "ext_hedge",
+   10.4,
+   0.35,
+   "SW"
+  ],
+  [
+   "ext_hedge",
+   13,
+   0.35,
+   "SW"
+  ],
+  [
+   "ext_palm",
+   2,
+   3,
+   "SW"
+  ],
+  [
+   "ext_jacaranda",
+   4.5,
+   3,
+   "SW"
+  ],
+  [
+   "ext_jacaranda",
+   11.5,
+   3,
+   "SW"
+  ],
+  [
+   "ext_palm",
+   14,
+   3,
+   "SW"
+  ],
+  [
+   "ext_street_lamp",
+   10,
+   3,
+   "SW"
+  ],
+  [
+   "ext_hydrant",
+   6,
+   3.2,
+   "SW"
+  ],
+  [
+   "ext_street_sign",
+   15,
+   2,
+   "SE"
+  ],
+  [
+   "ext_mailbox",
+   12,
+   2,
+   "SW"
+  ],
+  [
+   "ext_bench",
+   4,
+   1.7,
+   "SW"
+  ],
+  [
+   "ext_trash_can",
+   9.5,
+   2.1,
+   "SW"
+  ],
+  [
+   "ext_car_hatchback",
+   2,
+   5,
+   "SE"
+  ]
+ ],
+ "chars": [
+  {
+   "cid": "leonard",
+   "mode": "stand",
+   "pos": [
+    7.0,
+    2.4
+   ],
+   "dir": "SE",
+   "anim": "walk",
+   "k": 1
+  },
+  {
+   "cid": "penny",
+   "mode": "stand",
+   "pos": [
+    5.4,
+    2.3
+   ],
+   "dir": "SE",
+   "anim": "idle"
+  },
+  {
+   "cid": "sheldon",
+   "mode": "stand",
+   "pos": [
+    8.3,
+    1.75
+   ],
+   "dir": "SW",
+   "anim": "idle"
+  }
+ ],
+ "zones": {
+  "sidewalk": [
+   0,
+   0,
+   16,
+   3
+  ],
+  "parkway": [
+   0,
+   3,
+   16,
+   1
+  ],
+  "curb": [
+   0,
+   4,
+   16,
+   1
+  ],
+  "street": [
+   0,
+   5,
+   16,
+   5
+  ]
+ },
+ "force_block": [],
+ "spawns": {
+  "from_lobby": [
+   8.0,
+   1.6
+  ],
+  "from_campus": [
+   5.5,
+   7.0
+  ],
+  "from_restaurant": [
+   15.5,
+   1.5
+  ],
+  "from_raj": [
+   5.5,
+   7.0
+  ],
+  "car_driver": [
+   4.5,
+   4.6
+  ]
+ },
+ "doors": [
+  {
+   "item": "ext_entrance_doors",
+   "tile": [
+    7,
+    0
+   ],
+   "to": "lobby",
+   "facing": "SW",
+   "note": "doors sit at z=0.45 on the entry steps"
+  }
+ ],
+ "exits": [
+  {
+   "id": "to_lobby",
+   "tiles": [
+    [
+     7,
+     0
+    ],
+    [
+     8,
+     0
+    ]
+   ],
+   "to": "lobby",
+   "to_spawn": "from_street",
+   "via": "door"
+  },
+  {
+   "id": "drive_campus",
+   "tiles": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     4
+    ]
+   ],
+   "to": "ait_cafeteria",
+   "to_spawn": "from_quad",
+   "via": "car"
+  },
+  {
+   "id": "drive_raj",
+   "tiles": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     4
+    ]
+   ],
+   "to": "raj_apartment",
+   "to_spawn": "from_street",
+   "via": "car"
+  },
+  {
+   "id": "walk_restaurant",
+   "tiles": [
+    [
+     15,
+     0
+    ],
+    [
+     15,
+     1
+    ],
+    [
+     15,
+     2
+    ]
+   ],
+   "to": "rest_amber_slice",
+   "to_spawn": "from_street",
+   "via": "sidewalk"
+  }
+ ]
+}

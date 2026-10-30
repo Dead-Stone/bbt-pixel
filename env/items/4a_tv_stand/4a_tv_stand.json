@@ -1,0 +1,555 @@
+{
+ "id": "4a_tv_stand",
+ "location": "4A",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 1.2,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "off",
+  "on"
+ ],
+ "tags": [],
+ "notes": "media console + flat TV + game console; seen from behind in the sitcom staging (faces the couch)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4a_tv_stand_SW.png",
+   "pivot": [
+    128,
+    174
+   ],
+   "canvas": [
+    192,
+    174
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_tv_stand_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_tv_stand_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "watch_target",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.45
+     ],
+     "offset_px": [
+      35,
+      -11
+     ],
+     "z": 0.9,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tv"
+     ]
+    },
+    {
+     "id": "game_console",
+     "type": "use",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.35,
+      1.35
+     ],
+     "offset_px": [
+      0,
+      86
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "use_console",
+     "tags": [
+      "console"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_tv_stand_SW_on.png",
+     "pivot": [
+      128,
+      174
+     ],
+     "canvas": [
+      192,
+      174
+     ],
+     "footprint": [
+      2,
+      1
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_tv_stand_SW_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_tv_stand_SW_on_s1.png",
+       "tile": [
+        1,
+        0
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_4a_tv_stand_NW.png",
+   "pivot": [
+    64,
+    174
+   ],
+   "canvas": [
+    192,
+    174
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_tv_stand_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_tv_stand_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "watch_target",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.55,
+      1.0
+     ],
+     "offset_px": [
+      -29,
+      -8
+     ],
+     "z": 0.9,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tv"
+     ]
+    },
+    {
+     "id": "game_console",
+     "type": "use",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.35,
+      1.35
+     ],
+     "offset_px": [
+      -109,
+      32
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "use_console",
+     "tags": [
+      "console"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_tv_stand_NW_on.png",
+     "pivot": [
+      64,
+      174
+     ],
+     "canvas": [
+      192,
+      174
+     ],
+     "footprint": [
+      1,
+      2
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_tv_stand_NW_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_tv_stand_NW_on_s1.png",
+       "tile": [
+        0,
+        1
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_4a_tv_stand_NE.png",
+   "pivot": [
+    128,
+    174
+   ],
+   "canvas": [
+    192,
+    174
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_tv_stand_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_tv_stand_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "watch_target",
+     "type": "look",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.55
+     ],
+     "offset_px": [
+      29,
+      -8
+     ],
+     "z": 0.9,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tv"
+     ]
+    },
+    {
+     "id": "game_console",
+     "type": "use",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.65,
+      -0.35
+     ],
+     "offset_px": [
+      64,
+      10
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "use_console",
+     "tags": [
+      "console"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_tv_stand_NE_on.png",
+     "pivot": [
+      128,
+      174
+     ],
+     "canvas": [
+      192,
+      174
+     ],
+     "footprint": [
+      2,
+      1
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_tv_stand_NE_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_tv_stand_NE_on_s1.png",
+       "tile": [
+        1,
+        0
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_4a_tv_stand_SE.png",
+   "pivot": [
+    64,
+    174
+   ],
+   "canvas": [
+    192,
+    174
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4a_tv_stand_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4a_tv_stand_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "watch_target",
+     "type": "look",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.45,
+      1.0
+     ],
+     "offset_px": [
+      -35,
+      -11
+     ],
+     "z": 0.9,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tv"
+     ]
+    },
+    {
+     "id": "game_console",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.35,
+      0.65
+     ],
+     "offset_px": [
+      45,
+      64
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "use_console",
+     "tags": [
+      "console"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "on": {
+     "sprite": "item_4a_tv_stand_SE_on.png",
+     "pivot": [
+      64,
+      174
+     ],
+     "canvas": [
+      192,
+      174
+     ],
+     "footprint": [
+      1,
+      2
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_4a_tv_stand_SE_on_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_4a_tv_stand_SE_on_s1.png",
+       "tile": [
+        0,
+        1
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "watch_target",
+   "type": "look",
+   "pos": [
+    1.0,
+    0.45
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "tv"
+   ],
+   "z": 0.9
+  },
+  {
+   "id": "game_console",
+   "type": "use",
+   "pos": [
+    1.35,
+    1.35
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "use_console",
+   "tags": [
+    "console"
+   ],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  }
+ ]
+}

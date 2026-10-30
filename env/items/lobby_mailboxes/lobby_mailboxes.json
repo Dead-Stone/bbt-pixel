@@ -1,0 +1,294 @@
+{
+ "id": "lobby_mailboxes",
+ "location": "lobby",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 1.9,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "wall",
+ "layer": "wall_decal",
+ "blocks_walk": false,
+ "sort_bias": -1,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "bank of brass tenant mailboxes (spec \u00a75.2 brass mailboxes)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lobby_mailboxes_SW.png",
+   "pivot": [
+    128,
+    208
+   ],
+   "canvas": [
+    192,
+    208
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_mailboxes_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lobby_mailboxes_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "check_mail",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.6
+     ],
+     "offset_px": [
+      26,
+      51
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 2,
+     "anim": "check_mail",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_lobby_mailboxes_NW.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    192,
+    208
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_mailboxes_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lobby_mailboxes_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "check_mail",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.4,
+      1.0
+     ],
+     "offset_px": [
+      -38,
+      45
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 2,
+     "anim": "check_mail",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_lobby_mailboxes_NE.png",
+   "pivot": [
+    128,
+    208
+   ],
+   "canvas": [
+    192,
+    208
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_mailboxes_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lobby_mailboxes_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "check_mail",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.4
+     ],
+     "offset_px": [
+      38,
+      45
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 2,
+     "anim": "check_mail",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_lobby_mailboxes_SE.png",
+   "pivot": [
+    64,
+    208
+   ],
+   "canvas": [
+    192,
+    208
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_mailboxes_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0
+    },
+    {
+     "sprite": "item_lobby_mailboxes_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1
+    }
+   ],
+   "hooks": [
+    {
+     "id": "check_mail",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.6,
+      1.0
+     ],
+     "offset_px": [
+      -26,
+      51
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 2,
+     "anim": "check_mail",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "check_mail",
+   "type": "use",
+   "pos": [
+    1.0,
+    0.6
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 2,
+   "anim": "check_mail",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    0
+   ]
+  }
+ ]
+}

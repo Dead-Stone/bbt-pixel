@@ -1,0 +1,205 @@
+{
+ "id": "lobby",
+ "name": "2311 lobby (ground floor)",
+ "kind": "interior",
+ "size": [
+  8,
+  6
+ ],
+ "floor": [
+  [
+   0,
+   0,
+   8,
+   6,
+   "floor_lobby_tile"
+  ]
+ ],
+ "walls": {
+  "back": [
+   [
+    0,
+    8,
+    "lobby"
+   ]
+  ],
+  "left": [
+   [
+    0,
+    6,
+    "lobby"
+   ]
+  ],
+  "front_cut": "lobby",
+  "right_cut": "lobby"
+ },
+ "items": [
+  [
+   "lobby_mailboxes",
+   0.6,
+   0,
+   "SW"
+  ],
+  [
+   "hall_elevator_broken",
+   3,
+   0,
+   "SW"
+  ],
+  [
+   "lobby_stair_up",
+   6,
+   0,
+   "SW"
+  ],
+  [
+   "lobby_glass_door",
+   0,
+   3,
+   "SE",
+   "closed"
+  ],
+  [
+   "lobby_mat",
+   1,
+   3,
+   "SE"
+  ],
+  [
+   "lobby_sconce",
+   2.4,
+   0,
+   "SW"
+  ],
+  [
+   "lobby_sconce",
+   0,
+   1.2,
+   "SE"
+  ],
+  [
+   "gen_potted_palm",
+   0,
+   5,
+   "SW"
+  ]
+ ],
+ "lights": [],
+ "chars": [
+  {
+   "cid": "sheldon",
+   "mode": "stand",
+   "hook": [
+    "hall_elevator_broken",
+    0,
+    "look"
+   ],
+   "dir": "NE"
+  },
+  {
+   "cid": "leonard",
+   "mode": "stand",
+   "pos": [
+    6.0,
+    4.7
+   ],
+   "dir": "NE",
+   "anim": "walk",
+   "k": 2
+  }
+ ],
+ "zones": {
+  "lobby": [
+   0,
+   0,
+   8,
+   6
+  ]
+ },
+ "force_walk": [
+  [
+   6,
+   3
+  ],
+  [
+   7,
+   3
+  ],
+  [
+   6,
+   2
+  ],
+  [
+   7,
+   2
+  ],
+  [
+   6,
+   1
+  ],
+  [
+   7,
+   1
+  ],
+  [
+   6,
+   0
+  ],
+  [
+   7,
+   0
+  ]
+ ],
+ "spawns": {
+  "from_street": [
+   1.5,
+   3.5
+  ],
+  "from_stairs": [
+   6.9,
+   4.5
+  ]
+ },
+ "doors": [
+  {
+   "item": "lobby_glass_door",
+   "tile": [
+    0,
+    3
+   ],
+   "to": "street_exterior",
+   "facing": "SE"
+  }
+ ],
+ "exits": [
+  {
+   "id": "to_street",
+   "tiles": [
+    [
+     0,
+     3
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_lobby",
+   "via": "door"
+  },
+  {
+   "id": "stairs_up",
+   "tiles": [
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ]
+   ],
+   "to": "floor4",
+   "to_spawn": "stairs_top (hall_stair_flight)",
+   "via": "stairs",
+   "note": "three flights in the show; collapsed to one link: lobby_stair_up top -> floor4 hall_stair_flight"
+  }
+ ]
+}

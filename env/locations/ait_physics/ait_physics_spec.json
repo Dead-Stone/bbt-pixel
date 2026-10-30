@@ -1,0 +1,356 @@
+{
+ "id": "ait_physics",
+ "name": "AIT Physics: Sheldon's office + shared lab",
+ "kind": "interior",
+ "size": [
+  16,
+  8
+ ],
+ "floor": [
+  [
+   0,
+   0,
+   7,
+   8,
+   "floor_office_carpet"
+  ],
+  [
+   7,
+   0,
+   16,
+   8,
+   "floor_lab_vinyl"
+  ]
+ ],
+ "walls": {
+  "back": [
+   [
+    0,
+    7,
+    "office"
+   ],
+   [
+    7,
+    16,
+    "lab"
+   ]
+  ],
+  "left": [
+   [
+    0,
+    8,
+    "office"
+   ]
+  ],
+  "front_cut": "office",
+  "right_cut": "lab",
+  "partitions": [
+   {
+    "side": "bl",
+    "line": 7,
+    "span": [
+     0,
+     8
+    ],
+    "mat": "lab",
+    "gaps": [
+     5
+    ]
+   }
+  ]
+ },
+ "slots": {
+  "back": {
+   "5": "window_day",
+   "14": "window_high",
+   "15": "window_high"
+  }
+ },
+ "items": [
+  [
+   "off_whiteboard_wall",
+   1,
+   0,
+   "SW",
+   "equations_a"
+  ],
+  [
+   "off_whiteboard_wall",
+   3,
+   0,
+   "SW",
+   "equations_b"
+  ],
+  [
+   "poster_award",
+   6,
+   0,
+   "SW"
+  ],
+  [
+   "off_bookshelf",
+   0,
+   1,
+   "SE"
+  ],
+  [
+   "off_filing_cabinet",
+   0,
+   3,
+   "SE"
+  ],
+  [
+   "off_door",
+   0,
+   5,
+   "SE",
+   "closed"
+  ],
+  [
+   "poster_diploma",
+   0,
+   4,
+   "SE"
+  ],
+  [
+   "poster_journal",
+   0,
+   7,
+   "SE"
+  ],
+  [
+   "off_desk",
+   3,
+   3,
+   "SW",
+   "on"
+  ],
+  [
+   "4a_office_chair",
+   4,
+   4,
+   "NE"
+  ],
+  [
+   "cafe_chair",
+   1,
+   4,
+   "NE"
+  ],
+  [
+   "lab_bench_electronics",
+   8,
+   0,
+   "SW",
+   "on"
+  ],
+  [
+   "lab_pegboard",
+   8.5,
+   0,
+   "SW"
+  ],
+  [
+   "lab_stool",
+   9,
+   1,
+   "SW"
+  ],
+  [
+   "lab_3d_printer",
+   11,
+   0,
+   "SW",
+   "printing"
+  ],
+  [
+   "lab_laser_sign",
+   12,
+   0,
+   "SW"
+  ],
+  [
+   "lab_tool_chest",
+   13,
+   0,
+   "SW"
+  ],
+  [
+   "lab_robot_arm",
+   15,
+   1,
+   "SE"
+  ],
+  [
+   "lab_optical_table",
+   12,
+   3,
+   "SW",
+   "on"
+  ],
+  [
+   "lab_rover",
+   9,
+   5,
+   "SE"
+  ],
+  [
+   "poster_neutrino",
+   10,
+   0,
+   "SW",
+   null,
+   0.25
+  ],
+  [
+   "lab_bench_electronics",
+   12,
+   6,
+   "SW",
+   "off"
+  ],
+  [
+   "lab_stool",
+   13,
+   5,
+   "SW"
+  ],
+  [
+   "lab_stool",
+   8,
+   3,
+   "SW"
+  ]
+ ],
+ "lights": [
+  {
+   "pos": [
+    4.0,
+    3.3
+   ],
+   "r": 0.9,
+   "kind": "screen"
+  },
+  {
+   "pos": [
+    9.5,
+    0.9
+   ],
+   "r": 1.0,
+   "kind": "screen"
+  },
+  {
+   "pos": [
+    5.5,
+    1.0
+   ],
+   "r": 1.4,
+   "kind": "window"
+  },
+  {
+   "pos": [
+    13.0,
+    3.6
+   ],
+   "r": 1.2,
+   "kind": "lamp",
+   "src": "laser"
+  }
+ ],
+ "chars": [
+  {
+   "cid": "sheldon",
+   "mode": "stand",
+   "hook": [
+    "off_whiteboard_wall",
+    0,
+    "write"
+   ],
+   "dir": "NE"
+  },
+  {
+   "cid": "leonard",
+   "mode": "stand",
+   "hook": [
+    "lab_optical_table",
+    0,
+    "align"
+   ],
+   "dir": "NE"
+  },
+  {
+   "cid": "howard",
+   "mode": "stand",
+   "pos": [
+    10.2,
+    2.3
+   ],
+   "dir": "SW",
+   "anim": "idle"
+  }
+ ],
+ "zones": {
+  "office_sheldon": [
+   0,
+   0,
+   7,
+   8
+  ],
+  "lab_shared": [
+   7,
+   0,
+   9,
+   8
+  ]
+ },
+ "spawns": {
+  "from_cafeteria": [
+   1.5,
+   5.5
+  ],
+  "office_desk": [
+   4.5,
+   4.4
+  ],
+  "lab_door": [
+   7.5,
+   5.5
+  ]
+ },
+ "doors": [
+  {
+   "item": "off_door",
+   "tile": [
+    0,
+    5
+   ],
+   "to": "ait_cafeteria",
+   "facing": "SE"
+  },
+  {
+   "item": "(doorway gap)",
+   "tile": [
+    7,
+    5
+   ],
+   "connects": [
+    "office_sheldon",
+    "lab_shared"
+   ]
+  }
+ ],
+ "exits": [
+  {
+   "id": "to_cafeteria",
+   "tiles": [
+    [
+     0,
+     5
+    ]
+   ],
+   "to": "ait_cafeteria",
+   "to_spawn": "from_physics",
+   "via": "door"
+  }
+ ]
+}

@@ -1,0 +1,773 @@
+{
+ "id": "cafe_table_long",
+ "location": "AIT_campus",
+ "footprint": [
+  3,
+  1
+ ],
+ "height_m": 0.76,
+ "rotation_class": "R2",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "6-seat cafeteria table; chairs (cafe_chair) sit on the tiles in front/behind. seat0-2 north side (face SW), seat3-5 south side (face NE)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_cafe_table_long_SW.png",
+   "pivot": [
+    192,
+    184
+   ],
+   "canvas": [
+    256,
+    184
+   ],
+   "footprint": [
+    3,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_cafe_table_long_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_cafe_table_long_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_cafe_table_long_SW_s2.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.45
+     ],
+     "offset_px": [
+      61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.5,
+      -0.45
+     ],
+     "offset_px": [
+      125,
+      34
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      -1
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      2,
+      -1
+     ],
+     "local": [
+      2.5,
+      -0.45
+     ],
+     "offset_px": [
+      189,
+      66
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      2,
+      -1
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.45
+     ],
+     "offset_px": [
+      -61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "seat4",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.5,
+      1.45
+     ],
+     "offset_px": [
+      3,
+      94
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "seat5",
+     "type": "sit",
+     "tile": [
+      2,
+      1
+     ],
+     "local": [
+      2.5,
+      1.45
+     ],
+     "offset_px": [
+      67,
+      126
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      2,
+      1
+     ]
+    },
+    {
+     "id": "tray0",
+     "type": "place_item",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.5
+     ],
+     "offset_px": [
+      0,
+      -17
+     ],
+     "z": 0.76,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tray",
+      "lunch"
+     ]
+    },
+    {
+     "id": "tray1",
+     "type": "place_item",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.5,
+      0.5
+     ],
+     "offset_px": [
+      64,
+      15
+     ],
+     "z": 0.76,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tray",
+      "lunch"
+     ]
+    },
+    {
+     "id": "tray2",
+     "type": "place_item",
+     "tile": [
+      2,
+      0
+     ],
+     "local": [
+      2.5,
+      0.5
+     ],
+     "offset_px": [
+      128,
+      47
+     ],
+     "z": 0.76,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tray",
+      "lunch"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_cafe_table_long_SE.png",
+   "pivot": [
+    64,
+    184
+   ],
+   "canvas": [
+    256,
+    184
+   ],
+   "footprint": [
+    1,
+    3
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_cafe_table_long_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_cafe_table_long_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_cafe_table_long_SE_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      -1,
+      2
+     ],
+     "local": [
+      -0.45,
+      2.5
+     ],
+     "offset_px": [
+      -189,
+      66
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      -1,
+      3
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.45,
+      1.5
+     ],
+     "offset_px": [
+      -125,
+      34
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      -1,
+      2
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.45,
+      0.5
+     ],
+     "offset_px": [
+      -61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      -1,
+      1
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      1,
+      2
+     ],
+     "local": [
+      1.45,
+      2.5
+     ],
+     "offset_px": [
+      -67,
+      126
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      3
+     ]
+    },
+    {
+     "id": "seat4",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.45,
+      1.5
+     ],
+     "offset_px": [
+      -3,
+      94
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "seat5",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.45,
+      0.5
+     ],
+     "offset_px": [
+      61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_chair_eat",
+     "tags": [
+      "needs_chair"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "tray0",
+     "type": "place_item",
+     "tile": [
+      0,
+      2
+     ],
+     "local": [
+      0.5,
+      2.5
+     ],
+     "offset_px": [
+      -128,
+      47
+     ],
+     "z": 0.76,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tray",
+      "lunch"
+     ]
+    },
+    {
+     "id": "tray1",
+     "type": "place_item",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.5
+     ],
+     "offset_px": [
+      -64,
+      15
+     ],
+     "z": 0.76,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tray",
+      "lunch"
+     ]
+    },
+    {
+     "id": "tray2",
+     "type": "place_item",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.5
+     ],
+     "offset_px": [
+      0,
+      -17
+     ],
+     "z": 0.76,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "tray",
+      "lunch"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "sit",
+   "pos": [
+    0.5,
+    -0.45
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    -1
+   ]
+  },
+  {
+   "id": "seat1",
+   "type": "sit",
+   "pos": [
+    1.5,
+    -0.45
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    1,
+    -1
+   ]
+  },
+  {
+   "id": "seat2",
+   "type": "sit",
+   "pos": [
+    2.5,
+    -0.45
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    2,
+    -1
+   ]
+  },
+  {
+   "id": "seat3",
+   "type": "sit",
+   "pos": [
+    0.5,
+    1.45
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "seat4",
+   "type": "sit",
+   "pos": [
+    1.5,
+    1.45
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "seat5",
+   "type": "sit",
+   "pos": [
+    2.5,
+    1.45
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair_eat",
+   "tags": [
+    "needs_chair"
+   ],
+   "z": 0.0,
+   "approach": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "tray0",
+   "type": "place_item",
+   "pos": [
+    0.5,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "tray",
+    "lunch"
+   ],
+   "z": 0.76
+  },
+  {
+   "id": "tray1",
+   "type": "place_item",
+   "pos": [
+    1.5,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "tray",
+    "lunch"
+   ],
+   "z": 0.76
+  },
+  {
+   "id": "tray2",
+   "type": "place_item",
+   "pos": [
+    2.5,
+    0.5
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "tray",
+    "lunch"
+   ],
+   "z": 0.76
+  }
+ ]
+}

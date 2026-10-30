@@ -1,0 +1,10 @@
+{
+ "sprite": "howard_sit_SW.png",
+ "pivot": [
+  64,
+  128
+ ],
+ "dir": "SW",
+ "lift_units": -7.62,
+ "note": "scene-only seated pose; pivot = floor point under the hips"
+}

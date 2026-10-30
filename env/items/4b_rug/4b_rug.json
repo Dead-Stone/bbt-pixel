@@ -1,0 +1,129 @@
+{
+ "id": "4b_rug",
+ "location": "4B",
+ "footprint": [
+  2,
+  2
+ ],
+ "height_m": 0.012,
+ "rotation_class": "R2",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "floor_decal",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_rug_SW.png",
+   "pivot": [
+    128,
+    130
+   ],
+   "canvas": [
+    256,
+    130
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_rug_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_rug_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_rug_SW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_rug_SW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4b_rug_SE.png",
+   "pivot": [
+    128,
+    130
+   ],
+   "canvas": [
+    256,
+    130
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_4b_rug_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_4b_rug_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_rug_SE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_4b_rug_SE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

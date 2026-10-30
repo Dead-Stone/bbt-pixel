@@ -1,0 +1,97 @@
+{
+ "id": "ext_wall_lantern",
+ "location": "street",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 2.6,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "wall",
+ "layer": "wall_decal",
+ "blocks_walk": false,
+ "sort_bias": -1,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "coach lantern beside the entrance",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_wall_lantern_SW.png",
+   "pivot": [
+    64,
+    216
+   ],
+   "canvas": [
+    128,
+    216
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_wall_lantern_NW.png",
+   "pivot": [
+    64,
+    216
+   ],
+   "canvas": [
+    128,
+    216
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_wall_lantern_NE.png",
+   "pivot": [
+    64,
+    216
+   ],
+   "canvas": [
+    128,
+    216
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_wall_lantern_SE.png",
+   "pivot": [
+    64,
+    216
+   ],
+   "canvas": [
+    128,
+    216
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

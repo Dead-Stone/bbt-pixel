@@ -1,0 +1,398 @@
+{
+ "id": "4b_armchair_patterned",
+ "location": "4B",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.92,
+ "rotation_class": "R8",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "purple armchair with lime polka-dot pattern",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "S": {
+   "sprite": "item_4b_armchair_patterned_S.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.585,
+      0.585
+     ],
+     "offset_px": [
+      0,
+      37
+     ],
+     "z": 0.0,
+     "facing": "S",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SW": {
+   "sprite": "item_4b_armchair_patterned_SW.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.62
+     ],
+     "offset_px": [
+      -8,
+      36
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "W": {
+   "sprite": "item_4b_armchair_patterned_W.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.415,
+      0.585
+     ],
+     "offset_px": [
+      -11,
+      32
+     ],
+     "z": 0.0,
+     "facing": "W",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      -1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_4b_armchair_patterned_NW.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.38,
+      0.5
+     ],
+     "offset_px": [
+      -8,
+      28
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "N": {
+   "sprite": "item_4b_armchair_patterned_N.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.415,
+      0.415
+     ],
+     "offset_px": [
+      0,
+      27
+     ],
+     "z": 0.0,
+     "facing": "N",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_4b_armchair_patterned_NE.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.38
+     ],
+     "offset_px": [
+      8,
+      28
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "E": {
+   "sprite": "item_4b_armchair_patterned_E.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.585,
+      0.415
+     ],
+     "offset_px": [
+      11,
+      32
+     ],
+     "z": 0.0,
+     "facing": "E",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4b_armchair_patterned_SE.png",
+   "pivot": [
+    64,
+    124
+   ],
+   "canvas": [
+    128,
+    124
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.62,
+      0.5
+     ],
+     "offset_px": [
+      8,
+      36
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_chair",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "sit",
+   "pos": [
+    0.5,
+    0.62
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_chair",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

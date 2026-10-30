@@ -1,0 +1,414 @@
+{
+ "id": "ext_entry_steps",
+ "location": "street",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 0.45,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "three stone steps up to the entrance (top at the -Y side), iron handrails",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_entry_steps_SW.png",
+   "pivot": [
+    128,
+    184
+   ],
+   "canvas": [
+    192,
+    184
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entry_steps_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entry_steps_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb",
+     "type": "climb_lane_up",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.9
+     ],
+     "offset_px": [
+      6,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "sit_steps",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.4,
+      0.75
+     ],
+     "offset_px": [
+      -22,
+      37
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_floor",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_entry_steps_NW.png",
+   "pivot": [
+    64,
+    184
+   ],
+   "canvas": [
+    192,
+    184
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entry_steps_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entry_steps_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb",
+     "type": "climb_lane_up",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.1,
+      1.0
+     ],
+     "offset_px": [
+      -58,
+      35
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "sit_steps",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.25,
+      0.4
+     ],
+     "offset_px": [
+      -10,
+      21
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_floor",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_entry_steps_NE.png",
+   "pivot": [
+    128,
+    184
+   ],
+   "canvas": [
+    192,
+    184
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entry_steps_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entry_steps_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb",
+     "type": "climb_lane_up",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.1
+     ],
+     "offset_px": [
+      58,
+      35
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "sit_steps",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.6,
+      0.25
+     ],
+     "offset_px": [
+      86,
+      59
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_floor",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_entry_steps_SE.png",
+   "pivot": [
+    64,
+    184
+   ],
+   "canvas": [
+    192,
+    184
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_entry_steps_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_entry_steps_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb",
+     "type": "climb_lane_up",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.9,
+      1.0
+     ],
+     "offset_px": [
+      -6,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "sit_steps",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.75,
+      1.6
+     ],
+     "offset_px": [
+      -54,
+      75
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_floor",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "climb",
+   "type": "climb_lane_up",
+   "pos": [
+    1.0,
+    0.9
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "walk_stairs_up",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "sit_steps",
+   "type": "sit",
+   "pos": [
+    0.4,
+    0.75
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_floor",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

@@ -1,0 +1,398 @@
+{
+ "id": "4a_telescope",
+ "location": "4A",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.6,
+ "rotation_class": "R8",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "tube points to the item's back (toward the window)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "S": {
+   "sprite": "item_4a_telescope_S.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.818,
+      0.818
+     ],
+     "offset_px": [
+      0,
+      52
+     ],
+     "z": 0.0,
+     "facing": "N",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SW": {
+   "sprite": "item_4a_telescope_SW.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.95
+     ],
+     "offset_px": [
+      -29,
+      46
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "W": {
+   "sprite": "item_4a_telescope_W.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.182,
+      0.818
+     ],
+     "offset_px": [
+      -41,
+      32
+     ],
+     "z": 0.0,
+     "facing": "E",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      -1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_4a_telescope_NW.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.05,
+      0.5
+     ],
+     "offset_px": [
+      -29,
+      18
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "N": {
+   "sprite": "item_4a_telescope_N.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.182,
+      0.182
+     ],
+     "offset_px": [
+      0,
+      12
+     ],
+     "z": 0.0,
+     "facing": "S",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_4a_telescope_NE.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.05
+     ],
+     "offset_px": [
+      29,
+      18
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "E": {
+   "sprite": "item_4a_telescope_E.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.818,
+      0.182
+     ],
+     "offset_px": [
+      41,
+      32
+     ],
+     "z": 0.0,
+     "facing": "W",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_4a_telescope_SE.png",
+   "pivot": [
+    64,
+    162
+   ],
+   "canvas": [
+    128,
+    162
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "look",
+     "type": "look",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.95,
+      0.5
+     ],
+     "offset_px": [
+      29,
+      46
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "look_telescope",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "look",
+   "type": "look",
+   "pos": [
+    0.5,
+    0.95
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "look_telescope",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

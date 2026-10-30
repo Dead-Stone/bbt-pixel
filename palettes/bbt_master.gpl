@@ -1,0 +1,64 @@
+GIMP Palette
+Name: BBT Master
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+245 214 192	skin_a1
+227 179 148	skin_a2
+185 130 106	skin_a3
+138  90  72	skin_a4
+200 138  96	skin_b1
+180 122  82	skin_b2
+147  96  63	skin_b3
+110  69  44	skin_b4
+242 217 142	blonde_1
+217 180  94	blonde_2
+168 130  60	blonde_3
+122  90  62	brown_1
+ 90  63  43	brown_2
+ 58  40  28	brown_3
+ 46  38  38	black_1
+ 30  26  26	black_2
+201 154  94	wood_hi
+168 116  63	wood
+122  78  44	wood_dk
+ 90  56  32	wood_xdk
+154 106  66	leather_hi
+122  77  47	leather
+ 92  58  36	leather_dk
+ 62  38  23	leather_xdk
+230 216 184	wall_4a_hi
+216 199 163	wall_4a
+185 165 127	wall_4a_dk
+205 185 143	stair_wall
+168 148 108	stair_wall_dk
+111 143  94	tile_green
+ 83 112  74	tile_green_dk
+138 106  74	floor_hall
+242 194  48	tape_yellow
+201 154  31	tape_yellow_dk
+ 47  95 179	marker_blue
+200  70  61	marker_red
+ 63 138  79	marker_green
+159 216 255	screen_glow
+255 216 138	lamp_warm
+ 95 154  72	plant_green
+ 63 184 176	4b_turquoise
+240 138  60	4b_orange
+138  92 176	4b_purple
+166 207  74	4b_lime
+215 154  74	ccf_amber
+155  47  47	ccf_booth_red
+ 63 111 181	comic_blue
+201  64  64	comic_red
+242 201  76	comic_yellow
+233 225 204	cafe_cream
+ 79 154 154	cafe_teal
+167 173 181	cafe_steel

@@ -1,0 +1,1068 @@
+{
+ "schema": {
+  "id": "snake_case location id",
+  "name": "display name",
+  "kind": "interior | exterior",
+  "size": "[W, H] tiles (x along back wall, y toward camera)",
+  "floor": "list of [x0, y0, x1, y1, tile_key] rects, later wins; key ending in _* picks a/b variants by hash",
+  "holes": "tiles without floor",
+  "zones": "{name: [x0, y0, w, h]}",
+  "walls": "{'back': [[x0, x1, mat]], 'left': [[y0, y1, mat]], 'front_cut': mat|None, 'right_cut': mat|None, 'front_gaps': [x..], 'right_gaps': [y..], 'partitions': [{'side': 'bl'|'br', 'line': n, 'span': [a, b], 'mat': m, 'gaps': [..]}]}  (mats = build_env.WALLMAT keys)",
+  "slots": "{'back': {x: 'window'|'window_day'|'window_high'|'doorway'}, 'left': {y: ...}}  door/window slots on full walls",
+  "items": "[iid, x, y, rot, state|None, z, {opts}] ; opts.layer 3 forces the wall pass",
+  "lights": "[{pos: [x, y], r: tiles, kind: lamp|screen|window|pendant}]  -> palette-step glow pools",
+  "chars": "[{cid, mode: stand|sit, hook: [iid, idx, hook_id] | pos: [x, y], dir, anim, k}]",
+  "spawns": "{name: [x, y]}",
+  "exits": "[{id, tiles: [[x, y]], to: loc_id, to_spawn, via: door|stairs|sidewalk|car}]"
+ },
+ "wall_materials": {
+  "4a": {
+   "br": "wall_4a",
+   "bl": "wall_4a_dk",
+   "hi": "wall_4a_hi",
+   "dk": "stair_wall_dk",
+   "base": "wood_dk",
+   "base_hi": "wood",
+   "rail": null
+  },
+  "4b": {
+   "br": "wall_4a",
+   "bl": "wall_4a_dk",
+   "hi": "wall_4a_hi",
+   "dk": "stair_wall_dk",
+   "base": "paper",
+   "base_hi": "white_hi",
+   "rail": null
+  },
+  "hall": {
+   "br": "stair_wall",
+   "bl": "stair_wall_dk",
+   "hi": "wall_4a_hi",
+   "dk": "wood_dk",
+   "base": "wood_xdk",
+   "base_hi": "wood_dk",
+   "rail": "stair_wall_dk"
+  },
+  "cafe": {
+   "br": "cafe_cream",
+   "bl": "wall_4a",
+   "hi": "white_hi",
+   "dk": "grey",
+   "base": "cafe_teal",
+   "base_hi": "cafe_steel",
+   "rail": null,
+   "stripe": [
+    "cafe_teal",
+    1.02,
+    1.1
+   ]
+  },
+  "office": {
+   "br": "wall_4a_hi",
+   "bl": "wall_4a",
+   "hi": "white_hi",
+   "dk": "wall_4a_dk",
+   "base": "wood_dk",
+   "base_hi": "wood",
+   "rail": null
+  },
+  "lab": {
+   "br": "grey_lt",
+   "bl": "grey",
+   "hi": "paper",
+   "dk": "grey_dk",
+   "base": "ink_2",
+   "base_hi": "grey_dk",
+   "rail": null,
+   "stripe": [
+    "cafe_steel",
+    1.2,
+    1.26
+   ]
+  },
+  "rest": {
+   "br": "ccf_amber",
+   "bl": "leather",
+   "hi": "lamp_warm",
+   "dk": "leather_dk",
+   "base": "wood_xdk",
+   "base_hi": "wood_dk",
+   "rail": null,
+   "wains": [
+    "wood_dk",
+    1.05,
+    "wood_hi"
+   ],
+   "wains_line": "wood_xdk"
+  },
+  "raj": {
+   "br": "cafe_cream",
+   "bl": "wall_4a",
+   "hi": "white_hi",
+   "dk": "wall_4a_dk",
+   "base": "wood_xdk",
+   "base_hi": "wood_dk",
+   "rail": null,
+   "stripe": [
+    "wood_dk",
+    2.05,
+    2.1
+   ]
+  },
+  "lobby": {
+   "br": "leather",
+   "bl": "leather_dk",
+   "hi": "wall_4a_hi",
+   "dk": "leather_xdk",
+   "base": "ink_2",
+   "base_hi": "grey_dk",
+   "rail": null,
+   "brick": [
+    "stair_wall_dk",
+    "ccf_booth_red"
+   ]
+  }
+ },
+ "floors": [
+  "floor_4a_wood_a",
+  "floor_4a_wood_b",
+  "floor_4a_kitchen",
+  "floor_hall",
+  "floor_4b_wood_a",
+  "floor_4b_wood_b",
+  "floor_cafe_lino",
+  "floor_office_carpet",
+  "floor_lab_vinyl",
+  "floor_rest_wood_a",
+  "floor_rest_wood_b",
+  "floor_rest_tile",
+  "floor_raj_wood_a",
+  "floor_raj_wood_b",
+  "floor_lobby_tile",
+  "ground_sidewalk",
+  "ground_curb",
+  "ground_asphalt",
+  "ground_asphalt_dash",
+  "ground_grass"
+ ],
+ "rooms": {
+  "ait_cafeteria": {
+   "id": "ait_cafeteria",
+   "name": "AIT Cafeteria (Arroyo Institute of Technology)",
+   "kind": "interior",
+   "size": [
+    12,
+    9
+   ],
+   "floor": [
+    [
+     0,
+     0,
+     12,
+     9,
+     "floor_cafe_lino"
+    ]
+   ],
+   "walls": {
+    "back": [
+     [
+      0,
+      12,
+      "cafe"
+     ]
+    ],
+    "left": [
+     [
+      0,
+      9,
+      "cafe"
+     ]
+    ],
+    "front_cut": "cafe",
+    "right_cut": "cafe",
+    "front_gaps": [
+     5,
+     6
+    ]
+   },
+   "slots": {
+    "back": {
+     "8": "window_day",
+     "9": "window_day",
+     "10": "window_day",
+     "11": "window_day"
+    }
+   },
+   "lights": [
+    {
+     "pos": [
+      9.9,
+      0.8
+     ],
+     "r": 1.5,
+     "kind": "window",
+     "src": "windows"
+    }
+   ],
+   "zones": {
+    "dining": [
+     0,
+     0,
+     12,
+     9
+    ]
+   },
+   "spawns": {
+    "from_physics": [
+     1.5,
+     6.5
+    ],
+    "from_quad": [
+     5.5,
+     8.5
+    ],
+    "food_line": [
+     2.5,
+     1.5
+    ]
+   },
+   "doors": [
+    {
+     "item": "off_door",
+     "tile": [
+      0,
+      6
+     ],
+     "to": "ait_physics",
+     "facing": "SE"
+    }
+   ],
+   "exits": [
+    {
+     "id": "to_physics",
+     "tiles": [
+      [
+       0,
+       6
+      ]
+     ],
+     "to": "ait_physics",
+     "to_spawn": "from_cafeteria",
+     "via": "door"
+    },
+    {
+     "id": "to_quad",
+     "tiles": [
+      [
+       5,
+       8
+      ],
+      [
+       6,
+       8
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_campus",
+     "via": "car",
+     "note": "campus quad / parking stub; the guys carpool home"
+    }
+   ]
+  },
+  "ait_physics": {
+   "id": "ait_physics",
+   "name": "AIT Physics: Sheldon's office + shared lab",
+   "kind": "interior",
+   "size": [
+    16,
+    8
+   ],
+   "floor": [
+    [
+     0,
+     0,
+     7,
+     8,
+     "floor_office_carpet"
+    ],
+    [
+     7,
+     0,
+     16,
+     8,
+     "floor_lab_vinyl"
+    ]
+   ],
+   "walls": {
+    "back": [
+     [
+      0,
+      7,
+      "office"
+     ],
+     [
+      7,
+      16,
+      "lab"
+     ]
+    ],
+    "left": [
+     [
+      0,
+      8,
+      "office"
+     ]
+    ],
+    "front_cut": "office",
+    "right_cut": "lab",
+    "partitions": [
+     {
+      "side": "bl",
+      "line": 7,
+      "span": [
+       0,
+       8
+      ],
+      "mat": "lab",
+      "gaps": [
+       5
+      ]
+     }
+    ]
+   },
+   "slots": {
+    "back": {
+     "5": "window_day",
+     "14": "window_high",
+     "15": "window_high"
+    }
+   },
+   "lights": [
+    {
+     "pos": [
+      4.0,
+      3.3
+     ],
+     "r": 0.9,
+     "kind": "screen"
+    },
+    {
+     "pos": [
+      9.5,
+      0.9
+     ],
+     "r": 1.0,
+     "kind": "screen"
+    },
+    {
+     "pos": [
+      5.5,
+      1.0
+     ],
+     "r": 1.4,
+     "kind": "window"
+    },
+    {
+     "pos": [
+      13.0,
+      3.6
+     ],
+     "r": 1.2,
+     "kind": "lamp",
+     "src": "laser"
+    }
+   ],
+   "zones": {
+    "office_sheldon": [
+     0,
+     0,
+     7,
+     8
+    ],
+    "lab_shared": [
+     7,
+     0,
+     9,
+     8
+    ]
+   },
+   "spawns": {
+    "from_cafeteria": [
+     1.5,
+     5.5
+    ],
+    "office_desk": [
+     4.5,
+     4.4
+    ],
+    "lab_door": [
+     7.5,
+     5.5
+    ]
+   },
+   "doors": [
+    {
+     "item": "off_door",
+     "tile": [
+      0,
+      5
+     ],
+     "to": "ait_cafeteria",
+     "facing": "SE"
+    },
+    {
+     "item": "(doorway gap)",
+     "tile": [
+      7,
+      5
+     ],
+     "connects": [
+      "office_sheldon",
+      "lab_shared"
+     ]
+    }
+   ],
+   "exits": [
+    {
+     "id": "to_cafeteria",
+     "tiles": [
+      [
+       0,
+       5
+      ]
+     ],
+     "to": "ait_cafeteria",
+     "to_spawn": "from_physics",
+     "via": "door"
+    }
+   ]
+  },
+  "rest_amber_slice": {
+   "id": "rest_amber_slice",
+   "name": "The Amber Slice (restaurant)",
+   "kind": "interior",
+   "size": [
+    14,
+    9
+   ],
+   "floor": [
+    [
+     0,
+     0,
+     14,
+     9,
+     "floor_rest_wood_*"
+    ],
+    [
+     9,
+     0,
+     14,
+     2,
+     "floor_rest_tile"
+    ]
+   ],
+   "walls": {
+    "back": [
+     [
+      0,
+      14,
+      "rest"
+     ]
+    ],
+    "left": [
+     [
+      0,
+      9,
+      "rest"
+     ]
+    ],
+    "front_cut": "rest",
+    "right_cut": "rest"
+   },
+   "slots": {
+    "left": {
+     "1": "window_day",
+     "2": "window_day",
+     "6": "window_day",
+     "7": "window_day"
+    }
+   },
+   "lights": [
+    {
+     "pos": [
+      2.0,
+      1.0
+     ],
+     "r": 0.8,
+     "kind": "pendant"
+    },
+    {
+     "pos": [
+      5.0,
+      1.0
+     ],
+     "r": 0.8,
+     "kind": "pendant"
+    },
+    {
+     "pos": [
+      3.5,
+      4.5
+     ],
+     "r": 0.7,
+     "kind": "pendant"
+    },
+    {
+     "pos": [
+      5.5,
+      4.5
+     ],
+     "r": 0.7,
+     "kind": "pendant"
+    },
+    {
+     "pos": [
+      11.0,
+      2.5
+     ],
+     "r": 1.1,
+     "kind": "pendant"
+    }
+   ],
+   "zones": {
+    "dining": [
+     0,
+     0,
+     9,
+     9
+    ],
+    "bar": [
+     9,
+     0,
+     5,
+     6
+    ],
+    "stage": [
+     11,
+     6,
+     3,
+     2
+    ]
+   },
+   "spawns": {
+    "from_street": [
+     1.5,
+     4.5
+    ],
+    "from_kitchen": [
+     7.5,
+     1.5
+    ],
+    "behind_bar": [
+     10.5,
+     1.5
+    ]
+   },
+   "doors": [
+    {
+     "item": "lobby_glass_door",
+     "tile": [
+      0,
+      4
+     ],
+     "to": "street_exterior",
+     "facing": "SE",
+     "note": "front door (glass)"
+    },
+    {
+     "item": "rest_kitchen_door",
+     "tile": [
+      7,
+      0
+     ],
+     "to": "kitchen (stub)",
+     "facing": "SW"
+    }
+   ],
+   "exits": [
+    {
+     "id": "to_street",
+     "tiles": [
+      [
+       0,
+       4
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_restaurant",
+     "via": "sidewalk"
+    },
+    {
+     "id": "to_kitchen",
+     "tiles": [
+      [
+       7,
+       0
+      ]
+     ],
+     "to": "kitchen_stub",
+     "to_spawn": "",
+     "via": "door"
+    }
+   ]
+  },
+  "street_exterior": {
+   "id": "street_exterior",
+   "name": "2311 building entrance + street (Pasadena)",
+   "kind": "exterior",
+   "size": [
+    16,
+    10
+   ],
+   "ztop": 6.8,
+   "sky": false,
+   "floor": [
+    [
+     0,
+     0,
+     16,
+     3,
+     "ground_sidewalk"
+    ],
+    [
+     0,
+     3,
+     16,
+     4,
+     "ground_grass"
+    ],
+    [
+     0,
+     4,
+     16,
+     5,
+     "ground_curb"
+    ],
+    [
+     0,
+     5,
+     16,
+     10,
+     "ground_asphalt"
+    ],
+    [
+     0,
+     7,
+     16,
+     8,
+     "ground_asphalt_dash"
+    ],
+    [
+     6,
+     3,
+     10,
+     4,
+     "ground_sidewalk"
+    ]
+   ],
+   "walls": {},
+   "zones": {
+    "sidewalk": [
+     0,
+     0,
+     16,
+     3
+    ],
+    "parkway": [
+     0,
+     3,
+     16,
+     1
+    ],
+    "curb": [
+     0,
+     4,
+     16,
+     1
+    ],
+    "street": [
+     0,
+     5,
+     16,
+     5
+    ]
+   },
+   "force_block": [],
+   "spawns": {
+    "from_lobby": [
+     8.0,
+     1.6
+    ],
+    "from_campus": [
+     5.5,
+     7.0
+    ],
+    "from_restaurant": [
+     15.5,
+     1.5
+    ],
+    "from_raj": [
+     5.5,
+     7.0
+    ],
+    "car_driver": [
+     4.5,
+     4.6
+    ]
+   },
+   "doors": [
+    {
+     "item": "ext_entrance_doors",
+     "tile": [
+      7,
+      0
+     ],
+     "to": "lobby",
+     "facing": "SW",
+     "note": "doors sit at z=0.45 on the entry steps"
+    }
+   ],
+   "exits": [
+    {
+     "id": "to_lobby",
+     "tiles": [
+      [
+       7,
+       0
+      ],
+      [
+       8,
+       0
+      ]
+     ],
+     "to": "lobby",
+     "to_spawn": "from_street",
+     "via": "door"
+    },
+    {
+     "id": "drive_campus",
+     "tiles": [
+      [
+       3,
+       4
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "to": "ait_cafeteria",
+     "to_spawn": "from_quad",
+     "via": "car"
+    },
+    {
+     "id": "drive_raj",
+     "tiles": [
+      [
+       3,
+       4
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "to": "raj_apartment",
+     "to_spawn": "from_street",
+     "via": "car"
+    },
+    {
+     "id": "walk_restaurant",
+     "tiles": [
+      [
+       15,
+       0
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       15,
+       2
+      ]
+     ],
+     "to": "rest_amber_slice",
+     "to_spawn": "from_street",
+     "via": "sidewalk"
+    }
+   ]
+  },
+  "lobby": {
+   "id": "lobby",
+   "name": "2311 lobby (ground floor)",
+   "kind": "interior",
+   "size": [
+    8,
+    6
+   ],
+   "floor": [
+    [
+     0,
+     0,
+     8,
+     6,
+     "floor_lobby_tile"
+    ]
+   ],
+   "walls": {
+    "back": [
+     [
+      0,
+      8,
+      "lobby"
+     ]
+    ],
+    "left": [
+     [
+      0,
+      6,
+      "lobby"
+     ]
+    ],
+    "front_cut": "lobby",
+    "right_cut": "lobby"
+   },
+   "lights": [],
+   "zones": {
+    "lobby": [
+     0,
+     0,
+     8,
+     6
+    ]
+   },
+   "force_walk": [
+    [
+     6,
+     3
+    ],
+    [
+     7,
+     3
+    ],
+    [
+     6,
+     2
+    ],
+    [
+     7,
+     2
+    ],
+    [
+     6,
+     1
+    ],
+    [
+     7,
+     1
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ]
+   ],
+   "spawns": {
+    "from_street": [
+     1.5,
+     3.5
+    ],
+    "from_stairs": [
+     6.9,
+     4.5
+    ]
+   },
+   "doors": [
+    {
+     "item": "lobby_glass_door",
+     "tile": [
+      0,
+      3
+     ],
+     "to": "street_exterior",
+     "facing": "SE"
+    }
+   ],
+   "exits": [
+    {
+     "id": "to_street",
+     "tiles": [
+      [
+       0,
+       3
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_lobby",
+     "via": "door"
+    },
+    {
+     "id": "stairs_up",
+     "tiles": [
+      [
+       6,
+       0
+      ],
+      [
+       7,
+       0
+      ]
+     ],
+     "to": "floor4",
+     "to_spawn": "stairs_top (hall_stair_flight)",
+     "via": "stairs",
+     "note": "three flights in the show; collapsed to one link: lobby_stair_up top -> floor4 hall_stair_flight"
+    }
+   ]
+  },
+  "raj_apartment": {
+   "id": "raj_apartment",
+   "name": "Raj's apartment",
+   "kind": "interior",
+   "size": [
+    10,
+    8
+   ],
+   "floor": [
+    [
+     0,
+     0,
+     10,
+     8,
+     "floor_raj_wood_*"
+    ]
+   ],
+   "walls": {
+    "back": [
+     [
+      0,
+      10,
+      "raj"
+     ]
+    ],
+    "left": [
+     [
+      0,
+      8,
+      "raj"
+     ]
+    ],
+    "front_cut": "raj",
+    "right_cut": "raj"
+   },
+   "slots": {
+    "back": {
+     "6": "window",
+     "7": "window",
+     "8": "window"
+    }
+   },
+   "lights": [
+    {
+     "pos": [
+      2.5,
+      3.5
+     ],
+     "r": 1.7,
+     "kind": "lamp"
+    },
+    {
+     "pos": [
+      3.9,
+      6.3
+     ],
+     "r": 0.95,
+     "kind": "screen"
+    },
+    {
+     "pos": [
+      8.0,
+      7.0
+     ],
+     "r": 0.8,
+     "kind": "screen",
+     "src": "crystals"
+    }
+   ],
+   "zones": {
+    "living": [
+     0,
+     0,
+     10,
+     8
+    ]
+   },
+   "spawns": {
+    "from_street": [
+     1.5,
+     6.5
+    ],
+    "telescope": [
+     7.5,
+     2.4
+    ]
+   },
+   "doors": [
+    {
+     "item": "4a_front_door",
+     "tile": [
+      0,
+      6
+     ],
+     "to": "street_exterior",
+     "facing": "SE",
+     "note": "front door (building hallway collapsed)"
+    },
+    {
+     "item": "raj_tapestry_door",
+     "tile": [
+      0,
+      2
+     ],
+     "to": "raj_bedroom (stub)",
+     "facing": "SE"
+    }
+   ],
+   "exits": [
+    {
+     "id": "to_street",
+     "tiles": [
+      [
+       0,
+       6
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_raj",
+     "via": "car"
+    },
+    {
+     "id": "to_bedroom",
+     "tiles": [
+      [
+       0,
+       2
+      ]
+     ],
+     "to": "raj_bedroom_stub",
+     "to_spawn": "",
+     "via": "door"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,586 @@
+{
+ "id": "lobby_stair_up",
+ "location": "lobby",
+ "footprint": [
+  2,
+  4
+ ],
+ "height_m": 2.0,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": -0.5,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "bottom flight of the stairwell, rising toward -Y (wraps around the broken elevator, spec \u00a75.2)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lobby_stair_up_SW.png",
+   "pivot": [
+    128,
+    382
+   ],
+   "canvas": [
+    384,
+    382
+   ],
+   "footprint": [
+    2,
+    4
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_stair_up_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s3.png",
+     "tile": [
+      0,
+      3
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s4.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s5.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s6.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SW_s7.png",
+     "tile": [
+      1,
+      3
+     ],
+     "sort_key_offset": 4.5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb_lane_up",
+     "type": "climb_lane_up",
+     "tile": [
+      1,
+      3
+     ],
+     "local": [
+      1.0,
+      3.85
+     ],
+     "offset_px": [
+      -182,
+      155
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      1,
+      4
+     ]
+    },
+    {
+     "id": "climb_lane_down",
+     "type": "climb_lane_down",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.2
+     ],
+     "offset_px": [
+      51,
+      38
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "walk_stairs_down",
+     "tags": []
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_lobby_stair_up_NW.png",
+   "pivot": [
+    256,
+    382
+   ],
+   "canvas": [
+    384,
+    382
+   ],
+   "footprint": [
+    4,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_stair_up_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s6.png",
+     "tile": [
+      3,
+      0
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NW_s7.png",
+     "tile": [
+      3,
+      1
+     ],
+     "sort_key_offset": 4.5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb_lane_up",
+     "type": "climb_lane_up",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.15,
+      1.0
+     ],
+     "offset_px": [
+      -54,
+      37
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "climb_lane_down",
+     "type": "climb_lane_down",
+     "tile": [
+      3,
+      1
+     ],
+     "local": [
+      3.8,
+      1.0
+     ],
+     "offset_px": [
+      179,
+      154
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "walk_stairs_down",
+     "tags": []
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_lobby_stair_up_NE.png",
+   "pivot": [
+    128,
+    382
+   ],
+   "canvas": [
+    384,
+    382
+   ],
+   "footprint": [
+    2,
+    4
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_stair_up_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s3.png",
+     "tile": [
+      0,
+      3
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s4.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s5.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s6.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_NE_s7.png",
+     "tile": [
+      1,
+      3
+     ],
+     "sort_key_offset": 4.5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb_lane_up",
+     "type": "climb_lane_up",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.0,
+      0.15
+     ],
+     "offset_px": [
+      54,
+      37
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "climb_lane_down",
+     "type": "climb_lane_down",
+     "tile": [
+      1,
+      3
+     ],
+     "local": [
+      1.0,
+      3.8
+     ],
+     "offset_px": [
+      -179,
+      154
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "walk_stairs_down",
+     "tags": []
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_lobby_stair_up_SE.png",
+   "pivot": [
+    256,
+    382
+   ],
+   "canvas": [
+    384,
+    382
+   ],
+   "footprint": [
+    4,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lobby_stair_up_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 0.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 1.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 2.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s6.png",
+     "tile": [
+      3,
+      0
+     ],
+     "sort_key_offset": 3.5
+    },
+    {
+     "sprite": "item_lobby_stair_up_SE_s7.png",
+     "tile": [
+      3,
+      1
+     ],
+     "sort_key_offset": 4.5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "climb_lane_up",
+     "type": "climb_lane_up",
+     "tile": [
+      3,
+      1
+     ],
+     "local": [
+      3.85,
+      1.0
+     ],
+     "offset_px": [
+      182,
+      155
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "walk_stairs_up",
+     "tags": [],
+     "approach_tile": [
+      4,
+      1
+     ]
+    },
+    {
+     "id": "climb_lane_down",
+     "type": "climb_lane_down",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.2,
+      1.0
+     ],
+     "offset_px": [
+      -51,
+      38
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "walk_stairs_down",
+     "tags": []
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "climb_lane_up",
+   "type": "climb_lane_up",
+   "pos": [
+    1.0,
+    3.85
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "walk_stairs_up",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "climb_lane_down",
+   "type": "climb_lane_down",
+   "pos": [
+    1.0,
+    0.2
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "walk_stairs_down",
+   "tags": [],
+   "z": 0.0
+  }
+ ]
+}

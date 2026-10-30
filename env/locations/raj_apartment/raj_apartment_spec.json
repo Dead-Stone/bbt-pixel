@@ -1,0 +1,262 @@
+{
+ "id": "raj_apartment",
+ "name": "Raj's apartment",
+ "kind": "interior",
+ "size": [
+  10,
+  8
+ ],
+ "floor": [
+  [
+   0,
+   0,
+   10,
+   8,
+   "floor_raj_wood_*"
+  ]
+ ],
+ "walls": {
+  "back": [
+   [
+    0,
+    10,
+    "raj"
+   ]
+  ],
+  "left": [
+   [
+    0,
+    8,
+    "raj"
+   ]
+  ],
+  "front_cut": "raj",
+  "right_cut": "raj"
+ },
+ "slots": {
+  "back": {
+   "6": "window",
+   "7": "window",
+   "8": "window"
+  }
+ },
+ "items": [
+  [
+   "raj_kitchenette",
+   1,
+   0,
+   "SW"
+  ],
+  [
+   "raj_bar_cart",
+   4,
+   0,
+   "SW"
+  ],
+  [
+   "raj_display_shelf",
+   4,
+   0,
+   "SW"
+  ],
+  [
+   "raj_telescope_big",
+   7,
+   1,
+   "SW"
+  ],
+  [
+   "raj_tapestry_door",
+   0,
+   2,
+   "SE",
+   "closed"
+  ],
+  [
+   "poster_space",
+   0,
+   4,
+   "SE"
+  ],
+  [
+   "4a_front_door",
+   0,
+   6,
+   "SE",
+   "closed"
+  ],
+  [
+   "raj_rug",
+   3,
+   4,
+   "SW"
+  ],
+  [
+   "raj_sofa",
+   3,
+   3,
+   "SW"
+  ],
+  [
+   "raj_coffee_oval",
+   3.5,
+   4.6,
+   "SW"
+  ],
+  [
+   "raj_ufo_lamp",
+   2,
+   3,
+   "SW",
+   "on"
+  ],
+  [
+   "raj_buttercup_chair",
+   7,
+   4,
+   "NW"
+  ],
+  [
+   "raj_tv_console",
+   3,
+   7,
+   "NE",
+   "on"
+  ],
+  [
+   "raj_dining_round",
+   7,
+   6,
+   "SW"
+  ],
+  [
+   "gen_potted_palm",
+   9,
+   0,
+   "SW"
+  ]
+ ],
+ "lights": [
+  {
+   "pos": [
+    2.5,
+    3.5
+   ],
+   "r": 1.7,
+   "kind": "lamp"
+  },
+  {
+   "pos": [
+    3.9,
+    6.3
+   ],
+   "r": 0.95,
+   "kind": "screen"
+  },
+  {
+   "pos": [
+    8.0,
+    7.0
+   ],
+   "r": 0.8,
+   "kind": "screen",
+   "src": "crystals"
+  }
+ ],
+ "chars": [
+  {
+   "cid": "leonard",
+   "mode": "stand",
+   "hook": [
+    "raj_telescope_big",
+    0,
+    "look"
+   ],
+   "dir": "NE"
+  },
+  {
+   "cid": "penny",
+   "mode": "sit",
+   "hook": [
+    "raj_sofa",
+    0,
+    "seat1"
+   ]
+  },
+  {
+   "cid": "raj",
+   "mode": "stand",
+   "pos": [
+    5.6,
+    2.0
+   ],
+   "dir": "SW",
+   "anim": "idle"
+  }
+ ],
+ "zones": {
+  "living": [
+   0,
+   0,
+   10,
+   8
+  ]
+ },
+ "spawns": {
+  "from_street": [
+   1.5,
+   6.5
+  ],
+  "telescope": [
+   7.5,
+   2.4
+  ]
+ },
+ "doors": [
+  {
+   "item": "4a_front_door",
+   "tile": [
+    0,
+    6
+   ],
+   "to": "street_exterior",
+   "facing": "SE",
+   "note": "front door (building hallway collapsed)"
+  },
+  {
+   "item": "raj_tapestry_door",
+   "tile": [
+    0,
+    2
+   ],
+   "to": "raj_bedroom (stub)",
+   "facing": "SE"
+  }
+ ],
+ "exits": [
+  {
+   "id": "to_street",
+   "tiles": [
+    [
+     0,
+     6
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_raj",
+   "via": "car"
+  },
+  {
+   "id": "to_bedroom",
+   "tiles": [
+    [
+     0,
+     2
+    ]
+   ],
+   "to": "raj_bedroom_stub",
+   "to_spawn": "",
+   "via": "door"
+  }
+ ]
+}

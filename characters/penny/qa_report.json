@@ -1,0 +1,82 @@
+{
+ "character": "penny",
+ "generated": "2026-10-30 00:57 (America/Los_Angeles)",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot": [
+  64,
+  116
+ ],
+ "body_height_spec_px": 90,
+ "head_top_spec_y": 26,
+ "idle_S_head_top_y": 26,
+ "idle_S_body_height_px": 90,
+ "idle_S_lowest_px": 119,
+ "head_top_within_2px_of_spec": true,
+ "feet_on_pivot_line_idle": true,
+ "palette_violations": 0,
+ "alpha_values": [
+  0,
+  255
+ ],
+ "frames": 168,
+ "sheet_px": [
+  1536,
+  4096
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "dirs": 8
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "dirs": 8
+  },
+  "blink": {
+   "frames": 3,
+   "fps": 12,
+   "dirs": 8
+  },
+  "hair_flip": {
+   "frames": 6,
+   "fps": 10,
+   "dirs": 8
+  }
+ },
+ "mirror_check": {
+  "NE": {
+   "pixels_differing_from_plain_flip": 227,
+   "silhouette_identical": true
+  },
+  "E": {
+   "pixels_differing_from_plain_flip": 148,
+   "silhouette_identical": true
+  },
+  "SE": {
+   "pixels_differing_from_plain_flip": 138,
+   "silhouette_identical": true
+  }
+ },
+ "decal_check": null,
+ "idle_S_eye_pixels": 8,
+ "gifs": {
+  "blink_8dir_4x.gif": 4,
+  "hair_flip_8dir_4x.gif": 7,
+  "idle_8dir_4x.gif": 4,
+  "walk_8dir_4x.gif": 8,
+  "walk_E_4x.gif": 8,
+  "walk_NE_4x.gif": 8,
+  "walk_NW_4x.gif": 8,
+  "walk_N_4x.gif": 8,
+  "walk_SE_4x.gif": 8,
+  "walk_SW_4x.gif": 8,
+  "walk_S_4x.gif": 8,
+  "walk_W_4x.gif": 8
+ },
+ "walk_8dir_gif_present": true
+}

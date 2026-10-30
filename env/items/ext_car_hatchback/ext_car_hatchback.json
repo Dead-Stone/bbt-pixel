@@ -1,0 +1,746 @@
+{
+ "id": "ext_car_hatchback",
+ "location": "street",
+ "footprint": [
+  2,
+  4
+ ],
+ "height_m": 1.45,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "generic parked hatchback, no badges; canonical nose at +Y. Place SE/NW to park along a street that runs along x",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_car_hatchback_SW.png",
+   "pivot": [
+    128,
+    284
+   ],
+   "canvas": [
+    384,
+    284
+   ],
+   "footprint": [
+    2,
+    4
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_car_hatchback_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s3.png",
+     "tile": [
+      0,
+      3
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s4.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s5.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s6.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SW_s7.png",
+     "tile": [
+      1,
+      3
+     ],
+     "sort_key_offset": 5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "driver_door",
+     "type": "use",
+     "tile": [
+      -1,
+      2
+     ],
+     "local": [
+      -0.35,
+      2.3
+     ],
+     "offset_px": [
+      -170,
+      62
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "drive"
+     ],
+     "approach_tile": [
+      -1,
+      2
+     ]
+    },
+    {
+     "id": "passenger_door",
+     "type": "use",
+     "tile": [
+      2,
+      2
+     ],
+     "local": [
+      2.35,
+      2.3
+     ],
+     "offset_px": [
+      3,
+      149
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "ride"
+     ],
+     "approach_tile": [
+      2,
+      2
+     ]
+    },
+    {
+     "id": "lean",
+     "type": "stand",
+     "tile": [
+      2,
+      1
+     ],
+     "local": [
+      2.4,
+      1.2
+     ],
+     "offset_px": [
+      77,
+      115
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "lean_on_car",
+     "tags": [],
+     "approach_tile": [
+      2,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_car_hatchback_NW.png",
+   "pivot": [
+    256,
+    284
+   ],
+   "canvas": [
+    384,
+    284
+   ],
+   "footprint": [
+    4,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_car_hatchback_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s6.png",
+     "tile": [
+      3,
+      0
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NW_s7.png",
+     "tile": [
+      3,
+      1
+     ],
+     "sort_key_offset": 5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "driver_door",
+     "type": "use",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.7,
+      -0.35
+     ],
+     "offset_px": [
+      131,
+      43
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "drive"
+     ],
+     "approach_tile": [
+      2,
+      -1
+     ]
+    },
+    {
+     "id": "passenger_door",
+     "type": "use",
+     "tile": [
+      1,
+      2
+     ],
+     "local": [
+      1.7,
+      2.35
+     ],
+     "offset_px": [
+      -42,
+      130
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "ride"
+     ],
+     "approach_tile": [
+      2,
+      2
+     ]
+    },
+    {
+     "id": "lean",
+     "type": "stand",
+     "tile": [
+      2,
+      2
+     ],
+     "local": [
+      2.8,
+      2.4
+     ],
+     "offset_px": [
+      26,
+      166
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "lean_on_car",
+     "tags": [],
+     "approach_tile": [
+      3,
+      2
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_car_hatchback_NE.png",
+   "pivot": [
+    128,
+    284
+   ],
+   "canvas": [
+    384,
+    284
+   ],
+   "footprint": [
+    2,
+    4
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_car_hatchback_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s2.png",
+     "tile": [
+      0,
+      2
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s3.png",
+     "tile": [
+      0,
+      3
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s4.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s5.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s6.png",
+     "tile": [
+      1,
+      2
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_NE_s7.png",
+     "tile": [
+      1,
+      3
+     ],
+     "sort_key_offset": 5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "driver_door",
+     "type": "use",
+     "tile": [
+      2,
+      1
+     ],
+     "local": [
+      2.35,
+      1.7
+     ],
+     "offset_px": [
+      42,
+      130
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "drive"
+     ],
+     "approach_tile": [
+      3,
+      2
+     ]
+    },
+    {
+     "id": "passenger_door",
+     "type": "use",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.35,
+      1.7
+     ],
+     "offset_px": [
+      -131,
+      43
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "ride"
+     ],
+     "approach_tile": [
+      0,
+      2
+     ]
+    },
+    {
+     "id": "lean",
+     "type": "stand",
+     "tile": [
+      -1,
+      2
+     ],
+     "local": [
+      -0.4,
+      2.8
+     ],
+     "offset_px": [
+      -205,
+      77
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "lean_on_car",
+     "tags": [],
+     "approach_tile": [
+      0,
+      3
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_car_hatchback_SE.png",
+   "pivot": [
+    256,
+    284
+   ],
+   "canvas": [
+    384,
+    284
+   ],
+   "footprint": [
+    4,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_ext_car_hatchback_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s4.png",
+     "tile": [
+      2,
+      0
+     ],
+     "sort_key_offset": 3
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s5.png",
+     "tile": [
+      2,
+      1
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s6.png",
+     "tile": [
+      3,
+      0
+     ],
+     "sort_key_offset": 4
+    },
+    {
+     "sprite": "item_ext_car_hatchback_SE_s7.png",
+     "tile": [
+      3,
+      1
+     ],
+     "sort_key_offset": 5
+    }
+   ],
+   "hooks": [
+    {
+     "id": "driver_door",
+     "type": "use",
+     "tile": [
+      2,
+      2
+     ],
+     "local": [
+      2.3,
+      2.35
+     ],
+     "offset_px": [
+      -3,
+      149
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "drive"
+     ],
+     "approach_tile": [
+      2,
+      3
+     ]
+    },
+    {
+     "id": "passenger_door",
+     "type": "use",
+     "tile": [
+      2,
+      -1
+     ],
+     "local": [
+      2.3,
+      -0.35
+     ],
+     "offset_px": [
+      170,
+      62
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "enter_car",
+     "tags": [
+      "ride"
+     ],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "lean",
+     "type": "stand",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.2,
+      -0.4
+     ],
+     "offset_px": [
+      102,
+      26
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "lean_on_car",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "driver_door",
+   "type": "use",
+   "pos": [
+    -0.35,
+    2.3
+   ],
+   "facing": [
+    1,
+    0
+   ],
+   "capacity": 1,
+   "anim": "enter_car",
+   "tags": [
+    "drive"
+   ],
+   "z": 0.0,
+   "approach": [
+    -1,
+    2
+   ]
+  },
+  {
+   "id": "passenger_door",
+   "type": "use",
+   "pos": [
+    2.35,
+    2.3
+   ],
+   "facing": [
+    -1,
+    0
+   ],
+   "capacity": 1,
+   "anim": "enter_car",
+   "tags": [
+    "ride"
+   ],
+   "z": 0.0,
+   "approach": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "lean",
+   "type": "stand",
+   "pos": [
+    2.4,
+    1.2
+   ],
+   "facing": [
+    1,
+    0
+   ],
+   "capacity": 1,
+   "anim": "lean_on_car",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    2,
+    1
+   ]
+  }
+ ]
+}

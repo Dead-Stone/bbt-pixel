@@ -1,0 +1,677 @@
+{
+ "id": "lobby",
+ "name": "2311 lobby (ground floor)",
+ "kind": "interior",
+ "size": [
+  8,
+  6
+ ],
+ "tile": [
+  128,
+  64
+ ],
+ "px_per_m": 64,
+ "ztop_m": 3.4,
+ "projection": "sx=(x-y)*64, sy=(x+y)*32-z*64",
+ "zones": {
+  "lobby": [
+   0,
+   0,
+   8,
+   6
+  ]
+ },
+ "floor": [
+  [
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile"
+  ],
+  [
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile"
+  ],
+  [
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile"
+  ],
+  [
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile"
+  ],
+  [
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile"
+  ],
+  [
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile",
+   "floor_lobby_tile"
+  ]
+ ],
+ "walkable": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "blocked_edges": [],
+ "walls": [
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 0,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 1,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 2,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 3,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 4,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 5,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 6,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 6,
+   "index": 7,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 8,
+   "index": 0,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 8,
+   "index": 1,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 8,
+   "index": 2,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 8,
+   "index": 3,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 8,
+   "index": 4,
+   "mat": "lobby",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 8,
+   "index": 5,
+   "mat": "lobby",
+   "feature": null
+  }
+ ],
+ "items": [
+  {
+   "item": "lobby_mailboxes",
+   "x": 0.6,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lobby_mailboxes/lobby_mailboxes.json"
+  },
+  {
+   "item": "hall_elevator_broken",
+   "x": 3,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/hall_elevator_broken/hall_elevator_broken.json"
+  },
+  {
+   "item": "lobby_stair_up",
+   "x": 6,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lobby_stair_up/lobby_stair_up.json"
+  },
+  {
+   "item": "lobby_glass_door",
+   "x": 0,
+   "y": 3,
+   "rot": "SE",
+   "state": "closed",
+   "z": 0,
+   "manifest": "../../items/lobby_glass_door/lobby_glass_door.json"
+  },
+  {
+   "item": "lobby_mat",
+   "x": 1,
+   "y": 3,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lobby_mat/lobby_mat.json"
+  },
+  {
+   "item": "lobby_sconce",
+   "x": 2.4,
+   "y": 0,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/lobby_sconce/lobby_sconce.json"
+  },
+  {
+   "item": "lobby_sconce",
+   "x": 0,
+   "y": 1.2,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/lobby_sconce/lobby_sconce.json"
+  },
+  {
+   "item": "gen_potted_palm",
+   "x": 0,
+   "y": 5,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/gen_potted_palm/gen_potted_palm.json"
+  }
+ ],
+ "hooks": [
+  {
+   "id": "lobby_mailboxes#0.check_mail",
+   "item": "lobby_mailboxes",
+   "index": 0,
+   "hook": "check_mail",
+   "type": "use",
+   "pos": [
+    1.6,
+    0.6
+   ],
+   "tile": [
+    1,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "check_mail",
+   "capacity": 2,
+   "tags": [],
+   "approach_tile": [
+    1,
+    0
+   ]
+  },
+  {
+   "id": "hall_elevator_broken#0.look",
+   "item": "hall_elevator_broken",
+   "index": 0,
+   "hook": "look",
+   "type": "look",
+   "pos": [
+    4.0,
+    0.9
+   ],
+   "tile": [
+    4,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "look_elevator",
+   "capacity": 1,
+   "tags": [
+    "running_gag"
+   ],
+   "approach_tile": [
+    3,
+    0
+   ]
+  },
+  {
+   "id": "hall_elevator_broken#0.call_button",
+   "item": "hall_elevator_broken",
+   "index": 0,
+   "hook": "call_button",
+   "type": "use",
+   "pos": [
+    4.85,
+    0.8
+   ],
+   "tile": [
+    4,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "press_button",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    0
+   ]
+  },
+  {
+   "id": "lobby_stair_up#0.climb_lane_up",
+   "item": "lobby_stair_up",
+   "index": 0,
+   "hook": "climb_lane_up",
+   "type": "climb_lane_up",
+   "pos": [
+    7.0,
+    3.85
+   ],
+   "tile": [
+    7,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "walk_stairs_up",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    7,
+    4
+   ]
+  },
+  {
+   "id": "lobby_stair_up#0.climb_lane_down",
+   "item": "lobby_stair_up",
+   "index": 0,
+   "hook": "climb_lane_down",
+   "type": "climb_lane_down",
+   "pos": [
+    7.0,
+    0.2
+   ],
+   "tile": [
+    7,
+    0
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "walk_stairs_down",
+   "capacity": 1,
+   "tags": []
+  },
+  {
+   "id": "lobby_glass_door#0.door",
+   "item": "lobby_glass_door",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    0.55,
+    3.5
+   ],
+   "tile": [
+    0,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "open_door",
+   "capacity": 1,
+   "tags": [
+    "to_street"
+   ],
+   "approach_tile": [
+    0,
+    4
+   ]
+  }
+ ],
+ "doors": [
+  {
+   "item": "lobby_glass_door",
+   "tile": [
+    0,
+    3
+   ],
+   "to": "street_exterior",
+   "facing": "SE"
+  }
+ ],
+ "spawns": {
+  "from_street": [
+   1.5,
+   3.5
+  ],
+  "from_stairs": [
+   6.9,
+   4.5
+  ]
+ },
+ "exits": [
+  {
+   "id": "to_street",
+   "tiles": [
+    [
+     0,
+     3
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_lobby",
+   "via": "door"
+  },
+  {
+   "id": "stairs_up",
+   "tiles": [
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ]
+   ],
+   "to": "floor4",
+   "to_spawn": "stairs_top (hall_stair_flight)",
+   "via": "stairs",
+   "note": "three flights in the show; collapsed to one link: lobby_stair_up top -> floor4 hall_stair_flight"
+  }
+ ],
+ "lights": [],
+ "characters": [
+  {
+   "name": "sheldon",
+   "pos": [
+    4.0,
+    0.9
+   ],
+   "anim": "idle",
+   "dir": "NE",
+   "hook": "hall_elevator_broken.0.look"
+  },
+  {
+   "name": "leonard",
+   "pos": [
+    6.0,
+    4.7
+   ],
+   "anim": "walk",
+   "dir": "NE",
+   "hook": ""
+  }
+ ],
+ "sort": {
+  "rule": "slice key = tile x+y+1 (+sort_bias*0.1); characters = feet x+y; seated = seat tile x+y+1.5; ceiling items after their footprint; full walls + wall decals before the sorted pass; cutaway stubs keyed x+y+0.45 (left/right) / +0.55 (front)"
+ },
+ "renders": {
+  "x1": "lobby_1x.png",
+  "x2": "lobby_2x.png"
+ }
+}

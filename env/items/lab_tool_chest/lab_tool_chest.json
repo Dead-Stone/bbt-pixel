@@ -1,0 +1,222 @@
+{
+ "id": "lab_tool_chest",
+ "location": "AIT_campus",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.25,
+ "rotation_class": "R4",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "red rolling tool chest with drawers",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lab_tool_chest_SW.png",
+   "pivot": [
+    64,
+    146
+   ],
+   "canvas": [
+    128,
+    146
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.3
+     ],
+     "offset_px": [
+      -51,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "get_tool",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_lab_tool_chest_NW.png",
+   "pivot": [
+    64,
+    146
+   ],
+   "canvas": [
+    128,
+    146
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.3,
+      0.5
+     ],
+     "offset_px": [
+      -51,
+      6
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "get_tool",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_lab_tool_chest_NE.png",
+   "pivot": [
+    64,
+    146
+   ],
+   "canvas": [
+    128,
+    146
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.3
+     ],
+     "offset_px": [
+      51,
+      6
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "get_tool",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_lab_tool_chest_SE.png",
+   "pivot": [
+    64,
+    146
+   ],
+   "canvas": [
+    128,
+    146
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "use",
+     "type": "use",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.3,
+      0.5
+     ],
+     "offset_px": [
+      51,
+      58
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "get_tool",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "use",
+   "type": "use",
+   "pos": [
+    0.5,
+    1.3
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "get_tool",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

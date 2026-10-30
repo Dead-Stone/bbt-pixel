@@ -1,0 +1,61 @@
+{
+ "id": "ext_street_lamp",
+ "location": "street",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 4.3,
+ "rotation_class": "R1",
+ "priority": "P1",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "off",
+  "on"
+ ],
+ "tags": [],
+ "notes": "black cast-iron post lantern (day = off)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_street_lamp_SW.png",
+   "pivot": [
+    64,
+    340
+   ],
+   "canvas": [
+    128,
+    340
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {
+    "on": {
+     "sprite": "item_ext_street_lamp_SW_on.png",
+     "pivot": [
+      64,
+      340
+     ],
+     "canvas": [
+      128,
+      340
+     ],
+     "footprint": [
+      1,
+      1
+     ],
+     "formula_ok": true
+    }
+   }
+  }
+ },
+ "hooks_canonical": []
+}

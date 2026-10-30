@@ -1,0 +1,1799 @@
+{
+ "id": "ait_physics",
+ "name": "AIT Physics: Sheldon's office + shared lab",
+ "kind": "interior",
+ "size": [
+  16,
+  8
+ ],
+ "tile": [
+  128,
+  64
+ ],
+ "px_per_m": 64,
+ "ztop_m": 3.4,
+ "projection": "sx=(x-y)*64, sy=(x+y)*32-z*64",
+ "zones": {
+  "office_sheldon": [
+   0,
+   0,
+   7,
+   8
+  ],
+  "lab_shared": [
+   7,
+   0,
+   9,
+   8
+  ]
+ },
+ "floor": [
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ],
+  [
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_office_carpet",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl",
+   "floor_lab_vinyl"
+  ]
+ ],
+ "walkable": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   1,
+   1
+  ],
+  [
+   1,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "blocked_edges": [
+  [
+   [
+    6,
+    0
+   ],
+   [
+    7,
+    0
+   ]
+  ],
+  [
+   [
+    6,
+    1
+   ],
+   [
+    7,
+    1
+   ]
+  ],
+  [
+   [
+    6,
+    2
+   ],
+   [
+    7,
+    2
+   ]
+  ],
+  [
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    3
+   ]
+  ],
+  [
+   [
+    6,
+    4
+   ],
+   [
+    7,
+    4
+   ]
+  ],
+  [
+   [
+    6,
+    6
+   ],
+   [
+    7,
+    6
+   ]
+  ],
+  [
+   [
+    6,
+    7
+   ],
+   [
+    7,
+    7
+   ]
+  ]
+ ],
+ "walls": [
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "office",
+   "feature": "window_day"
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 8,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 9,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 10,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 11,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 12,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 13,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 14,
+   "mat": "lab",
+   "feature": "window_high"
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 15,
+   "mat": "lab",
+   "feature": "window_high"
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 0,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 1,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 2,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 3,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 4,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 5,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 6,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 7,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 8,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 9,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 10,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 11,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 12,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 13,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 14,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 15,
+   "mat": "office",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 0,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 1,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 2,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 3,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 4,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 5,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 6,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 16,
+   "index": 7,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 0,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 1,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 2,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 3,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 4,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 6,
+   "mat": "lab",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 7,
+   "index": 7,
+   "mat": "lab",
+   "feature": null
+  }
+ ],
+ "items": [
+  {
+   "item": "off_whiteboard_wall",
+   "x": 1,
+   "y": 0,
+   "rot": "SW",
+   "state": "equations_a",
+   "z": 0,
+   "manifest": "../../items/off_whiteboard_wall/off_whiteboard_wall.json"
+  },
+  {
+   "item": "off_whiteboard_wall",
+   "x": 3,
+   "y": 0,
+   "rot": "SW",
+   "state": "equations_b",
+   "z": 0,
+   "manifest": "../../items/off_whiteboard_wall/off_whiteboard_wall.json"
+  },
+  {
+   "item": "poster_award",
+   "x": 6,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/poster_award/poster_award.json"
+  },
+  {
+   "item": "off_bookshelf",
+   "x": 0,
+   "y": 1,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/off_bookshelf/off_bookshelf.json"
+  },
+  {
+   "item": "off_filing_cabinet",
+   "x": 0,
+   "y": 3,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/off_filing_cabinet/off_filing_cabinet.json"
+  },
+  {
+   "item": "off_door",
+   "x": 0,
+   "y": 5,
+   "rot": "SE",
+   "state": "closed",
+   "z": 0,
+   "manifest": "../../items/off_door/off_door.json"
+  },
+  {
+   "item": "poster_diploma",
+   "x": 0,
+   "y": 4,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/poster_diploma/poster_diploma.json"
+  },
+  {
+   "item": "poster_journal",
+   "x": 0,
+   "y": 7,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/poster_journal/poster_journal.json"
+  },
+  {
+   "item": "off_desk",
+   "x": 3,
+   "y": 3,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/off_desk/off_desk.json"
+  },
+  {
+   "item": "4a_office_chair",
+   "x": 4,
+   "y": 4,
+   "rot": "NE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/4a_office_chair/4a_office_chair.json"
+  },
+  {
+   "item": "cafe_chair",
+   "x": 1,
+   "y": 4,
+   "rot": "NE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/cafe_chair/cafe_chair.json"
+  },
+  {
+   "item": "lab_bench_electronics",
+   "x": 8,
+   "y": 0,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/lab_bench_electronics/lab_bench_electronics.json"
+  },
+  {
+   "item": "lab_pegboard",
+   "x": 8.5,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_pegboard/lab_pegboard.json"
+  },
+  {
+   "item": "lab_stool",
+   "x": 9,
+   "y": 1,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_stool/lab_stool.json"
+  },
+  {
+   "item": "lab_3d_printer",
+   "x": 11,
+   "y": 0,
+   "rot": "SW",
+   "state": "printing",
+   "z": 0,
+   "manifest": "../../items/lab_3d_printer/lab_3d_printer.json"
+  },
+  {
+   "item": "lab_laser_sign",
+   "x": 12,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_laser_sign/lab_laser_sign.json"
+  },
+  {
+   "item": "lab_tool_chest",
+   "x": 13,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_tool_chest/lab_tool_chest.json"
+  },
+  {
+   "item": "lab_robot_arm",
+   "x": 15,
+   "y": 1,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_robot_arm/lab_robot_arm.json"
+  },
+  {
+   "item": "lab_optical_table",
+   "x": 12,
+   "y": 3,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/lab_optical_table/lab_optical_table.json"
+  },
+  {
+   "item": "lab_rover",
+   "x": 9,
+   "y": 5,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_rover/lab_rover.json"
+  },
+  {
+   "item": "poster_neutrino",
+   "x": 10,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0.25,
+   "manifest": "../../items/poster_neutrino/poster_neutrino.json"
+  },
+  {
+   "item": "lab_bench_electronics",
+   "x": 12,
+   "y": 6,
+   "rot": "SW",
+   "state": "off",
+   "z": 0,
+   "manifest": "../../items/lab_bench_electronics/lab_bench_electronics.json"
+  },
+  {
+   "item": "lab_stool",
+   "x": 13,
+   "y": 5,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_stool/lab_stool.json"
+  },
+  {
+   "item": "lab_stool",
+   "x": 8,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/lab_stool/lab_stool.json"
+  }
+ ],
+ "hooks": [
+  {
+   "id": "off_whiteboard_wall#0.write",
+   "item": "off_whiteboard_wall",
+   "index": 0,
+   "hook": "write",
+   "type": "write",
+   "pos": [
+    2.0,
+    0.6
+   ],
+   "tile": [
+    2,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "write_whiteboard",
+   "capacity": 1,
+   "tags": [
+    "sheldon"
+   ],
+   "approach_tile": [
+    2,
+    0
+   ]
+  },
+  {
+   "id": "off_whiteboard_wall#0.ponder",
+   "item": "off_whiteboard_wall",
+   "index": 0,
+   "hook": "ponder",
+   "type": "look",
+   "pos": [
+    2.0,
+    1.3
+   ],
+   "tile": [
+    2,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "ponder_board",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "off_whiteboard_wall#1.write",
+   "item": "off_whiteboard_wall",
+   "index": 1,
+   "hook": "write",
+   "type": "write",
+   "pos": [
+    4.0,
+    0.6
+   ],
+   "tile": [
+    4,
+    0
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "write_whiteboard",
+   "capacity": 1,
+   "tags": [
+    "sheldon"
+   ],
+   "approach_tile": [
+    4,
+    0
+   ]
+  },
+  {
+   "id": "off_whiteboard_wall#1.ponder",
+   "item": "off_whiteboard_wall",
+   "index": 1,
+   "hook": "ponder",
+   "type": "look",
+   "pos": [
+    4.0,
+    1.3
+   ],
+   "tile": [
+    4,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "ponder_board",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    1
+   ]
+  },
+  {
+   "id": "off_bookshelf#0.browse",
+   "item": "off_bookshelf",
+   "index": 0,
+   "hook": "browse",
+   "type": "browse",
+   "pos": [
+    1.3,
+    2.0
+   ],
+   "tile": [
+    1,
+    2
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "browse_shelf",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    1,
+    2
+   ]
+  },
+  {
+   "id": "off_filing_cabinet#0.use",
+   "item": "off_filing_cabinet",
+   "index": 0,
+   "hook": "use",
+   "type": "use",
+   "pos": [
+    1.3,
+    3.5
+   ],
+   "tile": [
+    1,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "open_drawer",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    1,
+    4
+   ]
+  },
+  {
+   "id": "off_door#0.door",
+   "item": "off_door",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    0.55,
+    5.5
+   ],
+   "tile": [
+    0,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "open_door",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    0,
+    6
+   ]
+  },
+  {
+   "id": "off_door#0.knock_spot_outside",
+   "item": "off_door",
+   "index": 0,
+   "hook": "knock_spot_outside",
+   "type": "knock_spot_outside",
+   "pos": [
+    -0.45,
+    5.5
+   ],
+   "tile": [
+    -1,
+    5
+   ],
+   "z": 0.0,
+   "facing": "SE",
+   "anim": "knock",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    -1,
+    6
+   ]
+  },
+  {
+   "id": "off_desk#0.work",
+   "item": "off_desk",
+   "index": 0,
+   "hook": "work",
+   "type": "work",
+   "pos": [
+    4.0,
+    4.4
+   ],
+   "tile": [
+    4,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "type_desk",
+   "capacity": 1,
+   "tags": [
+    "computer",
+    "needs_chair"
+   ],
+   "approach_tile": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "off_desk#0.surface",
+   "item": "off_desk",
+   "index": 0,
+   "hook": "surface",
+   "type": "place_item",
+   "pos": [
+    4.6,
+    3.5
+   ],
+   "tile": [
+    4,
+    3
+   ],
+   "z": 0.75,
+   "facing": "SW",
+   "anim": "",
+   "capacity": 1,
+   "tags": []
+  },
+  {
+   "id": "4a_office_chair#0.seat0",
+   "item": "4a_office_chair",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    4.5,
+    4.45
+   ],
+   "tile": [
+    4,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_desk",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    5,
+    4
+   ]
+  },
+  {
+   "id": "cafe_chair#0.seat0",
+   "item": "cafe_chair",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    1.5,
+    4.45
+   ],
+   "tile": [
+    1,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    2,
+    4
+   ]
+  },
+  {
+   "id": "lab_bench_electronics#0.work0",
+   "item": "lab_bench_electronics",
+   "index": 0,
+   "hook": "work0",
+   "type": "work",
+   "pos": [
+    8.8,
+    1.4
+   ],
+   "tile": [
+    8,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "solder",
+   "capacity": 1,
+   "tags": [
+    "howard",
+    "needs_stool"
+   ],
+   "approach_tile": [
+    8,
+    1
+   ]
+  },
+  {
+   "id": "lab_bench_electronics#0.work1",
+   "item": "lab_bench_electronics",
+   "index": 0,
+   "hook": "work1",
+   "type": "work",
+   "pos": [
+    10.2,
+    1.4
+   ],
+   "tile": [
+    10,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "use_scope",
+   "capacity": 1,
+   "tags": [
+    "needs_stool"
+   ],
+   "approach_tile": [
+    10,
+    1
+   ]
+  },
+  {
+   "id": "lab_stool#0.seat0",
+   "item": "lab_stool",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    9.5,
+    1.5
+   ],
+   "tile": [
+    9,
+    1
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_stool",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    9,
+    2
+   ]
+  },
+  {
+   "id": "lab_3d_printer#0.use",
+   "item": "lab_3d_printer",
+   "index": 0,
+   "hook": "use",
+   "type": "use",
+   "pos": [
+    11.5,
+    1.3
+   ],
+   "tile": [
+    11,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "use_printer",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    11,
+    1
+   ]
+  },
+  {
+   "id": "lab_tool_chest#0.use",
+   "item": "lab_tool_chest",
+   "index": 0,
+   "hook": "use",
+   "type": "use",
+   "pos": [
+    13.5,
+    1.3
+   ],
+   "tile": [
+    13,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "get_tool",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    13,
+    1
+   ]
+  },
+  {
+   "id": "lab_robot_arm#0.program",
+   "item": "lab_robot_arm",
+   "index": 0,
+   "hook": "program",
+   "type": "use",
+   "pos": [
+    16.35,
+    1.5
+   ],
+   "tile": [
+    16,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "program_robot",
+   "capacity": 1,
+   "tags": [
+    "howard"
+   ],
+   "approach_tile": [
+    16,
+    2
+   ]
+  },
+  {
+   "id": "lab_optical_table#0.align",
+   "item": "lab_optical_table",
+   "index": 0,
+   "hook": "align",
+   "type": "work",
+   "pos": [
+    13.0,
+    4.4
+   ],
+   "tile": [
+    13,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "align_laser",
+   "capacity": 1,
+   "tags": [
+    "leonard"
+   ],
+   "approach_tile": [
+    13,
+    4
+   ]
+  },
+  {
+   "id": "lab_optical_table#0.observe",
+   "item": "lab_optical_table",
+   "index": 0,
+   "hook": "observe",
+   "type": "look",
+   "pos": [
+    14.4,
+    3.5
+   ],
+   "tile": [
+    14,
+    3
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "look_experiment",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    14,
+    3
+   ]
+  },
+  {
+   "id": "lab_rover#0.tinker",
+   "item": "lab_rover",
+   "index": 0,
+   "hook": "tinker",
+   "type": "work",
+   "pos": [
+    10.35,
+    5.5
+   ],
+   "tile": [
+    10,
+    5
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "kneel_work",
+   "capacity": 1,
+   "tags": [
+    "howard"
+   ],
+   "approach_tile": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "lab_bench_electronics#1.work0",
+   "item": "lab_bench_electronics",
+   "index": 1,
+   "hook": "work0",
+   "type": "work",
+   "pos": [
+    12.8,
+    7.4
+   ],
+   "tile": [
+    12,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "solder",
+   "capacity": 1,
+   "tags": [
+    "howard",
+    "needs_stool"
+   ],
+   "approach_tile": [
+    12,
+    7
+   ]
+  },
+  {
+   "id": "lab_bench_electronics#1.work1",
+   "item": "lab_bench_electronics",
+   "index": 1,
+   "hook": "work1",
+   "type": "work",
+   "pos": [
+    14.2,
+    7.4
+   ],
+   "tile": [
+    14,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "use_scope",
+   "capacity": 1,
+   "tags": [
+    "needs_stool"
+   ],
+   "approach_tile": [
+    14,
+    7
+   ]
+  },
+  {
+   "id": "lab_stool#1.seat0",
+   "item": "lab_stool",
+   "index": 1,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    13.5,
+    5.5
+   ],
+   "tile": [
+    13,
+    5
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_stool",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    13,
+    6
+   ]
+  },
+  {
+   "id": "lab_stool#2.seat0",
+   "item": "lab_stool",
+   "index": 2,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    8.5,
+    3.5
+   ],
+   "tile": [
+    8,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_stool",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    8,
+    4
+   ]
+  }
+ ],
+ "doors": [
+  {
+   "item": "off_door",
+   "tile": [
+    0,
+    5
+   ],
+   "to": "ait_cafeteria",
+   "facing": "SE"
+  },
+  {
+   "item": "(doorway gap)",
+   "tile": [
+    7,
+    5
+   ],
+   "connects": [
+    "office_sheldon",
+    "lab_shared"
+   ]
+  }
+ ],
+ "spawns": {
+  "from_cafeteria": [
+   1.5,
+   5.5
+  ],
+  "office_desk": [
+   4.5,
+   4.4
+  ],
+  "lab_door": [
+   7.5,
+   5.5
+  ]
+ },
+ "exits": [
+  {
+   "id": "to_cafeteria",
+   "tiles": [
+    [
+     0,
+     5
+    ]
+   ],
+   "to": "ait_cafeteria",
+   "to_spawn": "from_physics",
+   "via": "door"
+  }
+ ],
+ "lights": [
+  {
+   "pos": [
+    4.0,
+    3.3
+   ],
+   "r": 0.9,
+   "kind": "screen"
+  },
+  {
+   "pos": [
+    9.5,
+    0.9
+   ],
+   "r": 1.0,
+   "kind": "screen"
+  },
+  {
+   "pos": [
+    5.5,
+    1.0
+   ],
+   "r": 1.4,
+   "kind": "window"
+  },
+  {
+   "pos": [
+    13.0,
+    3.6
+   ],
+   "r": 1.2,
+   "kind": "lamp",
+   "src": "laser"
+  }
+ ],
+ "characters": [
+  {
+   "name": "sheldon",
+   "pos": [
+    2.0,
+    0.6
+   ],
+   "anim": "idle",
+   "dir": "NE",
+   "hook": "off_whiteboard_wall.0.write"
+  },
+  {
+   "name": "leonard",
+   "pos": [
+    13.0,
+    4.4
+   ],
+   "anim": "idle",
+   "dir": "NE",
+   "hook": "lab_optical_table.0.align"
+  },
+  {
+   "name": "howard",
+   "pos": [
+    10.2,
+    2.3
+   ],
+   "anim": "idle",
+   "dir": "SW",
+   "hook": ""
+  }
+ ],
+ "sort": {
+  "rule": "slice key = tile x+y+1 (+sort_bias*0.1); characters = feet x+y; seated = seat tile x+y+1.5; ceiling items after their footprint; full walls + wall decals before the sorted pass; cutaway stubs keyed x+y+0.45 (left/right) / +0.55 (front)"
+ },
+ "renders": {
+  "x1": "ait_physics_1x.png",
+  "x2": "ait_physics_2x.png"
+ }
+}

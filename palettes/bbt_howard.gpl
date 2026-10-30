@@ -1,0 +1,33 @@
+GIMP Palette
+Name: BBT Howard
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+245 214 192	skin_hi
+227 179 148	skin
+185 130 106	skin_sh
+ 58  40  28	hair_hi
+ 46  38  38	hair
+ 30  26  26	hair_sh
+244 241 234	dickey
+201 206 214	dickey_sh
+ 92 152 224	shirt_hi
+ 59 127 209	shirt
+ 43  95 158	shirt_sh
+212  85 164	pants_hi
+184  51 138	pants
+138  38 104	pants_sh
+200  54  47	belt
+143  38  32	belt_sh
+201 206 214	buckle
+255 253 246	buckle_hi
+123 212  74	alien_pin
+ 90  63  43	boots
+ 58  40  28	boots_sh

@@ -1,0 +1,357 @@
+{
+ "id": "rest_host_stand",
+ "location": "amber_slice",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.35,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "host podium with a little amber lamp and a stack of menus; host stands on the -Y side",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_host_stand_SW.png",
+   "pivot": [
+    64,
+    152
+   ],
+   "canvas": [
+    128,
+    152
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "host",
+     "type": "work",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.4
+     ],
+     "offset_px": [
+      58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "host_greet",
+     "tags": [
+      "penny",
+      "staff"
+     ],
+     "approach_tile": [
+      0,
+      -1
+     ]
+    },
+    {
+     "id": "wait_to_be_seated",
+     "type": "queue",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.45
+     ],
+     "offset_px": [
+      -61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 4,
+     "anim": "stand_wait",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_rest_host_stand_NW.png",
+   "pivot": [
+    64,
+    152
+   ],
+   "canvas": [
+    128,
+    152
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "host",
+     "type": "work",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.5
+     ],
+     "offset_px": [
+      58,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "host_greet",
+     "tags": [
+      "penny",
+      "staff"
+     ],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "wait_to_be_seated",
+     "type": "queue",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.45,
+      0.5
+     ],
+     "offset_px": [
+      -61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 4,
+     "anim": "stand_wait",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_rest_host_stand_NE.png",
+   "pivot": [
+    64,
+    152
+   ],
+   "canvas": [
+    128,
+    152
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "host",
+     "type": "work",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.5,
+      1.4
+     ],
+     "offset_px": [
+      -58,
+      61
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "host_greet",
+     "tags": [
+      "penny",
+      "staff"
+     ],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "wait_to_be_seated",
+     "type": "queue",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.45
+     ],
+     "offset_px": [
+      61,
+      2
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 4,
+     "anim": "stand_wait",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_rest_host_stand_SE.png",
+   "pivot": [
+    64,
+    152
+   ],
+   "canvas": [
+    128,
+    152
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "host",
+     "type": "work",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.4,
+      0.5
+     ],
+     "offset_px": [
+      -58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "host_greet",
+     "tags": [
+      "penny",
+      "staff"
+     ],
+     "approach_tile": [
+      -1,
+      1
+     ]
+    },
+    {
+     "id": "wait_to_be_seated",
+     "type": "queue",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.45,
+      0.5
+     ],
+     "offset_px": [
+      61,
+      62
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 4,
+     "anim": "stand_wait",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "host",
+   "type": "work",
+   "pos": [
+    0.5,
+    -0.4
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "host_greet",
+   "tags": [
+    "penny",
+    "staff"
+   ],
+   "z": 0.0,
+   "approach": [
+    0,
+    -1
+   ]
+  },
+  {
+   "id": "wait_to_be_seated",
+   "type": "queue",
+   "pos": [
+    0.5,
+    1.45
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 4,
+   "anim": "stand_wait",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  }
+ ]
+}

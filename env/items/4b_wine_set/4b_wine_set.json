@@ -1,0 +1,127 @@
+{
+ "id": "4b_wine_set",
+ "location": "4B",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.36,
+ "rotation_class": "R1",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": false,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "wine bottle + 2 glasses (one poured); place on a surface hook",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_wine_set_SW.png",
+   "pivot": [
+    64,
+    88
+   ],
+   "canvas": [
+    128,
+    88
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "wine_glass",
+     "type": "pickup",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.6
+     ],
+     "offset_px": [
+      0,
+      38
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "wine_sip",
+     "tags": [
+      "wine"
+     ]
+    },
+    {
+     "id": "bottle",
+     "type": "pour_drink",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.35,
+      0.4
+     ],
+     "offset_px": [
+      -3,
+      24
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "pour_wine",
+     "tags": [
+      "wine"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "wine_glass",
+   "type": "pickup",
+   "pos": [
+    0.6,
+    0.6
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "wine_sip",
+   "tags": [
+    "wine"
+   ],
+   "z": 0.0
+  },
+  {
+   "id": "bottle",
+   "type": "pour_drink",
+   "pos": [
+    0.35,
+    0.4
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "pour_wine",
+   "tags": [
+    "wine"
+   ],
+   "z": 0.0
+  }
+ ]
+}

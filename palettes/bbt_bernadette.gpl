@@ -1,0 +1,28 @@
+GIMP Palette
+Name: BBT Bernadette
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+245 214 192	skin_hi
+227 179 148	skin
+185 130 106	skin_sh
+224 181  98	hair_hi
+201 154  69	hair
+154 114  48	hair_sh
+107  74  51	glasses
+ 62  79 128	dress_hi
+ 44  58 102	dress
+ 31  42  74	dress_sh
+244 241 234	floral_a
+242 201  76	floral_b
+247 170 198	cardigan_hi
+242 141 178	cardigan
+201 106 142	cardigan_sh
+ 43  34  51	shoes

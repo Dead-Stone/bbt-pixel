@@ -1,0 +1,31 @@
+GIMP Palette
+Name: BBT Penny
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+245 214 192	skin_hi
+227 179 148	skin
+185 130 106	skin_sh
+242 217 142	hair_hi
+217 180  94	hair
+168 130  60	hair_sh
+247 166 195	top_hi
+239 127 168	top
+199  90 131	top_sh
+111 147 194	denim_hi
+ 79 116 168	denim
+ 58  86 128	denim_sh
+122  77  47	boots
+ 92  58  36	boots_sh
+246 244 238	uni_blouse
+242 201  76	uni_vest
+201 154  31	uni_vest_sh
+ 47  90  58	uni_apron
+208  96 110	lips

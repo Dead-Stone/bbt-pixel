@@ -1,0 +1,82 @@
+{
+ "id": "4b_bar_stool",
+ "location": "4B",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 0.78,
+ "rotation_class": "R1",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "pair with island stool hooks",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_4b_bar_stool_SW.png",
+   "pivot": [
+    64,
+    120
+   ],
+   "canvas": [
+    128,
+    120
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "perch",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.5,
+      0.5
+     ],
+     "offset_px": [
+      0,
+      -16
+     ],
+     "z": 0.75,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_stool",
+     "tags": []
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "perch",
+   "pos": [
+    0.5,
+    0.5
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_stool",
+   "tags": [],
+   "z": 0.75
+  }
+ ]
+}

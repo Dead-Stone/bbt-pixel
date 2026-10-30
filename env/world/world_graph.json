@@ -1,0 +1,448 @@
+{
+ "world": "bbt_pixel_living_sitcom",
+ "version": 2,
+ "nodes": [
+  {
+   "id": "ait_cafeteria",
+   "name": "AIT Cafeteria (Arroyo Institute of Technology)",
+   "kind": "interior",
+   "size": [
+    12,
+    9
+   ],
+   "engine": "../locations/ait_cafeteria/ait_cafeteria_engine.json",
+   "tmj": "../locations/ait_cafeteria/ait_cafeteria.tmj",
+   "render": "../locations/ait_cafeteria/ait_cafeteria_1x.png",
+   "spawns": {
+    "from_physics": [
+     1.5,
+     6.5
+    ],
+    "from_quad": [
+     5.5,
+     8.5
+    ],
+    "food_line": [
+     2.5,
+     1.5
+    ]
+   },
+   "exits": [
+    {
+     "id": "to_physics",
+     "tiles": [
+      [
+       0,
+       6
+      ]
+     ],
+     "to": "ait_physics",
+     "to_spawn": "from_cafeteria",
+     "via": "door"
+    },
+    {
+     "id": "to_quad",
+     "tiles": [
+      [
+       5,
+       8
+      ],
+      [
+       6,
+       8
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_campus",
+     "via": "car",
+     "note": "campus quad / parking stub; the guys carpool home"
+    }
+   ]
+  },
+  {
+   "id": "ait_physics",
+   "name": "AIT Physics: Sheldon's office + shared lab",
+   "kind": "interior",
+   "size": [
+    16,
+    8
+   ],
+   "engine": "../locations/ait_physics/ait_physics_engine.json",
+   "tmj": "../locations/ait_physics/ait_physics.tmj",
+   "render": "../locations/ait_physics/ait_physics_1x.png",
+   "spawns": {
+    "from_cafeteria": [
+     1.5,
+     5.5
+    ],
+    "office_desk": [
+     4.5,
+     4.4
+    ],
+    "lab_door": [
+     7.5,
+     5.5
+    ]
+   },
+   "exits": [
+    {
+     "id": "to_cafeteria",
+     "tiles": [
+      [
+       0,
+       5
+      ]
+     ],
+     "to": "ait_cafeteria",
+     "to_spawn": "from_physics",
+     "via": "door"
+    }
+   ]
+  },
+  {
+   "id": "rest_amber_slice",
+   "name": "The Amber Slice (restaurant)",
+   "kind": "interior",
+   "size": [
+    14,
+    9
+   ],
+   "engine": "../locations/rest_amber_slice/rest_amber_slice_engine.json",
+   "tmj": "../locations/rest_amber_slice/rest_amber_slice.tmj",
+   "render": "../locations/rest_amber_slice/rest_amber_slice_1x.png",
+   "spawns": {
+    "from_street": [
+     1.5,
+     4.5
+    ],
+    "from_kitchen": [
+     7.5,
+     1.5
+    ],
+    "behind_bar": [
+     10.5,
+     1.5
+    ]
+   },
+   "exits": [
+    {
+     "id": "to_street",
+     "tiles": [
+      [
+       0,
+       4
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_restaurant",
+     "via": "sidewalk"
+    },
+    {
+     "id": "to_kitchen",
+     "tiles": [
+      [
+       7,
+       0
+      ]
+     ],
+     "to": "kitchen_stub",
+     "to_spawn": "",
+     "via": "door"
+    }
+   ]
+  },
+  {
+   "id": "street_exterior",
+   "name": "2311 building entrance + street (Pasadena)",
+   "kind": "exterior",
+   "size": [
+    16,
+    10
+   ],
+   "engine": "../locations/street_exterior/street_exterior_engine.json",
+   "tmj": "../locations/street_exterior/street_exterior.tmj",
+   "render": "../locations/street_exterior/street_exterior_1x.png",
+   "spawns": {
+    "from_lobby": [
+     8.0,
+     1.6
+    ],
+    "from_campus": [
+     5.5,
+     7.0
+    ],
+    "from_restaurant": [
+     15.5,
+     1.5
+    ],
+    "from_raj": [
+     5.5,
+     7.0
+    ],
+    "car_driver": [
+     4.5,
+     4.6
+    ]
+   },
+   "exits": [
+    {
+     "id": "to_lobby",
+     "tiles": [
+      [
+       7,
+       0
+      ],
+      [
+       8,
+       0
+      ]
+     ],
+     "to": "lobby",
+     "to_spawn": "from_street",
+     "via": "door"
+    },
+    {
+     "id": "drive_campus",
+     "tiles": [
+      [
+       3,
+       4
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "to": "ait_cafeteria",
+     "to_spawn": "from_quad",
+     "via": "car"
+    },
+    {
+     "id": "drive_raj",
+     "tiles": [
+      [
+       3,
+       4
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "to": "raj_apartment",
+     "to_spawn": "from_street",
+     "via": "car"
+    },
+    {
+     "id": "walk_restaurant",
+     "tiles": [
+      [
+       15,
+       0
+      ],
+      [
+       15,
+       1
+      ],
+      [
+       15,
+       2
+      ]
+     ],
+     "to": "rest_amber_slice",
+     "to_spawn": "from_street",
+     "via": "sidewalk"
+    }
+   ]
+  },
+  {
+   "id": "lobby",
+   "name": "2311 lobby (ground floor)",
+   "kind": "interior",
+   "size": [
+    8,
+    6
+   ],
+   "engine": "../locations/lobby/lobby_engine.json",
+   "tmj": "../locations/lobby/lobby.tmj",
+   "render": "../locations/lobby/lobby_1x.png",
+   "spawns": {
+    "from_street": [
+     1.5,
+     3.5
+    ],
+    "from_stairs": [
+     6.9,
+     4.5
+    ]
+   },
+   "exits": [
+    {
+     "id": "to_street",
+     "tiles": [
+      [
+       0,
+       3
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_lobby",
+     "via": "door"
+    },
+    {
+     "id": "stairs_up",
+     "tiles": [
+      [
+       6,
+       0
+      ],
+      [
+       7,
+       0
+      ]
+     ],
+     "to": "floor4",
+     "to_spawn": "stairs_top (hall_stair_flight)",
+     "via": "stairs",
+     "note": "three flights in the show; collapsed to one link: lobby_stair_up top -> floor4 hall_stair_flight"
+    }
+   ]
+  },
+  {
+   "id": "raj_apartment",
+   "name": "Raj's apartment",
+   "kind": "interior",
+   "size": [
+    10,
+    8
+   ],
+   "engine": "../locations/raj_apartment/raj_apartment_engine.json",
+   "tmj": "../locations/raj_apartment/raj_apartment.tmj",
+   "render": "../locations/raj_apartment/raj_apartment_1x.png",
+   "spawns": {
+    "from_street": [
+     1.5,
+     6.5
+    ],
+    "telescope": [
+     7.5,
+     2.4
+    ]
+   },
+   "exits": [
+    {
+     "id": "to_street",
+     "tiles": [
+      [
+       0,
+       6
+      ]
+     ],
+     "to": "street_exterior",
+     "to_spawn": "from_raj",
+     "via": "car"
+    },
+    {
+     "id": "to_bedroom",
+     "tiles": [
+      [
+       0,
+       2
+      ]
+     ],
+     "to": "raj_bedroom_stub",
+     "to_spawn": "",
+     "via": "door"
+    }
+   ]
+  },
+  {
+   "id": "floor4",
+   "name": "4th floor: 4A + landing + 4B (Environment v1)",
+   "kind": "interior",
+   "size": [
+    23,
+    8
+   ],
+   "engine": "../maps/floor4_engine.json",
+   "tmj": "../maps/floor4_4A_hall_4B.tmj",
+   "render": "../renders/floor4_combined_1x.png",
+   "spawns": {
+    "stairs_top": [
+     10.5,
+     7.5
+    ]
+   },
+   "exits": [
+    {
+     "id": "stairs_down",
+     "tiles": [
+      [
+       10,
+       7
+      ],
+      [
+       11,
+       7
+      ]
+     ],
+     "to": "lobby",
+     "to_spawn": "from_stairs",
+     "via": "stairs"
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "a": "street_exterior",
+   "b": "lobby",
+   "via": "door",
+   "a_exit": "to_lobby",
+   "b_exit": "to_street"
+  },
+  {
+   "a": "lobby",
+   "b": "floor4",
+   "via": "stairs",
+   "a_exit": "stairs_up",
+   "b_exit": "hall_stair_flight (env/maps/floor4_engine.json)"
+  },
+  {
+   "a": "street_exterior",
+   "b": "rest_amber_slice",
+   "via": "sidewalk",
+   "a_exit": "walk_restaurant",
+   "b_exit": "to_street",
+   "travel": "walk ~5 min"
+  },
+  {
+   "a": "street_exterior",
+   "b": "ait_cafeteria",
+   "via": "car",
+   "a_exit": "drive_campus",
+   "b_exit": "to_quad",
+   "travel": "drive ~10 min (Leonard drives)"
+  },
+  {
+   "a": "street_exterior",
+   "b": "raj_apartment",
+   "via": "car",
+   "a_exit": "drive_raj",
+   "b_exit": "to_street",
+   "travel": "drive ~10 min"
+  },
+  {
+   "a": "ait_cafeteria",
+   "b": "ait_physics",
+   "via": "door",
+   "a_exit": "to_physics",
+   "b_exit": "to_cafeteria"
+  }
+ ],
+ "stubs": [
+  "kitchen_stub (Amber Slice kitchen)",
+  "raj_bedroom_stub"
+ ],
+ "note": "edges are bidirectional; via=door|stairs|sidewalk|car. Car edges are travel transitions (no road map)."
+}

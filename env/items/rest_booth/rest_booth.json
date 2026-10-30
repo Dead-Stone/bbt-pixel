@@ -1,0 +1,968 @@
+{
+ "id": "rest_booth",
+ "location": "amber_slice",
+ "footprint": [
+  2,
+  2
+ ],
+ "height_m": 1.2,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "red tufted 4-seat booth with dark wood caps and a table; open at both x-ends",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_rest_booth_SW.png",
+   "pivot": [
+    128,
+    206
+   ],
+   "canvas": [
+    256,
+    206
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_booth_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_booth_SW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_SW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_SW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.38
+     ],
+     "offset_px": [
+      14,
+      31
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.38
+     ],
+     "offset_px": [
+      65,
+      57
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.6,
+      1.62
+     ],
+     "offset_px": [
+      -65,
+      71
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.4,
+      1.62
+     ],
+     "offset_px": [
+      -14,
+      97
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "take_order",
+     "type": "work",
+     "tile": [
+      2,
+      1
+     ],
+     "local": [
+      2.35,
+      1.0
+     ],
+     "offset_px": [
+      86,
+      107
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "take_order",
+     "tags": [
+      "waitress",
+      "penny"
+     ],
+     "approach_tile": [
+      2,
+      1
+     ]
+    },
+    {
+     "id": "table",
+     "type": "place_item",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.0
+     ],
+     "offset_px": [
+      0,
+      15
+     ],
+     "z": 0.76,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "plates",
+      "drinks"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_rest_booth_NW.png",
+   "pivot": [
+    128,
+    206
+   ],
+   "canvas": [
+    256,
+    206
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_booth_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_booth_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_NW_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_NW_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.62,
+      0.6
+     ],
+     "offset_px": [
+      65,
+      71
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.62,
+      1.4
+     ],
+     "offset_px": [
+      14,
+      97
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      2,
+      1
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.38,
+      0.6
+     ],
+     "offset_px": [
+      -14,
+      31
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.38,
+      1.4
+     ],
+     "offset_px": [
+      -65,
+      57
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "take_order",
+     "type": "work",
+     "tile": [
+      1,
+      2
+     ],
+     "local": [
+      1.0,
+      2.35
+     ],
+     "offset_px": [
+      -86,
+      107
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "take_order",
+     "tags": [
+      "waitress",
+      "penny"
+     ],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "table",
+     "type": "place_item",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.0
+     ],
+     "offset_px": [
+      0,
+      15
+     ],
+     "z": 0.76,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "plates",
+      "drinks"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_rest_booth_NE.png",
+   "pivot": [
+    128,
+    206
+   ],
+   "canvas": [
+    256,
+    206
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_booth_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_booth_NE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_NE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_NE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.4,
+      1.62
+     ],
+     "offset_px": [
+      -14,
+      97
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      2,
+      2
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.6,
+      1.62
+     ],
+     "offset_px": [
+      -65,
+      71
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.4,
+      0.38
+     ],
+     "offset_px": [
+      65,
+      57
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      2,
+      1
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.6,
+      0.38
+     ],
+     "offset_px": [
+      14,
+      31
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "take_order",
+     "type": "work",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.35,
+      1.0
+     ],
+     "offset_px": [
+      -86,
+      21
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "take_order",
+     "tags": [
+      "waitress",
+      "penny"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "table",
+     "type": "place_item",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.0
+     ],
+     "offset_px": [
+      0,
+      15
+     ],
+     "z": 0.76,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "plates",
+      "drinks"
+     ]
+    }
+   ],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_rest_booth_SE.png",
+   "pivot": [
+    128,
+    206
+   ],
+   "canvas": [
+    256,
+    206
+   ],
+   "footprint": [
+    2,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_rest_booth_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_rest_booth_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_SE_s2.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    },
+    {
+     "sprite": "item_rest_booth_SE_s3.png",
+     "tile": [
+      1,
+      1
+     ],
+     "sort_key_offset": 3
+    }
+   ],
+   "hooks": [
+    {
+     "id": "seat0",
+     "type": "sit",
+     "tile": [
+      0,
+      1
+     ],
+     "local": [
+      0.38,
+      1.4
+     ],
+     "offset_px": [
+      -65,
+      57
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      0,
+      2
+     ]
+    },
+    {
+     "id": "seat1",
+     "type": "sit",
+     "tile": [
+      0,
+      0
+     ],
+     "local": [
+      0.38,
+      0.6
+     ],
+     "offset_px": [
+      -14,
+      31
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "seat2",
+     "type": "sit",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.62,
+      1.4
+     ],
+     "offset_px": [
+      14,
+      97
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "seat3",
+     "type": "sit",
+     "tile": [
+      1,
+      0
+     ],
+     "local": [
+      1.62,
+      0.6
+     ],
+     "offset_px": [
+      65,
+      71
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "sit_booth",
+     "tags": [],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "take_order",
+     "type": "work",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.0,
+      -0.35
+     ],
+     "offset_px": [
+      86,
+      21
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "take_order",
+     "tags": [
+      "waitress",
+      "penny"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "table",
+     "type": "place_item",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.0
+     ],
+     "offset_px": [
+      0,
+      15
+     ],
+     "z": 0.76,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "",
+     "tags": [
+      "plates",
+      "drinks"
+     ]
+    }
+   ],
+   "states": {}
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "seat0",
+   "type": "sit",
+   "pos": [
+    0.6,
+    0.38
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_booth",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "seat1",
+   "type": "sit",
+   "pos": [
+    1.4,
+    0.38
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "sit_booth",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    0
+   ]
+  },
+  {
+   "id": "seat2",
+   "type": "sit",
+   "pos": [
+    0.6,
+    1.62
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_booth",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "seat3",
+   "type": "sit",
+   "pos": [
+    1.4,
+    1.62
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "sit_booth",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "take_order",
+   "type": "work",
+   "pos": [
+    2.35,
+    1.0
+   ],
+   "facing": [
+    -1,
+    0
+   ],
+   "capacity": 1,
+   "anim": "take_order",
+   "tags": [
+    "waitress",
+    "penny"
+   ],
+   "z": 0.0,
+   "approach": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "table",
+   "type": "place_item",
+   "pos": [
+    1.0,
+    1.0
+   ],
+   "facing": [
+    0,
+    1
+   ],
+   "capacity": 1,
+   "anim": "",
+   "tags": [
+    "plates",
+    "drinks"
+   ],
+   "z": 0.76
+  }
+ ]
+}

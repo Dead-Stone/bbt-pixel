@@ -1,0 +1,97 @@
+{
+ "id": "ext_street_sign",
+ "location": "street",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 3.0,
+ "rotation_class": "R4",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "green street-name blade 'LOS ROBLES AV' (fictional address 2311 is used on the door transom)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_ext_street_sign_SW.png",
+   "pivot": [
+    64,
+    254
+   ],
+   "canvas": [
+    128,
+    254
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "NW": {
+   "sprite": "item_ext_street_sign_NW.png",
+   "pivot": [
+    64,
+    254
+   ],
+   "canvas": [
+    128,
+    254
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "NE": {
+   "sprite": "item_ext_street_sign_NE.png",
+   "pivot": [
+    64,
+    254
+   ],
+   "canvas": [
+    128,
+    254
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  },
+  "SE": {
+   "sprite": "item_ext_street_sign_SE.png",
+   "pivot": [
+    64,
+    254
+   ],
+   "canvas": [
+    128,
+    254
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}

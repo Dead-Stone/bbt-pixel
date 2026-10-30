@@ -1,0 +1,10 @@
+{
+ "sprite": "sheldon_sit_SW.png",
+ "pivot": [
+  64,
+  128
+ ],
+ "dir": "SW",
+ "lift_units": -18.82,
+ "note": "scene-only seated pose; pivot = floor point under the hips"
+}

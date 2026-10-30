@@ -1,0 +1,124 @@
+{
+ "id": "chr_sheldon",
+ "version": "v0",
+ "sheet": "chr_sheldon.png",
+ "atlas": "chr_sheldon.json",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot_px": [
+  64,
+  116
+ ],
+ "pivot_norm": [
+  0.5,
+  0.90625
+ ],
+ "body_height_px": 100,
+ "palette": "palettes/bbt_sheldon.gpl",
+ "camera": {
+  "projection": "2:1 dimetric",
+  "elevation_deg": 30
+ },
+ "dirs": [
+  "S",
+  "SW",
+  "W",
+  "NW",
+  "N",
+  "NE",
+  "E",
+  "SE"
+ ],
+ "mirror": {
+  "NE": "NW",
+  "E": "W",
+  "SE": "SW"
+ },
+ "decals_on_mirror": [
+  "emblem"
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 250
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 100
+  },
+  "knock_knock_penny": {
+   "frames": 16,
+   "fps": 8,
+   "loop": false,
+   "dirs": [
+    "SW",
+    "NW",
+    "NE",
+    "SE"
+   ],
+   "frame_ms": 125,
+   "holds_ms": {
+    "3": 375,
+    "7": 375,
+    "11": 375
+   },
+   "bubble_cues": [
+    {
+     "frame": 3,
+     "text": "Penny."
+    },
+    {
+     "frame": 7,
+     "text": "Penny."
+    },
+    {
+     "frame": 11,
+     "text": "Penny."
+    }
+   ]
+  },
+  "blink": {
+   "frames": 2,
+   "fps": 12,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 80
+  }
+ },
+ "notes": "Procedurally rendered from tools/sheldon_rig.py (SDF proxy rig) + tools/compose_sheldon.py. Mirrored dirs re-stamp the emblem unflipped."
+}

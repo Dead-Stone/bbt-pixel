@@ -1,0 +1,31 @@
+GIMP Palette
+Name: BBT Raj
+Columns: 8
+#
+ 26  20  32	ink
+ 43  34  51	ink_2
+ 61  48  71	shadow_violet
+ 90  88 102	grey_dk
+140 143 148	grey
+201 206 214	grey_lt
+244 241 234	paper
+255 253 246	white_hi
+200 138  96	skin_hi
+180 122  82	skin
+147  96  63	skin_sh
+ 74  61  58	hair_hi
+ 46  38  38	hair
+ 30  26  26	hair_sh
+244 236 216	shirt_hi
+238 227 200	shirt
+201 188 154	shirt_sh
+154 106  66	vest_hi
+122  82  51	vest
+ 90  58  36	vest_sh
+176 138  74	argyle
+138 143  90	pants_hi
+111 116  66	pants
+ 84  88  50	pants_sh
+ 90  63  43	jacket
+ 58  40  28	jacket_sh
+ 58  40  28	shoes

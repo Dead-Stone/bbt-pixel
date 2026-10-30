@@ -1,0 +1,141 @@
+{
+ "id": "chr_raj",
+ "version": "v1",
+ "sheet": "chr_raj.png",
+ "atlas": "chr_raj.json",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot_px": [
+  64,
+  116
+ ],
+ "pivot_norm": [
+  0.5,
+  0.90625
+ ],
+ "body_height_px": 92,
+ "palette": "palettes/bbt_raj.gpl",
+ "camera": {
+  "projection": "2:1 dimetric",
+  "elevation_deg": 30,
+  "px_per_unit": 1.122
+ },
+ "dirs": [
+  "S",
+  "SW",
+  "W",
+  "NW",
+  "N",
+  "NE",
+  "E",
+  "SE"
+ ],
+ "mirror": {
+  "NE": "NW",
+  "E": "W",
+  "SE": "SW"
+ },
+ "decals_on_mirror": [
+  "hair_part (left)",
+  "argyle vest"
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 250
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 100
+  },
+  "blink": {
+   "frames": 3,
+   "fps": 12,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 80,
+   "eyes": [
+    "half",
+    "closed",
+    "half"
+   ],
+   "note": "v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
+  },
+  "astronomy_point": {
+   "frames": 4,
+   "fps": 8,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 125,
+   "hand": "right (left on mirrored NE/E/SE)",
+   "wrist_targets": [
+    [
+     10.5,
+     7.0,
+     62.0
+    ],
+    [
+     8.5,
+     10.0,
+     78.0
+    ],
+    [
+     8.0,
+     9.0,
+     84.0
+    ],
+    [
+     8.0,
+     9.0,
+     84.0
+    ]
+   ],
+   "emote_icon": "star (runtime UI, spec 7.3; not baked into the sprite)"
+  }
+ },
+ "notes": "Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation."
+}

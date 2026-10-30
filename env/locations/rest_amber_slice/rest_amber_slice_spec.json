@@ -1,0 +1,413 @@
+{
+ "id": "rest_amber_slice",
+ "name": "The Amber Slice (restaurant)",
+ "kind": "interior",
+ "size": [
+  14,
+  9
+ ],
+ "floor": [
+  [
+   0,
+   0,
+   14,
+   9,
+   "floor_rest_wood_*"
+  ],
+  [
+   9,
+   0,
+   14,
+   2,
+   "floor_rest_tile"
+  ]
+ ],
+ "walls": {
+  "back": [
+   [
+    0,
+    14,
+    "rest"
+   ]
+  ],
+  "left": [
+   [
+    0,
+    9,
+    "rest"
+   ]
+  ],
+  "front_cut": "rest",
+  "right_cut": "rest"
+ },
+ "slots": {
+  "left": {
+   "1": "window_day",
+   "2": "window_day",
+   "6": "window_day",
+   "7": "window_day"
+  }
+ },
+ "items": [
+  [
+   "rest_booth",
+   1,
+   0,
+   "SW"
+  ],
+  [
+   "rest_booth",
+   4,
+   0,
+   "SW"
+  ],
+  [
+   "rest_wall_sign",
+   2,
+   0,
+   "SW",
+   null,
+   0.45
+  ],
+  [
+   "rest_kitchen_door",
+   7,
+   0,
+   "SW",
+   "closed"
+  ],
+  [
+   "rest_back_bar",
+   9,
+   0,
+   "SW"
+  ],
+  [
+   "rest_server_station",
+   12,
+   0,
+   "SW"
+  ],
+  [
+   "rest_cake_display",
+   13,
+   0,
+   "SW"
+  ],
+  [
+   "rest_bar_counter",
+   9,
+   2,
+   "SW"
+  ],
+  [
+   "rest_bar_stool",
+   9,
+   3,
+   "SW"
+  ],
+  [
+   "rest_bar_stool",
+   10,
+   3,
+   "SW"
+  ],
+  [
+   "rest_bar_stool",
+   11,
+   3,
+   "SW"
+  ],
+  [
+   "rest_bar_stool",
+   12,
+   3,
+   "SW"
+  ],
+  [
+   "lobby_glass_door",
+   0,
+   4,
+   "SE",
+   "closed"
+  ],
+  [
+   "rest_host_stand",
+   1,
+   5,
+   "SE"
+  ],
+  [
+   "gen_potted_palm",
+   0,
+   8,
+   "SW"
+  ],
+  [
+   "gen_potted_palm",
+   7,
+   1,
+   "SW"
+  ],
+  [
+   "rest_column",
+   8,
+   5,
+   "SW"
+  ],
+  [
+   "rest_stage",
+   11,
+   6,
+   "SW"
+  ],
+  [
+   "rest_table_2top",
+   3,
+   4,
+   "SW"
+  ],
+  [
+   "rest_chair",
+   3,
+   3,
+   "SW"
+  ],
+  [
+   "rest_chair",
+   3,
+   5,
+   "NE"
+  ],
+  [
+   "rest_table_2top",
+   5,
+   4,
+   "SW"
+  ],
+  [
+   "rest_chair",
+   5,
+   3,
+   "SW"
+  ],
+  [
+   "rest_chair",
+   5,
+   5,
+   "NE"
+  ],
+  [
+   "rest_table_2top",
+   3,
+   7,
+   "SW"
+  ],
+  [
+   "rest_chair",
+   3,
+   6,
+   "SW"
+  ],
+  [
+   "rest_table_2top",
+   6,
+   7,
+   "SW"
+  ],
+  [
+   "rest_chair",
+   6,
+   6,
+   "SW"
+  ],
+  [
+   "rest_pendant_lamp",
+   1.5,
+   0.5,
+   "SW",
+   "on"
+  ],
+  [
+   "rest_pendant_lamp",
+   4.5,
+   0.5,
+   "SW",
+   "on"
+  ],
+  [
+   "rest_pendant_lamp",
+   3,
+   4,
+   "SW",
+   "on"
+  ],
+  [
+   "rest_pendant_lamp",
+   5,
+   4,
+   "SW",
+   "on"
+  ],
+  [
+   "rest_pendant_lamp",
+   10.5,
+   2,
+   "SW",
+   "on"
+  ]
+ ],
+ "lights": [
+  {
+   "pos": [
+    2.0,
+    1.0
+   ],
+   "r": 0.8,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    5.0,
+    1.0
+   ],
+   "r": 0.8,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    3.5,
+    4.5
+   ],
+   "r": 0.7,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    5.5,
+    4.5
+   ],
+   "r": 0.7,
+   "kind": "pendant"
+  },
+  {
+   "pos": [
+    11.0,
+    2.5
+   ],
+   "r": 1.1,
+   "kind": "pendant"
+  }
+ ],
+ "chars": [
+  {
+   "cid": "sheldon",
+   "mode": "sit",
+   "hook": [
+    "rest_booth",
+    0,
+    "seat0"
+   ]
+  },
+  {
+   "cid": "leonard",
+   "mode": "sit",
+   "hook": [
+    "rest_booth",
+    0,
+    "seat1"
+   ]
+  },
+  {
+   "cid": "penny",
+   "mode": "stand",
+   "hook": [
+    "rest_booth",
+    0,
+    "take_order"
+   ],
+   "dir": "NW"
+  }
+ ],
+ "zones": {
+  "dining": [
+   0,
+   0,
+   9,
+   9
+  ],
+  "bar": [
+   9,
+   0,
+   5,
+   6
+  ],
+  "stage": [
+   11,
+   6,
+   3,
+   2
+  ]
+ },
+ "spawns": {
+  "from_street": [
+   1.5,
+   4.5
+  ],
+  "from_kitchen": [
+   7.5,
+   1.5
+  ],
+  "behind_bar": [
+   10.5,
+   1.5
+  ]
+ },
+ "doors": [
+  {
+   "item": "lobby_glass_door",
+   "tile": [
+    0,
+    4
+   ],
+   "to": "street_exterior",
+   "facing": "SE",
+   "note": "front door (glass)"
+  },
+  {
+   "item": "rest_kitchen_door",
+   "tile": [
+    7,
+    0
+   ],
+   "to": "kitchen (stub)",
+   "facing": "SW"
+  }
+ ],
+ "exits": [
+  {
+   "id": "to_street",
+   "tiles": [
+    [
+     0,
+     4
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_restaurant",
+   "via": "sidewalk"
+  },
+  {
+   "id": "to_kitchen",
+   "tiles": [
+    [
+     7,
+     0
+    ]
+   ],
+   "to": "kitchen_stub",
+   "to_spawn": "",
+   "via": "door"
+  }
+ ]
+}

@@ -1,0 +1,1222 @@
+{
+ "id": "raj_apartment",
+ "name": "Raj's apartment",
+ "kind": "interior",
+ "size": [
+  10,
+  8
+ ],
+ "tile": [
+  128,
+  64
+ ],
+ "px_per_m": 64,
+ "ztop_m": 3.4,
+ "projection": "sx=(x-y)*64, sy=(x+y)*32-z*64",
+ "zones": {
+  "living": [
+   0,
+   0,
+   10,
+   8
+  ]
+ },
+ "floor": [
+  [
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a"
+  ],
+  [
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a"
+  ],
+  [
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b"
+  ],
+  [
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a"
+  ],
+  [
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a"
+  ],
+  [
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b"
+  ],
+  [
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a"
+  ],
+  [
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b",
+   "floor_raj_wood_a",
+   "floor_raj_wood_b"
+  ]
+ ],
+ "walkable": [
+  [
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   1
+  ]
+ ],
+ "blocked_edges": [],
+ "walls": [
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "raj",
+   "feature": "window"
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "raj",
+   "feature": "window"
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 8,
+   "mat": "raj",
+   "feature": "window"
+  },
+  {
+   "side": "br",
+   "mode": "full",
+   "line": 0,
+   "index": 9,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 0,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 1,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 2,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 3,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 4,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 5,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 6,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "full",
+   "line": 0,
+   "index": 7,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 0,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 1,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 2,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 3,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 4,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 5,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 6,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 7,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 8,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "br",
+   "mode": "cut",
+   "line": 8,
+   "index": 9,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 0,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 1,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 2,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 3,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 4,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 5,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 6,
+   "mat": "raj",
+   "feature": null
+  },
+  {
+   "side": "bl",
+   "mode": "cut",
+   "line": 10,
+   "index": 7,
+   "mat": "raj",
+   "feature": null
+  }
+ ],
+ "items": [
+  {
+   "item": "raj_kitchenette",
+   "x": 1,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_kitchenette/raj_kitchenette.json"
+  },
+  {
+   "item": "raj_bar_cart",
+   "x": 4,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_bar_cart/raj_bar_cart.json"
+  },
+  {
+   "item": "raj_display_shelf",
+   "x": 4,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_display_shelf/raj_display_shelf.json"
+  },
+  {
+   "item": "raj_telescope_big",
+   "x": 7,
+   "y": 1,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_telescope_big/raj_telescope_big.json"
+  },
+  {
+   "item": "raj_tapestry_door",
+   "x": 0,
+   "y": 2,
+   "rot": "SE",
+   "state": "closed",
+   "z": 0,
+   "manifest": "../../items/raj_tapestry_door/raj_tapestry_door.json"
+  },
+  {
+   "item": "poster_space",
+   "x": 0,
+   "y": 4,
+   "rot": "SE",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/poster_space/poster_space.json"
+  },
+  {
+   "item": "4a_front_door",
+   "x": 0,
+   "y": 6,
+   "rot": "SE",
+   "state": "closed",
+   "z": 0,
+   "manifest": "../../items/4a_front_door/4a_front_door.json"
+  },
+  {
+   "item": "raj_rug",
+   "x": 3,
+   "y": 4,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_rug/raj_rug.json"
+  },
+  {
+   "item": "raj_sofa",
+   "x": 3,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_sofa/raj_sofa.json"
+  },
+  {
+   "item": "raj_coffee_oval",
+   "x": 3.5,
+   "y": 4.6,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_coffee_oval/raj_coffee_oval.json"
+  },
+  {
+   "item": "raj_ufo_lamp",
+   "x": 2,
+   "y": 3,
+   "rot": "SW",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/raj_ufo_lamp/raj_ufo_lamp.json"
+  },
+  {
+   "item": "raj_buttercup_chair",
+   "x": 7,
+   "y": 4,
+   "rot": "NW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_buttercup_chair/raj_buttercup_chair.json"
+  },
+  {
+   "item": "raj_tv_console",
+   "x": 3,
+   "y": 7,
+   "rot": "NE",
+   "state": "on",
+   "z": 0,
+   "manifest": "../../items/raj_tv_console/raj_tv_console.json"
+  },
+  {
+   "item": "raj_dining_round",
+   "x": 7,
+   "y": 6,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/raj_dining_round/raj_dining_round.json"
+  },
+  {
+   "item": "gen_potted_palm",
+   "x": 9,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0,
+   "manifest": "../../items/gen_potted_palm/gen_potted_palm.json"
+  }
+ ],
+ "hooks": [
+  {
+   "id": "raj_kitchenette#0.cook",
+   "item": "raj_kitchenette",
+   "index": 0,
+   "hook": "cook",
+   "type": "work",
+   "pos": [
+    2.5,
+    1.3
+   ],
+   "tile": [
+    2,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "cook",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "raj_kitchenette#0.use_sink",
+   "item": "raj_kitchenette",
+   "index": 0,
+   "hook": "use_sink",
+   "type": "use",
+   "pos": [
+    1.7,
+    1.3
+   ],
+   "tile": [
+    1,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "wash",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "raj_bar_cart#0.use",
+   "item": "raj_bar_cart",
+   "index": 0,
+   "hook": "use",
+   "type": "use",
+   "pos": [
+    4.5,
+    1.3
+   ],
+   "tile": [
+    4,
+    1
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "make_tea",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    1
+   ]
+  },
+  {
+   "id": "raj_telescope_big#0.look",
+   "item": "raj_telescope_big",
+   "index": 0,
+   "hook": "look",
+   "type": "look",
+   "pos": [
+    7.5,
+    2.0
+   ],
+   "tile": [
+    7,
+    2
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "look_telescope",
+   "capacity": 1,
+   "tags": [
+    "raj",
+    "stargazing"
+   ],
+   "approach_tile": [
+    7,
+    2
+   ]
+  },
+  {
+   "id": "raj_tapestry_door#0.door",
+   "item": "raj_tapestry_door",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    0.55,
+    2.5
+   ],
+   "tile": [
+    0,
+    2
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "open_door",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "4a_front_door#0.door",
+   "item": "4a_front_door",
+   "index": 0,
+   "hook": "door",
+   "type": "door",
+   "pos": [
+    0.55,
+    6.5
+   ],
+   "tile": [
+    0,
+    6
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "open_door",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    0,
+    7
+   ]
+  },
+  {
+   "id": "4a_front_door#0.knock_spot_inside",
+   "item": "4a_front_door",
+   "index": 0,
+   "hook": "knock_spot_inside",
+   "type": "knock_spot_inside",
+   "pos": [
+    0.6,
+    6.5
+   ],
+   "tile": [
+    0,
+    6
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "knock",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    0,
+    7
+   ]
+  },
+  {
+   "id": "4a_front_door#0.knock_spot_outside",
+   "item": "4a_front_door",
+   "index": 0,
+   "hook": "knock_spot_outside",
+   "type": "knock_spot_outside",
+   "pos": [
+    -0.45,
+    6.5
+   ],
+   "tile": [
+    -1,
+    6
+   ],
+   "z": 0.0,
+   "facing": "SE",
+   "anim": "knock",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    -1,
+    7
+   ]
+  },
+  {
+   "id": "raj_sofa#0.seat0",
+   "item": "raj_sofa",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    3.66,
+    3.6
+   ],
+   "tile": [
+    3,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_couch",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    3,
+    4
+   ]
+  },
+  {
+   "id": "raj_sofa#0.seat1",
+   "item": "raj_sofa",
+   "index": 0,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    4.5,
+    3.6
+   ],
+   "tile": [
+    4,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_couch",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "raj_sofa#0.seat2",
+   "item": "raj_sofa",
+   "index": 0,
+   "hook": "seat2",
+   "type": "sit",
+   "pos": [
+    5.34,
+    3.6
+   ],
+   "tile": [
+    5,
+    3
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_couch",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    5,
+    4
+   ]
+  },
+  {
+   "id": "raj_coffee_oval#0.surface",
+   "item": "raj_coffee_oval",
+   "index": 0,
+   "hook": "surface",
+   "type": "place_item",
+   "pos": [
+    4.5,
+    5.1
+   ],
+   "tile": [
+    4,
+    5
+   ],
+   "z": 0.42,
+   "facing": "SW",
+   "anim": "",
+   "capacity": 1,
+   "tags": []
+  },
+  {
+   "id": "raj_buttercup_chair#0.seat0",
+   "item": "raj_buttercup_chair",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    7.45,
+    4.5
+   ],
+   "tile": [
+    7,
+    4
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "sit_chair",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    7,
+    4
+   ]
+  },
+  {
+   "id": "raj_tv_console#0.watch_target",
+   "item": "raj_tv_console",
+   "index": 0,
+   "hook": "watch_target",
+   "type": "look",
+   "pos": [
+    4.0,
+    7.55
+   ],
+   "tile": [
+    4,
+    7
+   ],
+   "z": 0.9,
+   "facing": "NE",
+   "anim": "",
+   "capacity": 1,
+   "tags": [
+    "tv"
+   ]
+  },
+  {
+   "id": "raj_dining_round#0.seat0",
+   "item": "raj_dining_round",
+   "index": 0,
+   "hook": "seat0",
+   "type": "sit",
+   "pos": [
+    8.0,
+    7.78
+   ],
+   "tile": [
+    8,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NE",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    8,
+    7
+   ]
+  },
+  {
+   "id": "raj_dining_round#0.seat1",
+   "item": "raj_dining_round",
+   "index": 0,
+   "hook": "seat1",
+   "type": "sit",
+   "pos": [
+    8.78,
+    7.0
+   ],
+   "tile": [
+    8,
+    7
+   ],
+   "z": 0.0,
+   "facing": "NW",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    8,
+    7
+   ]
+  },
+  {
+   "id": "raj_dining_round#0.seat2",
+   "item": "raj_dining_round",
+   "index": 0,
+   "hook": "seat2",
+   "type": "sit",
+   "pos": [
+    8.0,
+    6.22
+   ],
+   "tile": [
+    8,
+    6
+   ],
+   "z": 0.0,
+   "facing": "SW",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    8,
+    6
+   ]
+  },
+  {
+   "id": "raj_dining_round#0.seat3",
+   "item": "raj_dining_round",
+   "index": 0,
+   "hook": "seat3",
+   "type": "sit",
+   "pos": [
+    7.22,
+    7.0
+   ],
+   "tile": [
+    7,
+    7
+   ],
+   "z": 0.0,
+   "facing": "SE",
+   "anim": "sit_chair_eat",
+   "capacity": 1,
+   "tags": [],
+   "approach_tile": [
+    7,
+    7
+   ]
+  },
+  {
+   "id": "raj_dining_round#0.centre",
+   "item": "raj_dining_round",
+   "index": 0,
+   "hook": "centre",
+   "type": "place_item",
+   "pos": [
+    8.0,
+    7.0
+   ],
+   "tile": [
+    8,
+    7
+   ],
+   "z": 0.75,
+   "facing": "SW",
+   "anim": "",
+   "capacity": 1,
+   "tags": []
+  }
+ ],
+ "doors": [
+  {
+   "item": "4a_front_door",
+   "tile": [
+    0,
+    6
+   ],
+   "to": "street_exterior",
+   "facing": "SE",
+   "note": "front door (building hallway collapsed)"
+  },
+  {
+   "item": "raj_tapestry_door",
+   "tile": [
+    0,
+    2
+   ],
+   "to": "raj_bedroom (stub)",
+   "facing": "SE"
+  }
+ ],
+ "spawns": {
+  "from_street": [
+   1.5,
+   6.5
+  ],
+  "telescope": [
+   7.5,
+   2.4
+  ]
+ },
+ "exits": [
+  {
+   "id": "to_street",
+   "tiles": [
+    [
+     0,
+     6
+    ]
+   ],
+   "to": "street_exterior",
+   "to_spawn": "from_raj",
+   "via": "car"
+  },
+  {
+   "id": "to_bedroom",
+   "tiles": [
+    [
+     0,
+     2
+    ]
+   ],
+   "to": "raj_bedroom_stub",
+   "to_spawn": "",
+   "via": "door"
+  }
+ ],
+ "lights": [
+  {
+   "pos": [
+    2.5,
+    3.5
+   ],
+   "r": 1.7,
+   "kind": "lamp"
+  },
+  {
+   "pos": [
+    3.9,
+    6.3
+   ],
+   "r": 0.95,
+   "kind": "screen"
+  },
+  {
+   "pos": [
+    8.0,
+    7.0
+   ],
+   "r": 0.8,
+   "kind": "screen",
+   "src": "crystals"
+  }
+ ],
+ "characters": [
+  {
+   "name": "leonard",
+   "pos": [
+    7.5,
+    2.0
+   ],
+   "anim": "idle",
+   "dir": "NE",
+   "hook": "raj_telescope_big.0.look"
+  },
+  {
+   "name": "penny",
+   "pos": [
+    4.5,
+    3.6
+   ],
+   "anim": "sit (scene-only pose)",
+   "dir": "SW",
+   "hook": "raj_sofa.0.seat1"
+  },
+  {
+   "name": "raj",
+   "pos": [
+    5.6,
+    2.0
+   ],
+   "anim": "idle",
+   "dir": "SW",
+   "hook": ""
+  }
+ ],
+ "sort": {
+  "rule": "slice key = tile x+y+1 (+sort_bias*0.1); characters = feet x+y; seated = seat tile x+y+1.5; ceiling items after their footprint; full walls + wall decals before the sorted pass; cutaway stubs keyed x+y+0.45 (left/right) / +0.55 (front)"
+ },
+ "renders": {
+  "x1": "raj_apartment_1x.png",
+  "x2": "raj_apartment_2x.png"
+ }
+}

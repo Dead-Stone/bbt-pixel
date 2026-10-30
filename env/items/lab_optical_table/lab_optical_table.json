@@ -1,0 +1,565 @@
+{
+ "id": "lab_optical_table",
+ "location": "AIT_campus",
+ "footprint": [
+  2,
+  1
+ ],
+ "height_m": 1.35,
+ "rotation_class": "R4",
+ "priority": "P0",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "on",
+  "off"
+ ],
+ "tags": [],
+ "notes": "Leonard's laser experiment: honeycomb optical table, laser head, mirrors on posts, a visible red beam path",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_lab_optical_table_SW.png",
+   "pivot": [
+    128,
+    168
+   ],
+   "canvas": [
+    192,
+    168
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_optical_table_SW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_lab_optical_table_SW_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "align",
+     "type": "work",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.0,
+      1.4
+     ],
+     "offset_px": [
+      -26,
+      77
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "align_laser",
+     "tags": [
+      "leonard"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "observe",
+     "type": "look",
+     "tile": [
+      2,
+      0
+     ],
+     "local": [
+      2.4,
+      0.5
+     ],
+     "offset_px": [
+      122,
+      93
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "look_experiment",
+     "tags": [],
+     "approach_tile": [
+      2,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "off": {
+     "sprite": "item_lab_optical_table_SW_off.png",
+     "pivot": [
+      128,
+      168
+     ],
+     "canvas": [
+      192,
+      168
+     ],
+     "footprint": [
+      2,
+      1
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_lab_optical_table_SW_off_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_lab_optical_table_SW_off_s1.png",
+       "tile": [
+        1,
+        0
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "NW": {
+   "sprite": "item_lab_optical_table_NW.png",
+   "pivot": [
+    64,
+    168
+   ],
+   "canvas": [
+    192,
+    168
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_optical_table_NW_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_lab_optical_table_NW_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "align",
+     "type": "work",
+     "tile": [
+      -1,
+      1
+     ],
+     "local": [
+      -0.4,
+      1.0
+     ],
+     "offset_px": [
+      -90,
+      19
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "align_laser",
+     "tags": [
+      "leonard"
+     ],
+     "approach_tile": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "observe",
+     "type": "look",
+     "tile": [
+      0,
+      2
+     ],
+     "local": [
+      0.5,
+      2.4
+     ],
+     "offset_px": [
+      -122,
+      93
+     ],
+     "z": 0.0,
+     "facing": "NE",
+     "capacity": 1,
+     "anim": "look_experiment",
+     "tags": [],
+     "approach_tile": [
+      1,
+      2
+     ]
+    }
+   ],
+   "states": {
+    "off": {
+     "sprite": "item_lab_optical_table_NW_off.png",
+     "pivot": [
+      64,
+      168
+     ],
+     "canvas": [
+      192,
+      168
+     ],
+     "footprint": [
+      1,
+      2
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_lab_optical_table_NW_off_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_lab_optical_table_NW_off_s1.png",
+       "tile": [
+        0,
+        1
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "NE": {
+   "sprite": "item_lab_optical_table_NE.png",
+   "pivot": [
+    128,
+    168
+   ],
+   "canvas": [
+    192,
+    168
+   ],
+   "footprint": [
+    2,
+    1
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_optical_table_NE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_lab_optical_table_NE_s1.png",
+     "tile": [
+      1,
+      0
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "align",
+     "type": "work",
+     "tile": [
+      1,
+      -1
+     ],
+     "local": [
+      1.0,
+      -0.4
+     ],
+     "offset_px": [
+      90,
+      19
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "align_laser",
+     "tags": [
+      "leonard"
+     ],
+     "approach_tile": [
+      1,
+      0
+     ]
+    },
+    {
+     "id": "observe",
+     "type": "look",
+     "tile": [
+      -1,
+      0
+     ],
+     "local": [
+      -0.4,
+      0.5
+     ],
+     "offset_px": [
+      -58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SE",
+     "capacity": 1,
+     "anim": "look_experiment",
+     "tags": [],
+     "approach_tile": [
+      0,
+      1
+     ]
+    }
+   ],
+   "states": {
+    "off": {
+     "sprite": "item_lab_optical_table_NE_off.png",
+     "pivot": [
+      128,
+      168
+     ],
+     "canvas": [
+      192,
+      168
+     ],
+     "footprint": [
+      2,
+      1
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_lab_optical_table_NE_off_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_lab_optical_table_NE_off_s1.png",
+       "tile": [
+        1,
+        0
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  },
+  "SE": {
+   "sprite": "item_lab_optical_table_SE.png",
+   "pivot": [
+    64,
+    168
+   ],
+   "canvas": [
+    192,
+    168
+   ],
+   "footprint": [
+    1,
+    2
+   ],
+   "formula_ok": true,
+   "slices": [
+    {
+     "sprite": "item_lab_optical_table_SE_s0.png",
+     "tile": [
+      0,
+      0
+     ],
+     "sort_key_offset": 1
+    },
+    {
+     "sprite": "item_lab_optical_table_SE_s1.png",
+     "tile": [
+      0,
+      1
+     ],
+     "sort_key_offset": 2
+    }
+   ],
+   "hooks": [
+    {
+     "id": "align",
+     "type": "work",
+     "tile": [
+      1,
+      1
+     ],
+     "local": [
+      1.4,
+      1.0
+     ],
+     "offset_px": [
+      26,
+      77
+     ],
+     "z": 0.0,
+     "facing": "NW",
+     "capacity": 1,
+     "anim": "align_laser",
+     "tags": [
+      "leonard"
+     ],
+     "approach_tile": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "observe",
+     "type": "look",
+     "tile": [
+      0,
+      -1
+     ],
+     "local": [
+      0.5,
+      -0.4
+     ],
+     "offset_px": [
+      58,
+      3
+     ],
+     "z": 0.0,
+     "facing": "SW",
+     "capacity": 1,
+     "anim": "look_experiment",
+     "tags": [],
+     "approach_tile": [
+      0,
+      0
+     ]
+    }
+   ],
+   "states": {
+    "off": {
+     "sprite": "item_lab_optical_table_SE_off.png",
+     "pivot": [
+      64,
+      168
+     ],
+     "canvas": [
+      192,
+      168
+     ],
+     "footprint": [
+      1,
+      2
+     ],
+     "formula_ok": true,
+     "slices": [
+      {
+       "sprite": "item_lab_optical_table_SE_off_s0.png",
+       "tile": [
+        0,
+        0
+       ],
+       "sort_key_offset": 1
+      },
+      {
+       "sprite": "item_lab_optical_table_SE_off_s1.png",
+       "tile": [
+        0,
+        1
+       ],
+       "sort_key_offset": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "hooks_canonical": [
+  {
+   "id": "align",
+   "type": "work",
+   "pos": [
+    1.0,
+    1.4
+   ],
+   "facing": [
+    0,
+    -1
+   ],
+   "capacity": 1,
+   "anim": "align_laser",
+   "tags": [
+    "leonard"
+   ],
+   "z": 0.0,
+   "approach": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "observe",
+   "type": "look",
+   "pos": [
+    2.4,
+    0.5
+   ],
+   "facing": [
+    -1,
+    0
+   ],
+   "capacity": 1,
+   "anim": "look_experiment",
+   "tags": [],
+   "z": 0.0,
+   "approach": [
+    2,
+    0
+   ]
+  }
+ ]
+}

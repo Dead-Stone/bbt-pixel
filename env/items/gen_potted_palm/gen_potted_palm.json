@@ -1,0 +1,43 @@
+{
+ "id": "gen_potted_palm",
+ "location": "shared",
+ "footprint": [
+  1,
+  1
+ ],
+ "height_m": 1.8,
+ "rotation_class": "R1",
+ "priority": "P2",
+ "mount": "floor",
+ "layer": "objects",
+ "blocks_walk": true,
+ "sort_bias": 0,
+ "states": [
+  "default"
+ ],
+ "tags": [],
+ "notes": "indoor potted palm (restaurant, lobby, Raj)",
+ "z_anchor_px": 0,
+ "mirrored": false,
+ "rotations": {
+  "SW": {
+   "sprite": "item_gen_potted_palm_SW.png",
+   "pivot": [
+    64,
+    146
+   ],
+   "canvas": [
+    128,
+    146
+   ],
+   "footprint": [
+    1,
+    1
+   ],
+   "formula_ok": true,
+   "hooks": [],
+   "states": {}
+  }
+ },
+ "hooks_canonical": []
+}
