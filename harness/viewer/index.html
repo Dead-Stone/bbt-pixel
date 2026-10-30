@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BBT-pixel agent harness viewer</title>
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+<header id="bar">
+  <span class="title">2311 LOS ROBLES AV · agents</span>
+  <label>Location <select id="loc"></select></label>
+  <label id="viewwrap">View <select id="view"></select></label>
+  <label>Follow <select id="follow"><option value="">(free camera)</option></select></label>
+  <button id="play" title="space">⏸</button>
+  <label>Speed <select id="speed">
+    <option value="1">1×</option><option value="2">2×</option><option value="5">5×</option><option value="15">15×</option>
+    <option value="60">60×</option><option value="300">300×</option></select></label>
+  <label title="fast-forward when nothing happens here, slow down for speech"><input type="checkbox" id="auto" checked> auto pace</label>
+  <span id="clock">--:--:--</span>
+  <input type="range" id="slider" min="0" max="1" step="1" value="0">
+  <span id="mode"></span>
+</header>
+<main>
+  <canvas id="cv"></canvas>
+  <aside id="side">
+    <h3>Agents</h3><div id="agents"></div>
+    <h3>Events <label class="small"><input type="checkbox" id="allfeed"> all locations</label></h3>
+    <div id="feed"></div>
+  </aside>
+</main>
+<script src="viewer.js"></script>
+</body>
+</html>

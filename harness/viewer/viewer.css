@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #14121c; color: #e8e4f0; font: 13px/1.35 ui-monospace, Menlo, Consolas, monospace; }
+#bar { height: 44px; display: flex; align-items: center; gap: 12px; padding: 0 10px; background: #221d30; border-bottom: 1px solid #3a3150; white-space: nowrap; overflow: hidden; }
+#bar .title { color: #f0c060; font-weight: bold; }
+#bar select, #bar button { background: #2f2843; color: #e8e4f0; border: 1px solid #4a3f66; border-radius: 4px; padding: 2px 6px; font: inherit; }
+#bar button { width: 34px; cursor: pointer; }
+#clock { font-size: 18px; color: #9fe0ff; min-width: 92px; }
+#slider { flex: 1; min-width: 120px; }
+#mode { color: #b9a; }
+main { position: absolute; top: 44px; bottom: 0; left: 0; right: 0; display: flex; }
+#cv { flex: 1; display: block; image-rendering: pixelated; min-width: 0; }
+#side { width: 340px; overflow-y: auto; background: #1b1726; border-left: 1px solid #3a3150; padding: 6px 10px; }
+#side h3 { margin: 8px 0 4px; font-size: 12px; color: #f0c060; text-transform: uppercase; letter-spacing: 1px; }
+.small { font-size: 11px; color: #aaa; text-transform: none; letter-spacing: 0; font-weight: normal; }
+.ag { padding: 3px 4px; border-radius: 3px; cursor: pointer; }
+.ag:hover, .ag.on { background: #2f2843; }
+.ag b { display: inline-block; width: 82px; }
+.ag .where { color: #8fb; } .ag .what { color: #bbb; display: block; padding-left: 86px; font-size: 11px; }
+#feed .ev { padding: 2px 0; border-bottom: 1px dotted #2c2540; font-size: 12px; }
+#feed .t { color: #789; margin-right: 4px; } #feed .say { color: #fff; } #feed .sys { color: #9a8fb0; } #feed .refl { color: #f6c; }
+body.bare #bar, body.bare #side { display: none; } body.bare main { top: 0; }
