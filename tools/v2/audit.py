@@ -9,7 +9,7 @@ Flags per frame
           interior pixel behind them (or absolutely dark)
   flicker colour changes in the head between consecutive idle/walk frames after the best integer re-alignment
 Usage: python3 tools/v2/audit.py <cid> [--sheet out.png] [--json out.json] [--src characters dir]"""
-import sys, os, json, argparse, numpy as np
+import os, sys, json, argparse, numpy as np
 from PIL import Image, ImageDraw
 from scipy import ndimage as ndi
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -151,9 +151,14 @@ def sheet(rows, path, scale=4, cols=16, crop=(20, 4, 108, 126), only_flagged=Fal
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('cid'); ap.add_argument('--sheet'); ap.add_argument('--json'); ap.add_argument('--src')
-    ap.add_argument('--flagged', action='store_true')
+    ap.add_argument('--flagged', action='store_true'); ap.add_argument('--arms', action='store_true', help='also run the arm-proportion check (armcheck.py)')
     a = ap.parse_args()
     rows = audit(a.cid, a.src); sm = summary(rows); print(a.cid, json.dumps(sm))
+    if a.arms:
+        import subprocess, sys as _s
+        r = subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'armcheck.py'), a.cid], capture_output=True, text=True)
+        print(r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr.strip()[-300:])
+        if r.returncode: _s.exit(1)
     if a.sheet: sheet(rows, a.sheet, only_flagged=a.flagged)
     if a.json:
         json.dump(dict(summary=sm, frames={n: c for n, _, _, c in rows if any(c[k] for k in KINDS)}), open(a.json, 'w'), indent=1)
