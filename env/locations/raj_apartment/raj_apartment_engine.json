@@ -1197,7 +1197,7 @@
     4.5,
     3.6
    ],
-   "anim": "sit (scene-only pose)",
+   "anim": "sit",
    "dir": "SW",
    "hook": "raj_sofa.0.seat1"
   },

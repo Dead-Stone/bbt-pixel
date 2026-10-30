@@ -8,7 +8,7 @@ For every location (floor4 = 4B + hall + 4A, and the six env/locations) this wri
                pos, approach tile, facing, type, capacity), doors, exits, spawns, zones
 plus harness/world/world.json (nodes + edges from env/world/world_graph.json, travel kinds/minutes).
 Characters are NOT baked in: the viewer draws them from the v2 atlases, sorted with the sprites by the same keys
-the offline compositor uses (feet x+y+0.01; seated floor(x)+floor(y)+1.5).
+the offline compositor uses (feet x+y+0.01; seated: the hook's sit_key, frame.seat anchor on scr(seat, seat_z)).
 Run: python3 harness/export_world.py
 """
 import os, sys, json, math
@@ -18,6 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 sys.path.insert(0, f'{ROOT}/tools')
 import build_env as B
 import rooms as RM
+import seating as SG
 from iso_render import dir_name
 OUT = f'{HERE}/world'
 LOCS = ['ait_cafeteria', 'ait_physics', 'rest_amber_slice', 'street_exterior', 'lobby', 'raj_apartment']
@@ -66,12 +67,13 @@ def floor4_hooks():
 def pack(sprites, origin):
     """crop each layer-5 sprite to its alpha bbox and shelf-pack into one atlas"""
     ents = []
-    for key, im, sx, sy in sprites:
+    for spr in sprites:
+        key, im, sx, sy = spr[:4]; hook = spr[4] if len(spr) > 4 else None
         a = np.array(Image.fromarray(im) if isinstance(im, np.ndarray) else im.convert('RGBA'))
         ys, xs = np.nonzero(a[..., 3] > 0)
         if not len(xs): continue
         x0, x1, y0, y1 = xs.min(), xs.max() + 1, ys.min(), ys.max() + 1
-        ents.append(dict(key=round(float(key), 4), img=a[y0:y1, x0:x1], x=int(round(sx - origin[0])) + int(x0), y=int(round(sy - origin[1])) + int(y0)))
+        ents.append(dict(key=round(float(key), 4), img=a[y0:y1, x0:x1], x=int(round(sx - origin[0])) + int(x0), y=int(round(sy - origin[1])) + int(y0), hook=hook))
     AW = 2048; cx = cy = rowh = 0
     for e in ents:
         h, w = e['img'].shape[:2]
@@ -80,7 +82,25 @@ def pack(sprites, origin):
     atlas = np.zeros((cy + rowh + 1, AW, 4), np.uint8)
     for e in ents:
         h, w = e['img'].shape[:2]; atlas[e['ay']:e['ay'] + h, e['ax']:e['ax'] + w] = e['img']
-    return atlas, [dict(key=e['key'], x=e['x'], y=e['y'], w=int(e['img'].shape[1]), h=int(e['img'].shape[0]), ax=e['ax'], ay=e['ay']) for e in ents]
+    return atlas, [dict(key=e['key'], x=e['x'], y=e['y'], w=int(e['img'].shape[1]), h=int(e['img'].shape[0]), ax=e['ax'], ay=e['ay'],
+                        **({'hook': e['hook']} if e['hook'] else {})) for e in ents]
+
+def seat_hooks(hooks, col, place):
+    """sit/perch hooks get seat [x,y], seat_z, sit_dir, sit_key (tools/seating.py); their occluder overlays (item pixels in
+    front of a sitter) are appended to the layer-5 sprites tagged with the hook id -- the viewer draws them only while the
+    hook is occupied"""
+    keep = []
+    for h in hooks:
+        keep.append(h)
+        if h['type'] not in SG.SIT_TYPES: continue
+        sp = place(h)
+        if not sp['found'] and h['anim'] != 'sit_floor':
+            keep.pop(); print('  drop sit hook without a seat under it:', h['id']); continue
+        key, occ, ox, oy = SG.analyse(sp, col['slice_meta'])
+        h.update(seat=sp['seat'], seat_z=sp['seat_z'], sit_dir=sp['sit_dir'], sit_key=round(key, 4))
+        if occ is not None: col['sprites'].append((key + 0.001, occ, ox, oy, h['id']))
+    col['sprites'].sort(key=lambda t: t[0])
+    return keep
 
 def write(loc, bg, col, data):
     d = f'{OUT}/{loc}'; os.makedirs(d, exist_ok=True)
@@ -109,7 +129,7 @@ def main():
     spawns.setdefault('stairs_top', [10.5, 7.5])
     for e in exits:
         for tx, ty in e['tiles']: walk[ty][tx] = 1
-    hooks = fix_hooks(floor4_hooks(), walk)
+    hooks = seat_hooks(fix_hooks(floor4_hooks(), walk), col, lambda h: B.seat_place4(h['item'], h['hook'], h['index']))
     write('floor4', bg, col, dict(id='floor4', name='4th floor: 4A (the guys), hall, 4B (Penny)', kind='interior', size=eng['size'],
                                   zones=eng['zones'], walkable=walk, blocked_edges=eng.get('blocked_edges', []), hooks=hooks,
                                   doors=eng['doors'], exits=exits, spawns=spawns,
@@ -124,7 +144,7 @@ def main():
             for tx, ty in e['tiles']:
                 if 0 <= ty < len(walk) and 0 <= tx < len(walk[0]): walk[ty][tx] = 1
         write(loc, bg, col, dict(id=loc, name=eng['name'], kind=eng['kind'], size=eng['size'], zones=eng['zones'], walkable=walk,
-                                 blocked_edges=eng.get('blocked_edges', []), hooks=fix_hooks(eng['hooks'], walk), doors=eng['doors'],
+                                 blocked_edges=eng.get('blocked_edges', []), hooks=seat_hooks(fix_hooks(eng['hooks'], walk), col, lambda h: RM.seat_place(S, [h['item'], h['index'], h['hook']])), doors=eng['doors'],
                                  exits=eng['exits'], spawns=eng['spawns']))
     json.dump(dict(nodes=[dict(id=n['id'], name=n['name'], kind=n.get('kind'), spawns=n.get('spawns', {}), exits=n.get('exits', [])) for n in wg['nodes']],
                    edges=wg.get('edges', [])), open(f'{OUT}/world.json', 'w'), indent=1)

@@ -6441,7 +6441,7 @@
       {
        "name": "anim",
        "type": "string",
-       "value": "sit (scene-only pose)"
+       "value": "sit"
       },
       {
        "name": "dir",
@@ -6470,7 +6470,7 @@
       {
        "name": "anim",
        "type": "string",
-       "value": "sit (scene-only pose)"
+       "value": "sit"
       },
       {
        "name": "dir",

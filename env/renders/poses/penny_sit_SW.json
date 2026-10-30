@@ -2,10 +2,14 @@
  "sprite": "penny_sit_SW.png",
  "pivot": [
   64,
-  128
+  104
+ ],
+ "seat": [
+  62.9,
+  81.5
  ],
  "dir": "SW",
  "lift_units": -13.13,
  "version": "v2",
- "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips"
+ "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips; seat = butt contact point"
 }

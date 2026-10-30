@@ -73,7 +73,7 @@ function agentAt(cid, t) {
     }
     return {cid, loc: s.loc, x, y, dir, anim: 'walk', k: Math.floor(walked / 0.14) % 8, moving: true};
   }
-  const st = {cid, loc: s.loc, x: s.pos[0], y: s.pos[1], dir: s.dir, anim: s.kind === 'sit' ? 'sit' : 'idle', key: s.key};
+  const st = {cid, loc: s.loc, x: s.pos[0], y: s.pos[1], dir: s.dir, anim: s.kind === 'sit' ? 'sit' : 'idle', key: s.key, z: s.z || 0, hook: s.hook};
   if (s.kind !== 'sit') {   // emote overlay
     const em = V.idx.emotes[cid]; const j = bsearch(em, t, 't');
     if (j >= 0) {
@@ -90,7 +90,7 @@ function emoteTag(ch, anim, dir) {
 }
 function frameOf(st, wall) {
   const ch = V.chars[st.cid];
-  if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.pivot}; }
+  if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.seat || f.pivot}; }   // seat anchor (butt) -> seat point at seat_z
   let idx;
   if (st.anim === 'emote') idx = st.frame;
   else {
@@ -143,8 +143,10 @@ function render(wall) {
   ctx.setTransform(dpr * scale, 0, 0, dpr * scale, dpr * ox, dpr * oy); ctx.imageSmoothingEnabled = false;
   ctx.drawImage(sc.bgImg, 0, 0);
   // depth-sorted layer 5: item slices + characters (+ shadows)
-  const L = sc.sprites.map(s => ({k: s.key, s}));
   const here = Object.values(states).filter(s => s && !s.away && s.loc === V.loc);
+  const seated = new Set(here.filter(s => s.anim === 'sit' && s.hook).map(s => s.hook));
+  // hook-tagged sprites = the seat's own back/armrest pixels that sit in front of a sitter: drawn only while occupied
+  const L = sc.sprites.filter(s => !s.hook || seated.has(s.hook)).map(s => ({k: s.key, s}));
   for (const st of here) {
     const k = st.key != null ? st.key : st.x + st.y + 0.01;
     if (st.anim !== 'sit') L.push({k: k - 0.001, shadow: st});
@@ -154,7 +156,7 @@ function render(wall) {
   for (const it of L) {
     if (it.s) { const s = it.s; ctx.drawImage(sc.sprImg, s.ax, s.ay, s.w, s.h, s.x, s.y, s.w, s.h); }
     else if (it.shadow) { const [sx, sy] = toCanvas(sc, it.shadow.x, it.shadow.y); ctx.fillStyle = 'rgba(40,24,60,0.43)'; ctx.beginPath(); ctx.ellipse(sx, sy, 20, 6, 0, 0, 7); ctx.fill(); }
-    else { const st = it.ch, f = frameOf(st, wall), [sx, sy] = toCanvas(sc, st.x, st.y); st.sx = sx; st.sy = sy; st.top = sy - f.pv[1] + 18;
+    else { const st = it.ch, f = frameOf(st, wall), [sx, sy0] = toCanvas(sc, st.x, st.y), sy = sy0 - (st.z || 0) * 64; st.sx = sx; st.sy = sy; st.top = sy - f.pv[1] + 18;
       ctx.drawImage(f.img, f.fr.x, f.fr.y, f.fr.w, f.fr.h, Math.round(sx - f.pv[0]), Math.round(sy - f.pv[1]), f.fr.w, f.fr.h); }
   }
   // overlays in screen space: name tags + speech bubbles

@@ -11,6 +11,7 @@ from build_env import E, scr, rend, slices, fimg, wimg, apply_glow, snap_scene, 
 from iso_render import dir_name
 from env_tex import hsh
 import env_items_v2 as V
+import seating as SG
 
 ROOT = B.ROOT; ENV = B.ENV; LOC = f'{ENV}/locations'; WORLD = f'{ENV}/world'
 ROOM_SCHEMA = {
@@ -78,6 +79,29 @@ def world_hook(S, iid, idx, hid):
                     return ox + px, oy + py, z + h.get('z', 0.0), dir_name(round(v[0], 6), round(v[1], 6))
         n += 1
     raise KeyError((iid, idx, hid))
+def placements(S):
+    out = []
+    for (iid, ox, oy, rot, st, z, op) in norm_items(S):
+        R, rr = item_R(iid, rot, st); out.append((iid, ox, oy, rr, st, z))
+    return out
+_GEO = {}
+def geo_of(S):
+    k = id(S)
+    if k not in _GEO: _GEO[k] = SG.Geo(E, rend, placements(S))
+    return _GEO[k]
+def seat_place(S, hook, wh=None):
+    """seat placement of world hook [iid, idx, hook_id] (tools/seating.py)"""
+    iid, idx, hid = hook
+    hx, hy, hz, fac = wh or world_hook(S, iid, idx, hid)
+    hd = next(h for h in E.ITEMS[iid]['hooks'] if h['id'] == hid)
+    it = dict(hd); off = hd.get('seat_off')
+    if off:   # canonical offset -> rotated
+        n = 0
+        for (pid, ox, oy, rot, st, z, op) in norm_items(S):
+            if pid != iid: continue
+            if n == idx: R, _ = item_R(iid, rot, st); it['seat_off'] = list(R['xf'].vec(*off)); break
+            n += 1
+    return SG.place(dict(pos=[hx, hy], z=hz, facing=fac, type=hd['type']), geo_of(S), it)
 def all_hooks(S):
     out = []; cnt = {}
     for (iid, ox, oy, rot, st, z, op) in norm_items(S):
@@ -106,9 +130,10 @@ def chars_of(S):
             hx, hy = c['pos']; hz = c.get('z', 0.0); fac = c.get('dir', 'SW')
         d = c.get('dir', fac)
         if c.get('mode') == 'sit':
-            js = json.load(open(f'{POSES}/{cid}_sit_SW.json'))
-            out.append(dict(name=cid, img=A(f'{POSES}/{js["sprite"]}'), pos=(hx, hy), z=c.get('z', 0.0), pivot=tuple(js['pivot']),
-                            key=math.floor(hx) + math.floor(hy) + 1.5, shadow=False, anim='sit (scene-only pose)', dir='SW', hook='.'.join(map(str, c.get('hook', [])))))
+            sp = seat_place(S, c['hook'], (hx, hy, hz, fac)) if c.get('hook') else \
+                SG.place(dict(pos=[hx, hy], z=hz, facing=d, type='sit'), geo_of(S))
+            e = SG.char_entry(cid, sp); e['hook'] = '.'.join(map(str, c.get('hook', [])))
+            out.append(e)
         else:
             anim = c.get('anim', 'idle'); k = c.get('k', 0)
             out.append(dict(name=cid, img=char_frame(cid, anim, d, k), pos=(hx, hy), z=hz if c.get('use_hook_z') else c.get('z', 0.0), anim=anim, dir=d,
@@ -146,6 +171,7 @@ def compose_loc(S, chars=(), labels=False, collect=None):
         sx, sy = scr(wx, wy)
         if mode == 'full': L[3].append((0 if side == 'bl' else 0.1, img, sx - anc[0], sy - anc[1]))
         else: L[5].append((wx + wy + (0.55 if side == 'br' else 0.45), img, sx - anc[0], sy - anc[1]))
+    metas = []
     for (iid, ox, oy, rot, st, z, op) in norm_items(S):
         it = E.ITEMS[iid]; R, rot = item_R(iid, rot, st)
         nfx, nfy = R['fp']
@@ -159,7 +185,9 @@ def compose_loc(S, chars=(), labels=False, collect=None):
             L[5].append((ox + oy + nfx + nfy + 0.6, R['img'], tlx, tly)); continue
         for (tx, ty), im in slices(R):
             key = math.floor(ox) + tx + math.floor(oy) + ty + 1 + it['sort_bias']*0.1 + (0.02 if z > 0 else 0) + op.get('bias', 0)
-            L[5].append((key, im, tlx, tly))
+            L[5].append((key, im, tlx, tly)); metas.append(dict(key=key, R=R, t=(tx, ty), tl=(tlx, tly), o=(ox, oy, z)))
+    SG.add_occluders(L[5], metas, chars)          # seated characters: depth key + in-front item pixels (tools/seating.py)
+    if collect is not None: collect['slice_meta'] = metas
     for ch in chars:
         im, (fx, fy), z, key = ch['img'], ch['pos'], ch.get('z', 0), ch.get('key')
         sx, sy = scr(fx, fy, z)

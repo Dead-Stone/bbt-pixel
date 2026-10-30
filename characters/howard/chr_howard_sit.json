@@ -12,6 +12,10 @@
     64,
     108
    ],
+   "seat": [
+    64,
+    84
+   ],
    "dir": "S"
   },
   {
@@ -24,7 +28,11 @@
    },
    "pivot": [
     64,
-    128
+    104
+   ],
+   "seat": [
+    62.6,
+    80.0
    ],
    "dir": "SW"
   },
@@ -38,7 +46,11 @@
    },
    "pivot": [
     64,
-    128
+    104
+   ],
+   "seat": [
+    62.5,
+    80.0
    ],
    "dir": "W"
   },
@@ -52,7 +64,11 @@
    },
    "pivot": [
     64,
-    128
+    104
+   ],
+   "seat": [
+    62.1,
+    80.0
    ],
    "dir": "NW"
   },
@@ -68,6 +84,10 @@
     64,
     128
    ],
+   "seat": [
+    64,
+    98
+   ],
    "dir": "N"
   },
   {
@@ -80,7 +100,11 @@
    },
    "pivot": [
     64,
-    128
+    104
+   ],
+   "seat": [
+    65.9,
+    80.0
    ],
    "dir": "NE"
   },
@@ -94,7 +118,11 @@
    },
    "pivot": [
     64,
-    128
+    104
+   ],
+   "seat": [
+    65.5,
+    80.0
    ],
    "dir": "E"
   },
@@ -108,7 +136,11 @@
    },
    "pivot": [
     64,
-    128
+    104
+   ],
+   "seat": [
+    65.4,
+    80.0
    ],
    "dir": "SE"
   }
@@ -123,9 +155,9 @@
   },
   "pivot": [
    64,
-   128
+   104
   ],
   "lift_units": -7.62,
-  "note": "seated pose (couch/chair height); pivot = floor point under the hips"
+  "note": "seated pose; pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py)"
  }
 }

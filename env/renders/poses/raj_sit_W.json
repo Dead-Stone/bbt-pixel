@@ -1,0 +1,15 @@
+{
+ "sprite": "raj_sit_W.png",
+ "pivot": [
+  64,
+  104
+ ],
+ "seat": [
+  63.0,
+  82.2
+ ],
+ "dir": "W",
+ "lift_units": -8.42,
+ "version": "v2",
+ "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips; seat = butt contact point"
+}

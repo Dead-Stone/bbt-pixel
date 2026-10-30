@@ -409,6 +409,7 @@ def compose(scene, chars=(), scale=1, labels=False, collect=None):
             else: key = wx + wy + 0.45                           # between tiles (x-1,y) and (x,y)
             layers[5].append((key, img, sx - anc[0], sy - anc[1]))
     # items
+    metas = []
     for (iid, ox, oy, rot, st, z) in PLACE:
         if not inside(int(ox)) and not (scene == '4B' and iid == '4b_front_door'): continue
         if scene == '4A' and iid == '4b_front_door': continue
@@ -438,7 +439,10 @@ def compose(scene, chars=(), scale=1, labels=False, collect=None):
             layers[4].append((0, R['img'], tlx, tly)); continue
         for (tx, ty), im in slices(R):
             key = ox + tx + oy + ty + 1 + it['sort_bias']*0.1 + (0.02 if z > 0 else 0)
-            layers[5].append((key, im, tlx, tly))
+            layers[5].append((key, im, tlx, tly)); metas.append(dict(key=key, R=R, t=(tx, ty), tl=(tlx, tly), o=(ox, oy, z)))
+    import seating as SG
+    SG.add_occluders(layers[5], metas, chars)     # seated characters: depth key + in-front item pixels (tools/seating.py)
+    if collect is not None: collect['slice_meta'] = metas
     # characters: (img128, feet world x,y, z, key_override)
     for ch in chars:
         im, (fx, fy), z, key = ch['img'], ch['pos'], ch.get('z', 0), ch.get('key')
@@ -531,13 +535,24 @@ def world_hook(iid, hook_id, idx=0):
                     px, py = R['xf'].fwd(*h['pos']); return ox + px, oy + py, dir_name(*[round(v, 6) for v in R['xf'].vec(*h['facing'])])
         n += 1
     raise KeyError(hook_id)
+_GEO4 = []
+def geo4():
+    import seating as SG
+    if not _GEO4:
+        _GEO4.append(SG.Geo(E, rend, [(iid, ox, oy, 'SW' if E.ITEMS[iid]['rotation_class'] == 'R1' else rot, st, z) for (iid, ox, oy, rot, st, z) in PLACE]))
+    return _GEO4[0]
+def seat_place4(iid, hook_id, idx=0):
+    import seating as SG
+    x, y, fac = world_hook(iid, hook_id, idx)
+    hd = next(h for h in E.ITEMS[iid]['hooks'] if h['id'] == hook_id)
+    return SG.place(dict(pos=[x, y], z=hd.get('z', 0.0), facing=fac, type=hd['type']), geo4(), hd)
+def seat_char(cid, iid, hook_id, idx=0):
+    import seating as SG
+    return SG.char_entry(cid, seat_place4(iid, hook_id, idx))
 def scene_chars(scene):
     out = []
     if scene in ('combined', '4A'):
-        js = json.load(open(f'{ENV}/renders/poses/sheldon_sit_SW.json'))
-        sx_, sy_, fac = world_hook('4a_couch', 'seat0')
-        out.append(dict(name='sheldon', img=A(f'{ENV}/renders/poses/{js["sprite"]}'), pos=(sx_, sy_), pivot=tuple(js['pivot']),
-                        key=20.5, shadow=False, anim='sit (scene-only pose)', dir='SW', hook='4a_couch.seat0'))
+        e = seat_char('sheldon', '4a_couch', 'seat0'); e['hook'] = '4a_couch.seat0'; out.append(e)
         out.append(dict(name='leonard', img=char_frame('leonard', 'idle', 'SW', 0), pos=(15.5, 1.45), anim='idle', dir='SW'))
     if scene in ('combined', '4B') and os.path.exists(f'{ROOT}/characters/penny/chr_penny.png'):
         out.append(dict(name='penny', img=char_frame('penny', 'idle', 'SW', 0), pos=PENNY_POS, anim='idle', dir='SW'))

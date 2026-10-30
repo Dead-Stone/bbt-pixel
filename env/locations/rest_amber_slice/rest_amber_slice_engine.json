@@ -2390,7 +2390,7 @@
     1.6,
     0.38
    ],
-   "anim": "sit (scene-only pose)",
+   "anim": "sit",
    "dir": "SW",
    "hook": "rest_booth.0.seat0"
   },
@@ -2400,7 +2400,7 @@
     2.4,
     0.38
    ],
-   "anim": "sit (scene-only pose)",
+   "anim": "sit",
    "dir": "SW",
    "hook": "rest_booth.0.seat1"
   },

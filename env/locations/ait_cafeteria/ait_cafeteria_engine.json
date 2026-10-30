@@ -2697,7 +2697,7 @@
     3.5,
     2.55
    ],
-   "anim": "sit (scene-only pose)",
+   "anim": "sit",
    "dir": "SW",
    "hook": "cafe_table_long.0.seat0"
   },
@@ -2707,7 +2707,7 @@
     4.5,
     2.55
    ],
-   "anim": "sit (scene-only pose)",
+   "anim": "sit",
    "dir": "SW",
    "hook": "cafe_table_long.0.seat1"
   },
@@ -2717,7 +2717,7 @@
     5.5,
     2.55
    ],
-   "anim": "sit (scene-only pose)",
+   "anim": "sit",
    "dir": "SW",
    "hook": "cafe_table_long.0.seat2"
   },

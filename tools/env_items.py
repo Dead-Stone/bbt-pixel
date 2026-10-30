@@ -299,8 +299,8 @@ item('4b_kitchen_counter', '4B', (3, 1), 2.0, 'R4', 'P0', notes='4B kitchen: ora
      counter_builder('cream', 'wood_lt', 'orange', 'ccf_amber', False, sink_dishes=True, mug_shelf=True))
 
 @item('4a_kitchen_island', '4A', (2, 1), 0.92, 'R4', 'P0',
-      hooks=[H('stool0', 'perch', (0.5, 1.3), (0, -1), 'sit_stool', approach=(0, 1), z=0.75),
-             H('stool1', 'perch', (1.5, 1.3), (0, -1), 'sit_stool', approach=(1, 1), z=0.75),
+      hooks=[H('stool0', 'perch', (0.5, 1.5), (0, -1), 'sit_stool', approach=(0, 1), z=0.75),
+             H('stool1', 'perch', (1.5, 1.5), (0, -1), 'sit_stool', approach=(1, 1), z=0.75),
              H('surface0', 'place_item', (1.0, 0.5), (0, 1), tags=['takeout'], z=0.92)])
 def island_4a(state='default'):
     P = [box(0.08, 0.12, 0, 1.92, 0.7, 0.08, 'black'),
@@ -620,8 +620,8 @@ def coffee_4b(state='default'):
     return P
 
 @item('4b_kitchen_bar', '4B', (2, 1), 1.02, 'R4', 'P0', notes='breakfast bar with turquoise front panel; stools on the front, Penny pours wine from behind',
-      hooks=[H('stool0', 'perch', (0.5, 1.3), (0, -1), 'sit_stool', approach=(0, 1), z=0.86),
-             H('stool1', 'perch', (1.5, 1.3), (0, -1), 'sit_stool', approach=(1, 1), z=0.86),
+      hooks=[H('stool0', 'perch', (0.5, 1.5), (0, -1), 'sit_stool', approach=(0, 1), z=0.86),
+             H('stool1', 'perch', (1.5, 1.5), (0, -1), 'sit_stool', approach=(1, 1), z=0.86),
              H('pour_wine', 'pour_drink', (1.0, -0.35), (0, 1), 'pour_wine', approach=(1, -1), tags=['wine']),
              H('surface0', 'place_item', (1.0, 0.5), (0, 1), tags=['wine'], z=1.02)])
 def bar_4b(state='default'):

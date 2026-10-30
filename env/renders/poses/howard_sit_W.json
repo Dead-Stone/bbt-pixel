@@ -1,0 +1,15 @@
+{
+ "sprite": "howard_sit_W.png",
+ "pivot": [
+  64,
+  104
+ ],
+ "seat": [
+  62.5,
+  80.0
+ ],
+ "dir": "W",
+ "lift_units": -7.62,
+ "version": "v2",
+ "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips; seat = butt contact point"
+}

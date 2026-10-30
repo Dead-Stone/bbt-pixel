@@ -131,3 +131,12 @@ Open `harness/viewer/index.html` through the server (it fetches JSON, so `file:/
 * Conversations are turn-based with fixed timing (about 4-5 s per line). There is no interruption.
 * Perception is zone- and radius-based, with no line-of-sight.
 * `street_exterior`, `lobby` and `raj_apartment` are pass-through or short visits in the default routines.
+
+## Seating
+
+Sit hooks are resolved against the rendered item geometry (`tools/seating.py`): each hook gets a
+`seat` point, `seat_z` (cushion height probed from the item's height map), `sit_dir` (the seat's
+facing) and a depth `sit_key`. Sit sprites carry a `seat` anchor (butt contact pixel), so the viewer
+and the static renders draw the sitter at `scr(seat) - seat_z*64`, and seat backs / armrests that
+are in front of the sitter are emitted as hook-tagged occluder sprites. Contact sheet of every sit
+hook: `harness/renders/sitcheck/sit_contact_4x.png` (`python3 tools/sitcheck/sitsheet.py`).

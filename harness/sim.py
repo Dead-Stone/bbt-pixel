@@ -5,6 +5,7 @@ from world import World, dir_of, TRAVEL_SECONDS
 from personas import PERSONAS, ORDER
 from memory import Memory
 from brains import hhmm, tsec
+from seating import seat_place
 
 SIT_TYPES = ('sit', 'perch')
 PERCEIVE_EVERY = 20       # s
@@ -50,9 +51,9 @@ class Agent:
     def seg(self, t, **kw):
         if self.track and self.track[-1].get('t1') is None: self.track[-1]['t1'] = t
         kw.update(t0=t, t1=None); self.track.append(kw)
-    def still(self, t, sit=False, z=0.0, key=None):
+    def still(self, t, sit=False, z=0.0, key=None, hook=None):
         self.seg(t, kind='sit' if sit else 'stand', loc=self.loc, pos=[round(self.pos[0], 3), round(self.pos[1], 3)], dir=self.dir,
-                 z=z, **({'key': key} if key is not None else {}))
+                 z=z, **({'key': key} if key is not None else {}), **({'hook': hook} if hook else {}))
     def away(self, t, why):
         self.seg(t, kind='away', why=why)
 
@@ -180,8 +181,10 @@ class Sim:
             else: a.dir = dir_of(h['pos'][0] - spot[0], h['pos'][1] - spot[1], h['facing'])
             dur = self.brain.duration(a.cid, self.t, sel)
             a.state = 'using'; a.until = self.t + dur; a.status = label; a.hook_block = self.block(a)[0]
-            key = math.floor(spot[0]) + math.floor(spot[1]) + 1.5 if sit else None
-            a.still(self.t, sit=sit, z=0.0, key=key)   # sit pivots already sit on the seat height
+            if sit:   # seat point / seat height / facing / depth key exported per hook (tools/seating.py)
+                sp = seat_place(h); a.pos = list(sp['pos']); a.dir = sp['dir']
+                a.still(self.t, sit=True, z=sp['z'], key=sp['key'], hook=h['id'])
+            else: a.still(self.t)
             self.ev('hook_start', a, hook=h['id'], hook_type=h['type'], activity=label, minutes=round(dur / 60), place=self.place(a))
             self.observe(a, f"I {label.replace('his ', 'my ').replace('her ', 'my ')} in {self.place(a)}", imp=2)
         def to_seat():

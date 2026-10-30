@@ -204,7 +204,8 @@ def render(prims, fx, fy, rot, shadow=True, min_canvas_h=None, footprint_canvas=
         tx2 = np.floor(np.clip(x0, 0, max(nfx, 1) - 1e-6)).astype(int); ty2 = np.floor(np.clip(y0, 0, max(nfy, 1) - 1e-6)).astype(int)
         tx = np.where(m, tx2, tx); ty = np.where(m, ty2, ty)
     pivot = (ox + (nfx - nfy)*64, oy + (nfx + nfy)*32)
-    return dict(formula_ok=formula_ok, img=img, pivot=pivot, tx=tx, ty=ty, op=op | (img[..., 3] > 0), fp=(nfx, nfy), xf=X, near=near)
+    return dict(formula_ok=formula_ok, img=img, pivot=pivot, tx=tx, ty=ty, op=op | (img[..., 3] > 0), fp=(nfx, nfy), xf=X, near=near,
+                hx=np.where(op, hx, 0.0), hy=np.where(op, hy, 0.0), hz=np.where(op, hz, -9.0))   # local hit point per pixel (seat occluders)
 
 def side_name(nx, ny):
     if abs(ny) >= abs(nx): return 'front' if ny > 0 else 'back'
