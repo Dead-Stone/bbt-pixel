@@ -90,17 +90,67 @@ class Cutout:
         # limb as a one-shade-darker copy of the near limb
         self.copy_of = {}
         pair = limb_pairs(P0); cnt = np.bincount(self.lab[self.lab >= 0], minlength=len(P0))
+        yy, xx = np.mgrid[0:128, 0:128]; Pp = np.stack([xx + 0.5, yy + 0.5], -1)
+        def segd(k):
+            an = self.A0[k]
+            if an[0] != 'cap': return np.linalg.norm(Pp - an[1], axis=-1)
+            P, Q = an[1], an[2]; v = Q - P; L2 = max(v @ v, 1e-6)
+            tt = np.clip(((Pp - P) @ v) / L2, 0, 1); return np.linalg.norm(Pp - (P + tt[..., None] * v), axis=-1)
+        def cen(k):
+            an = self.A0[k]; return an[1] if an[0] != 'cap' else (an[1] + an[2]) / 2
         for a, b in pair.items():
             if cnt[a] < 0.6 * cnt[b]:
-                self.copy_of[a] = b
+                if abs(cen(a)[0] - cen(b)[0]) < 6:
+                    self.copy_of[a] = b          # genuinely overlapping (side view): far limb = darker copy
+                else:
+                    # limbs apart on screen but the rig labels went to one of them: split by nearest bone
+                    reg = np.isin(self.lab, [a, b]); da, db = segd(a), segd(b)
+                    self.lab[reg & (da < db)] = a; self.lab[reg & (da >= db)] = b
         for a, b in self.copy_of.items(): self.lab[self.lab == a] = b
+        # side views: the two legs overlap in the master, so rig labels below the crotch are a patchwork of
+        # pelvis / torso / near leg / far leg; static pelvis remnants shred the walk.  Re-own every master
+        # pixel below the crotch (except hands/sleeves) to the nearest NEAR leg bone (thigh / shin / foot).
+        tags = [p[3] for p in P0]
+        near_legs = sorted(set(b for a, b in self.copy_of.items() if tags[b] in ('leg', 'foot')))
+        if not near_legs:      # legs apart on screen: both legs own the region below the crotch
+            near_legs = [k for k, t in enumerate(tags) if t in ('leg', 'foot')]
+        if near_legs and any(self.A0[k][0] == 'cap' for k in near_legs):
+            caps = [k for k in near_legs if self.A0[k][0] == 'cap']; feet = [k for k in near_legs if self.A0[k][0] != 'cap']
+            crotch = min(min(self.A0[k][1][1], self.A0[k][2][1]) for k in caps) + 2
+            yy, xx = np.mgrid[0:128, 0:128]; Pp = np.stack([xx + 0.5, yy + 0.5], -1)
+            arm_ids = [k for k, t in enumerate(tags) if t in ('arm', 'sleeve', 'hand')]
+            arm = np.isin(self.lab, arm_ids)
+            # an arm-labelled pixel below the crotch stays on the arm only if its colour is closest to an arm
+            # material (skin / sleeve) among the rig's materials (pants pixels nearest-bound to a hanging hand
+            # would otherwise swing with it)
+            if pal is not None:
+                mats = sorted(set(p[2] for p in P0 if p[2] in R.C)); mc = np.array([R.C[m] for m in mats], float)
+                cls = np.array([mats[int(((mc - c) ** 2).sum(1).argmin())] for c in pal.astype(float)])
+                armm = set(P0[k][2] for k in arm_ids)
+                okc = np.array([c in armm for c in cls])
+                arm = arm & ((yy <= crotch - 4) | okc[np.maximum(master_idx, 0)])
+            reg = (master_idx >= 0) & (yy > crotch) & ~arm
+            best = np.full((128, 128), 1e9); own = np.full((128, 128), -1)
+            for k in caps:
+                P, Q = self.A0[k][1], self.A0[k][2]; v = Q - P; L2 = max(v @ v, 1e-6)
+                tt = np.clip(((Pp - P) @ v) / L2, 0, 1); dist = np.linalg.norm(Pp - (P + tt[..., None] * v), axis=-1)
+                w = dist < best; best[w] = dist[w]; own[w] = k
+            if feet:
+                shin_end = max(max(self.A0[k][1][1], self.A0[k][2][1]) for k in caps)
+                low = yy + 0.5 > shin_end
+                if len(feet) == 1: own[low] = feet[0]
+                else:
+                    # each foot takes the low pixels on the side of its own shin
+                    fd = np.stack([np.abs(xx + 0.5 - self.A0[f][1][0]) for f in feet]); fo = np.array(feet)[fd.argmin(0)]
+                    own[low] = fo[low]
+            self.lab[reg] = own[reg]
         # copy sources: only master pixels close to the near limb's bone (no stray nearest-bound pixels)
         self.copy_src = {}
         yy, xx = np.mgrid[0:128, 0:128]; Pp = np.stack([xx + 0.5, yy + 0.5], -1)
         rig = Bw['pid']
         for a, b in self.copy_of.items():
             an = self.A0[b]
-            if an[0] != 'cap': self.copy_src[b] = self.lab == b; continue
+            if an[0] != 'cap' or b in near_legs: self.copy_src[b] = self.lab == b; continue
             P, Q = an[1], an[2]; v = Q - P; L2 = max(v @ v, 1e-6)
             tt = np.clip(((Pp - P) @ v) / L2, 0, 1); dist = np.linalg.norm(Pp - (P + tt[..., None] * v), axis=-1)
             own = rig == b
