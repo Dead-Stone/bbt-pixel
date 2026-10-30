@@ -35,6 +35,14 @@ def check(seed=7):
     for p in problems[:10]: print('  ', p)
     assert not problems, 'track invariants failed'
     assert len(convs) > 20 and 'floor4' in locs and len(locs) >= 3
+    # v2.1 animation wiring: brain-chosen emotes from each persona's list, work hooks -> 'work' loop
+    from personas import PERSONAS
+    emotes = [e for e in ev if e['type'] == 'emote']
+    assert all(e['anim'] in PERSONAS[e['agent']]['emotes'] for e in emotes), 'emote not in persona list'
+    assert len({e['agent'] for e in emotes}) >= 6, 'too few agents emote'
+    work = {c for c, tr in snap['tracks'].items() for x in tr if x.get('act') == 'work'}
+    assert len(work) >= 6, f'work anim segments only for {work}'
+    print(f'  emotes {len(emotes)} by {len({e["agent"] for e in emotes})} agents; work segments for {sorted(work)}')
     return snap
 
 if __name__ == '__main__':

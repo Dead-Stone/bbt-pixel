@@ -34,7 +34,8 @@ PERSONAS = {
         B('12:00', 'ait_cafeteria', 'lunch with the guys', steps=LUNCH, loop=LUNCH_SIT, social=0.9),
         B('13:00', 'ait_physics', 'afternoon research', loop=[S('off_whiteboard_wall', ('write', 'look'), lo=20, hi=40, label='argues with an equation'),
           S('off_desk', 'work', lo=30, hi=50, label='works at his desk'), S('off_bookshelf', 'browse', lo=5, hi=10, label='checks a reference')], social=0.4),
-        B('17:30', 'floor4', 'home: evening in 4A', steps=[S('4a_desk_laptop', 'use', lo=3, hi=5, label='checks his e-mail first')], loop=[S('4a_desk_laptop', 'use', lo=20, hi=40, label='answers e-mail at the desk'),
+        B('17:30', 'floor4', 'home: evening in 4A', steps=[S('4a_desk_laptop', 'use', lo=3, hi=5, label='checks his e-mail first'),
+          S('4b_front_door', 'knock_spot_outside', lo=1, hi=2, label="knocks on Penny's door, three times")], loop=[S('4a_desk_laptop', 'use', lo=20, hi=40, label='answers e-mail at the desk'),
           S('4a_couch', 'sit', 'seat0', 15, 30, 'sits in his spot')], social=0.6),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=0.9),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_couch', 'sit', 'seat0', 40, 80, 'game night in his spot')], social=0.9),
@@ -140,7 +141,8 @@ PERSONAS = {
           loop=[S('4b_dining_table_cluttered', 'sit', lo=10, hi=20, label='checks her lab schedule')], social=0.9),
         B('07:50', None, 'work at the pharma lab', social=0.0, leave='street'),
         B('11:50', 'ait_cafeteria', 'lunch date with Howard at AIT', steps=LUNCH, loop=LUNCH_SIT, social=1.0, arrive=('ait_cafeteria', 'from_quad')),
-        B('13:00', None, 'back to the pharma lab', social=0.0, leave='street'),
+        B('13:00', 'ait_physics', 'drops off cultures at the AIT lab', loop=[S('lab_bench_electronics', 'work', lo=20, hi=35, label='pipettes samples at the lab bench')], social=0.8),
+        B('14:20', None, 'back to the pharma lab', social=0.0, leave='street'),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=1.0, arrive=('street_exterior', 'from_campus')),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_armchair', 'sit', lo=30, hi=60, label='plays to win from the armchair'), S('4a_kitchen_island', 'perch', lo=15, hi=30, label='keeps score at the island')], social=1.0),
         B('23:00', None, 'heads home with Howard', social=0.0, leave='street'),
@@ -167,3 +169,44 @@ PERSONAS = {
     ]),
 }
 ORDER = ['sheldon', 'leonard', 'penny', 'howard', 'raj', 'bernadette', 'amy']
+
+# ---------------------------------------------------------------- body language + prompts (v2.1)
+# Emote ids are the signature animation tags in characters/<cid>/chr_<cid>.json; weights drive the mock brain, the
+# LLM brain picks from the same list (prompts/<cid>.md, "Body language").  'gesture' is the generic talking hand.
+EMOTES = {
+    'sheldon':    {'point_gotcha': 3, 'gesture': 3, 'spot_claim': 1, 'knock_knock_penny': 2},
+    'leonard':    {'glasses_push': 3, 'sigh_shrug': 2, 'gesture': 3},
+    'penny':      {'hair_flip': 3, 'eye_roll': 3, 'wine_sip': 2, 'gesture': 2},
+    'howard':     {'eyebrow_waggle': 3, 'magic_trick': 2, 'gesture': 3},
+    'raj':        {'astronomy_point': 3, 'shy_hands': 3, 'gesture': 2},
+    'bernadette': {'sweet_to_scary': 3, 'hands_on_hips': 3, 'gesture': 2},
+    'amy':        {'neuro_lecture': 3, 'excited_clap': 3, 'gesture': 2},
+}
+# where an emote is allowed (others: anywhere the agent is standing)
+EMOTE_WHERE = {'knock_knock_penny': (),   # played by the sim at 4B's door (knock_spot_outside hook), never mid-conversation
+                'wine_sip': ('floor4', 'rest_amber_slice')}
+# keyword nudges for the mock brain: (substring in the spoken line, emote)
+EMOTE_CUES = {
+    'sheldon': [('technically', 'gesture'), ('for the record', 'gesture'), ('pun', 'point_gotcha'), ('joke', 'point_gotcha'), ('spot', 'spot_claim')],
+    'leonard': [('okay, okay', 'sigh_shrug'), ('laser', 'glasses_push'), ('sorry', 'sigh_shrug')],
+    'penny':   [('sweetie', 'hair_flip'), ('wine', 'wine_sip'), ('physics', 'eye_roll'), ('equation', 'eye_roll')],
+    'howard':  [('trick', 'magic_trick'), ('rover', 'gesture'), ('bernie', 'eyebrow_waggle')],
+    'raj':     [('star', 'astronomy_point'), ('galax', 'astronomy_point'), ('sorry', 'shy_hands'), ('embarrass', 'shy_hands')],
+    'bernadette': [('win', 'hands_on_hips'), ('seriously', 'sweet_to_scary'), ('sample', 'gesture')],
+    'amy':     [('brain', 'neuro_lecture'), ('neuro', 'neuro_lecture'), ('bestie', 'excited_clap'), ('excit', 'excited_clap')],
+}
+# hook types that play the character's job-specific 'work' loop (whiteboard / laptop / microscope / pipette / tray)
+WORK_HOOK_TYPES = ('work', 'write', 'serve', 'take_order', 'enter_order', 'bartend')   # Penny's shift = tray work
+WORK_ITEMS = ('laptop', 'whiteboard', 'server_station', 'take_order')
+GAIT = {'sheldon': 'stiff, upright, long strides', 'leonard': 'quick, slightly hunched', 'penny': 'confident, hip sway',
+        'howard': 'jaunty bounce', 'raj': 'loose', 'bernadette': 'short quick steps', 'amy': 'purposeful, awkward'}
+
+import os as _os
+PROMPT_DIR = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'prompts')
+def load_prompt(name):
+    """harness/prompts/<name>.md ('world' or a character id); '' if missing."""
+    try:
+        with open(_os.path.join(PROMPT_DIR, f'{name}.md'), encoding='utf-8') as f: return f.read().strip()
+    except OSError: return ''
+for _c, _p in PERSONAS.items():
+    _p['emotes'] = EMOTES[_c]; _p['gait'] = GAIT[_c]; _p['prompt'] = f'prompts/{_c}.md'

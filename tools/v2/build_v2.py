@@ -87,12 +87,69 @@ def despeck(im):
             if best is not None: im[y, x] = best[1]
     return im
 
+def _pc(rgb):
+    """nearest palette colour (props stay inside the character palette)"""
+    i = int(((PAL.astype(float) - np.array(rgb, float)) ** 2).sum(1).argmin()); return np.array([*PAL[i][:3], 255], np.uint8)
+
+def _draw_prop(im, anim, k, src, plen=8):
+    """hand-held work props, placed at the right hand's fingertip from the rig: Penny's serving tray (with a glass),
+    Bernadette's pipette.  Hidden behind the body when the hand is farther than the torso (back / far-side views).
+    Whiteboard, laptop, microscope are scene furniture at the work hooks, not drawn on the sprite."""
+    kind = BC.WORK_KIND
+    if anim != 'work' or kind not in ('tray', 'pipette'): return im
+    from cutout import anchors
+    P = R.build(BC.pose_for(anim, k, src)); A = anchors(P, R.YAW[src]); c = cutout(src, 'open')
+    tor = next(A[i][3] for i, p in enumerate(P) if p[3] == 'torso')
+    hi = [i for i, p in enumerate(P) if p[3] == 'hand' and np.asarray(p[1][0])[0] > 0][0]
+    tx, ty = np.round(c.warp(A[hi][2])).astype(int); front = A[hi][3] < tor - 1.0
+    H, W = im.shape[:2]; px = {}
+    dark = _pc((55, 50, 60))
+    if kind == 'tray':
+        top, rim = _pc((205, 205, 212)), _pc((140, 140, 150))
+        y0 = ty - 1
+        for dx in range(-5, 6):
+            px[(y0, tx + dx)] = top if abs(dx) < 5 else rim
+            px[(y0 + 1, tx + dx)] = rim
+        g = _pc((235, 165, 60))                                  # a glass on the tray (2x3, no lone pixels)
+        for dy in (1, 2, 3):
+            px[(y0 - dy, tx - 2)] = g; px[(y0 - dy, tx - 1)] = g
+    else:
+        body, tip, plg = _pc((235, 235, 240)), _pc((150, 200, 230)), _pc((70, 110, 200))
+        for dy in range(0, plen):
+            px[(ty - dy, tx)] = plg if dy >= plen - 2 else body
+        px[(ty + 1, tx)] = tip; px[(ty + 2, tx)] = tip
+    from scipy import ndimage as ndi
+    hole0 = ndi.binary_fill_holes(im[..., 3] > 0) & (im[..., 3] == 0)
+    drawn = np.zeros((H, W), bool)
+    for (y, x), col in px.items():
+        if not (0 <= y < H and 0 <= x < W): continue
+        if front or im[y, x, 3] == 0: im[y, x] = col; drawn[y, x] = True
+    # 1-px dark outline round the prop where it meets the background, then seal any pocket it closed off
+    ring = ndi.binary_dilation(drawn, np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], bool)) & (im[..., 3] == 0)
+    im[ring] = dark
+    op = im[..., 3] > 0; enc = ndi.binary_fill_holes(op) & ~op & ~hole0
+    lab, n = ndi.label(enc)
+    for i in range(1, n + 1):
+        if (lab == i).sum() <= 8: im[lab == i] = dark
+    return im
+
+def draw_prop(im, anim, k, src):
+    """draw the prop, shortening the pipette (then dropping the prop) if it would add an audit flag (e.g. closing
+    off the gap between arm and body)"""
+    if anim != 'work' or BC.WORK_KIND not in ('tray', 'pipette'): return im
+    import audit as AU
+    n0 = {k_: int(v.sum()) for k_, v in AU.audit_frame(im).items()}
+    for plen in ((8, 6, 4) if BC.WORK_KIND == 'pipette' else (8,)):
+        out = despeck(_draw_prop(im.copy(), anim, k, src, plen))
+        if all(int(v.sum()) <= n0[k_] for k_, v in AU.audit_frame(out).items()): return out
+    return im
+
 def frame_img(anim, k, d):
     src = BC.MIRROR.get(d, d)
     eyes = BC.eyes_for(anim, k)
     ck = ('idle', 0, src, eyes) if anim == 'blink' else (anim, k, src, eyes)
     if ck not in _cache:
-        _cache[ck] = despeck(to_rgba(cutout(src, eyes).pose(BC.pose_for(anim, k, src)), PAL))
+        _cache[ck] = draw_prop(despeck(to_rgba(cutout(src, eyes).pose(BC.pose_for(anim, k, src)), PAL)), anim, k, src)
     im = _cache[ck]
     return np.ascontiguousarray(im[:, ::-1]) if d in BC.MIRROR else im.copy()
 

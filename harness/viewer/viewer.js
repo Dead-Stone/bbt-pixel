@@ -42,12 +42,12 @@ async function loadScene(id) {
   sc.bgImg = bg; sc.sprImg = spr; V.scenes[id] = sc;
 }
 function indexSim(sim) {
-  const ix = {byAgent: {}, emotes: {}, says: [], feed: []};
-  for (const c of sim.meta.agents) { ix.byAgent[c] = []; ix.emotes[c] = []; }
+  const ix = {byAgent: {}, emotes: {}, says: [], saysBy: {}, feed: []};
+  for (const c of sim.meta.agents) { ix.byAgent[c] = []; ix.emotes[c] = []; ix.saysBy[c] = []; }
   for (const e of sim.events) {
     if (e.agent && ['hook_start', 'walk', 'depart', 'offstage', 'appear', 'block'].includes(e.type)) ix.byAgent[e.agent].push(e);
     if (e.type === 'emote') ix.emotes[e.agent].push(e);
-    if (e.type === 'say') ix.says.push(e);
+    if (e.type === 'say') { ix.says.push(e); if (ix.saysBy[e.agent]) ix.saysBy[e.agent].push(e); }
     if (['say', 'hook_start', 'appear', 'depart', 'offstage', 'convo_start', 'reflect', 'evict', 'ride', 'door', 'block'].includes(e.type)) ix.feed.push(e);
   }
   return ix;
@@ -73,12 +73,23 @@ function agentAt(cid, t) {
     }
     return {cid, loc: s.loc, x, y, dir, anim: 'walk', k: Math.floor(walked / 0.14) % 8, moving: true};
   }
-  const st = {cid, loc: s.loc, x: s.pos[0], y: s.pos[1], dir: s.dir, anim: s.kind === 'sit' ? 'sit' : 'idle', key: s.key, z: s.z || 0, hook: s.hook};
-  if (s.kind !== 'sit') {   // emote overlay
-    const em = V.idx.emotes[cid]; const j = bsearch(em, t, 't');
+  // stand: 'work' loop at job hooks (whiteboard/laptop/microscope/pipette/tray), 'talk' while speaking, emotes on top
+  const st = {cid, loc: s.loc, x: s.pos[0], y: s.pos[1], dir: s.dir, anim: s.kind === 'sit' ? 'sit' : (s.act === 'work' ? 'work' : 'idle'), key: s.key, z: s.z || 0, hook: s.hook};
+  if (s.kind !== 'sit') {
+    const sy = V.idx.saysBy[cid] || [], k = bsearch(sy, t, 't');
+    if (k >= 0 && t < sy[k].t + sy[k].dur) st.anim = 'talk';
+    const em = V.idx.emotes[cid]; const j = bsearch(em, t, 't');     // emote overlay (one-shot, brain-chosen)
     if (j >= 0) {
       const e = em[j], ch = V.chars[cid], tag = emoteTag(ch, e.anim, st.dir);
-      if (tag) { const n = tag[1] - tag[0] + 1, dur = Math.max(2.5, n * 0.125); if (t < e.t + dur) { st.anim = 'emote'; st.frame = tag[0] + Math.min(n - 1, Math.floor((t - e.t) / dur * n)); st.emoting = true; st.dir = tag.dir; } }
+      if (tag) {
+        const n = tag[1] - tag[0] + 1; let tot = 0; for (let f = tag[0]; f <= tag[1]; f++) tot += ch.frames[f].duration / 1000;
+        const dur = Math.max(1.6, tot);
+        if (t < e.t + dur) {
+          let acc = 0, f = tag[0], el = (t - e.t) * tot / dur;
+          while (f < tag[1] && acc + ch.frames[f].duration / 1000 <= el) { acc += ch.frames[f].duration / 1000; f++; }
+          st.anim = 'emote'; st.frame = f; st.emoting = true; st.dir = tag.dir;
+        }
+      }
     }
   }
   return st;
@@ -95,7 +106,8 @@ function frameOf(st, wall) {
   if (st.anim === 'emote') idx = st.frame;
   else {
     const tg = ch.tags[`${st.anim === 'sit' ? 'idle' : st.anim}_${st.dir}`] || ch.tags[`idle_${st.dir}`];
-    const n = tg[1] - tg[0] + 1; idx = tg[0] + (st.anim === 'walk' ? st.k % n : Math.floor(wall * 4 + st.cid.length) % n);
+    const n = tg[1] - tg[0] + 1, fd = (ch.frames[tg[0]].duration || 250) / 1000;     // per-anim frame time from the sheet
+    idx = tg[0] + (st.anim === 'walk' ? st.k % n : Math.floor(wall / fd + st.cid.length) % n);
   }
   return {img: ch.sheet, fr: ch.frames[idx].frame, pv: [64, 116]};
 }

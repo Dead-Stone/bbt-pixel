@@ -7,12 +7,14 @@ LLMBrain   any OpenAI-compatible chat-completions endpoint, configured only thro
              LLM_BASE_URL  (default https://api.openai.com/v1; works with local servers such as Ollama/vLLM/LM Studio)
              LLM_MODEL     (default gpt-4o-mini)
              LLM_MAX_CALLS (default 400; budget per run, after which the mock takes over)
-           Used for dialogue lines, reflections and plan tweaks; every call falls back to the mock on any error.
+           Used for dialogue lines (+ the emote to play with them), reflections and plan tweaks; every call falls back to
+           the mock on any error.  System prompt = prompts/<cid>.md (character) + prompts/world.md (setting, rules,
+           action schema): lines come back as JSON {"say": ..., "emote": <id from the character's list or null>}.
 No secret is stored or logged; the key is read from the environment at run time only.
 """
 import os, json, random, hashlib, urllib.request, urllib.error
 from lines import OPEN, REPLY, CLOSE, TOPIC, FOOD
-from personas import PERSONAS
+from personas import PERSONAS, EMOTE_WHERE, EMOTE_CUES, load_prompt
 
 # lines that mention a time of day stop making sense after it (mock brain only)
 STALE = [('half two', 14 * 3600 + 1800), ('quarter to seven', 18 * 3600 + 2400), ('6:40', 18 * 3600 + 2400),
@@ -96,6 +98,20 @@ class MockBrain:
         names = ', '.join(PERSONAS[o]['name'] for o in others)
         return f"talked with {names} about {topic}" + (f": \"{lines[1][1]}\"" if len(lines) > 1 else '')
 
+    # ---------------------------------------------------------------- body language
+    def emote_options(self, cid, loc):
+        return {e: w for e, w in PERSONAS[cid]['emotes'].items() if loc in EMOTE_WHERE.get(e, (loc,))}
+    def choose_emote(self, cid, ctx, text, turn):
+        """Signature move / gesture to play with a spoken line (or None).  Keyword cues first, else a weighted pick
+        from the persona's emote list, about one line in three (more on the second line of a conversation)."""
+        opts = self.emote_options(cid, ctx.get('loc'))
+        if not opts: return None
+        r = self.rng('emote', cid, ctx['t'], turn); low = text.lower()
+        for cue, e in EMOTE_CUES.get(cid, []):
+            if cue in low and e in opts and r.random() < 0.8: return e
+        if r.random() >= (0.5 if turn == 1 else 0.28): return None
+        k = list(opts); return r.choices(k, weights=[opts[e] for e in k])[0]
+
     # ---------------------------------------------------------------- memory
     def importance(self, cid, text):
         t = text.lower(); s = 2
@@ -131,6 +147,7 @@ class LLMBrain(MockBrain):
         self.model = os.environ.get('LLM_MODEL', 'gpt-4o-mini')
         self.budget = int(os.environ.get('LLM_MAX_CALLS', '400'))
         self.calls = 0; self.failures = 0; self.last_error = ''
+        self.world_prompt = load_prompt('world'); self.pending_emote = {}
     def chat(self, system, user, max_tokens=120):
         if self.calls >= self.budget or self.failures >= 5: return None
         self.calls += 1
@@ -145,24 +162,38 @@ class LLMBrain(MockBrain):
         except Exception as e:      # network, auth, schema: fall back to the mock for this call
             self.failures += 1; self.last_error = type(e).__name__; return None
     def persona_prompt(self, cid):
+        """System prompt: identity line + prompts/<cid>.md + prompts/world.md (falls back to the persona card)."""
         p = PERSONAS[cid]
-        return (f"You are {p['name']}, {p['role']}, an autonomous character in a cozy pixel-art sitcom simulation. "
-                f"Traits: {', '.join(p['traits'])}. Speaking style: {p['style']}. Tendencies: {'; '.join(p['tics'])}. "
-                "Write ORIGINAL dialogue only: never quote or paraphrase lines from any TV show or film, no famous catchphrases. "
-                "Places in this world are called AIT (Arroyo Institute of Technology), The Amber Slice, and LOS ROBLES AV.")
+        head = (f"You are {p['name']}, {p['role']}, an autonomous character in a cozy pixel-art sitcom simulation. "
+                "Write ORIGINAL dialogue only: never quote or paraphrase lines from any TV show or film, no famous catchphrases.")
+        char = load_prompt(cid) or (f"Traits: {', '.join(p['traits'])}. Speaking style: {p['style']}. Tendencies: {'; '.join(p['tics'])}.")
+        world = self.world_prompt or "Places in this world are called AIT (Arroyo Institute of Technology), The Amber Slice, and LOS ROBLES AV."
+        return f"{head}\n\n{char}\n\n{world}"
     def line(self, cid, to, topic, turn, n_turns, ctx):
         hist = '\n'.join(f"{PERSONAS[s]['name']}: {x}" for s, x in ctx.get('history', [])[-6:])
         mems = '; '.join(ctx.get('mems', [])[:4])
         role = 'open the conversation' if turn == 0 else ('wrap up the conversation' if turn == n_turns - 1 else 'reply')
         u = (f"Time {hhmm(ctx['t'])} at {ctx.get('place')}. You are talking to {PERSONAS[to]['name'] if to else 'the group'} "
              f"(relationship: {PERSONAS[cid]['rel'].get(to, 'friend')}). Topic: {topic}. Your recent memories: {mems or 'none'}.\n"
-             f"Conversation so far:\n{hist or '(none)'}\nNow {role} with ONE short line (max 25 words), no name prefix, no quotes.")
-        out = self.chat(self.persona_prompt(cid), u, 60)
+             f"Conversation so far:\n{hist or '(none)'}\nNow {role} with ONE short line (max 25 words), no name prefix, no quotes.\n"
+             f"Body language you may use (emote ids): {', '.join(self.emote_options(cid, ctx.get('loc')))} or null.\n"
+             'Answer as JSON: {"say": "...", "emote": "<id or null>"}')
+        out = self.chat(self.persona_prompt(cid), u, 90)
         if not out: return super().line(cid, to, topic, turn, n_turns, ctx)
+        out = out.strip()
+        if '{' in out and '}' in out:      # action-schema JSON; plain text is accepted too
+            try:
+                j = json.loads(out[out.index('{'):out.rindex('}') + 1])
+                em = j.get('emote'); self.pending_emote[cid] = em if em in self.emote_options(cid, ctx.get('loc')) else None
+                out = str(j.get('say') or '')
+            except Exception: pass
         out = out.strip().split('\n')[0]
         nm = PERSONAS[cid]['name'] + ':'
         if out.startswith(nm): out = out[len(nm):]
         return out.strip().strip('"').strip()[:220] or super().line(cid, to, topic, turn, n_turns, ctx)
+    def choose_emote(self, cid, ctx, text, turn):
+        if cid in self.pending_emote: return self.pending_emote.pop(cid)     # the model's own choice (may be None)
+        return super().choose_emote(cid, ctx, text, turn)
     def reflect(self, cid, t, mems):
         u = ("Here are your most important recent memories:\n" + '\n'.join(f"- {m['text']}" for m in mems[:10]) +
              "\nWrite ONE first-person insight (max 30 words) about your relationships or plans.")

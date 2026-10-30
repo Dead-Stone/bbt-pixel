@@ -2,12 +2,16 @@
 travel over the world graph, conversations, memory/reflection, event log + per-agent motion tracks for the viewer."""
 import math, json, os, time as _time
 from world import World, dir_of, TRAVEL_SECONDS
-from personas import PERSONAS, ORDER
+from personas import PERSONAS, ORDER, WORK_HOOK_TYPES, WORK_ITEMS
 from memory import Memory
 from brains import hhmm, tsec
 from seating import seat_place
 
 SIT_TYPES = ('sit', 'perch')
+def is_work(h):
+    """hooks that play the job animation (work/write hooks, laptops, whiteboards, the server station)"""
+    hid = str(h.get('id', ''))
+    return h.get('type') in WORK_HOOK_TYPES or any(w in hid for w in WORK_ITEMS)
 PERCEIVE_EVERY = 20       # s
 CHAT_CHECK_EVERY = 60     # s
 CHAT_RADIUS = 6.0         # tiles
@@ -51,9 +55,10 @@ class Agent:
     def seg(self, t, **kw):
         if self.track and self.track[-1].get('t1') is None: self.track[-1]['t1'] = t
         kw.update(t0=t, t1=None); self.track.append(kw)
-    def still(self, t, sit=False, z=0.0, key=None, hook=None):
+    def still(self, t, sit=False, z=0.0, key=None, hook=None, act=None):
+        """act='work': the viewer loops the character's job animation (whiteboard/laptop/microscope/pipette/tray)"""
         self.seg(t, kind='sit' if sit else 'stand', loc=self.loc, pos=[round(self.pos[0], 3), round(self.pos[1], 3)], dir=self.dir,
-                 z=z, **({'key': key} if key is not None else {}), **({'hook': hook} if hook else {}))
+                 z=z, **({'key': key} if key is not None else {}), **({'hook': hook} if hook else {}), **({'act': act} if act else {}))
     def away(self, t, why):
         self.seg(t, kind='away', why=why)
 
@@ -184,8 +189,11 @@ class Sim:
             if sit:   # seat point / seat height / facing / depth key exported per hook (tools/seating.py)
                 sp = seat_place(h); a.pos = list(sp['pos']); a.dir = sp['dir']
                 a.still(self.t, sit=True, z=sp['z'], key=sp['key'], hook=h['id'])
-            else: a.still(self.t)
-            self.ev('hook_start', a, hook=h['id'], hook_type=h['type'], activity=label, minutes=round(dur / 60), place=self.place(a))
+            else: a.still(self.t, act='work' if is_work(h) else None)
+            self.ev('hook_start', a, hook=h['id'], hook_type=h['type'], activity=label, minutes=round(dur / 60), place=self.place(a),
+                    **({'anim': 'work'} if is_work(h) and not sit else {}))
+            if h['type'] == 'knock_spot_outside' and 'knock_knock_penny' in a.p.get('emotes', {}):
+                self.events.append(dict(t=round(self.t + 0.5, 1), type='emote', agent=a.cid, loc=a.loc, anim='knock_knock_penny'))
             self.observe(a, f"I {label.replace('his ', 'my ').replace('her ', 'my ')} in {self.place(a)}", imp=2)
         def to_seat():
             if math.dist(a.pos, spot) > 0.05 and h['type'] in SIT_TYPES:
@@ -401,8 +409,9 @@ class Sim:
             text = self.brain.line(sp.cid, to, tp, k, n, c2)
             d = self.say(sp, [g.cid for g in group if g is not sp], text, dt=t)
             lines.append((sp.cid, text)); t += d + 0.6
-            if k == 1 and self.brain.rng('emote', sp.cid, self.t).random() < 0.5 and not (sp.p['emote'] == 'knock_knock_penny' and sp.loc != 'floor4'):
-                self.events.append(dict(t=self.t + t - d, type='emote', agent=sp.cid, loc=sp.loc, anim=sp.p['emote']))
+            em = self.brain.choose_emote(sp.cid, dict(c2, loc=sp.loc), text, k)     # body language picked by the brain
+            if em and not (sp.hook and sp.hook.get('type') in SIT_TYPES):     # seated agents keep the sit pose
+                self.events.append(dict(t=round(self.t + t - d - 0.6 + 0.3, 1), type='emote', agent=sp.cid, loc=sp.loc, anim=em))
         end = self.t + t
         for g in group:
             if not g.walk and g.state != 'using':     # standing: face the group's centre

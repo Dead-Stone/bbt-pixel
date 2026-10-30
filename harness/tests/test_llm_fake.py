@@ -12,11 +12,15 @@ class Fake(http.server.BaseHTTPRequestHandler):
         sys_p, user = body['messages'][0]['content'], body['messages'][1]['content']
         who = re.match(r'You are (\w+)', sys_p).group(1)
         assert 'ORIGINAL dialogue' in sys_p
+        assert '## Action schema' in sys_p and '## Body language' in sys_p, 'world/character prompt files not loaded'
         if 'JSON list' in user:
             n = len(user.split(':\n', 1)[1].split('\n')[0].split('; '))
             content = json.dumps([f'{who} intends to make block {i + 1} count' for i in range(n)])
         elif 'insight' in user: content = f'{who} (fake-llm reflection): people matter more than schedules today.'
-        else: content = f'{who}: [fake-llm] line {len(SEEN)} from {who}.'
+        elif len(SEEN) % 2: content = f'{who}: [fake-llm] line {len(SEEN)} from {who}.'      # plain text is accepted
+        else:                                                                                  # action-schema JSON
+            ids = user.split('(emote ids): ', 1)[1].split(' or null')[0].split(', ')
+            content = json.dumps(dict(say=f'[fake-llm] line {len(SEEN)} from {who}.', emote=ids[0]))
         out = json.dumps(dict(choices=[dict(message=dict(role='assistant', content=content))])).encode()
         self.send_response(200); self.send_header('Content-Type', 'application/json'); self.send_header('Content-Length', str(len(out)))
         self.end_headers(); self.wfile.write(out)
@@ -38,6 +42,10 @@ def main():
     print('sample:', llm_lines[0]['text'] if llm_lines else None, '|', intents[0] if intents else None)
     assert SEEN and SEEN[0]['path'] == '/v1/chat/completions' and SEEN[0]['auth'] == 'Bearer dummy-local-test' and SEEN[0]['model'] == 'fake-model'
     assert llm_lines and intents and brain.failures == 0
+    emotes = [e for e in sim.events if e['type'] == 'emote']
+    print('emotes:', len(emotes), sorted({e['anim'] for e in emotes}))
+    assert emotes, 'LLM-chosen emotes missing'
+    assert not any(e['text'].startswith('{') for e in says), 'JSON leaked into a line'
     assert not any(e['text'].startswith(sim.agents[e['agent']].name + ':') for e in says), 'name prefix not stripped'
     # budget exhausted -> remaining lines come from the mock brain, the day still completes
     assert brain.calls <= 120
