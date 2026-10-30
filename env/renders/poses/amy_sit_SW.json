@@ -1,0 +1,11 @@
+{
+ "sprite": "amy_sit_SW.png",
+ "pivot": [
+  64,
+  128
+ ],
+ "dir": "SW",
+ "lift_units": -12.09,
+ "version": "v2",
+ "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips"
+}
