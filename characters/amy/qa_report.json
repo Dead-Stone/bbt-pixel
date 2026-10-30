@@ -1,6 +1,6 @@
 {
  "character": "amy",
- "generated": "2026-10-30 00:38 (America/Los_Angeles)",
+ "generated": "2026-10-30 01:34 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -50,41 +50,41 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 213,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "E": {
-   "pixels_differing_from_plain_flip": 150,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 189,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   }
  },
  "decal_check": {
   "S": {
-   "px": 26,
-   "mean_col": 65.76923076923077
+   "px": 0,
+   "mean_col": null
   },
   "SW": {
-   "px": 22,
-   "mean_col": 62.04545454545455
+   "px": 0,
+   "mean_col": null
   },
   "W": {
-   "px": 16,
-   "mean_col": 62.5
+   "px": 0,
+   "mean_col": null
   },
   "SE": {
-   "px": 12,
-   "mean_col": 67.75
+   "px": 0,
+   "mean_col": null
   },
   "E": {
-   "px": 9,
-   "mean_col": 58.888888888888886
+   "px": 0,
+   "mean_col": null
   }
  },
- "idle_S_eye_pixels": 16,
+ "idle_S_eye_pixels": 0,
  "gifs": {
   "blink_8dir_4x.gif": 4,
   "idle_8dir_4x.gif": 4,
