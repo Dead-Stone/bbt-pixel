@@ -1,6 +1,6 @@
 {
  "character": "bernadette",
- "generated": "2026-10-30 00:34 (America/Los_Angeles)",
+ "generated": "2026-10-30 01:34 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -50,41 +50,41 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 209,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "E": {
-   "pixels_differing_from_plain_flip": 122,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 150,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   }
  },
  "decal_check": {
   "S": {
-   "px": 22,
-   "mean_col": 64.63636363636364
+   "px": 0,
+   "mean_col": null
   },
   "SW": {
-   "px": 19,
-   "mean_col": 58.68421052631579
+   "px": 0,
+   "mean_col": null
   },
   "W": {
-   "px": 5,
-   "mean_col": 64.0
+   "px": 0,
+   "mean_col": null
   },
   "SE": {
-   "px": 10,
-   "mean_col": 67.5
+   "px": 0,
+   "mean_col": null
   },
   "E": {
-   "px": 5,
-   "mean_col": 61.4
+   "px": 0,
+   "mean_col": null
   }
  },
- "idle_S_eye_pixels": 64,
+ "idle_S_eye_pixels": 0,
  "gifs": {
   "blink_8dir_4x.gif": 4,
   "idle_8dir_4x.gif": 4,
