@@ -100,7 +100,10 @@ class Cutout:
             an = self.A0[k]; return an[1] if an[0] != 'cap' else (an[1] + an[2]) / 2
         for a, b in pair.items():
             if cnt[a] < 0.6 * cnt[b]:
-                if abs(cen(a)[0] - cen(b)[0]) < 6:
+                tg = P0[b][3]
+                # feet follow their shins (rig order: thigh, shin, foot): copy a far foot only when the shins overlap
+                ca, cb = (a - 1, b - 1) if (tg == 'foot' and P0[a - 1][3] == 'leg' and P0[b - 1][3] == 'leg') else (a, b)
+                if abs(cen(ca)[0] - cen(cb)[0]) < 6:
                     self.copy_of[a] = b          # genuinely overlapping (side view): far limb = darker copy
                 else:
                     # limbs apart on screen but the rig labels went to one of them: split by nearest bone
@@ -143,6 +146,17 @@ class Cutout:
                     # each foot takes the low pixels on the side of its own shin
                     fd = np.stack([np.abs(xx + 0.5 - self.A0[f][1][0]) for f in feet]); fo = np.array(feet)[fd.argmin(0)]
                     own[low] = fo[low]
+            # skirts / dresses stay on the (static) skirt primitive down to the rig's hem: only the legs below
+            # the hem walk, otherwise the leg bones tear the cloth apart in side views
+            sk_ids = [k for k, t in enumerate(tags) if t == 'skirt']
+            if sk_ids and pal is not None:
+                rigp = Bw['pid']; skm = np.isin(rigp, sk_ids)
+                if skm.any():
+                    hem = np.nonzero(skm.any(1))[0].max() + 1
+                    skmats = set(P0[k][2] for k in sk_ids) | set(P0[k][2] for k, t in enumerate(tags) if t == 'pelvis')
+                    okk = np.array([c in skmats for c in cls])
+                    cloth = reg & (yy <= hem - 1)
+                    own[cloth] = sk_ids[0]
             self.lab[reg] = own[reg]
         # copy sources: only master pixels close to the near limb's bone (no stray nearest-bound pixels)
         self.copy_src = {}
