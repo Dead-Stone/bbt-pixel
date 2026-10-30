@@ -9,7 +9,7 @@ const OUT = path.join(__dirname, 'renders'); fs.mkdirSync(OUT, {recursive: true}
 const SHOTS = [
   ['shot_4A_couch_eviction.png', 'loc=floor4&view=4A&t=17:49:24'],
   ['shot_ait_physics_work.png', 'loc=ait_physics&t=09:38:28'],
-  ['shot_amber_slice_shift.png', 'loc=rest_amber_slice&t=14:41:50'],
+  ['shot_amber_slice_shift.png', 'loc=rest_amber_slice&t=15:09:10'],
   ['shot_floor4_game_night.png', 'loc=floor4&view=4A&t=20:38:43'],
   ['shot_floor4_overview.png', 'loc=floor4&view=all&t=20:38:43'],
   ['shot_ait_cafeteria_lunch.png', 'loc=ait_cafeteria&t=12:02:21'],
@@ -19,7 +19,7 @@ const SHOTS = [
 const CLIPS = [  // name, query, sim start, sim end, fps
   ['clip_4A_evening.gif', 'loc=floor4&view=all&follow=sheldon&zoom=2.5&speed=4&talk=2', '17:46:40', '17:50:00', 10],
   ['clip_ait_physics_work.gif', 'loc=ait_physics&follow=howard&zoom=2.2&speed=3&talk=1.5', '09:37:50', '09:39:10', 10],
-  ['clip_amber_slice_shift.gif', 'loc=rest_amber_slice&follow=penny&zoom=3&speed=3&auto=0', '14:41:40', '14:42:30', 10],
+  ['clip_amber_slice_shift.gif', 'loc=rest_amber_slice&follow=penny&zoom=3&speed=3&auto=0', '15:08:50', '15:09:40', 10],
   ['clip_ait_cafeteria_lunch.gif', 'loc=ait_cafeteria&speed=8&talk=3', '12:00:02', '12:02:46', 8],
 ];
 const sec = s => { const [h, m, x] = s.split(':').map(Number); return h * 3600 + m * 60 + (x || 0); };

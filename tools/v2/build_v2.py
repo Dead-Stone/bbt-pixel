@@ -106,7 +106,7 @@ def _draw_prop(im, anim, k, src, plen=8):
     dark = _pc((55, 50, 60))
     if kind == 'tray':
         top, rim = _pc((205, 205, 212)), _pc((140, 140, 150))
-        y0 = ty - 1
+        y0 = ty - 1 if front else ty - 4         # held up on the palm: from behind, it shows over the shoulder
         for dx in range(-5, 6):
             px[(y0, tx + dx)] = top if abs(dx) < 5 else rim
             px[(y0 + 1, tx + dx)] = rim

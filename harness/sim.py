@@ -485,6 +485,7 @@ class Sim:
             elif ty == 'offstage': s = f"{nm} {e['why']}"
             elif ty == 'convo_start': s = f"-- conversation: {', '.join(PERSONAS[c]['name'] for c in e['who'])} on '{e['topic']}' at {e['place']}"
             elif ty == 'reflect': s = f"{nm} reflects: {e['text']}"
+            elif ty == 'emote': s = f"{nm} *{e['anim'].replace('_', ' ')}*"
             elif ty == 'block': s = f"{nm} plan -> {e['act']} ({e['target']})"
             elif ty == 'evict': s = f"{nm} reclaims {e['hook']} from {PERSONAS[e['who']]['name']}"
             elif ty == 'walk': s = f"{nm} walks: {e['to']} ({e['dist']} m)"

@@ -83,6 +83,41 @@ export LLM_MAX_CALLS=400                       # budget; after it is spent the r
 python3 -m harness run --brain llm --serve
 ```
 
+### Prompts
+
+`harness/prompts/` holds one system prompt per character (`sheldon.md`, `leonard.md`, `penny.md`,
+`howard.md`, `raj.md`, `bernadette.md`, `amy.md`). Each covers personality, speech, values, quirks,
+relationships, routine and locations, wants and avoids, reactions, body language (the emote ids that
+character may use) and gait. There are no verbatim lines or catchphrases. `world.md` is the shared world
+prompt: setting, rules, and the action schema. `LLMBrain` builds each system prompt as a short header,
+then the character file, then the world file (`personas.load_prompt`). Dialogue turns ask for JSON
+`{"say": "...", "emote": "<id>|null"}`. The emote is checked against the character's list and location
+(`EMOTE_WHERE`), and a plain-text reply still works as `say`.
+
+### Animation wiring
+
+* **Walk.** There are 8 directions with a per-character gait: Sheldon stiff with long strides, Leonard
+  quick and hunched, Penny with a hip sway, Howard with a jaunty bounce, Raj loose, Bernadette with short
+  quick steps, and Amy purposeful and awkward.
+* **Work.** Stand segments on job hooks carry `act: "work"` (see `is_work`: work/write/serve/order/
+  bartend hooks, laptops, whiteboards and the server station). The viewer loops `work_<dir>`:
+  * Whiteboard: Sheldon, Leonard and Raj.
+  * Laptop: Howard.
+  * Microscope: Amy.
+  * Pipette: Bernadette.
+  * Tray: Penny.
+
+  The tray and the pipette are drawn into the sprite at the rig's fingertip and are hidden when the hand
+  is behind the body.
+* **Talk.** `talk_<dir>` loops while that agent's line is on screen.
+* **Signature moves and emotes.** The brain picks one per dialogue line: MockBrain uses keyword cues plus
+  weighted random from `personas.EMOTES`, and LLMBrain uses its JSON `emote`. The sim logs an `emote`
+  event and the viewer plays it once over the stand pose. Sheldon's `knock_knock_penny` is played by the
+  sim at the 4B door hook.
+* `tools/v2/armcheck.py <cid>` (or `audit.py <cid> --arms`) checks arm proportions: fingertip at
+  mid-thigh, elbow at the waist, upper/fore ratio 0.9-1.35, hand 3-7 px.
+* `tools/v2/arms_before_after.py <rev> <out.png>` renders the cast before/after sheet.
+
 The LLM writes plan intents, dialogue lines (one per turn, in persona, given place, recent memories and
 the conversation so far) and reflections. Any HTTP or parse error falls back to the mock for that call. The
 run summary prints `N LLM calls (F failed -> mock fallback)`.
@@ -115,8 +150,14 @@ Open `harness/viewer/index.html` through the server (it fetches JSON, so `file:/
   * `shot_ait_cafeteria_lunch.png`
   * `shot_amber_slice_dinner.png`
   * `shot_ait_physics_morning.png`
-* `clip_4A_evening.gif`: Leonard and Sheldon come home, chat, Leonard takes the spot, Sheldon reclaims it,
-  and Leonard goes to knock on 4B.
+  * `shot_ait_physics_work.png`
+  * `shot_amber_slice_shift.png`
+* `clip_4A_evening.gif`: follows Sheldon (zoom 2.5). He knocks on 4B, comes back, and reclaims his spot
+  from Leonard.
+* `clip_ait_physics_work.gif`: follows Howard (zoom 2.2) through work loops at the lab benches and a
+  conversation with brain-chosen emotes (magic trick, neuro lecture, sigh and shrug...).
+* `clip_amber_slice_shift.gif`: follows Penny (zoom 3) at the bar, with the tray work loop.
+* `pixcheck/cast_arms_before_after_4x.png`: arms before (f9d1fa1) and after, for all 7 characters.
 * `clip_ait_cafeteria_lunch.gif`: the lunch queue and a table conversation.
 * `event_log_excerpt.txt`
 
@@ -130,6 +171,9 @@ Open `harness/viewer/index.html` through the server (it fetches JSON, so `file:/
   sizes the 4A frame still shows some of the hall.
 * Conversations are turn-based with fixed timing (about 4-5 s per line). There is no interruption.
 * Perception is zone- and radius-based, with no line-of-sight.
+* Talk and emotes are not played while an agent is seated; the seated pose holds. Faces have no mouth or
+  brow animation (eye roll uses lids and head, and eyebrow waggle is body only).
+* The tray and pipette are hidden when the working hand is behind the body (back views).
 * `street_exterior`, `lobby` and `raj_apartment` are pass-through or short visits in the default routines.
 
 ## Seating

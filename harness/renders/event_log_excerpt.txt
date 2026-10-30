@@ -1,92 +1,38 @@
 # Event-log excerpt - mock brain, seed 7, Friday 2026-10-30 (sim clock, America/Los_Angeles)
-# full log: harness/out/sim_day.log (regenerate: python3 -m harness run --brain mock)
+# full log: harness/out/sim_day.log (regenerate: python3 -m harness run --brain mock); *...* = emote / signature move
 
-## Morning carpool: 4A -> lobby -> street -> car to AIT
-08:08:00 [floor4] Leonard plan -> lab work: laser alignment (ait_physics)
-08:08:00 [floor4] Leonard: "Sheldon, I'm heading out now. Want a ride?"
-08:08:00 [floor4] Leonard offers Sheldon a ride to ait_physics
-08:08:00 [floor4] Leonard walks: heads out (stairs to 2311 lobby (ground floor)) (15.5 m)
-08:08:03 [floor4] Sheldon: "Leaving early. Unscheduled, but the alternative is the bus. Agreed."
-08:08:09 [floor4] Leonard goes through the 4A front door
-08:08:11 [floor4] Sheldon plan -> office hours: string-theory calculations (ait_physics)
-08:08:11 [floor4] Sheldon walks: heads out (stairs to 2311 lobby (ground floor)) (14.9 m)
-08:08:12 [floor4] Leonard leaves by stairs -> lobby
-08:08:20 [floor4] Sheldon goes through the 4A front door
-08:08:23 [floor4] Sheldon leaves by stairs -> lobby (with Leonard)
-08:09:12 [lobby] Leonard appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
-08:09:12 [lobby] Leonard walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)
-08:09:16 [lobby] Leonard goes through the glass door
-08:09:18 [lobby] Leonard leaves by door -> street_exterior
-08:09:21 [street_exterior] Leonard appears at 2311 building entrance + street (Pasadena) (door from 2311 lobby (ground floor))
-08:09:21 [street_exterior] Leonard walks: heads out (car to AIT Cafeteria (Arroyo Institute of Technology)) (5.9 m)
-08:09:23 [lobby] Sheldon appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
-08:09:23 [lobby] Sheldon walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)
-08:09:28 [lobby] Sheldon goes through the glass door
-08:09:29 [lobby] Sheldon leaves by door -> street_exterior (with Leonard)
-08:09:32 [street_exterior] Sheldon appears at 2311 building entrance + street (Pasadena) (door from 2311 lobby (ground floor))
-08:09:32 [street_exterior] Sheldon walks: heads out (car to AIT Cafeteria (Arroyo Institute of Technology)) (5.9 m)
-08:09:37 [street_exterior] Leonard leaves by car -> ait_cafeteria
-08:09:37 [street_exterior] Sheldon leaves by car -> ait_cafeteria (with Leonard)
+## 09:37:50-09:39:10  AIT physics: work loops + conversation with emotes (clip_ait_physics_work.gif)
+09:38:12 [ait_physics] -- conversation: Howard, Leonard, Amy on 'science' at AIT Physics: Sheldon's office + shared lab
+09:38:12 [ait_physics] Howard: "Hey Leonard, quick question, zero theory involved."
+09:38:16 [ait_physics] Leonard: "The interferometer is basically a very expensive mood ring."
+09:38:17 [ait_physics] Leonard *sigh shrug*
+09:38:22 [ait_physics] Howard: "See, that's why they give the hard stuff to engineers."
+09:38:22 [ait_physics] Howard *gesture*
+09:38:27 [ait_physics] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
+09:38:27 [ait_physics] Amy *neuro lecture*
+09:38:33 [ait_physics] Howard: "Classic theorist move."
+09:38:33 [ait_physics] Howard *magic trick*
+09:38:36 [ait_physics] Leonard: "Experimentalists do the real work. I'll say it."
+09:38:41 [ait_physics] Howard: "Gotta go, the robot misses me."
+09:38:42 [ait_physics] Howard *gesture*
 
-## AIT cafeteria lunch
-12:00:06 [ait_cafeteria] Sheldon appears at AIT Cafeteria (Arroyo Institute of Technology) (door from AIT Physics: Sheldon's office + shared lab)
-12:00:06 [ait_cafeteria] Sheldon walks: queues for lunch (5.1 m)
-12:00:11 [ait_cafeteria] Sheldon queues for lunch [cafe_food_line#0.queue0, 3 min]
-12:00:13 [ait_cafeteria] Raj appears at AIT Cafeteria (Arroyo Institute of Technology) (door from AIT Physics: Sheldon's office + shared lab)
-12:00:13 [ait_cafeteria] Raj walks: queues for lunch (5.5 m)
-12:00:18 [ait_cafeteria] Raj queues for lunch [cafe_food_line#0.queue1, 4 min]
-12:01:12 [ait_cafeteria] Howard appears at AIT Cafeteria (Arroyo Institute of Technology) (door from AIT Physics: Sheldon's office + shared lab)
-12:01:12 [ait_cafeteria] Howard walks: queues for lunch (7.4 m)
-12:01:18 [ait_cafeteria] Howard queues for lunch [cafe_food_line#0.queue3, 3 min]
-12:01:20 [ait_cafeteria] Sheldon reflects: Note to self: Raj seemed busy earlier. Ask how it's going instead of talking about myself.
-12:01:23 [ait_cafeteria] Howard reflects: Pattern: wherever I go today, Raj is nearby. Coincidence, or I like it that way.
-12:02:12 [ait_cafeteria] -- conversation: Howard, Sheldon, Raj on 'memory' at AIT Cafeteria (Arroyo Institute of Technology)
-12:02:12 [ait_cafeteria] Howard: "Hey Sheldon, quick question, zero theory involved."
-12:02:15 [ait_cafeteria] Leonard appears at AIT Cafeteria (Arroyo Institute of Technology) (door from AIT Physics: Sheldon's office + shared lab)
-12:02:15 [ait_cafeteria] Leonard walks: queues for lunch (6.4 m)
-12:02:15 [ait_cafeteria] Amy appears at AIT Cafeteria (Arroyo Institute of Technology) (door from AIT Physics: Sheldon's office + shared lab)
-12:02:15 [ait_cafeteria] Amy walks: wanders (8.4 m)
-12:02:16 [ait_cafeteria] Sheldon: "I'll allow it, with a footnote."
-12:02:20 [ait_cafeteria] Leonard queues for lunch [cafe_food_line#0.queue2, 3 min]
-12:02:20 [ait_cafeteria] Howard: "Little bird told me you queued for lunch. The bird was me."
-12:02:26 [ait_cafeteria] Raj: "I can host next week! I'm planning a theme."
-12:02:30 [ait_cafeteria] Howard: "I'll bring the new expansion tonight. Prepare."
-12:02:35 [ait_cafeteria] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-12:02:40 [ait_cafeteria] Howard: "Gotta go, the robot misses me."
-12:03:11 [ait_cafeteria] Sheldon walks: grabs a tray (0.2 m)
-12:03:12 [ait_cafeteria] Sheldon grabs a tray [cafe_food_line#0.take_tray, 2 min]
+## 15:08:50-15:09:40  The Amber Slice: Penny on shift (clip_amber_slice_shift.gif)
+15:08:55 [rest_amber_slice] Penny walks: picks up drinks (1.5 m)
+15:08:57 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.bartend, 7 min]
 
-## Home from AIT: Leonard steals Sheldon's spot (4A)
-17:41:38 [floor4] Leonard appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-17:41:38 [floor4] Leonard walks: sneaks a sit in Sheldon's spot (16.8 m)
-17:41:39 [floor4] Sheldon appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-17:41:39 [floor4] Sheldon walks: checks his e-mail first (15.4 m)
-17:41:40 [floor4] Leonard goes through the 4A front door
-17:41:41 [floor4] Sheldon goes through the 4A front door
-17:41:52 [floor4] Sheldon checks his e-mail first [4a_desk_laptop#0.use0, 5 min]
-17:41:52 [floor4] Leonard sneaks a sit in Sheldon's spot [4a_couch#0.seat0, 15 min]
-17:42:04 [floor4] -- conversation: Leonard, Sheldon on 'plans' at apartment 4A
-17:42:04 [floor4] Leonard: "Sheldon! Perfect timing, I need a sanity check."
-17:42:08 [floor4] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-17:42:13 [floor4] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
-17:42:18 [floor4] Sheldon: "That is incorrect, but in an interesting way."
-17:46:52 [floor4] Sheldon walks: sits in his spot (3.1 m)
-17:46:56 [floor4] Sheldon: "Pardon me. That cushion is assigned to me by precedent, posture and a very detailed diagram."
-17:46:56 [floor4] Sheldon reclaims 4a_couch#0.seat0 from Leonard
-17:46:56 [floor4] Sheldon sits in his spot [4a_couch#0.seat0, 16 min]
-17:46:59 [floor4] Leonard: "Okay, okay. It's all yours."
-17:47:04 [floor4] Leonard walks: knocks on Penny's door (17.3 m)
-17:47:13 [floor4] Leonard goes through the 4A front door
-17:47:17 [floor4] Leonard knocks on Penny's door [4b_front_door#0.knock_spot_outside, 3 min]
-
-## Game night (4A)
-20:38:24 [floor4] -- conversation: Amy, Sheldon, Leonard on 'gamenight' at apartment 4A
-20:38:24 [floor4] Amy: "Hello, Sheldon. My amygdala registered your arrival as a positive event."
-20:38:30 [floor4] Sheldon: "I am not competitive. I simply prefer the outcome where I win."
-20:38:35 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
-20:38:41 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
-20:38:47 [floor4] Amy: "Sheldon and I are an unbeatable dyad."
-20:38:52 [floor4] Sheldon: "This conversation has reached its natural conclusion."
-20:39:20 [floor4] Raj appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-20:39:20 [floor4] Raj walks: plays on the couch (14.8 m)
-20:39:22 [floor4] Raj goes through the 4A front door
+## 17:46:40-17:50:00  4th floor: knock at 4B, spot reclaimed (clip_4A_evening.gif)
+17:46:52 [floor4] Sheldon walks: knocks on Penny's door, three times (16.4 m)
+17:47:01 [floor4] Sheldon goes through the 4A front door
+17:47:06 [floor4] Sheldon knocks on Penny's door, three times [4b_front_door#0.knock_spot_outside, 2 min]
+17:47:06 [floor4] Sheldon *knock knock penny*
+17:49:06 [floor4] Sheldon walks: sits in his spot (17.3 m)
+17:49:06 [floor4] Sheldon goes through the 4B front door
+17:49:08 [floor4] Sheldon goes through the 4A front door
+17:49:21 [floor4] Sheldon: "Pardon me. That cushion is assigned to me by precedent, posture and a very detailed diagram."
+17:49:21 [floor4] Sheldon reclaims 4a_couch#0.seat0 from Leonard
+17:49:21 [floor4] Sheldon sits in his spot [4a_couch#0.seat0, 17 min]
+17:49:21 [floor4] Leonard reflects: Pattern: wherever I go today, Sheldon is nearby. Coincidence, or I like it that way.
+17:49:24 [floor4] Leonard: "Okay, okay. It's all yours."
+17:49:29 [floor4] Leonard walks: knocks on Penny's door (17.3 m)
+17:49:38 [floor4] Leonard goes through the 4A front door
+17:49:42 [floor4] Leonard knocks on Penny's door [4b_front_door#0.knock_spot_outside, 3 min]

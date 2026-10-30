@@ -38,11 +38,16 @@
 07:17:04 [floor4] -- conversation: Leonard, Sheldon on 'memory' at apartment 4A
 07:17:04 [floor4] Leonard: "Sheldon! Perfect timing, I need a sanity check."
 07:17:08 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
+07:17:09 [floor4] Sheldon *spot claim*
 07:17:14 [floor4] Leonard: "Okay, okay, fair point."
+07:17:14 [floor4] Leonard *sigh shrug*
 07:17:18 [floor4] Sheldon: "Leonard drives at 8:10. We leave at 8:10 exactly, not 'around'."
+07:17:18 [floor4] Sheldon *gesture*
 07:17:23 [floor4] Leonard: "Honestly? Same."
+07:17:24 [floor4] Leonard *gesture*
 07:17:26 [floor4] Sheldon: "That is incorrect, but in an interesting way."
 07:17:31 [floor4] Leonard: "Talk later? Cool."
+07:17:31 [floor4] Leonard *glasses push*
 07:22:07 [raj_apartment] Raj walks: reads on the sofa (1.6 m)
 07:22:11 [raj_apartment] Raj reads on the sofa [raj_sofa#0.seat0, 13 min]
 07:24:11 [floor4] Amy walks: reviews slides in the armchair (6.0 m)
@@ -76,9 +81,13 @@
 07:49:29 [street_exterior] Bernadette drives off along LOS ROBLES AV
 07:50:04 [floor4] -- conversation: Leonard, Sheldon on 'work' at apartment 4A
 07:50:04 [floor4] Leonard: "Hey. You look like you have news, Sheldon."
+07:50:04 [floor4] Leonard *sigh shrug*
 07:50:08 [floor4] Sheldon: "I have proven that the problem is hard. That counts as progress."
+07:50:08 [floor4] Sheldon *gesture*
 07:50:14 [floor4] Leonard: "Let's not make this a whole thing."
+07:50:14 [floor4] Leonard *sigh shrug*
 07:50:18 [floor4] Sheldon: "Goodbye. I'll send a summary."
+07:50:18 [floor4] Sheldon *gesture*
 07:51:21 [floor4] Amy reviews slides in the armchair [4b_armchair_patterned#0.seat0, 10 min]
 07:53:15 [raj_apartment] Raj walks: reads on the sofa (7.6 m)
 07:53:17 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#0.write, 10 min]
@@ -158,7 +167,9 @@
 08:23:24 [ait_physics] Amy: "Leonard! Best-friend status check: we're still best friends, correct?"
 08:23:30 [ait_physics] Leonard: "We're doing The Amber Slice at quarter to seven, right?"
 08:23:35 [ait_physics] Amy: "Noted for my field journal."
+08:23:35 [ait_physics] Amy *neuro lecture*
 08:23:38 [ait_physics] Leonard: "I'll drive. Sheldon, you're not touching the radio."
+08:23:39 [ait_physics] Leonard *glasses push*
 08:23:43 [ait_physics] Amy: "My prefrontal cortex finds that compelling."
 08:23:48 [ait_physics] Leonard: "Alright, I'm gonna go before Sheldon finds me."
 08:26:10 [ait_cafeteria] Raj appears at AIT Cafeteria (Arroyo Institute of Technology) (car from 2311 building entrance + street (Pasadena))
@@ -185,16 +196,21 @@
 08:36:16 [ait_physics] -- conversation: Raj, Leonard, Howard on 'work' at AIT Physics: Sheldon's office + shared lab
 08:36:16 [ait_physics] Raj: "Leonard! Oh, it's like a comet showing up right on schedule."
 08:36:21 [ait_physics] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
+08:36:21 [ait_physics] Leonard *glasses push*
 08:36:27 [ait_physics] Raj: "Dude, that's the nicest thing anyone's said all week."
+08:36:27 [ait_physics] Raj *astronomy point*
 08:36:32 [ait_physics] Howard: "The rover drove straight for ten whole metres. Applause welcome."
+08:36:32 [ait_physics] Howard *gesture*
 08:36:38 [ait_physics] Raj: "See you later, space cowboy."
 08:41:24 [ait_physics] -- conversation: Amy, Raj on 'work' at AIT Physics: Sheldon's office + shared lab
 08:41:24 [ait_physics] Amy: "Raj. I have a hypothesis about your day."
 08:41:28 [ait_physics] Raj: "I found a variable star that flickers like it's nervous. Relatable."
 08:41:34 [ait_physics] Amy: "Interesting. Repeat it slower."
 08:41:38 [ait_physics] Raj: "My data finally reduced. It looks like a smudge, but a significant smudge."
+08:41:38 [ait_physics] Raj *shy hands*
 08:41:44 [ait_physics] Amy: "Agreed. Wholeheartedly. Clinically."
 08:41:48 [ait_physics] Raj: "Okay bye, this was lovely!"
+08:41:48 [ait_physics] Raj *gesture*
 08:45:51 [ait_physics] Sheldon walks: fills the office whiteboard (0.7 m)
 08:45:52 [ait_physics] Sheldon fills the office whiteboard [off_whiteboard_wall#1.ponder, 27 min]
 08:46:07 [floor4] Penny walks: runs lines for an audition on the couch (6.4 m)
@@ -203,10 +219,12 @@
 08:51:24 [ait_physics] -- conversation: Amy, Leonard on 'memory' at AIT Physics: Sheldon's office + shared lab
 08:51:24 [ait_physics] Amy: "Greetings, Leonard. I'm conducting a casual-conversation trial. You're in it."
 08:51:30 [ait_physics] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+08:51:30 [ait_physics] Leonard *glasses push*
 08:51:35 [ait_physics] Amy: "Earlier, you aligned the optical table. I found that endearing."
 08:51:41 [ait_physics] Leonard: "Ha. Yeah, that tracks."
 08:51:41 [ait_physics] Leonard reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
 08:51:44 [ait_physics] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
+08:51:44 [ait_physics] Amy *neuro lecture*
 08:51:50 [ait_physics] Leonard: "Okay, I should get back to it."
 08:56:55 [ait_physics] Leonard walks: solders a detector board (6.2 m)
 08:57:00 [ait_physics] Leonard solders a detector board [lab_bench_electronics#1.work1, 37 min]
@@ -215,7 +233,9 @@
 09:03:12 [ait_physics] Howard: "Well, if it isn't Raj. Hold that thought, I'm about to be impressive."
 09:03:18 [ait_physics] Raj: "Oh my god, yes, exactly!"
 09:03:21 [ait_physics] Howard: "I've done harder things in a clean room wearing mittens."
+09:03:21 [ait_physics] Howard *eyebrow waggle*
 09:03:26 [ait_physics] Raj: "I'll text you a star chart."
+09:03:27 [ait_physics] Raj *astronomy point*
 09:04:21 [ait_physics] Howard programs the robot arm [lab_robot_arm#0.program, 30 min]
 09:12:52 [ait_physics] Sheldon walks: works at his desk (5.3 m)
 09:12:57 [ait_physics] Sheldon works at his desk [off_desk#0.work, 47 min]
@@ -226,12 +246,15 @@
 09:28:24 [ait_physics] Amy: "Hello, Raj. My amygdala registered your arrival as a positive event."
 09:28:26 [ait_physics] Amy reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
 09:28:29 [ait_physics] Raj: "I can host next week! I'm planning a theme."
+09:28:30 [ait_physics] Raj *gesture*
 09:28:34 [ait_physics] Amy: "I observed that you reduced telescope data at the bench. I've added it to my notes."
+09:28:34 [ait_physics] Amy *neuro lecture*
 09:28:41 [ait_physics] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
 09:28:46 [ait_physics] Amy: "As a scientist and your friend, I disagree."
 09:28:51 [ait_physics] Raj: "That's beautiful, like a binary star system."
 09:33:12 [ait_physics] -- conversation: Howard, Raj on 'work' at AIT Physics: Sheldon's office + shared lab
 09:33:12 [ait_physics] Howard: "Raj, my friend! Ask me what I built this morning."
+09:33:12 [ait_physics] Howard *gesture*
 09:33:16 [ait_physics] Raj: "Okay, now I'm emotional."
 09:33:20 [ait_physics] Howard: "Respectfully, my robot disagrees."
 09:33:24 [ait_physics] Raj: "Wait, wait, I have a metaphor for this."
@@ -244,11 +267,16 @@
 09:38:12 [ait_physics] -- conversation: Howard, Leonard, Amy on 'science' at AIT Physics: Sheldon's office + shared lab
 09:38:12 [ait_physics] Howard: "Hey Leonard, quick question, zero theory involved."
 09:38:16 [ait_physics] Leonard: "The interferometer is basically a very expensive mood ring."
+09:38:17 [ait_physics] Leonard *sigh shrug*
 09:38:22 [ait_physics] Howard: "See, that's why they give the hard stuff to engineers."
+09:38:22 [ait_physics] Howard *gesture*
 09:38:27 [ait_physics] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
+09:38:27 [ait_physics] Amy *neuro lecture*
 09:38:33 [ait_physics] Howard: "Classic theorist move."
+09:38:33 [ait_physics] Howard *magic trick*
 09:38:36 [ait_physics] Leonard: "Experimentalists do the real work. I'll say it."
 09:38:41 [ait_physics] Howard: "Gotta go, the robot misses me."
+09:38:42 [ait_physics] Howard *gesture*
 09:41:28 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work1, 38 min]
 09:46:21 [floor4] Penny walks: runs lines for an audition on the couch (2.0 m)
 09:46:25 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat0, 40 min]
@@ -261,22 +289,29 @@
 10:03:24 [ait_physics] Amy: "Leonard! Best-friend status check: we're still best friends, correct?"
 10:03:30 [ait_physics] Leonard: "That's... actually a good idea."
 10:03:33 [ait_physics] Amy: "That released a measurable amount of dopamine."
+10:03:34 [ait_physics] Amy *neuro lecture*
 10:03:38 [ait_physics] Howard: "Bernie's meeting me for lunch. Act cool."
 10:03:43 [ait_physics] Amy: "Interesting. Repeat it slower."
+10:03:43 [ait_physics] Amy *gesture*
 10:03:46 [ait_physics] Leonard: "Talk later? Cool."
 10:12:16 [ait_physics] -- conversation: Raj, Leonard, Howard on 'memory' at AIT Physics: Sheldon's office + shared lab
 10:12:16 [ait_physics] Raj: "Leonard, hi! Okay, I'll talk slower this time."
 10:12:20 [ait_physics] Leonard: "We're doing The Amber Slice at quarter to seven, right?"
 10:12:23 [ait_physics] Howard reflects: I've talked with Raj 4 time(s) today. That matters to me more than I'd say out loud.
 10:12:25 [ait_physics] Raj: "I noticed you aligned the optical table, and I've been thinking about it all day!"
+10:12:26 [ait_physics] Raj *shy hands*
 10:12:32 [ait_physics] Howard: "Later, buddy."
 10:14:29 [ait_physics] Howard walks: programs the robot arm (8.9 m)
 10:14:36 [ait_physics] Howard programs the robot arm [lab_robot_arm#0.program, 37 min]
 10:15:24 [ait_physics] -- conversation: Amy, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
 10:15:24 [ait_physics] Amy: "Raj. I have a hypothesis about your day."
+10:15:24 [ait_physics] Amy *excited clap*
 10:15:28 [ait_physics] Raj: "Ha, cosmic."
+10:15:28 [ait_physics] Raj *shy hands*
 10:15:31 [ait_physics] Amy: "Agreed. Wholeheartedly. Clinically."
+10:15:31 [ait_physics] Amy *neuro lecture*
 10:15:35 [ait_physics] Raj: "Dude, that's the nicest thing anyone's said all week."
+10:15:35 [ait_physics] Raj *astronomy point*
 10:15:40 [ait_physics] Amy: "Noted for my field journal."
 10:15:44 [ait_physics] Raj: "Oh my god, yes, exactly!"
 10:15:47 [ait_physics] Amy: "I'll log this as a bonding event."
@@ -293,6 +328,7 @@
 10:39:13 [ait_physics] Leonard: "Let's not make this a whole thing."
 10:39:17 [ait_physics] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
 10:39:23 [ait_physics] Leonard: "Alright, I'm gonna go before Sheldon finds me."
+10:39:23 [ait_physics] Leonard *glasses push*
 10:42:41 [ait_physics] Amy walks: images neuron cultures at the bench (9.3 m)
 10:42:49 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#1.work0, 50 min]
 10:44:34 [ait_physics] Raj walks: reduces telescope data at the bench (4.6 m)
@@ -315,9 +351,13 @@
 11:06:04 [ait_physics] -- conversation: Leonard, Howard, Raj on 'work' at AIT Physics: Sheldon's office + shared lab
 11:06:04 [ait_physics] Leonard: "Hey. You look like you have news, Howard."
 11:06:08 [ait_physics] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
+11:06:08 [ait_physics] Howard *eyebrow waggle*
 11:06:14 [ait_physics] Leonard: "I think the detector works. I'm scared to touch it."
+11:06:14 [ait_physics] Leonard *gesture*
 11:06:19 [ait_physics] Raj: "I found a variable star that flickers like it's nervous. Relatable."
+11:06:19 [ait_physics] Raj *astronomy point*
 11:06:25 [ait_physics] Leonard: "Honestly? Same."
+11:06:25 [ait_physics] Leonard *glasses push*
 11:06:28 [ait_physics] Howard: "Ooh, now we're talking."
 11:08:07 [ait_physics] Leonard aligns the optical table [lab_optical_table#0.observe, 54 min]
 11:16:07 [ait_physics] Sheldon works at his desk [off_desk#0.work, 33 min]
@@ -332,14 +372,18 @@
 11:34:17 [ait_physics] Leonard: "Experimentalists do the real work. I'll say it."
 11:34:22 [ait_physics] Howard: "Theory is nice until you need it to survive launch vibrations."
 11:34:27 [ait_physics] Raj: "Did you know some stars wander alone through the galaxy? Rogue stars. Like me before you guys."
+11:34:28 [ait_physics] Raj *astronomy point*
 11:34:35 [ait_physics] Howard: "Zing. I'll be here all week."
 11:34:38 [ait_physics] Leonard: "The interferometer is basically a very expensive mood ring."
+11:34:39 [ait_physics] Leonard *glasses push*
 11:34:44 [ait_physics] Howard: "And scene. Thank you, thank you."
 11:37:12 [ait_physics] -- conversation: Howard, Amy on 'science' at AIT Physics: Sheldon's office + shared lab
 11:37:12 [ait_physics] Howard: "Amy, my friend! Ask me what I built this morning."
 11:37:16 [ait_physics] Amy: "My prefrontal cortex finds that compelling."
 11:37:21 [ait_physics] Howard: "Classic theorist move."
+11:37:21 [ait_physics] Howard *eyebrow waggle*
 11:37:24 [ait_physics] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
+11:37:25 [ait_physics] Amy *neuro lecture*
 11:37:26 [ait_physics] Amy reflects: Sheldon keeps turning up in my day (boyfriend). I should make real time for Sheldon tonight.
 11:37:30 [ait_physics] Howard: "See, that's why they give the hard stuff to engineers."
 11:37:36 [ait_physics] Amy: "Farewell. This interaction was a success."
@@ -358,8 +402,10 @@
 11:55:24 [ait_physics] -- conversation: Amy, Leonard on 'work' at AIT Physics: Sheldon's office + shared lab
 11:55:24 [ait_physics] Amy: "Hello, Leonard. My amygdala registered your arrival as a positive event."
 11:55:30 [ait_physics] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
+11:55:30 [ait_physics] Leonard *glasses push*
 11:55:35 [ait_physics] Amy: "I'm borrowing this bench until someone in physics notices. So, indefinitely."
 11:55:42 [ait_physics] Leonard: "Okay, I should get back to it."
+11:55:42 [ait_physics] Leonard *glasses push*
 12:00:00 [ait_physics] Sheldon plan -> lunch with the guys (ait_cafeteria)
 12:00:00 [ait_physics] Sheldon walks: heads out (door to AIT Cafeteria (Arroyo Institute of Technology)) (3.4 m)
 12:00:00 [ait_physics] Raj plan -> lunch with the guys (ait_cafeteria)
@@ -408,7 +454,9 @@
 12:02:26 [ait_cafeteria] Raj: "I can host next week! I'm planning a theme."
 12:02:30 [ait_cafeteria] Howard: "I'll bring the new expansion tonight. Prepare."
 12:02:35 [ait_cafeteria] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
+12:02:35 [ait_cafeteria] Sheldon *point gotcha*
 12:02:40 [ait_cafeteria] Howard: "Gotta go, the robot misses me."
+12:02:40 [ait_cafeteria] Howard *magic trick*
 12:03:11 [ait_cafeteria] Sheldon walks: grabs a tray (0.2 m)
 12:03:12 [ait_cafeteria] Sheldon grabs a tray [cafe_food_line#0.take_tray, 2 min]
 12:04:18 [ait_cafeteria] Howard walks: wanders (6.0 m)
@@ -432,10 +480,12 @@
 12:06:12 [ait_cafeteria] Howard: "Well, if it isn't Amy. Hold that thought, I'm about to be impressive."
 12:06:13 [ait_cafeteria] Raj eats lunch at the long table [cafe_table_long#2.seat1, 37 min]
 12:06:13 [ait_cafeteria] Leonard: "I saw that you ate lunch at the long table. Everything okay?"
+12:06:14 [ait_cafeteria] Leonard *glasses push*
 12:06:18 [ait_cafeteria] Amy: "Sharing a meal releases oxytocin. I brought extra crackers to maximise it."
 12:06:19 [ait_cafeteria] Bernadette: "I'll be there at 6:40. If you're late, I'll know."
 12:06:24 [ait_cafeteria] Leonard: "Okay, okay, fair point."
 12:06:24 [ait_cafeteria] Howard: "I rate this pudding three stars. One for texture, two for trying."
+12:06:24 [ait_cafeteria] Leonard *sigh shrug*
 12:06:27 [ait_cafeteria] Sheldon: "This conversation has reached its natural conclusion."
 12:06:30 [ait_cafeteria] Amy: "As a scientist and your friend, I disagree."
 12:06:53 [ait_cafeteria] Leonard walks: eats lunch at the long table (8.6 m)
@@ -577,9 +627,11 @@
 13:00:22 [ait_physics] Raj: "Ha, cosmic."
 13:00:23 [ait_physics] Amy annotates results [lab_stool#1.seat0, 18 min]
 13:00:25 [ait_physics] Bernadette: "Ha! Okay, that's funny."
+13:00:26 [ait_physics] Bernadette *hands on hips*
 13:00:29 [ait_physics] Raj: "Oh my god, yes, exactly!"
 13:00:32 [ait_physics] Bernadette: "Cute. Now do it properly."
 13:00:36 [ait_physics] Raj: "I'll text you a star chart."
+13:00:36 [ait_physics] Raj *astronomy point*
 13:02:00 [ait_cafeteria] Howard plan -> afternoon build (ait_physics)
 13:02:02 [ait_cafeteria] Howard walks: heads out (door to AIT Physics: Sheldon's office + shared lab) (10.8 m)
 13:02:09 [ait_cafeteria] Howard goes through the office door
@@ -602,6 +654,7 @@
 13:07:30 [ait_physics] Howard: "I'll bring the new expansion tonight. Prepare."
 13:07:35 [ait_physics] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
 13:07:40 [ait_physics] Howard: "Later, buddy."
+13:07:41 [ait_physics] Howard *magic trick*
 13:10:31 [floor4] Penny walks: tackles the laundry pile (7.8 m)
 13:10:37 [floor4] Penny tackles the laundry pile [4b_laundry_pile#0.pickup, 18 min]
 13:15:12 [ait_physics] -- conversation: Howard, Leonard on 'work' at AIT Physics: Sheldon's office + shared lab
@@ -609,7 +662,9 @@
 13:15:16 [ait_physics] Leonard: "I think the detector works. I'm scared to touch it."
 13:15:21 [ait_physics] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
 13:15:27 [ait_physics] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
+13:15:28 [ait_physics] Leonard *glasses push*
 13:15:33 [ait_physics] Howard: "Gotta go, the robot misses me."
+13:15:33 [ait_physics] Howard *eyebrow waggle*
 13:18:24 [ait_physics] Amy walks: annotates results (4.2 m)
 13:18:29 [ait_physics] Amy annotates results [lab_stool#0.seat0, 21 min]
 13:19:04 [ait_physics] -- conversation: Leonard, Raj, Bernadette on 'memory' at AIT Physics: Sheldon's office + shared lab
@@ -631,6 +686,7 @@
 13:27:12 [ait_physics] -- conversation: Howard, Bernadette on 'plans' at AIT Physics: Sheldon's office + shared lab
 13:27:12 [ait_physics] Howard: "Bernadette! Engineering update, very exciting, try to keep up."
 13:27:17 [ait_physics] Bernadette: "Aww. No."
+13:27:17 [ait_physics] Bernadette *sweet to scary*
 13:27:20 [ait_physics] Howard: "I've done harder things in a clean room wearing mittens."
 13:27:25 [ait_physics] Bernadette: "I'll be there at 6:40. If you're late, I'll know."
 13:27:30 [ait_physics] Howard: "And scene. Thank you, thank you."
@@ -642,8 +698,10 @@
 13:32:24 [ait_physics] -- conversation: Amy, Bernadette on 'memory' at AIT Physics: Sheldon's office + shared lab
 13:32:24 [ait_physics] Amy: "Bernadette. I have a hypothesis about your day."
 13:32:28 [ait_physics] Bernadette: "Honey, I've cultured nicer things than that idea."
+13:32:29 [ait_physics] Bernadette *hands on hips*
 13:32:33 [ait_physics] Amy: "I observed that you pipetted samples at the lab bench. I've added it to my notes."
 13:32:40 [ait_physics] Bernadette: "I'll be there at 6:40. If you're late, I'll know."
+13:32:40 [ait_physics] Bernadette *gesture*
 13:32:45 [ait_physics] Amy: "I'll log this as a bonding event."
 13:34:12 [ait_physics] -- conversation: Howard, Amy on 'plans' at AIT Physics: Sheldon's office + shared lab
 13:34:12 [ait_physics] Howard: "Well, if it isn't Amy. Hold that thought, I'm about to be impressive."
@@ -662,7 +720,9 @@
 13:53:25 [ait_physics] Raj: "Earlier, you ran the interferometer. That's so you."
 13:53:30 [ait_physics] Leonard: "We're doing The Amber Slice at quarter to seven, right?"
 13:53:35 [ait_physics] Raj: "That's beautiful, like a binary star system."
+13:53:36 [ait_physics] Raj *astronomy point*
 13:53:40 [ait_physics] Leonard: "Okay, okay, fair point."
+13:53:40 [ait_physics] Leonard *sigh shrug*
 13:53:44 [ait_physics] Raj: "Okay bye, this was lovely!"
 13:56:16 [ait_physics] Sheldon walks: argues with an equation (2.4 m)
 13:56:18 [ait_physics] Sheldon argues with an equation [off_whiteboard_wall#1.ponder, 22 min]
@@ -680,9 +740,11 @@
 13:59:20 [ait_physics] Bernadette: "Hey Leonard! Did you eat? You should eat."
 13:59:24 [ait_physics] Leonard: "I'll drive. Sheldon, you're not touching the radio."
 13:59:29 [ait_physics] Bernadette: "I saw you ran the interferometer. We'll talk about that."
+13:59:29 [ait_physics] Bernadette *gesture*
 13:59:32 [ait_physics] Amy walks: images neuron cultures at the bench (8.5 m)
 13:59:34 [ait_physics] Howard: "Ooh, now we're talking."
 13:59:38 [ait_physics] Bernadette: "Sure, if you want to be wrong."
+13:59:38 [ait_physics] Bernadette *gesture*
 13:59:39 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#1.work1, 46 min]
 13:59:42 [ait_physics] Leonard: "We're doing The Amber Slice at quarter to seven, right?"
 13:59:47 [ait_physics] Bernadette: "Alright, I've got cultures to boss around."
@@ -694,6 +756,7 @@
 14:11:24 [ait_physics] Raj reflects: I've talked with Leonard 2 time(s) today. That matters to me more than I'd say out loud.
 14:11:26 [ait_physics] Raj: "Wait, wait, I have a metaphor for this."
 14:11:30 [ait_physics] Amy: "Agreed. Wholeheartedly. Clinically."
+14:11:30 [ait_physics] Amy *excited clap*
 14:11:34 [ait_physics] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
 14:11:40 [ait_physics] Amy: "Farewell. This interaction was a success."
 14:13:51 [floor4] Penny walks: watches TV (6.4 m)
@@ -711,12 +774,15 @@
 14:20:17 [ait_cafeteria] Bernadette leaves by car -> street_exterior
 14:24:16 [ait_physics] -- conversation: Raj, Leonard on 'plans' at AIT Physics: Sheldon's office + shared lab
 14:24:16 [ait_physics] Raj: "Leonard! Oh, it's like a comet showing up right on schedule."
+14:24:16 [ait_physics] Raj *shy hands*
 14:24:21 [ait_physics] Leonard: "Ha. Yeah, that tracks."
+14:24:21 [ait_physics] Leonard *glasses push*
 14:24:24 [ait_physics] Raj: "Dude, that's the nicest thing anyone's said all week."
 14:24:30 [ait_physics] Leonard: "Honestly? Same."
 14:24:33 [ait_physics] Raj: "Okay, now I'm emotional."
 14:24:36 [ait_physics] Leonard: "I'll drive. Sheldon, you're not touching the radio."
 14:24:41 [ait_physics] Raj: "See you later, space cowboy."
+14:24:41 [ait_physics] Raj *astronomy point*
 14:27:00 [floor4] Penny plan -> waitress shift at The Amber Slice (rest_amber_slice)
 14:27:02 [floor4] Penny walks: heads out (stairs to 2311 lobby (ground floor)) (14.8 m)
 14:27:10 [floor4] Penny goes through the 4B front door
@@ -731,13 +797,17 @@
 14:30:04 [ait_physics] -- conversation: Leonard, Howard, Amy on 'science' at AIT Physics: Sheldon's office + shared lab
 14:30:04 [ait_physics] Leonard: "Hey. You look like you have news, Howard."
 14:30:08 [ait_physics] Howard: "I put a sensor on the coffee machine. It's sad data."
+14:30:08 [ait_physics] Howard *gesture*
 14:30:13 [ait_physics] Leonard: "The interferometer is basically a very expensive mood ring."
 14:30:17 [street_exterior] Bernadette appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
 14:30:17 [street_exterior] Bernadette walks: walks to the car (7.1 m)
 14:30:19 [ait_physics] Amy: "I mapped a monkey's response to cheese. Very similar to Penny's."
+14:30:19 [ait_physics] Amy *gesture*
 14:30:23 [street_exterior] Bernadette drives off along LOS ROBLES AV
 14:30:24 [ait_physics] Leonard: "Okay, okay, fair point."
+14:30:25 [ait_physics] Leonard *sigh shrug*
 14:30:28 [ait_physics] Howard: "Later, buddy."
+14:30:28 [ait_physics] Howard *eyebrow waggle*
 14:31:22 [ait_physics] Howard walks: rewires the rover (4.2 m)
 14:31:25 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 47 min]
 14:33:21 [ait_physics] Leonard reflects: Note to self: Amy seemed busy earlier. Ask how it's going instead of talking about myself.
@@ -746,9 +816,12 @@
 14:33:38 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
 14:41:12 [ait_physics] -- conversation: Howard, Raj on 'plans' at AIT Physics: Sheldon's office + shared lab
 14:41:12 [ait_physics] Howard: "Hey Raj, quick question, zero theory involved."
+14:41:12 [ait_physics] Howard *magic trick*
 14:41:16 [ait_physics] Raj: "I can host next week! I'm planning a theme."
+14:41:17 [ait_physics] Raj *gesture*
 14:41:21 [ait_physics] Howard: "I'll bring the new expansion tonight. Prepare."
 14:41:26 [ait_physics] Raj: "I'll text you a star chart."
+14:41:26 [ait_physics] Raj *astronomy point*
 14:41:38 [rest_amber_slice] Penny walks: serves a table (7.9 m)
 14:41:44 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 5 min]
 14:45:39 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#1.work1, 49 min]
@@ -762,7 +835,9 @@
 14:50:25 [ait_physics] Leonard hunts for an Allen key [lab_tool_chest#0.use, 4 min]
 14:50:30 [ait_physics] Raj: "My data finally reduced. It looks like a smudge, but a significant smudge."
 14:50:36 [ait_physics] Amy: "The neurons I'm imaging fired in a pattern that resembled a smile."
+14:50:36 [ait_physics] Amy *neuro lecture*
 14:50:42 [ait_physics] Raj: "I found a variable star that flickers like it's nervous. Relatable."
+14:50:42 [ait_physics] Raj *astronomy point*
 14:50:48 [ait_physics] Amy: "I'll log this as a bonding event."
 14:54:25 [ait_physics] Leonard walks: runs the interferometer (2.6 m)
 14:54:27 [ait_physics] Leonard runs the interferometer [lab_optical_table#0.observe, 43 min]
@@ -771,6 +846,7 @@
 14:57:16 [ait_physics] -- conversation: Raj, Leonard on 'memory' at AIT Physics: Sheldon's office + shared lab
 14:57:16 [ait_physics] Raj: "Namaste, Leonard. Got a minute for a fun fact?"
 14:57:20 [ait_physics] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+14:57:21 [ait_physics] Leonard *glasses push*
 14:57:25 [ait_physics] Raj: "I noticed you ran the interferometer, and I've been thinking about it all day!"
 14:57:32 [ait_physics] Leonard: "Alright, I'm gonna go before Sheldon finds me."
 15:01:04 [ait_physics] -- conversation: Leonard, Howard, Amy on 'work' at AIT Physics: Sheldon's office + shared lab
@@ -779,7 +855,9 @@
 15:01:13 [ait_physics] Leonard: "I think the detector works. I'm scared to touch it."
 15:01:18 [ait_physics] Amy: "I'm borrowing this bench until someone in physics notices. So, indefinitely."
 15:01:24 [ait_physics] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
+15:01:25 [ait_physics] Leonard *glasses push*
 15:01:30 [ait_physics] Howard: "Gotta go, the robot misses me."
+15:01:30 [ait_physics] Howard *eyebrow waggle*
 15:03:55 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
 15:05:18 [ait_physics] Raj walks: reduces telescope data at the bench (9.3 m)
 15:05:26 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work0, 31 min]
@@ -794,8 +872,11 @@
 15:24:59 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 10 min]
 15:26:16 [ait_physics] -- conversation: Raj, Leonard, Howard on 'plans' at AIT Physics: Sheldon's office + shared lab
 15:26:16 [ait_physics] Raj: "Leonard, hi! Okay, I'll talk slower this time."
+15:26:16 [ait_physics] Raj *gesture*
 15:26:20 [ait_physics] Leonard: "We're doing The Amber Slice at quarter to seven, right?"
+15:26:21 [ait_physics] Leonard *sigh shrug*
 15:26:25 [ait_physics] Raj: "Ha, cosmic."
+15:26:26 [ait_physics] Raj *shy hands*
 15:26:28 [ait_physics] Howard: "Zing. I'll be here all week."
 15:26:32 [ait_physics] Raj: "Okay bye, this was lovely!"
 15:34:39 [ait_physics] Amy walks: images neuron cultures at the bench (1.4 m)
@@ -807,6 +888,7 @@
 15:36:26 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work0, 30 min]
 15:36:30 [ait_physics] Leonard: "That's... actually a good idea."
 15:36:33 [ait_physics] Amy: "I observed that you ran the interferometer. I've added it to my notes."
+15:36:34 [ait_physics] Amy *gesture*
 15:36:40 [ait_physics] Leonard: "Talk later? Cool."
 15:37:27 [ait_physics] Leonard walks: runs the interferometer (2.5 m)
 15:37:29 [ait_physics] Leonard runs the interferometer [lab_optical_table#0.align, 58 min]
@@ -821,7 +903,9 @@
 15:54:12 [ait_physics] Howard: "Leonard! Engineering update, very exciting, try to keep up."
 15:54:17 [ait_physics] Leonard: "I'll drive. Sheldon, you're not touching the radio."
 15:54:22 [ait_physics] Howard: "Saw that you ran the interferometer. Smooth."
+15:54:22 [ait_physics] Howard *eyebrow waggle*
 15:54:27 [ait_physics] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
+15:54:27 [ait_physics] Raj *shy hands*
 15:54:32 [ait_physics] Howard: "And scene. Thank you, thank you."
 15:57:28 [ait_physics] Howard walks: rewires the rover (4.2 m)
 15:57:31 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 47 min]
@@ -833,16 +917,20 @@
 16:00:12 [ait_physics] -- conversation: Howard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 16:00:12 [ait_physics] Howard: "Well, if it isn't Amy. Hold that thought, I'm about to be impressive."
 16:00:18 [ait_physics] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
+16:00:18 [ait_physics] Amy *neuro lecture*
 16:00:23 [ait_physics] Howard: "Little bird told me you imaged neuron cultures at the bench. The bird was me."
+16:00:23 [ait_physics] Howard *gesture*
 16:00:29 [ait_physics] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
 16:00:35 [ait_physics] Howard: "Respectfully, my robot disagrees."
 16:00:39 [ait_physics] Amy: "My prefrontal cortex finds that compelling."
 16:00:44 [ait_physics] Howard: "Later, buddy."
+16:00:44 [ait_physics] Howard *eyebrow waggle*
 16:03:27 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
 16:06:26 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work0, 47 min]
 16:09:04 [ait_physics] -- conversation: Leonard, Amy on 'plans' at AIT Physics: Sheldon's office + shared lab
 16:09:04 [ait_physics] Leonard: "Oh, hi Amy. How's your day going so far?"
 16:09:08 [ait_physics] Amy: "Noted for my field journal."
+16:09:08 [ait_physics] Amy *excited clap*
 16:09:12 [ait_physics] Leonard: "Honestly? Same."
 16:09:15 [ait_physics] Amy: "Farewell. This interaction was a success."
 16:10:27 [rest_amber_slice] Penny walks: picks up drinks (1.5 m)
@@ -855,8 +943,10 @@
 16:24:04 [ait_physics] -- conversation: Leonard, Howard, Raj on 'work' at AIT Physics: Sheldon's office + shared lab
 16:24:04 [ait_physics] Leonard: "Howard! Perfect timing, I need a sanity check."
 16:24:08 [ait_physics] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
+16:24:09 [ait_physics] Howard *eyebrow waggle*
 16:24:14 [ait_physics] Leonard: "Ha. Yeah, that tracks."
 16:24:17 [ait_physics] Raj: "See you later, space cowboy."
+16:24:18 [ait_physics] Raj *gesture*
 16:24:21 [ait_physics] Leonard reflects: Howard keeps turning up in my day (close friend). I should make real time for Howard tonight.
 16:26:41 [ait_physics] Amy walks: images neuron cultures at the bench (1.4 m)
 16:26:43 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#1.work1, 45 min]
@@ -867,6 +957,7 @@
 16:28:12 [ait_physics] Howard: "Hey Amy, quick question, zero theory involved."
 16:28:16 [ait_physics] Amy: "Interesting. Repeat it slower."
 16:28:20 [ait_physics] Howard: "Ooh, now we're talking."
+16:28:20 [ait_physics] Howard *magic trick*
 16:28:24 [ait_physics] Amy: "That released a measurable amount of dopamine."
 16:28:28 [ait_physics] Howard: "Gotta go, the robot misses me."
 16:34:44 [rest_amber_slice] Penny walks: takes an order (7.5 m)
@@ -879,10 +970,13 @@
 16:41:56 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 4 min]
 16:42:24 [ait_physics] -- conversation: Amy, Leonard on 'memory' at AIT Physics: Sheldon's office + shared lab
 16:42:24 [ait_physics] Amy: "Greetings, Leonard. I'm conducting a casual-conversation trial. You're in it."
+16:42:24 [ait_physics] Amy *excited clap*
 16:42:30 [ait_physics] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+16:42:30 [ait_physics] Leonard *gesture*
 16:42:35 [ait_physics] Amy: "Earlier, you ran the interferometer. I found that endearing."
 16:42:40 [ait_physics] Leonard: "Let's not make this a whole thing."
 16:42:44 [ait_physics] Amy: "As a scientist and your friend, I disagree."
+16:42:45 [ait_physics] Amy *gesture*
 16:42:49 [ait_physics] Leonard: "Alright, I'm gonna go before Sheldon finds me."
 16:44:31 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 31 min]
 16:45:56 [rest_amber_slice] Penny walks: enters orders (14.0 m)
@@ -892,14 +986,19 @@
 16:50:17 [ait_physics] Leonard: "Experimentalists do the real work. I'll say it."
 16:50:22 [ait_physics] Howard: "Theory is nice until you need it to survive launch vibrations."
 16:50:27 [ait_physics] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
+16:50:28 [ait_physics] Raj *astronomy point*
 16:50:33 [ait_physics] Howard: "I put a sensor on the coffee machine. It's sad data."
+16:50:33 [ait_physics] Howard *eyebrow waggle*
 16:50:38 [ait_physics] Leonard: "Okay, I should get back to it."
+16:50:38 [ait_physics] Leonard *gesture*
 16:53:26 [ait_physics] Raj walks: reduces telescope data at the bench (4.3 m)
 16:53:30 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work1, 50 min]
 16:54:12 [ait_physics] -- conversation: Howard, Amy on 'plans' at AIT Physics: Sheldon's office + shared lab
 16:54:12 [ait_physics] Howard: "Well, if it isn't Amy. Hold that thought, I'm about to be impressive."
 16:54:18 [ait_physics] Amy: "Agreed. Wholeheartedly. Clinically."
+16:54:18 [ait_physics] Amy *gesture*
 16:54:22 [ait_physics] Howard: "I've done harder things in a clean room wearing mittens."
+16:54:22 [ait_physics] Howard *eyebrow waggle*
 16:54:27 [ait_physics] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
 16:54:32 [ait_physics] Howard: "And scene. Thank you, thank you."
 16:56:07 [rest_amber_slice] Penny walks: takes an order (11.5 m)
@@ -915,6 +1014,7 @@
 17:11:45 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#1.work0, 50 min]
 17:13:04 [ait_physics] -- conversation: Leonard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:13:04 [ait_physics] Leonard: "Hey Amy, got a second?"
+17:13:04 [ait_physics] Leonard *gesture*
 17:13:07 [ait_physics] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
 17:13:13 [ait_physics] Leonard: "I saw that you imaged neuron cultures at the bench. Everything okay?"
 17:13:19 [ait_physics] Amy: "I'll log this as a bonding event."
@@ -926,12 +1026,15 @@
 17:20:04 [ait_physics] Leonard: "Oh, hi Howard. How's your day going so far?"
 17:20:08 [ait_physics] Howard: "I'll bring the new expansion tonight. Prepare."
 17:20:13 [ait_physics] Leonard: "Wait, earlier you debugged a servo board? Huh."
+17:20:13 [ait_physics] Leonard *gesture*
 17:20:18 [ait_physics] Raj: "I'll text you a star chart."
+17:20:18 [ait_physics] Raj *astronomy point*
 17:20:24 [ait_physics] -- conversation: Amy, Howard on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:20:24 [ait_physics] Amy: "Howard. I have a hypothesis about your day."
 17:20:28 [ait_physics] Howard: "Zing. I'll be here all week."
 17:20:32 [ait_physics] Amy: "I observed that you debugged a servo board. I've added it to my notes."
 17:20:38 [ait_physics] Howard: "Later, buddy."
+17:20:38 [ait_physics] Howard *magic trick*
 17:23:26 [rest_amber_slice] Penny walks: enters orders (11.5 m)
 17:23:35 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
 17:28:35 [rest_amber_slice] Penny walks: serves a table (14.0 m)
@@ -985,6 +1088,7 @@
 17:42:04 [floor4] -- conversation: Leonard, Sheldon on 'plans' at apartment 4A
 17:42:04 [floor4] Leonard: "Sheldon! Perfect timing, I need a sanity check."
 17:42:08 [floor4] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
+17:42:09 [floor4] Sheldon *spot claim*
 17:42:13 [floor4] Leonard: "Okay, okay, fair point."
 17:42:17 [floor4] Sheldon: "This conversation has reached its natural conclusion."
 17:43:30 [ait_physics] Raj walks: reduces telescope data at the bench (9.4 m)
@@ -993,6 +1097,7 @@
 17:47:01 [floor4] Sheldon goes through the 4A front door
 17:47:06 [floor4] Sheldon knocks on Penny's door, three times [4b_front_door#0.knock_spot_outside, 2 min]
 17:47:06 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 6 min]
+17:47:06 [floor4] Sheldon *knock knock penny*
 17:49:06 [floor4] Sheldon walks: sits in his spot (17.3 m)
 17:49:06 [floor4] Sheldon goes through the 4B front door
 17:49:08 [floor4] Sheldon goes through the 4A front door
@@ -1009,9 +1114,11 @@
 17:52:21 [ait_physics] Howard: "Classic theorist move."
 17:52:23 [ait_physics] Howard reflects: Note to self: Raj seemed busy earlier. Ask how it's going instead of talking about myself.
 17:52:24 [ait_physics] Raj: "Earlier, you rewired the rover. That's so you."
+17:52:25 [ait_physics] Raj *shy hands*
 17:52:26 [ait_physics] Amy reflects: Note to self: Howard seemed busy earlier. Ask how it's going instead of talking about myself.
 17:52:29 [ait_physics] Amy: "Interesting. Repeat it slower."
 17:52:33 [ait_physics] Raj: "That's beautiful, like a binary star system."
+17:52:33 [ait_physics] Raj *astronomy point*
 17:52:37 [ait_physics] Howard: "Gotta go, the robot misses me."
 17:52:42 [floor4] Leonard walks: unwinds on the couch (16.3 m)
 17:52:42 [floor4] Leonard goes through the 4B front door
@@ -1049,6 +1156,7 @@
 18:26:24 [ait_physics] -- conversation: Amy, Howard on 'memory' at AIT Physics: Sheldon's office + shared lab
 18:26:24 [ait_physics] Amy: "Hello, Howard. My amygdala registered your arrival as a positive event."
 18:26:30 [ait_physics] Howard: "See, that's why they give the hard stuff to engineers."
+18:26:30 [ait_physics] Howard *magic trick*
 18:26:35 [ait_physics] Amy: "My prefrontal cortex finds that compelling."
 18:26:39 [ait_physics] Howard: "Ooh, now we're talking."
 18:28:34 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 6 min]
@@ -1167,12 +1275,14 @@
 18:55:45 [rest_amber_slice] Bernadette reflects: Pattern: wherever I go today, Sheldon is nearby. Coincidence, or I like it that way.
 18:56:24 [rest_amber_slice] -- conversation: Amy, Sheldon, Leonard on 'memory' at The Amber Slice (restaurant)
 18:56:24 [rest_amber_slice] Amy: "Greetings, Sheldon. I'm conducting a casual-conversation trial. You're in it."
+18:56:24 [rest_amber_slice] Amy *gesture*
 18:56:30 [rest_amber_slice] Sheldon: "Your reasoning has a hole you could drive a rover through."
 18:56:35 [rest_amber_slice] Amy: "Earlier, you had dinner in the booth. I found that endearing."
 18:56:41 [rest_amber_slice] Leonard reflects: I've talked with Sheldon 4 time(s) today. That matters to me more than I'd say out loud.
 18:56:41 [rest_amber_slice] Leonard: "I'll drive. Sheldon, you're not touching the radio."
 18:56:44 [rest_amber_slice] Penny walks: serves a table (14.0 m)
 18:56:46 [rest_amber_slice] Amy: "Noted for my field journal."
+18:56:46 [rest_amber_slice] Amy *neuro lecture*
 18:56:50 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
 18:56:55 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 8 min]
 18:57:12 [rest_amber_slice] -- conversation: Howard, Sheldon, Bernadette on 'dinner' at The Amber Slice (restaurant)
@@ -1208,6 +1318,7 @@
 19:11:20 [rest_amber_slice] -- conversation: Bernadette, Penny, Raj on 'dinner' at The Amber Slice (restaurant)
 19:11:20 [rest_amber_slice] Bernadette: "Oh, Penny, perfect. I need a second opinion that agrees with me."
 19:11:25 [rest_amber_slice] Penny: "Okay, nerds, who's getting what? And no, we don't have a 'theoretical special'."
+19:11:26 [rest_amber_slice] Penny *wine sip*
 19:11:32 [rest_amber_slice] Bernadette: "Nobody touch the bread before I say grace. Kidding! Mostly."
 19:11:37 [rest_amber_slice] Raj: "See you later, space cowboy."
 19:16:16 [rest_amber_slice] Penny walks: serves a table (6.5 m)
@@ -1216,6 +1327,7 @@
 19:19:08 [rest_amber_slice] Penny: "Leonard! Okay, talk to me, I need a break."
 19:19:12 [rest_amber_slice] Leonard: "Ha. Yeah, that tracks."
 19:19:15 [rest_amber_slice] Penny: "Okay, that's kind of adorable."
+19:19:16 [rest_amber_slice] Penny *eye roll*
 19:19:19 [rest_amber_slice] Howard: "Classic theorist move."
 19:19:22 [rest_amber_slice] Penny reflects: Pattern: wherever I go today, Raj is nearby. Coincidence, or I like it that way.
 19:19:23 [rest_amber_slice] Howard reflects: Pattern: wherever I go today, Raj is nearby. Coincidence, or I like it that way.
@@ -1251,6 +1363,7 @@
 19:27:24 [rest_amber_slice] -- conversation: Amy, Penny, Raj on 'memory' at The Amber Slice (restaurant)
 19:27:24 [rest_amber_slice] Amy: "Penny. I have a hypothesis about your day."
 19:27:28 [rest_amber_slice] Penny: "After work I'm coming over. Save me a spot that isn't Sheldon's."
+19:27:28 [rest_amber_slice] Penny *hair flip*
 19:27:34 [rest_amber_slice] Amy: "I observed that you served a table. I've added it to my notes."
 19:27:39 [rest_amber_slice] Raj: "I can host next week! I'm planning a theme."
 19:27:44 [rest_amber_slice] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
@@ -1306,6 +1419,7 @@
 19:50:24 [rest_amber_slice] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
 19:50:29 [rest_amber_slice] Bernadette: "Sure, if you want to be wrong."
 19:50:33 [rest_amber_slice] Penny: "Sweetie, I love you, but no."
+19:50:33 [rest_amber_slice] Penny *hair flip*
 19:50:36 [rest_amber_slice] Bernadette: "Okay! Bye! Do what I said."
 19:51:48 [rest_amber_slice] Penny walks: serves a table (3.0 m)
 19:51:51 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 7 min]
@@ -1361,6 +1475,7 @@
 20:18:12 [rest_amber_slice] -- conversation: Howard, Penny, Bernadette on 'plans' at The Amber Slice (restaurant)
 20:18:12 [rest_amber_slice] Howard: "Well, if it isn't Penny. Hold that thought, I'm about to be impressive."
 20:18:18 [rest_amber_slice] Penny: "Fine, you win this one."
+20:18:18 [rest_amber_slice] Penny *gesture*
 20:18:21 [rest_amber_slice] Howard: "Ooh, now we're talking."
 20:18:24 [rest_amber_slice] -- conversation: Amy, Sheldon on 'work' at The Amber Slice (restaurant)
 20:18:24 [rest_amber_slice] Amy: "Sheldon. I have a hypothesis about your day."
@@ -1376,6 +1491,7 @@
 20:19:20 [rest_amber_slice] Leonard: "Friday dinner here is the one tradition I actually like."
 20:19:26 [rest_amber_slice] Raj: "That's beautiful, like a binary star system."
 20:19:30 [rest_amber_slice] Penny: "Okay, nerds, who's getting what? And no, we don't have a 'theoretical special'."
+20:19:30 [rest_amber_slice] Penny *hair flip*
 20:19:37 [rest_amber_slice] Raj: "This place is my favourite constellation of flavours."
 20:19:42 [rest_amber_slice] Leonard: "Penny's working, so tip like we mean it."
 20:19:46 [rest_amber_slice] Raj: "I'll text you a star chart."
@@ -1501,6 +1617,7 @@
 20:43:30 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 4 min]
 20:46:04 [floor4] -- conversation: Leonard, Raj, Bernadette on 'gamenight' at apartment 4A
 20:46:04 [floor4] Leonard: "Oh, hi Raj. How's your day going so far?"
+20:46:04 [floor4] Leonard *glasses push*
 20:46:08 [floor4] Raj: "Dude, that's the nicest thing anyone's said all week."
 20:46:13 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
 20:46:20 [floor4] Bernadette: "Byeee. Love you. Don't be late."
@@ -1521,6 +1638,7 @@
 20:49:18 [floor4] Sheldon: "My calculation is ninety-eight percent elegant and two percent Leonard's coffee stain."
 20:49:21 [floor4] Leonard reflects: I've talked with Sheldon 5 time(s) today. That matters to me more than I'd say out loud.
 20:49:25 [floor4] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
+20:49:25 [floor4] Leonard *glasses push*
 20:49:30 [floor4] Sheldon: "I have proven that the problem is hard. That counts as progress."
 20:49:36 [floor4] Leonard: "Okay, I should get back to it."
 20:52:30 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
@@ -1558,8 +1676,10 @@
 21:07:12 [floor4] -- conversation: Howard, Leonard on 'work' at apartment 4A
 21:07:12 [floor4] Howard: "Leonard! Engineering update, very exciting, try to keep up."
 21:07:17 [floor4] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+21:07:17 [floor4] Leonard *gesture*
 21:07:22 [floor4] Howard: "The rover drove straight for ten whole metres. Applause welcome."
 21:07:28 [floor4] Leonard: "Talk later? Cool."
+21:07:28 [floor4] Leonard *gesture*
 21:08:30 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
 21:09:00 [floor4] -- conversation: Sheldon, Raj, Amy on 'gamenight' at apartment 4A
 21:09:00 [floor4] Sheldon: "For the record, Raj, I was about to start a conversation myself."
@@ -1576,8 +1696,10 @@
 21:13:04 [floor4] Leonard: "Hey Raj, got a second?"
 21:13:07 [floor4] Raj: "I can host next week! I'm planning a theme."
 21:13:12 [floor4] Leonard: "I saw that you played on the couch. Everything okay?"
+21:13:12 [floor4] Leonard *sigh shrug*
 21:13:17 [floor4] Bernadette: "We are not doing that."
 21:13:20 [floor4] Leonard: "Okay, okay, fair point."
+21:13:20 [floor4] Leonard *sigh shrug*
 21:13:24 [floor4] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
 21:13:29 [floor4] Leonard: "Alright, I'm gonna go before Sheldon finds me."
 21:13:54 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
@@ -1642,6 +1764,7 @@
 21:42:12 [floor4] -- conversation: Howard, Leonard, Raj on 'gamenight' at apartment 4A
 21:42:12 [floor4] Howard: "Hey Leonard, quick question, zero theory involved."
 21:42:16 [floor4] Leonard: "Who brought snacks? Raj, I love you."
+21:42:17 [floor4] Leonard *sigh shrug*
 21:42:21 [floor4] Howard: "Classic theorist move."
 21:42:23 [floor4] Howard reflects: I've talked with Raj 2 time(s) today. That matters to me more than I'd say out loud.
 21:42:24 [floor4] Raj: "Wait, wait, I have a metaphor for this."
