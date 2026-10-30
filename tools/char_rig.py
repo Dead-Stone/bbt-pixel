@@ -153,6 +153,18 @@ def set_character(cid):
     DIM = reproportion(DIMS[cid], BODY[cid]) if os.environ.get('BBT_BODY', 'v2') == 'v2' else DIMS[cid]
     k = float(os.environ['BBT_K']) if os.environ.get('BBT_K') else KSCALE[cid]
     SCALE_EFF = SCALE * (k if os.environ.get('BBT_BODY', 'v2') == 'v2' else 1.0)
+    if os.environ.get('BBT_BODY', 'v2') == 'v2' and os.environ.get('BBT_ARMS', 'v3') == 'v3': anatomical_arms(DIM)
+
+# v3 arms: lengths from the character's own body landmarks (stylised big-head bodies, so the landmark rule beats
+# stature ratios): relaxed hanging arm -> fingertips just above mid-thigh, elbow near the waist, upper arm a bit
+# longer than the forearm (real ratio 0.186 : 0.146 H), hand ~ 0.21 of the shoulder->fingertip drop.
+ARM_SPLIT = (0.42, 0.34, 0.24)
+def anatomical_arms(D):
+    crotch = D['hip_z'] - D['thigh_r'][0] * 0.7; knee = D['hip_z'] - D['L1']
+    T = D['sh_z'] - (crotch + knee) / 2 - 0.8
+    D['arm_T'] = T
+    D['aL1'], D['aL2'], D['hand_l'] = (T * f for f in ARM_SPLIT)
+LAST_ARMS = []      # filled by build(): per side (shoulder, elbow, wrist, hand dir) in local 3-D (cutout arm painter)
 
 # ---------- SDF helpers ----------
 def sd_ell(p, c, r):
@@ -209,9 +221,12 @@ def head_center(pose):
 
 # ---------- pose -> primitives (local: +x character's RIGHT, +y forward, +z up) ----------
 def build(pose):
+    LAST_ARMS.clear()
     P = build_cast(pose) if CID in NEW_CAST else _build_main(pose)
     ak = DIM.get('arm_k', 1.0)
-    if ak != 1.0:
+    if pose.get('no_arms'):      # rig body without arms (cutout: what the AI's arms were covering)
+        P = [(t, (a[0], a[1], 1e-3, 1e-3) + tuple(a[4:]), m, g) if (t == 'cap' and g in ('arm', 'sleeve', 'hand')) else (t, a, m, g) for t, a, m, g in P]
+    elif ak != 1.0:
         P = [(t, (a[0], a[1], a[2] * ak, a[3] * ak) + tuple(a[4:]), m, g) if (t == 'cap' and g in ('arm', 'sleeve', 'hand')) else (t, a, m, g) for t, a, m, g in P]
     return P
 
@@ -266,7 +281,9 @@ def _build_main(pose):
         else:
             P.append(('cap', (sh, el, 4.0, 3.7, ub[2] + shoulder_top + 0.4), 'hoodie', 'sleeve'))
             P.append(('cap', (el, wr, 3.7, 3.5), 'hoodie', 'sleeve'))
-        if CID == 'penny': P.append(('cap', (wr + d2*1.2, wr + d2*4.2, 2.5, 2.2), 'skin', 'hand'))
+        LAST_ARMS.append((sh, el, wr, d2))
+        if 'hand_l' in D: P.append(('cap', (wr + d2*0.6, wr + d2*max(D['hand_l'] - 2.4, 1.0), 2.5, 2.2), 'skin', 'hand'))
+        elif CID == 'penny': P.append(('cap', (wr + d2*1.2, wr + d2*4.2, 2.5, 2.2), 'skin', 'hand'))
         else: P.append(('cap', (wr + d2*1.2, wr + d2*4.4, 2.9, 2.6), 'skin', 'hand'))
     hargs = (head_center(pose), pose.get('head_yaw', 0.0), pose.get('head_pitch', 0.0))
     if CID == 'penny': hargs = hargs + (pose.get('hair_swing', 0.0),)
@@ -506,7 +523,9 @@ def build_cast(pose):
         P.append(('cap', (sh, el, sr[0] + 0.3, sr[0], ub[2] + shoulder_top + 0.4), smat, 'sleeve'))
         P.append(('cap', (el, wr, sr[0], sr[1]), smat, 'sleeve'))
         hr_ = 2.5 if CID in ('bernadette', 'amy') else 2.8
-        P.append(('cap', (wr + d2 * 1.2, wr + d2 * 4.2, hr_, hr_ - 0.3), 'skin', 'hand'))
+        LAST_ARMS.append((sh, el, wr, d2))
+        he = max(D['hand_l'] - hr_, 1.0) if 'hand_l' in D else 4.2
+        P.append(('cap', (wr + d2 * 0.6 if 'hand_l' in D else wr + d2 * 1.2, wr + d2 * he, hr_, hr_ - 0.3), 'skin', 'hand'))
     P.append(('head', (head_center(pose), pose.get('head_yaw', 0.0), pose.get('head_pitch', 0.0), pose.get('hair_swing', 0.0)), None, 'head'))
     return P
 

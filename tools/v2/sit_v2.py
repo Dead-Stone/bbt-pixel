@@ -26,7 +26,8 @@ def front_sit(d):
     """S / N: the thighs point at (away from) the camera, which the 2D bone warp cannot foreshorten.  Seated front
     view = the upper body slides down onto the lap (only the top few rows of the thighs stay visible), shins and
     feet stay on the floor.  Pivot = floor point under the hips: ~11 px behind the feet (S) / in front of them (N)."""
-    c = V.cutout(d, 'open'); m = c.idx
+    c = V.cutout(d, 'open')
+    m = c.pose(dict(BC.idle_pose(0), arms=[(0.35, 1.25), (0.35, 1.25)])); cprot = c.prot   # forearms forward onto the lap     # v2.1: the posed idle (new anatomical arms), not the raw AI master
     caps = [a for a in c.A0 if a[0] == 'cap']
     legs = [k for k, p in enumerate(R.build(BC.idle_pose(0))) if p[3] == 'leg']
     thighs = legs[0::2]
@@ -44,8 +45,8 @@ def front_sit(d):
     blk[sel[:blk.shape[0]]] = top[:blk.shape[0]][sel[:blk.shape[0]]]
     import pixfix as PF
     from cutout import _shades
-    prot = np.zeros_like(out, bool); prot[knee:] = c.protect[knee:]
-    pb = c.protect[:crotch + T]; pblk = prot[D:D + pb.shape[0]]; pblk[sel[:pblk.shape[0]]] = pb[:pblk.shape[0]][sel[:pblk.shape[0]]]
+    prot = np.zeros_like(out, bool); prot[knee:] = cprot[knee:]
+    pb = cprot[:crotch + T]; pblk = prot[D:D + pb.shape[0]]; pblk[sel[:pblk.shape[0]]] = pb[:pblk.shape[0]][sel[:pblk.shape[0]]]
     out = PF.polish(out, V.PAL, protect=prot)
     out = PF.restroke(out, V.PAL, _shades(V.PAL), protect=prot)
     return to_rgba(out, V.PAL), [64, int(py)], [64, int(hip_row)]

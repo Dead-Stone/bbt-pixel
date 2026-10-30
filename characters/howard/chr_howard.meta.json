@@ -44,7 +44,7 @@
  ],
  "anims": {
   "idle": {
-   "frames": 4,
+   "frames": 8,
    "fps": 4,
    "loop": true,
    "dirs": [
@@ -57,7 +57,22 @@
     "E",
     "SE"
    ],
-   "frame_ms": 250
+   "frame_ms": 250,
+   "breath": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "fidget_frames": [
+    4,
+    5,
+    6
+   ]
   },
   "walk": {
    "frames": 8,
@@ -97,6 +112,58 @@
    ],
    "note": "v1 timing kept. v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
   },
+  "work": {
+   "frames": 6,
+   "fps": 8,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 125,
+   "kind": "laptop",
+   "note": "v1 timing kept. looped while the agent is on a work hook"
+  },
+  "talk": {
+   "frames": 4,
+   "fps": 6,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 170,
+   "note": "v1 timing kept. looped while the agent has a speech bubble (v2 masters: body/hands only, no mouth frames)"
+  },
+  "gesture": {
+   "frames": 6,
+   "fps": 8,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 125,
+   "emote": true
+  },
   "eyebrow_waggle": {
    "frames": 4,
    "fps": 10,
@@ -119,8 +186,32 @@
     "rest"
    ],
    "mouth": "smile",
-   "hand": "right thumb at belt (left on mirrored NE/E/SE)"
+   "hand": "right thumb at belt (left on mirrored NE/E/SE)",
+   "emote": true
+  },
+  "magic_trick": {
+   "frames": 6,
+   "fps": 8,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 140,
+   "emote": true
   }
  },
+ "emotes": [
+  "gesture",
+  "eyebrow_waggle",
+  "magic_trick"
+ ],
+ "work_kind": "laptop",
  "notes": "v2: one AI-generated master turnaround (S/SW/W/NW/N idle, refs/v2_master/master_strip.jpg) downscaled to 128px + palette-snapped + cleaned (tools/v2/master.py), faces hand-placed per facing (tools/v2/faces.py), animated by cut-out bone deformation driven by the v1 rig skeleton (tools/v2/cutout.py); E/NE/SE mirror W/NW/SW.  Emotes move limbs/head only: face expressions, head turns and hair swing are not re-drawn.  v1 sheets: refs/v1_style/."
 }

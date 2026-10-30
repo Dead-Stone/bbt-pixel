@@ -20,29 +20,64 @@ BODY_H = R.TARGET_H[CID]   # v2: real-height ratio (Sheldon 185 cm = 100 px)
 HEAD_TOP_SPEC = 116 - BODY_H
 
 IDLE_ARMS = [(0.03, 0.12), (0.03, 0.12)]
-def idle_pose(k):
-    return dict(breathe=[0, 1, 1, 0][k] * PX, legs=[(0, 0.02), (0, 0.02)], arms=list(IDLE_ARMS), abduct=IDLE_AB)
-
-# v2 gaits: th = stride (thigh swing), kn = knee bend, arm = arm swing, eb = elbow bend, ab = arm abduction,
-# sway = hip shift (px), roll = counter shoulder shift (px)
-WALK = {'sheldon': dict(th=0.27, kn=0.30, arm=0.12, eb=0.04, ab=0.06),                 # stiff, straight-legged, arms rigid at sides
-        'leonard': dict(th=0.30, kn=0.60, arm=0.28, eb=0.15, ab=0.10),                 # short, quick, slightly hunched
-        'penny': dict(th=0.34, kn=0.58, arm=0.26, eb=0.15, ab=0.10, sway=1.0),         # athletic, hip sway
-        'howard': dict(th=0.34, kn=0.58, arm=0.34, eb=0.20, ab=0.16, sway=1.0, roll=-0.6),   # swagger: elbows out, hips + shoulder roll
-        'raj': dict(th=0.31, kn=0.56, arm=0.24, eb=0.15, ab=0.14),                     # medium, arms clear the fuller torso
-        'bernadette': dict(th=0.23, kn=0.50, arm=0.22, eb=0.18, ab=0.12, sway=0.6),    # short quick steps
-        'amy': dict(th=0.22, kn=0.34, arm=0.08, eb=0.10, ab=0.06)}[CID]                # stiff, small stride, arms held close
+D_ = R.DIM; SHZ, SHX = D_['sh_z'], D_['sh_x']; AL = D_['aL1'] + D_['aL2']; HL = D_.get('hand_l', 6.0)
+HC = np.array(D_['head_c'], float); HR = np.array(D_['head'], float) * D_.get('head_k', 1.0)
+PZ = D_['pelvis'][0]
+IKO = R.DIM.get('ik_off', (0.0, 0.0, 0.0))   # rig adds this to every IK target (made for face targets); v2.1 targets are absolute
+def T(side, x, y, dz):
+    """IK wrist target: side 1 = right (+x). x = lateral offset from the shoulder (outward +), y = forward, dz = height vs shoulder"""
+    sx = SHX + x; return ((sx if side else -sx), y - IKO[1], SHZ + dz - IKO[2])
+def PO(side, x, y, z):   # elbow pole, mirrored for the left arm
+    return ((x if side else -x), y, z)
+MOUTH = (HC[1] + HR[1] * 0.95, HC[2] - HR[2] * 0.42)      # (forward, height) of the mouth
+def to_face(side, fwd=2.0, up=0.0, lat=-0.55):
+    """wrist target that puts the hand (pointing up from the wrist) at the mouth / chin"""
+    return {side: ((SHX * lat if side else -SHX * lat), MOUTH[0] + fwd - IKO[1], MOUTH[1] - HL * 0.75 + up - IKO[2]), }
 IDLE_AB = {'sheldon': 0.06, 'amy': 0.06, 'raj': 0.13, 'howard': 0.12}.get(CID, 0.10)
+# idle: 8 frames @ 4 fps = breathing (2 breaths) + a small character-specific fidget on f4-f6
+IDLE_BREATH = [0, 1, 1, 0, 0, 1, 1, 0]
+def clasp(dz, gap=0.0):
+    """both wrists just in front of the body, meeting at the midline (hands clasped / fiddling)"""
+    return {sd: (T(sd, -SHX + 1.0 + gap, AL * 0.36, dz), PO(sd, 1.0, -0.5, -0.6)) for sd in (0, 1)}
+def idle_fidget(p, k):
+    f = k in (4, 5, 6); g = k == 5
+    if not f: return p
+    if CID == 'sheldon':   p['head_off'] = (0, -1); p['abduct'] = 0.03                       # straightens up, arms pinned
+    elif CID == 'leonard': p['sway'] = 1.0 * PX; p['head_off'] = (0, 1); p['arms'] = [(0.03, 0.12), (0.10, 0.55 if g else 0.4)]   # weight shift, slump, fiddles
+    elif CID == 'penny':   p['sway'] = 1.2 * PX; p['ik'] = {1: (T(1, 1.2, -0.6, -(SHZ - PZ) + 2.5), PO(1, 1.0, -0.8, 0.0))}   # hand to hip, hip pops
+    elif CID == 'howard':  p['breathe'] = (2 if g else 1) * PX; p['abduct'] = 0.20             # bounces on his toes, elbows out
+    elif CID == 'raj':     p['ik'] = clasp(-AL * 0.66, 1.2 if g else 0.4)                                        # fiddles with his hands
+    elif CID == 'bernadette': p['head_off'] = (1, 0); p['ik'] = clasp(-AL * 0.68)                              # head tilt, hands clasped
+    elif CID == 'amy':     p['ik'] = clasp(-AL * 0.52); p['head_off'] = (0, -1 if g else 0)                  # hands clasped high
+    return p
+def idle_pose(k, fidget=False):
+    p = dict(breathe=IDLE_BREATH[k % 8] * PX, legs=[(0, 0.02), (0, 0.02)], arms=list(IDLE_ARMS), abduct=IDLE_AB)
+    return idle_fidget(p, k) if fidget else p
+
+# v2.1 gaits: th = stride (thigh swing), kn = knee bend, arm = arm swing, eb = elbow bend (rest), ef = extra elbow bend
+# on the forward swing, ab = arm abduction, sway = hip shift (px), roll = counter shoulder shift (px), bob = vertical bounce (px),
+# hunch = head forward/down (px), asym = arm held bent (Amy), fps = frame rate
+WALK = {'sheldon': dict(th=0.36, kn=0.24, arm=0.13, eb=0.10, ef=0.25, ab=0.05, bob=0, head=(0, -1)),        # stiff, upright, long strides
+        'leonard': dict(th=0.27, kn=0.55, arm=0.24, eb=0.20, ef=0.55, ab=0.09, bob=1, head=(0, 1)),         # quick, slightly hunched
+        'penny': dict(th=0.32, kn=0.55, arm=0.24, eb=0.18, ef=0.55, ab=0.09, sway=1.4, roll=-0.5),         # confident, hip sway
+        'howard': dict(th=0.30, kn=0.60, arm=0.30, eb=0.25, ef=0.6, ab=0.16, sway=0.6, roll=-0.6, bob=2),   # jaunty bounce
+        'raj': dict(th=0.30, kn=0.52, arm=0.32, eb=0.22, ef=0.7, ab=0.13, sway=0.5, roll=0.4),            # loose, relaxed
+        'bernadette': dict(th=0.20, kn=0.48, arm=0.20, eb=0.25, ef=0.5, ab=0.10, sway=0.6, bob=1),         # short quick steps
+        'amy': dict(th=0.25, kn=0.36, arm=0.14, eb=0.12, ef=0.35, ab=0.05, asym=(0.06, 0.70), head=(0, -1))}[CID]   # purposeful, a little awkward
 def walk_pose(k):
     legs, arms = [], []
     for side in (0, 1):
         ph = math.pi / 2 + 2 * math.pi * k / 8 + side * math.pi
         legs.append((WALK['th'] * math.sin(ph), 0.08 + WALK['kn'] * max(0.0, math.cos(ph)) ** 1.5))
-        fl = -WALK['arm'] * math.sin(ph); arms.append((fl, WALK['eb'] + 0.1 * max(0.0, fl)))
+        fl = -WALK['arm'] * math.sin(ph)       # arm swings opposite to its own-side leg
+        arms.append((fl, WALK['eb'] + WALK['ef'] * max(0.0, fl / WALK['arm'])))   # elbow bends more on the forward swing
+    if WALK.get('asym'): arms[0] = WALK['asym']   # Amy: left arm held stiffly bent (bag-strap habit), right arm swings
     p = dict(legs=legs, arms=arms, abduct=WALK['ab']); p['lift'] = R.sole_lift(legs)
     c = math.cos(2 * math.pi * k / 8)
     if WALK.get('sway'): p['sway'] = WALK['sway'] * PX * c          # hip shift toward the stance leg
-    if WALK.get('roll'): p['roll'] = WALK['roll'] * PX * c          # shoulders counter the hips (swagger)
+    if WALK.get('roll'): p['roll'] = WALK['roll'] * PX * c          # shoulders counter the hips
+    if WALK.get('bob'): p['breathe'] = WALK['bob'] * PX * (abs(math.cos(math.pi * k / 4)))   # up at mid-stance (two steps per cycle)
+    if WALK.get('head'): p['head_off'] = WALK['head']
     return p
 
 # ---- knock_knock_penny (v1: 24 frames) ----
@@ -62,25 +97,6 @@ def knock_pose(k, d):
         arms[ai] = tuple(K_A[j] * (1 - t) + IDLE_ARMS[ai][j] * t for j in range(2))
     p['arms'] = arms
     return p
-
-ANIMS = [  # name, nframes, fps, loop, dirs, ms
-    ('idle', 4, 4, True, DIRS8, 250),
-    ('walk', 8, 10, True, DIRS8, 100),
-]
-if CID == 'sheldon':
-    ANIMS.append(('knock_knock_penny', len(KNOCK_SEQ), 8, False, ['SW', 'NW', 'NE', 'SE'], 125))
-ANIMS.append(('blink', 3, 12, False, DIRS8, 80))
-if CID == 'leonard':
-    ANIMS.append(('glasses_push', 4, 10, False, DIRS8, 100))
-if CID == 'penny':
-    ANIMS.append(('hair_flip', 6, 10, False, DIRS8, 100))
-if CID == 'bernadette':     # spec 3.6: quick little steps, walk 12 fps
-    ANIMS[1] = ('walk', 8, 12, True, DIRS8, 83)
-SIG = {'howard': ('eyebrow_waggle', 4, 10, 100), 'raj': ('astronomy_point', 4, 8, 125),
-       'bernadette': ('sweet_to_scary', 6, 10, 100), 'amy': ('neuro_lecture', 6, 8, 125)}
-if CID in SIG:
-    n_, f_, ms_ = SIG[CID][1:]
-    ANIMS.append((SIG[CID][0], n_, f_, False, DIRS8, ms_))
 
 # ---- cast v1 signature emotes (spec 3.4-3.7) ----
 def ew_pose(k):    # Howard eyebrow_waggle: brows up/down twice with a smug grin, head cocked
@@ -128,12 +144,150 @@ GP_DZ = [0.0, 0.0, 1.0, 0.0]
 def gp_pose(k):
     p = idle_pose(0); p['ik'] = {1: (GP_WRIST[k], (1.0, 0.2, -1.0))}
     return p
+
+# ---- v2.1 work / talk / gesture / signature moves (all 8 dirs; E/NE/SE mirror W/NW/SW) ----
+WORK_KIND = {'sheldon': 'whiteboard', 'leonard': 'whiteboard', 'raj': 'whiteboard', 'howard': 'laptop',
+             'amy': 'microscope', 'bernadette': 'pipette', 'penny': 'tray'}[CID]
+def work_pose(k):
+    p = idle_pose(0); p['breathe'] = (k % 2) * PX * 0.5; kind = WORK_KIND
+    if kind == 'whiteboard':     # right hand writes on a board in front at head height: strokes left-right, small line drop
+        xs = [-3.0, -1.0, 1.0, 3.0, 1.5, -2.0][k]; dz = [6.0, 6.5, 6.0, 6.5, 4.5, 4.0][k]
+        p['ik'] = {1: (T(1, xs - 4.0, AL * 0.62, dz), PO(1, 1.0, -0.2, -1.0))}
+        p['arms'] = [(0.06, 0.55), IDLE_ARMS[1]]          # other hand relaxed, slightly bent
+        p['head_off'] = (0, -1) if k in (0, 1, 2, 3) else (0, 0)
+    elif kind == 'laptop':       # Howard: both hands forward at bench height, typing / soldering jabs
+        for sd in (0, 1):
+            j = (k + sd * 3) % 6; p.setdefault('ik', {})[sd] = (T(sd, -3.5, AL * 0.55, -AL * 0.48 + (1.0 if j in (1, 4) else 0.0)), PO(sd, 0.8, -0.6, -0.5))
+        p['head_off'] = (0, 1)
+    elif kind == 'microscope':   # Amy: leans to the eyepiece, hands on the focus knobs (alternate small turns)
+        for sd in (0, 1):
+            p.setdefault('ik', {})[sd] = (T(sd, -2.0, AL * 0.5, -AL * 0.42 + (0.8 if (k + sd) % 3 == 0 else 0.0)), PO(sd, 1.0, -0.4, -0.6))
+        p['head_off'] = (0, 2)
+    elif kind == 'pipette':      # Bernadette: right hand raised with the pipette, thumb presses (hand dips); left holds the tube
+        p['ik'] = {1: (T(1, -3.0, AL * 0.52, -AL * 0.12 - (1.2 if k in (2, 3) else 0.0)), PO(1, 1.0, -0.3, -1.0)),
+                   0: (T(0, -4.0, AL * 0.48, -AL * 0.38), PO(0, 1.0, -0.4, -0.8))}
+    else:                        # Penny: carries a serving tray at shoulder height on the right hand, left arm swings; weight shifts
+        p['ik'] = {1: (T(1, 1.5, AL * 0.38, -AL * 0.05 + (0.5 if k in (1, 4) else 0.0)), PO(1, 0.6, -0.5, -1.0))}
+        p['arms'] = [((0.10, 0.25), (-0.05, 0.15), (-0.12, 0.12), (-0.05, 0.15), (0.10, 0.25), (0.15, 0.35))[k], IDLE_ARMS[1]]
+        p['sway'] = PX * (1 if k < 3 else -1)
+    return p
+
+TALK_AMP = {'sheldon': 0.6, 'leonard': 0.8, 'penny': 1.0, 'howard': 1.1, 'raj': 1.3, 'bernadette': 0.9, 'amy': 0.7}[CID]
+def talk_pose(k):   # conversational beat: right hand opens forward at waist height, small head nods
+    p = idle_pose(0); a = TALK_AMP
+    p['ik'] = {1: (T(1, [0.5, 2.0 * a, 1.0, 2.5 * a][k], AL * (0.35 + 0.1 * a), -AL * 0.48 + [0, 2.0 * a, 1.0, 1.5 * a][k]), PO(1, 1.0, -0.6, -0.6))}
+    p['head_off'] = (0, [0, -1, 0, 0][k])
+    if CID in ('raj', 'howard', 'penny') and k in (1, 3):
+        p['ik'][0] = (T(0, 1.5 * a, AL * 0.3, -AL * 0.55 + 1.0 * a), PO(0, 1.0, -0.6, -0.6))
+    return p
+def gesture_pose(k):   # bigger both-arm explanation: arms open, palms up, then back
+    p = idle_pose(0); o = [0.0, 0.6, 1.0, 1.0, 0.6, 0.0][k]
+    if o == 0: return p
+    for sd in (0, 1):
+        p.setdefault('ik', {})[sd] = (T(sd, 1.0 + 4.0 * o, AL * (0.25 + 0.2 * o), -AL * 0.62 + AL * 0.25 * o), PO(sd, 1.0, -0.6, -0.5))
+    p['head_off'] = (0, -1 if k in (2, 3) else 0); p['breathe'] = PX * (1 if k in (2, 3) else 0)
+    return p
+
+# signature moves --------------------------------------------------------------------------------------------
+def point_pose(k):     # Sheldon: the triumphant 'gotcha' point (no text): wind-up, sharp point forward at chest height, hold
+    p = idle_pose(0); s = [0, 1, 2, 2, 1][k]
+    if s == 1: p['ik'] = {1: (T(1, 0.0, AL * 0.35, -AL * 0.35), PO(1, 1.0, -0.6, -0.4))}
+    if s == 2: p['ik'] = {1: (T(1, -2.0, AL * 0.92, -1.0), PO(1, 1.0, 0.0, -1.0))}; p['head_off'] = (0, -1); p['breathe'] = PX
+    return p
+def spot_pose(k):      # Sheldon: claims his spot: points down at the seat in front, then taps it twice
+    p = idle_pose(0); s = [0, 1, 2, 1, 2][k]
+    if s: p['ik'] = {1: (T(1, -1.0, AL * 0.6, -AL * 0.7 - (1.5 if s == 2 else 0.0)), PO(1, 1.0, -0.3, -0.2))}; p['head_off'] = (0, 1)
+    return p
+def shrug_pose(k):     # Leonard: sigh (chest drops) then shrug (shoulders up, palms out)
+    p = idle_pose(0); s = [0, 1, 2, 3, 2, 0][k]
+    if s == 1: p['breathe'] = -PX; p['head_off'] = (0, 1)
+    if s >= 2:
+        o = 1.0 if s == 3 else 0.6
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (T(sd, 2.0 + 3.0 * o, AL * 0.3, -AL * 0.62 + 2.0 * o), PO(sd, 0.2, -1.0, -0.6))
+        p['breathe'] = PX * (2 if s == 3 else 1); p['head_off'] = (0, 1 if s == 3 else 0)
+    return p
+def sip_pose(k):       # Penny: wine sip: hand rises to the mouth, tip, lowers
+    p = idle_pose(0); s = [0, 1, 2, 3, 2, 1][k]
+    if s == 1: p['ik'] = {1: (T(1, -2.0, AL * 0.5, -AL * 0.45), PO(1, 1.0, -0.5, -1.0))}
+    if s >= 2: p['ik'] = to_face(1, fwd=1.5, up=(0.8 if s == 3 else 0.0)); p['ik'][1] = (p['ik'][1], PO(1, 1.0, -0.2, -1.0))
+    if s == 3: p['head_off'] = (0, -1)
+    return p
+def roll_pose(k):      # Penny: eye roll: lids half, head tips back and to the side, weight on one hip, hand on hip
+    p = idle_pose(0); s = [0, 1, 2, 2, 1][k]
+    if s:
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (T(sd, 1.2, -0.3, -(SHZ - PZ) + 2.5), PO(sd, 1.0, -0.3, 0.0))
+        p['sway'] = PX * 1.2
+    if s == 2: p['head_off'] = (1, -1)
+    return p
+def magic_pose(k):     # Howard: magic trick: hands meet in front, right hand flourishes up-and-out ('ta-da'), back
+    p = idle_pose(0); s = [0, 1, 1, 2, 3, 3][k]
+    if s == 1:
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (T(sd, -SHX * 0.85, AL * 0.55, -AL * 0.42 + (k - 1) * 0.6), PO(sd, 1.0, -0.6, -0.6))
+    if s == 2: p['ik'] = {0: (T(0, -SHX * 0.6, AL * 0.55, -AL * 0.42), PO(0, 1.0, -0.6, -0.6)), 1: (T(1, 1.0, AL * 0.6, -AL * 0.2), PO(1, 1.0, -0.4, -0.8))}
+    if s == 3:
+        p['ik'] = {0: (T(0, 1.0, AL * 0.45, -AL * 0.45), PO(0, 1.0, -0.6, -0.6)), 1: (T(1, 3.0, AL * 0.5, AL * 0.25), PO(1, 1.0, -0.4, -1.0))}
+        p['head_off'] = (0, -1); p['breathe'] = PX
+    return p
+def shy_pose(k):       # Raj: shy: both hands come up to cover the face, peek, down
+    p = idle_pose(0); s = [0, 1, 2, 2, 1][k]
+    if s == 1:
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (T(sd, -SHX * 0.5, AL * 0.45, -AL * 0.3), PO(sd, 1.0, -0.5, -1.0))
+    if s == 2:
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (to_face(sd, fwd=1.0, up=1.5, lat=0.28)[sd], PO(sd, 1.0, -0.3, -1.0))
+        p['head_off'] = (0, 1)
+    return p
+def hips_pose(k):      # Bernadette: hands on hips, chin up, little nod
+    p = idle_pose(0); s = [0, 1, 1, 1][k]
+    if s:
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (T(sd, 0.8, -0.3, -(SHZ - PZ) + 2.5), PO(sd, 1.0, -0.3, 0.0))
+        p['head_off'] = (0, [0, -1, 0, -1][k])
+    return p
+def clap_pose(k):      # Amy: excited clap: hands together/apart at chest height, little bounce
+    p = idle_pose(0); s = [0, 1, 2, 1, 2, 0][k]
+    if s:
+        g = 2.5 if s == 1 else 0.0
+        for sd in (0, 1): p.setdefault('ik', {})[sd] = (T(sd, -SHX + 1.0 + g, AL * 0.5, -AL * 0.25), PO(sd, 1.0, -0.6, -0.8))
+        p['breathe'] = PX * (1 if s == 2 else 0)
+    return p
+
+ANIMS = [  # name, nframes, fps, loop, dirs, ms
+    ('idle', 8, 4, True, DIRS8, 250),
+    ('walk', 8, 12 if CID == 'bernadette' else 10, True, DIRS8, 83 if CID == 'bernadette' else 100),
+    ('blink', 3, 12, False, DIRS8, 80),
+    ('work', 6, 8, True, DIRS8, 125),
+    ('talk', 4, 6, True, DIRS8, 170),
+    ('gesture', 6, 8, False, DIRS8, 125),
+]
+if CID == 'sheldon':
+    ANIMS.append(('knock_knock_penny', len(KNOCK_SEQ), 8, False, ['SW', 'NW', 'NE', 'SE'], 125))
+SIGS = {'sheldon': [('point_gotcha', 5, 8, 125), ('spot_claim', 5, 8, 125)],
+        'leonard': [('glasses_push', 4, 10, 100), ('sigh_shrug', 6, 8, 140)],
+        'penny': [('hair_flip', 6, 10, 100), ('wine_sip', 6, 8, 150), ('eye_roll', 5, 6, 170)],
+        'howard': [('eyebrow_waggle', 4, 10, 100), ('magic_trick', 6, 8, 140)],
+        'raj': [('astronomy_point', 4, 8, 125), ('shy_hands', 5, 6, 170)],
+        'bernadette': [('sweet_to_scary', 6, 10, 100), ('hands_on_hips', 4, 6, 170)],
+        'amy': [('neuro_lecture', 6, 8, 125), ('excited_clap', 6, 10, 100)]}[CID]
+for nm_, n_, f_, ms_ in SIGS: ANIMS.append((nm_, n_, f_, False, DIRS8, ms_))
+SIG = {c: v for c, v in {'howard': ('eyebrow_waggle', 4, 10, 100), 'raj': ('astronomy_point', 4, 8, 125),
+       'bernadette': ('sweet_to_scary', 6, 10, 100), 'amy': ('neuro_lecture', 6, 8, 125)}.items()}
+SIGNATURE = [a[0] for a in SIGS] + (['knock_knock_penny'] if CID == 'sheldon' else [])
+EMOTE_ANIMS = ['gesture'] + SIGNATURE
+EYES_FOR = {'eye_roll': ['open', 'half', 'half', 'half', 'open'], 'shy_hands': ['open', 'half', 'closed', 'half', 'open'],
+            'sigh_shrug': ['open', 'half', 'open', 'open', 'open', 'open']}
+def eyes_for(anim, k):
+    if anim == 'blink': return BLINK_EYES[k]
+    return EYES_FOR.get(anim, ['open'] * 99)[k]
 ANIMS_BY = {a[0]: a for a in ANIMS}
+SHEET_COLS = 16
 BLINK_EYES = ['half', 'closed', 'half']
 
 def pose_for(anim, k, d):
-    if anim == 'idle': return idle_pose(k)
+    if anim == 'idle': return idle_pose(k, fidget=True)
     if anim == 'walk': return walk_pose(k)
+    F = {'work': work_pose, 'talk': talk_pose, 'gesture': gesture_pose, 'point_gotcha': point_pose, 'spot_claim': spot_pose,
+         'sigh_shrug': shrug_pose, 'wine_sip': sip_pose, 'eye_roll': roll_pose, 'magic_trick': magic_pose, 'shy_hands': shy_pose,
+         'hands_on_hips': hips_pose, 'excited_clap': clap_pose}
+    if anim in F: return F[anim](k)
     if anim == 'knock_knock_penny': return knock_pose(k, d)
     if anim == 'blink': return idle_pose(0)
     if anim == 'glasses_push': return gp_pose(k)
@@ -159,13 +313,14 @@ def durations(name, n):
     return [ms] * n
 
 def main():
-    t0 = time.time(); layout, r = [], 0
-    for name, n, fps, loop, dirs, ms in ANIMS:
-        for d in dirs:
+    t0 = time.time(); layout, i = [], 0
+    for name, n, fps, loop, dirs, ms in ANIMS:      # v2.1: flat packing (16 cols) -- the extra work/talk/gesture/signature
+        for d in dirs:                               # anims do not fit one-row-per-anim under the 4096-px atlas limit
             imgs = [frame_img(name, k, d) for k in range(n)]
-            layout.append((name, d, imgs, [(r + k // COLS, k % COLS) for k in range(n)])); r += (n + COLS - 1) // COLS
+            layout.append((name, d, imgs, [((i + k) // SHEET_COLS, (i + k) % SHEET_COLS) for k in range(n)])); i += n
             print(f'{name}_{d} done {time.time()-t0:.0f}s', flush=True)
-    H = r * CELL; W = COLS * CELL; assert H <= 4096
+    r = (i + SHEET_COLS - 1) // SHEET_COLS
+    H = r * CELL; W = SHEET_COLS * CELL; assert H <= 4096, H
     sheet = np.zeros((H, W, 4), np.uint8); frames, tags = [], []
     for name, d, imgs, cells in layout:
         start = len(frames); du = durations(name, len(imgs))
@@ -201,6 +356,10 @@ def main():
         if name == 'astronomy_point': a.update(hand='right (left on mirrored NE/E/SE)', wrist_targets=AP_WRIST, emote_icon='star (runtime UI, spec 7.3; not baked into the sprite)')
         if name == 'sweet_to_scary': a.update(face=[dict(mouth=m or 'rest', brow=b or 'none') for m, b in SS_FACE], holds_ms={str(k): 200 for k in SS_HOLD})
         if name == 'neuro_lecture': a.update(hand='right index up (left on mirrored NE/E/SE)', wrist_targets=NL_WRIST)
+        if name == 'work': a.update(kind=WORK_KIND, note='looped while the agent is on a work hook')
+        if name == 'talk': a.update(note='looped while the agent has a speech bubble (v2 masters: body/hands only, no mouth frames)')
+        if name == 'idle': a.update(breath=IDLE_BREATH, fidget_frames=[4, 5, 6])
+        if name in EMOTE_ANIMS: a.update(emote=True)
         anims[name] = a
     meta = dict(id=f'chr_{CID}', version=('v1.1' if CID == 'penny' else 'v1'), sheet=f'chr_{CID}.png', atlas=f'chr_{CID}.json', frame=[CELL, CELL],
                 pivot_px=list(PIVOT), pivot_norm=[PIVOT[0]/CELL, PIVOT[1]/CELL], body_height_px=BODY_H,
@@ -209,7 +368,7 @@ def main():
                                   'penny': ['hair_part (left)', 'neckline'], 'howard': ['alien_pin (left collar)', 'belt_buckle glint', 'dickey V'],
                                   'raj': ['hair_part (left)', 'argyle vest'], 'bernadette': ['brooch (left)', 'hair_part (left)', 'skirt florals'],
                                   'amy': ['hair_clip + side part (left)', 'cardigan stripes']}[CID],
-                anims=anims, notes='Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation.')
+                anims=anims, emotes=EMOTE_ANIMS, work_kind=WORK_KIND, notes='Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation.')
     json.dump(meta, open(os.path.join(OUT, f'chr_{CID}.meta.json'), 'w'), indent=1)
     pal = load_gpl(GPL); tops, bots = [], []
     for name, d, imgs, cells in layout:
@@ -265,11 +424,11 @@ def save_gif(path, frames, durs):
     return Image.open(path).n_frames
 
 def make_gifs(A):
-    for name, ncol in (('walk', 4), ('idle', 4), ('blink', 4)) + ((('glasses_push', 4),) if CID == 'leonard' else ()) + ((('hair_flip', 4),) if CID == 'penny' else ()) + (((SIG[CID][0], 4),) if CID in SIG else ()):
-        n = ANIMS_BY[name][1]
+    for name in ['walk', 'idle', 'blink', 'work', 'talk', 'gesture'] + [a[0] for a in SIGS]:
+        ncol = 4; n = ANIMS_BY[name][1]
         fr = [grid([stage(A[(name, d)][k]) for d in DIRS8], ncol) for k in range(n)]
         du = durations(name, n)
-        if name in ('blink', 'glasses_push', 'hair_flip') + tuple(v[0] for v in SIG.values()):   # show it in context: open hold, blink, open hold
+        if name not in ('walk', 'idle', 'work', 'talk'):   # one-shots: show them in context (idle hold, move, back)
             fr = [grid([stage(A[('idle', d)][0]) for d in DIRS8], ncol)] + fr; du = [900] + du
         print(name, 'gif frames', save_gif(os.path.join(OUT, f'{name}_8dir_4x.gif'), fr, du))
     for d in DIRS8:

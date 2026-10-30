@@ -1,6 +1,6 @@
 {
  "character": "raj",
- "generated": "2026-10-30 08:02 (America/Los_Angeles)",
+ "generated": "2026-10-30 08:36 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -21,14 +21,14 @@
   0,
   255
  ],
- "frames": 152,
+ "frames": 352,
  "sheet_px": [
-  1536,
-  4096
+  2048,
+  2816
  ],
  "anims": {
   "idle": {
-   "frames": 4,
+   "frames": 8,
    "fps": 4,
    "dirs": 8
   },
@@ -42,9 +42,29 @@
    "fps": 12,
    "dirs": 8
   },
+  "work": {
+   "frames": 6,
+   "fps": 8,
+   "dirs": 8
+  },
+  "talk": {
+   "frames": 4,
+   "fps": 6,
+   "dirs": 8
+  },
+  "gesture": {
+   "frames": 6,
+   "fps": 8,
+   "dirs": 8
+  },
   "astronomy_point": {
    "frames": 4,
    "fps": 8,
+   "dirs": 8
+  },
+  "shy_hands": {
+   "frames": 5,
+   "fps": 6,
    "dirs": 8
   }
  },
@@ -67,7 +87,10 @@
  "gifs": {
   "astronomy_point_8dir_4x.gif": 5,
   "blink_8dir_4x.gif": 4,
-  "idle_8dir_4x.gif": 4,
+  "gesture_8dir_4x.gif": 7,
+  "idle_8dir_4x.gif": 8,
+  "shy_hands_8dir_4x.gif": 6,
+  "talk_8dir_4x.gif": 4,
   "walk_8dir_4x.gif": 8,
   "walk_E_4x.gif": 8,
   "walk_NE_4x.gif": 8,
@@ -76,7 +99,8 @@
   "walk_SE_4x.gif": 8,
   "walk_SW_4x.gif": 8,
   "walk_S_4x.gif": 8,
-  "walk_W_4x.gif": 8
+  "walk_W_4x.gif": 8,
+  "work_8dir_4x.gif": 6
  },
  "walk_8dir_gif_present": true
 }

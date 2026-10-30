@@ -1,18 +1,18 @@
 {
  "palette_violations": 0,
- "head_top_min": 21,
+ "head_top_min": 20,
  "head_top_max": 25,
  "idle_S_head_top": 24,
  "lowest_px_min": 117,
- "lowest_px_max": 125,
- "frames": 152,
+ "lowest_px_max": 124,
+ "frames": 352,
  "sheet": [
-  1536,
-  4096
+  2048,
+  2816
  ],
  "alpha_values": [
   0,
   255
  ],
- "seconds": 7
+ "seconds": 17
 }

@@ -1,6 +1,6 @@
 {
  "character": "penny",
- "generated": "2026-10-30 08:02 (America/Los_Angeles)",
+ "generated": "2026-10-30 08:36 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -21,14 +21,14 @@
   0,
   255
  ],
- "frames": 168,
+ "frames": 416,
  "sheet_px": [
-  1536,
-  4096
+  2048,
+  3328
  ],
  "anims": {
   "idle": {
-   "frames": 4,
+   "frames": 8,
    "fps": 4,
    "dirs": 8
   },
@@ -42,9 +42,34 @@
    "fps": 12,
    "dirs": 8
   },
+  "work": {
+   "frames": 6,
+   "fps": 8,
+   "dirs": 8
+  },
+  "talk": {
+   "frames": 4,
+   "fps": 6,
+   "dirs": 8
+  },
+  "gesture": {
+   "frames": 6,
+   "fps": 8,
+   "dirs": 8
+  },
   "hair_flip": {
    "frames": 6,
    "fps": 10,
+   "dirs": 8
+  },
+  "wine_sip": {
+   "frames": 6,
+   "fps": 8,
+   "dirs": 8
+  },
+  "eye_roll": {
+   "frames": 5,
+   "fps": 6,
    "dirs": 8
   }
  },
@@ -66,8 +91,11 @@
  "idle_S_eye_pixels": 0,
  "gifs": {
   "blink_8dir_4x.gif": 4,
+  "eye_roll_8dir_4x.gif": 6,
+  "gesture_8dir_4x.gif": 7,
   "hair_flip_8dir_4x.gif": 7,
-  "idle_8dir_4x.gif": 4,
+  "idle_8dir_4x.gif": 8,
+  "talk_8dir_4x.gif": 4,
   "walk_8dir_4x.gif": 8,
   "walk_E_4x.gif": 8,
   "walk_NE_4x.gif": 8,
@@ -76,7 +104,9 @@
   "walk_SE_4x.gif": 8,
   "walk_SW_4x.gif": 8,
   "walk_S_4x.gif": 8,
-  "walk_W_4x.gif": 8
+  "walk_W_4x.gif": 8,
+  "wine_sip_8dir_4x.gif": 7,
+  "work_8dir_4x.gif": 6
  },
  "walk_8dir_gif_present": true
 }

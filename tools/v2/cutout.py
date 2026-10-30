@@ -40,6 +40,7 @@ def warp_rig(B, aim):
     yy, xx = np.mgrid[0:H, 0:W]
     xr = np.clip(np.floor((xx + 0.5 - of[yy]) / sc[yy]).astype(int), 0, W - 1)
     Bw = {'mat': B['mat'][yy, xr], 'pid': B['pid'][yy, xr], 'depth': B['depth'][yy, xr]}
+    Bw['_xr'] = xr
     def warp(p):
         y = int(np.clip(round(p[1] - 0.5), 0, H - 1))
         return np.array([p[0] * sc[y] + of[y], p[1]])
@@ -54,6 +55,12 @@ def bind(master_idx, B):
     m = master_idx >= 0
     return np.where(m, lab, -1), np.where(m, dep, 1e9)
 
+# v3 arm painter: per character (sleeve material or 'sleeve' = the rig's sleeve material, short-sleeve length as a
+# fraction of the upper arm (None = long sleeve to the wrist), material below the short sleeve) and
+# (upper-arm radius px, hand half-width px)
+ARM_SPEC = {'sheldon': ('tee', 0.5, 'under'), 'penny': ('top', 0.45, 'skin'), 'raj': ('shirt', None, None)}
+ARM_R = {'sheldon': (2.3, 2.1), 'leonard': (2.5, 2.1), 'penny': (2.0, 1.9), 'howard': (2.1, 2.0), 'raj': (2.6, 2.2),
+         'bernadette': (2.1, 1.9), 'amy': (2.1, 1.9)}
 LIMB_TAGS = ('leg', 'foot', 'arm', 'sleeve', 'hand')
 MATCOL = {}
 REPAINT = tuple(t for t in os.environ.get('BBT_REPAINT', 'leg,arm,sleeve,hand').split(',') if t)
@@ -84,7 +91,7 @@ def darker_map(pal, f=0.80):
     return out
 
 class Cutout:
-    def __init__(self, master_idx, base_B, base_pose, yaw, pal=None, protect=None):
+    def __init__(self, master_idx, base_B, base_pose, yaw, pal=None, protect=None, base_Bna=None):
         self.pal = pal
         self.protect = protect if protect is not None else np.zeros(master_idx.shape, bool)
         self.idx = flatten_rim(master_idx, pal) if pal is not None else master_idx; self.yaw = yaw
@@ -176,6 +183,30 @@ class Cutout:
                 sz = np.bincount(cc.ravel())[1:]; keep = cc == (1 + int(sz.argmax()))
                 self.lab[(self.lab == k) & ~ndi.binary_dilation(keep, iterations=1)] = -2   # dropped
         self.P0 = P0; self.tags = [p[3] for p in P0]
+        self.arms0 = [tuple(np.array(v, float) for v in a) for a in R.LAST_ARMS]   # filled by R.build(base_pose) above? (rebuilt below)
+        R.build(base_pose); self.arms0 = [tuple(np.array(v, float) for v in a) for a in R.LAST_ARMS]
+        self.arm_paint = pal is not None and 'arm' in REPAINT and len(self.arms0) == 2 and 'hand_l' in R.DIM
+        if self.arm_paint and base_Bna is not None:
+            # v3 arms are shorter/slimmer than the AI master's: the body the AI arm covered is revealed.  Where the
+            # arm-less rig has body under an arm pixel, re-own it to the nearest non-arm body pixel (label + colour);
+            # elsewhere the old arm pixel is simply dropped (the painter draws the new arm)
+            arm_ids = [k for k, t in enumerate(self.tags) if t in ('arm', 'sleeve', 'hand')]
+            op = master_idx >= 0; armpx = op & np.isin(self.lab, arm_ids)
+            xr = Bw['_xr']; Bn = base_Bna
+            yy2 = np.mgrid[0:128, 0:128][0]
+            bmat = Bn['mat'][yy2, xr]; bpid = Bn['pid'][yy2, xr]
+            body = (bmat >= 0) & ~np.isin(bpid, arm_ids)
+            body = ndi.binary_erosion(body, iterations=2)
+            src = op & ~armpx & (self.lab >= 0)
+            if src.any() and armpx.any():
+                _, (iy, ix) = ndi.distance_transform_edt(~src, return_indices=True)
+                # only inside the row span of the non-arm body (a hand that hung beside the hips must not become a hip bulge)
+                xs = np.arange(128)[None, :]; has = src.any(1)
+                lo = np.where(has, src.argmax(1), 999)[:, None]; hi = np.where(has, 127 - src[:, ::-1].argmax(1), -1)[:, None]
+                rev = armpx & body & (xs >= lo) & (xs <= hi)
+                self.lab[rev] = self.lab[iy, ix][rev]; self.idx = self.idx.copy(); self.idx[rev] = self.idx[iy, ix][rev]
+                self.dep[rev] = self.dep[iy, ix][rev]
+                self.lab[armpx & ~body] = -2
         # rig material of each primitive -> nearest palette colour (patch colour for joints / hidden limb segments)
         self.patch_col = {}
         if pal is not None:
@@ -239,8 +270,9 @@ class Cutout:
             r = dist[own].max() if own.any() else 3.0
             self.copy_src[b] = (self.lab == b) & (dist <= r + 1.5)
 
+    mirror_x = False
     def pose(self, tgt_pose, fill=True):
-        A1r = anchors(R.build(tgt_pose), self.yaw)
+        A1r = anchors(R.build(tgt_pose), self.yaw); arms1 = [tuple(np.array(v, float) for v in a) for a in R.LAST_ARMS]
         assert len(A1r) == len(self.A0)
         A1 = [(a[0], a[1] + (w[1] - r[1]), None if a[2] is None else a[2] + (w[2] - r[2]), a[3])
               for a, w, r in zip(A1r, self.A0, self.A0raw)]
@@ -250,6 +282,7 @@ class Cutout:
         order = sorted(range(len(A1)), key=lambda k: (self.P0[k][3] == 'neck'))
         for k in order:
             a1 = A1[k]
+            if self.arm_paint and self.tags[k] in ('arm', 'sleeve', 'hand'): continue
             if k in self.rep:
                 self.paint_limb(k, a1, T, out, og, best_d); continue
             ks = self.copy_of.get(k, k); a0 = self.A0[ks]
@@ -273,6 +306,10 @@ class Cutout:
                 S = T - np.round(sh1[2] - sh0[2])
             else:
                 S = T - np.round(a1[1] - a0[1])          # rigid, whole-pixel move (no resampling shimmer)
+                if self.P0[k][3] == 'head' and tgt_pose.get('head_off'):   # v2.1: nods / tilts / hunches as whole-pixel head shifts
+                    ho = np.array(tgt_pose['head_off'], float)
+                    if self.mirror_x: ho[0] = -ho[0]
+                    S = S - ho
             sx = np.floor(S[..., 0]).astype(int); sy = np.floor(S[..., 1]).astype(int)
             ok = (sx >= 0) & (sx < W) & (sy >= 0) & (sy < H)
             sxc = np.clip(sx, 0, W - 1); syc = np.clip(sy, 0, H - 1)
@@ -282,6 +319,8 @@ class Cutout:
             vals = self.idx[syc, sxc]
             if ks != k: vals = np.where(vals >= 0, self.dark[np.maximum(vals, 0)], -1)
             best_d[w] = d[w]; out[w] = vals[w]; og[w] = self.grp[k]; prot[w] = self.protect[syc, sxc][w] & (ks == k)
+        if self.arm_paint:
+            for i in (0, 1): self.paint_arm(i, arms1[i], T, out, og, best_d)
         if self.pal is not None:
             self.underlay(A1, out, og, best_d)
             import pixfix as PF
@@ -316,6 +355,88 @@ class Cutout:
         col = np.where(shade, self.dark[base], base)
         out[w] = col[w]; og[w] = self.grp[k]; best_d[w] = d
 
+    def paint_arm(self, i, arm, T, out, og, best_d):
+        """v3 arm: deltoid-rounded upper arm tapering to the wrist, visible elbow, sleeve to its real length (short
+        sleeve hem at mid upper arm / long sleeve with a darker cuff), skin forearm where bare, and a mitten hand
+        (palm a little wider than the wrist, rounded fingertips, 1-px thumb bump on the thumb side), two tones,
+        per-pixel depth along each bone so a forward-swung forearm passes in front of the body"""
+        sh, el, wr, d2 = arm; sh0 = self.arms0[i][0]
+        c0, r0, _ = R.project_local(sh0, self.yaw); off = self.warp(np.array([c0, r0])) - np.array([c0, r0])
+        def pj(p):
+            c, r, d = R.project_local(p, self.yaw); return np.array([c, r]) + off, d
+        side = -1.0 if i == 0 else 1.0
+        S, dS = pj(sh); E, dE = pj(el); W, dW = pj(wr)
+        D = R.DIM; hl = D['hand_l']
+        H, dH = pj(wr + d2 * hl)
+        ids = [k for k, t in enumerate(self.tags) if t in ('arm', 'sleeve', 'hand') and self.grp[k] == 20 + i]
+        far = any(k in self.copy_of for k in ids); near = any(k in self.copy_of.values() for k in ids)
+        spec = ARM_SPEC.get(R.CID, ('sleeve', None, None))
+        smat = spec[0]
+        if smat == 'sleeve':
+            smat = next((self.P0[k][2] for k in ids if self.tags[k] == 'sleeve'), 'skin')
+        frac, under = spec[1], spec[2] or smat
+        ru, hw = ARM_R.get(R.CID, (2.3, 2.0))
+        re, rw = ru * 0.86, ru * 0.70
+        col = lambda m: self.mat_col.get(m, self.mat_col.get('skin', 0))
+        cs, cu, ck = col(smat), col(under), col('skin')
+        if far: cs, cu, ck = int(self.dark[cs]), int(self.dark[cu]), int(self.dark[ck])
+        bias = -16.0 if near else (0.0 if far else -10.0)   # near arm always over the torso side (bulky hoodies / cardigans); a hanging arm sits outside the skirt flare
+        sc = R.SCALE_EFF
+        def seg(P, Q):
+            v = Q - P; L2 = max(v @ v, 1e-6); t = np.clip(((T - P) @ v) / L2, 0, 1)
+            o = T - (P + t[..., None] * v); return t, o, np.linalg.norm(o, axis=-1)
+        Ld = np.array([0.86, 0.5])
+        def put(m, d, c, r, o, lit=True):
+            shade = ((o @ Ld) > 0.30 * r) & (r >= 1.5) if lit else np.zeros_like(m)
+            cc = np.where(shade, self.dark[c], c)
+            w = m & (d < best_d)
+            out[w] = cc[w]; og[w] = 20 + i; best_d[w] = d[w]
+        # upper arm (deltoid bulge over the top ~40 %)
+        t, o, dist = seg(S, E)
+        r = ru + (re - ru) * t + 0.55 * np.clip(1 - t / 0.42, 0, 1) ** 1.5
+        d = dS + (dE - dS) * t - r / sc + bias
+        m = dist <= r
+        if frac is None:
+            put(m, d, cs, r, o)
+        else:
+            put(m & (t > frac), d, cu, r, o)
+            rs = r + 0.5
+            ms = (dist <= rs) & (t <= frac)
+            hem = ms & (t > frac - 1.2 / max(np.linalg.norm(E - S), 1.0))
+            put(ms & ~hem, d - 0.3, cs, rs, o); put(hem, d - 0.3, int(self.dark[cs]), rs, o, lit=False)
+        # forearm (+ cuff on long sleeves)
+        t, o, dist = seg(E, W)
+        r = re + (rw - re) * t + 0.25 * np.exp(-((t - 0.2) / 0.2) ** 2)
+        d = dE + (dW - dE) * t - r / sc + bias - 0.05
+        m = dist <= r
+        if under != 'skin':
+            Lf = max(np.linalg.norm(W - E), 1.0); cuff = m & (t > 1 - 1.6 / Lf)
+            put(m & ~cuff, d, cu, r, o)
+            mc = (dist <= r + 0.35) & (t > 1 - 1.6 / Lf)
+            put(mc, d - 0.1, int(self.dark[cu]), r + 0.35, o, lit=False)
+        else:
+            put(m, d, cu, r, o)
+        # mitten hand: capsule wrist -> knuckles widening to the palm, round fingertips, thumb bump
+        hv = H - W; Lh = float(np.linalg.norm(hv))
+        if Lh > 1e-3: hu = hv / Lh
+        else: hu = np.array([0.0, 1.0])
+        P1 = W + hu * min(0.6, Lh * 0.2); Q1 = W + hv - hu * min(hw, Lh * 0.5)
+        t, o, dist = seg(P1, Q1)
+        r = rw * 0.95 + (hw - rw * 0.95) * np.clip(t * 1.6, 0, 1)
+        d = dW + (dH - dW) * t - r / sc + bias - 0.2
+        put(dist <= r, d, ck, r, o)
+        # thumb: forward + medial of the hand, perpendicular to it
+        fwd = np.array([0.0, 1.0, 0.0]); med = np.array([-side, 0.0, 0.0])
+        th = 0.8 * fwd + 0.6 * med; th = th - d2 * (th @ d2); n3 = np.linalg.norm(th)
+        if n3 > 1e-3:
+            th = th / n3
+            Tp, dT = pj(wr + d2 * hl * 0.30 + th * 1.0)
+            tv = Tp - (W + hv * 0.30)
+            if np.linalg.norm(tv) > 0.35:
+                tn = tv / np.linalg.norm(tv); cen = W + hv * 0.30 + tn * (hw * 0.95)
+                mt = np.linalg.norm(T - cen, axis=-1) <= 0.85
+                put(mt, np.full(mt.shape, dT - 0.6 / sc + bias + (0.0 if dT <= dW else 0.4)), ck, np.full(mt.shape, 0.85), T - cen, lit=False)
+
     def underlay(self, A1, out, og, dep):
         """joint / hidden-segment patch layer: every limb capsule of the target pose (core radius) is painted UNDER the
         posed pixels with the limb's own dominant colour, so bones that rotate apart never open tears at joints and a
@@ -324,6 +445,7 @@ class Cutout:
         sc = R.SCALE_EFF
         for k, a1 in enumerate(A1):
             if k not in self.patch_col or a1[0] != 'cap': continue
+            if self.arm_paint and self.tags[k] in ('arm', 'sleeve', 'hand'): continue
             ks = self.copy_of.get(k, k)
             col = self.patch_col.get(ks, self.patch_col[k])
             if ks != k: col = int(self.dark[col])

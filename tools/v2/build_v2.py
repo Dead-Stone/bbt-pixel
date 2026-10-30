@@ -22,6 +22,11 @@ def base_B(d):
     if os.path.exists(bp): return pickle.load(open(bp, 'rb'))
     B = R.render(BC.idle_pose(0), R.YAW[d]); pickle.dump(B, open(bp, 'wb')); return B
 
+def base_Bna(d):
+    bp = os.path.join(MD, f'baseBna_{d}.pkl')
+    if os.path.exists(bp): return pickle.load(open(bp, 'rb'))
+    B = R.render(dict(BC.idle_pose(0), no_arms=True), R.YAW[d]); pickle.dump(B, open(bp, 'wb')); return B
+
 # one palette for the whole character: master palette + face colours (added for every direction up front)
 def build_masters():
     pal = PAL0.copy(); M = {}; eyes = {}
@@ -43,7 +48,7 @@ def _matcol():
     acc = {}
     for d in ('S', 'SW', 'W', 'NW', 'N'):
         m, sk, prot = MASTERS[d]
-        c = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL, protect=prot)
+        c = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL, protect=prot, base_Bna=base_Bna(d))
         for mat, (u, w) in c.mat_stats.items():
             a = acc.setdefault(mat, {})
             for i, x in zip(u, w): a[int(i)] = a.get(int(i), 0.0) + float(x) * (2.0 if d == 'S' else 1.0)
@@ -62,15 +67,32 @@ def cutout(d, eyes):
         m, sk, prot = MASTERS[d]
         if eyes != 'open':
             m1 = faces.blink(m, PAL, EYES[d], eyes, sk, lid_index(sk)); prot = prot | (m1 != m); m = m1
-        _cut[key] = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL, protect=prot)
+        _cut[key] = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL, protect=prot, base_Bna=base_Bna(d))
     return _cut[key]
+
+def despeck(im):
+    """last-pass cleanup: an orphan pixel (no same-colour neighbour, only a near shade of one) left where a moved arm
+    meets hair / torso takes the colour of its closest neighbour (same rule as tools/v2/audit.py 'speck')"""
+    import audit as AU
+    for _ in range(2):
+        sp = AU.audit_frame(im)['speck']
+        if not sp.any(): break
+        for y, x in zip(*np.nonzero(sp)):
+            c = im[y, x, :3].astype(int); best = None
+            for dy, dx in AU.K8:
+                q = im[y + dy, x + dx]
+                if q[3] == 0: continue
+                dd = int(((q[:3].astype(int) - c) ** 2).sum())
+                if best is None or dd < best[0]: best = (dd, q.copy())
+            if best is not None: im[y, x] = best[1]
+    return im
 
 def frame_img(anim, k, d):
     src = BC.MIRROR.get(d, d)
-    eyes = BC.BLINK_EYES[k] if anim == 'blink' else 'open'
+    eyes = BC.eyes_for(anim, k)
     ck = ('idle', 0, src, eyes) if anim == 'blink' else (anim, k, src, eyes)
     if ck not in _cache:
-        _cache[ck] = to_rgba(cutout(src, eyes).pose(BC.pose_for(anim, k, src)), PAL)
+        _cache[ck] = despeck(to_rgba(cutout(src, eyes).pose(BC.pose_for(anim, k, src)), PAL))
     im = _cache[ck]
     return np.ascontiguousarray(im[:, ::-1]) if d in BC.MIRROR else im.copy()
 
