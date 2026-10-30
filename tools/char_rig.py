@@ -333,8 +333,9 @@ def _head_sdf(p, hc, hy, hp=0.0, hs=0.0):
 TAGS = {'torso': 1, 'sleeve': 2, 'hood': 3, 'foot': 4, 'leg': 5, 'pelvis': 5, 'hand': 6, 'arm': 2, 'skirt': 7, 'collar': 8}
 def scene(p, P):
     n = p.shape[0]
-    dist = np.full(n, 1e9); mat = np.zeros(n, int); tag = np.zeros(n, int); hq = np.zeros((n, 3))
-    for kind, args, m, t in P:
+    global _PID
+    dist = np.full(n, 1e9); mat = np.zeros(n, int); tag = np.zeros(n, int); hq = np.zeros((n, 3)); pid = np.zeros(n, int)
+    for pi_, (kind, args, m, t) in enumerate(P):
         if kind == 'cap': d = sd_cap(p, *args)
         elif kind == 'skirt': d = sd_skirt(p, *args)
         elif kind == 'rbox': d = sd_rbox(p, *args)
@@ -342,11 +343,13 @@ def scene(p, P):
         elif kind == 'head':
             ds, dh, q = head_sdf(p, *args)
             for d, mm in ((ds, 'skin'), (dh, 'hair')):
-                w = d < dist; dist = np.where(w, d, dist); mat[w] = MATS.index(mm); tag[w] = 99; hq[w] = q[w]
+                w = d < dist; dist = np.where(w, d, dist); mat[w] = MATS.index(mm); tag[w] = 99; hq[w] = q[w]; pid[w] = pi_
             continue
-        w = d < dist; dist = np.where(w, d, dist); mat[w] = MATS.index(m); tag[w] = TAGS.get(t, 0)
+        w = d < dist; dist = np.where(w, d, dist); mat[w] = MATS.index(m); tag[w] = TAGS.get(t, 0); pid[w] = pi_
         if t == 'foot': hq[w] = p[w] - args[0]          # foot-local offsets (for sneaker soles)
+    _PID = pid
     return dist, mat, tag, hq
+_PID = None
 
 def world_from_local(yaw_deg):
     a = math.radians(yaw_deg)
@@ -384,10 +387,10 @@ def render(pose, yaw_deg, ss=3, shadows=True):
     pts = org + t[:, None] * dirl
     hi = np.where(hit)[0]; n = org.shape[0]
     mat = np.full(n, -1); tone = np.zeros(n, int); nrm_up = np.zeros(n); depth = np.full(n, 1e9)
-    tagb = np.zeros(n, int); hqb = np.zeros((n, 3)); uvb = np.full((n, 3), np.nan)
+    pidb = np.full(n, -1); tagb = np.zeros(n, int); hqb = np.zeros((n, 3)); uvb = np.full((n, 3), np.nan)
     if hi.size:
         ph = pts[hi]
-        d0, m0, tg, hq = scene(ph, P)
+        d0, m0, tg, hq = scene(ph, P); pidv = _PID.copy()
         e = 0.35; g = np.zeros_like(ph)
         for k in range(3):
             dv = np.zeros(3); dv[k] = e
@@ -408,13 +411,13 @@ def render(pose, yaw_deg, ss=3, shadows=True):
                 al[ii[ts[ii] > 40]] = False
             tn = np.where(blocked & (tg != 99) & (tn < 2), 2, tn)
         mat[hi] = m0; tone[hi] = tn; nrm_up[hi] = (nl @ M.T) @ U_CAM; depth[hi] = t[hi]
-        tagb[hi] = tg; hqb[hi] = hq
+        tagb[hi] = tg; hqb[hi] = hq; pidb[hi] = pidv
         tor = (tg == 1) | (tg == 7)
         uvb[hi[tor], 0] = -ph[tor, 0]
         uvb[hi[tor], 1] = ph[tor, 2] - pose.get('breathe', 0) - pose.get('lift', 0)
         uvb[hi[tor], 2] = nl[tor, 1]              # +front / -back facing
     def grid(a): return a.reshape(N, N, *a.shape[1:])
-    B = dict(mat=grid(mat), tone=grid(tone), up=grid(nrm_up), depth=grid(depth), tag=grid(tagb), hq=grid(hqb), uv=grid(uvb))
+    B = dict(mat=grid(mat), tone=grid(tone), up=grid(nrm_up), depth=grid(depth), tag=grid(tagb), hq=grid(hqb), uv=grid(uvb), pid=grid(pidb))
     return downsample(B, ss)
 
 def downsample(B, ss):
@@ -428,7 +431,8 @@ def downsample(B, ss):
     opaque = cover * 2 > ss * ss; out = {}
     out['mat'] = np.where(opaque, best // 4, -1); out['tone'] = np.where(opaque, best % 4, 0)
     ctr = (ss * ss) // 2
-    for k in ('up', 'tag', 'hq', 'uv'): out[k] = blocks(B[k])[:, :, ctr]
+    for k in ('up', 'tag', 'hq', 'uv', 'pid'):
+        if k in B: out[k] = blocks(B[k])[:, :, ctr]
     out['depth'] = np.where(opaque, np.nanmin(np.where(mb >= 0, blocks(B['depth']), np.inf), -1), 1e9)
     return out
 
