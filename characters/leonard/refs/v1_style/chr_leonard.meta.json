@@ -1,0 +1,122 @@
+{
+ "id": "chr_leonard",
+ "version": "v1",
+ "sheet": "chr_leonard.png",
+ "atlas": "chr_leonard.json",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot_px": [
+  64,
+  116
+ ],
+ "pivot_norm": [
+  0.5,
+  0.90625
+ ],
+ "body_height_px": 89,
+ "palette": "palettes/bbt_leonard.gpl",
+ "camera": {
+  "projection": "2:1 dimetric",
+  "elevation_deg": 30,
+  "px_per_unit": 1.122
+ },
+ "dirs": [
+  "S",
+  "SW",
+  "W",
+  "NW",
+  "N",
+  "NE",
+  "E",
+  "SE"
+ ],
+ "mirror": {
+  "NE": "NW",
+  "E": "W",
+  "SE": "SW"
+ },
+ "decals_on_mirror": [
+  "zip_pull",
+  "tee_graphic"
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 250
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 100
+  },
+  "blink": {
+   "frames": 3,
+   "fps": 12,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 80,
+   "eyes": [
+    "half",
+    "closed",
+    "half"
+   ],
+   "note": "v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
+  },
+  "glasses_push": {
+   "frames": 4,
+   "fps": 10,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 100,
+   "hand": "right (left on mirrored NE/E/SE, accepted per spec \u00a72.2 rule 4)",
+   "glasses_lift_px": {
+    "2": 1
+   },
+   "note": "hand is hidden behind the head in N/NW/NE; the frame still rides up 1 px on f2 where the face is visible"
+  }
+ },
+ "notes": "Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation."
+}

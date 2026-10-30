@@ -1,0 +1,150 @@
+{
+ "id": "chr_amy",
+ "version": "v1",
+ "sheet": "chr_amy.png",
+ "atlas": "chr_amy.json",
+ "frame": [
+  128,
+  128
+ ],
+ "pivot_px": [
+  64,
+  116
+ ],
+ "pivot_norm": [
+  0.5,
+  0.90625
+ ],
+ "body_height_px": 88,
+ "palette": "palettes/bbt_amy.gpl",
+ "camera": {
+  "projection": "2:1 dimetric",
+  "elevation_deg": 30,
+  "px_per_unit": 1.122
+ },
+ "dirs": [
+  "S",
+  "SW",
+  "W",
+  "NW",
+  "N",
+  "NE",
+  "E",
+  "SE"
+ ],
+ "mirror": {
+  "NE": "NW",
+  "E": "W",
+  "SE": "SW"
+ },
+ "decals_on_mirror": [
+  "hair_clip + side part (left)",
+  "cardigan stripes"
+ ],
+ "anims": {
+  "idle": {
+   "frames": 4,
+   "fps": 4,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 250
+  },
+  "walk": {
+   "frames": 8,
+   "fps": 10,
+   "loop": true,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 100
+  },
+  "blink": {
+   "frames": 3,
+   "fps": 12,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 80,
+   "eyes": [
+    "half",
+    "closed",
+    "half"
+   ],
+   "note": "v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
+  },
+  "neuro_lecture": {
+   "frames": 6,
+   "fps": 8,
+   "loop": false,
+   "dirs": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+   ],
+   "frame_ms": 125,
+   "hand": "right index up (left on mirrored NE/E/SE)",
+   "wrist_targets": [
+    [
+     10.0,
+     6.0,
+     56.0
+    ],
+    [
+     11.5,
+     7.5,
+     63.0
+    ],
+    [
+     11.5,
+     8.0,
+     65.0
+    ],
+    [
+     11.5,
+     7.5,
+     63.0
+    ],
+    [
+     11.5,
+     8.0,
+     65.0
+    ],
+    [
+     10.0,
+     6.0,
+     56.0
+    ]
+   ]
+  }
+ },
+ "notes": "Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation."
+}
