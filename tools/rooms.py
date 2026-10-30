@@ -116,7 +116,9 @@ def chars_of(S):
     return out
 
 # ======================================================================= compositor (generic)
-def compose_loc(S, chars=(), labels=False):
+def compose_loc(S, chars=(), labels=False, collect=None):
+    """collect: optional dict -> return the background only (layers 0-4 + glow) and put the depth-sorted layer-5
+    sprites [(key, img, sx, sy)] and the screen origin into it (used by harness/export_world.py for the live viewer)"""
     W, H = S['size']; ztop = S.get('ztop', 3.4)
     pts = [scr(x, y, z) for x in (0, W) for y in (0, H) for z in (0, max(ztop, S.get('sky_h', 0) if S.get('sky') else 0))]
     minx = int(min(p[0] for p in pts)) - 40; maxx = int(max(p[0] for p in pts)) + 40
@@ -171,6 +173,8 @@ def compose_loc(S, chars=(), labels=False):
         nonlocal can
         can.alpha_composite(Image.fromarray(im) if isinstance(im, np.ndarray) else im, (int(round(sx - minx)), int(round(sy - miny))))
     for li in range(6):
+        if li == 5 and collect is not None:
+            collect.update(sprites=sorted(L[5], key=lambda t: t[0]), origin=(minx, miny)); break
         for key, im, sx, sy in sorted(L[li], key=lambda t: t[0]): blit(im, sx, sy)
         if li == 2: can = apply_glow(can, S.get('lights', []), minx, miny)
     return snap_scene(can)

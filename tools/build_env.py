@@ -377,7 +377,7 @@ def char_frame(cid, anim, d, k=0):
     f = fr[nm]; return sheet[f['y']:f['y']+f['h'], f['x']:f['x']+f['w']].copy()
 
 # ---------------------------------------------------------------- compositor
-def compose(scene, chars=(), scale=1, labels=False):
+def compose(scene, chars=(), scale=1, labels=False, collect=None):
     xr = {'combined': (0, 23), '4A': (12, 23), '4B': (0, 8)}[scene]
     x0, x1 = xr
     # screen bounds
@@ -450,6 +450,8 @@ def compose(scene, chars=(), scale=1, labels=False):
             layers[5].append((k - 0.001, np.array(sh), sx - 20, sy - 6))
         layers[5].append((k, im, sx - ch.get('pivot', (64, 116))[0], sy - ch.get('pivot', (64, 116))[1]))
     for L in range(6):
+        if L == 5 and collect is not None:   # background only; layer-5 sprites handed to the caller (live viewer export)
+            collect.update(sprites=sorted(layers[5], key=lambda t: t[0]), origin=(minx, miny)); break
         for key, im, sx, sy in sorted(layers[L], key=lambda t: t[0]):
             blit(im, sx, sy)
         if L == 2:
