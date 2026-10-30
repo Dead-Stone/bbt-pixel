@@ -31,7 +31,7 @@ def warp_rig(B, aim):
         if len(rx) >= 2 and len(ax) >= 1:
             s_ = (ax[-1] + 1 - ax[0]) / (rx[-1] + 1 - rx[0]); sc[y] = s_; of[y] = ax[0] - rx[0] * s_
     ok = ~np.isnan(sc)
-    if not ok.any(): return B, lambda p: p
+    if not ok.any(): return B, lambda p: p, np.ones(H)
     ys = np.arange(H)
     sc = np.interp(ys, ys[ok], sc[ok]); of = np.interp(ys, ys[ok], of[ok])
     sc = ndi.median_filter(sc, 5, mode='nearest'); of = ndi.median_filter(of, 5, mode='nearest')
@@ -43,7 +43,7 @@ def warp_rig(B, aim):
     def warp(p):
         y = int(np.clip(round(p[1] - 0.5), 0, H - 1))
         return np.array([p[0] * sc[y] + of[y], p[1]])
-    return Bw, warp
+    return Bw, warp, sc
 
 def bind(master_idx, B):
     """label each master pixel with a rig primitive id + rig depth (nearest rig pixel when outside the rig)"""
@@ -55,6 +55,13 @@ def bind(master_idx, B):
     return np.where(m, lab, -1), np.where(m, dep, 1e9)
 
 LIMB_TAGS = ('leg', 'foot', 'arm', 'sleeve', 'hand')
+MATCOL = {}
+REPAINT = tuple(t for t in os.environ.get('BBT_REPAINT', 'leg,arm,sleeve,hand').split(',') if t)
+def _radii(p):
+    a = p[1]; ra = float(a[2]); rb = float(a[3]) if len(a) > 3 and np.isscalar(a[3]) else ra
+    return ra, rb
+
+
 def limb_pairs(P):
     """index -> index of the same primitive on the other side (left/right leg, arm, ...)"""
     seen = {}
@@ -77,11 +84,12 @@ def darker_map(pal, f=0.80):
     return out
 
 class Cutout:
-    def __init__(self, master_idx, base_B, base_pose, yaw, pal=None):
+    def __init__(self, master_idx, base_B, base_pose, yaw, pal=None, protect=None):
         self.pal = pal
+        self.protect = protect if protect is not None else np.zeros(master_idx.shape, bool)
         self.idx = flatten_rim(master_idx, pal) if pal is not None else master_idx; self.yaw = yaw
         # the AI figure is slimmer than the rig: warp the rig's labels/anchors row-by-row onto the AI silhouette
-        Bw, self.warp = warp_rig(base_B, master_idx >= 0)
+        Bw, self.warp, self.wsc = warp_rig(base_B, master_idx >= 0)
         self.lab, self.dep = bind(master_idx, Bw)
         P0 = R.build(base_pose); self.A0raw = anchors(P0, yaw)
         self.A0 = [(a[0], self.warp(a[1]), None if a[2] is None else self.warp(a[2]), a[3]) for a in self.A0raw]
@@ -158,6 +166,66 @@ class Cutout:
                     cloth = reg & (yy <= hem - 1)
                     own[cloth] = sk_ids[0]
             self.lab[reg] = own[reg]
+        self.lab = coherent_labels(self.lab, master_idx >= 0)
+        # a foot is ONE shoe: keep the foot label's biggest blob (side-view masters show both shoes under the near
+        # foot's label; the stray second shoe would walk along with it)
+        for k, p in enumerate(P0):
+            if p[3] != 'foot' or not (self.lab == k).any(): continue
+            cc, n = ndi.label(self.lab == k, structure=np.ones((3, 3)))
+            if n > 1:
+                sz = np.bincount(cc.ravel())[1:]; keep = cc == (1 + int(sz.argmax()))
+                self.lab[(self.lab == k) & ~ndi.binary_dilation(keep, iterations=1)] = -2   # dropped
+        self.P0 = P0; self.tags = [p[3] for p in P0]
+        # rig material of each primitive -> nearest palette colour (patch colour for joints / hidden limb segments)
+        self.patch_col = {}
+        if pal is not None:
+            for k, p in enumerate(P0):
+                if p[3] not in LIMB_TAGS or p[0] != 'cap': continue
+                src = self.idx[self.lab == k]; src = src[src >= 0]
+                if len(src) >= 12:
+                    Lp = pal[src].astype(float) @ np.array([0.299, 0.587, 0.114]); med = np.median(Lp)
+                    cand = src[np.abs(Lp - med) <= 30]; cand = cand if len(cand) else src; u, c = np.unique(cand, return_counts=True); self.patch_col[k] = int(u[c.argmax()])
+                elif p[2] in R.C:
+                    self.patch_col[k] = int((((pal.astype(float) - R.C[p[2]].astype(float)) ** 2).sum(1)).argmin())
+        self.dark = darker_map(pal) if pal is not None else np.arange(int(master_idx.max()) + 1)
+        # limb repaint: limbs are re-drawn as clean shaded capsules in the target pose (rotating the AI's textured
+        # limb pixels shreds them); width calibrated to the master's own limb pixels
+        self.rep = {}
+        self.mat_col = {}; self.mat_stats = {}
+        if pal is not None:
+            Lw = np.array([0.299, 0.587, 0.114])
+            for m in set(p[2] for p in P0):
+                ids = [k for k, p in enumerate(P0) if p[2] == m]
+                if m == 'skin' and (self.idx[np.isin(self.lab, ids)] >= 0).sum() < 12:
+                    ids += [k for k, p in enumerate(P0) if p[3] == 'head']
+                src = self.idx[np.isin(self.lab, ids)]; src = src[src >= 0]
+                rk = R.RAMP[m][1] if (getattr(R, 'RAMP', None) and m in R.RAMP) else m
+                ref = R.C[rk].astype(float) if rk in R.C else None
+                if len(src) >= 12:
+                    Lp = pal[src].astype(float) @ Lw; med = np.percentile(Lp, 65)
+                    cand = src[np.abs(Lp - med) <= 32]; u, c = np.unique(cand, return_counts=True)
+                    if ref is not None:   # prefer the commonest master colour that is plausibly this material
+                        dd = np.sqrt(((pal[u].astype(float) - ref) ** 2).sum(1)); c = c * np.exp(-(dd / 45.0) ** 2) * (dd < 90)
+                    self.mat_stats[m] = (u, c)
+                    if c.max() > 0: self.mat_col[m] = int(u[c.argmax()]); continue
+                if ref is not None: self.mat_col[m] = int((((pal.astype(float) - ref) ** 2).sum(1)).argmin())
+        self.mat_col.update(MATCOL)          # character-wide table (build_v2), same limb colours in every direction
+        if pal is not None and REPAINT:
+            Ls = [p[3] for p in P0]
+            for k, p in enumerate(P0):
+                if p[0] != 'cap' or p[3] not in REPAINT or (k not in self.patch_col and p[2] not in self.mat_col): continue
+                an = self.A0[k]; L0 = float(np.linalg.norm(an[2] - an[1])); yc = int(np.clip((an[1][1] + an[2][1]) / 2, 0, 127))
+                rr = sum(_radii(p)) / 2 * R.SCALE_EFF * float(self.wsc[yc])
+                area = float((self.lab == k).sum())
+                kw = area / (2 * L0 * rr + np.pi * rr * rr) if area > 20 and L0 > 2 else 0.8
+                lo = {'leg': 0.8, 'hand': 0.9}.get(p[3], 0.7)
+                self.rep[k] = [float(np.clip(kw, lo, 1.0)), self.mat_col.get(p[2], self.patch_col.get(k, 0))]
+            for a, b in self.copy_of.items():
+                if a in self.rep and b in self.rep: self.rep[a] = [self.rep[b][0], int(self.dark[self.rep[b][1]])]
+            # left/right pairs share width (the hidden one has few master pixels)
+            for a, b in limb_pairs(P0).items():
+                if a in self.rep and b in self.rep and a not in self.copy_of and b not in self.copy_of:
+                    w = max(self.rep[a][0], self.rep[b][0]); self.rep[a][0] = self.rep[b][0] = w
         # copy sources: only master pixels close to the near limb's bone (no stray nearest-bound pixels)
         self.copy_src = {}
         yy, xx = np.mgrid[0:128, 0:128]; Pp = np.stack([xx + 0.5, yy + 0.5], -1)
@@ -170,7 +238,6 @@ class Cutout:
             own = rig == b
             r = dist[own].max() if own.any() else 3.0
             self.copy_src[b] = (self.lab == b) & (dist <= r + 1.5)
-        self.dark = darker_map(pal) if pal is not None else np.arange(int(master_idx.max()) + 1)
 
     def pose(self, tgt_pose, fill=True):
         A1r = anchors(R.build(tgt_pose), self.yaw)
@@ -178,9 +245,13 @@ class Cutout:
         A1 = [(a[0], a[1] + (w[1] - r[1]), None if a[2] is None else a[2] + (w[2] - r[2]), a[3])
               for a, w, r in zip(A1r, self.A0, self.A0raw)]
         H = W = 128
-        best_d = np.full((H, W), 1e9); out = np.full((H, W), -1); og = np.full((H, W), -1)
+        best_d = np.full((H, W), 1e9); out = np.full((H, W), -1); og = np.full((H, W), -1); prot = np.zeros((H, W), bool)
         ty, tx = np.mgrid[0:H, 0:W]; T = np.stack([tx + 0.5, ty + 0.5], -1)
-        for k, (a1,) in enumerate(zip(A1)):
+        order = sorted(range(len(A1)), key=lambda k: (self.P0[k][3] == 'neck'))
+        for k in order:
+            a1 = A1[k]
+            if k in self.rep:
+                self.paint_limb(k, a1, T, out, og, best_d); continue
             ks = self.copy_of.get(k, k); a0 = self.A0[ks]
             src = self.copy_src[ks] if ks != k else (self.lab == ks)
             if not src.any(): continue
@@ -197,8 +268,11 @@ class Cutout:
                     rel = T - P1; s = rel @ u1; t = rel @ n1
                     s0 = np.where(s < 0, s, np.where(s > L1, L0 + (s - L1), s * L0 / L1))   # stretch only inside the bone
                     S = P0 + s0[..., None] * u0 + t[..., None] * n0
+            elif self.P0[k][3] == 'foot' and k > 0 and self.P0[k - 1][3] == 'leg' and A1[k - 1][0] == 'cap':
+                sh0 = self.A0[ks - 1]; sh1 = A1[k - 1]      # shoe stays attached to its own shin's ankle
+                S = T - np.round(sh1[2] - sh0[2])
             else:
-                S = T - a1[1] + a0[1]
+                S = T - np.round(a1[1] - a0[1])          # rigid, whole-pixel move (no resampling shimmer)
             sx = np.floor(S[..., 0]).astype(int); sy = np.floor(S[..., 1]).astype(int)
             ok = (sx >= 0) & (sx < W) & (sy >= 0) & (sy < H)
             sxc = np.clip(sx, 0, W - 1); syc = np.clip(sy, 0, H - 1)
@@ -207,12 +281,79 @@ class Cutout:
             w = d < best_d
             vals = self.idx[syc, sxc]
             if ks != k: vals = np.where(vals >= 0, self.dark[np.maximum(vals, 0)], -1)
-            best_d[w] = d[w]; out[w] = vals[w]; og[w] = self.grp[k]
-        if fill: out = fill_holes(out)
-        out = drop_specks(out)
+            best_d[w] = d[w]; out[w] = vals[w]; og[w] = self.grp[k]; prot[w] = self.protect[syc, sxc][w] & (ks == k)
+        if self.pal is not None:
+            self.underlay(A1, out, og, best_d)
+            import pixfix as PF
+            out = PF.polish(out, self.pal, og, best_d, prot)
+            og[out < 0] = -1; best_d[out < 0] = 1e9
+        else:
+            if fill: out = fill_holes(out)
+            out = drop_specks(out)
+        self.prot = prot
         self.last = (out, og, best_d)
-        if self.pal is not None: out = finish(out, og, best_d, self.pal)
+        if self.pal is not None: out = finish(out, og, best_d, self.pal, prot)
         return out
+
+    def paint_limb(self, k, a1, T, out, og, best_d):
+        kw, base = self.rep[k]
+        P, Q = a1[1], a1[2]; v = Q - P; L2 = max(v @ v, 1e-6)
+        tt = np.clip(((T - P) @ v) / L2, 0, 1); C = P + tt[..., None] * v; off = T - C
+        dist = np.linalg.norm(off, axis=-1)
+        ra, rb = _radii(self.P0[k])
+        yc = int(np.clip((P[1] + Q[1]) / 2, 0, 127))
+        r = (ra + (rb - ra) * tt) * R.SCALE_EFF * float(self.wsc[yc]) * kw
+        if self.P0[k][3] == 'hand': r = np.maximum(r, 2.1)
+        m = dist <= np.maximum(r, 0.9)
+        d = a1[3] - (ra + rb) / 2 * R.SCALE_EFF
+        # side views: the near arm (its partner is drawn as a darker copy) is in front of the torso, whose master
+        # pixels carry the rig's chest depth; without the bias the chest swallows the swinging near arm
+        if self.P0[k][3] in ('arm', 'sleeve', 'hand') and k in self.copy_of.values(): d -= 8.0
+        if self.P0[k][3] == 'neck': d = 1e7      # neck only fills what head / collar leave open
+        w = m & (d < best_d)
+        # 2 tones: lit left, one shade darker on the right third (light from the upper left, like the masters)
+        shade = (off[..., 0] > 0.34 * r) & (r >= 1.6)
+        col = np.where(shade, self.dark[base], base)
+        out[w] = col[w]; og[w] = self.grp[k]; best_d[w] = d
+
+    def underlay(self, A1, out, og, dep):
+        """joint / hidden-segment patch layer: every limb capsule of the target pose (core radius) is painted UNDER the
+        posed pixels with the limb's own dominant colour, so bones that rotate apart never open tears at joints and a
+        foot never floats free of its shin"""
+        ty, tx = np.mgrid[0:128, 0:128]; T = np.stack([tx + 0.5, ty + 0.5], -1)
+        sc = R.SCALE_EFF
+        for k, a1 in enumerate(A1):
+            if k not in self.patch_col or a1[0] != 'cap': continue
+            ks = self.copy_of.get(k, k)
+            col = self.patch_col.get(ks, self.patch_col[k])
+            if ks != k: col = int(self.dark[col])
+            P, Q = a1[1], a1[2]; v = Q - P; L2 = max(v @ v, 1e-6)
+            tt = np.clip(((T - P) @ v) / L2, 0, 1); dist = np.linalg.norm(T - (P + tt[..., None] * v), axis=-1)
+            ra, rb = _radii(self.P0[k])
+            yc = int(np.clip((P[1] + Q[1]) / 2, 0, 127))
+            r = (ra + (rb - ra) * tt) * sc * float(self.wsc[yc]) * 0.6
+            m = (dist <= np.maximum(r, 1.0)) & (out < 0)
+            if not m.any(): continue
+            out[m] = col; og[m] = self.grp[k]; dep[m] = 1e8
+
+def coherent_labels(lab, op, min_keep=0.0):
+    """every bone owns ONE connected patch of master pixels: stray fragments of a label (nearest-rig binding noise)
+    are handed to the label they touch most, so no pixel crumbs fly off with a far-away bone"""
+    lab = lab.copy()
+    for _ in range(3):
+        changed = False
+        for k in np.unique(lab[lab >= 0]):
+            cl, n = ndi.label(lab == k, structure=np.ones((3, 3)))
+            if n <= 1: continue
+            sz = np.bincount(cl.ravel()); sz[0] = 0; big = sz.argmax()
+            for i in range(1, n + 1):
+                if i == big or sz[i] >= 0.35 * sz[big]: continue
+                frag = cl == i; ring = ndi.binary_dilation(frag, structure=np.ones((3, 3))) & ~frag & op
+                v = lab[ring]; v = v[(v >= 0) & (v != k)]
+                if len(v) == 0: continue
+                u, c = np.unique(v, return_counts=True); lab[frag] = u[c.argmax()]; changed = True
+        if not changed: break
+    return lab
 
 def fill_holes(out):
     """close pixel gaps opened at joints (both horizontal or both vertical neighbours opaque)"""
@@ -254,7 +395,7 @@ def flatten_rim(idx, pal):
     out[rep] = src[rep]
     return out
 
-def finish(out, og, dep, pal):
+def finish(out, og, dep, pal, prot=None):
     """internal contour where a limb passes over another body part + coloured selective silhouette outline"""
     from master import outline_idx
     L = pal @ np.array([0.299, 0.587, 0.114])
@@ -268,7 +409,12 @@ def finish(out, og, dep, pal):
         qo = Po[1 + dy:129 + dy, 1 + dx:129 + dx]; qg = Pg[1 + dy:129 + dy, 1 + dx:129 + dx]; qd = Pd[1 + dy:129 + dy, 1 + dx:129 + dx]
         m = op & (qo >= 0) & (qg != og) & (dep > qd + 1.0) & ~((og <= 1) & (qg <= 1)) & ~(((og == 0) & (qg >= 10) & (qg < 20)) | ((qg == 0) & (og >= 10) & (og < 20)))
         mark |= m
-    for y, x in zip(*np.where(mark)):
-        k = out[y, x]
-        if L[k] >= 60: res[y, x] = darker(k, 0.70)
-    return outline_idx(res, pal, None)
+    import pixfix as PF
+    return PF.restroke(out, pal, _shades(pal), contour=mark, protect=prot)
+
+_SH = {}
+def _shades(pal):
+    import pixfix as PF
+    k = (len(pal), int(pal.sum()))
+    if k not in _SH: _SH[k] = PF.Shades(pal)
+    return _SH[k]

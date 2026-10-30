@@ -29,10 +29,28 @@ def build_masters():
         m = np.load(os.path.join(MD, f'master_{d}.npy'))
         sk = faces.skin_index(m, pal, R.C['skin'])
         m2, pal, ey = faces.apply_face(CID, d, m, pal, tuple(pal[sk]))
-        M[d] = (m2, sk); eyes[d] = ey
+        M[d] = (m2, sk, m2 != m); eyes[d] = ey
+    import pixfix as PF
+    pal = PF.extend_palette(pal)          # outline shade of every colour (consistent 1-px dark outline)
     return pal, M, eyes
 PAL, MASTERS, EYES = build_masters()
 L = PAL.astype(float) @ np.array([0.299, 0.587, 0.114])
+
+def _matcol():
+    """one colour per rig material for the whole character (repainted limbs must not change colour between
+    directions): pooled over the five masters; skin = the face skin"""
+    import cutout as CU
+    acc = {}
+    for d in ('S', 'SW', 'W', 'NW', 'N'):
+        m, sk, prot = MASTERS[d]
+        c = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL, protect=prot)
+        for mat, (u, w) in c.mat_stats.items():
+            a = acc.setdefault(mat, {})
+            for i, x in zip(u, w): a[int(i)] = a.get(int(i), 0.0) + float(x) * (2.0 if d == 'S' else 1.0)
+    tab = {mat: max(a, key=a.get) for mat, a in acc.items() if a and max(a.values()) > 0}
+    tab['skin'] = int(MASTERS['S'][1])
+    CU.MATCOL.clear(); CU.MATCOL.update(tab)
+_matcol()
 
 def lid_index(sk):
     """eyelid line colour: the palette colour ~0.62x the skin, of the same hue family"""
@@ -41,9 +59,10 @@ def lid_index(sk):
 def cutout(d, eyes):
     key = (d, eyes)
     if key not in _cut:
-        m, sk = MASTERS[d]
-        if eyes != 'open': m = faces.blink(m, PAL, EYES[d], eyes, sk, lid_index(sk))
-        _cut[key] = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL)
+        m, sk, prot = MASTERS[d]
+        if eyes != 'open':
+            m1 = faces.blink(m, PAL, EYES[d], eyes, sk, lid_index(sk)); prot = prot | (m1 != m); m = m1
+        _cut[key] = Cutout(m, base_B(d), BC.idle_pose(0), R.YAW[d], PAL, protect=prot)
     return _cut[key]
 
 def frame_img(anim, k, d):

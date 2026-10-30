@@ -42,8 +42,12 @@ def front_sit(d):
     sel = top >= 0
     blk = out[D:D + top.shape[0]]
     blk[sel[:blk.shape[0]]] = top[:blk.shape[0]][sel[:blk.shape[0]]]
-    from cutout import drop_specks, fill_holes
-    out = drop_specks(fill_holes(out))
+    import pixfix as PF
+    from cutout import _shades
+    prot = np.zeros_like(out, bool); prot[knee:] = c.protect[knee:]
+    pb = c.protect[:crotch + T]; pblk = prot[D:D + pb.shape[0]]; pblk[sel[:pblk.shape[0]]] = pb[:pblk.shape[0]][sel[:pblk.shape[0]]]
+    out = PF.polish(out, V.PAL, protect=prot)
+    out = PF.restroke(out, V.PAL, _shades(V.PAL), protect=prot)
     return to_rgba(out, V.PAL), [64, int(py)], [64, int(hip_row)]
 
 def seat_anchor(c, pose):

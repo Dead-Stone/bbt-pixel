@@ -120,6 +120,14 @@ function wrap(text, maxw) {
   for (const w of words) { const tst = cur ? cur + ' ' + w : w; if (ctx.measureText(tst).width > maxw && cur) { lines.push(cur); cur = w; } else cur = tst; }
   if (cur) lines.push(cur); return lines;
 }
+// zoom moves in whole device-pixels-per-art-pixel steps (1x, 2x, 3x ... of the device grid)
+function zoomStep(dir) {
+  const fit = V.fit || 1, cur = V.ds || Math.max(1, Math.floor(fit * V.zoom));
+  const maxDs = Math.max(1, Math.floor(fit * 6));
+  const ds = cur < 1 ? (dir > 0 ? 1 : cur) : Math.min(maxDs, Math.max(1, Math.round(cur) + dir));
+  if (ds === cur && dir < 0 && cur >= 1) { V.zoom = Math.max(0.5, 0.59 / fit); return; }   // below 1:1 -> 1/2
+  V.zoom = (ds + 0.001) / fit;
+}
 function render(wall) {
   const dpr = window.devicePixelRatio || 1, cw = cv.clientWidth, chh = cv.clientHeight;
   if (cv.width !== Math.round(cw * dpr) || cv.height !== Math.round(chh * dpr)) { cv.width = Math.round(cw * dpr); cv.height = Math.round(chh * dpr); }
@@ -132,12 +140,20 @@ function render(wall) {
     const zv = zoneView(sc, states[V.follow].x); if (zv !== V.view) { V.view = zv; document.getElementById('view').value = zv; }
   }
   let [vx, vy, vw, vh] = viewRect(sc);
-  let scale = Math.min(cw / vw, chh / vh) * V.zoom; scale = scale >= 1 ? Math.floor(scale * 4) / 4 : scale;
+  // pixel-exact camera: every art pixel covers a whole number of device pixels (no uneven / broken pixels)
+  const fit = dpr * Math.min(cw / vw, chh / vh); V.fit = fit;
+  // >= 1: whole multiples (rounded up when that crops <= 20% of the view); a slightly-too-small window keeps 1:1
+  // and crops the view edges (drag to pan) rather
+  // than resampling; only a really tiny window drops to an exact 1/n decimation
+  let ds = fit * V.zoom; const dr = Math.round(ds);
+  ds = ds >= 1 ? (dr / ds <= 1.25 ? dr : Math.floor(ds + 1e-6)) : ds >= 0.6 ? 1 : 1 / Math.ceil(1 / ds);
+  V.ds = ds; let scale = ds / dpr;
   let cx = vx + vw / 2 + V.pan[0], cy = vy + vh / 2 + V.pan[1];
   if (V.follow && states[V.follow] && !states[V.follow].away && states[V.follow].loc === V.loc && V.zoom > 1) {
     const [fx, fy] = toCanvas(sc, states[V.follow].x, states[V.follow].y); cx = fx; cy = fy - 50;
   }
-  const ox = cw / 2 - cx * scale, oy = chh / 2 - cy * scale;
+  // translation snapped to the device-pixel grid
+  const ox = Math.round(dpr * (cw / 2 - cx * scale)) / dpr, oy = Math.round(dpr * (chh / 2 - cy * scale)) / dpr;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.imageSmoothingEnabled = false;
   ctx.fillStyle = '#0d0b12'; ctx.fillRect(0, 0, cw, chh);
   ctx.setTransform(dpr * scale, 0, 0, dpr * scale, dpr * ox, dpr * oy); ctx.imageSmoothingEnabled = false;
@@ -287,8 +303,9 @@ async function main() {
   addEventListener('keydown', e => { if (e.target.tagName === 'SELECT') return;
     if (e.key === ' ') { V.playing = !V.playing; syncPlay(); e.preventDefault(); }
     if (e.key === 'ArrowRight') V.t += 60; if (e.key === 'ArrowLeft') V.t -= 60;
-    if (e.key === '+' || e.key === '=') V.zoom *= 1.25; if (e.key === '-') V.zoom /= 1.25; });
-  cv.addEventListener('wheel', e => { V.zoom = Math.min(6, Math.max(0.5, V.zoom * (e.deltaY < 0 ? 1.1 : 1 / 1.1))); e.preventDefault(); }, {passive: false});
+    if (e.key === '+' || e.key === '=') zoomStep(1); if (e.key === '-') zoomStep(-1); });
+  let wheelAcc = 0;
+  cv.addEventListener('wheel', e => { wheelAcc += e.deltaY; if (Math.abs(wheelAcc) >= 60) { zoomStep(wheelAcc < 0 ? 1 : -1); wheelAcc = 0; } e.preventDefault(); }, {passive: false});
   let drag = null; cv.onmousedown = e => { drag = [e.clientX, e.clientY, ...V.pan]; }; addEventListener('mouseup', () => { drag = null; });
   addEventListener('mousemove', e => { if (drag) { const s = 1 / Math.max(0.3, V.zoom); V.pan = [drag[2] - (e.clientX - drag[0]) * s, drag[3] - (e.clientY - drag[1]) * s]; } });
   if (V.live) setInterval(async () => { try { const atEdge = V.tMax - V.t < 5; await loadSim(); if (atEdge) V.t = Math.max(V.t, V.tMax - 2); } catch (e) {} }, 2000);

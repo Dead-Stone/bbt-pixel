@@ -3,7 +3,7 @@
  "head_top_min": 33,
  "head_top_max": 36,
  "idle_S_head_top": 35,
- "lowest_px_min": 116,
+ "lowest_px_min": 114,
  "lowest_px_max": 123,
  "frames": 168,
  "sheet": [
@@ -14,5 +14,5 @@
   0,
   255
  ],
- "seconds": 4
+ "seconds": 8
 }
