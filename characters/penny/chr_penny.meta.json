@@ -1,6 +1,6 @@
 {
  "id": "chr_penny",
- "version": "v1.1",
+ "version": "v2",
  "sheet": "chr_penny.png",
  "atlas": "chr_penny.json",
  "frame": [
@@ -16,7 +16,7 @@
   0.90625
  ],
  "body_height_px": 90,
- "palette": "palettes/bbt_penny.gpl",
+ "palette": "palettes/bbt_penny_v2.gpl",
  "camera": {
   "projection": "2:1 dimetric",
   "elevation_deg": 30,
@@ -95,7 +95,7 @@
     "closed",
     "half"
    ],
-   "note": "v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
+   "note": "v1 timing kept. v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
   },
   "hair_flip": {
    "frames": 6,
@@ -129,7 +129,7 @@
     0.1,
     0.0
    ],
-   "note": "spec \u00a73.3 signature emote (8D, 6 f @ 10 fps); returns to idle",
+   "note": "v1 timing kept. spec \u00a73.3 signature emote (8D, 6 f @ 10 fps); returns to idle",
    "version": "v1.1",
    "wrist_targets": [
     null,
@@ -181,5 +181,5 @@
    ]
   }
  },
- "notes": "Procedural: tools/char_rig.py + tools/compose_char.py + tools/build_char_sheet.py. Face features are projected overlays applied after the outline; mirrored dirs re-evaluate torso/hair decals in true orientation."
+ "notes": "v2: one AI-generated master turnaround (S/SW/W/NW/N idle, refs/v2_master/master_strip.jpg) downscaled to 128px + palette-snapped + cleaned (tools/v2/master.py), faces hand-placed per facing (tools/v2/faces.py), animated by cut-out bone deformation driven by the v1 rig skeleton (tools/v2/cutout.py); E/NE/SE mirror W/NW/SW.  Emotes move limbs/head only: face expressions, head turns and hair swing are not re-drawn.  v1 sheets: refs/v1_style/."
 }

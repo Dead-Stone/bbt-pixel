@@ -1,6 +1,6 @@
 {
  "character": "penny",
- "generated": "2026-10-30 00:57 (America/Los_Angeles)",
+ "generated": "2026-10-30 01:21 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -50,20 +50,20 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 227,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "E": {
-   "pixels_differing_from_plain_flip": 148,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 138,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   }
  },
  "decal_check": null,
- "idle_S_eye_pixels": 8,
+ "idle_S_eye_pixels": 0,
  "gifs": {
   "blink_8dir_4x.gif": 4,
   "hair_flip_8dir_4x.gif": 7,
