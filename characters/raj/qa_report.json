@@ -1,6 +1,6 @@
 {
  "character": "raj",
- "generated": "2026-10-30 00:33 (America/Los_Angeles)",
+ "generated": "2026-10-30 01:34 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -50,20 +50,20 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 45,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "E": {
-   "pixels_differing_from_plain_flip": 55,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 73,
+   "pixels_differing_from_plain_flip": 0,
    "silhouette_identical": true
   }
  },
  "decal_check": null,
- "idle_S_eye_pixels": 8,
+ "idle_S_eye_pixels": 0,
  "gifs": {
   "astronomy_point_8dir_4x.gif": 5,
   "blink_8dir_4x.gif": 4,

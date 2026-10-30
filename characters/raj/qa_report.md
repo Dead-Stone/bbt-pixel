@@ -1,6 +1,6 @@
 # QA report: chr_raj
 
-Generated 2026-10-30 00:33 (America/Los_Angeles) by tools/build_char_sheet.py + tools/qa_char.py.
+Generated 2026-10-30 01:34 (America/Los_Angeles) by tools/build_char_sheet.py + tools/qa_char.py.
 
 | Check | Result |
 |---|---|
@@ -11,6 +11,6 @@ Generated 2026-10-30 00:33 (America/Los_Angeles) by tools/build_char_sheet.py + 
 | Alpha values | [0, 255] |
 | Frames / sheet | 152 frames, 1536x4096 |
 | Animations | idle 4f@4fps x8D, walk 8f@10fps x8D, blink 3f@12fps x8D, astronomy_point 4f@8fps x8D |
-| Mirrors (NE/E/SE = flip NW/W/SW) | NE: silhouette same, 45 px re-evaluated, E: silhouette same, 55 px re-evaluated, SE: silhouette same, 73 px re-evaluated |
-| Eye pixels in idle S | 8 |
+| Mirrors (NE/E/SE = flip NW/W/SW) | NE: silhouette same, 0 px re-evaluated, E: silhouette same, 0 px re-evaluated, SE: silhouette same, 0 px re-evaluated |
+| Eye pixels in idle S | 0 |
 | GIFs | astronomy_point_8dir_4x.gif (5f), blink_8dir_4x.gif (4f), idle_8dir_4x.gif (4f), walk_8dir_4x.gif (8f), walk_E_4x.gif (8f), walk_NE_4x.gif (8f), walk_NW_4x.gif (8f), walk_N_4x.gif (8f), walk_SE_4x.gif (8f), walk_SW_4x.gif (8f), walk_S_4x.gif (8f), walk_W_4x.gif (8f) |

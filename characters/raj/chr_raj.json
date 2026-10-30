@@ -3346,8 +3346,8 @@
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/build_char_sheet.py",
-  "version": "v1",
+  "app": "bbt-pixel/tools/v2/build_v2.py",
+  "version": "v2",
   "image": "chr_raj.png",
   "format": "RGBA8888",
   "size": {
