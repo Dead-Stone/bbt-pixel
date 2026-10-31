@@ -1054,7 +1054,7 @@ def raj_rug(state='default'):
     return [box(0.1, 0.1, 0, 2.9, 1.9, 0.012, 'wine', t)]
 
 @item('raj_kitchenette', RAJ, (3, 1), 2.3, 'R4', 'P1', notes='modern kitchenette run (reuses the counter builder): pale wood and steel',
-      hooks=[H('cook', 'work', (1.5, 1.3), (0, -1), 'cook', approach=(1, 1)), H('use_sink', 'use', (0.7, 1.3), (0, -1), 'wash', approach=(0, 1))])
+      hooks=[H('cook', 'work', (1.8, 1.2), (0, -1), 'cook', approach=(1, 1)), H('use_sink', 'use', (0.7, 1.3), (0, -1), 'wash', approach=(0, 1))])
 def raj_kitchen(state='default'):
     from env_items import counter_builder
     return counter_builder('wood_lt', 'steel', 'orange', 'ccf_amber', True)(state)

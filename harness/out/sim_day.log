@@ -22,7 +22,7 @@
 06:55:10 [floor4] Sheldon eats cereal at the island [4a_kitchen_island#0.stool1, 20 min]
 06:57:04 [floor4] Leonard walks: makes coffee and eggs (2.4 m)
 06:57:06 [floor4] Leonard makes coffee and eggs [4a_kitchen_counter#0.cook, 15 min]
-07:12:02 [raj_apartment] Raj walks: cooks breakfast (5.7 m)
+07:12:02 [raj_apartment] Raj walks: cooks breakfast (5.6 m)
 07:12:06 [floor4] Leonard walks: reads papers on the laptop (9.7 m)
 07:12:07 [raj_apartment] Raj cooks breakfast [raj_kitchenette#0.cook, 10 min]
 07:12:14 [floor4] Leonard reads papers on the laptop [4a_desk_laptop#0.use0, 18 min]
@@ -48,14 +48,14 @@
 07:17:26 [floor4] Sheldon: "That is incorrect, but in an interesting way."
 07:17:31 [floor4] Leonard: "Talk later? Cool."
 07:17:31 [floor4] Leonard *glasses push*
-07:22:07 [raj_apartment] Raj walks: reads on the sofa (1.6 m)
+07:22:07 [raj_apartment] Raj walks: reads on the sofa (1.5 m)
 07:22:11 [raj_apartment] Raj reads on the sofa [raj_sofa#0.seat0, 13 min]
 07:24:11 [floor4] Amy walks: reviews slides in the armchair (6.0 m)
 07:24:17 [floor4] Amy reviews slides in the armchair [4b_armchair_patterned#0.seat0, 11 min]
 07:25:19 [floor4] Bernadette checks her lab schedule [4b_dining_table_cluttered#0.chair0, 15 min]
 07:28:17 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#0.write, 11 min]
 07:30:14 [floor4] Leonard reads papers on the laptop [4a_desk_laptop#0.use0, 18 min]
-07:35:13 [raj_apartment] Raj walks: cooks breakfast (1.6 m)
+07:35:13 [raj_apartment] Raj walks: cooks breakfast (1.5 m)
 07:35:15 [raj_apartment] Raj cooks breakfast [raj_kitchenette#0.cook, 18 min]
 07:35:19 [floor4] Amy reviews slides in the armchair [4b_armchair_patterned#0.seat0, 16 min]
 07:39:17 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#0.write, 14 min]
@@ -89,7 +89,7 @@
 07:50:18 [floor4] Sheldon: "Goodbye. I'll send a summary."
 07:50:18 [floor4] Sheldon *gesture*
 07:51:21 [floor4] Amy reviews slides in the armchair [4b_armchair_patterned#0.seat0, 10 min]
-07:53:15 [raj_apartment] Raj walks: reads on the sofa (7.6 m)
+07:53:15 [raj_apartment] Raj walks: reads on the sofa (7.5 m)
 07:53:17 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#0.write, 10 min]
 07:53:22 [raj_apartment] Raj reads on the sofa [raj_sofa#0.seat2, 12 min]
 07:54:00 [floor4] Amy plan -> borrowed lab bench: neuron imaging (ait_physics)
@@ -106,7 +106,7 @@
 07:58:14 [floor4] Leonard reads papers on the laptop [4a_desk_laptop#0.use0, 16 min]
 08:03:17 [floor4] Sheldon walks: revises equations on the whiteboard (1.0 m)
 08:03:18 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#1.write, 19 min]
-08:05:23 [raj_apartment] Raj walks: cooks breakfast (7.6 m)
+08:05:23 [raj_apartment] Raj walks: cooks breakfast (7.5 m)
 08:05:24 [ait_cafeteria] Amy appears at AIT Cafeteria (Arroyo Institute of Technology) (car from 2311 building entrance + street (Pasadena))
 08:05:24 [ait_cafeteria] Amy walks: heads out (door to AIT Physics: Sheldon's office + shared lab) (5.8 m)
 08:05:28 [ait_cafeteria] Amy goes through the office door
@@ -117,7 +117,7 @@
 08:05:36 [ait_physics] Amy goes through the office doorway
 08:05:41 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work0, 44 min]
 08:06:00 [raj_apartment] Raj plan -> astro data in the lab (ait_physics)
-08:06:00 [raj_apartment] Raj walks: heads out (car to 2311 building entrance + street (Pasadena)) (6.0 m)
+08:06:00 [raj_apartment] Raj walks: heads out (car to 2311 building entrance + street (Pasadena)) (6.3 m)
 08:06:04 [raj_apartment] Raj goes through the front door
 08:06:05 [raj_apartment] Raj leaves by car -> street_exterior
 08:08:00 [floor4] Leonard plan -> lab work: laser alignment (ait_physics)
