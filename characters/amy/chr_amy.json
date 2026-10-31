@@ -8274,8 +8274,8 @@
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/v2/build_v2.py",
-  "version": "v2",
+  "app": "bbt-pixel/tools/rig/build.py",
+  "version": "rig1",
   "image": "chr_amy.png",
   "format": "RGBA8888",
   "size": {
@@ -8760,6 +8760,10 @@
      }
     ]
    }
-  ]
+  ],
+  "audit": {
+   "head_rows": 17,
+   "why": "rows from the crown to the chin: the flicker check covers the head only (real 7-7.5-head proportions put the shoulders inside a fixed 22-row window)"
+  }
  }
 }

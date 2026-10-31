@@ -2,14 +2,14 @@
  "sprite": "amy_sit_S.png",
  "pivot": [
   64,
-  108
+  116
  ],
  "seat": [
-  64,
-  84
+  64.0,
+  93.7
  ],
  "dir": "S",
- "lift_units": -12.09,
- "version": "v2",
- "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips; seat = butt contact point"
+ "lift_units": 0.0,
+ "version": "rig1",
+ "note": "rig seated pose (tools/rig/motion.py sit): pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py); feet flat on the floor, seat height 42 cm"
 }
