@@ -3,7 +3,7 @@
    the simulation log written by `python3 -m harness run`.
    URL params: loc, view (floor4: 4A|hall|4B|all), t (HH:MM[:SS] or seconds), speed, follow, play=0, auto=0, bare=1,
                zoom, log (path of the sim JSON), live=1 (poll the log while the simulation is running),
-               art=rig (ignore the AI-import idle frames in characters/<cid>/ai/ and show the rig idle) */
+               art=rig (ignore the AI-import idle/walk frames in characters/<cid>/ai/ and show the rig) */
 const Q = new URLSearchParams(location.search);
 const ROOT = '../';                    // harness/
 const CHARS = '../../characters/';
@@ -30,14 +30,27 @@ const V = {
   pan: [0, 0], ff: false, idx: {},
 };
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+// soft ground-contact shadow under standing / walking characters: the env's contact-shadow colour (shadow_violet
+// 61,48,71 as in tools/iso_render.py / build_env.py) in 3 stepped alpha rings (pixel-art soft edge, no blur),
+// a 2.6:1 iso ellipse centred on the pivot (feet)
+const SHADOW = (() => {
+  const w = 34, h = 13, c = document.createElement('canvas'); c.width = w; c.height = h;
+  const g = c.getContext('2d'), im = g.createImageData(w, h), cx = (w - 1) / 2, cy = (h - 1) / 2;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const d = Math.hypot((x - cx) / (w / 2), (y - cy) / (h / 2));
+    const a = d < 0.55 ? 140 : d < 0.8 ? 100 : d < 1.0 ? 50 : 0, o = (y * w + x) * 4;
+    im.data[o] = 61; im.data[o + 1] = 48; im.data[o + 2] = 71; im.data[o + 3] = a;
+  }
+  g.putImageData(im, 0, 0); return c;
+})();
 
 async function loadChars(cid) {
   const [atlas, sheet, sitj, sit] = await Promise.all([json(`${CHARS}${cid}/chr_${cid}.json`), img(`${CHARS}${cid}/chr_${cid}.png`),
     json(`${CHARS}${cid}/chr_${cid}_sit.json`).catch(() => null), img(`${CHARS}${cid}/chr_${cid}_sit.png`).catch(() => null)]);
   const tags = {}; for (const tg of atlas.meta.frameTags) tags[tg.name] = [tg.from, tg.to];
   const sitf = {}; if (sitj) for (const f of sitj.frames) sitf[f.dir] = f;
-  // optional AI-import sheet (tools/ai_import): its idle_<dir> loops replace the rig idle while standing;
-  // walk / work / emotes / sit stay on the rig sheet until AI sheets for those exist
+  // optional AI-import sheet (tools/ai_import): its idle_<dir> / walk_<dir> loops replace the rig's where present;
+  // work / emotes / sit stay on the rig sheet until AI sheets for those exist
   let ai = null;
   if (Q.get('art') !== 'rig') {
     const [aj, ais] = await Promise.all([json(`${CHARS}${cid}/ai/chr_${cid}.json`).catch(() => null), img(`${CHARS}${cid}/ai/chr_${cid}.png`).catch(() => null)]);
@@ -110,9 +123,10 @@ function emoteTag(ch, anim, dir) {
 function frameOf(st, wall) {
   const ch = V.chars[st.cid];
   if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.seat || f.pivot}; }   // seat anchor (butt) -> seat point at seat_z
-  if (st.anim === 'idle' && ch.ai && ch.ai.tags[`idle_${st.dir}`]) {
-    const tg = ch.ai.tags[`idle_${st.dir}`], n = tg[1] - tg[0] + 1, fd = (ch.ai.frames[tg[0]].duration || 250) / 1000;
-    return {img: ch.ai.sheet, fr: ch.ai.frames[tg[0] + Math.floor(wall / fd + st.cid.length) % n].frame, pv: [64, 116]};
+  if ((st.anim === 'idle' || st.anim === 'walk') && ch.ai && ch.ai.tags[`${st.anim}_${st.dir}`]) {   // AI-import art where it exists
+    const tg = ch.ai.tags[`${st.anim}_${st.dir}`], n = tg[1] - tg[0] + 1, fd = (ch.ai.frames[tg[0]].duration || 250) / 1000;
+    const i = st.anim === 'walk' ? st.k % n : Math.floor(wall / fd + st.cid.length) % n;
+    return {img: ch.ai.sheet, fr: ch.ai.frames[tg[0] + i].frame, pv: [64, 116]};
   }
   let idx;
   if (st.anim === 'emote') idx = st.frame;
@@ -195,7 +209,7 @@ function render(wall) {
   L.sort((a, b) => a.k - b.k);
   for (const it of L) {
     if (it.s) { const s = it.s; ctx.drawImage(sc.sprImg, s.ax, s.ay, s.w, s.h, s.x, s.y, s.w, s.h); }
-    else if (it.shadow) { const [sx, sy] = toCanvas(sc, it.shadow.x, it.shadow.y); ctx.fillStyle = 'rgba(40,24,60,0.43)'; ctx.beginPath(); ctx.ellipse(sx, sy, 20, 6, 0, 0, 7); ctx.fill(); }
+    else if (it.shadow) { const [sx, sy] = toCanvas(sc, it.shadow.x, it.shadow.y); ctx.drawImage(SHADOW, Math.round(sx - SHADOW.width / 2), Math.round(sy - SHADOW.height / 2) + 1); }
     else { const st = it.ch, f = frameOf(st, wall), [sx, sy0] = toCanvas(sc, st.x, st.y), sy = sy0 - (st.z || 0) * 64; st.sx = sx; st.sy = sy; st.top = sy - f.pv[1] + 18;
       ctx.drawImage(f.img, f.fr.x, f.fr.y, f.fr.w, f.fr.h, Math.round(sx - f.pv[0]), Math.round(sy - f.pv[1]), f.fr.w, f.fr.h); }
   }

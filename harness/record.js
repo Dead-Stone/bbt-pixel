@@ -21,6 +21,7 @@ const CLIPS = [  // name, query, sim start, sim end, fps
   ['clip_ait_physics_work.gif', 'loc=ait_physics&follow=howard&zoom=2.2&speed=3&talk=1.5', '09:37:50', '09:39:10', 10],
   ['clip_amber_slice_shift.gif', 'loc=rest_amber_slice&follow=penny&zoom=3&speed=3&auto=0', '15:08:50', '15:09:40', 10],
   ['clip_ait_cafeteria_lunch.gif', 'loc=ait_cafeteria&speed=8&talk=3', '12:00:02', '12:02:46', 8],
+  ['clip_penny_walk_ai.gif', 'loc=floor4&view=all&follow=penny&zoom=3&speed=1&auto=0', '12:08:00', '12:08:14', 8],
 ];
 const sec = s => { const [h, m, x] = s.split(':').map(Number); return h * 3600 + m * 60 + (x || 0); };
 
