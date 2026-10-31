@@ -42,7 +42,9 @@ def draw_layers(cv, cid, spec, B, J, pose):
         if top.get('logo'):                    # chest emblem painted on the shirt surface (material <mat>_alt)
             lx, lz, lr = top['logo']
             tex = lambda q: np.where((q[:, 1] > 0.55) & ((q[:, 0] - lx) ** 2 + ((q[:, 2] - lz) * 1.2) ** 2 < lr * lr), 3.0, 0.0)
-        PT.torso(cv, B, J, mat=m, infl=infl, part=top.get('part', 'top'), keep_chest=keep, keep_trap=ktrap, tex=tex)
+        masc = not spec.get('feminine')        # men's shirts hang straight from the chest and sit lower on the shoulder
+        PT.torso(cv, B, J, mat=m, infl=infl, part=top.get('part', 'top'), keep_chest=keep, keep_trap=ktrap, tex=tex,
+                 waist_infl=(infl + 0.7 * (B.chest['w'] - B.waist['w'])) if masc else None, sh_drop=(0.8 + infl * 0.6) if masc else 0.0)
         if top.get('neck') == 'turtle': PT.collar_neck(cv, B, J, top.get('collar_mat', m), upto=top.get('collar', 0.7))
         for s, _ in PT.SIDES:
             sl = top.get('sleeve', 1.0)
@@ -103,12 +105,14 @@ def face(idx, cv, spec, pal, B, J, pose):
         elif eyes == 'half':
             put(x, y - 1, R['skin'][2]); put(x, y, R['lash'][1])
         else:
-            put(x, y - 1 + look[1], R['lash'][1]); put(x, y + look[1], R['eye'][1])
+            # a 1px eye reads as a speck and the clean-up passes eat it: lash/upper lid + iris = a 2px-tall eye
+            put(x, y - 1 + look[1], R['lash'][1] if spec.get('feminine') else R['eye'][3]); put(x, y + look[1], R['eye'][1])
             if eyes == 'up': put(x, y - 1, R['eye'][1]); put(x, y, R['skin'][1])
             if fac > 0.62 and spec.get('feminine'):          # outer lash in near-frontal views
                 ox = x + (1 if (sx - project_x(J['head_c'])) > 0 else -1)
                 if vis(ox, y - 1, dep, 3.5): put(ox, y - 1, R['lash'][1])
         bx, by, bdep, bf = L['brow' + s]
+        if not spec.get('feminine'): by -= 1                  # men: brow one row higher, a skin row between brow and eye
         if bf > 0.2 and vis(int(bx), int(by), bdep, 3.0):
             put(int(bx), int(by) - pose.get('brow_up', 0), R['brow'][2])
             ox = int(bx) + (1 if (bx - project_x(J['head_c'])) > 0 else -1)
@@ -162,7 +166,7 @@ def draw(cid, pose, d, raw=False):
     v = SK.CAM_S * ((round(hx) - hx) / SK.K) - SK.CAM_U * ((round(hy) - hy) / SK.K)
     for k in list(J):                     # move the whole body (< half a pixel) so head and shoulders stay in register
         if isinstance(J[k], np.ndarray) and J[k].shape == (3,) and k not in DIR_KEYS: J[k] = J[k] + v
-    cv = Canvas(); draw_layers(cv, cid, spec, B, J, pose); cv.fill_pinholes()
+    cv = Canvas(); draw_layers(cv, cid, spec, B, J, pose); cv.fill_pinholes(); cv.fill_holes()
     idx, op = shade(cv, pal.ramps, None)
     idx = outline(idx, cv, pal.ramps)
     idx, prot = face(idx, cv, spec, pal, B, J, pose)

@@ -1,6 +1,6 @@
 {
  "id": "chr_sheldon",
- "version": "v2",
+ "version": "rig1",
  "sheet": "chr_sheldon.png",
  "atlas": "chr_sheldon.json",
  "frame": [
@@ -16,11 +16,12 @@
   0.90625
  ],
  "body_height_px": 100,
- "palette": "palettes/bbt_sheldon_v2.gpl",
+ "palette": "palettes/bbt_sheldon_rig.gpl",
  "camera": {
   "projection": "2:1 dimetric",
   "elevation_deg": 30,
-  "px_per_unit": 1.122
+  "px_per_cm": 0.6242,
+  "scale": "100 px = 185 cm"
  },
  "dirs": [
   "S",
@@ -110,7 +111,7 @@
     "closed",
     "half"
    ],
-   "note": "v1 timing kept. v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
+   "note": "v1: half/closed/half (spec \u00a72.3 lists 2 frames; the runtime returns to idle after)."
   },
   "work": {
    "frames": 6,
@@ -128,7 +129,7 @@
    ],
    "frame_ms": 125,
    "kind": "whiteboard",
-   "note": "v1 timing kept. looped while the agent is on a work hook"
+   "note": "looped while the agent is on a work hook"
   },
   "talk": {
    "frames": 4,
@@ -145,7 +146,7 @@
     "SE"
    ],
    "frame_ms": 170,
-   "note": "v1 timing kept. looped while the agent has a speech bubble (v2 masters: body/hands only, no mouth frames)"
+   "note": "looped while the agent has a speech bubble (mouth open/closed frames)"
   },
   "gesture": {
    "frames": 6,
@@ -226,7 +227,7 @@
     "NE": "right (mirror of NW)",
     "SE": "left (mirror of SW)"
    },
-   "note": "v1 timing kept. v1: 24 frames (wind-up, 3 visible knocks + hold per block, x3, 4-frame return); spec \u00a73.1 lists 16 -- update the spec table if approved.",
+   "note": "v1: 24 frames (wind-up, 3 visible knocks + hold per block, x3, 4-frame return); spec \u00a73.1 lists 16 -- update the spec table if approved.",
    "emote": true
   },
   "point_gotcha": {
@@ -271,5 +272,56 @@
   "knock_knock_penny"
  ],
  "work_kind": "whiteboard",
- "notes": "v2: one AI-generated master turnaround (S/SW/W/NW/N idle, refs/v2_master/master_strip.jpg) downscaled to 128px + palette-snapped + cleaned (tools/v2/master.py), faces hand-placed per facing (tools/v2/faces.py), animated by cut-out bone deformation driven by the v1 rig skeleton (tools/v2/cutout.py); E/NE/SE mirror W/NW/SW.  Emotes move limbs/head only: face expressions, head turns and hair swing are not re-drawn.  v1 sheets: refs/v1_style/."
+ "notes": "rig1: modular human rig (tools/rig).  Every frame is a skeleton pose (motion.py: walk contact/down/passing/up with pelvis bob, hip roll, weight sway, pelvis/chest counter-twist, counter-swinging arms; breathing idle; IK sit) drawn part by part as shaded 3-D volumes into a z-buffer (parts.py/render.py), clothing + hair + props as layers, palette-shaded, outlined, cleaned with tools/v2/pixfix.  E/NE/SE mirror W/NW/SW.  Previous sheets: refs/v2_style/.",
+ "rig": {
+  "height_cm": 185,
+  "parts": [
+   "head",
+   "neck",
+   "chest",
+   "pelvis",
+   "upper arm",
+   "forearm",
+   "hand",
+   "thigh",
+   "shin",
+   "foot"
+  ],
+  "layers": [
+   "skin",
+   "top",
+   "pants/skirt",
+   "shoes",
+   "hair",
+   "props"
+  ],
+  "gait": {
+   "arm": 9,
+   "elbow": 8,
+   "bob": 0.6,
+   "hip_roll": 1.8,
+   "sway": 0.5,
+   "twist": 2.5,
+   "lean": 0.0
+  },
+  "armcheck": {
+   "ok": true,
+   "rows": [
+    {
+     "side": "R",
+     "fingertip_vs_midthigh_px": -0.2,
+     "elbow_vs_waist_px": 1.8,
+     "upper_fore_ratio": 1.15,
+     "hand_px": 6.8
+    },
+    {
+     "side": "L",
+     "fingertip_vs_midthigh_px": -0.3,
+     "elbow_vs_waist_px": 1.6,
+     "upper_fore_ratio": 1.15,
+     "hand_px": 6.8
+    }
+   ]
+  }
+ }
 }

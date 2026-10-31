@@ -37,7 +37,7 @@ def neck(cv, B, J, mat='skin'):
     cv.chain(J['neck0'] - J['Mc'][:, 2] * 1.5, J['neck1'] + J['Mh'][:, 2] * 1.0, B.r_neck * 1.1, B.r_neck * 0.95, mat, 'neck')
 
 
-def torso(cv, B, J, mat='skin', infl=0.0, part='torso', keep_chest=None, hem=None, tone=0, keep_waist=None, keep_trap=None, tex=0.0, shoulders=True, waist_infl=None):
+def torso(cv, B, J, mat='skin', infl=0.0, part='torso', keep_chest=None, hem=None, tone=0, keep_waist=None, keep_trap=None, tex=0.0, shoulders=True, waist_infl=None, sh_drop=0.0):
     Mc, Mp = J['Mc'], J['Mp']
     cR, cF, cU = Mc[:, 0], Mc[:, 1], Mc[:, 2]; pR, pF, pU = Mp[:, 0], Mp[:, 1], Mp[:, 2]
     ch, wa, pe = B.chest, B.waist, B.pelvis
@@ -46,7 +46,7 @@ def torso(cv, B, J, mat='skin', infl=0.0, part='torso', keep_chest=None, hem=Non
     # trapezius / shoulder line: makes the neck -> shoulder slope
     ell(cv, J['sh_c'] - cU * (0.012 * B.H) - cF * (0.008 * B.H), (cR, cF, cU), (B.sh_x * 0.94 + infl, ch['d'] * 0.78 + infl, 0.026 * B.H + infl), mat, part, keep=keep_trap, tone=tone)
     for s, sg in SIDES:
-        if shoulders: cv.sphere(J['sh' + s] + cU * 0.2, B.r_upper[0] * 1.02 + infl, mat, part, tone=tone)
+        if shoulders: cv.sphere(J['sh' + s] + cU * (0.2 - sh_drop), B.r_upper[0] * 1.02 + infl, mat, part, tone=tone)
     if B.bust and not (keep_chest is not None and getattr(keep_chest, 'open_front', False)):
         for s, sg in SIDES:
             cv.sphere(J['chest_c'] + cF * (ch['d'] * 0.56) + cR * (sg * ch['w'] * 0.42) - cU * (ch['h'] * 0.28) + cF * br,
@@ -212,7 +212,27 @@ def skirt(cv, B, J, mat, length=0.8, flare=1.0, part='skirt', dots=False):
             def tex(q, i=i):
                 ang = np.arctan2(q[:, 0], q[:, 1])
                 return np.where((np.cos(ang * 7 + (i % 2) * math.pi / 7 * 2) > 0.93) & (np.abs(q[:, 2]) < 0.45) & (i % 2 == 0), 3.0, 0.0)
-        ell(cv, c, (ax, fw, dn), (r_out, legr + 1.6 + flare * 0.8 * t / max(length, 1e-3), (B.thigh * length / n) * 0.75 + 1.0), mat, part, tex=tex)
+        ell(cv, c, (ax, fw, dn), (r_out, legr + 1.6 + flare * 0.8 * t / max(length, 1e-3), (B.thigh * length / n) * 1.15 + 1.5), mat, part, tex=tex)
+    _smooth_normals(cv, part, length)
+
+
+def _smooth_normals(cv, part, length):
+    """a skirt is a stack of slices; each slice's rounded top/bottom shades as a band (reads as a coil spring).
+    Average the normals vertically inside the skirt so it shades as one smooth drape."""
+    if part not in cv.parts: return
+    m = cv.part == cv.parts.index(part)
+    if not m.any(): return
+    rad = 2 if length < 1.2 else 4
+    acc = np.zeros_like(cv.n); cnt = np.zeros(m.shape)
+    for dy in range(-rad, rad + 1):
+        mm = np.roll(m, dy, 0); acc += np.roll(cv.n, dy, 0) * mm[..., None]; cnt += mm
+    nn = acc / np.maximum(cnt, 1)[..., None]
+    nn /= np.maximum(np.linalg.norm(nn, axis=-1, keepdims=True), 1e-6)
+    cv.n[m] = nn[m]
+    zz = np.zeros(m.shape); zc = np.zeros(m.shape); z = np.where(m, cv.z, 0)
+    for dy in (-1, 0, 1):
+        mm = np.roll(m, dy, 0); zz += np.roll(z, dy, 0) * mm; zc += mm
+    cv.z[m] = (zz / np.maximum(zc, 1))[m]
 
 
 def open_front(fn):
@@ -274,8 +294,8 @@ def hair_extra(cv, B, J, st, mat='hair'):
             cv.sphere(p, 2.2 * vol, mat, 'hair', tex=float(i % 3 == 1))
     elif kind == 'bowl':
         # straight fringe to the brows + sides over the ears + full back, like a helmet
-        fr = c + hU * (0.22 * h) + hF * (0.36 * d)
-        ell(cv, fr, (hR, hF, hU), (w * 0.47, 0.13 * d, 0.14 * h), mat, 'hair')
+        fr = c + hU * (0.37 * h) + hF * (0.32 * d)
+        ell(cv, fr, (hR, hF, hU), (w * 0.47, 0.13 * d, 0.12 * h), mat, 'hair')
         for s, sg in SIDES:
             ell(cv, c + hR * (sg * w * 0.47) - hF * (0.06 * d) + hU * (0.02 * h), (hR, hF, hU), (0.10 * w + 0.6 * vol, 0.34 * d, 0.24 * h), mat, 'hair')
         ell(cv, c - hF * (0.30 * d) - hU * (0.02 * h), (hR, hF, hU), (w * 0.44, 0.22 * d, 0.30 * h), mat, 'hair')

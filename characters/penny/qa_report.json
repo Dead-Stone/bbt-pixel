@@ -1,6 +1,6 @@
 {
  "character": "penny",
- "generated": "2026-10-30 17:45 (America/Los_Angeles)",
+ "generated": "2026-10-30 17:53 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -83,7 +83,7 @@
    "silhouette_identical": false
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 827,
+   "pixels_differing_from_plain_flip": 821,
    "silhouette_identical": false
   }
  },

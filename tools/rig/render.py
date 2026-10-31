@@ -47,6 +47,23 @@ class Canvas:
             n = self.n[sy, sx] + self.n[sy2, sx2]; self.n[ys, xs] = n / np.maximum(np.linalg.norm(n, axis=-1, keepdims=True), 1e-6)
             for a in (self.mat, self.part, self.tone, self.tex): a[ys, xs] = a[sy, sx]
 
+    def fill_holes(self, max_px=8):
+        """small fully-enclosed empty regions inside the silhouette (gaps between overlapping volumes) take the
+        surface of their nearest drawn neighbour"""
+        from scipy import ndimage as ND
+        occ = self.part >= 0
+        lab, n = ND.label(~occ)
+        if n == 0: return
+        sizes = ND.sum(np.ones_like(lab), lab, index=np.arange(1, n + 1))
+        edge = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]])).tolist())
+        small = [i + 1 for i, s in enumerate(sizes) if s <= max_px and (i + 1) not in edge]
+        if not small: return
+        hole = np.isin(lab, small)
+        _, (iy, ix) = ND.distance_transform_edt(hole, return_indices=True)
+        ys, xs = np.nonzero(hole); sy, sx = iy[ys, xs], ix[ys, xs]
+        for a in (self.z, self.mat, self.part, self.tone, self.tex): a[ys, xs] = a[sy, sx]
+        self.n[ys, xs] = self.n[sy, sx]
+
     def _id(self, lst, k):
         if k not in lst: lst.append(k)
         return lst.index(k)
