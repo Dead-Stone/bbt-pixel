@@ -1,0 +1,69 @@
+GIMP Palette
+Name: bbt_howard_rig
+Columns: 5
+#
+255 218 184	skin_hi
+236 192 156	skin_base
+189 134 112	skin_sh
+146  89  79	skin_deep
+ 80  44  41	skin_ol
+129  94  63	hair_hi
+110  72  42	hair_base
+ 88  43  26	hair_sh
+ 68  23  16	hair_deep
+ 37  10   7	hair_ol
+103 189 241	top_hi
+ 64 132 212	top_base
+ 35  80 170	top_sh
+ 18  45 131	top_deep
+  8  20  72	top_ol
+252 250 255	dickey_hi
+232 230 236	dickey_base
+181 176 189	dickey_sh
+137 130 146	dickey_deep
+ 74  68  80	dickey_ol
+232  83 161	pants_hi
+204  44 142	pants_base
+163  18 116	pants_sh
+126   5  92	pants_deep
+ 69   1  52	pants_ol
+ 56  50  55	belt_hi
+ 44  38  44	belt_base
+ 35  29  35	belt_sh
+ 27  21  27	belt_deep
+ 25  19  26	belt_ol
+255 227 120	belt_alt_hi
+236 204  84	belt_alt_base
+189 132  50	belt_alt_sh
+146  80  29	belt_alt_deep
+ 80  37  14	belt_alt_ol
+100  80  69	shoes_hi
+ 84  62  52	shoes_base
+ 67  42  37	shoes_sh
+ 52  27  26	shoes_deep
+ 29  13  13	shoes_ol
+ 78  67  58	eye_hi
+ 64  52  44	eye_base
+ 51  37  32	eye_sh
+ 40  25  23	eye_deep
+ 26  14  14	eye_ol
+223 159 145	lip_hi
+196 124 112	lip_base
+157  79  78	lip_sh
+122  53  60	lip_deep
+ 67  27  33	lip_ol
+109  79  55	brow_hi
+ 92  60  36	brow_base
+ 74  36  22	brow_sh
+ 57  19  14	brow_deep
+ 31   8   7	brow_ol
+ 60  45  36	lash_hi
+ 48  32  24	lash_base
+ 38  20  16	lash_sh
+ 30  12  11	lash_deep
+ 26   8   8	lash_ol
+255 253 248	card_hi
+240 238 232	card_base
+192 186 177	card_sh
+149 138 131	card_deep
+ 82  73  69	card_ol
