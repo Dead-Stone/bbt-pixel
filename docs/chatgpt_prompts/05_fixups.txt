@@ -1,0 +1,33 @@
+Use the attached images as the exact style reference: the characters AND the earlier furniture/tile sheets. Match their palette, outline and shading exactly.
+
+TASK: Make ONE pixel-art sprite sheet of separate game objects (fix-up pieces) for an isometric Big Bang Theory game. Objects:
+- black office chair (empty, standalone, NOT attached to a desk), front view facing bottom-left + back view
+- Penny's patterned armchair (4B), facing bottom-left and a true mirrored copy facing bottom-right
+- 4B floor lamp
+- standalone wooden dining chair (4B), facing bottom-left, facing bottom-right, and back view
+- flat-screen TV on a wooden stand seen from BEHIND (back of TV visible)
+- wall segment 1x1, 3 m tall (160 px), true isometric thin wall running along the LEFT diagonal, plain beige, with baseboard
+- the same wall segment running along the RIGHT diagonal
+- left-diagonal wall with a window, and right-diagonal wall with a window
+- apartment door 4A set into a left-diagonal wall, closed and open (true isometric, not front view)
+- apartment door 4B set into a right-diagonal wall, closed and open
+- staircase going DOWN, 2x3 tiles, with railings
+- kitchen checker floor tile 2x2 that tiles seamlessly (black and white)
+
+STYLE (match the attached character image exactly): true pixel art with hard pixel edges, no blur, no painterly strokes, no 3D render look. 1px dark brown outline around every object. Soft cel shading, 2-3 tones per colour, light from top-left. Warm, slightly muted palette matching the characters; objects must not be more detailed or more saturated than the characters.
+
+VIEW: true isometric 2:1 (floor edges about 26.6 degrees), no perspective. Every object's front faces BOTTOM-LEFT. If an object is not symmetrical (couch, armchair, desk, chair, counter, island), also draw a second copy facing BOTTOM-RIGHT next to it, labelled with "R".
+
+GRID AND SCALE: floor grid of diamond tiles 64 px wide x 32 px tall. Each object sits on a whole number of tiles; write its footprint under it as width x depth, e.g. "couch 3x1". Bottom corners line up with the footprint. Height scale 1 m = 53 px: door 112 px, seat cushion 24 px high, table top 40 px, counter 48 px, bookshelf 106 px. Same scale for all objects; never shrink big ones to fit.
+
+SEATS: completely empty (no people, pets, clothes). Cushion top clearly visible and flat; backrest at the back edge; armrests don't cover the cushion.
+
+BACKGROUND AND LAYOUT: flat pure magenta #FF00FF only, no gradient, texture or noise. No floor, no shadows of any kind, no glow. Never use magenta inside objects. Neat grid, at least 24 px of magenta between objects and from edges; nothing touches or overlaps; nothing cut off.
+
+LABELS: small plain black text under each object with name and footprint, not touching the object, spelled as in the list.
+
+DON'Ts: no characters or hands, no room walls/floor, no extra objects, don't merge objects, don't vary style.
+
+OUTPUT: one lossless PNG about 2048 px wide (taller if needed). If it doesn't all fit, make a second image rather than shrinking. Before drawing, check every rule; after drawing, list anything that doesn't match the rules.
+
+VIEW FIX: Use a true isometric 3/4 top view from above at the same angle for EVERY object, so the top surfaces are visible as 2:1 diamonds (the couch seat, table tops and counter tops must show as diamond-shaped tops). Do NOT draw objects from a straight front view.

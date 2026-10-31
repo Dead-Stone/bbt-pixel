@@ -1,6 +1,6 @@
 """Floor tiles + wall colours from the ChatGPT floors/walls sheet.
 Floor diamonds are unprojected to a square texture, made seamless (narrow border crossfade with the half-offset copy),
-and re-projected onto the game's 128x64 iso tile mask; the kitchen checker is regenerated geometrically from its two colours."""
+and re-projected onto the game's 128x64 iso tile mask; the kitchen checker is re-laid from the fixups sheet's checker squares."""
 import os
 import numpy as np
 from PIL import Image
@@ -35,15 +35,26 @@ def project(S):
             x = (sx / 64 + sy / 32) / 2; y = (sy / 32 - sx / 64) / 2
             out[j, i, :3] = S[min(max(int(y * N), 0), N - 1), min(max(int(x * N), 0), N - 1)]; out[j, i, 3] = 255
     return out
+FX18 = f'{ROOT}/refs_ai/chatgpt/env/sliced/fixups_v1/18.png'
 def checker():
-    a = _src(3); m = a[..., 3] > 0; px = a[m][:, :3]
-    lum = px @ np.array([0.3, 0.59, 0.11]); lt = np.median(px[lum > np.percentile(lum, 70)], 0); dk = np.median(px[lum < np.percentile(lum, 30)], 0)
+    """kitchen checker from the fixups sheet (fixups_v1/18, a 2x2 tile with 3x3 squares): the top diamond is unprojected,
+    one cream and one charcoal square (texture + grout) are cut out and re-laid as 2x2 squares per game tile (seamless)"""
+    a = np.array(Image.open(FX18).convert('RGBA')).astype(float); m = a[..., 3] > 0; ys, xs = np.where(m)
+    T = np.array([xs[ys == ys.min()].mean(), ys.min()]); L = np.array([xs.min(), ys[xs == xs.min()].mean()])
+    R = np.array([xs.max(), ys[xs == xs.max()].mean()])
+    M = 96; U = np.zeros((M, M, 3))
+    for j in range(M):
+        for i in range(M):
+            p = T + (i + .5) / M * (R - T) + (j + .5) / M * (L - T); U[j, i] = a[int(p[1]), int(p[0]), :3]
+    q = M // 3; h = N // 2
+    def sq(r, c):
+        t = U[r*q + 2:(r+1)*q - 2, c*q + 2:(c+1)*q - 2]
+        return np.array(Image.fromarray(t.astype(np.uint8)).resize((h, h), Image.NEAREST)).astype(float)
+    lt, dk = sq(1, 1), sq(1, 0)
     S = np.zeros((N, N, 3))
-    for j in range(N):
-        for i in range(N):
-            c = ((i * 2 // N) + (j * 2 // N)) % 2
-            S[j, i] = lt if c == 0 else dk
-            if i % (N // 2) == 0 or j % (N // 2) == 0: S[j, i] = S[j, i] * 0.82   # grout line (tile-edge, seamless)
+    for r in range(2):
+        for c in range(2): S[r*h:(r+1)*h, c*h:(c+1)*h] = lt if (r + c) % 2 == 0 else dk
+    g = (np.arange(N) % h == 0); S[g, :] *= 0.85; S[:, g] *= 0.85      # grout on the square edges (seamless)
     return S
 _T = None
 def raw_tiles():

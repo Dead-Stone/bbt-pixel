@@ -561,7 +561,7 @@ def stair_tex(face, x, y, z, tone, rc):
 @item('hall_stair_flight', 'hall4', (2, 3), 0.0, 'R4', 'P0', blocks=False, sort_bias=-0.5, shadow=False,
       notes='top of the flight going DOWN toward the camera; 0.5 m drop per tile (3 visual risers per tile); below-floor side faces are clipped so the neighbouring floor reads over them',
       hooks=[H('climb_lane_down', 'climb_lane_down', (1.0, 0.15), (0, 1), 'walk_stairs_down', approach=(0, -1)),
-             H('climb_lane_up', 'climb_lane_up', (1.0, 2.85), (0, -1), 'walk_stairs_up')])
+             H('climb_lane_up', 'climb_lane_up', (1.0, 2.85), (0, -1), 'walk_stairs_up', approach=(0, -1))])   # floor-4 side of the lane = the stair-head landing (was an unreachable mid-flight tile)
 def stairs(state='default'):
     P = []
     for k in range(9):

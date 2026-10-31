@@ -88,7 +88,7 @@ function indexSim(sim) {
 }
 async function loadSim() {
   const sim = await json(Q.get('log') || `${ROOT}out/sim_day.json`);
-  V.sim = sim; V.idx = indexSim(sim);
+  V.sim = sim; V.idx = indexSim(sim); V.doorEv = sim.events.filter(e => e.type === 'door');
   V.tMax = V.live ? sim.meta.t_now : sim.meta.t_end;
   const sl = document.getElementById('slider'); sl.min = sim.meta.t_start; sl.max = V.tMax;
 }
@@ -99,7 +99,16 @@ function agentAt(cid, t) {
   const s = tr[i];
   if (s.kind === 'away') return {cid, away: true, why: s.why};
   if (s.kind === 'walk') {
-    let d = Math.max(0, (t - s.t0) * s.speed), p = s.pts, x = p[p.length - 1][0], y = p[p.length - 1][1], walked = d;
+    // a walk into / out of a desk hook that snaps to the desk's chair ends / starts at the chair's seat instead (no 1 m hop);
+    // the leg is re-timed so the walk still lasts t0..t1
+    let p = s.pts, speed = s.speed;
+    const cIn = deskChair(cid, tr[i + 1]), cOut = deskChair(cid, tr[i - 1] && tr[i - 1].kind !== 'walk' ? tr[i - 2] && tr[i - 2].act === 'work' && tr[i - 2].t1 === tr[i - 1].t0 ? tr[i - 2] : tr[i - 1] : null);
+    if (cIn || cOut) {
+      p = p.map(q => q.slice()); if (cIn) p[p.length - 1] = cIn.seat.slice(0, 2); if (cOut) p[0] = cOut.seat.slice(0, 2);
+      let L = 0; for (let k = 0; k < p.length - 1; k++) L += Math.hypot(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1]);
+      if (s.t1 > s.t0) speed = Math.max(s.speed, L / (s.t1 - s.t0));
+    }
+    let d = Math.max(0, (t - s.t0) * speed), x = p[p.length - 1][0], y = p[p.length - 1][1], walked = d;
     const prev = tr[i - 1]; let dir = prev && prev.dir ? prev.dir : null, pd = dir;
     for (let k = 0; k < p.length - 1; k++) {
       const L = Math.hypot(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1]); if (L < 1e-6) continue;
@@ -123,9 +132,8 @@ function agentAt(cid, t) {
   if (st.anim === 'work' && ai0) {            // job-specific loop: desk / laptop -> desk (think + phone), ponder -> think
     const hk = curHook(cid, t, s), sc = V.scenes[s.loc], H = sc && (sc.hooks || []).find(h => h.id === hk);
     // a desk work hook that needs a chair + a seated-writing sheet: sit on the desk's chair and write (Sheldon's office)
-    const chair = H && ch0.sita && ch0.sita.sit_write && (H.tags || []).includes('needs_chair') &&
-      sc.hooks.filter(h => h.seat && h.type === 'sit').sort((a, b) => Math.hypot(a.pos[0] - H.pos[0], a.pos[1] - H.pos[1]) - Math.hypot(b.pos[0] - H.pos[0], b.pos[1] - H.pos[1]))[0];
-    if (chair && Math.hypot(chair.pos[0] - H.pos[0], chair.pos[1] - H.pos[1]) < 1.2)
+    const chair = chairNear(ch0, sc, H);
+    if (chair)
       return {cid, loc: s.loc, x: chair.seat[0], y: chair.seat[1], z: chair.seat_z, dir: chair.sit_dir, key: chair.sit_key, hook: chair.id, anim: 'sit', sitAnim: 'sit_write'};
     if (/desk|laptop|computer/i.test(hk) && ai0.tags[`desk_${st.dir}`]) st.anim = 'desk';
     else if (/\.ponder/.test(hk) && ai0.tags[`act_think_${st.dir}`]) st.anim = 'act_think';
@@ -161,6 +169,17 @@ function agentAt(cid, t) {
 const MEAL = /\b(eat|eats|eating|lunch|dinner|breakfast|brunch|takeout|take-out|meal|food|snack|pizza|thai|burger|cheesecake)\b/i;
 function hash01(str) { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return ((h >>> 0) % 10000) / 10000; }
 const TURN_M = 0.12, SETTLE_S = 0.16;
+// the seat a desk work hook tagged needs_chair snaps to (characters with a seated-writing sheet), else null
+function chairNear(ch0, sc, H) {
+  if (!H || !sc || !ch0 || !ch0.sita || !ch0.sita.sit_write || !(H.tags || []).includes('needs_chair')) return null;
+  const c = sc.hooks.filter(h => h.seat && h.type === 'sit').sort((a, b) => Math.hypot(a.pos[0] - H.pos[0], a.pos[1] - H.pos[1]) - Math.hypot(b.pos[0] - H.pos[0], b.pos[1] - H.pos[1]))[0];
+  return c && Math.hypot(c.pos[0] - H.pos[0], c.pos[1] - H.pos[1]) < 1.2 ? c : null;
+}
+function deskChair(cid, seg) {
+  if (!seg || seg.kind !== 'stand' || seg.act !== 'work') return null;
+  const sc = V.scenes[seg.loc], hk = curHook(cid, seg.t0 + 0.01, seg);
+  return chairNear(V.chars[cid], sc, sc && (sc.hooks || []).find(h => h.id === hk));
+}
 function curHook(cid, t, s) {
   const E = V.idx.byAgent[cid], j = bsearch(E, t, 't');
   for (let k = j; k >= 0 && E[k].t >= s.t0 - 1; k--) if (E[k].type === 'hook_start') return E[k].hook || '';
@@ -269,7 +288,10 @@ function render(wall) {
   const here = Object.values(states).filter(s => s && !s.away && s.loc === V.loc);
   const seated = new Set(here.filter(s => s.anim === 'sit' && s.hook).map(s => s.hook));
   // hook-tagged sprites = the seat's own back/armrest pixels that sit in front of a sitter: drawn only while occupied
-  const L = sc.sprites.filter(s => !s.hook || seated.has(s.hook)).map(s => ({k: s.key, s}));
+  // door-tagged sprites (door:<item>:open|closed): the open set shows from 1 s before to 2 s after a 'door' event here
+  const opened = new Set((V.doorEv || []).filter(e => e.loc === V.loc && t >= e.t - 1 && t <= e.t + 2).map(e => e.item));
+  const showS = s => !s.hook || (s.hook.startsWith('door:') ? (s.hook.endsWith(':open') === opened.has(s.hook.split(':')[1])) : seated.has(s.hook));
+  const L = sc.sprites.filter(showS).map(s => ({k: s.key, s}));
   for (const st of here) {
     const k = st.key != null ? st.key : st.x + st.y + 0.01;
     if (st.anim !== 'sit') L.push({k: k - 0.001, shadow: st});

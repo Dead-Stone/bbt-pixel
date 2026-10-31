@@ -1,0 +1,28 @@
+Use the attached images as the exact style reference: the characters AND the earlier furniture/tile/fix-up sheets. Match their palette, outline and shading exactly.
+
+TASK: Make ONE pixel-art sprite sheet of separate game objects (second fix-up pass) for an isometric Big Bang Theory game. ONLY these objects, nothing else:
+- Penny's patterned armchair (4B), empty, seen from ABOVE in true 2:1 isometric 3/4 view, front facing BOTTOM-LEFT (the seat cushion top must show as a diamond-shaped top, NOT a straight front view)
+- the same armchair facing BOTTOM-RIGHT, drawn separately as its own iso 3/4 view (NOT a mirrored copy: the light still comes from the top-left, so shading stays on the correct side), labelled "R"
+- plain beige wall segment 1x1, 3 m tall (160 px), running along the LEFT iso diagonal: its top edge RISES towards the UPPER-LEFT at exactly 2:1 (1 px up per 2 px left), with baseboard, thin true-isometric wall (visible top edge, both faces flat, no perspective)
+- the same plain wall segment running along the RIGHT iso diagonal: its top edge RISES towards the UPPER-RIGHT at exactly 2:1
+- the left-diagonal wall segment with a window, and the right-diagonal wall segment with a window (same size and slope as the plain segments)
+- apartment door 4B set into a RIGHT-diagonal wall segment (top edge rising to the upper-right), CLOSED, with a gold "4B" number plate that reads correctly (not mirrored)
+- the same door 4B clearly OPEN: the door leaf swung about 70 degrees into the room so the dark doorway opening is plainly visible beside it, plate still reading "4B"
+
+STYLE (match the attached character image exactly): true pixel art with hard pixel edges, no blur, no painterly strokes, no 3D render look. 1px dark brown outline around every object. Soft cel shading, 2-3 tones per colour, light from top-left. Warm, slightly muted palette matching the characters; objects must not be more detailed or more saturated than the characters.
+
+VIEW: true isometric 2:1 (floor edges about 26.6 degrees), no perspective. The armchair's front faces BOTTOM-LEFT, plus the separately drawn BOTTOM-RIGHT copy labelled "R". Walls and doors follow the diagonal stated for each one.
+
+GRID AND SCALE: floor grid of diamond tiles 64 px wide x 32 px tall (our game tile). Each object sits on a whole number of tiles; write its footprint under it as width x depth, e.g. "armchair 1x1", "wall L 1x1". Bottom corners line up with the footprint: a 1-tile wall segment spans exactly one 64 x 32 tile edge (32 px horizontally per 16 px vertically along its diagonal). Height scale 1 m = 53 px: wall 160 px, door 112 px, seat cushion 24 px high. Same scale for all objects; never shrink big ones to fit.
+
+SEATS: completely empty (no people, pets, clothes). Cushion top clearly visible and flat; backrest at the back edge; armrests don't cover the cushion.
+
+BACKGROUND AND LAYOUT: flat pure magenta #FF00FF only, no gradient, texture or noise. No floor, no shadows of any kind, no glow. Never use magenta inside objects. Neat grid, at least 24 px of magenta between objects and from edges; nothing touches or overlaps; nothing cut off.
+
+LABELS: small plain black text under each object with name and footprint, not touching the object, spelled as in the list.
+
+DON'Ts: no characters or hands, no room floor, no extra objects, don't merge objects, don't vary style, don't mirror text, don't draw the open door closed.
+
+OUTPUT: one lossless PNG about 2048 px wide (taller if needed). If it doesn't all fit, make a second image rather than shrinking. Before drawing, check every rule; after drawing, list anything that doesn't match the rules.
+
+VIEW FIX: Use a true isometric 3/4 top view from above at the same angle for EVERY object, so top surfaces are visible as 2:1 diamonds (the armchair seat and the wall tops must show as diamond/parallelogram tops). Do NOT draw any object from a straight front view.

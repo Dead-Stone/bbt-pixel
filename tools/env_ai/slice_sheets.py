@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 from scipy import ndimage as ndi
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC = f'{ROOT}/refs_ai/chatgpt/env'
-SHEETS = ['floors_walls_v1', '4A_furniture_v1', '4B_furniture_v1']
+SHEETS = ['floors_walls_v1', '4A_furniture_v1', '4B_furniture_v1', 'fixups_v1']
 
 def keymask(a):
     """alpha 0..255 from magenta distance (tolerant key)"""

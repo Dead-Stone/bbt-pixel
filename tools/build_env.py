@@ -12,8 +12,6 @@ ENV_AI = os.environ.get('ENV_AI', '1') != '0'      # skin floor4 with the ChatGP
 if ENV_AI:
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'env_ai'))
     import skins as SK, floors_ai as FA
-    # the desk sprite (4A sheet #08) draws Sheldon's office chair itself; the (hidden) chair proxy's seat moves onto it
-    next(h for h in E.ITEMS['4a_office_chair']['hooks'] if h['id'] == 'seat0')['seat_off'] = [0.45, 0.25]
 
 ROOT = '/workspace/bbt-pixel'; ENV = f'{ROOT}/env'
 TPL = f'{ROOT}/templates'
@@ -398,6 +396,7 @@ def char_frame(cid, anim, d, k=0):
     f = fr[nm]; return sheet[f['y']:f['y']+f['h'], f['x']:f['x']+f['w']].copy()
 
 # ---------------------------------------------------------------- compositor
+DOOR_ANIM = {'4a_front_door'}   # doors with a drawn open state (refs_ai fixups_v1 #14); the viewer opens them on 'door' events
 def compose(scene, chars=(), scale=1, labels=False, collect=None):
     xr = {'combined': (0, 23), '4A': (12, 23), '4B': (0, 8)}[scene]
     x0, x1 = xr
@@ -458,9 +457,15 @@ def compose(scene, chars=(), scale=1, labels=False, collect=None):
         if it['layer'] == 'floor_decal': layers[2].append((0, R['img'], tlx, tly)); continue
         if it['mount'] == 'wall' and iid in ('4a_flag_banner', 'hall_elevator_broken'):
             layers[4].append((0, R['img'], tlx, tly)); continue
+        anim = collect is not None and iid in DOOR_ANIM and 'open' in it['states']
         for (tx, ty), im in slices(R):
             key = ox + tx + oy + ty + 1 + it['sort_bias']*0.1 + (0.02 if z > 0 else 0)
-            layers[5].append((key, im, tlx, tly)); metas.append(dict(key=key, R=R, t=(tx, ty), tl=(tlx, tly), o=(ox, oy, z)))
+            layers[5].append((key, im, tlx, tly) + ((f'door:{iid}:closed',) if anim else ())); metas.append(dict(key=key, R=R, t=(tx, ty), tl=(tlx, tly), o=(ox, oy, z)))
+        if anim:   # live viewer: the open state as an alternate sprite set, swapped in around each 'door' event
+            Ro = rend(iid, rot, 'open')
+            ofx, ofy = Ro['fp']; otlx = sx - (Ro['pivot'][0] - (ofx - ofy)*64); otly = sy - (Ro['pivot'][1] - (ofx + ofy)*32)
+            for (tx, ty), im in slices(Ro):
+                layers[5].append((ox + tx + oy + ty + 1 + it['sort_bias']*0.1, im, otlx, otly, f'door:{iid}:open'))
     import seating as SG
     SG.add_occluders(layers[5], metas, chars)     # seated characters: depth key + in-front item pixels (tools/seating.py)
     if collect is not None: collect['slice_meta'] = metas
