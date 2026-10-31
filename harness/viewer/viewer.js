@@ -15,11 +15,21 @@ const COLORS = {sheldon: '#7ec8ff', leonard: '#ffb36b', penny: '#ff8fc8', howard
 const LOCNAMES = {floor4: '4th floor (4A · hall · 4B)', lobby: 'Lobby', street_exterior: 'LOS ROBLES AV (street)', raj_apartment: "Raj's apartment",
                   ait_cafeteria: 'AIT cafeteria', ait_physics: 'AIT physics', rest_amber_slice: 'The Amber Slice'};
 
+// facing is picked in SCREEN space (what the eye sees): the move vector and the 8 sprite facings are projected with
+// the iso transform first, so a straight-across move is E/W and a world-axis move is the diagonal it looks like
+const isoV = (x, y) => [(x - y) * 2, x + y];
+const OCT = ['S', 'SW', 'W', 'NW', 'N', 'NE', 'E', 'SE'];
 function dirOf(dx, dy, def) {
   if (Math.abs(dx) < 1e-6 && Math.abs(dy) < 1e-6) return def || 'SW';
-  let best = def || 'SW', bd = -9; const n = Math.hypot(dx, dy);
-  for (const [k, [vx, vy]] of Object.entries(DIRV)) { const d = (dx * vx + dy * vy) / (n * Math.hypot(vx, vy)); if (d > bd) { bd = d; best = k; } }
+  const [sx, sy] = isoV(dx, dy); let best = def || 'SW', bd = -9; const n = Math.hypot(sx, sy);
+  for (const [k, [vx, vy]] of Object.entries(DIRV)) { const [ux, uy] = isoV(vx, vy), d = (sx * ux + sy * uy) / (n * Math.hypot(ux, uy)); if (d > bd) { bd = d; best = k; } }
   return best;
+}
+// one octant step from a toward b (shortest way round) -- used for the in-between facing on sharp turns
+function octStep(a, b) {
+  const i = OCT.indexOf(a), j = OCT.indexOf(b); if (i < 0 || j < 0) return b;
+  const d = ((j - i) % 8 + 8) % 8; if (d < 2 || d > 6) return b;
+  return OCT[(i + (d <= 4 ? 1 : 7)) % 8];
 }
 const hms = t => { t = Math.max(0, Math.floor(t)); const p = n => String(n).padStart(2, '0'); return `${p(Math.floor(t / 3600) % 24)}:${p(Math.floor(t / 60) % 60)}:${p(t % 60)}`; };
 const parseT = s => { if (s == null) return null; if (/^\d+(\.\d+)?$/.test(s)) return +s; const a = s.split(':').map(Number); return a[0] * 3600 + (a[1] || 0) * 60 + (a[2] || 0); };
@@ -51,14 +61,15 @@ async function loadChars(cid) {
   const [atlas, sheet, sitj, sit] = await Promise.all([json(`${CHARS}${cid}/chr_${cid}.json`), img(`${CHARS}${cid}/chr_${cid}.png`),
     json(`${CHARS}${cid}/chr_${cid}_sit.json`).catch(() => null), img(`${CHARS}${cid}/chr_${cid}_sit.png`).catch(() => null)]);
   const tags = {}; for (const tg of atlas.meta.frameTags) tags[tg.name] = [tg.from, tg.to];
-  const sitf = {}; if (sitj) for (const f of sitj.frames) sitf[f.dir] = f;
+  const sitf = {}, sita = {};      // sita[anim][dir] = [frames]: seated loops (sit_eat, sit_write) on the same seat anchor
+  if (sitj) for (const f of sitj.frames) { if (!f.anim) sitf[f.dir] = f; else ((sita[f.anim] ||= {})[f.dir] ||= [])[f.k] = f; }
   // AI-import sheet (tools/ai_import/full.py): replaces the rig for every standing / walking anim
   let ai = null;
   if (Q.get('art') !== 'rig') {
     const [aj, ais] = await Promise.all([json(`${CHARS}${cid}/ai/chr_${cid}.json`).catch(() => null), img(`${CHARS}${cid}/ai/chr_${cid}.png`).catch(() => null)]);
-    if (aj && ais) { const at = {}; for (const tg of aj.meta.frameTags) at[tg.name] = [tg.from, tg.to]; ai = {frames: aj.frames, tags: at, sheet: ais}; }
+    if (aj && ais) { const at = {}; for (const tg of aj.meta.frameTags) at[tg.name] = [tg.from, tg.to]; ai = {frames: aj.frames, tags: at, sheet: ais, meta: aj.meta || {}}; }
   }
-  V.chars[cid] = {frames: atlas.frames, tags, sheet, sit, sitf, ai};
+  V.chars[cid] = {frames: atlas.frames, tags, sheet, sit, sitf, sita, ai};
 }
 async function loadScene(id) {
   const [sc, bg, spr] = await Promise.all([json(`${ROOT}world/${id}/scene.json`), img(`${ROOT}world/${id}/bg.png`), img(`${ROOT}world/${id}/sprites.png`)]);
@@ -88,17 +99,42 @@ function agentAt(cid, t) {
   const s = tr[i];
   if (s.kind === 'away') return {cid, away: true, why: s.why};
   if (s.kind === 'walk') {
-    let d = Math.max(0, (t - s.t0) * s.speed), p = s.pts, x = p[p.length - 1][0], y = p[p.length - 1][1], dir = 'SW', walked = d;
+    let d = Math.max(0, (t - s.t0) * s.speed), p = s.pts, x = p[p.length - 1][0], y = p[p.length - 1][1], walked = d;
+    const prev = tr[i - 1]; let dir = prev && prev.dir ? prev.dir : null, pd = dir;
     for (let k = 0; k < p.length - 1; k++) {
-      const L = Math.hypot(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1]); dir = dirOf(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1], dir);
-      if (d <= L) { const f = L ? d / L : 1; x = p[k][0] + (p[k + 1][0] - p[k][0]) * f; y = p[k][1] + (p[k + 1][1] - p[k][1]) * f; break; }
+      const L = Math.hypot(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1]); if (L < 1e-6) continue;
+      pd = dir; dir = dirOf(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1], dir || 'SW');
+      if (d <= L) {
+        const f = d / L; x = p[k][0] + (p[k + 1][0] - p[k][0]) * f; y = p[k][1] + (p[k + 1][1] - p[k][1]) * f;
+        if (pd && d < TURN_M) dir = octStep(pd, dir);        // sharp turn: pass through the in-between facing first
+        break;
+      }
       d -= L;
     }
-    return {cid, loc: s.loc, x, y, dir, anim: 'walk', k: Math.floor(walked / 0.14) % 8, moving: true};
+    // stride-locked cadence: one sheet frame per walk_m_per_frame metres (measured from the feet in the sheet), so
+    // the feet neither slide nor moonwalk at any sim speed
+    const ch = V.chars[cid], mpf = (ch && ch.ai && ch.ai.meta.walk_m_per_frame) || 0.07;
+    return {cid, loc: s.loc, x, y, dir: dir || 'SW', anim: 'walk', k: Math.floor(walked / mpf) % 8, moving: true};
   }
   // stand: 'work' loop at job hooks (whiteboard/laptop/microscope/pipette/tray), 'talk' while speaking, emotes on top
   const st = {cid, loc: s.loc, x: s.pos[0], y: s.pos[1], dir: s.dir, anim: s.kind === 'sit' ? 'sit' : (s.act === 'work' ? 'work' : 'idle'), key: s.key, z: s.z || 0, hook: s.hook};
-  if (s.kind !== 'sit') {
+  const ch0 = V.chars[cid], ai0 = ch0 && ch0.ai;
+  if (s.kind === 'sit' && ch0 && ch0.sita && ch0.sita.sit_eat && isMeal(cid, t, s)) st.sitAnim = 'sit_eat';   // seated meal
+  if (st.anim === 'work' && ai0) {            // job-specific loop: desk / laptop -> desk (think + phone), ponder -> think
+    const hk = curHook(cid, t, s), sc = V.scenes[s.loc], H = sc && (sc.hooks || []).find(h => h.id === hk);
+    // a desk work hook that needs a chair + a seated-writing sheet: sit on the desk's chair and write (Sheldon's office)
+    const chair = H && ch0.sita && ch0.sita.sit_write && (H.tags || []).includes('needs_chair') &&
+      sc.hooks.filter(h => h.seat && h.type === 'sit').sort((a, b) => Math.hypot(a.pos[0] - H.pos[0], a.pos[1] - H.pos[1]) - Math.hypot(b.pos[0] - H.pos[0], b.pos[1] - H.pos[1]))[0];
+    if (chair && Math.hypot(chair.pos[0] - H.pos[0], chair.pos[1] - H.pos[1]) < 1.2)
+      return {cid, loc: s.loc, x: chair.seat[0], y: chair.seat[1], z: chair.seat_z, dir: chair.sit_dir, key: chair.sit_key, hook: chair.id, anim: 'sit', sitAnim: 'sit_write'};
+    if (/desk|laptop|computer/i.test(hk) && ai0.tags[`desk_${st.dir}`]) st.anim = 'desk';
+    else if (/\.ponder/.test(hk) && ai0.tags[`act_think_${st.dir}`]) st.anim = 'act_think';
+  }
+  // walk -> idle settle: hold the passing (feet-together) frame for a beat before the idle/work pose
+  if (s.kind !== 'sit' && ai0 && tr[i - 1] && tr[i - 1].kind === 'walk' && t - s.t0 < SETTLE_S && ai0.meta.walk_pass) {
+    st.anim = 'walk'; st.k = ai0.meta.walk_pass[st.dir] ?? ai0.meta.walk_pass[{E: 'W', NE: 'NW', SE: 'SW'}[st.dir]] ?? 2; st.settle = true;
+  }
+  if (s.kind !== 'sit' && !st.settle) {
     if (st.anim === 'idle') { const a = idleAct(cid, t, s); if (a) st.anim = a; }
     const sy = V.idx.saysBy[cid] || [], k = bsearch(sy, t, 't');
     if (k >= 0 && t < sy[k].t + sy[k].dur) st.anim = 'talk';
@@ -122,10 +158,20 @@ function agentAt(cid, t) {
 // every 20 s slot -> ~35% of slots play 4.8 s of think / phone / drink before falling back to the breathing idle
 const MEAL = /\b(eat|eats|eating|lunch|dinner|breakfast|brunch|takeout|take-out|meal|food|snack|pizza|thai|burger|cheesecake)\b/i;
 function hash01(str) { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return ((h >>> 0) % 10000) / 10000; }
+const TURN_M = 0.12, SETTLE_S = 0.16;
+function curHook(cid, t, s) {
+  const E = V.idx.byAgent[cid], j = bsearch(E, t, 't');
+  for (let k = j; k >= 0 && E[k].t >= s.t0 - 1; k--) if (E[k].type === 'hook_start') return E[k].hook || '';
+  return '';
+}
+function isMeal(cid, t, s) {
+  const E = V.idx.byAgent[cid], j = bsearch(E, t, 't');
+  for (let k = j; k >= 0 && E[k].t >= s.t0 - 1; k--) if (E[k].type === 'hook_start') { const w = `${E[k].activity || ''} ${E[k].hook || ''}`; return MEAL.test(w) && !/\b(queue|queues|cooks?|orders?|serves?)\b/i.test(w); }
+  return false;
+}
 function idleAct(cid, t, s) {
   const ch = V.chars[cid]; if (!ch || !ch.ai) return null;
-  const E = V.idx.byAgent[cid], j = bsearch(E, t, 't');
-  for (let k = j; k >= 0 && E[k].t >= s.t0 - 1; k--) if (E[k].type === 'hook_start') { { const w = `${E[k].activity || ''} ${E[k].hook || ''}`; if (MEAL.test(w) && !/\b(queue|queues|cooks?|orders?|serves?)\b/i.test(w)) return 'act_eat'; } break; }
+  if (isMeal(cid, t, s)) return 'act_eat';
   const slot = Math.floor(t / 20), r = hash01(`${cid}:${slot}`);
   if (r >= 0.35 || t - slot * 20 > 4.8 || slot * 20 < s.t0) return null;
   return ['act_think', 'act_phone', 'act_drink'][Math.floor(r / 0.35 * 3)];
@@ -137,6 +183,11 @@ function emoteTag(ch, anim, dir) {
 }
 function frameOf(st, wall) {
   const ch = V.chars[st.cid];
+  if (st.anim === 'sit' && ch.sit && st.sitAnim && ch.sita[st.sitAnim] && ch.sita[st.sitAnim][st.dir]) {   // seated loop
+    const L = ch.sita[st.sitAnim][st.dir], tot = L.reduce((a, f) => a + f.duration, 0); let m = (wall * 1000 + st.cid.length * 137) % tot, i = 0;
+    while (i < L.length - 1 && m >= L[i].duration) { m -= L[i].duration; i++; }
+    return {img: ch.sit, fr: L[i].frame, pv: L[i].seat};
+  }
   if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.seat || f.pivot}; }   // seat anchor (butt) -> seat point at seat_z
   if (ch.ai) {   // AI-import art: walk / idle / act_* / talk / work / emotes
     if (st.anim === 'emote') return {img: ch.ai.sheet, fr: ch.ai.frames[st.frame].frame, pv: [64, 116]};
