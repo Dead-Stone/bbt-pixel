@@ -698,13 +698,21 @@
     "direction": "forward"
    }
   ],
-  "frames_per_cycle": 8,
+  "frames_per_cycle": {
+   "S": 8,
+   "SW": 8,
+   "W": 8,
+   "NW": 8,
+   "N": 8,
+   "NE": 8,
+   "E": 8,
+   "SE": 8
+  },
   "steps_per_cycle": 2,
   "pivot": [
    64,
    116
   ],
-  "scale": 0.5251,
   "row_scale": {
    "S": 0.5371,
    "SW": 0.5198,
@@ -714,6 +722,16 @@
   },
   "walk_stride_px": 32.0,
   "walk_m_per_pose": 0.0884,
+  "walk_m_per_pose_dir": {
+   "S": 0.0884,
+   "SW": 0.0884,
+   "W": 0.0884,
+   "NW": 0.0884,
+   "N": 0.0884,
+   "NE": 0.0884,
+   "E": 0.0884,
+   "SE": 0.0884
+  },
   "pass_poses": {
    "S": [
     2,
@@ -756,19 +774,29 @@
      93
     ],
     "idle_height": 93,
-    "row_scale": 0.5371,
     "torso_x": [
      63.5,
      64.5
     ],
-    "idle_torso_x": 64.0,
-    "shift_x": -2,
-    "half_diff": [
-     0.346,
-     0.314,
-     0.434,
-     0.462
+    "spread": [
+     17,
+     16,
+     16,
+     15,
+     17,
+     16,
+     15,
+     15
     ],
+    "idle_spread": 19,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5371,
+    "shift_x": -2,
+    "idle_torso_x": 64.0,
+    "mode": "walk8",
     "contact": [
      0,
      4
@@ -777,7 +805,16 @@
      2,
      6
     ],
-    "near_duplicates": []
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
    },
    "SW": {
     "height": [
@@ -785,19 +822,29 @@
      91
     ],
     "idle_height": 91,
-    "row_scale": 0.5198,
     "torso_x": [
      65.5,
      66.5
     ],
-    "idle_torso_x": 66.0,
-    "shift_x": -1,
-    "half_diff": [
-     0.619,
-     0.579,
-     0.54,
-     0.62
+    "spread": [
+     40,
+     28,
+     19,
+     30,
+     40,
+     29,
+     19,
+     29
     ],
+    "idle_spread": 20,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5198,
+    "shift_x": -1,
+    "idle_torso_x": 66.0,
+    "mode": "walk8",
     "contact": [
      0,
      4
@@ -806,7 +853,16 @@
      2,
      6
     ],
-    "near_duplicates": []
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
    },
    "W": {
     "height": [
@@ -814,19 +870,29 @@
      95
     ],
     "idle_height": 95,
-    "row_scale": 0.5363,
     "torso_x": [
      67.0,
      69.0
     ],
-    "idle_torso_x": 68.0,
-    "shift_x": -4,
-    "half_diff": [
-     0.605,
-     0.276,
-     0.344,
-     0.298
+    "spread": [
+     47,
+     49,
+     32,
+     40,
+     47,
+     49,
+     32,
+     40
     ],
+    "idle_spread": 19,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5363,
+    "shift_x": -4,
+    "idle_torso_x": 68.0,
+    "mode": "walk8",
     "contact": [
      1,
      5
@@ -835,7 +901,16 @@
      2,
      6
     ],
-    "near_duplicates": []
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
    },
    "NW": {
     "height": [
@@ -843,19 +918,29 @@
      91
     ],
     "idle_height": 91,
-    "row_scale": 0.5111,
     "torso_x": [
      64.0,
      67.0
     ],
-    "idle_torso_x": 65.0,
-    "shift_x": 0,
-    "half_diff": [
-     0.346,
-     0.396,
-     0.807,
-     0.391
+    "spread": [
+     25,
+     28,
+     18,
+     20,
+     25,
+     28,
+     17,
+     20
     ],
+    "idle_spread": 17,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5111,
+    "shift_x": 0,
+    "idle_torso_x": 65.0,
+    "mode": "walk8",
     "contact": [
      1,
      5
@@ -864,7 +949,16 @@
      2,
      6
     ],
-    "near_duplicates": []
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
    },
    "N": {
     "height": [
@@ -872,19 +966,29 @@
      93
     ],
     "idle_height": 93,
-    "row_scale": 0.5251,
     "torso_x": [
      61.0,
      65.0
     ],
-    "idle_torso_x": 64.5,
-    "shift_x": -1,
-    "half_diff": [
-     0.395,
-     0.299,
-     0.652,
-     0.57
+    "spread": [
+     16,
+     15,
+     15,
+     15,
+     17,
+     15,
+     16,
+     16
     ],
+    "idle_spread": 19,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5251,
+    "shift_x": -1,
+    "idle_torso_x": 64.5,
+    "mode": "walk8",
     "contact": [
      0,
      4
@@ -893,9 +997,18 @@
      2,
      6
     ],
-    "near_duplicates": []
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
    }
   },
-  "note": "ChatGPT 8-frame walk (07_walk_8frame.txt), NE/E/SE mirror NW/W/SW"
+  "note": "ChatGPT 8-frame walk (07_walk_8frame.txt) per direction where it passes the gate (walk8.gate); pick4 = a stride/pass/stride/pass subset of the drawn frames; synth4 = walk_cycle.py fallback; NE/E/SE mirror NW/W/SW"
  }
 }

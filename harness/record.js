@@ -28,6 +28,11 @@ const CLIPS = [  // name, query, sim start, sim end, fps[, viewport w, h] (GIFs 
   // walk close-ups at real time (speed 1, 10 fps): Penny / Sheldon from 4A through the hall (WALK_T0 / WALK_T1 override the window)
   ['walk_closeup_penny.gif', 'loc=floor4&view=all&follow=penny&zoom=6&speed=1&auto=0', process.env.WALK_T0 || '22:18:40', process.env.WALK_T1 || '22:18:48.5', 10, 320, 280],
   ['walk_closeup_sheldon.gif', 'loc=floor4&view=all&follow=sheldon&zoom=6&speed=1&auto=0', process.env.WALK_T0 || '22:17:59', process.env.WALK_T1 || '22:18:07', 10, 320, 280],
+  // all 7 arriving on the 4th floor for game night (walk8 sheets): one GIF cut from each arrival walk (segments
+  // [t0, t1, extra query]), fixed camera on the stairs / hallway
+  ['walk8_cast_gamenight.gif', 'loc=floor4&view=all&zoom=1.8&pan=110,40&speed=1&auto=0', [
+    ['20:33:23', '20:33:30'], ['20:35:24', '20:35:36'], ['20:36:29', '20:36:38'], ['20:37:24', '20:37:37'],
+    ['20:39:25', '20:39:42'], ['21:52:32', '21:52:39']], null, 8, 640, 400],
   ['clip_sheldon_walk_ai.gif', 'loc=floor4&view=all&follow=sheldon&zoom=3&speed=1&auto=0', '17:44:44', '17:44:58', 5, 400, 320],
 ];
 const sec = s => { const [h, m, x] = s.split(':').map(Number); return h * 3600 + m * 60 + (x || 0); };
@@ -49,13 +54,16 @@ async function open(browser, q, w, h) {
   const only = process.env.ONLY ? new RegExp(process.env.ONLY) : null;
   for (const [name, q, t0, t1, fps, w = 960, h = 560] of CLIPS) {
     if (only && !only.test(name)) continue;
-    const dir = fs.mkdtempSync('/tmp/bbt_clip_'); const p = await open(browser, `${q}&t=${t0}&bare=1&manual=1`, w, h);
-    let t = sec(t0), i = 0;
-    while (t < sec(t1) && i < 400) {
-      t = await p.evaluate(([dt, w]) => viewer.step(dt, w), [1 / fps, i / fps]);
-      await p.screenshot({path: path.join(dir, `f${String(i).padStart(4, '0')}.png`)}); i++;
+    const dir = fs.mkdtempSync('/tmp/bbt_clip_'); let i = 0;
+    for (const [a, b, extra] of (Array.isArray(t0) ? t0 : [[t0, t1]])) {      // one or more time segments
+      const p = await open(browser, `${q}${extra ? '&' + extra : ''}&t=${a}&bare=1&manual=1`, w, h);
+      let t = sec(a), j = 0;
+      while (t < sec(b) && j < 400) {
+        t = await p.evaluate(([dt, w]) => viewer.step(dt, w), [1 / fps, j / fps]);
+        await p.screenshot({path: path.join(dir, `f${String(i).padStart(4, '0')}.png`)}); i++; j++;
+      }
+      await p.close();
     }
-    await p.close();
     execFileSync('python3', [path.join(__dirname, 'make_gif.py'), dir, path.join(OUT, name), String(fps)], {stdio: 'inherit'});
     fs.rmSync(dir, {recursive: true});
   }

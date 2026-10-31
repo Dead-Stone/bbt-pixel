@@ -40,7 +40,7 @@ function bsearch(arr, t, key) { let lo = 0, hi = arr.length - 1, ans = -1; while
 const V = {
   scenes: {}, chars: {}, sim: null, t: 0, playing: Q.get('play') !== '0', speed: +(Q.get('speed') || 1), auto: Q.get('auto') !== '0',
   loc: Q.get('loc') || 'floor4', view: Q.get('view') || '4A', follow: Q.get('follow') || '', zoom: +(Q.get('zoom') || 1), live: Q.get('live') === '1',
-  pan: [0, 0], ff: false, idx: {},
+  pan: [0, 0], pan0: Q.get('pan') ? Q.get('pan').split(',').map(Number) : null, ff: false, idx: {},
 };
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
 // soft ground-contact shadow under standing / walking characters: the env's contact-shadow colour (shadow_violet
@@ -129,7 +129,7 @@ function agentAt(cid, t) {
     // walk sheet: one frame per walk_m_per_pose metres (2 measured steps per cycle), so the planted foot stays put; a walk
     // starts on a passing (legs-together) frame so standing -> walking never pops straight into a wide stride
     const ch = V.chars[cid], w4 = ch && ch.ai && ch.ai.walk4;
-    if (w4) { const D = dir || 'SW'; return {cid, loc: s.loc, x, y, dir: D, anim: 'walk', k: (Math.floor(walked / w4.meta.walk_m_per_pose) + passPose(w4, D)) % walkN(w4, D), moving: true}; }
+    if (w4) { const D = dir || 'SW'; return {cid, loc: s.loc, x, y, dir: D, anim: 'walk', k: (Math.floor(walked / ((w4.meta.walk_m_per_pose_dir || {})[D] || w4.meta.walk_m_per_pose)) + passPose(w4, D)) % walkN(w4, D), moving: true}; }
     const mpf = (ch && ch.ai && ch.ai.meta.walk_m_per_frame) || 0.07;
     return {cid, loc: s.loc, x, y, dir: dir || 'SW', anim: 'walk', k: Math.floor(walked / mpf) % 8, moving: true};
   }
@@ -362,7 +362,7 @@ function activeSays(t) {
 
 // ------------------------------------------------------------------ UI
 function setLoc(loc, fromFollow) {
-  V.loc = loc; V.pan = [0, 0]; document.getElementById('loc').value = loc;
+  V.loc = loc; V.pan = V.pan0 || [0, 0]; V.pan0 = null; document.getElementById('loc').value = loc;
   const sc = V.scenes[loc]; const vw = document.getElementById('viewwrap');
   vw.style.display = sc && sc.views ? '' : 'none';
   if (!fromFollow && V.follow) { V.follow = ''; document.getElementById('follow').value = ''; }

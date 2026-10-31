@@ -69,7 +69,10 @@ def head_lock(frames, extra=2):
                 if best is None or d < best[0]: best = (d, y, dx)
         if best is None: best = (0, prev + int(np.clip(c - prev, -2, 2)), 0)
         _, y, dx = best
-        g = f.copy(); g[y:y + hr] = np.roll(win0, dx, axis=1); out.append(g); prev = y; pdx = dx
+        g = f.copy(); w = np.roll(win0, dx, axis=1); g[y:y + hr] = w
+        if y > c:       # pasted below this frame's own crown: clear the old crown rows left above it (head flicker)
+            cols = np.nonzero((w[..., 3] > 0).any(0))[0]; g[c:y, max(0, cols.min() - 2):cols.max() + 3] = 0
+        out.append(g); prev = y; pdx = dx
     return out
 
 

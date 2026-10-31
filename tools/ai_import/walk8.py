@@ -57,50 +57,174 @@ def diff_frac(a, b):
     return float(((np.abs(a.astype(int) - b.astype(int)).sum(-1) > 30) & m).sum() / max(1, m.sum()))
 
 
-def build(cid, path=None):
-    path = path or source(cid); kind = os.path.splitext(os.path.basename(path))[0]
+def legs(f):
+    """leg band silhouette (bottom 35 % of the figure), x-centred on the torso"""
+    A = f[..., 3] > 0; ys = np.nonzero(A.any(1))[0]; yb, yt = ys[-1], ys[0]
+    m = np.zeros_like(A); y0 = int(yb - 0.35 * (yb - yt)); m[y0:yb + 1] = A[y0:yb + 1]
+    return np.roll(m, 64 - int(round(ST.torso_x(A, 0.25, 0.45))), axis=1)
+
+
+def iou(a, b):
+    return float((a & b).sum() / max(1, (a | b).sum()))
+
+
+def labels(sp, lo_f=0.5, hi_f=0.5):
+    """hi (wide stride) / lo (legs together) / mid per frame, and the cyclic groups of hi and lo (mid ignored)"""
+    mn, mx = min(sp), max(sp); r = mx - mn
+    lab = ['h' if v >= mn + hi_f * r else 'l' if v <= mn + lo_f * r else 'm' for v in sp]
+    seq = [(k, c) for k, c in enumerate(lab) if c != 'm']
+    if not seq: return lab, []
+    st = next((i for i in range(len(seq)) if seq[i][1] != seq[i - 1][1]), 0)      # start at a group boundary
+    seq = seq[st:] + seq[:st]; groups = []
+    for k, c in seq:
+        if groups and groups[-1][0] == c: groups[-1][1].append(k)
+        else: groups.append((c, [k]))
+    return lab, groups
+
+
+def gate(d, fr, idle):
+    """per-direction quality gate -> (ok, reasons, contact, passing). Side views (SW/W/NW): the foot spread must
+    alternate wide stride / narrow legs-together twice per cycle (2 wide groups + 2 narrow groups) with a clear
+    contrast; front/back (S/N, where a stride is depth, not width): the legs must move (leg-band change between
+    frames) and the two halves must be different steps. All: height vs idle, torso drift, no repeated neighbours."""
+    n = len(fr); why = []
+    hs = [_h(f) for f in fr]; hi_ = _h(idle); tx = [ST.torso_x(f[..., 3] > 0, 0.25, 0.45) for f in fr]
+    if max(hs) > hi_ + 2 or max(hs) < hi_ - 1: why.append(f'height {min(hs)}-{max(hs)} vs idle {hi_}')
+    if min(hs) < hi_ - 5: why.append(f'bob: shortest frame {min(hs)} vs idle {hi_} (> 5 px)')
+    # torso band includes the swinging arms, so a few px of 'drift' is arm swing; 8 px is a visible slide
+    if max(tx) - min(tx) > 8: why.append(f'torso drift {max(tx) - min(tx):.1f} px')
+    dup = [k for k in range(n) if diff_frac(fr[k], fr[(k + 1) % n]) < 0.03]
+    if dup: why.append(f'repeated neighbours {dup}')
+    sp = [int(_spread(f)) for f in fr]
+    if d in ('S', 'N'):
+        L = [legs(f) for f in fr]
+        mov = [1 - iou(L[k], L[(k + 1) % n]) for k in range(n)]
+        if sum(m > 0.12 for m in mov) < n // 2: why.append(f'legs barely move (leg-band change {[round(m, 2) for m in mov]})')
+        # front/back: L and R steps are near-mirror silhouettes, so compare pixels (colours) of the leg band
+        if n == 8:
+            same = [k for k in range(4) if diff_frac(*(np.where(legs(f)[..., None], np.roll(f, 64 - int(round(
+                ST.torso_x(f[..., 3] > 0, 0.25, 0.45))), axis=1), 0) for f in (fr[k], fr[k + 4]))) < 0.05]
+            if len(same) >= 2: why.append(f'the two steps are the same drawing (frames {same} vs +4)')
+        return not why, why, ([0, 4] if n == 8 else [0, 2]), ([2, 6] if n == 8 else [1, 3]), sp
+    lab, groups = labels(sp)
+    hg = [g for c, g in groups if c == 'h']; lg = [g for c, g in groups if c == 'l']
+    if len(hg) != 2 or len(lg) != 2:
+        why.append(f'spread {sp} does not alternate stride/pass twice ({"".join(lab)})')
+        return False, why, None, None, sp
+    A = sorted(max(g, key=lambda k: sp[k]) for g in hg); P = sorted(min(g, key=lambda k: sp[k]) for g in lg)
+    c = min(sp[k] for k in A) - max(sp[k] for k in P)
+    if c < max(5, 0.15 * max(sp[k] for k in A)): why.append(f'weak stride/pass contrast {c} px (spread {sp})')
+    return not why, why, A, P, sp
+
+
+def pick4(d, fr, idle):
+    """simple fix: a stride, pass, stride, pass subset of the drawn frames (in drawn order) that passes the gate,
+    the two strides being different drawings (left / right leg)"""
+    best = None; n = len(fr)
+    if d not in ('S', 'N'):
+        lab, groups = labels([int(_spread(f)) for f in fr])
+        if sum(c == 'h' for c, _ in groups) != 2: return None      # e.g. a kick every other frame: not a 2-step walk
+    for r in range(n):
+        for a, b, c, e in [(0, 1, 2, 3), (0, 2, 4, 6), (0, 1, 4, 5), (0, 2, 4, 5), (0, 1, 4, 6), (0, 2, 3, 6), (0, 3, 4, 7)]:
+            ks = [(r + x) % n for x in (a, b, c, e)]
+            if len(set(ks)) < 4: continue
+            sub = [fr[k] for k in ks]
+            if diff_frac(sub[0], sub[2]) < 0.15: continue
+            ok, why, A, P, sp = gate(d, sub, idle)
+            if ok and A == [0, 2] and P == [1, 3]:
+                sc = min(sp[0], sp[2]) - max(sp[1], sp[3])
+                if best is None or sc > best[0]: best = (sc, ks)
+    return best[1] if best else None
+
+
+def process(cid, path):
+    kind = os.path.splitext(os.path.basename(path))[0]
     SH.NCOL_X[kind] = 8
     cuts = SH.cut_sheet(cid, kind)
     stills, pal = SH.load_stills(cid); idle = idle_neutral(cid)
-    # one sheet-wide scale: the tallest frame of each row (passing, body up) -> idle neutral height of that direction
-    per_row = {d: (_h(idle[d]) + 1) / max(c.shape[0] for c in cuts[d]) for d in ROWS}
-    s = float(np.median(list(per_row.values())))
-    rows, info = {}, {}
+    # per-row scale: the tallest frame of each row (passing, body up) -> idle neutral height of that direction (+1)
+    # (if a frame is drawn > 3 % taller than the row median -- e.g. Howard W passing frames -- scale by the median
+    # instead and cap each frame at idle + 2, so one tall drawing does not shrink the whole row)
+    per_row, per_fr = {}, {}
     for d in ROWS:
-        fr = [SH.frame128(c, per_row[d], stills[d], pal, 'stand') for c in cuts[d]]
+        hs = [c.shape[0] for c in cuts[d]]; ih = _h(idle[d]); med = float(np.median(hs))
+        if max(hs) <= 1.03 * med:
+            per_row[d] = (ih + 1) / max(hs); per_fr[d] = [per_row[d]] * len(hs)
+        else:
+            per_row[d] = (ih + 0.5) / med; per_fr[d] = [min(per_row[d], (ih + 2) / h) for h in hs]
+    rows, extra = {}, {}
+    for d in ROWS:
+        fr = [SH.frame128(c, s_, stills[d], pal, 'stand') for c, s_ in zip(cuts[d], per_fr[d])]
         ti = ST.torso_x(idle[d][..., 3] > 0, 0.25, 0.45)
         dx = int(round(ti - np.median([ST.torso_x(f[..., 3] > 0, 0.25, 0.45) for f in fr])))
         fr = head_lock([np.roll(f, dx, axis=1) for f in fr])
-        fr = [audit_fix(f, pal) for f in fr]          # the paste + shift can leave a speck at the seams
-        hs = [_h(f) for f in fr]; sp = [_spread(f) for f in fr]
-        tx = [ST.torso_x(f[..., 3] > 0, 0.25, 0.45) for f in fr]
-        dup = [k for k in range(8) if diff_frac(fr[k], fr[(k + 1) % 8]) < 0.03]
-        half = [round(diff_frac(fr[k], fr[k + 4]), 3) for k in range(4)]     # L vs R half: ~0 = the same drawing twice
-        side = d not in ('S', 'N')
-        c0 = int(np.argmax(sp[:4])) if side else 0; c1 = 4 + int(np.argmax(sp[4:])) if side else 4
-        p0 = int(np.argmin(sp[:4])) if side else 2; p1 = 4 + int(np.argmin(sp[4:])) if side else 6
-        rows[d] = fr
-        info[d] = dict(height=[int(min(hs)), int(max(hs))], idle_height=int(_h(idle[d])), row_scale=round(per_row[d], 4),
-                       torso_x=[round(float(min(tx)), 1), round(float(max(tx)), 1)], idle_torso_x=float(ti), shift_x=dx, spread=[int(v) for v in sp], half_diff=half, contact=[c0, c1], passing=[p0, p1],
-                       near_duplicates=[[k, (k + 1) % 8] for k in dup])
-    stride = float(np.mean([stride_px(rows['W'][k]) for k in info['W']['contact']]))
-    cells, frames, tags = [], [], []
-    for d in DIRS:
-        a = len(cells)
-        for k, f in enumerate(rows[MIRROR.get(d, d)]):
-            i = len(cells); cells.append(mirror(f) if d in MIRROR else f)
-            frames.append(dict(filename=f'chr_{cid}_walk_{d}_{k:02d}', frame=dict(x=(i % 8) * 128, y=(i // 8) * 128, w=128, h=128), duration=FRAME_MS))
-        tags.append(dict(name=f'walk_{d}', **{'from': a, 'to': len(cells) - 1}, direction='forward'))
+        rows[d] = [audit_fix(f, pal) for f in fr]          # the paste + shift can leave a speck at the seams
+        extra[d] = dict(row_scale=round(per_row[d], 4), shift_x=dx, idle_torso_x=float(ti))
+    return rows, extra, idle, pal, per_row
+
+
+def fringe(fr, pal_rgb=None):
+    """fraction of the 2-px inner edge ring that is magenta-ish (min(r, b) - g > 40) -- key / despill leftovers"""
+    tot = bad = 0
+    import scipy.ndimage as nd
+    for f in fr:
+        A = f[..., 3] > 0; ring = A & ~nd.binary_erosion(A, iterations=2)
+        c = f[..., :3].astype(int); m = np.minimum(c[..., 0], c[..., 2]) - c[..., 1]
+        tot += ring.sum(); bad += (ring & (m > 40)).sum()
+    return bad / max(1, tot)
+
+
+def build(cid, path=None, only8=None):
+    """only8: directions forced to stay on the drawn 8 frames (None = gate decides)"""
+    path = path or source(cid)
+    rows, extra, idle, pal, per_row = process(cid, path)
+    sys.path.insert(0, HERE); import walk_cycle as WC
+    j0, row0 = WC.load(cid)
+    use, info = {}, {}
+    for d in ROWS:
+        fr = rows[d]; ok, why, A, P, sp = gate(d, fr, idle[d])
+        hs = [_h(f) for f in fr]; tx = [ST.torso_x(f[..., 3] > 0, 0.25, 0.45) for f in fr]
+        rec = dict(height=[int(min(hs)), int(max(hs))], idle_height=int(_h(idle[d])), torso_x=[round(float(min(tx)), 1), round(float(max(tx)), 1)],
+                   spread=sp, idle_spread=int(_spread(idle[d])), gate_8=('pass' if ok else 'fail'), gate_8_why=why,
+                   fringe=round(fringe(fr), 4), idle_fringe=round(fringe([idle[d]]), 4), **extra[d])
+        if ok:
+            use[d] = dict(mode='walk8', frames=fr, contact=A, passing=P, src=list(range(8)))
+        else:
+            ks = pick4(d, fr, idle[d])
+            if ks:
+                sub = [fr[k] for k in ks]; _, _, A4, P4, _ = gate(d, sub, idle[d])
+                use[d] = dict(mode='pick4', frames=sub, contact=A4, passing=P4, src=ks)
+            else:
+                f4, cinfo = WC.cycle(d, row0(f'walk_{d}'), row0(f'idle_{d}')[0], pal)
+                use[d] = dict(mode='synth4', frames=f4, contact=[0, 2], passing=[1, 3], src='walk_cycle.py (chr_%s.json walk_%s)' % (cid, d))
+        rec.update(mode=use[d]['mode'], contact=use[d]['contact'], passing=use[d]['passing'], frames_from=use[d]['src'])
+        info[d] = rec
+    # stride: W contact frames of the drawn sheet when W uses them, else the main sheet's measured stride
+    if use['W']['mode'] != 'synth4':
+        stride = float(np.mean([stride_px(use['W']['frames'][k]) for k in use['W']['contact']]))
+    else:
+        stride = float(j0['meta'].get('walk_stride_px') or 26.0)
+    cells, frames, tags, mpp, pp = [], [], [], {}, {}
+    for r, d in enumerate(DIRS):
+        u = use[MIRROR.get(d, d)]; a = len(frames)
+        for k, f in enumerate(u['frames']):
+            frames.append(dict(filename=f'chr_{cid}_walk_{d}_{k:02d}', frame=dict(x=k * 128, y=r * 128, w=128, h=128), duration=FRAME_MS))
+            cells.append((r, k, mirror(f) if d in MIRROR else f))
+        tags.append(dict(name=f'walk_{d}', **{'from': a, 'to': len(frames) - 1}, direction='forward'))
+        n = len(u['frames']); mpp[d] = round(2 * stride / PX_PER_M / n, 4)       # every cycle = 2 steps
+        if u['mode'] == 'synth4': mpp[d] = round(stride / 2 / PX_PER_M, 4)
+        pp[d] = u['passing']
     sheet = np.zeros((len(DIRS) * 128, 8 * 128, 4), np.uint8)
-    for i, c in enumerate(cells): sheet[(i // 8) * 128:(i // 8 + 1) * 128, (i % 8) * 128:(i % 8 + 1) * 128] = c
+    for r, k, c in cells: sheet[r * 128:(r + 1) * 128, k * 128:(k + 1) * 128] = c
     od = os.path.join(ROOT, 'characters', cid, 'ai')
     Image.fromarray(sheet).save(os.path.join(od, f'chr_{cid}_walk.png'))
-    pp = {d: info[MIRROR.get(d, d)]['passing'] for d in DIRS}
     meta = dict(app='bbt-pixel/tools/ai_import/walk8.py', image=f'chr_{cid}_walk.png', size=dict(w=sheet.shape[1], h=sheet.shape[0]),
-                frameTags=tags, frames_per_cycle=8, steps_per_cycle=2, pivot=[64, 116], scale=round(s, 4), row_scale={d: round(v, 4) for d, v in per_row.items()},
-                walk_stride_px=round(stride, 1), walk_m_per_pose=round(2 * stride / PX_PER_M / 8, 4),
-                pass_poses=pp, source=os.path.relpath(path, ROOT), rows={d: {k: v for k, v in info[d].items() if k != 'spread'} for d in ROWS},
-                note='ChatGPT 8-frame walk (07_walk_8frame.txt), NE/E/SE mirror NW/W/SW')
+                frameTags=tags, frames_per_cycle={d: len(use[MIRROR.get(d, d)]['frames']) for d in DIRS}, steps_per_cycle=2, pivot=[64, 116],
+                row_scale={d: round(v, 4) for d, v in per_row.items()}, walk_stride_px=round(stride, 1),
+                walk_m_per_pose=mpp['W'], walk_m_per_pose_dir=mpp, pass_poses=pp, source=os.path.relpath(path, ROOT),
+                rows={d: {k: v for k, v in info[d].items()} for d in ROWS},
+                note='ChatGPT 8-frame walk (07_walk_8frame.txt) per direction where it passes the gate (walk8.gate); '
+                     'pick4 = a stride/pass/stride/pass subset of the drawn frames; synth4 = walk_cycle.py fallback; NE/E/SE mirror NW/W/SW')
     json.dump(dict(frames=frames, meta=meta), open(os.path.join(od, f'chr_{cid}_walk.json'), 'w'), indent=1)
     return meta, info
 
@@ -109,8 +233,9 @@ if __name__ == '__main__':
     cids = sys.argv[1:] or [c for c in ['sheldon', 'leonard', 'penny', 'howard', 'raj', 'bernadette', 'amy'] if source(c)]
     for cid in cids:
         m, info = build(cid)
-        print(f"{cid}: {m['source']} scale {m['scale']} stride {m['walk_stride_px']} px -> {m['walk_m_per_pose']} m/frame "
-              f"({2 * m['walk_stride_px'] / PX_PER_M:.3f} m per cycle of 2 steps)")
+        print(f"{cid}: {m['source']} stride {m['walk_stride_px']} px -> W {m['walk_m_per_pose']} m/frame")
         for d in ROWS:
-            r = info[d]; print(f"  {d:2} h {r['height']} idle {r['idle_height']} (row scale {r['row_scale']}) torso_x {r['torso_x']} "
-                               f"spread {r['spread']} contact {r['contact']} pass {r['passing']} dup {r['near_duplicates']} L/R-half diff {r['half_diff']} shift {r['shift_x']}")
+            r = info[d]
+            print(f"  {d:2} {r['mode']:6} gate8 {r['gate_8']:4} frames {r['frames_from']} contact {r['contact']} pass {r['passing']} "
+                  f"h {r['height']} idle {r['idle_height']} torso {r['torso_x']} spread {r['spread']} (idle {r['idle_spread']}) "
+                  f"fringe {r['fringe']} (idle {r['idle_fringe']}) {'; '.join(r['gate_8_why'])}")

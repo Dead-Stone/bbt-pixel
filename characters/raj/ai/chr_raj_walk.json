@@ -1,496 +1,840 @@
 {
  "frames": [
   {
-   "filename": "walk4_S_0",
+   "filename": "chr_raj_walk_S_00",
    "frame": {
     "x": 0,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_S_1",
+   "filename": "chr_raj_walk_S_01",
    "frame": {
     "x": 128,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_S_2",
+   "filename": "chr_raj_walk_S_02",
    "frame": {
     "x": 256,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_S_3",
+   "filename": "chr_raj_walk_S_03",
    "frame": {
     "x": 384,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SW_0",
+   "filename": "chr_raj_walk_S_04",
    "frame": {
     "x": 512,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SW_1",
+   "filename": "chr_raj_walk_S_05",
    "frame": {
     "x": 640,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SW_2",
+   "filename": "chr_raj_walk_S_06",
    "frame": {
     "x": 768,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SW_3",
+   "filename": "chr_raj_walk_S_07",
    "frame": {
     "x": 896,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_W_0",
+   "filename": "chr_raj_walk_SW_00",
    "frame": {
     "x": 0,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_W_1",
+   "filename": "chr_raj_walk_SW_01",
    "frame": {
     "x": 128,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_W_2",
+   "filename": "chr_raj_walk_SW_02",
    "frame": {
     "x": 256,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_W_3",
+   "filename": "chr_raj_walk_SW_03",
    "frame": {
     "x": 384,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_NW_0",
-   "frame": {
-    "x": 512,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 125
-  },
-  {
-   "filename": "walk4_NW_1",
-   "frame": {
-    "x": 640,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 125
-  },
-  {
-   "filename": "walk4_NW_2",
-   "frame": {
-    "x": 768,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 125
-  },
-  {
-   "filename": "walk4_NW_3",
-   "frame": {
-    "x": 896,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 125
-  },
-  {
-   "filename": "walk4_N_0",
+   "filename": "chr_raj_walk_W_00",
    "frame": {
     "x": 0,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_N_1",
+   "filename": "chr_raj_walk_W_01",
    "frame": {
     "x": 128,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_N_2",
+   "filename": "chr_raj_walk_W_02",
    "frame": {
     "x": 256,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_N_3",
+   "filename": "chr_raj_walk_W_03",
    "frame": {
     "x": 384,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_NE_0",
+   "filename": "chr_raj_walk_W_04",
    "frame": {
     "x": 512,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_NE_1",
+   "filename": "chr_raj_walk_W_05",
    "frame": {
     "x": 640,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_NE_2",
+   "filename": "chr_raj_walk_W_06",
    "frame": {
     "x": 768,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_NE_3",
+   "filename": "chr_raj_walk_W_07",
    "frame": {
     "x": 896,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_E_0",
+   "filename": "chr_raj_walk_NW_00",
    "frame": {
     "x": 0,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_E_1",
+   "filename": "chr_raj_walk_NW_01",
    "frame": {
     "x": 128,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_E_2",
+   "filename": "chr_raj_walk_NW_02",
    "frame": {
     "x": 256,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_E_3",
+   "filename": "chr_raj_walk_NW_03",
    "frame": {
     "x": 384,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SE_0",
+   "filename": "chr_raj_walk_N_00",
+   "frame": {
+    "x": 0,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_N_01",
+   "frame": {
+    "x": 128,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_N_02",
+   "frame": {
+    "x": 256,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_N_03",
+   "frame": {
+    "x": 384,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_N_04",
    "frame": {
     "x": 512,
-    "y": 384,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SE_1",
+   "filename": "chr_raj_walk_N_05",
    "frame": {
     "x": 640,
-    "y": 384,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SE_2",
+   "filename": "chr_raj_walk_N_06",
    "frame": {
     "x": 768,
-    "y": 384,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
   },
   {
-   "filename": "walk4_SE_3",
+   "filename": "chr_raj_walk_N_07",
    "frame": {
     "x": 896,
-    "y": 384,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 125
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_NE_00",
+   "frame": {
+    "x": 0,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_NE_01",
+   "frame": {
+    "x": 128,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_NE_02",
+   "frame": {
+    "x": 256,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_NE_03",
+   "frame": {
+    "x": 384,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_00",
+   "frame": {
+    "x": 0,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_01",
+   "frame": {
+    "x": 128,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_02",
+   "frame": {
+    "x": 256,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_03",
+   "frame": {
+    "x": 384,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_04",
+   "frame": {
+    "x": 512,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_05",
+   "frame": {
+    "x": 640,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_06",
+   "frame": {
+    "x": 768,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_E_07",
+   "frame": {
+    "x": 896,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_SE_00",
+   "frame": {
+    "x": 0,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_SE_01",
+   "frame": {
+    "x": 128,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_SE_02",
+   "frame": {
+    "x": 256,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
+  },
+  {
+   "filename": "chr_raj_walk_SE_03",
+   "frame": {
+    "x": 384,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 100
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/ai_import/walk_cycle.py",
+  "app": "bbt-pixel/tools/ai_import/walk8.py",
   "image": "chr_raj_walk.png",
   "size": {
    "w": 1024,
-   "h": 512
+   "h": 1024
   },
   "frameTags": [
    {
     "name": "walk_S",
     "from": 0,
-    "to": 3,
-    "direction": "forward"
-   },
-   {
-    "name": "walk_SW",
-    "from": 4,
     "to": 7,
     "direction": "forward"
    },
    {
-    "name": "walk_W",
+    "name": "walk_SW",
     "from": 8,
     "to": 11,
     "direction": "forward"
    },
    {
-    "name": "walk_NW",
+    "name": "walk_W",
     "from": 12,
-    "to": 15,
-    "direction": "forward"
-   },
-   {
-    "name": "walk_N",
-    "from": 16,
     "to": 19,
     "direction": "forward"
    },
    {
-    "name": "walk_NE",
+    "name": "walk_NW",
     "from": 20,
     "to": 23,
     "direction": "forward"
    },
    {
-    "name": "walk_E",
+    "name": "walk_N",
     "from": 24,
-    "to": 27,
+    "to": 31,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_NE",
+    "from": 32,
+    "to": 35,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_E",
+    "from": 36,
+    "to": 43,
     "direction": "forward"
    },
    {
     "name": "walk_SE",
-    "from": 28,
-    "to": 31,
+    "from": 44,
+    "to": 47,
     "direction": "forward"
    }
   ],
-  "poses": [
-   "stride",
-   "pass",
-   "stride",
-   "pass"
-  ],
-  "pass_poses": [
-   1,
-   3
-  ],
+  "frames_per_cycle": {
+   "S": 8,
+   "SW": 4,
+   "W": 8,
+   "NW": 4,
+   "N": 8,
+   "NE": 4,
+   "E": 8,
+   "SE": 4
+  },
+  "steps_per_cycle": 2,
   "pivot": [
    64,
    116
   ],
-  "walk_stride_px": 25.5,
-  "walk_m_per_pose": 0.1409,
-  "source": {
+  "row_scale": {
+   "S": 0.5304,
+   "SW": 0.5562,
+   "W": 0.5632,
+   "NW": 0.5449,
+   "N": 0.5531
+  },
+  "walk_stride_px": 28.2,
+  "walk_m_per_pose": 0.078,
+  "walk_m_per_pose_dir": {
+   "S": 0.078,
+   "SW": 0.1561,
+   "W": 0.078,
+   "NW": 0.1561,
+   "N": 0.078,
+   "NE": 0.1561,
+   "E": 0.078,
+   "SE": 0.1561
+  },
+  "pass_poses": {
+   "S": [
+    2,
+    6
+   ],
+   "SW": [
+    1,
+    3
+   ],
+   "W": [
+    2,
+    6
+   ],
+   "NW": [
+    1,
+    3
+   ],
+   "N": [
+    2,
+    6
+   ],
+   "NE": [
+    1,
+    3
+   ],
+   "E": [
+    2,
+    6
+   ],
+   "SE": [
+    1,
+    3
+   ]
+  },
+  "source": "refs_ai/chatgpt/raj/walk8_v1.png",
+  "rows": {
    "S": {
-    "stride": [
-     1,
-     5
+    "height": [
+     94,
+     95
     ],
-    "pass_from": [
-     2,
-     6
+    "idle_height": 95,
+    "torso_x": [
+     63.0,
+     64.5
     ],
     "spread": [
      20,
-     18
-    ],
-    "pass_spread": [
      18,
-     18
+     20,
+     18,
+     21,
+     19,
+     16,
+     16
     ],
-    "idle_spread": 24
-   },
-   "SW": {
-    "stride": [
-     6,
-     3
-    ],
-    "pass_from": [
-     1,
-     5
-    ],
-    "spread": [
-     37,
-     28
-    ],
-    "pass_spread": [
-     23,
-     23
-    ],
-    "idle_spread": 23
-   },
-   "W": {
-    "stride": [
+    "idle_spread": 24,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5304,
+    "shift_x": 0,
+    "idle_torso_x": 63.5,
+    "mode": "walk8",
+    "contact": [
      0,
      4
     ],
-    "pass_from": [
+    "passing": [
      2,
-     5
+     6
+    ],
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "SW": {
+    "height": [
+     96,
+     98
+    ],
+    "idle_height": 98,
+    "torso_x": [
+     62.0,
+     63.0
     ],
     "spread": [
-     46,
-     45
+     20,
+     32,
+     20,
+     35,
+     20,
+     34,
+     20,
+     38
     ],
-    "pass_spread": [
+    "idle_spread": 23,
+    "gate_8": "fail",
+    "gate_8_why": [
+     "spread [20, 32, 20, 35, 20, 34, 20, 38] does not alternate stride/pass twice (lhlhlhlh)"
+    ],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5562,
+    "shift_x": -5,
+    "idle_torso_x": 62.5,
+    "mode": "synth4",
+    "contact": [
+     0,
+     2
+    ],
+    "passing": [
+     1,
+     3
+    ],
+    "frames_from": "walk_cycle.py (chr_raj.json walk_SW)"
+   },
+   "W": {
+    "height": [
+     95,
+     97
+    ],
+    "idle_height": 97,
+    "torso_x": [
+     65.0,
+     66.5
+    ],
+    "spread": [
+     43,
+     43,
+     26,
+     42,
+     43,
+     43,
+     26,
+     43
+    ],
+    "idle_spread": 21,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5632,
+    "shift_x": -2,
+    "idle_torso_x": 66.5,
+    "mode": "walk8",
+    "contact": [
+     4,
+     7
+    ],
+    "passing": [
+     2,
+     6
+    ],
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "NW": {
+    "height": [
+     94,
+     96
+    ],
+    "idle_height": 96,
+    "torso_x": [
+     65.0,
+     67.0
+    ],
+    "spread": [
+     18,
+     20,
+     20,
+     21,
+     18,
+     19,
      21,
      21
     ],
-    "idle_spread": 21
-   },
-   "NW": {
-    "stride": [
-     4,
-     0
+    "idle_spread": 25,
+    "gate_8": "fail",
+    "gate_8_why": [
+     "weak stride/pass contrast 3 px (spread [18, 20, 20, 21, 18, 19, 21, 21])"
     ],
-    "pass_from": [
-     6,
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5449,
+    "shift_x": -3,
+    "idle_torso_x": 66.5,
+    "mode": "synth4",
+    "contact": [
+     0,
      2
+    ],
+    "passing": [
+     1,
+     3
+    ],
+    "frames_from": "walk_cycle.py (chr_raj.json walk_NW)"
+   },
+   "N": {
+    "height": [
+     98,
+     98
+    ],
+    "idle_height": 98,
+    "torso_x": [
+     63.0,
+     65.5
     ],
     "spread": [
      21,
-     20
-    ],
-    "pass_spread": [
-     25,
-     25
-    ],
-    "idle_spread": 25
-   },
-   "N": {
-    "stride": [
-     6,
-     2
-    ],
-    "pass_from": [
-     7,
-     3
-    ],
-    "spread": [
-     24,
-     22
-    ],
-    "pass_spread": [
+     21,
+     21,
      20,
+     21,
+     21,
+     21,
      20
     ],
-    "idle_spread": 23
+    "idle_spread": 23,
+    "gate_8": "pass",
+    "gate_8_why": [],
+    "fringe": 0.0,
+    "idle_fringe": 0.0,
+    "row_scale": 0.5531,
+    "shift_x": 0,
+    "idle_torso_x": 63.5,
+    "mode": "walk8",
+    "contact": [
+     0,
+     4
+    ],
+    "passing": [
+     2,
+     6
+    ],
+    "frames_from": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
    }
   },
-  "note": "poses re-sequenced from chr_raj.json walk_<d> (see module doc); NE/E/SE mirror NW/W/SW"
+  "note": "ChatGPT 8-frame walk (07_walk_8frame.txt) per direction where it passes the gate (walk8.gate); pick4 = a stride/pass/stride/pass subset of the drawn frames; synth4 = walk_cycle.py fallback; NE/E/SE mirror NW/W/SW"
  }
 }
