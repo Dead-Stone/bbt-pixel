@@ -1,0 +1,21 @@
+REFERENCE RESEARCH FIRST: Search the web for reference images and descriptions of Penny's apartment 4B from The Big Bang Theory (set photos, screenshots, bigbangtheory.fandom.com). Write a short reference summary first, one line per object: shape, colours, signature detail, size in cm. Simplify for pixel art, keep real proportions, original art (no tracing). Then generate the image.
+
+TASK: Make ONE pixel-art sprite sheet of separate game objects for an isometric Big Bang Theory game. Penny's apartment, cosy and a bit messy, pinks and purples. Objects: purple 3-seat couch with pillows, coffee table with magazines, small round dining table, mismatched chair (x2), kitchen counter with sink, small fridge, stove, wine rack, clothes pile, vanity with mirror, bed with a colourful comforter, nightstand, laundry basket, lamp, window curtains, rug, wall art.
+
+STYLE (match the attached character image exactly): true pixel art with hard pixel edges, no blur, no painterly strokes, no 3D render look. 1px dark brown outline around every object. Soft cel shading, 2-3 tones per colour, light from top-left. Warm, slightly muted palette matching the characters; objects must not be more detailed or more saturated than the characters.
+
+VIEW: true isometric 2:1 (floor edges about 26.6 degrees), no perspective. Every object's front faces BOTTOM-LEFT. If an object is not symmetrical (couch, armchair, desk, chair, counter, island), also draw a second copy facing BOTTOM-RIGHT next to it, labelled with "R".
+
+GRID AND SCALE: floor grid of diamond tiles 64 px wide x 32 px tall. Each object sits on a whole number of tiles; write its footprint under it as width x depth, e.g. "couch 3x1". Bottom corners line up with the footprint. Height scale 1 m = 53 px: door 112 px, seat cushion 24 px high, table top 40 px, counter 48 px, bookshelf 106 px. Same scale for all objects; never shrink big ones to fit.
+
+SEATS: completely empty (no people, pets, clothes). Cushion top clearly visible and flat; backrest at the back edge; armrests don't cover the cushion.
+
+BACKGROUND AND LAYOUT: flat pure magenta #FF00FF only, no gradient, texture or noise. No floor, no shadows of any kind, no glow. Never use magenta inside objects. Neat grid, at least 24 px of magenta between objects and from edges; nothing touches or overlaps; nothing cut off.
+
+LABELS: small plain black text under each object with name and footprint, not touching the object, spelled as in the list.
+
+DON'Ts: no characters or hands, no room walls/floor, no extra objects, don't merge objects, don't vary style.
+
+OUTPUT: one lossless PNG about 2048 px wide (taller if needed). If it doesn't all fit, make a second image rather than shrinking. Before drawing, check every rule; after drawing, list anything that doesn't match the rules.
+
+VIEW FIX: Use a true isometric 3/4 top view from above at the same angle for EVERY object, so the top surfaces are visible as 2:1 diamonds (the couch seat, table tops and counter tops must show as diamond-shaped tops). Do NOT draw objects from a straight front view.
