@@ -2,7 +2,8 @@
 /* BBT-pixel agent harness viewer: renders the exported iso scenes + v2 character atlases and replays (or streams)
    the simulation log written by `python3 -m harness run`.
    URL params: loc, view (floor4: 4A|hall|4B|all), t (HH:MM[:SS] or seconds), speed, follow, play=0, auto=0, bare=1,
-               zoom, log (path of the sim JSON), live=1 (poll the log while the simulation is running) */
+               zoom, log (path of the sim JSON), live=1 (poll the log while the simulation is running),
+               art=rig (ignore the AI-import idle frames in characters/<cid>/ai/ and show the rig idle) */
 const Q = new URLSearchParams(location.search);
 const ROOT = '../';                    // harness/
 const CHARS = '../../characters/';
@@ -35,7 +36,14 @@ async function loadChars(cid) {
     json(`${CHARS}${cid}/chr_${cid}_sit.json`).catch(() => null), img(`${CHARS}${cid}/chr_${cid}_sit.png`).catch(() => null)]);
   const tags = {}; for (const tg of atlas.meta.frameTags) tags[tg.name] = [tg.from, tg.to];
   const sitf = {}; if (sitj) for (const f of sitj.frames) sitf[f.dir] = f;
-  V.chars[cid] = {frames: atlas.frames, tags, sheet, sit, sitf};
+  // optional AI-import sheet (tools/ai_import): its idle_<dir> loops replace the rig idle while standing;
+  // walk / work / emotes / sit stay on the rig sheet until AI sheets for those exist
+  let ai = null;
+  if (Q.get('art') !== 'rig') {
+    const [aj, ais] = await Promise.all([json(`${CHARS}${cid}/ai/chr_${cid}.json`).catch(() => null), img(`${CHARS}${cid}/ai/chr_${cid}.png`).catch(() => null)]);
+    if (aj && ais) { const at = {}; for (const tg of aj.meta.frameTags) at[tg.name] = [tg.from, tg.to]; ai = {frames: aj.frames, tags: at, sheet: ais}; }
+  }
+  V.chars[cid] = {frames: atlas.frames, tags, sheet, sit, sitf, ai};
 }
 async function loadScene(id) {
   const [sc, bg, spr] = await Promise.all([json(`${ROOT}world/${id}/scene.json`), img(`${ROOT}world/${id}/bg.png`), img(`${ROOT}world/${id}/sprites.png`)]);
@@ -102,6 +110,10 @@ function emoteTag(ch, anim, dir) {
 function frameOf(st, wall) {
   const ch = V.chars[st.cid];
   if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.seat || f.pivot}; }   // seat anchor (butt) -> seat point at seat_z
+  if (st.anim === 'idle' && ch.ai && ch.ai.tags[`idle_${st.dir}`]) {
+    const tg = ch.ai.tags[`idle_${st.dir}`], n = tg[1] - tg[0] + 1, fd = (ch.ai.frames[tg[0]].duration || 250) / 1000;
+    return {img: ch.ai.sheet, fr: ch.ai.frames[tg[0] + Math.floor(wall / fd + st.cid.length) % n].frame, pv: [64, 116]};
+  }
   let idx;
   if (st.anim === 'emote') idx = st.frame;
   else {
