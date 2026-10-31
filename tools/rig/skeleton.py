@@ -63,8 +63,8 @@ class Body:
         g = lambda k, d=1.0: m.get(k, d)
         self.H = H
         self.head_k = g('head_k', 1.10)
-        hh = 0.130 * H * self.head_k                         # chin -> crown
-        self.head = dict(w=0.088 * H * self.head_k * g('head_w', 1.0), d=0.110 * H * self.head_k, h=hh)
+        hh = 0.142 * H * self.head_k                         # chin -> crown (stylised ~1:6.3 head:height so faces have room)
+        self.head = dict(w=0.092 * H * self.head_k * g('head_w', 1.0), d=0.110 * H * self.head_k, h=hh)
         self.hair_top = g('hair_top', 1.2)                     # hair thickness above the crown (cm)
         self.thigh = 0.245 * H * g('leg', 1.0)
         self.shin = 0.246 * H * g('leg', 1.0)
@@ -76,7 +76,7 @@ class Body:
         self.neck_len = max(4.0, self.chin_z - 0.818 * H - 0.012 * H) * g('neck', 1.0)
         self.sh_z = self.chin_z - self.neck_len - 0.012 * H     # shoulder joints
         self.spine = self.sh_z - self.hip_z - 0.02 * H          # pelvis centre -> shoulder line (along spine)
-        self.sh_x = 0.098 * H * g('sh', 1.0)
+        self.sh_x = 0.095 * H * g('sh', 1.0)
         self.upper = 0.190 * H * g('arm', 1.0)
         self.fore = 0.165 * H * g('arm', 1.0)
         self.hand = 0.068 * H * g('hand', 1.0)
@@ -128,7 +128,7 @@ def solve(body, pose, yaw):
     J.update(Mc=Mc, sh_c=sh_c, chest_c=pel_c + cU * (B.spine * 0.62 + breath * 0.2), waist_c=pel_c + cU * (B.spine * 0.25))
     J['breath'] = breath
     # neck + head
-    neck0 = sh_c + cU * 0.5 + cF * (B.slouch * 0.8)
+    neck0 = sh_c + cU * 0.5 + cF * (B.slouch * 0.8 - 0.4)   # neck rises from just behind the shoulder line
     Mn = rot(cR, -(P.get('neck_pitch', 0) + B.slouch * 6)) @ Mc
     neck1 = neck0 + Mn[:, 2] * B.neck_len + Mn[:, 1] * (B.head_fwd * 0.6)
     Mh = rot(Mn[:, 2], P.get('head_yaw', 0)) @ rot(Mn[:, 1], P.get('head_roll', 0)) @ rot(Mn[:, 0], -(P.get('head_pitch', 0) - B.slouch * 4)) @ Mn
@@ -139,7 +139,7 @@ def solve(body, pose, yaw):
     # shoulders (shrug lifts, protraction moves forward)
     for s, sg in (('R', 1), ('L', -1)):
         shr = P.get('shrug' + s, P.get('shrug', 0.0)); pro = P.get('protract' + s, 0.0)
-        J['sh' + s] = sh_c + cR * (sg * B.sh_x) + cU * shr + cF * pro
+        J['sh' + s] = sh_c + cR * (sg * B.sh_x) + cU * (shr - 0.007 * B.H) + cF * (pro + 0.3)   # relaxed: shoulders down, a touch rounded
     # hips
     for s, sg in (('R', 1), ('L', -1)):
         J['hip' + s] = pel_c + pR * (sg * B.hip_x) - pU * (0.012 * B.H)
@@ -194,6 +194,6 @@ def solve(body, pose, yaw):
             r, f, z = P['hand_dir' + s]; hd = unit(Rw * r + Fw * f + Uw * z)
         J['hd' + s] = hd
         J['tip' + s] = wr + hd * B.hand
-    J['head_c'] = neck1 + Mh[:, 2] * (B.head['h'] * 0.42) + Mh[:, 1] * (0.06 * B.head['d'] + B.head_fwd)
+    J['head_c'] = neck1 + Mh[:, 2] * (B.head['h'] * 0.42) + Mh[:, 1] * (-0.02 * B.head['d'] + B.head_fwd)   # skull stacked on the spine
     J['chin'] = J['head_c'] - Mh[:, 2] * (B.head['h'] * 0.5) + Mh[:, 1] * (B.head['d'] * 0.32)
     return J

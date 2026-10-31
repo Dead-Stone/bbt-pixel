@@ -53,13 +53,18 @@ def stance(B, spec, w=0.0, breath=0.0):
     sup = 'R' if w >= 0 else 'L'; aw = abs(w)
     P = dict(breath=breath, shrug=0.45 * breath, sway=1.4 * w, pel_roll=-3.0 * w,
              ch_roll=2.0 * w, head_roll=-1.0 * w,
-             footR=(hx * 1.05, -0.26 * B.foot, 0.0), footL=(-hx * 1.05, -0.26 * B.foot, 0.0),
-             armR=(2.0, 5.0, 0.0, 12.0), armL=(2.0, 5.0, 0.0, 12.0), lean=g.get('lean', 0.0))
+             footR=(hx * 1.05, -0.08 * B.foot, 0.0), footL=(-hx * 1.05, -0.08 * B.foot, 0.0),
+             armR=(-2.0, 7.0, 0.0, 15.0), armL=(-2.0, 7.0, 0.0, 15.0), lean=-0.5,
+             wristR=-4.0, wristL=-4.0)   # upright: no forward lean, soft elbows, hands relaxed by the thighs
     # relaxed leg: knee eases forward, foot slightly ahead and out
     free = 'L' if sup == 'R' else 'R'; sg = 1 if free == 'R' else -1
     r, f, z = P['foot' + free]
     P['foot' + free] = (r + sg * 1.5 * aw, f + 4.0 * aw, z)
     P['knee_out' + free] = 0.25
+    # pelvis height from the support leg: it stands straight (no soft-kneed crouch); the free knee eases
+    r, f, z = P['foot' + sup]; sgs = 1 if sup == 'R' else -1
+    L = (B.thigh + B.shin) * 0.995; dr = r - sgs * hx
+    P['dz'] = math.sqrt(max(L * L - f * f - dr * dr, 1.0)) + B.ankle_h + z + 0.012 * B.H - B.hip_z
     return P
 
 
@@ -68,8 +73,13 @@ def idle(B, spec, k, n=8):
     br = 0.5 - 0.5 * math.cos(ph)                         # in on 0..4, out 4..8
     w = 0.55 + 0.25 * math.sin(ph)                         # contrapposto on the right leg, easing
     P = stance(B, spec, w=w, breath=br)
-    P['armR'] = (2.0 + br, 5.0, 0, 12 + br); P['armL'] = (2.5 - br, 5.0, 0, 13)
-    P['head_world'] = (0.0, -1.5, 0.0); P['swing'] = (0.0, 0.0); P['shrug'] = 0.0
+    P['armR'] = (-2.0 + br, 7.0, 0, 15 + 2 * br); P['armL'] = (-1.5 - br, 7.0, 0, 16)
+    # head level, chin a touch up; a small look-around on frames 5-6 keeps the idle alive
+    # head level, chin a touch up.  Deliberate fidgets (meta.audit.fidget, skipped by the flicker check):
+    # frames 5-6 a glance to the side, frame 7 a blink -- the looping idle never reads as a frozen stare
+    look = (0, 0, 0, 0, 0, 8.0, 8.0, 0)[k % 8] if n == 8 else 0.0
+    P['head_world'] = (look, 0.0, -1.5); P['swing'] = (0.0, 0.0); P['shrug'] = 0.0
+    if n == 8 and k % 8 == 7: P['eyes'] = 'closed'
     return P
 
 
@@ -92,12 +102,12 @@ def walk(B, spec, k):
     g = spec.get('gait', {}); hx = B.hip_x
     half = CYCLE_M * 100 / 4.0                              # one step = half a cycle; foot travels +-half/... per step
     A = half                                                # foot excursion from under the hip (step = 2A)
-    P = dict( lean=g.get('lean', 1.0) + 1.0,
+    P = dict( lean=0.25 * g.get('lean', 1.0) - 0.5,          # upright torso; character only nudges it
              pel_roll=-g.get('hip_roll', 4.0) * _ROLL[k], sway=g.get('sway', 1.2) * _SWAY[k],
              breath=0.3)
     cyc = 2 * math.pi * k / 8.0
     tw = g.get('twist', 5.0) * math.cos(cyc)               # +: right hip forward at frame 0
-    P['pel_yaw'] = -tw; P['ch_yaw'] = tw; P['head_world'] = (0.0, 0.0, 2.0)   # hips twist, shoulders stay square to the path
+    P['pel_yaw'] = -tw; P['ch_yaw'] = tw; P['head_world'] = (0.0, 0.0, -2.0)   # head level, chin up a touch; hips twist, shoulders stay square to the path
     P['ch_roll'] = -P['pel_roll']                          # shoulders stay level while the hips drop (counter-tilt)
     toe_len = B.foot * 0.78; heel_len = B.foot * 0.22
     for s, sg, off in (('R', 1, 0), ('L', -1, 4)):
@@ -112,7 +122,7 @@ def walk(B, spec, k):
         # arm of the same side swings opposite to this leg; widest at contact
         a = -g.get('arm', 22.0) * math.cos(2 * math.pi * i / 8.0 - 0.25)
         eb = g.get('elbow', 14.0) + max(a, 0) * 0.35
-        P['arm' + s] = (a, 5.0, 0.0, eb)
+        P['arm' + s] = (a, 7.0, 0.0, eb); P['wrist' + s] = 8.0
     # pelvis height from the legs: the lower of the two planted legs is ~straight (98%), 'down' sinks a bit more
     Lmax = (B.thigh + B.shin) * 0.985; hz = []
     for s in 'RL':
@@ -120,7 +130,7 @@ def walk(B, spec, k):
         if z < 2.5:
             dr = r - (1 if s == "R" else -1) * hx
             hz.append(math.sqrt(max(Lmax ** 2 - f ** 2 - dr ** 2, 1.0)) + B.ankle_h + z + 0.012 * B.H)
-    P['dz'] = min(hz) - B.hip_z + (_BOB[k] if _BOB[k] < -2 else 0.0) * 0.6 * g.get('bob', 1.0)
+    P['dz'] = min(hz) - B.hip_z + (_BOB[k] if _BOB[k] < -2 else 0.0) * 0.4 * g.get('bob', 1.0)
     P['swing'] = (0.0, 0.0)
     return P
 

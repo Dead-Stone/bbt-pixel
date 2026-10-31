@@ -25,12 +25,12 @@ def far_side(J):
 # ----------------------------------------------------------------------------------------------- skin parts
 def head(cv, B, J, mat='skin'):
     Mh = J['Mh']; hR, hF, hU = Mh[:, 0], Mh[:, 1], Mh[:, 2]; c = J['head_c']; w, d, h = B.head['w'], B.head['d'], B.head['h']
-    ell(cv, c + hU * (0.06 * h) - hF * (0.04 * d), (hR, hF, hU), (w * 0.50, d * 0.50, h * 0.44), mat, 'head')
-    ell(cv, c - hU * (0.20 * h) + hF * (0.10 * d), (hR, hF, hU), (w * 0.43, d * 0.38, h * 0.30), mat, 'head')   # jaw/cheeks
-    ell(cv, c - hU * (0.36 * h) + hF * (0.26 * d), (hR, hF, hU), (w * 0.17, d * 0.16, h * 0.10), mat, 'head')   # chin
-    ell(cv, c - hU * (0.07 * h) + hF * (0.47 * d), (hR, hF, hU), (0.08 * w, 0.09 * d, 0.10 * h), mat, 'head')   # nose
+    ell(cv, c + hU * (0.06 * h) - hF * (0.04 * d), (hR, hF, hU), (w * 0.50, d * 0.50, h * 0.44), mat, 'head', tex=-1.0)
+    ell(cv, c - hU * (0.20 * h) + hF * (0.10 * d), (hR, hF, hU), (w * 0.43, d * 0.38, h * 0.30), mat, 'head', tex=-1.0)   # jaw/cheeks
+    ell(cv, c - hU * (0.36 * h) + hF * (0.26 * d), (hR, hF, hU), (w * 0.17, d * 0.16, h * 0.10), mat, 'head', tex=-1.0)   # chin
+    ell(cv, c - hU * (0.07 * h) + hF * (0.47 * d), (hR, hF, hU), (0.08 * w, 0.09 * d, 0.10 * h), mat, 'head', tex=-1.0)   # nose
     for s, sg in SIDES:
-        ell(cv, c + hR * (sg * w * 0.49) - hF * (0.02 * d), (hR, hF, hU), (0.06 * w, 0.08 * d, 0.13 * h), mat, 'head')
+        ell(cv, c + hR * (sg * w * 0.49) - hF * (0.02 * d), (hR, hF, hU), (0.06 * w, 0.08 * d, 0.13 * h), mat, 'head', tex=-1.0)
 
 
 def neck(cv, B, J, mat='skin'):
@@ -44,9 +44,9 @@ def torso(cv, B, J, mat='skin', infl=0.0, part='torso', keep_chest=None, hem=Non
     br = J.get('breath', 0.0) * 0.35
     ell(cv, J['chest_c'], (cR, cF, cU), (ch['w'] + infl, ch['d'] + infl + br, ch['h'] + infl), mat, part, keep=keep_chest, tone=tone, tex=tex)
     # trapezius / shoulder line: makes the neck -> shoulder slope
-    ell(cv, J['sh_c'] - cU * (0.012 * B.H) - cF * (0.008 * B.H), (cR, cF, cU), (B.sh_x * 0.94 + infl, ch['d'] * 0.78 + infl, 0.026 * B.H + infl), mat, part, keep=keep_trap, tone=tone)
+    ell(cv, J['sh_c'] - cU * (0.016 * B.H) - cF * (0.008 * B.H), (cR, cF, cU), (B.sh_x * 0.94 + infl, ch['d'] * 0.78 + infl, 0.024 * B.H + infl), mat, part, keep=keep_trap, tone=tone)
     for s, sg in SIDES:
-        if shoulders: cv.sphere(J['sh' + s] + cU * (0.2 - sh_drop), B.r_upper[0] * 1.02 + infl, mat, part, tone=tone)
+        if shoulders: cv.sphere(J['sh' + s] + cU * (-0.3 - sh_drop), B.r_upper[0] * 1.0 + infl, mat, part, tone=tone)
     if B.bust and not (keep_chest is not None and getattr(keep_chest, 'open_front', False)):
         for s, sg in SIDES:
             cv.sphere(J['chest_c'] + cF * (ch['d'] * 0.56) + cR * (sg * ch['w'] * 0.42) - cU * (ch['h'] * 0.28) + cF * br,
@@ -117,7 +117,8 @@ def hair(cv, B, J, st, mat='hair', t=0.0, swing=(0.0, 0.0)):
     vol = st.get('vol', 1.0); part = st.get('part', 1)
     hl = st.get('hairline', 0.40)
     def keep_cap(q):           # q = unit coords (R, F, U) of the cap ellipsoid: drop the face region
-        face = (q[:, 1] > -0.05) & (q[:, 2] < hl + 0.10 * part * q[:, 0]) & (np.abs(q[:, 0]) < st.get('face_w', 0.80))
+        # the face stays clear from the front AND in profile: the shell over the cheek/temple in front of the ear is cut too
+        face = (q[:, 1] > -0.05) & (q[:, 2] < hl + 0.10 * part * q[:, 0]) & ((np.abs(q[:, 0]) < st.get('face_w', 0.80)) | (q[:, 1] > 0.22))
         return ~face
     capc = c + hU * (0.08 * h) - hF * (0.06 * d)
     caps = (w * 0.50 + 0.9 * vol, d * 0.50 + 0.9 * vol, h * 0.44 + B.hair_top * 0.85)
@@ -135,12 +136,13 @@ def hair(cv, B, J, st, mat='hair', t=0.0, swing=(0.0, 0.0)):
         # head and does not re-rasterise every time the chest breathes or twists a fraction of a pixel
         cR, cF, cU = hR, hF, hU; sh_c = c - Mh @ _head_to_sh(B)
         ch = B.chest
-        angs = list(np.linspace(-112, 112, 19))
+        angs = list(np.linspace(-104, 104, 19))   # front strands start behind the cheek, framing the face
         for k, a in enumerate(angs):
             ar = math.radians(a)
             front = abs(a) > 92
             if front and not st.get('front', True): continue
-            r0 = c + hR * (math.sin(ar) * (w * 0.50 + (1.3 if front else 0.6) * vol)) - hF * (math.cos(ar) * (d * 0.48 + 0.6 * vol)) - hU * (0.04 * h)
+            r0 = c + hR * (math.sin(ar) * (w * 0.50 + 0.6 * vol)) - hF * (math.cos(ar) * (d * 0.48 + 0.6 * vol)) - hU * (0.04 * h)
+            if front: r0 = r0 - hU * (0.22 * h) - hF * (0.16 * d)   # front locks fall from behind the ear: cheek + profile stay clear
             Lk = L * (0.86 if front else 1.0) * (1 + 0.05 * math.sin(k * 2.3))
             n = max(4, int(Lk / 1.5))
             prev = r0; pts = []
@@ -158,7 +160,10 @@ def hair(cv, B, J, st, mat='hair', t=0.0, swing=(0.0, 0.0)):
                     hw = B.sh_x * 1.05 + 1.2 if zr > -0.06 * B.H else ch['w'] + 1.2
                     hd = ch['d'] + 1.6 + 0.8 * vol
                     if abs(xr) < hw:
-                        need = hd * math.sqrt(max(0.0, 1 - (xr / hw) ** 2)) * min(1.0, (0.04 * B.H - zr) / (0.03 * B.H))
+                        # front locks only swing forward over the chest below the shoulder line, so in profile they
+                        # fall past the jaw instead of jutting in front of it
+                        ramp = min(1.0, (0.04 * B.H - zr) / (0.03 * B.H)) if not front else min(1.0, max(0.0, (0.005 * B.H - zr) / (0.035 * B.H)))
+                        need = hd * math.sqrt(max(0.0, 1 - (xr / hw) ** 2)) * ramp
                         if front and fr < need: p = p + cF * (need - fr)
                         if not front and fr > -need: p = p - cF * (fr + need)
                 pts.append(p)
@@ -170,7 +175,8 @@ def hair(cv, B, J, st, mat='hair', t=0.0, swing=(0.0, 0.0)):
 
 # ----------------------------------------------------------------------------------------------- face
 FACE = dict(eyeR=(0.25, 0.43, -0.01), eyeL=(-0.25, 0.43, -0.01), browR=(0.26, 0.45, 0.10), browL=(-0.26, 0.45, 0.10),
-            mouth=(0.0, 0.47, -0.27), nose=(0.0, 0.55, -0.12))
+            mouth=(0.0, 0.47, -0.27), nose=(0.0, 0.55, -0.12),
+            cheekR=(0.30, 0.40, -0.17), cheekL=(-0.30, 0.40, -0.17))
 
 
 def landmarks(B, J):
@@ -289,8 +295,10 @@ def hair_extra(cv, B, J, st, mat='hair'):
     if kind == 'curly':
         for i, (a, e) in enumerate([(-60, 40), (-20, 55), (20, 55), (60, 40), (-90, 15), (90, 15), (-140, 30), (140, 30), (180, 45), (0, 70)]):
             ar, er = math.radians(a), math.radians(e)
-            dirv = hR * (math.sin(ar) * math.cos(er)) + hF * (math.cos(ar) * math.cos(er) * 0.9) + hU * math.sin(er)
-            p = c + hU * (0.10 * h) - hF * (0.05 * d) + dirv * (0.46 * h)
+            # sideways reach follows the head's width (not its height), so the side curls hug the temples instead of
+            # sticking out like a hat brim
+            p = (c + hU * (0.10 * h) - hF * (0.05 * d) + hR * (math.sin(ar) * math.cos(er) * 0.40 * w)
+                 + hF * (math.cos(ar) * math.cos(er) * 0.9 * 0.46 * h) + hU * (math.sin(er) * 0.46 * h))
             cv.sphere(p, 2.2 * vol, mat, 'hair', tex=float(i % 3 == 1))
     elif kind == 'bowl':
         # straight fringe to the brows + sides over the ears + full back, like a helmet

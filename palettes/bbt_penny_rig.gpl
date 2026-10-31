@@ -2,11 +2,11 @@ GIMP Palette
 Name: bbt_penny_rig
 Columns: 5
 #
-255 214 175	skin_hi
+255 222 187	skin_hi
 246 196 152	skin_base
-197 135 108	skin_sh
-153  88  75	skin_deep
- 84  43  38	skin_ol
+212 138 106	skin_sh
+172  93  73	skin_deep
+ 98  46  35	skin_ol
 255 224 150	hair_hi
 236 200 118	hair_base
 189 135  79	hair_sh
@@ -62,3 +62,13 @@ Columns: 5
 120  17  49	wine_sh
  93   6  40	wine_deep
  51   2  23	wine_ol
+255 253 248	eyew_hi
+246 244 238	eyew_base
+197 190 182	eyew_sh
+153 142 135	eyew_deep
+ 84  75  71	eyew_ol
+255 197 166	cheek_hi
+243 172 139	cheek_base
+194 113  97	cheek_sh
+151  70  66	cheek_deep
+ 83  34  35	cheek_ol

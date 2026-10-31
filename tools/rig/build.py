@@ -73,13 +73,22 @@ def build_sit():
     return frames
 
 
-def head_rows():
-    n = 0
+IDLE_FIDGET = [5, 6, 7]
+
+
+def head_rows_dir():
+    """crown -> chin rows for each facing (the mirrored facings share their source's value)"""
+    out = {}
     for d in ('S', 'SW', 'W', 'NW', 'N'):
         im = np.array(frame_img('idle', 0, d)); top = np.nonzero((im[..., 3] > 0).any(1))[0][0]
         J = SK.solve(B, M.idle(B, spec, 0), SK.YAW[d])
-        n = max(n, int(round(SK.project(J['chin'])[1])) - int(top) + 1)
-    return n
+        out[d] = int(round(SK.project(J['chin'])[1])) - int(top) + 1
+    for a, b in (('SE', 'SW'), ('E', 'W'), ('NE', 'NW')): out[a] = out[b]
+    return out
+
+
+def head_rows():
+    return max(head_rows_dir().values())
 
 
 def armcheck():
@@ -106,8 +115,11 @@ if __name__ == '__main__':
     BC.main()
     js = json.load(open(os.path.join(OUT, f'chr_{CID}.json')))
     js['meta']['app'] = 'bbt-pixel/tools/rig/build.py'; js['meta']['version'] = 'rig1'
-    js['meta']['audit'] = dict(head_rows=head_rows(), why='rows from the crown to the chin: the flicker check covers the '
-                               'head only (real 7-7.5-head proportions put the shoulders inside a fixed 22-row window)')
+    js['meta']['audit'] = dict(head_rows=head_rows(), head_rows_dir=head_rows_dir(), why='rows from the crown to the chin: the flicker check covers the '
+                               'head only (real 7-7.5-head proportions put the shoulders inside a fixed 22-row window); '
+                               'head_rows_dir gives it per facing, because a 3/4 or profile chin sits higher than the max',
+                               fidget=dict(idle=IDLE_FIDGET), fidget_why='idle frames with a deliberate glance (5-6) or blink (7): '
+                               'the head changes on purpose there, so those frame pairs are not flicker')
     json.dump(js, open(os.path.join(OUT, f'chr_{CID}.json'), 'w'), indent=1)
     meta = json.load(open(os.path.join(OUT, f'chr_{CID}.meta.json')))
     ac = armcheck()
@@ -120,6 +132,7 @@ if __name__ == '__main__':
                        'breathing idle; IK sit) drawn part by part as shaded 3-D volumes into a z-buffer (parts.py/render.py), '
                        'clothing + hair + props as layers, palette-shaded, outlined, cleaned with tools/v2/pixfix.  '
                        'E/NE/SE mirror W/NW/SW.  Previous sheets: refs/v2_style/.'))
+    if 'idle' in meta['anims']: meta['anims']['idle']['fidget_frames'] = IDLE_FIDGET
     for a in meta['anims'].values():
         if 'note' in a: a['note'] = a['note'].replace(' (v2 masters: body/hands only, no mouth frames)', ' (mouth open/closed frames)')
     json.dump(meta, open(os.path.join(OUT, f'chr_{CID}.meta.json'), 'w'), indent=1)

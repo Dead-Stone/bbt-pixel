@@ -86,12 +86,21 @@ def audit_frame(im):
     res['outline'] = bad
     return res
 
+def head_window(o, rows_n):
+    """the head's box: rows crown -> chin, columns spanned by the upper half of the head (+1 px each side).
+    The far shoulder rises beside the jaw in 3/4 views; it moves with the arm swing and is not the head."""
+    y0 = np.nonzero(o.any(1))[0][0]
+    cols = np.nonzero(o[y0:y0 + max(1, rows_n // 2)].any(0))[0]
+    w = np.zeros(o.shape, bool); w[y0:y0 + rows_n, max(0, cols[0] - 1):cols[-1] + 2] = True
+    return w
+
+
 def head_flicker(a, b, rows_n=None):
-    """colour mismatches in the head (top HEAD_ROWS rows of the silhouette) after the best integer shift (|d| <= 2);
+    """colour mismatches in the head box (see head_window) after the best integer shift (|d| <= 2);
     shoulders are left out: swinging arms legitimately change them"""
     oa, ob = a[..., 3] > 0, b[..., 3] > 0
     if not oa.any() or not ob.any(): return 0, None
-    y0 = np.nonzero(oa.any(1))[0][0]; rows = slice(y0, y0 + (rows_n or HEAD_ROWS))
+    rows = head_window(oa, rows_n or HEAD_ROWS)
     ka = np.where(oa, a[..., :3].astype(int) @ [65536, 256, 1], -1)
     kb = np.where(ob, b[..., :3].astype(int) @ [65536, 256, 1], -1)
     best = None
@@ -110,19 +119,34 @@ COL = {'hole': (255, 0, 255), 'island': (255, 0, 0), 'speck': (0, 200, 255), 'sp
 FLICKER_MAX = 10
 HEAD_ROWS = 22
 
+def head_rows_dir_of(cid, src=None):
+    jp = os.path.join(src or os.path.join(ROOT, 'characters', cid), f'chr_{cid}.json')
+    try: return json.load(open(jp))['meta'].get('audit', {}).get('head_rows_dir') or {}
+    except Exception: return {}
+
 def head_rows_of(cid, src=None):
     """a sheet may declare its head height (crown -> chin) in meta.audit.head_rows; default HEAD_ROWS"""
     jp = os.path.join(src or os.path.join(ROOT, 'characters', cid), f'chr_{cid}.json')
     try: return int(json.load(open(jp))['meta'].get('audit', {}).get('head_rows') or HEAD_ROWS)
     except Exception: return HEAD_ROWS
 
+def fidget_of(cid, src=None):
+    """meta.audit.fidget = {anim: [frame, ...]}: frames where the head moves on purpose (a glance, a blink)"""
+    jp = os.path.join(src or os.path.join(ROOT, 'characters', cid), f'chr_{cid}.json')
+    try: return {k: set(v) for k, v in json.load(open(jp))['meta'].get('audit', {}).get('fidget', {}).items()}
+    except Exception: return {}
+
 def audit(cid, src=None):
-    fr = frames_of(cid, src); rows = []; prev = {}; hr = head_rows_of(cid, src)
+    fr = frames_of(cid, src); rows = []; prev = {}; hr = head_rows_of(cid, src); fid = fidget_of(cid, src)
+    hrd = head_rows_dir_of(cid, src)
     for name, im in fr:
         r = audit_frame(im); seq = name.rsplit('_', 1)[0]; anim = seq.rsplit('_', 1)[0]
         fl = 0; flm = np.zeros(im.shape[:2], bool)
-        if anim in ('idle', 'walk') and seq in prev:      # (blink redraws the eyes on purpose)
-            fl, m = head_flicker(prev[seq], im, hr)
+        try: k = int(name.rsplit('_', 1)[1])
+        except ValueError: k = -1
+        deliberate = k in fid.get(anim, ()) or (k - 1) in fid.get(anim, ())
+        if anim in ('idle', 'walk') and seq in prev and not deliberate:      # (blink redraws the eyes on purpose)
+            fl, m = head_flicker(prev[seq], im, hrd.get(seq.rsplit('_', 1)[-1], hr))
             if fl > FLICKER_MAX and m is not None: flm = m
         prev[seq] = im
         r['flicker'] = flm

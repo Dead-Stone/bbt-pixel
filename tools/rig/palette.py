@@ -20,12 +20,23 @@ def ramp(base, hi=None, warm=0.025, cool=0.03):
     return [tuple(hi_c), tuple(base), sh, dp, ol]
 
 
+def skin_ramp(base):
+    """warm, healthy skin: shadows go towards red-orange (blood under skin), not grey-purple; a warm highlight"""
+    h, s, v = _hsv(base)
+    tow = lambda h0, target, amt: h0 + ((target - h0 + 0.5) % 1.0 - 0.5) * amt
+    hi_c = _rgb(tow(h, 0.11, 0.25), s * 0.70, min(1.0, v * 1.06 + 0.04))
+    sh = _rgb(tow(h, 0.99, 0.30), s * 1.18 + 0.05, v * 0.86)
+    dp = _rgb(tow(h, 0.98, 0.45), s * 1.30 + 0.08, v * 0.70)
+    ol = _rgb(tow(h, 0.98, 0.50), min(1, s * 1.3 + 0.15), max(0.12, v * 0.40))
+    return [tuple(hi_c), tuple(base), sh, dp, ol]
+
+
 class Palette:
     def __init__(self, mats):
         """mats: {name: base rgb or full 5-list}"""
         self.cols = []; self.ramps = {}
         for k, v in mats.items():
-            r = v if (isinstance(v, list) and len(v) == 5) else ramp(tuple(v))
+            r = v if (isinstance(v, list) and len(v) == 5) else (skin_ramp(tuple(v)) if k == 'skin' else ramp(tuple(v)))
             self.ramps[k] = [self.add(c) for c in r]
     def add(self, c):
         c = tuple(int(x) for x in c)

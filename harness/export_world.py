@@ -16,11 +16,17 @@ import numpy as np
 from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 sys.path.insert(0, f'{ROOT}/tools')
-import build_env as B
-import rooms as RM
 import importlib.util as _ilu
-# tools/seating.py, loaded by path: under `python3 -m harness` the name `seating` is already harness/seating.py
+# tools/seating.py, loaded by path: under `python3 -m harness` the name `seating` is already harness/seating.py.
+# rooms.py does `import seating` at import time, so tools/seating must be the registered `seating` while it loads.
 _sp = _ilu.spec_from_file_location('tools_seating', f'{ROOT}/tools/seating.py'); SG = _ilu.module_from_spec(_sp); _sp.loader.exec_module(SG)
+_prev_seating = sys.modules.get('seating'); sys.modules['seating'] = SG
+try:
+    import build_env as B
+    import rooms as RM
+finally:
+    if _prev_seating is not None: sys.modules['seating'] = _prev_seating
+    else: sys.modules.pop('seating', None)
 from iso_render import dir_name
 OUT = f'{HERE}/world'
 LOCS = ['ait_cafeteria', 'ait_physics', 'rest_amber_slice', 'street_exterior', 'lobby', 'raj_apartment']
