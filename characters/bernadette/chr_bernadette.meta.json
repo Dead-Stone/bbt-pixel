@@ -70,9 +70,9 @@
     0
    ],
    "fidget_frames": [
-    4,
     5,
-    6
+    6,
+    7
    ]
   },
   "walk": {
@@ -273,15 +273,15 @@
    "rows": [
     {
      "side": "R",
-     "fingertip_vs_midthigh_px": 0.1,
-     "elbow_vs_waist_px": 2.7,
+     "fingertip_vs_midthigh_px": -1.7,
+     "elbow_vs_waist_px": 1.1,
      "upper_fore_ratio": 1.15,
      "hand_px": 5.6
     },
     {
      "side": "L",
-     "fingertip_vs_midthigh_px": 0.1,
-     "elbow_vs_waist_px": 2.5,
+     "fingertip_vs_midthigh_px": -1.8,
+     "elbow_vs_waist_px": 0.9,
      "upper_fore_ratio": 1.15,
      "hand_px": 5.6
     }

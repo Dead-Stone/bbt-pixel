@@ -2,11 +2,11 @@ GIMP Palette
 Name: bbt_bernadette_rig
 Columns: 5
 #
-255 223 196	skin_hi
+255 229 205	skin_hi
 248 208 178	skin_base
-198 148 130	skin_sh
-154 101  93	skin_deep
- 84  51  48	skin_ol
+213 155 132	skin_sh
+174 110  96	skin_deep
+ 99  56  48	skin_ol
 255 230 162	hair_hi
 244 214 136	hair_base
 195 148  94	hair_sh
@@ -82,3 +82,8 @@ Columns: 5
 174 181 108	tube_sh
 140 133  76	tube_deep
  77  69  39	tube_ol
+255 204 181	cheek_hi
+244 181 158	cheek_base
+195 123 113	cheek_sh
+151  80  79	cheek_deep
+ 83  41  43	cheek_ol

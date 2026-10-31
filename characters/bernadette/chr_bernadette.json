@@ -8410,8 +8410,26 @@
    }
   ],
   "audit": {
-   "head_rows": 17,
-   "why": "rows from the crown to the chin: the flicker check covers the head only (real 7-7.5-head proportions put the shoulders inside a fixed 22-row window)"
+   "head_rows": 19,
+   "head_rows_dir": {
+    "S": 19,
+    "SW": 18,
+    "W": 15,
+    "NW": 14,
+    "N": 13,
+    "SE": 18,
+    "E": 15,
+    "NE": 14
+   },
+   "why": "rows from the crown to the chin: the flicker check covers the head only (real 7-7.5-head proportions put the shoulders inside a fixed 22-row window); head_rows_dir gives it per facing, because a 3/4 or profile chin sits higher than the max",
+   "fidget": {
+    "idle": [
+     5,
+     6,
+     7
+    ]
+   },
+   "fidget_why": "idle frames with a deliberate glance (5-6) or blink (7): the head changes on purpose there, so those frame pairs are not flicker"
   }
  }
 }
