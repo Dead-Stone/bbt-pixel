@@ -1,832 +1,490 @@
 {
  "frames": [
   {
-   "filename": "chr_sheldon_walk_S_00",
+   "filename": "walkxs_S_0_X",
    "frame": {
     "x": 0,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_01",
+   "filename": "walkxs_S_1_|",
    "frame": {
     "x": 128,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_02",
+   "filename": "walkxs_S_2_X",
    "frame": {
     "x": 256,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_03",
+   "filename": "walkxs_S_3_|",
    "frame": {
     "x": 384,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_04",
+   "filename": "walkxs_SW_0_X",
    "frame": {
     "x": 512,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_05",
+   "filename": "walkxs_SW_1_|",
    "frame": {
     "x": 640,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_06",
+   "filename": "walkxs_SW_2_X",
    "frame": {
     "x": 768,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_S_07",
+   "filename": "walkxs_SW_3_|",
    "frame": {
     "x": 896,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_00",
+   "filename": "walkxs_W_0_X",
    "frame": {
     "x": 0,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_01",
+   "filename": "walkxs_W_1_|",
    "frame": {
     "x": 128,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_02",
+   "filename": "walkxs_W_2_X",
    "frame": {
     "x": 256,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_03",
+   "filename": "walkxs_W_3_|",
    "frame": {
     "x": 384,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_04",
+   "filename": "walkxs_NW_0_X",
    "frame": {
     "x": 512,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_05",
+   "filename": "walkxs_NW_1_|",
    "frame": {
     "x": 640,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_06",
+   "filename": "walkxs_NW_2_X",
    "frame": {
     "x": 768,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_SW_07",
+   "filename": "walkxs_NW_3_|",
    "frame": {
     "x": 896,
     "y": 128,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_00",
+   "filename": "walkxs_N_0_X",
    "frame": {
     "x": 0,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_01",
+   "filename": "walkxs_N_1_|",
    "frame": {
     "x": 128,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_02",
+   "filename": "walkxs_N_2_X",
    "frame": {
     "x": 256,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_03",
+   "filename": "walkxs_N_3_|",
    "frame": {
     "x": 384,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_04",
+   "filename": "walkxs_NE_0_X",
    "frame": {
     "x": 512,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_05",
+   "filename": "walkxs_NE_1_|",
    "frame": {
     "x": 640,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_06",
+   "filename": "walkxs_NE_2_X",
    "frame": {
     "x": 768,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_W_07",
+   "filename": "walkxs_NE_3_|",
    "frame": {
     "x": 896,
     "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_00",
+   "filename": "walkxs_E_0_X",
    "frame": {
     "x": 0,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_01",
+   "filename": "walkxs_E_1_|",
    "frame": {
     "x": 128,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_02",
+   "filename": "walkxs_E_2_X",
    "frame": {
     "x": 256,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_03",
+   "filename": "walkxs_E_3_|",
    "frame": {
     "x": 384,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_04",
+   "filename": "walkxs_SE_0_X",
    "frame": {
     "x": 512,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_05",
+   "filename": "walkxs_SE_1_|",
    "frame": {
     "x": 640,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_06",
+   "filename": "walkxs_SE_2_X",
    "frame": {
     "x": 768,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
+   "duration": 250
   },
   {
-   "filename": "chr_sheldon_walk_NW_07",
+   "filename": "walkxs_SE_3_|",
    "frame": {
     "x": 896,
     "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_00",
-   "frame": {
-    "x": 0,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_01",
-   "frame": {
-    "x": 128,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_02",
-   "frame": {
-    "x": 256,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_03",
-   "frame": {
-    "x": 384,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_04",
-   "frame": {
-    "x": 512,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_05",
-   "frame": {
-    "x": 640,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_06",
-   "frame": {
-    "x": 768,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_N_07",
-   "frame": {
-    "x": 896,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_00",
-   "frame": {
-    "x": 0,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_01",
-   "frame": {
-    "x": 128,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_02",
-   "frame": {
-    "x": 256,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_03",
-   "frame": {
-    "x": 384,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_04",
-   "frame": {
-    "x": 512,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_05",
-   "frame": {
-    "x": 640,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_06",
-   "frame": {
-    "x": 768,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_NE_07",
-   "frame": {
-    "x": 896,
-    "y": 640,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_00",
-   "frame": {
-    "x": 0,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_01",
-   "frame": {
-    "x": 128,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_02",
-   "frame": {
-    "x": 256,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_03",
-   "frame": {
-    "x": 384,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_04",
-   "frame": {
-    "x": 512,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_05",
-   "frame": {
-    "x": 640,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_06",
-   "frame": {
-    "x": 768,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_E_07",
-   "frame": {
-    "x": 896,
-    "y": 768,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_00",
-   "frame": {
-    "x": 0,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_01",
-   "frame": {
-    "x": 128,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_02",
-   "frame": {
-    "x": 256,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_03",
-   "frame": {
-    "x": 384,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_04",
-   "frame": {
-    "x": 512,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_05",
-   "frame": {
-    "x": 640,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_06",
-   "frame": {
-    "x": 768,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
-  },
-  {
-   "filename": "chr_sheldon_walk_SE_07",
-   "frame": {
-    "x": 896,
-    "y": 896,
-    "w": 128,
-    "h": 128
-   },
-   "duration": 100
+   "duration": 250
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/ai_import/walk8.py",
+  "app": "bbt-pixel/tools/ai_import/walk_xs.py",
   "image": "chr_sheldon_walk.png",
   "size": {
    "w": 1024,
-   "h": 1024
+   "h": 512
   },
   "frameTags": [
    {
     "name": "walk_S",
     "from": 0,
-    "to": 7,
+    "to": 3,
     "direction": "forward"
    },
    {
     "name": "walk_SW",
-    "from": 8,
-    "to": 15,
+    "from": 4,
+    "to": 7,
     "direction": "forward"
    },
    {
     "name": "walk_W",
-    "from": 16,
-    "to": 23,
+    "from": 8,
+    "to": 11,
     "direction": "forward"
    },
    {
     "name": "walk_NW",
-    "from": 24,
-    "to": 31,
+    "from": 12,
+    "to": 15,
     "direction": "forward"
    },
    {
     "name": "walk_N",
-    "from": 32,
-    "to": 39,
+    "from": 16,
+    "to": 19,
     "direction": "forward"
    },
    {
     "name": "walk_NE",
-    "from": 40,
-    "to": 47,
+    "from": 20,
+    "to": 23,
     "direction": "forward"
    },
    {
     "name": "walk_E",
-    "from": 48,
-    "to": 55,
+    "from": 24,
+    "to": 27,
     "direction": "forward"
    },
    {
     "name": "walk_SE",
-    "from": 56,
-    "to": 63,
+    "from": 28,
+    "to": 31,
     "direction": "forward"
    }
   ],
-  "frames_per_cycle": {
-   "S": 8,
-   "SW": 8,
-   "W": 8,
-   "NW": 8,
-   "N": 8,
-   "NE": 8,
-   "E": 8,
-   "SE": 8
-  },
-  "steps_per_cycle": 2,
+  "poses": [
+   "cross",
+   "straight",
+   "cross",
+   "straight"
+  ],
+  "pass_poses": [
+   1,
+   3
+  ],
   "pivot": [
    64,
    116
   ],
-  "row_scale": {
-   "S": 0.5944,
-   "SW": 0.6012,
-   "W": 0.5943,
-   "NW": 0.5659,
-   "N": 0.5652
+  "frames_per_cycle": {
+   "S": 4,
+   "SW": 4,
+   "W": 4,
+   "NW": 4,
+   "N": 4,
+   "NE": 4,
+   "E": 4,
+   "SE": 4
+  },
+  "steps_per_cycle": 2,
+  "step_m": {
+   "S": 0.3896,
+   "SW": 0.3896,
+   "W": 0.3896,
+   "NW": 0.3896,
+   "N": 0.3896,
+   "NE": 0.3896,
+   "E": 0.3896,
+   "SE": 0.3896
+  },
+  "walk_m_per_pose": 0.1948,
+  "walk_m_per_pose_dir": {
+   "S": 0.1948,
+   "SW": 0.1948,
+   "W": 0.1948,
+   "NW": 0.1948,
+   "N": 0.1948,
+   "NE": 0.1948,
+   "E": 0.1948,
+   "SE": 0.1948
   },
   "walk_stride_px": 35.2,
-  "walk_m_per_pose": 0.0974,
-  "walk_m_per_pose_dir": {
-   "S": 0.0974,
-   "SW": 0.0974,
-   "W": 0.0974,
-   "NW": 0.0974,
-   "N": 0.0974,
-   "NE": 0.0974,
-   "E": 0.0974,
-   "SE": 0.0974
-  },
-  "pass_poses": {
-   "S": [
-    2,
-    6
-   ],
-   "SW": [
-    2,
-    6
-   ],
-   "W": [
-    2,
-    6
-   ],
-   "NW": [
-    2,
-    6
-   ],
-   "N": [
-    2,
-    6
-   ],
-   "NE": [
-    2,
-    6
-   ],
-   "E": [
-    2,
-    6
-   ],
-   "SE": [
-    2,
-    6
-   ]
-  },
-  "source": "refs_ai/chatgpt/sheldon/walk8_v1.png",
   "rows": {
    "S": {
-    "height": [
-     106,
-     106
-    ],
-    "idle_height": 106,
-    "torso_x": [
-     63.5,
-     70.0
-    ],
-    "spread": [
-     19,
-     20,
-     18,
-     19,
-     19,
-     19,
-     18,
-     19
-    ],
-    "idle_spread": 25,
-    "gate_8": "pass",
-    "gate_8_why": [],
-    "fringe": 0.0,
-    "idle_fringe": 0.0,
-    "row_scale": 0.5944,
-    "shift_x": 3,
-    "idle_torso_x": 64.0,
-    "mode": "walk8",
-    "contact": [
+    "cross_from": [
      0,
      4
     ],
-    "passing": [
-     2,
+    "straight_from": [
+     3,
      6
     ],
-    "frames_from": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6,
-     7
-    ]
+    "straight_mode": [
+     "composite",
+     "composite"
+    ],
+    "metric": "lift",
+    "drawn": [
+     22,
+     22,
+     22,
+     21,
+     22,
+     22,
+     21,
+     22
+    ],
+    "cross_spread": [
+     19,
+     19
+    ],
+    "straight_spread": [
+     22,
+     22
+    ],
+    "idle_spread": 22,
+    "cross_lift": [
+     22,
+     22
+    ],
+    "straight_lift": [
+     22,
+     22
+    ],
+    "idle_lift": 22,
+    "ratio": 1.16
    },
    "SW": {
-    "height": [
-     102,
-     103
+    "cross_from": [
+     4,
+     0
     ],
-    "idle_height": 103,
-    "torso_x": [
-     63.5,
-     65.0
+    "straight_from": [
+     6,
+     2
     ],
-    "spread": [
+    "straight_mode": [
+     "composite",
+     "composite"
+    ],
+    "metric": "spread",
+    "drawn": [
      41,
      35,
      23,
@@ -836,45 +494,41 @@
      23,
      37
     ],
-    "idle_spread": 24,
-    "gate_8": "pass",
-    "gate_8_why": [],
-    "fringe": 0.0,
-    "idle_fringe": 0.0,
-    "row_scale": 0.6012,
-    "shift_x": -2,
-    "idle_torso_x": 65.5,
-    "mode": "walk8",
-    "contact": [
+    "cross_spread": [
+     42,
+     41
+    ],
+    "straight_spread": [
+     23,
+     23
+    ],
+    "idle_spread": 23,
+    "cross_lift": [
+     61,
+     60
+    ],
+    "straight_lift": [
+     29,
+     29
+    ],
+    "idle_lift": 29,
+    "ratio": 0.55
+   },
+   "W": {
+    "cross_from": [
      0,
      4
     ],
-    "passing": [
+    "straight_from": [
      2,
      6
     ],
-    "frames_from": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6,
-     7
-    ]
-   },
-   "W": {
-    "height": [
-     102,
-     103
+    "straight_mode": [
+     "composite",
+     "composite"
     ],
-    "idle_height": 103,
-    "torso_x": [
-     64.0,
-     66.5
-    ],
-    "spread": [
+    "metric": "spread",
+    "drawn": [
      52,
      51,
      41,
@@ -884,45 +538,41 @@
      39,
      52
     ],
-    "idle_spread": 19,
-    "gate_8": "pass",
-    "gate_8_why": [],
-    "fringe": 0.0,
-    "idle_fringe": 0.0,
-    "row_scale": 0.5943,
-    "shift_x": 1,
-    "idle_torso_x": 65.5,
-    "mode": "walk8",
-    "contact": [
-     3,
-     7
+    "cross_spread": [
+     52,
+     52
     ],
-    "passing": [
+    "straight_spread": [
+     18,
+     18
+    ],
+    "idle_spread": 18,
+    "cross_lift": [
+     61,
+     58
+    ],
+    "straight_lift": [
+     18,
+     18
+    ],
+    "idle_lift": 18,
+    "ratio": 0.35
+   },
+   "NW": {
+    "cross_from": [
+     1,
+     5
+    ],
+    "straight_from": [
      2,
      6
     ],
-    "frames_from": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6,
-     7
-    ]
-   },
-   "NW": {
-    "height": [
-     100,
-     102
+    "straight_mode": [
+     "drawn",
+     "drawn"
     ],
-    "idle_height": 102,
-    "torso_x": [
-     65.0,
-     66.5
-    ],
-    "spread": [
+    "metric": "spread",
+    "drawn": [
      30,
      36,
      18,
@@ -932,83 +582,204 @@
      19,
      27
     ],
-    "idle_spread": 25,
-    "gate_8": "pass",
-    "gate_8_why": [],
-    "fringe": 0.0,
-    "idle_fringe": 0.0,
-    "row_scale": 0.5659,
-    "shift_x": -6,
-    "idle_torso_x": 65.5,
-    "mode": "walk8",
-    "contact": [
+    "cross_spread": [
+     36,
+     35
+    ],
+    "straight_spread": [
+     18,
+     19
+    ],
+    "idle_spread": 21,
+    "cross_lift": [
+     57,
+     56
+    ],
+    "straight_lift": [
+     23,
+     24
+    ],
+    "idle_lift": 21,
+    "ratio": 0.52
+   },
+   "N": {
+    "cross_from": [
+     4,
+     0
+    ],
+    "straight_from": [
+     7,
+     3
+    ],
+    "straight_mode": [
+     "composite",
+     "composite"
+    ],
+    "metric": "lift",
+    "drawn": [
+     22,
+     22,
+     21,
+     20,
+     25,
+     21,
+     21,
+     20
+    ],
+    "cross_spread": [
+     21,
+     21
+    ],
+    "straight_spread": [
+     20,
+     20
+    ],
+    "idle_spread": 20,
+    "cross_lift": [
+     25,
+     22
+    ],
+    "straight_lift": [
+     20,
+     20
+    ],
+    "idle_lift": 20,
+    "ratio": 0.95
+   },
+   "NE": {
+    "cross_from": [
      1,
      5
     ],
-    "passing": [
+    "straight_from": [
      2,
      6
     ],
-    "frames_from": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6,
-     7
-    ]
+    "straight_mode": [
+     "drawn",
+     "drawn"
+    ],
+    "metric": "spread",
+    "drawn": [
+     30,
+     36,
+     18,
+     26,
+     32,
+     35,
+     19,
+     27
+    ],
+    "cross_spread": [
+     36,
+     35
+    ],
+    "straight_spread": [
+     18,
+     19
+    ],
+    "idle_spread": 21,
+    "cross_lift": [
+     57,
+     56
+    ],
+    "straight_lift": [
+     23,
+     24
+    ],
+    "idle_lift": 21,
+    "ratio": 0.52
    },
-   "N": {
-    "height": [
-     102,
-     103
-    ],
-    "idle_height": 103,
-    "torso_x": [
-     61.5,
-     65.5
-    ],
-    "spread": [
-     21,
-     20,
-     20,
-     17,
-     21,
-     20,
-     20,
-     17
-    ],
-    "idle_spread": 27,
-    "gate_8": "pass",
-    "gate_8_why": [],
-    "fringe": 0.0,
-    "idle_fringe": 0.0,
-    "row_scale": 0.5652,
-    "shift_x": -1,
-    "idle_torso_x": 64.5,
-    "mode": "walk8",
-    "contact": [
+   "E": {
+    "cross_from": [
      0,
      4
     ],
-    "passing": [
+    "straight_from": [
      2,
      6
     ],
-    "frames_from": [
-     0,
-     1,
-     2,
-     3,
+    "straight_mode": [
+     "composite",
+     "composite"
+    ],
+    "metric": "spread",
+    "drawn": [
+     52,
+     51,
+     41,
+     52,
+     52,
+     52,
+     39,
+     52
+    ],
+    "cross_spread": [
+     52,
+     52
+    ],
+    "straight_spread": [
+     18,
+     18
+    ],
+    "idle_spread": 18,
+    "cross_lift": [
+     61,
+     58
+    ],
+    "straight_lift": [
+     18,
+     18
+    ],
+    "idle_lift": 18,
+    "ratio": 0.35
+   },
+   "SE": {
+    "cross_from": [
      4,
-     5,
+     0
+    ],
+    "straight_from": [
      6,
-     7
-    ]
+     2
+    ],
+    "straight_mode": [
+     "composite",
+     "composite"
+    ],
+    "metric": "spread",
+    "drawn": [
+     41,
+     35,
+     23,
+     38,
+     42,
+     35,
+     23,
+     37
+    ],
+    "cross_spread": [
+     42,
+     41
+    ],
+    "straight_spread": [
+     23,
+     23
+    ],
+    "idle_spread": 23,
+    "cross_lift": [
+     61,
+     60
+    ],
+    "straight_lift": [
+     29,
+     29
+    ],
+    "idle_lift": 29,
+    "ratio": 0.55
    }
   },
-  "note": "ChatGPT 8-frame walk (07_walk_8frame.txt) per direction where it passes the gate (walk8.gate); pick4 = a stride/pass/stride/pass subset of the drawn frames; synth4 = walk_cycle.py fallback; NE/E/SE mirror NW/W/SW"
+  "source": "chr_sheldon_walk8.png (walk8.py: refs_ai/chatgpt/sheldon/walk8_v1.png)",
+  "note": "X | X | per direction (module doc); NE/E/SE mirror NW/W/SW; persona speed = 2 x step -> 2 steps/s"
  }
 }

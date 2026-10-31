@@ -198,9 +198,10 @@ class Sim:
         def to_seat():
             if math.dist(a.pos, spot) > 0.05 and h['type'] in SIT_TYPES:
                 pts = [list(a.pos), list(spot)]
-                a.walk = dict(pts=pts, t0=self.t, speed=0.75, t1=self.t + plen(pts) / 0.75)
+                sp = a.p.get('speed', 0.75)      # same stride-locked pace as a normal walk (2 steps/s)
+                a.walk = dict(pts=pts, t0=self.t, speed=sp, t1=self.t + plen(pts) / sp)
                 a.state = 'walking'; a.after_walk = at_hook
-                a.seg(self.t, kind='walk', loc=a.loc, pts=pts, speed=0.75)
+                a.seg(self.t, kind='walk', loc=a.loc, pts=pts, speed=sp)
             else: at_hook()
         self.walk_to(a, app if h['type'] in SIT_TYPES else spot, to_seat, label)
         return True
@@ -223,9 +224,10 @@ class Sim:
             if h['type'] in SIT_TYPES and a.loc:      # stand up and step off the seat to its approach tile
                 ax, ay = h['approach_tile']; pts = [list(a.pos), [ax + .5, ay + .5]]
                 if plen(pts) > 0.05:
-                    a.walk = dict(pts=pts, t0=self.t, speed=0.75, t1=self.t + plen(pts) / 0.75); a.state = 'walking'; a.after_walk = None
+                    sp = a.p.get('speed', 0.75)
+                    a.walk = dict(pts=pts, t0=self.t, speed=sp, t1=self.t + plen(pts) / sp); a.state = 'walking'; a.after_walk = None
                     a.dir = dir_of(pts[1][0] - pts[0][0], pts[1][1] - pts[0][1], a.dir)
-                    a.seg(self.t, kind='walk', loc=a.loc, pts=pts, speed=0.75); return
+                    a.seg(self.t, kind='walk', loc=a.loc, pts=pts, speed=sp); return
         a.state = 'idle'; a.still(self.t) if a.loc else None
 
     # ---------------------------------------------------------------- travel

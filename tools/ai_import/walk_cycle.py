@@ -142,9 +142,9 @@ def build(cid):
 
 def has_walk8(cid):
     """the character's walk sheet is a drawn 8-frame walk imported by walk8.py (refs_ai/chatgpt/<cid>/walk8_v*.png) --
-    never overwrite it with the synthesized 4-pose fallback"""
+    never overwrite it with the synthesized 4-pose fallback (also protects the cross/straight sheets built by walk_xs.py)"""
     jp = os.path.join(ROOT, 'characters', cid, 'ai', f'chr_{cid}_walk.json')
-    try: return json.load(open(jp))['meta'].get('app', '').endswith('walk8.py')
+    try: return json.load(open(jp))['meta'].get('app', '').endswith(('walk8.py', 'walk_xs.py'))
     except Exception: return False
 
 

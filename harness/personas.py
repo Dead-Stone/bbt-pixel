@@ -25,7 +25,7 @@ PERSONAS = {
     rel={'leonard': 'roommate and driver; relies on him more than he admits', 'penny': 'neighbour across the hall; baffled by her and fond of her',
          'howard': 'colleague; looks down on engineering', 'raj': 'colleague; tolerates him warmly', 'amy': 'girlfriend; intellectual equal',
          'bernadette': "Howard's partner; slightly afraid of her"},
-    home=('floor4', '4a_couch#0.seat0'), emote='knock_knock_penny', speed=0.85,
+    home=('floor4', '4a_couch#0.seat0'), emote='knock_knock_penny', speed=0.78,   # walk_xs: 2 steps/s = 2 x 0.390 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', 'floor4', 'morning routine in 4A', steps=[S('4a_kitchen_island', 'perch', lo=15, hi=20, label='eats cereal at the island')],
           loop=[S('4a_whiteboard', 'write', lo=10, hi=20, label='revises equations on the whiteboard')], social=0.4),
@@ -50,7 +50,7 @@ PERSONAS = {
     interests=['lasers', 'cello', 'comic books', 'Penny', 'video games'],
     rel={'sheldon': 'roommate; exhausting best friend', 'penny': 'girlfriend across the hall', 'howard': 'close friend',
          'raj': 'close friend', 'amy': "Sheldon's girlfriend; an ally", 'bernadette': "Howard's partner; friendly"},
-    home=('floor4', [14.5, 1.45]), emote='glasses_push', speed=0.9, drives=True,
+    home=('floor4', [14.5, 1.45]), emote='glasses_push', speed=0.63, drives=True,   # walk_xs: 2 steps/s = 2 x 0.315 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', 'floor4', 'morning in 4A', steps=[S('4a_fridge', 'use', lo=2, hi=3, label='checks the fridge'), S('4a_kitchen_counter', 'cook', lo=10, hi=15, label='makes coffee and eggs')],
           loop=[S('4a_desk_laptop', 'use', lo=10, hi=20, label='reads papers on the laptop')], social=0.6),
@@ -74,7 +74,7 @@ PERSONAS = {
     interests=['acting', 'auditions', 'wine', 'fashion', 'her friends'],
     rel={'leonard': 'boyfriend across the hall', 'sheldon': 'odd neighbour she protects', 'amy': 'best friend (Amy insists)',
          'bernadette': 'close friend from work days', 'howard': 'friend; used to roll her eyes at him', 'raj': 'sweet friend who gets shy around women'},
-    home=('floor4', [5.5, 3.5]), emote='hair_flip', speed=0.95,   # walk8: 0.354 m step, same cadence as before (~2.7 steps/s)
+    home=('floor4', [5.5, 3.5]), emote='hair_flip', speed=0.71,   # walk_xs: 2 steps/s = 2 x 0.354 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', 'floor4', 'sleeping in', social=0.0, leave='sleep_until'),
         B('08:30', 'floor4', 'slow morning in 4B', steps=[S('4b_kitchen_bar', ('pour_drink', 'perch'), lo=10, hi=20, label='drinks coffee at the kitchen bar')],
@@ -97,7 +97,7 @@ PERSONAS = {
     tics=['turns any topic into a space-hardware anecdote', 'makes a pun and waits for a reaction', 'reminds people engineers make things work'],
     interests=['robotics', 'space hardware', 'magic tricks', 'Bernadette', 'gadgets'],
     rel={'raj': 'best friend', 'bernadette': 'wife', 'sheldon': 'colleague; rival', 'leonard': 'friend', 'penny': 'friend', 'amy': 'friend'},
-    home=None, emote='eyebrow_waggle', speed=0.95,
+    home=None, emote='eyebrow_waggle', speed=0.52,   # walk_xs: 2 steps/s = 2 x 0.262 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', None, 'at home across town', social=0.0),
         B('08:35', 'ait_physics', 'engineering lab: robot arm and rover', loop=[S('lab_robot_arm', 'use', lo=20, hi=40, label='programs the robot arm'),
@@ -118,7 +118,7 @@ PERSONAS = {
     interests=['astronomy', 'romcoms', 'cooking', 'fashion', 'his friends'],
     rel={'howard': 'best friend', 'sheldon': 'colleague who belittles astronomy', 'leonard': 'friend', 'penny': 'friend he can now talk to',
          'amy': 'friend', 'bernadette': "Howard's wife; friend"},
-    home=('raj_apartment', 'telescope'), emote='astronomy_point', speed=0.85,
+    home=('raj_apartment', 'telescope'), emote='astronomy_point', speed=0.62,   # walk_xs: 2 steps/s = 2 x 0.312 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', 'raj_apartment', 'morning at home', steps=[S('raj_telescope_big', 'look', lo=15, hi=25, label='logs the last of the night sky')],
           loop=[S('raj_kitchenette', 'work', lo=10, hi=20, label='cooks breakfast'), S('raj_sofa', 'sit', lo=10, hi=20, label='reads on the sofa')], social=0.3),
@@ -140,7 +140,7 @@ PERSONAS = {
     tics=['switches from sugary to stern mid-sentence', 'mentions germs or lab cultures', 'gives orders as if they were suggestions'],
     interests=['microbiology', 'promotions', 'Howard', 'girls\' nights', 'winning'],
     rel={'howard': 'husband', 'penny': 'close friend', 'amy': 'close friend', 'raj': "friend; Howard's shadow", 'sheldon': 'friend she can handle', 'leonard': 'friend'},
-    home=('floor4', [3.4, 6.4]), emote='sweet_to_scary', speed=0.85,
+    home=('floor4', [3.4, 6.4]), emote='sweet_to_scary', speed=0.64,   # walk_xs: 2 steps/s = 2 x 0.320 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', 'floor4', 'girls\' sleepover morning in 4B', steps=[S('4b_kitchen_bar', ('perch', 'pour_drink'), lo=15, hi=25, label='has coffee at the kitchen bar')],
           loop=[S('4b_dining_table_cluttered', 'sit', lo=10, hi=20, label='checks her lab schedule')], social=0.9),
@@ -160,7 +160,7 @@ PERSONAS = {
     tics=['describes emotions in terms of brain regions or neurotransmitters', 'calls Penny her best friend at every chance', 'proposes experiments'],
     interests=['neuroscience', 'primate studies', 'harp', 'Sheldon', 'friendship'],
     rel={'sheldon': 'boyfriend', 'penny': 'best friend', 'bernadette': 'close friend', 'leonard': 'friend', 'howard': 'friend', 'raj': 'friend'},
-    home=('floor4', [5.5, 6.5]), emote='neuro_lecture', speed=0.85,
+    home=('floor4', [5.5, 6.5]), emote='neuro_lecture', speed=0.62,   # walk_xs: 2 steps/s = 2 x 0.309 m step (cross, straight, cross, straight)
     routine=[
         B('06:55', 'floor4', 'girls\' sleepover morning in 4B', steps=[S('4b_couch', 'sit', lo=20, hi=30, label='journals on the couch')],
           loop=[S('4b_armchair_patterned', 'sit', lo=10, hi=20, label='reviews slides in the armchair')], social=0.9),
