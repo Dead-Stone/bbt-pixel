@@ -1,6 +1,6 @@
 """The GenerateImage prompts used for refs_ai/gen/<cid>_walk4_<dir>.jpg (kept so strips can be regenerated).
 References passed with each prompt: the single still for that direction (cut from the turnaround, 3x, on
-magenta) and refs_ai/turn_<cid>.png (the character's turnaround row).
+magenta) and refs_ai/refdir/<cid>_<DIR>.png stills (the character's turnaround row).
 Usage: python3 tools/ai_import/prompts.py <cid> <dir>"""
 import sys
 
