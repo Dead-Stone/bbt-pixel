@@ -37,29 +37,31 @@ def neck(cv, B, J, mat='skin'):
     cv.chain(J['neck0'] - J['Mc'][:, 2] * 1.5, J['neck1'] + J['Mh'][:, 2] * 1.0, B.r_neck * 1.1, B.r_neck * 0.95, mat, 'neck')
 
 
-def torso(cv, B, J, mat='skin', infl=0.0, part='torso', keep_chest=None, hem=None, tone=0, keep_waist=None, keep_trap=None):
+def torso(cv, B, J, mat='skin', infl=0.0, part='torso', keep_chest=None, hem=None, tone=0, keep_waist=None, keep_trap=None, tex=0.0, shoulders=True, waist_infl=None):
     Mc, Mp = J['Mc'], J['Mp']
     cR, cF, cU = Mc[:, 0], Mc[:, 1], Mc[:, 2]; pR, pF, pU = Mp[:, 0], Mp[:, 1], Mp[:, 2]
     ch, wa, pe = B.chest, B.waist, B.pelvis
     br = J.get('breath', 0.0) * 0.35
-    ell(cv, J['chest_c'], (cR, cF, cU), (ch['w'] + infl, ch['d'] + infl + br, ch['h'] + infl), mat, part, keep=keep_chest, tone=tone)
+    ell(cv, J['chest_c'], (cR, cF, cU), (ch['w'] + infl, ch['d'] + infl + br, ch['h'] + infl), mat, part, keep=keep_chest, tone=tone, tex=tex)
     # trapezius / shoulder line: makes the neck -> shoulder slope
     ell(cv, J['sh_c'] - cU * (0.012 * B.H) - cF * (0.008 * B.H), (cR, cF, cU), (B.sh_x * 0.94 + infl, ch['d'] * 0.78 + infl, 0.026 * B.H + infl), mat, part, keep=keep_trap, tone=tone)
     for s, sg in SIDES:
-        cv.sphere(J['sh' + s] + cU * 0.2, B.r_upper[0] * 1.02 + infl, mat, part, tone=tone)
-    if B.bust:
+        if shoulders: cv.sphere(J['sh' + s] + cU * 0.2, B.r_upper[0] * 1.02 + infl, mat, part, tone=tone)
+    if B.bust and not (keep_chest is not None and getattr(keep_chest, 'open_front', False)):
         for s, sg in SIDES:
             cv.sphere(J['chest_c'] + cF * (ch['d'] * 0.56) + cR * (sg * ch['w'] * 0.42) - cU * (ch['h'] * 0.28) + cF * br,
                       0.034 * B.H * B.bust + infl, mat, part, tone=tone)
     wz = 1.0 if hem is None else hem
     if wz > 0:
-        ell(cv, J['waist_c'] + cF * (0.004 * B.H * B.belly), (cR, cF, cU), (wa['w'] + infl, wa['d'] + infl + 0.02 * B.H * B.belly, B.spine * 0.30 + infl), mat, part, keep=keep_waist, tone=tone)
+        wi = infl if waist_infl is None else waist_infl
+        ell(cv, J['waist_c'] + cF * (0.004 * B.H * B.belly), (cR, cF, cU), (wa['w'] + wi, wa['d'] + infl + 0.02 * B.H * B.belly, B.spine * 0.30 + infl), mat, part, keep=keep_waist, tone=tone)
 
 
-def pelvis(cv, B, J, mat='skin', infl=0.0, part='pelvis', keep=None, tone=0):
+def pelvis(cv, B, J, mat='skin', infl=0.0, part='pelvis', keep=None, tone=0, glutes=True, tex=0.0):
     Mp = J['Mp']; pR, pF, pU = Mp[:, 0], Mp[:, 1], Mp[:, 2]; pe = B.pelvis
-    ell(cv, J['pel'] - pU * (0.010 * B.H), (pR, pF, pU), (pe['w'] + infl, pe['d'] + infl, pe['h'] + infl), mat, part, keep=keep, tone=tone)
+    ell(cv, J['pel'] - pU * (0.010 * B.H), (pR, pF, pU), (pe['w'] + infl, pe['d'] + infl, pe['h'] + infl), mat, part, keep=keep, tone=tone, tex=tex)
     for s, sg in SIDES:     # glutes
+        if not glutes: break
         cv.sphere(J['pel'] + pR * (sg * B.hip_x * 0.85) - pF * (pe['d'] * 0.30) - pU * (0.035 * B.H), 0.044 * B.H * B.limb + infl, mat, part, tone=tone)
 
 
@@ -180,3 +182,106 @@ def landmarks(B, J):
         facing = float(np.dot(unit(p - (c - Mh[:, 1] * 0.2 * d)), CAM_V))
         out[k] = (sx, sy, dep, facing)
     return out
+
+
+# ----------------------------------------------------------------------------------------------- extra clothing layers
+def _leg_point(B, J, s, t):
+    """point at fraction t down the leg (0 hip, 1 knee, 2 ankle)"""
+    hip, kn, an = J['hip' + s], J['knee' + s], J['ank' + s]
+    return hip + (kn - hip) * t if t <= 1 else kn + (an - kn) * (t - 1)
+
+
+def skirt(cv, B, J, mat, length=0.8, flare=1.0, part='skirt', dots=False):
+    """waistband -> hem as a stack of slices, each an ellipse wrapping both legs at that depth (works walking and
+    seated: the slices follow the thighs).  length in leg units (1 = knee, 2 = ankle)."""
+    Mp = J['Mp']; pR, pF, pU = Mp[:, 0], Mp[:, 1], Mp[:, 2]; pe = B.pelvis
+    pelvis(cv, B, J, mat=mat, infl=1.2, part=part, glutes=True)
+    n = max(4, int(round(6 * length)))
+    rt = B.r_thigh
+    for i in range(1, n + 1):
+        t = length * i / n
+        a, b = _leg_point(B, J, 'R', t), _leg_point(B, J, 'L', t)
+        c = (a + b) * 0.5
+        ax = b - a; span = np.linalg.norm(ax); ax = unit(ax) if span > 1e-6 else pR
+        dn = unit(_leg_point(B, J, 'R', min(t + 0.05, 2)) + _leg_point(B, J, 'L', min(t + 0.05, 2)) - 2 * c) if t < 2 else -pU
+        fw = unit(np.cross(dn, ax))
+        legr = rt[0] + (rt[1] - rt[0]) * min(t, 1) if t <= 1 else B.r_shin[0]
+        r_out = span * 0.5 + legr + 1.0 + flare * 2.2 * (t / max(length, 1e-3))
+        tex = 0.0
+        if dots:
+            def tex(q, i=i):
+                ang = np.arctan2(q[:, 0], q[:, 1])
+                return np.where((np.cos(ang * 7 + (i % 2) * math.pi / 7 * 2) > 0.93) & (np.abs(q[:, 2]) < 0.45) & (i % 2 == 0), 3.0, 0.0)
+        ell(cv, c, (ax, fw, dn), (r_out, legr + 1.6 + flare * 0.8 * t / max(length, 1e-3), (B.thigh * length / n) * 0.75 + 1.0), mat, part, tex=tex)
+
+
+def open_front(fn):
+    fn.open_front = True; return fn
+
+
+def jacket(cv, B, J, mat, infl=1.5, sleeve=1.95, hood=False, hem=0.5, gap=0.16, far=None, part='jacket'):
+    """open-front jacket / cardigan / hoodie: a torso shell with the front strip removed, long sleeves, a hem over
+    the hips, optional hood bunched behind the neck"""
+    kc = open_front(lambda q: ~((q[:, 1] > 0.25) & (np.abs(q[:, 0]) < gap + 0.1 * np.clip(q[:, 2], 0, 1))))
+    kw = lambda q: ~((q[:, 1] > 0.25) & (np.abs(q[:, 0]) < gap * 1.2))
+    kt = lambda q: ~((q[:, 1] > 0.1) & (np.abs(q[:, 0]) < 0.42))
+    torso(cv, B, J, mat=mat, infl=infl, part=part, keep_chest=kc, keep_waist=kw, keep_trap=kt,
+          waist_infl=infl + 0.8 * (B.chest['w'] - B.waist['w']))
+    if hem > 0:
+        pelvis(cv, B, J, mat=mat, infl=infl + 1.9, part=part, glutes=True,
+               keep=lambda q: (q[:, 2] > 1.0 - 2.0 * hem) & ~((q[:, 1] > 0.25) & (np.abs(q[:, 0]) < gap * 1.3)))
+        for s, _ in SIDES:           # the hem also covers the top of each thigh, so trouser hips can't poke through
+            hip, kn = J['hip' + s], J['knee' + s]; rt = B.r_thigh
+            cv.chain(hip + (hip - kn) * 0.06, kn, rt[0] + infl + 1.6, rt[1] + infl + 1.6, mat, part, t0=0.0, t1=0.10 * hem / 0.5)
+    for s, sg in SIDES:
+        tone = 1 if s == far else 0
+        arm(cv, B, J, s, mat=mat, infl=infl * 0.75, part='jsleeve_', t_upper=(0, 1), t_fore=(0, sleeve - 1.0), tone=tone)
+    if hood:
+        Mc = J['Mc']; cR, cF, cU = Mc[:, 0], Mc[:, 1], Mc[:, 2]
+        ell(cv, J['neck0'] - cF * (B.chest['d'] * 0.80) - cU * 2.2, (cR, cF, cU), (B.sh_x * 0.40, 2.4, 3.0), mat, part + '_hood')
+
+
+def vest(cv, B, J, mat, infl=1.3, part='vest'):
+    """sleeveless V-neck sweater vest down to the hip"""
+    kv = lambda q: ~((q[:, 1] > 0.2) & (q[:, 2] > 0.15 + 1.6 * np.abs(q[:, 0])))
+    torso(cv, B, J, mat=mat, infl=infl, part=part, keep_chest=kv, keep_trap=lambda q: ~(q[:, 1] > 0.05), shoulders=False)
+    pelvis(cv, B, J, mat=mat, infl=infl + 0.4, part=part, glutes=False, keep=lambda q: q[:, 2] > 0.2)
+
+
+def belt(cv, B, J, mat, infl=1.2, buckle=True, part='belt'):
+    Mp = J['Mp']; pR, pF, pU = Mp[:, 0], Mp[:, 1], Mp[:, 2]; pe = B.pelvis
+    c = J['pel'] + pU * (pe['h'] * 0.62)
+    tex = (lambda q: np.where((q[:, 1] > 0.75) & (np.abs(q[:, 0]) < 0.28), 3.0, 0.0)) if buckle else 0.0
+    ell(cv, c, (pR, pF, pU), (B.waist['w'] * 1.08 + infl, pe['d'] * 0.98 + infl, 1.6), mat, part, tex=tex)
+
+
+def collar_neck(cv, B, J, mat, infl=0.8, upto=0.75, part='collar'):
+    """turtleneck / dickey: the neck wrapped in cloth up to `upto` of its length"""
+    a = J['neck0'] - J['Mc'][:, 2] * 1.5; b = J['neck1'] + J['Mh'][:, 2] * 1.0
+    cv.chain(a, a + (b - a) * upto, B.r_neck * 1.1 + infl, B.r_neck * 0.95 + infl, mat, part)
+
+
+# ----------------------------------------------------------------------------------------------- short hair kinds
+def hair_extra(cv, B, J, st, mat='hair'):
+    """volume pieces on top of the cap for the short styles: curly (Leonard), bowl (Howard), side (Raj), neat (Sheldon)"""
+    Mh = J['Mh']; hR, hF, hU = Mh[:, 0], Mh[:, 1], Mh[:, 2]; c = J['head_c']; w, d, h = B.head['w'], B.head['d'], B.head['h']
+    kind = st.get('kind'); vol = st.get('vol', 1.0)
+    if kind == 'curly':
+        for i, (a, e) in enumerate([(-60, 40), (-20, 55), (20, 55), (60, 40), (-90, 15), (90, 15), (-140, 30), (140, 30), (180, 45), (0, 70)]):
+            ar, er = math.radians(a), math.radians(e)
+            dirv = hR * (math.sin(ar) * math.cos(er)) + hF * (math.cos(ar) * math.cos(er) * 0.9) + hU * math.sin(er)
+            p = c + hU * (0.10 * h) - hF * (0.05 * d) + dirv * (0.46 * h)
+            cv.sphere(p, 2.2 * vol, mat, 'hair', tex=float(i % 3 == 1))
+    elif kind == 'bowl':
+        # straight fringe to the brows + sides over the ears + full back, like a helmet
+        fr = c + hU * (0.22 * h) + hF * (0.36 * d)
+        ell(cv, fr, (hR, hF, hU), (w * 0.47, 0.13 * d, 0.14 * h), mat, 'hair')
+        for s, sg in SIDES:
+            ell(cv, c + hR * (sg * w * 0.47) - hF * (0.06 * d) + hU * (0.02 * h), (hR, hF, hU), (0.10 * w + 0.6 * vol, 0.34 * d, 0.24 * h), mat, 'hair')
+        ell(cv, c - hF * (0.30 * d) - hU * (0.02 * h), (hR, hF, hU), (w * 0.44, 0.22 * d, 0.30 * h), mat, 'hair')
+    elif kind == 'side':
+        part = st.get('part', 1)
+        q = c + hU * (0.34 * h) + hF * (0.24 * d) + hR * (part * 0.10 * w)
+        ell(cv, q, (hR, hF, hU), (w * 0.40, 0.22 * d, 0.13 * h), mat, 'hair', tex=lambda u: (np.sin(u[:, 0] * 9) > 0.7).astype(float))
+    elif kind == 'neat':
+        ell(cv, c + hU * (0.30 * h) + hF * (0.20 * d), (hR, hF, hU), (w * 0.42, 0.20 * d, 0.10 * h), mat, 'hair')

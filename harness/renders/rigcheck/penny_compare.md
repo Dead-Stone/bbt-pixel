@@ -6,10 +6,10 @@ Measured from the shipped sheets (128x128 frames, pivot (64,116), 100 px = 185 c
 
 | metric | v2 (old) | rig1 (new) | target |
 |---|---|---|---|
-| standing height, idle S (px) | 94 | 91 | 90.3 body + hair/feet in view (167 cm) |
-| silhouette width, idle S (px) | 30 | 29 | shoulders 18.8px + arms |
+| standing height, idle S (px) | 94 | 92 | 90.3 body + hair/feet in view (167 cm) |
+| silhouette width, idle S (px) | 30 | 30 | shoulders 18.8px + arms |
 | walk bob, W (px, crown range) | 1 | 2 | 1-2 px (lowest on 'down', highest on 'passing') |
-| walk foot spread, W (px max/min) | 33/7 | 41/11 | stride ~ 1/3 height at contact, feet together at passing |
+| walk foot spread, W (px max/min) | 33/7 | 34/12 | stride ~ 1/3 height at contact, feet together at passing |
 | head height (px) | - | 14.0 (25.9 cm) | ~1/7.3 of the body; enlarged a little (head_k) so faces read at 1x |
 | heads tall | - | 6.44 | 7-7.5 realistic; ~6.5 here on purpose (head_k) |
 

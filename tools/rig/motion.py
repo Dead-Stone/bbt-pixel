@@ -141,8 +141,13 @@ def work_tray(B, spec, k, n=6):
     return P
 
 
+def free(P):
+    """emotes/talk turn the head relative to the neck (idle/walk keep it world-stabilised)"""
+    P.pop('head_world', None); return P
+
+
 def talk(B, spec, k, n=4):
-    P = idle(B, spec, k * 2)
+    P = free(idle(B, spec, k * 2))
     P['mouth'] = ('open', 'closed', 'open', 'smile')[k % 4]
     P['head_pitch'] = (2.0, -1.0, 1.5, 0.0)[k % 4]; P['head_roll'] = (-2.0, 0.0, 1.5, 0.0)[k % 4]
     e = (55, 40, 62, 45)[k % 4]
@@ -152,7 +157,7 @@ def talk(B, spec, k, n=4):
 
 def gesture(B, spec, k, n=6):
     u = math.sin(math.pi * k / (n - 1)) if n > 1 else 0.0          # 0 -> 1 -> 0
-    P = idle(B, spec, k)
+    P = free(idle(B, spec, k))
     P['armR'] = (8 + 30 * u, 10 + 12 * u, -20 * u, 20 + 60 * u); P['wristR'] = -20 * u
     P['armL'] = (4 + 16 * u, 8 + 8 * u, 10 * u, 18 + 40 * u)
     P['head_roll'] = 3 * u; P['mouth'] = 'open' if k in (2, 3) else 'closed'; P['brow_up'] = 1 if 1 <= k <= 3 else 0
@@ -163,7 +168,7 @@ def hair_flip(B, spec, k, n=6):
     R0 = rest(B)
     seq = [(0, 0, 0), (-0.4, -10, 0.6), (-1.0, -16, 1.0), (0.6, 6, 0.6), (0.3, 3, 0.2), (0, 0, 0)]
     sw, roll, hand = seq[k]
-    P = idle(B, spec, k)
+    P = free(idle(B, spec, k))
     P['head_roll'] = roll; P['head_yaw'] = -roll * 0.4; P['ch_roll'] = roll * 0.2
     P['swing'] = (sw * 9.0, -2.0 * abs(sw))
     if hand > 0:
@@ -179,7 +184,7 @@ def hair_flip(B, spec, k, n=6):
 def wine_sip(B, spec, k, n=6):
     R0 = rest(B); hc = R0['head_c']
     lift = (0.0, 0.5, 1.0, 1.0, 0.5, 0.0)[k]
-    P = idle(B, spec, k)
+    P = free(idle(B, spec, k))
     low = np.array([B.sh_x * 0.7, 18.0, R0['pel'][2] + 22.0])
     mouth = np.array([2.0, hc[1] + 10.0, hc[2] - 8.0])
     p = low + (mouth - low) * lift
@@ -190,7 +195,7 @@ def wine_sip(B, spec, k, n=6):
 
 
 def eye_roll(B, spec, k, n=5):
-    P = idle(B, spec, k)
+    P = free(idle(B, spec, k))
     P['eyes'] = ('open', 'up', 'up', 'open', 'open')[k]
     P['head_roll'] = (0, -4, -6, -3, 0)[k]; P['head_pitch'] = (0, -3, -4, 0, 2)[k]
     P['shrug'] = (0, 0.8, 1.2, 0.2, -0.4)[k]; P['brow_up'] = (0, 1, 1, 0, 0)[k]
@@ -213,5 +218,271 @@ def sit(B, spec):
     return P, seat
 
 
-WORK = dict(tray=work_tray)
-EMOTE = dict(gesture=gesture, hair_flip=hair_flip, wine_sip=wine_sip, eye_roll=eye_roll)
+
+
+
+# ----------------------------------------------------------------------------- helpers for reaching
+def _lerp(a, b, t): return tuple(np.asarray(a, float) + (np.asarray(b, float) - np.asarray(a, float)) * t)
+
+
+def _reach(P, s, R0, tgt, t, pole=None, hdir=None):
+    """wrist IK target blended from the rest wrist (t=0) to tgt (t=1), body frame (r, f, z)"""
+    if t <= 0: return P
+    P['hand' + s] = _lerp(R0['wr' + s], tgt, t)
+    if pole is not None: P['elbow_pole' + s] = pole
+    if hdir is not None: P['hand_dir' + s] = hdir
+    return P
+
+
+def _point(R0, B, s, dirv, frac=0.96):
+    d = np.asarray(dirv, float); d = d / np.linalg.norm(d)
+    return tuple(R0['sh' + s] + d * (B.upper + B.fore) * frac), tuple(d)
+
+
+# ----------------------------------------------------------------------------- props
+def prop_pipette(s='R'):
+    def f(cv, B, J):
+        R, F, U = _W(J)
+        g = J['wr' + s] + J['hd' + s] * (B.hand * 0.45)
+        cv.chain(g + U * 4.5, g - U * 9.0, 0.9, 0.45, 'pipette', 'prop_pipette')
+        cv.sphere(g + U * 5.4, 1.0, 'tip', 'prop_pipette')
+    return f
+
+
+def prop_tube(s='L'):
+    def f(cv, B, J):
+        R, F, U = _W(J)
+        g = J['wr' + s] + J['hd' + s] * (B.hand * 0.45)
+        cv.chain(g + U * 3.0, g - U * 3.5, 0.9, 0.7, 'tube', 'prop_tube')
+    return f
+
+
+def prop_card(s='R'):
+    def f(cv, B, J):
+        R, F, U = _W(J)
+        g = J['tip' + s] + U * 1.5
+        cv.ellipsoid(g, np.stack([R * 2.6, F * 0.4, U * 3.6], 1), 'card', 'prop_card')
+    return f
+
+
+def prop_marker(s='R'):
+    def f(cv, B, J):
+        g = J['wr' + s] + J['hd' + s] * (B.hand * 0.5)
+        cv.chain(g - J['hd' + s] * 2.0, g + J['hd' + s] * 5.5, 0.7, 0.6, 'marker', 'prop_marker')
+    return f
+
+
+# ----------------------------------------------------------------------------- work loops
+def work_whiteboard(B, spec, k, n=6):
+    """writing on a board in front: right hand up at eye level tracing a line, left hand loose, weight on the
+    left foot; the board itself is scene furniture at the work hook"""
+    R0 = rest(B); ph = 2 * math.pi * k / n
+    P = stance(B, spec, w=-0.4, breath=0.5 - 0.5 * math.cos(ph))
+    sh = R0['shR']
+    tgt = (sh[0] - 6.0 + 5.0 * math.sin(ph), 26.0, sh[2] - 2.0 + 2.5 * math.sin(2 * ph))
+    P['handR'] = tgt; P['elbow_poleR'] = (0.7, -0.3, -0.7); P['hand_dirR'] = (-0.2, 1.0, 0.25)
+    P['armL'] = (6.0, 6.0, 0.0, 34.0)
+    P['head_pitch'] = -3.0; P['props'] = [prop_marker('R')]
+    return P
+
+
+def work_laptop(B, spec, k, n=6):
+    """typing at a laptop on the bench (furniture): hands forward at hip height, alternate finger taps, head down"""
+    R0 = rest(B)
+    P = stance(B, spec, w=0.3, breath=0.5 - 0.5 * math.cos(2 * math.pi * k / n))
+    z = R0['pel'][2] + 14.0
+    for s, sg, ph in (('R', 1, 0), ('L', -1, 1)):
+        tap = 1.2 if (k + ph) % 2 == 0 else 0.0
+        P['hand' + s] = (sg * 6.0, 26.0, z - tap); P['elbow_pole' + s] = (sg * 0.5, -0.6, -0.6)
+        P['hand_dir' + s] = (-sg * 0.25, 1.0, -0.35)
+    P['lean'] = P.get('lean', 0) + 6.0; P['head_pitch'] = 14.0
+    return P
+
+
+def work_pipette(B, spec, k, n=6):
+    """pipetting: tube in the left hand, pipette upright in the right; the plunger presses on frames 2-3"""
+    R0 = rest(B)
+    P = stance(B, spec, w=0.4, breath=0.5 - 0.5 * math.cos(2 * math.pi * k / n))
+    press = (0, 0.5, 1.0, 1.0, 0.4, 0)[k % 6]
+    zc = R0['sh' + 'R'][2] - 18.0
+    P['handR'] = (4.0, 22.0, zc + 3.0 - 1.2 * press); P['elbow_poleR'] = (0.7, -0.5, -0.6); P['hand_dirR'] = (-0.6, 0.6, 0.2)
+    P['handL'] = (-3.0, 21.0, zc - 7.0); P['elbow_poleL'] = (-0.7, -0.5, -0.6); P['hand_dirL'] = (0.6, 0.6, 0.2)
+    P['fistR'] = True; P['fistL'] = True
+    P['head_pitch'] = 12.0; P['lean'] = P.get('lean', 0) + 3.0
+    P['props'] = [prop_pipette('R'), prop_tube('L')]
+    return P
+
+
+def work_microscope(B, spec, k, n=6):
+    """bent over a bench microscope (furniture): leaning in, head down to the eyepiece, hands on the focus knobs"""
+    R0 = rest(B)
+    P = stance(B, spec, w=0.2, breath=0.5 - 0.5 * math.cos(2 * math.pi * k / n))
+    z = R0['pel'][2] + 16.0; turn = (0, 1, 1, 0, -1, -1)[k % 6] * 0.8
+    for s, sg in (('R', 1), ('L', -1)):
+        P['hand' + s] = (sg * 9.0, 25.0, z + sg * turn); P['elbow_pole' + s] = (sg * 0.8, -0.4, -0.5)
+        P['hand_dir' + s] = (-sg * 0.6, 0.8, 0.0)
+    P['lean'] = P.get('lean', 0) + 16.0; P['head_pitch'] = 18.0
+    return P
+
+
+# ----------------------------------------------------------------------------- signature emotes
+def glasses_push(B, spec, k, n=4):
+    R0 = rest(B); hc = R0['head_c']
+    t = (0.0, 0.6, 1.0, 0.5)[k]
+    P = free(idle(B, spec, k))
+    tgt = (hc[0] - 0.5, hc[1] + B.head['d'] * 0.55 + 3.0, hc[2] - B.hand * 0.75)
+    _reach(P, 'R', R0, tgt, t, pole=(0.9, -0.2, -0.6), hdir=(-0.1, -0.15, 1.0))
+    P['head_pitch'] = 2.0 * t; P['brow_in'] = k == 2
+    return P
+
+
+def sigh_shrug(B, spec, k, n=6):
+    R0 = rest(B)
+    u = (0.0, 0.5, 1.0, 1.0, 0.5, 0.0)[k]
+    P = free(idle(B, spec, k))
+    P['shrug'] = 2.6 * u
+    for s, sg in (('R', 1), ('L', -1)):
+        tgt = (sg * (B.sh_x + 5.0), 15.0, R0['pel'][2] + 13.0)
+        _reach(P, s, R0, tgt, u, pole=(sg * 0.3, -0.6, -1.0), hdir=(sg * 0.7, 0.6, 0.1))
+    P['head_roll'] = 5.0 * u; P['head_pitch'] = -3.0 * u
+    P['eyes'] = ('open', 'half', 'open', 'open', 'open', 'open')[k]; P['brow_up'] = 1 if k in (2, 3) else 0
+    return P
+
+
+def point_gotcha(B, spec, k, n=5):
+    R0 = rest(B); u = (0.0, 0.6, 1.0, 1.0, 0.4)[k]
+    P = free(idle(B, spec, k))
+    tgt, d = _point(R0, B, 'R', (0.15, 1.0, 0.35))
+    _reach(P, 'R', R0, tgt, u, pole=(0.6, -0.4, -0.8), hdir=d)
+    P['fistR'] = u > 0.5; P['mouth'] = 'open' if k in (2, 3) else 'closed'; P['brow_up'] = 1 if k in (2, 3) else 0
+    P['lean'] = P.get('lean', 0) - 2.0 * u
+    return P
+
+
+def spot_claim(B, spec, k, n=5):
+    R0 = rest(B); u = (0.0, 0.6, 1.0, 1.0, 0.5)[k]
+    P = free(idle(B, spec, k))
+    tgt, d = _point(R0, B, 'R', (0.45, 0.85, -0.55))
+    _reach(P, 'R', R0, tgt, u, pole=(0.8, -0.4, -0.4), hdir=d)
+    P['fistR'] = u > 0.5; P['head_pitch'] = 9.0 * u; P['head_yaw'] = 8.0 * u
+    P['mouth'] = 'open' if k == 2 else 'closed'
+    return P
+
+
+KNOCK_SEQ = ['UP', 'A'] + ['K', 'A', 'K', 'A', 'K', 'H'] * 3 + ['R1', 'R2', 'R3', 'R4']
+
+
+def knock_knock_penny(B, spec, k, d='SW'):
+    """three knocks + 'Penny' x3: fist at head height on the door in front; on the hold the head turns to camera"""
+    R0 = rest(B); st = KNOCK_SEQ[k]
+    P = free(idle(B, spec, 0))
+    s = 'L' if d in ('NW', 'NE') else 'R'; sg = 1 if s == 'R' else -1
+    sh = R0['sh' + s]
+    A = (sg * B.sh_x * 0.35, 30.0, sh[2] + 3.0); K = (A[0], A[1] + 4.0, A[2])
+    if st == 'UP': t, tg = 0.55, A
+    elif st in ('A', 'H'): t, tg = 1.0, A
+    elif st == 'K': t, tg = 1.0, K
+    else: t, tg = 1.0 - int(st[1]) / 4.0, A
+    _reach(P, s, R0, tg, t, pole=(sg * 0.8, -0.3, -0.7), hdir=(0.0, 0.45, 0.9))
+    P['fist' + s] = True
+    if st == 'H': P['head_yaw'] = 30.0 * (1 if d in ('SW', 'NW') else -1); P['mouth'] = 'open'
+    return P
+
+
+def eyebrow_waggle(B, spec, k, n=4):
+    P = free(idle(B, spec, k))
+    P['brow_up'] = (1, 0, 1, 0)[k]; P['mouth'] = 'smile'; P['head_roll'] = (3.0, 1.0, 3.0, 1.0)[k]
+    P['look'] = (1, 0); P['head_pitch'] = 3.0
+    return P
+
+
+def magic_trick(B, spec, k, n=6):
+    R0 = rest(B); z = R0['sh' + 'R'][2] - 16.0
+    P = free(idle(B, spec, k))
+    seq = [(0.0, 0.0), (1.0, 0.0), (1.0, 0.5), (0.4, 1.0), (0.0, 1.0), (0.0, 0.3)]   # together, flourish
+    tog, fl = seq[k]
+    for s, sg in (('R', 1), ('L', -1)):
+        close = (sg * 2.0, 20.0, z)
+        open_ = (sg * (B.sh_x + 10.0), 16.0, z + (14.0 if s == 'R' else 2.0))
+        tgt = _lerp(close, open_, fl) if fl > 0 else close
+        _reach(P, s, R0, tgt, max(tog, fl), pole=(sg * 0.6, -0.6, -0.6), hdir=(-sg * 0.3 + sg * fl, 0.8, 0.2 + 0.6 * fl))
+    if k in (3, 4): P['props'] = [prop_card('R')]
+    P['mouth'] = 'smile' if k >= 3 else 'closed'; P['brow_up'] = 1 if k in (3, 4) else 0
+    return P
+
+
+def astronomy_point(B, spec, k, n=4):
+    R0 = rest(B); u = (0.5, 1.0, 1.0, 1.0)[k]
+    P = free(idle(B, spec, k))
+    tgt, d = _point(R0, B, 'L', (-0.3, 0.45, 0.85))
+    _reach(P, 'L', R0, tgt, u, pole=(-0.6, -0.3, -0.5), hdir=d)
+    P['fistL'] = True; P['head_pitch'] = -12.0 * u; P['mouth'] = 'open' if k == 2 else 'smile'; P['brow_up'] = 1
+    return P
+
+
+def shy_hands(B, spec, k, n=5):
+    R0 = rest(B); hc = R0['head_c']; u = (0.4, 1.0, 1.0, 1.0, 0.5)[k]
+    P = free(idle(B, spec, k))
+    for s, sg in (('R', 1), ('L', -1)):
+        tgt = (sg * 1.5, hc[1] + 12.0, hc[2] - B.head['h'] * 0.75 - B.hand * 0.6)
+        _reach(P, s, R0, tgt, u, pole=(sg * 0.7, -0.5, -0.6), hdir=(-sg * 0.2, 0.3, 1.0))
+    P['shrug'] = 1.6 * u; P['head_pitch'] = 9.0 * u; P['head_yaw'] = -10.0 * u
+    P['eyes'] = ('open', 'half', 'closed', 'half', 'open')[k]; P['mouth'] = 'smile'
+    return P
+
+
+def sweet_to_scary(B, spec, k, n=6):
+    R0 = rest(B); P = free(idle(B, spec, k))
+    if k < 3:
+        for s, sg in (('R', 1), ('L', -1)):
+            _reach(P, s, R0, (sg * 1.5, 14.0, R0['pel'][2] + 6.0), 1.0, pole=(sg * 0.8, -0.3, -0.6), hdir=(-sg * 0.6, 0.6, -0.4))
+        P['head_roll'] = 7.0; P['mouth'] = 'smile'; P['brow_up'] = 1
+    else:
+        for s, sg in (('R', 1), ('L', -1)):
+            _reach(P, s, R0, (sg * (B.sh_x + 3.0), 8.0, R0['pel'][2] + 18.0), 1.0, pole=(sg * 0.9, -0.6, -0.2), hdir=(0, 0.6, 0.8))
+            P['fist' + s] = True
+        P['lean'] = P.get('lean', 0) + 9.0; P['head_pitch'] = -4.0; P['brow_in'] = True; P['mouth'] = 'open'
+        P['shrug'] = 1.0
+    return P
+
+
+def hands_on_hips(B, spec, k, n=4):
+    R0 = rest(B); u = (0.5, 1.0, 1.0, 1.0)[k]
+    P = free(idle(B, spec, k))
+    for s, sg in (('R', 1), ('L', -1)):
+        tgt = (sg * (B.pelvis['w'] + 3.5), -1.0, R0['pel'][2] + 4.0)
+        _reach(P, s, R0, tgt, u, pole=(sg * 1.0, -0.4, 0.0), hdir=(-sg * 0.5, 0.6, -0.6))
+        P['fist' + s] = True
+    P['head_roll'] = (0, 4.0, -3.0, 4.0)[k]; P['brow_in'] = k >= 1; P['mouth'] = 'closed'
+    return P
+
+
+def neuro_lecture(B, spec, k, n=6):
+    R0 = rest(B); sh = R0['shR']
+    P = free(idle(B, spec, k))
+    up = (0.5, 1.0, 1.0, 1.0, 1.0, 0.6)[k]
+    _reach(P, 'R', R0, (sh[0] + 3.0, 14.0, sh[2] + 2.0 + (1.5 if k % 2 else 0.0)), up, pole=(0.9, -0.2, -0.8), hdir=(0.0, 0.2, 1.0))
+    _reach(P, 'L', R0, (-2.0, 12.0, sh[2] - 22.0), 1.0, pole=(-0.8, -0.4, -0.6), hdir=(0.7, 0.4, 0.3))
+    P['mouth'] = ('open', 'closed', 'open', 'open', 'closed', 'open')[k]; P['head_pitch'] = (0, 2, -1, 2, 0, 1)[k]
+    P['head_roll'] = (0, -2, 0, -2, 0, 0)[k]; P['brow_up'] = 1 if k in (1, 3) else 0
+    return P
+
+
+def excited_clap(B, spec, k, n=6):
+    R0 = rest(B); z = R0['shR'][2] - 14.0
+    s_ = (0, 1, 2, 1, 2, 0)[k]
+    P = free(idle(B, spec, k))
+    if s_:
+        g = 4.0 if s_ == 1 else 0.6
+        for s, sg in (('R', 1), ('L', -1)):
+            _reach(P, s, R0, (sg * g, 18.0, z), 1.0, pole=(sg * 0.8, -0.5, -0.5), hdir=(-sg * 0.9, 0.3, 0.4))
+        P['shrug'] = 1.0 if s_ == 2 else 0.4
+    P['mouth'] = 'smile'; P['brow_up'] = 1 if s_ else 0
+    return P
+
+
+WORK = dict(tray=work_tray, whiteboard=work_whiteboard, laptop=work_laptop, pipette=work_pipette, microscope=work_microscope)
+EMOTE = dict(gesture=gesture, hair_flip=hair_flip, wine_sip=wine_sip, eye_roll=eye_roll, glasses_push=glasses_push,
+             sigh_shrug=sigh_shrug, point_gotcha=point_gotcha, spot_claim=spot_claim, eyebrow_waggle=eyebrow_waggle,
+             magic_trick=magic_trick, astronomy_point=astronomy_point, shy_hands=shy_hands, sweet_to_scary=sweet_to_scary,
+             hands_on_hips=hands_on_hips, neuro_lecture=neuro_lecture, excited_clap=excited_clap)

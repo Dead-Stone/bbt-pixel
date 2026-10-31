@@ -20,12 +20,13 @@ spec, B, pal = C.character(CID)
 OUT = os.path.join(ROOT, 'characters', CID)
 
 
-def pose_for(anim, k):
+def pose_for(anim, k, d='S'):
     if anim == 'idle': return M.idle(B, spec, k)
     if anim == 'walk': return M.walk(B, spec, k)
     if anim == 'blink': return M.blink(B, spec, k)
     if anim == 'talk': return M.talk(B, spec, k)
     if anim == 'work': return M.WORK[spec['work']](B, spec, k)
+    if anim == 'knock_knock_penny': return M.knock_knock_penny(B, spec, k, SK.MIRROR.get(d, d))
     return M.EMOTE[anim](B, spec, k)
 
 
@@ -33,7 +34,7 @@ _cache = {}
 def frame_img(anim, k, d):
     key = (anim, k, d)
     if key not in _cache:
-        idx, _ = C.draw(CID, pose_for(anim, k), d)
+        idx, _ = C.draw(CID, pose_for(anim, k, d), d)
         _cache[key] = C.to_rgba(idx, pal.arr)
     return _cache[key].copy()
 

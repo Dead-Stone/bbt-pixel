@@ -26,6 +26,27 @@ class Canvas:
         self.n = np.zeros((N, N, 3)); self.tone = np.zeros((N, N), int); self.tex = np.zeros((N, N))
         self.parts = []; self.mats = []
 
+    def fill_pinholes(self, rounds=3):
+        """a lone pixel of an under-layer showing through an outer shell (a rasterisation gap at a cut edge)
+        takes the surrounding shell's surface, so it doesn't turn into a dark contact-line speck"""
+        for _ in range(rounds):
+            nbs = [(np.roll(np.roll(self.part, dy, 0), dx, 1), np.roll(np.roll(self.z, dy, 0), dx, 1), dy, dx)
+                   for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1))]
+            p0 = nbs[0][0]
+            same = np.ones_like(self.part, bool)
+            for pn, zn, _, _ in nbs: same &= (pn == p0) & (zn < self.z - 1.0)
+            hole = same & (self.part >= 0) & (p0 >= 0) & (p0 != self.part)
+            occ = self.part >= 0
+            nocc = sum(np.roll(np.roll(occ, dy, 0), dx, 1).astype(int) for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1)))
+            up = (np.roll(occ, 1, 0) & np.roll(occ, -1, 0)) | (np.roll(occ, 1, 1) & np.roll(occ, -1, 1))
+            hole |= ~occ & (nocc >= 3) & up          # an empty pinhole inside the body
+            if not hole.any(): break
+            ys, xs = np.nonzero(hole); sy, sx = (ys - 1) % N, xs   # copy from the pixel above (same shell)
+            sx2 = xs; sy2 = (ys + 1) % N
+            self.z[ys, xs] = 0.5 * (self.z[sy, sx] + self.z[sy2, sx2])
+            n = self.n[sy, sx] + self.n[sy2, sx2]; self.n[ys, xs] = n / np.maximum(np.linalg.norm(n, axis=-1, keepdims=True), 1e-6)
+            for a in (self.mat, self.part, self.tone, self.tex): a[ys, xs] = a[sy, sx]
+
     def _id(self, lst, k):
         if k not in lst: lst.append(k)
         return lst.index(k)
@@ -108,12 +129,19 @@ def shade(cv, ramps, mats_order, tex_fn=None):
     tone = np.where(lam > 0.80, 0, np.where(lam > 0.30, 1, np.where(lam > -0.15, 2, 3)))
     tone = np.clip(tone + cv.tone, 0, 3)
     # texture (hair streaks etc.): tex in [0,1) shifts one tone where set
-    tone = np.where(op & (cv.tex > 0.5) & (tone < 3), tone + 1, tone)
+    tone = np.where(op & (cv.tex > 0.5) & (cv.tex < 2.5) & (tone < 3), tone + 1, tone)
     tone = np.where(op & (cv.tex < -0.5) & (tone > 0), tone - 1, tone)
+    # an isolated deep-tone pixel inside one material is a crease where two volumes meet, not a shadow: lift it
+    d3 = op & (tone == 3)
+    nb3 = sum(np.roll(np.roll(d3 & (cv.mat == np.roll(np.roll(cv.mat, -dy, 0), -dx, 1)), dy, 0), dx, 1).astype(int)
+              for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1)))
+    tone = np.where(d3 & (nb3 == 0), 2, tone)
     for mi, m in enumerate(cv.mats):
         sel = cv.mat == mi
         r = ramps[m]
         out[sel] = np.array(r)[tone[sel]]
+        if m + '_alt' in ramps:          # tex >= 2.5 marks a second material painted on the same surface (logo, dots, buckle)
+            alt = sel & (cv.tex > 2.5); out[alt] = np.array(ramps[m + '_alt'])[np.minimum(tone[alt], 2)]
     # contact lines: a pixel whose 4-neighbour belongs to a different part and is clearly nearer -> deep tone
     z = np.where(op, cv.z, np.inf)
     line = np.zeros_like(op)

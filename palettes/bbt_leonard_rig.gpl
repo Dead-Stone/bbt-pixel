@@ -1,0 +1,68 @@
+GIMP Palette
+Name: bbt_leonard_rig
+Columns: 5
+#
+255 215 178	skin_hi
+238 190 150	skin_base
+190 131 107	skin_sh
+148  86  75	skin_deep
+ 81  42  38	skin_ol
+ 76  59  46	hair_hi
+ 62  44  32	hair_base
+ 50  28  22	hair_sh
+ 38  17  15	hair_deep
+ 26  10   9	hair_ol
+ 99 135 102	tee_hi
+ 78 116  84	tee_base
+ 56  93  72	tee_sh
+ 40  72  60	tee_deep
+ 20  39  34	tee_ol
+133 170 197	jacket_hi
+104 132 172	jacket_base
+ 73  92 138	jacket_sh
+ 51  62 107	jacket_deep
+ 26  31  58	jacket_ol
+131  96  68	pants_hi
+112  74  46	pants_base
+ 90  45  29	pants_sh
+ 69  25  18	pants_deep
+ 38  11   9	pants_ol
+255 255 249	shoes_hi
+228 228 222	shoes_base
+182 180 170	shoes_sh
+141 135 126	shoes_deep
+ 78  72  66	shoes_ol
+ 85  66  55	eye_hi
+ 70  50  40	eye_base
+ 56  33  28	eye_sh
+ 43  20  19	eye_deep
+ 26  10  10	eye_ol
+223 159 145	lip_hi
+196 124 112	lip_base
+157  79  78	lip_sh
+122  53  60	lip_deep
+ 67  27  33	lip_ol
+ 65  49  40	brow_hi
+ 52  36  28	brow_base
+ 42  23  19	brow_sh
+ 32  14  13	brow_deep
+ 26   9  10	brow_ol
+ 52  40  33	lash_hi
+ 40  28  22	lash_base
+ 32  18  15	lash_sh
+ 25  11  10	lash_deep
+109  98  95	frame_hi
+ 92  80  78	frame_base
+ 74  59  59	frame_sh
+ 57  43  44	frame_deep
+ 31  22  24	frame_ol
+236 251 255	lens_hi
+214 228 236	lens_base
+162 175 189	lens_sh
+119 130 146	lens_deep
+ 62  68  80	lens_ol
+ 89 142 223	marker_hi
+ 52  84 196	marker_base
+ 26  42 157	marker_sh
+ 12  16 122	marker_deep
+  5   5  67	marker_ol

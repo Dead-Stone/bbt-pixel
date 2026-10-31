@@ -1,6 +1,6 @@
 {
  "character": "penny",
- "generated": "2026-10-30 17:28 (America/Los_Angeles)",
+ "generated": "2026-10-30 17:45 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -13,9 +13,9 @@
  "head_top_spec_y": 26,
  "idle_S_head_top_y": 26,
  "idle_S_body_height_px": 90,
- "idle_S_lowest_px": 116,
+ "idle_S_lowest_px": 117,
  "head_top_within_2px_of_spec": true,
- "feet_on_pivot_line_idle": false,
+ "feet_on_pivot_line_idle": true,
  "palette_violations": 0,
  "alpha_values": [
   0,
@@ -75,7 +75,7 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 912,
+   "pixels_differing_from_plain_flip": 914,
    "silhouette_identical": false
   },
   "E": {
@@ -83,7 +83,7 @@
    "silhouette_identical": false
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 802,
+   "pixels_differing_from_plain_flip": 827,
    "silhouette_identical": false
   }
  },
