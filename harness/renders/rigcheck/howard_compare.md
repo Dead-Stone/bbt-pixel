@@ -17,4 +17,4 @@ Rig landmarks (screen y, S view): crown 27.4, chin 40.9, shoulder 44.4, hip 69.3
 
 Body spec: {"leg": 1.0, "sh": 0.88, "tw": 0.84, "td": 0.84, "hip": 0.88, "waist": 0.84, "limb": 0.8, "arm_k": 0.84, "head_k": 1.12, "neck": 1.0, "foot": 0.95, "hand": 0.95}
 
-Gait: {"arm": 22, "elbow": 18, "bob": 1.3, "hip_roll": 3.5, "sway": 1.4, "twist": 7, "lean": 0.5}
+Gait: {"arm": 14, "elbow": 16, "bob": 1.3, "hip_roll": 3.5, "sway": 1.4, "twist": 5, "lean": 0.5}

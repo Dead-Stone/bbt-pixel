@@ -238,12 +238,12 @@
    "props"
   ],
   "gait": {
-   "arm": 22,
-   "elbow": 18,
+   "arm": 14,
+   "elbow": 16,
    "bob": 1.3,
    "hip_roll": 3.5,
    "sway": 1.4,
-   "twist": 7,
+   "twist": 5,
    "lean": 0.5
   },
   "armcheck": {
