@@ -26,7 +26,8 @@ DEFAULT_POSES = {'S': [0, 1, ('flip', 0), 3], 'N': [0, 1, ('flip', 0), 3], 'SW':
 OVERRIDE = {'sheldon': {'SW': dict(poses=[0, 3, 2, 3]), 'W': dict(poses=[0, 3, 2, 3])},
             'leonard': {'S': dict(poses=[0, 1, 2, 3]), 'N': dict(poses=[0, 1, 3, 2])},
             'howard': {'S': dict(poses=[0, 1, 2, 3]), 'N': dict(poses=[0, 1, 2, 3]), 'SW': dict(poses=[0, 3, 2, 3]), 'NW': dict(poses=[0, 3, 2, 3])},
-            'raj': {'S': dict(poses=[0, 1, 2, 3])},}          # {cid: {dir: dict(file=..., ncols=..., poses=[...])}} for strips that needed a fix
+            'raj': {'S': dict(poses=[0, 1, 2, 3])},
+            'bernadette': {'S': dict(poses=[0, 1, 2, 3]), 'NW': dict(poses=[0, 1, 2, 1])},}          # {cid: {dir: dict(file=..., ncols=..., poses=[...])}} for strips that needed a fix
 KEY_M = {'howard': 140}  # stricter magenta key where the outfit is magenta-ish
 HIP = 0.64             # legs start below the hands (~62% down the figure in front/back views)
 
