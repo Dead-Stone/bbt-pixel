@@ -130,6 +130,8 @@ function agentAt(cid, t) {
     if (/desk|laptop|computer/i.test(hk) && ai0.tags[`desk_${st.dir}`]) st.anim = 'desk';
     else if (/\.ponder/.test(hk) && ai0.tags[`act_think_${st.dir}`]) st.anim = 'act_think';
   }
+  // cooking at a stove / kitchen hook: the character's own cook loop when the art has one (Raj: cook_stir.png); others keep work/idle
+  if (s.kind !== 'sit' && ai0 && ai0.tags[`cook_${st.dir}`] && /\.cook$|stove|kitchenette/i.test(curHook(cid, t, s) || '')) st.anim = 'cook';
   // walk -> idle settle: hold the passing (feet-together) frame for a beat before the idle/work pose
   if (s.kind !== 'sit' && ai0 && tr[i - 1] && tr[i - 1].kind === 'walk' && t - s.t0 < SETTLE_S && ai0.meta.walk_pass) {
     st.anim = 'walk'; st.k = ai0.meta.walk_pass[st.dir] ?? ai0.meta.walk_pass[{E: 'W', NE: 'NW', SE: 'SW'}[st.dir]] ?? 2; st.settle = true;
