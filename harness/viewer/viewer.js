@@ -68,6 +68,9 @@ async function loadChars(cid) {
   if (Q.get('art') !== 'rig') {
     const [aj, ais] = await Promise.all([json(`${CHARS}${cid}/ai/chr_${cid}.json`).catch(() => null), img(`${CHARS}${cid}/ai/chr_${cid}.png`).catch(() => null)]);
     if (aj && ais) { const at = {}; for (const tg of aj.meta.frameTags) at[tg.name] = [tg.from, tg.to]; ai = {frames: aj.frames, tags: at, sheet: ais, meta: aj.meta || {}}; }
+    // 4-pose walk (tools/ai_import/walk_cycle.py): stride, pass, stride, pass -- legs apart / together alternate
+    const [wj, wi] = await Promise.all([json(`${CHARS}${cid}/ai/chr_${cid}_walk.json`).catch(() => null), img(`${CHARS}${cid}/ai/chr_${cid}_walk.png`).catch(() => null)]);
+    if (ai && wj && wi) { const wt = {}; for (const tg of wj.meta.frameTags) wt[tg.name] = [tg.from, tg.to]; ai.walk4 = {frames: wj.frames, tags: wt, sheet: wi, meta: wj.meta}; }
   }
   V.chars[cid] = {frames: atlas.frames, tags, sheet, sit, sitf, sita, ai};
 }
@@ -103,11 +106,11 @@ function agentAt(cid, t) {
     // the leg is re-timed so the walk still lasts t0..t1
     let p = s.pts, speed = s.speed;
     const cIn = deskChair(cid, tr[i + 1]), cOut = deskChair(cid, tr[i - 1] && tr[i - 1].kind !== 'walk' ? tr[i - 2] && tr[i - 2].act === 'work' && tr[i - 2].t1 === tr[i - 1].t0 ? tr[i - 2] : tr[i - 1] : null);
-    if (cIn || cOut) {
-      p = p.map(q => q.slice()); if (cIn) p[p.length - 1] = cIn.seat.slice(0, 2); if (cOut) p[0] = cOut.seat.slice(0, 2);
-      let L = 0; for (let k = 0; k < p.length - 1; k++) L += Math.hypot(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1]);
-      if (s.t1 > s.t0) speed = Math.max(s.speed, L / (s.t1 - s.t0));
-    }
+    if (cIn || cOut) { p = p.map(q => q.slice()); if (cIn) p[p.length - 1] = cIn.seat.slice(0, 2); if (cOut) p[0] = cOut.seat.slice(0, 2); }
+    // the sim ticks whole seconds, so a leg usually ends a fraction of a second early: stretch it to fill t0..t1 at an
+    // even pace instead of arriving and then marching on the spot
+    let Lp = 0; for (let k = 0; k < p.length - 1; k++) Lp += Math.hypot(p[k + 1][0] - p[k][0], p[k + 1][1] - p[k][1]);
+    if (s.t1 > s.t0) speed = Lp / (s.t1 - s.t0);
     let d = Math.max(0, (t - s.t0) * speed), x = p[p.length - 1][0], y = p[p.length - 1][1], walked = d;
     const prev = tr[i - 1]; let dir = prev && prev.dir ? prev.dir : null, pd = dir;
     for (let k = 0; k < p.length - 1; k++) {
@@ -122,7 +125,11 @@ function agentAt(cid, t) {
     }
     // stride-locked cadence: one sheet frame per walk_m_per_frame metres (measured from the feet in the sheet), so
     // the feet neither slide nor moonwalk at any sim speed
-    const ch = V.chars[cid], mpf = (ch && ch.ai && ch.ai.meta.walk_m_per_frame) || 0.07;
+    // 4-pose sheet: one pose per half step (walk_m_per_pose = half the measured foot stride); a walk starts and ends
+    // on a passing (legs-together) pose so standing -> walking never pops straight into a wide stride
+    const ch = V.chars[cid], w4 = ch && ch.ai && ch.ai.walk4;
+    if (w4) return {cid, loc: s.loc, x, y, dir: dir || 'SW', anim: 'walk', k: (Math.floor(walked / w4.meta.walk_m_per_pose) + 1) % 4, moving: true};
+    const mpf = (ch && ch.ai && ch.ai.meta.walk_m_per_frame) || 0.07;
     return {cid, loc: s.loc, x, y, dir: dir || 'SW', anim: 'walk', k: Math.floor(walked / mpf) % 8, moving: true};
   }
   // stand: 'work' loop at job hooks (whiteboard/laptop/microscope/pipette/tray), 'talk' while speaking, emotes on top
@@ -141,8 +148,8 @@ function agentAt(cid, t) {
   // cooking at a stove / kitchen hook: the character's own cook loop when the art has one (Raj: cook_stir.png); others keep work/idle
   if (s.kind !== 'sit' && ai0 && ai0.tags[`cook_${st.dir}`] && /\.cook$|stove|kitchenette/i.test(curHook(cid, t, s) || '')) st.anim = 'cook';
   // walk -> idle settle: hold the passing (feet-together) frame for a beat before the idle/work pose
-  if (s.kind !== 'sit' && ai0 && tr[i - 1] && tr[i - 1].kind === 'walk' && t - s.t0 < SETTLE_S && ai0.meta.walk_pass) {
-    st.anim = 'walk'; st.k = ai0.meta.walk_pass[st.dir] ?? ai0.meta.walk_pass[{E: 'W', NE: 'NW', SE: 'SW'}[st.dir]] ?? 2; st.settle = true;
+  if (s.kind !== 'sit' && ai0 && tr[i - 1] && tr[i - 1].kind === 'walk' && t - s.t0 < SETTLE_S && (ai0.walk4 || ai0.meta.walk_pass)) {
+    st.anim = 'walk'; st.k = ai0.walk4 ? 1 : ai0.meta.walk_pass[st.dir] ?? ai0.meta.walk_pass[{E: 'W', NE: 'NW', SE: 'SW'}[st.dir]] ?? 2; st.settle = true;
   }
   if (s.kind !== 'sit' && !st.settle) {
     if (st.anim === 'idle') { const a = idleAct(cid, t, s); if (a) st.anim = a; }
@@ -212,6 +219,8 @@ function frameOf(st, wall) {
   if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.seat || f.pivot}; }   // seat anchor (butt) -> seat point at seat_z
   if (ch.ai) {   // AI-import art: walk / idle / act_* / talk / work / emotes
     if (st.anim === 'emote') return {img: ch.ai.sheet, fr: ch.ai.frames[st.frame].frame, pv: [64, 116]};
+    const w4 = ch.ai.walk4, wt = st.anim === 'walk' && w4 && w4.tags[`walk_${st.dir}`];
+    if (wt) return {img: w4.sheet, fr: w4.frames[wt[0] + st.k % 4].frame, pv: [64, 116]};
     const tg = ch.ai.tags[`${st.anim}_${st.dir}`] || ch.ai.tags[`idle_${st.dir}`], n = tg[1] - tg[0] + 1, fd = (ch.ai.frames[tg[0]].duration || 250) / 1000;
     const i = st.anim === 'walk' ? st.k % n : Math.floor(wall / fd + st.cid.length) % n;
     return {img: ch.ai.sheet, fr: ch.ai.frames[tg[0] + i].frame, pv: [64, 116]};

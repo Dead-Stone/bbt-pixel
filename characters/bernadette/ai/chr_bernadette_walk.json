@@ -1,0 +1,496 @@
+{
+ "frames": [
+  {
+   "filename": "walk4_S_0",
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_S_1",
+   "frame": {
+    "x": 128,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_S_2",
+   "frame": {
+    "x": 256,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_S_3",
+   "frame": {
+    "x": 384,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SW_0",
+   "frame": {
+    "x": 512,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SW_1",
+   "frame": {
+    "x": 640,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SW_2",
+   "frame": {
+    "x": 768,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SW_3",
+   "frame": {
+    "x": 896,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_W_0",
+   "frame": {
+    "x": 0,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_W_1",
+   "frame": {
+    "x": 128,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_W_2",
+   "frame": {
+    "x": 256,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_W_3",
+   "frame": {
+    "x": 384,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NW_0",
+   "frame": {
+    "x": 512,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NW_1",
+   "frame": {
+    "x": 640,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NW_2",
+   "frame": {
+    "x": 768,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NW_3",
+   "frame": {
+    "x": 896,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_N_0",
+   "frame": {
+    "x": 0,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_N_1",
+   "frame": {
+    "x": 128,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_N_2",
+   "frame": {
+    "x": 256,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_N_3",
+   "frame": {
+    "x": 384,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NE_0",
+   "frame": {
+    "x": 512,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NE_1",
+   "frame": {
+    "x": 640,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NE_2",
+   "frame": {
+    "x": 768,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_NE_3",
+   "frame": {
+    "x": 896,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_E_0",
+   "frame": {
+    "x": 0,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_E_1",
+   "frame": {
+    "x": 128,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_E_2",
+   "frame": {
+    "x": 256,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_E_3",
+   "frame": {
+    "x": 384,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SE_0",
+   "frame": {
+    "x": 512,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SE_1",
+   "frame": {
+    "x": 640,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SE_2",
+   "frame": {
+    "x": 768,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walk4_SE_3",
+   "frame": {
+    "x": 896,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  }
+ ],
+ "meta": {
+  "app": "bbt-pixel/tools/ai_import/walk_cycle.py",
+  "image": "chr_bernadette_walk.png",
+  "size": {
+   "w": 1024,
+   "h": 512
+  },
+  "frameTags": [
+   {
+    "name": "walk_S",
+    "from": 0,
+    "to": 3,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_SW",
+    "from": 4,
+    "to": 7,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_W",
+    "from": 8,
+    "to": 11,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_NW",
+    "from": 12,
+    "to": 15,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_N",
+    "from": 16,
+    "to": 19,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_NE",
+    "from": 20,
+    "to": 23,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_E",
+    "from": 24,
+    "to": 27,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_SE",
+    "from": 28,
+    "to": 31,
+    "direction": "forward"
+   }
+  ],
+  "poses": [
+   "stride",
+   "pass",
+   "stride",
+   "pass"
+  ],
+  "pass_poses": [
+   1,
+   3
+  ],
+  "pivot": [
+   64,
+   116
+  ],
+  "walk_stride_px": 24.5,
+  "walk_m_per_pose": 0.1353,
+  "source": {
+   "S": {
+    "stride": [
+     3,
+     0
+    ],
+    "pass_from": [
+     6,
+     2
+    ],
+    "spread": [
+     17,
+     16
+    ],
+    "pass_spread": [
+     16,
+     18
+    ],
+    "idle_spread": 16
+   },
+   "SW": {
+    "stride": [
+     3,
+     7
+    ],
+    "pass_from": [
+     6,
+     0
+    ],
+    "spread": [
+     30,
+     26
+    ],
+    "pass_spread": [
+     16,
+     16
+    ],
+    "idle_spread": 16
+   },
+   "W": {
+    "stride": [
+     0,
+     4
+    ],
+    "pass_from": [
+     2,
+     5
+    ],
+    "spread": [
+     37,
+     37
+    ],
+    "pass_spread": [
+     17,
+     17
+    ],
+    "idle_spread": 17
+   },
+   "NW": {
+    "stride": [
+     0,
+     4
+    ],
+    "pass_from": [
+     1,
+     6
+    ],
+    "spread": [
+     31,
+     30
+    ],
+    "pass_spread": [
+     14,
+     14
+    ],
+    "idle_spread": 14
+   },
+   "N": {
+    "stride": [
+     3,
+     7
+    ],
+    "pass_from": [
+     5,
+     1
+    ],
+    "spread": [
+     16,
+     16
+    ],
+    "pass_spread": [
+     13,
+     13
+    ],
+    "idle_spread": 15
+   }
+  },
+  "note": "poses re-sequenced from chr_bernadette.json walk_<d> (see module doc); NE/E/SE mirror NW/W/SW"
+ }
+}

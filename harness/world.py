@@ -111,6 +111,7 @@ class Scene:
         if tiles is None: return None
         pts = [list(p0)] + [[t[0] + .5, t[1] + .5] for t in tiles[1:-1]] + [list(p1)]
         if len(tiles) == 1: pts = [list(p0), list(p1)]
+        pts = self.pull(pts)
         # drop collinear interior points
         out = [pts[0]]
         for i in range(1, len(pts) - 1):
@@ -118,6 +119,29 @@ class Scene:
             if abs((bx - ax) * (cy - by) - (by - ay) * (cx - bx)) > 1e-6: out.append(pts[i])
         out.append(pts[-1])
         return [[round(x, 3), round(y, 3)] for x, y in out]
+
+    def clear(self, p, q, r=0.2):
+        """straight walk p -> q stays on walkable tiles with r m of clearance and never crosses a blocked edge or cuts a corner"""
+        L = math.dist(p, q); n = max(1, int(L / 0.05))
+        for ox, oy in ((0, 0), (r, 0), (-r, 0), (0, r), (0, -r)):
+            prev = None
+            for k in range(n + 1):
+                f = k / n; t = (int(math.floor(p[0] + (q[0] - p[0]) * f + ox)), int(math.floor(p[1] + (q[1] - p[1]) * f + oy)))
+                if t != prev:
+                    if not self.ok(t): return False
+                    if prev is not None and (abs(t[0] - prev[0]) > 1 or abs(t[1] - prev[1]) > 1 or not self.step_ok(prev, t)): return False
+                    prev = t
+        return True
+    def pull(self, pts):
+        """any-angle path: string-pull the tile-centre polyline (keep a point only where the straight line to a later
+        point would leave the walkable floor) -- no grid zig-zag, fewer and gentler turns"""
+        if len(pts) < 3: return pts
+        out = [pts[0]]; i = 0
+        while i < len(pts) - 1:
+            j = len(pts) - 1
+            while j > i + 1 and not self.clear(pts[i], pts[j]): j -= 1
+            out.append(pts[j]); i = j
+        return out
 
     def zone_of(self, pos):
         for z, (x0, y0, w, h) in self.zones.items():

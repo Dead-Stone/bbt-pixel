@@ -1,0 +1,31 @@
+USE: one chat per character (Sheldon, Leonard, Penny, Howard, Raj, Bernadette, Amy). Attach that character's current sheet (characters/<cid>/ai/chr_<cid>.png) and env/renders/walk/legs_current_vs_new_<cid>.png. Paste everything below. Import the result with tools/ai_import (walk rows), then rerun tools/ai_import/walk_cycle.py only if you keep the 4-pose fallback.
+
+WHY: the current walk rows are 8 frames that ALL show the legs apart (8 strides, no passing pose), so the walk reads as "cross, cross, cross". The game now fakes the passing pose by pasting the idle legs under the walking torso; that looks stiff (straight legs, arms frozen) and in SW/NW the idle legs face a little more toward the viewer than the walking body. The S and N rows barely move their feet at all. The stride is also short (feet about 0.24 of body height apart at most), so the walk has to be slowed to keep the feet planted.
+
+TASK: Make ONE pixel-art walk-cycle sheet for this character, matching the attached sheet exactly (same person, outfit, proportions, palette, outline, size). 5 rows, one per facing, top to bottom: S (toward viewer), SW (toward bottom-left), W (left, full profile), NW (toward top-left, back three-quarter), N (away from viewer). 8 frames per row, left to right, ONE full cycle that loops:
+  1 CONTACT L - left heel strikes the floor in front, right toe behind; widest stride; legs clearly crossed/apart.
+  2 DOWN L - weight drops onto the bent left knee; body 1-2 px LOWER; right foot leaves the floor.
+  3 PASSING L - legs TOGETHER under the body: left leg straight and planted, right knee bent with the right foot lifted 3-5 px off the floor next to the left ankle; body 1-2 px HIGHER than contact.
+  4 UP L - left heel lifts (toe-off), right leg swings forward; body highest.
+  5 CONTACT R - mirror of 1 with the other leg (right heel strikes in front).
+  6 DOWN R - mirror of 2.
+  7 PASSING R - mirror of 3: legs together, left foot lifted beside the right ankle.
+  8 UP R - mirror of 4.
+The rhythm must read clearly as: legs APART, legs TOGETHER, legs APART, legs TOGETHER. Frames 3 and 7 must look almost like standing, with one foot just lifted.
+If 8 frames is too many, make 4 frames per row instead: CONTACT L, PASSING (legs together, one foot lifted), CONTACT R, PASSING (other foot lifted) - and say which you made.
+
+MOTION DETAILS: knees visibly bend (never two dead-straight legs except the planted leg in passing); heel-strike on contact (front foot toe up), toe-off on up (back heel lifted); stride at contact about 0.4 of body height from heel to toe (longer than the attached sheet); arms swing opposite to the legs (left arm forward with right leg), small swing, hands no farther than the hips; head and torso keep the same size and facing in all 8 frames, only bobbing 1-2 px. In S and N the feet must still visibly step: the lifted foot is shorter/higher on screen and the planted foot lower. In SW/NW the hips, legs and feet face exactly the same direction as the torso.
+
+STYLE (match the attached character image exactly): true pixel art with hard pixel edges, no blur, no painterly strokes, no 3D render look. Same 1px dark outline, same cel shading (2-3 tones per colour), light from top-left, same palette. Do not redesign the character, do not change clothes, hair or proportions between frames.
+
+VIEW: same isometric game camera as the attached sheet (2:1 floor, no perspective). Facings are exact 45-degree steps; W is a true side profile.
+
+GRID AND SCALE: every frame is a 128 x 128 px cell, cells touching edge to edge with no gaps, 8 columns x 5 rows = 1024 x 640 px. The character is the same height as in the attached sheet (about 104 px tall). Pivot = the point on the floor between the feet at x=64, y=116 in every cell: the planted foot's sole sits on row 116-119 in every frame (except the 1-2 px bob of the body, the planted foot never moves up or down). Character centred horizontally on x=64 in every frame; nothing crosses a cell edge.
+
+BACKGROUND AND LAYOUT: flat pure magenta #FF00FF only, no gradient, texture or noise. No floor, no shadows of any kind, no glow, no motion lines. Never use magenta inside the character.
+
+LABELS: none inside the cells. Under the image (outside the 1024 x 640 area, or in your reply) list the row order and frame names.
+
+DON'Ts: no other characters, no props in the hands, no extra frames, no frame numbers drawn in cells, don't vary the style, scale or facing within a row, don't crop feet or hair.
+
+OUTPUT: one lossless PNG, exactly 1024 x 640 px (8 x 5 cells of 128 x 128). If it doesn't fit, make one image per row (1024 x 128) rather than shrinking. Before drawing, check every rule; after drawing, list anything that doesn't match the rules (especially: are frames 3 and 7 legs-together in every row? does the planted foot stay on the same row?).
