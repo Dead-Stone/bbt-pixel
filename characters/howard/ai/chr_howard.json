@@ -2991,16 +2991,6352 @@
     "h": 128
    },
    "duration": 100
+  },
+  {
+   "filename": "chr_howard_act_think_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_think_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_talk_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_eat_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_drink_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_act_phone_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_talk_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_S_03",
+   "frame": {
+    "x": 1408,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SW_00",
+   "frame": {
+    "x": 1536,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SW_01",
+   "frame": {
+    "x": 1664,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SW_02",
+   "frame": {
+    "x": 1792,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SW_03",
+   "frame": {
+    "x": 1920,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_W_00",
+   "frame": {
+    "x": 0,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_W_01",
+   "frame": {
+    "x": 128,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_W_02",
+   "frame": {
+    "x": 256,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_W_03",
+   "frame": {
+    "x": 384,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NW_00",
+   "frame": {
+    "x": 512,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NW_01",
+   "frame": {
+    "x": 640,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NW_02",
+   "frame": {
+    "x": 768,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NW_03",
+   "frame": {
+    "x": 896,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_N_00",
+   "frame": {
+    "x": 1024,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_N_01",
+   "frame": {
+    "x": 1152,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_N_02",
+   "frame": {
+    "x": 1280,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_N_03",
+   "frame": {
+    "x": 1408,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NE_00",
+   "frame": {
+    "x": 1536,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NE_01",
+   "frame": {
+    "x": 1664,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NE_02",
+   "frame": {
+    "x": 1792,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_NE_03",
+   "frame": {
+    "x": 1920,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_E_00",
+   "frame": {
+    "x": 0,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_E_01",
+   "frame": {
+    "x": 128,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_E_02",
+   "frame": {
+    "x": 256,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_E_03",
+   "frame": {
+    "x": 384,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SE_00",
+   "frame": {
+    "x": 512,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SE_01",
+   "frame": {
+    "x": 640,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SE_02",
+   "frame": {
+    "x": 768,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_talk_SE_03",
+   "frame": {
+    "x": 896,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_gesture_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_SW_00",
+   "frame": {
+    "x": 1408,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_SW_01",
+   "frame": {
+    "x": 1536,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_SW_02",
+   "frame": {
+    "x": 1664,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_W_00",
+   "frame": {
+    "x": 1792,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_W_01",
+   "frame": {
+    "x": 1920,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_W_02",
+   "frame": {
+    "x": 0,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_NW_00",
+   "frame": {
+    "x": 128,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_NW_01",
+   "frame": {
+    "x": 256,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_NW_02",
+   "frame": {
+    "x": 384,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_N_00",
+   "frame": {
+    "x": 512,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_N_01",
+   "frame": {
+    "x": 640,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_N_02",
+   "frame": {
+    "x": 768,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_NE_00",
+   "frame": {
+    "x": 896,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_NE_01",
+   "frame": {
+    "x": 1024,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_NE_02",
+   "frame": {
+    "x": 1152,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_E_00",
+   "frame": {
+    "x": 1280,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_E_01",
+   "frame": {
+    "x": 1408,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_E_02",
+   "frame": {
+    "x": 1536,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_gesture_SE_00",
+   "frame": {
+    "x": 1664,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_howard_gesture_SE_01",
+   "frame": {
+    "x": 1792,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_gesture_SE_02",
+   "frame": {
+    "x": 1920,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_howard_work_S_00",
+   "frame": {
+    "x": 0,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_S_01",
+   "frame": {
+    "x": 128,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_S_02",
+   "frame": {
+    "x": 256,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_SW_00",
+   "frame": {
+    "x": 384,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_SW_01",
+   "frame": {
+    "x": 512,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_SW_02",
+   "frame": {
+    "x": 640,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_W_00",
+   "frame": {
+    "x": 768,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_W_01",
+   "frame": {
+    "x": 896,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_W_02",
+   "frame": {
+    "x": 1024,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_NW_00",
+   "frame": {
+    "x": 1152,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_NW_01",
+   "frame": {
+    "x": 1280,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_NW_02",
+   "frame": {
+    "x": 1408,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_N_00",
+   "frame": {
+    "x": 1536,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_N_01",
+   "frame": {
+    "x": 1664,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_N_02",
+   "frame": {
+    "x": 1792,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_NE_00",
+   "frame": {
+    "x": 1920,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_NE_01",
+   "frame": {
+    "x": 0,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_NE_02",
+   "frame": {
+    "x": 128,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_E_00",
+   "frame": {
+    "x": 256,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_E_01",
+   "frame": {
+    "x": 384,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_E_02",
+   "frame": {
+    "x": 512,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_SE_00",
+   "frame": {
+    "x": 640,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_SE_01",
+   "frame": {
+    "x": 768,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 900
+  },
+  {
+   "filename": "chr_howard_work_SE_02",
+   "frame": {
+    "x": 896,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 700
+  },
+  {
+   "filename": "chr_howard_work_desk_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_S_03",
+   "frame": {
+    "x": 1408,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_S_04",
+   "frame": {
+    "x": 1536,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_S_05",
+   "frame": {
+    "x": 1664,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SW_00",
+   "frame": {
+    "x": 1792,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SW_01",
+   "frame": {
+    "x": 1920,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SW_02",
+   "frame": {
+    "x": 0,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SW_03",
+   "frame": {
+    "x": 128,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SW_04",
+   "frame": {
+    "x": 256,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SW_05",
+   "frame": {
+    "x": 384,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_W_00",
+   "frame": {
+    "x": 512,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_W_01",
+   "frame": {
+    "x": 640,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_W_02",
+   "frame": {
+    "x": 768,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_W_03",
+   "frame": {
+    "x": 896,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_W_04",
+   "frame": {
+    "x": 1024,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_W_05",
+   "frame": {
+    "x": 1152,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NW_00",
+   "frame": {
+    "x": 1280,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NW_01",
+   "frame": {
+    "x": 1408,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NW_02",
+   "frame": {
+    "x": 1536,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NW_03",
+   "frame": {
+    "x": 1664,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NW_04",
+   "frame": {
+    "x": 1792,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NW_05",
+   "frame": {
+    "x": 1920,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_N_00",
+   "frame": {
+    "x": 0,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_N_01",
+   "frame": {
+    "x": 128,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_N_02",
+   "frame": {
+    "x": 256,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_N_03",
+   "frame": {
+    "x": 384,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_N_04",
+   "frame": {
+    "x": 512,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_N_05",
+   "frame": {
+    "x": 640,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NE_00",
+   "frame": {
+    "x": 768,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NE_01",
+   "frame": {
+    "x": 896,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NE_02",
+   "frame": {
+    "x": 1024,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NE_03",
+   "frame": {
+    "x": 1152,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NE_04",
+   "frame": {
+    "x": 1280,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_NE_05",
+   "frame": {
+    "x": 1408,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_E_00",
+   "frame": {
+    "x": 1536,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_E_01",
+   "frame": {
+    "x": 1664,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_E_02",
+   "frame": {
+    "x": 1792,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_E_03",
+   "frame": {
+    "x": 1920,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_E_04",
+   "frame": {
+    "x": 0,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_E_05",
+   "frame": {
+    "x": 128,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SE_00",
+   "frame": {
+    "x": 256,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SE_01",
+   "frame": {
+    "x": 384,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SE_02",
+   "frame": {
+    "x": 512,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SE_03",
+   "frame": {
+    "x": 640,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SE_04",
+   "frame": {
+    "x": 768,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_work_desk_SE_05",
+   "frame": {
+    "x": 896,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_03",
+   "frame": {
+    "x": 1408,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_04",
+   "frame": {
+    "x": 1536,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_05",
+   "frame": {
+    "x": 1664,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SW_00",
+   "frame": {
+    "x": 1792,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SW_01",
+   "frame": {
+    "x": 1920,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SW_02",
+   "frame": {
+    "x": 0,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SW_03",
+   "frame": {
+    "x": 128,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SW_04",
+   "frame": {
+    "x": 256,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SW_05",
+   "frame": {
+    "x": 384,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_W_00",
+   "frame": {
+    "x": 512,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_W_01",
+   "frame": {
+    "x": 640,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_W_02",
+   "frame": {
+    "x": 768,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_W_03",
+   "frame": {
+    "x": 896,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_W_04",
+   "frame": {
+    "x": 1024,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_W_05",
+   "frame": {
+    "x": 1152,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NW_00",
+   "frame": {
+    "x": 1280,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NW_01",
+   "frame": {
+    "x": 1408,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NW_02",
+   "frame": {
+    "x": 1536,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NW_03",
+   "frame": {
+    "x": 1664,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NW_04",
+   "frame": {
+    "x": 1792,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NW_05",
+   "frame": {
+    "x": 1920,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_N_00",
+   "frame": {
+    "x": 0,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_N_01",
+   "frame": {
+    "x": 128,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_N_02",
+   "frame": {
+    "x": 256,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_N_03",
+   "frame": {
+    "x": 384,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_N_04",
+   "frame": {
+    "x": 512,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_N_05",
+   "frame": {
+    "x": 640,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NE_00",
+   "frame": {
+    "x": 768,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NE_01",
+   "frame": {
+    "x": 896,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NE_02",
+   "frame": {
+    "x": 1024,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NE_03",
+   "frame": {
+    "x": 1152,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NE_04",
+   "frame": {
+    "x": 1280,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_NE_05",
+   "frame": {
+    "x": 1408,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_E_00",
+   "frame": {
+    "x": 1536,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_E_01",
+   "frame": {
+    "x": 1664,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_E_02",
+   "frame": {
+    "x": 1792,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_E_03",
+   "frame": {
+    "x": 1920,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_E_04",
+   "frame": {
+    "x": 0,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_E_05",
+   "frame": {
+    "x": 128,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SE_00",
+   "frame": {
+    "x": 256,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SE_01",
+   "frame": {
+    "x": 384,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SE_02",
+   "frame": {
+    "x": 512,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SE_03",
+   "frame": {
+    "x": 640,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SE_04",
+   "frame": {
+    "x": 768,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_magic_trick_SE_05",
+   "frame": {
+    "x": 896,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_S_03",
+   "frame": {
+    "x": 1408,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SW_00",
+   "frame": {
+    "x": 1536,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SW_01",
+   "frame": {
+    "x": 1664,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SW_02",
+   "frame": {
+    "x": 1792,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SW_03",
+   "frame": {
+    "x": 1920,
+    "y": 3072,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_W_00",
+   "frame": {
+    "x": 0,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_W_01",
+   "frame": {
+    "x": 128,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_W_02",
+   "frame": {
+    "x": 256,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_W_03",
+   "frame": {
+    "x": 384,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NW_00",
+   "frame": {
+    "x": 512,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NW_01",
+   "frame": {
+    "x": 640,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NW_02",
+   "frame": {
+    "x": 768,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NW_03",
+   "frame": {
+    "x": 896,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_N_00",
+   "frame": {
+    "x": 1024,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_N_01",
+   "frame": {
+    "x": 1152,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_N_02",
+   "frame": {
+    "x": 1280,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_N_03",
+   "frame": {
+    "x": 1408,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NE_00",
+   "frame": {
+    "x": 1536,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NE_01",
+   "frame": {
+    "x": 1664,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NE_02",
+   "frame": {
+    "x": 1792,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_NE_03",
+   "frame": {
+    "x": 1920,
+    "y": 3200,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_E_00",
+   "frame": {
+    "x": 0,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_E_01",
+   "frame": {
+    "x": 128,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_E_02",
+   "frame": {
+    "x": 256,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_E_03",
+   "frame": {
+    "x": 384,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SE_00",
+   "frame": {
+    "x": 512,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SE_01",
+   "frame": {
+    "x": 640,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SE_02",
+   "frame": {
+    "x": 768,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_howard_eyebrow_waggle_SE_03",
+   "frame": {
+    "x": 896,
+    "y": 3328,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/ai_import/build.py",
-  "version": "ai1",
+  "app": "bbt-pixel/tools/ai_import/full.py",
+  "version": "ai2",
   "image": "chr_howard.png",
   "format": "RGBA8888",
   "size": {
    "w": 2048,
-   "h": 1152
+   "h": 3456
   },
   "scale": "1",
   "pivot": [
@@ -3151,6 +9487,534 @@
     "from": 128,
     "to": 135,
     "direction": "forward"
+   },
+   {
+    "name": "act_think_S",
+    "from": 136,
+    "to": 137,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_SW",
+    "from": 138,
+    "to": 139,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_W",
+    "from": 140,
+    "to": 141,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_NW",
+    "from": 142,
+    "to": 143,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_N",
+    "from": 144,
+    "to": 145,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_NE",
+    "from": 146,
+    "to": 147,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_E",
+    "from": 148,
+    "to": 149,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_SE",
+    "from": 150,
+    "to": 151,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_S",
+    "from": 152,
+    "to": 153,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_SW",
+    "from": 154,
+    "to": 155,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_W",
+    "from": 156,
+    "to": 157,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_NW",
+    "from": 158,
+    "to": 159,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_N",
+    "from": 160,
+    "to": 161,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_NE",
+    "from": 162,
+    "to": 163,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_E",
+    "from": 164,
+    "to": 165,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_SE",
+    "from": 166,
+    "to": 167,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_S",
+    "from": 168,
+    "to": 169,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_SW",
+    "from": 170,
+    "to": 171,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_W",
+    "from": 172,
+    "to": 173,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_NW",
+    "from": 174,
+    "to": 175,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_N",
+    "from": 176,
+    "to": 177,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_NE",
+    "from": 178,
+    "to": 179,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_E",
+    "from": 180,
+    "to": 181,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_SE",
+    "from": 182,
+    "to": 183,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_S",
+    "from": 184,
+    "to": 185,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_SW",
+    "from": 186,
+    "to": 187,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_W",
+    "from": 188,
+    "to": 189,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_NW",
+    "from": 190,
+    "to": 191,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_N",
+    "from": 192,
+    "to": 193,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_NE",
+    "from": 194,
+    "to": 195,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_E",
+    "from": 196,
+    "to": 197,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_SE",
+    "from": 198,
+    "to": 199,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_S",
+    "from": 200,
+    "to": 201,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_SW",
+    "from": 202,
+    "to": 203,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_W",
+    "from": 204,
+    "to": 205,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_NW",
+    "from": 206,
+    "to": 207,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_N",
+    "from": 208,
+    "to": 209,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_NE",
+    "from": 210,
+    "to": 211,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_E",
+    "from": 212,
+    "to": 213,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_SE",
+    "from": 214,
+    "to": 215,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_S",
+    "from": 216,
+    "to": 219,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_SW",
+    "from": 220,
+    "to": 223,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_W",
+    "from": 224,
+    "to": 227,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_NW",
+    "from": 228,
+    "to": 231,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_N",
+    "from": 232,
+    "to": 235,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_NE",
+    "from": 236,
+    "to": 239,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_E",
+    "from": 240,
+    "to": 243,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_SE",
+    "from": 244,
+    "to": 247,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_S",
+    "from": 248,
+    "to": 250,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_SW",
+    "from": 251,
+    "to": 253,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_W",
+    "from": 254,
+    "to": 256,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_NW",
+    "from": 257,
+    "to": 259,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_N",
+    "from": 260,
+    "to": 262,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_NE",
+    "from": 263,
+    "to": 265,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_E",
+    "from": 266,
+    "to": 268,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_SE",
+    "from": 269,
+    "to": 271,
+    "direction": "forward"
+   },
+   {
+    "name": "work_S",
+    "from": 272,
+    "to": 274,
+    "direction": "forward"
+   },
+   {
+    "name": "work_SW",
+    "from": 275,
+    "to": 277,
+    "direction": "forward"
+   },
+   {
+    "name": "work_W",
+    "from": 278,
+    "to": 280,
+    "direction": "forward"
+   },
+   {
+    "name": "work_NW",
+    "from": 281,
+    "to": 283,
+    "direction": "forward"
+   },
+   {
+    "name": "work_N",
+    "from": 284,
+    "to": 286,
+    "direction": "forward"
+   },
+   {
+    "name": "work_NE",
+    "from": 287,
+    "to": 289,
+    "direction": "forward"
+   },
+   {
+    "name": "work_E",
+    "from": 290,
+    "to": 292,
+    "direction": "forward"
+   },
+   {
+    "name": "work_SE",
+    "from": 293,
+    "to": 295,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_S",
+    "from": 296,
+    "to": 301,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_SW",
+    "from": 302,
+    "to": 307,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_W",
+    "from": 308,
+    "to": 313,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_NW",
+    "from": 314,
+    "to": 319,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_N",
+    "from": 320,
+    "to": 325,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_NE",
+    "from": 326,
+    "to": 331,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_E",
+    "from": 332,
+    "to": 337,
+    "direction": "forward"
+   },
+   {
+    "name": "work_desk_SE",
+    "from": 338,
+    "to": 343,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_S",
+    "from": 344,
+    "to": 349,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_SW",
+    "from": 350,
+    "to": 355,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_W",
+    "from": 356,
+    "to": 361,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_NW",
+    "from": 362,
+    "to": 367,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_N",
+    "from": 368,
+    "to": 373,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_NE",
+    "from": 374,
+    "to": 379,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_E",
+    "from": 380,
+    "to": 385,
+    "direction": "forward"
+   },
+   {
+    "name": "magic_trick_SE",
+    "from": 386,
+    "to": 391,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_S",
+    "from": 392,
+    "to": 395,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_SW",
+    "from": 396,
+    "to": 399,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_W",
+    "from": 400,
+    "to": 403,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_NW",
+    "from": 404,
+    "to": 407,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_N",
+    "from": 408,
+    "to": 411,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_NE",
+    "from": 412,
+    "to": 415,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_E",
+    "from": 416,
+    "to": 419,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_SE",
+    "from": 420,
+    "to": 423,
+    "direction": "forward"
    }
   ],
   "source": "refs_ai/chatgpt_penny_1.png (ChatGPT cast turnaround, row Howard)",
@@ -3173,7 +10037,34 @@
    },
    "fidget_why": "idle frame 7 is the blink (eyes repainted on purpose)"
   },
-  "note": "stand = the converted still; idle = 1-px breath + blink (tools/ai_import/idle.py); walk = 4 generated key poses per direction, each held 2 frames (tools/ai_import/walk.py)",
-  "source_walk": "refs_ai/gen/howard_walk4_<dir>.jpg (GenerateImage, turnaround as reference)"
+  "note": "stand = turnaround still; idle = breath + blink; walk/act_*/talk/gesture/work/emotes = ChatGPT action sheets, one shared palette (bbt_howard_ai.gpl), heights normalised to the turnaround by crown/head matching (sheets.py). Work frames: the drawn prop (bench/whiteboard/table/telescope/microscope/door) is stripped and the frame stays 128x128 -- the env already draws the furniture at every work hook.",
+  "source_actions": "refs_ai/chatgpt/howard/{idle_actions,signature,sit,walk,work}.png (ChatGPT sprite sheets; rows S, SW, W, NW, N on magenta) via tools/ai_import/sheets.py",
+  "scales": {
+   "idle_actions": {
+    "crown": 0.41333333333333333,
+    "head": 0.3958584262455557,
+    "use": 0.41333333333333333
+   },
+   "signature": {
+    "crown": 0.4232325763054337,
+    "head": 0.38759789924069166,
+    "use": 0.4232325763054337
+   },
+   "sit": {
+    "corr": 1.0919372296252141,
+    "head": 0.3069424826221109,
+    "use": 0.3351619241286732
+   },
+   "walk": {
+    "crown": 0.5317665351036212,
+    "head": 0.4803716442074986,
+    "use": 0.5317665351036212
+   },
+   "work": {
+    "corr": 1.0919372296252141,
+    "head": 0.421632787974608,
+    "use": 0.46039653842014877
+   }
+  }
  }
 }
