@@ -2,11 +2,11 @@ GIMP Palette
 Name: bbt_howard_rig
 Columns: 5
 #
-255 218 184	skin_hi
+255 225 194	skin_hi
 236 192 156	skin_base
-189 134 112	skin_sh
-146  89  79	skin_deep
- 80  44  41	skin_ol
+203 139 112	skin_sh
+165  96  79	skin_deep
+ 94  48  39	skin_ol
 129  94  63	hair_hi
 110  72  42	hair_base
  88  43  26	hair_sh
@@ -67,3 +67,12 @@ Columns: 5
 192 186 177	card_sh
 149 138 131	card_deep
  82  73  69	card_ol
+246 244 238	eyew_base
+197 190 182	eyew_sh
+153 142 135	eyew_deep
+ 84  75  71	eyew_ol
+255 198 172	cheek_hi
+236 169 142	cheek_base
+189 112 100	cheek_sh
+146  71  69	cheek_deep
+ 80  35  37	cheek_ol

@@ -1,6 +1,6 @@
 {
  "character": "howard",
- "generated": "2026-10-30 17:58 (America/Los_Angeles)",
+ "generated": "2026-10-30 18:45 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -11,8 +11,8 @@
  ],
  "body_height_spec_px": 89,
  "head_top_spec_y": 27,
- "idle_S_head_top_y": 29,
- "idle_S_body_height_px": 87,
+ "idle_S_head_top_y": 26,
+ "idle_S_body_height_px": 90,
  "idle_S_lowest_px": 118,
  "head_top_within_2px_of_spec": true,
  "feet_on_pivot_line_idle": true,
@@ -70,15 +70,15 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 781,
+   "pixels_differing_from_plain_flip": 832,
    "silhouette_identical": false
   },
   "E": {
-   "pixels_differing_from_plain_flip": 628,
+   "pixels_differing_from_plain_flip": 638,
    "silhouette_identical": false
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 727,
+   "pixels_differing_from_plain_flip": 778,
    "silhouette_identical": false
   }
  },
