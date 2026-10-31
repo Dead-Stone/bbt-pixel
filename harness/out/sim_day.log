@@ -179,7 +179,7 @@
 08:27:00 [-] Penny plan -> slow morning in 4B (floor4)
 08:27:00 [floor4] Penny appears at apartment 4B (arrives)
 08:27:01 [floor4] Penny walks: drinks coffee at the kitchen bar (10.0 m)
-08:27:15 [floor4] Penny drinks coffee at the kitchen bar [4b_kitchen_bar#0.stool0, 16 min]
+08:27:14 [floor4] Penny drinks coffee at the kitchen bar [4b_kitchen_bar#0.stool0, 19 min]
 08:35:00 [-] Howard plan -> engineering lab: robot arm and rover (ait_physics)
 08:35:00 [ait_cafeteria] Howard appears at AIT Cafeteria (Arroyo Institute of Technology) (arrives)
 08:35:01 [ait_cafeteria] Howard walks: heads out (door to AIT Physics: Sheldon's office + shared lab) (5.8 m)
@@ -208,8 +208,8 @@
 08:41:44 [ait_physics] Amy: "The neurons I'm imaging fired in a pattern that resembled a smile."
 08:41:44 [ait_physics] Amy *neuro lecture*
 08:41:50 [ait_physics] Howard: "And scene. Thank you, thank you."
-08:43:17 [floor4] Penny walks: runs lines for an audition on the couch (8.0 m)
-08:43:28 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat1, 22 min]
+08:46:16 [floor4] Penny walks: runs lines for an audition on the couch (19.0 m)
+08:46:38 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat0, 34 min]
 08:50:02 [ait_physics] Leonard walks: solders a detector board (8.1 m)
 08:50:12 [ait_physics] Leonard solders a detector board [lab_bench_electronics#0.work0, 26 min]
 08:58:53 [ait_physics] Amy walks: images neuron cultures at the bench (7.5 m)
@@ -225,13 +225,14 @@
 09:03:22 [ait_physics] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
 09:03:26 [ait_physics] Howard: "Gotta go, the robot misses me."
 09:03:27 [ait_physics] Howard *magic trick*
-09:05:32 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat1, 31 min]
 09:06:22 [ait_physics] Howard walks: programs the robot arm (7.7 m)
 09:06:31 [ait_physics] Howard programs the robot arm [lab_robot_arm#0.program, 28 min]
 09:10:41 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#1.work1, 49 min]
 09:11:46 [ait_physics] Amy reflects: Sheldon keeps turning up in my day (boyfriend). I should make real time for Sheldon tonight.
 09:16:12 [ait_physics] Leonard walks: aligns the optical table (6.1 m)
 09:16:19 [ait_physics] Leonard aligns the optical table [lab_optical_table#0.align, 37 min]
+09:20:40 [floor4] Penny walks: runs lines for an audition on the couch (10.0 m)
+09:20:53 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat2, 30 min]
 09:28:24 [ait_physics] -- conversation: Amy, Leonard, Howard on 'memory' at AIT Physics: Sheldon's office + shared lab
 09:28:24 [ait_physics] Amy: "Hello, Leonard. My amygdala registered your arrival as a positive event."
 09:28:30 [ait_physics] Leonard: "That's... actually a good idea."
@@ -244,7 +245,6 @@
 09:28:49 [ait_physics] Leonard *sigh shrug*
 09:34:31 [ait_physics] Howard walks: tinkers with the rover (7.7 m)
 09:34:40 [ait_physics] Howard tinkers with the rover [lab_rover#0.tinker, 23 min]
-09:36:36 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat1, 24 min]
 09:38:12 [ait_physics] -- conversation: Howard, Raj on 'science' at AIT Physics: Sheldon's office + shared lab
 09:38:12 [ait_physics] Howard: "Raj! Engineering update, very exciting, try to keep up."
 09:38:17 [ait_physics] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
@@ -263,6 +263,8 @@
 09:40:08 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work0, 55 min]
 09:45:49 [ait_physics] Sheldon walks: fills the office whiteboard (4.2 m)
 09:45:54 [ait_physics] Sheldon fills the office whiteboard [off_whiteboard_wall#0.ponder, 22 min]
+09:50:55 [floor4] Penny walks: runs lines for an audition on the couch (1.0 m)
+09:50:59 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat1, 22 min]
 09:53:19 [ait_physics] Leonard aligns the optical table [lab_optical_table#0.align, 46 min]
 09:54:12 [ait_physics] -- conversation: Howard, Leonard, Amy on 'plans' at AIT Physics: Sheldon's office + shared lab
 09:54:12 [ait_physics] Howard: "Leonard, my friend! Ask me what I built this morning."
@@ -275,7 +277,6 @@
 09:57:40 [ait_physics] Howard tinkers with the rover [lab_rover#0.tinker, 21 min]
 09:59:41 [ait_physics] Raj walks: reduces telescope data at the bench (8.9 m)
 09:59:52 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work1, 50 min]
-10:00:40 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat1, 34 min]
 10:01:23 [ait_physics] Howard reflects: Leonard keeps turning up in my day (friend). I should make real time for Leonard tonight.
 10:01:24 [ait_physics] Raj reflects: I've talked with Howard 2 time(s) today. That matters to me more than I'd say out loud.
 10:03:24 [ait_physics] -- conversation: Amy, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
@@ -296,6 +297,8 @@
 10:12:21 [ait_physics] Leonard *sigh shrug*
 10:12:24 [ait_physics] Raj: "Wait, wait, I have a metaphor for this."
 10:12:28 [ait_physics] Howard: "I've done harder things in a clean room wearing mittens."
+10:13:01 [floor4] Penny walks: runs lines for an audition on the couch (11.0 m)
+10:13:15 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat0, 23 min]
 10:18:40 [ait_physics] Howard walks: programs the robot arm (7.7 m)
 10:18:49 [ait_physics] Howard programs the robot arm [lab_robot_arm#0.program, 28 min]
 10:20:04 [ait_physics] -- conversation: Leonard, Amy on 'work' at AIT Physics: Sheldon's office + shared lab
@@ -321,9 +324,8 @@
 10:33:30 [ait_physics] Amy *neuro lecture*
 10:33:35 [ait_physics] Raj: "Ha, cosmic."
 10:33:38 [ait_physics] Amy: "Goodbye. I'm already looking forward to the debrief."
-10:34:42 [floor4] Penny walks: runs lines for an audition on the couch (11.0 m)
-10:34:57 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat0, 36 min]
 10:35:08 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work0, 37 min]
+10:36:19 [floor4] Penny runs lines for an audition on the couch [4b_couch#0.seat0, 37 min]
 10:39:04 [ait_physics] -- conversation: Leonard, Howard, Raj on 'science' at AIT Physics: Sheldon's office + shared lab
 10:39:04 [ait_physics] Leonard: "Howard! Perfect timing, I need a sanity check."
 10:39:08 [ait_physics] Howard: "I put a sensor on the coffee machine. It's sad data."
@@ -345,9 +347,9 @@
 11:00:02 [floor4] Penny walks: raids the 4A fridge (24.4 m)
 11:00:10 [floor4] Penny goes through the 4B front door
 11:00:14 [floor4] Penny goes through the 4A front door
-11:00:30 [floor4] Penny raids the 4A fridge [4a_fridge#0.use, 4 min]
-11:04:30 [floor4] Penny walks: hangs out in 4A (7.0 m)
-11:04:40 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 19 min]
+11:00:28 [floor4] Penny raids the 4A fridge [4a_fridge#0.use, 4 min]
+11:04:28 [floor4] Penny walks: hangs out in 4A (7.0 m)
+11:04:38 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 21 min]
 11:06:04 [ait_physics] -- conversation: Leonard, Howard on 'work' at AIT Physics: Sheldon's office + shared lab
 11:06:04 [ait_physics] Leonard: "Hey. You look like you have news, Howard."
 11:06:08 [ait_physics] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
@@ -406,7 +408,7 @@
 11:18:34 [ait_physics] Leonard *glasses push*
 11:22:03 [ait_physics] Sheldon walks: fills the office whiteboard (2.1 m)
 11:22:06 [ait_physics] Sheldon fills the office whiteboard [off_whiteboard_wall#0.write, 28 min]
-11:23:44 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 16 min]
+11:25:42 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 15 min]
 11:26:58 [ait_physics] Howard walks: programs the robot arm (7.7 m)
 11:27:07 [ait_physics] Howard programs the robot arm [lab_robot_arm#0.program, 26 min]
 11:34:12 [ait_physics] -- conversation: Howard, Leonard on 'science' at AIT Physics: Sheldon's office + shared lab
@@ -427,7 +429,7 @@
 11:37:24 [ait_physics] Amy: "Agreed. Wholeheartedly. Clinically."
 11:37:29 [ait_physics] Howard: "I put a sensor on the coffee machine. It's sad data."
 11:37:34 [ait_physics] Amy: "Farewell. This interaction was a success."
-11:39:48 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 19 min]
+11:40:46 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 18 min]
 11:44:09 [ait_physics] Raj walks: reduces telescope data at the bench (10.2 m)
 11:44:22 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work0, 39 min]
 11:46:16 [ait_physics] -- conversation: Raj, Leonard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
@@ -448,7 +450,7 @@
 11:54:14 [ait_cafeteria] Bernadette grabs a tray [cafe_food_line#0.take_tray, 1 min]
 11:55:14 [ait_cafeteria] Bernadette walks: eats lunch at the long table (3.2 m)
 11:55:20 [ait_cafeteria] Bernadette eats lunch at the long table [cafe_table_long#0.seat1, 40 min]
-11:58:52 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 21 min]
+11:58:50 [floor4] Penny hangs out in 4A [4a_armchair#0.seat0, 22 min]
 12:00:00 [ait_physics] Sheldon plan -> lunch with the guys (ait_cafeteria)
 12:00:00 [ait_physics] Sheldon walks: heads out (door to AIT Cafeteria (Arroyo Institute of Technology)) (6.9 m)
 12:00:00 [ait_physics] Raj plan -> lunch with the guys (ait_cafeteria)
@@ -549,7 +551,7 @@
 12:14:47 [ait_cafeteria] Amy: "Sheldon, I sat on your preferred side. Growth."
 12:14:52 [ait_cafeteria] Sheldon: "This conversation has reached its natural conclusion."
 12:20:16 [floor4] Penny walks: watches TV (9.2 m)
-12:20:29 [floor4] Penny watches TV [4b_couch#0.seat0, 31 min]
+12:20:28 [floor4] Penny watches TV [4b_couch#0.seat0, 34 min]
 12:21:24 [ait_cafeteria] -- conversation: Amy, Raj, Bernadette on 'lunch' at AIT Cafeteria (Arroyo Institute of Technology)
 12:21:24 [ait_cafeteria] Amy: "Hello, Raj. My amygdala registered your arrival as a positive event."
 12:21:29 [ait_cafeteria] Raj: "If you squint, the jello looks like a nebula."
@@ -608,17 +610,17 @@
 12:51:20 [ait_cafeteria] Leonard: "Experimentalists do the real work. I'll say it."
 12:51:25 [ait_cafeteria] Raj: "Wait, wait, I have a metaphor for this."
 12:51:29 [ait_cafeteria] Bernadette: "The bacteria in your kitchen sponge would astonish you. And not in a good way."
-12:51:31 [floor4] Penny walks: tackles the laundry pile (9.4 m)
 12:51:36 [ait_cafeteria] Raj: "Oh my god, yes, exactly!"
 12:51:39 [ait_cafeteria] Leonard: "Talk later? Cool."
-12:51:42 [floor4] Penny tackles the laundry pile [4b_laundry_pile#0.pickup, 17 min]
 12:53:44 [ait_cafeteria] Raj reflects: Pattern: wherever I go today, Howard is nearby. Coincidence, or I like it that way.
 12:54:24 [ait_cafeteria] -- conversation: Amy, Leonard, Raj on 'memory' at AIT Cafeteria (Arroyo Institute of Technology)
 12:54:24 [ait_cafeteria] Amy: "Greetings, Leonard. I'm conducting a casual-conversation trial. You're in it."
+12:54:30 [floor4] Penny walks: watches TV (10.0 m)
 12:54:30 [ait_cafeteria] Leonard: "I'll drive. Sheldon, you're not touching the radio."
 12:54:35 [ait_cafeteria] Amy: "I observed that you ate lunch at the long table. I've added it to my notes."
 12:54:41 [ait_cafeteria] Leonard reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
 12:54:41 [ait_cafeteria] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
+12:54:43 [floor4] Penny watches TV [4b_couch#0.seat2, 23 min]
 12:54:47 [ait_cafeteria] Amy: "Goodbye. I'm already looking forward to the debrief."
 12:56:00 [ait_cafeteria] -- conversation: Sheldon, Raj on 'memory' at AIT Cafeteria (Arroyo Institute of Technology)
 12:56:00 [ait_cafeteria] Sheldon: "Technically this counts as our scheduled small talk, Raj."
@@ -690,7 +692,6 @@
 13:07:35 [ait_physics] Amy: "As a scientist and your friend, I disagree."
 13:07:40 [ait_physics] Howard: "Zing. I'll be here all week."
 13:07:40 [ait_physics] Howard *magic trick*
-13:08:42 [floor4] Penny tackles the laundry pile [4b_laundry_pile#0.pickup, 18 min]
 13:15:12 [ait_physics] -- conversation: Howard, Leonard, Raj on 'work' at AIT Physics: Sheldon's office + shared lab
 13:15:12 [ait_physics] Howard: "Leonard! Engineering update, very exciting, try to keep up."
 13:15:17 [ait_physics] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
@@ -699,6 +700,8 @@
 13:15:28 [ait_physics] Raj: "I found a variable star that flickers like it's nervous. Relatable."
 13:15:29 [ait_physics] Raj *astronomy point*
 13:15:34 [ait_physics] Howard: "Gotta go, the robot misses me."
+13:17:45 [floor4] Penny walks: watches TV (10.0 m)
+13:17:58 [floor4] Penny watches TV [4b_couch#0.seat0, 37 min]
 13:18:33 [ait_physics] Bernadette pipettes samples at the lab bench [lab_bench_electronics#0.work1, 20 min]
 13:19:04 [ait_physics] -- conversation: Leonard, Bernadette on 'memory' at AIT Physics: Sheldon's office + shared lab
 13:19:04 [ait_physics] Leonard: "Oh, hi Bernadette. How's your day going so far?"
@@ -737,9 +740,7 @@
 13:26:28 [ait_physics] Leonard *glasses push*
 13:26:34 [ait_physics] Amy: "I mapped a monkey's response to cheese. Very similar to Penny's."
 13:26:39 [ait_physics] Leonard: "Let's not make this a whole thing."
-13:26:42 [floor4] Penny walks: watches TV (3.0 m)
 13:26:43 [ait_physics] Amy: "I'll log this as a bonding event."
-13:26:48 [floor4] Penny watches TV [4b_couch#0.seat1, 25 min]
 13:33:24 [ait_physics] -- conversation: Amy, Howard on 'work' at AIT Physics: Sheldon's office + shared lab
 13:33:24 [ait_physics] Amy: "Greetings, Howard. I'm conducting a casual-conversation trial. You're in it."
 13:33:30 [ait_physics] Howard: "The rover drove straight for ten whole metres. Applause welcome."
@@ -763,8 +764,6 @@
 13:47:27 [ait_physics] Raj walks: reduces telescope data at the bench (8.8 m)
 13:47:30 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 37 min]
 13:47:38 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#1.work0, 50 min]
-13:51:50 [floor4] Penny walks: watches TV (11.0 m)
-13:52:05 [floor4] Penny watches TV [4b_couch#0.seat0, 40 min]
 13:53:16 [ait_physics] -- conversation: Raj, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 13:53:16 [ait_physics] Raj: "Amy, hi! Okay, I'll talk slower this time."
 13:53:20 [ait_physics] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
@@ -779,6 +778,8 @@
 13:53:42 [ait_physics] Amy *excited clap*
 13:53:46 [ait_physics] Raj: "I'll text you a star chart."
 13:53:46 [ait_physics] Raj *astronomy point*
+13:55:00 [floor4] Penny walks: tackles the laundry pile (9.4 m)
+13:55:10 [floor4] Penny tackles the laundry pile [4b_laundry_pile#0.pickup, 14 min]
 13:57:24 [ait_physics] -- conversation: Amy, Leonard on 'memory' at AIT Physics: Sheldon's office + shared lab
 13:57:24 [ait_physics] Amy: "Leonard! Best-friend status check: we're still best friends, correct?"
 13:57:24 [ait_physics] Amy *excited clap*
@@ -809,6 +810,8 @@
 14:08:21 [ait_physics] Howard *eyebrow waggle*
 14:08:26 [ait_physics] Amy: "My prefrontal cortex finds that compelling."
 14:08:31 [ait_physics] Howard: "And scene. Thank you, thank you."
+14:09:10 [floor4] Penny walks: watches TV (2.0 m)
+14:09:15 [floor4] Penny watches TV [4b_couch#0.seat2, 25 min]
 14:09:33 [ait_physics] Bernadette walks: pipettes samples at the lab bench (4.3 m)
 14:09:39 [ait_physics] Bernadette pipettes samples at the lab bench [lab_bench_electronics#0.work0, 22 min]
 14:11:16 [ait_physics] -- conversation: Raj, Leonard, Howard on 'plans' at AIT Physics: Sheldon's office + shared lab
@@ -852,16 +855,16 @@
 14:25:26 [ait_physics] Leonard *glasses push*
 14:25:31 [ait_physics] Amy: "I'll log this as a bonding event."
 14:27:00 [floor4] Penny plan -> waitress shift at The Amber Slice (rest_amber_slice)
-14:27:02 [floor4] Penny walks: heads out (stairs to 2311 lobby (ground floor)) (11.0 m)
-14:27:10 [floor4] Penny goes through the 4B front door
-14:27:15 [floor4] Penny leaves by stairs -> lobby
-14:28:15 [lobby] Penny appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
-14:28:15 [lobby] Penny walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.5 m)
-14:28:21 [lobby] Penny goes through the glass door
-14:28:23 [lobby] Penny leaves by door -> street_exterior
-14:28:26 [street_exterior] Penny appears at 2311 building entrance + street (Pasadena) (door from 2311 lobby (ground floor))
-14:28:26 [street_exterior] Penny walks: heads out (sidewalk to The Amber Slice (restaurant)) (7.5 m)
-14:28:35 [street_exterior] Penny leaves by sidewalk -> rest_amber_slice
+14:27:02 [floor4] Penny walks: heads out (stairs to 2311 lobby (ground floor)) (7.0 m)
+14:27:05 [floor4] Penny goes through the 4B front door
+14:27:10 [floor4] Penny leaves by stairs -> lobby
+14:28:10 [lobby] Penny appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
+14:28:10 [lobby] Penny walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.5 m)
+14:28:16 [lobby] Penny goes through the glass door
+14:28:17 [lobby] Penny leaves by door -> street_exterior
+14:28:20 [street_exterior] Penny appears at 2311 building entrance + street (Pasadena) (door from 2311 lobby (ground floor))
+14:28:20 [street_exterior] Penny walks: heads out (sidewalk to The Amber Slice (restaurant)) (7.5 m)
+14:28:28 [street_exterior] Penny leaves by sidewalk -> rest_amber_slice
 14:30:23 [street_exterior] Bernadette appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
 14:30:23 [street_exterior] Bernadette walks: walks to the car (7.1 m)
 14:30:25 [ait_physics] Amy walks: images neuron cultures at the bench (8.9 m)
@@ -870,23 +873,21 @@
 14:32:31 [ait_physics] Leonard walks: runs the interferometer (2.5 m)
 14:32:34 [ait_physics] Leonard runs the interferometer [lab_optical_table#0.observe, 58 min]
 14:33:26 [ait_physics] Amy reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
-14:33:35 [rest_amber_slice] Penny appears at The Amber Slice (restaurant) (sidewalk from 2311 building entrance + street (Pasadena))
-14:33:35 [rest_amber_slice] Penny walks: takes an order (7.7 m)
-14:33:44 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 8 min]
+14:33:28 [rest_amber_slice] Penny appears at The Amber Slice (restaurant) (sidewalk from 2311 building entrance + street (Pasadena))
+14:33:28 [rest_amber_slice] Penny walks: enters orders (13.2 m)
+14:33:42 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
 14:37:38 [ait_physics] Raj walks: reduces telescope data at the bench (1.4 m)
 14:37:40 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#1.work1, 33 min]
 14:39:36 [ait_physics] Sheldon walks: argues with an equation (0.7 m)
 14:39:37 [ait_physics] Sheldon argues with an equation [off_whiteboard_wall#0.ponder, 24 min]
+14:39:42 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 9 min]
 14:41:12 [ait_physics] -- conversation: Howard, Leonard, Raj on 'plans' at AIT Physics: Sheldon's office + shared lab
 14:41:12 [ait_physics] Howard: "Leonard! Engineering update, very exciting, try to keep up."
 14:41:12 [ait_physics] Howard *magic trick*
 14:41:17 [ait_physics] Leonard: "Let's not make this a whole thing."
 14:41:21 [ait_physics] Howard: "I've done harder things in a clean room wearing mittens."
 14:41:26 [ait_physics] Raj: "See you later, space cowboy."
-14:41:44 [rest_amber_slice] Penny walks: enters orders (6.5 m)
-14:41:44 [rest_amber_slice] Penny goes through the kitchen door
-14:41:52 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
-14:47:52 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
+14:48:42 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
 14:50:24 [ait_physics] -- conversation: Amy, Leonard, Howard on 'work' at AIT Physics: Sheldon's office + shared lab
 14:50:24 [ait_physics] Amy: "Hello, Leonard. My amygdala registered your arrival as a positive event."
 14:50:30 [ait_physics] Leonard: "Honestly? Same."
@@ -898,16 +899,15 @@
 14:50:43 [ait_physics] Amy *excited clap*
 14:54:30 [ait_physics] Howard walks: debugs a servo board (3.6 m)
 14:54:34 [ait_physics] Howard debugs a servo board [lab_bench_electronics#1.work0, 27 min]
-14:55:52 [rest_amber_slice] Penny walks: takes an order (7.5 m)
-14:55:58 [rest_amber_slice] Penny goes through the kitchen door
-14:56:01 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 10 min]
+14:55:42 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
+15:01:42 [rest_amber_slice] Penny walks: picks up drinks (1.5 m)
+15:01:44 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.bartend, 6 min]
 15:03:37 [ait_physics] Sheldon walks: argues with an equation (0.7 m)
 15:03:38 [ait_physics] Sheldon argues with an equation [off_whiteboard_wall#0.write, 37 min]
 15:04:36 [ait_physics] Amy walks: images neuron cultures at the bench (4.3 m)
 15:04:42 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work0, 31 min]
-15:06:01 [rest_amber_slice] Penny walks: enters orders (6.5 m)
-15:06:01 [rest_amber_slice] Penny goes through the kitchen door
-15:06:09 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
+15:07:44 [rest_amber_slice] Penny walks: takes an order (10.0 m)
+15:07:55 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 10 min]
 15:09:04 [ait_physics] -- conversation: Leonard, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
 15:09:04 [ait_physics] Leonard: "Hey Raj, got a second?"
 15:09:04 [ait_physics] Leonard *glasses push*
@@ -917,9 +917,7 @@
 15:09:22 [ait_physics] Leonard: "Okay, I should get back to it."
 15:10:40 [ait_physics] Raj walks: reduces telescope data at the bench (8.9 m)
 15:10:51 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work1, 38 min]
-15:14:09 [rest_amber_slice] Penny walks: takes an order (7.5 m)
-15:14:15 [rest_amber_slice] Penny goes through the kitchen door
-15:14:18 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 9 min]
+15:17:55 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 8 min]
 15:21:04 [ait_physics] -- conversation: Leonard, Howard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 15:21:04 [ait_physics] Leonard: "Hey. You look like you have news, Howard."
 15:21:08 [ait_physics] Howard: "Zing. I'll be here all week."
@@ -931,9 +929,7 @@
 15:21:23 [ait_physics] Leonard *gesture*
 15:21:47 [ait_physics] Howard walks: rewires the rover (3.6 m)
 15:21:51 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 43 min]
-15:23:18 [rest_amber_slice] Penny walks: picks up drinks (5.0 m)
-15:23:18 [rest_amber_slice] Penny goes through the kitchen door
-15:23:24 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.bartend, 7 min]
+15:25:55 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 9 min]
 15:26:16 [ait_physics] -- conversation: Raj, Howard, Amy on 'plans' at AIT Physics: Sheldon's office + shared lab
 15:26:16 [ait_physics] Raj: "Howard! Oh, it's like a comet showing up right on schedule."
 15:26:16 [ait_physics] Raj *gesture*
@@ -941,23 +937,19 @@
 15:26:24 [ait_physics] Raj: "Dude, that's the nicest thing anyone's said all week."
 15:26:29 [ait_physics] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
 15:26:35 [ait_physics] Raj: "I'll text you a star chart."
-15:30:24 [rest_amber_slice] Penny walks: enters orders (1.5 m)
-15:30:26 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
 15:30:34 [ait_physics] Leonard walks: runs the interferometer (2.5 m)
 15:30:37 [ait_physics] Leonard runs the interferometer [lab_optical_table#0.align, 38 min]
+15:34:55 [rest_amber_slice] Penny walks: serves a table (9.6 m)
+15:35:06 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 7 min]
 15:35:42 [ait_physics] Amy walks: images neuron cultures at the bench (10.2 m)
 15:35:55 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#1.work1, 39 min]
-15:36:26 [rest_amber_slice] Penny walks: takes an order (7.5 m)
-15:36:32 [rest_amber_slice] Penny goes through the kitchen door
-15:36:35 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 7 min]
 15:40:38 [ait_physics] Sheldon walks: argues with an equation (0.7 m)
 15:40:39 [ait_physics] Sheldon argues with an equation [off_whiteboard_wall#0.ponder, 32 min]
-15:43:35 [rest_amber_slice] Penny walks: serves a table (8.5 m)
-15:43:45 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 6 min]
+15:42:06 [rest_amber_slice] Penny walks: takes an order (6.9 m)
+15:42:14 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 9 min]
 15:48:51 [ait_physics] Raj walks: reduces telescope data at the bench (7.5 m)
 15:49:00 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#1.work0, 36 min]
-15:49:45 [rest_amber_slice] Penny walks: takes an order (8.5 m)
-15:49:55 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 7 min]
+15:51:14 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 10 min]
 15:54:12 [ait_physics] -- conversation: Howard, Leonard, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
 15:54:12 [ait_physics] Howard: "Well, if it isn't Leonard. Hold that thought, I'm about to be impressive."
 15:54:18 [ait_physics] Leonard: "I'll drive. Sheldon, you're not touching the radio."
@@ -966,15 +958,13 @@
 15:54:28 [ait_physics] Raj: "That's beautiful, like a binary star system."
 15:54:29 [ait_physics] Raj *astronomy point*
 15:54:33 [ait_physics] Howard: "Later, buddy."
-15:56:55 [rest_amber_slice] Penny walks: serves a table (5.5 m)
-15:57:02 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 5 min]
 15:57:12 [ait_physics] -- conversation: Howard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 15:57:12 [ait_physics] Howard: "Hey Amy, quick question, zero theory involved."
 15:57:16 [ait_physics] Amy: "Agreed. Wholeheartedly. Clinically."
 15:57:20 [ait_physics] Howard: "Saw that you imaged neuron cultures at the bench. Smooth."
 15:57:26 [ait_physics] Amy: "Goodbye. I'm already looking forward to the debrief."
-16:02:02 [rest_amber_slice] Penny walks: takes an order (4.5 m)
-16:02:08 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 9 min]
+16:01:14 [rest_amber_slice] Penny walks: serves a table (6.6 m)
+16:01:21 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 8 min]
 16:03:41 [ait_physics] Leonard reflects: I've talked with Sheldon 1 time(s) today. That matters to me more than I'd say out loud.
 16:04:51 [ait_physics] Howard walks: debugs a servo board (5.4 m)
 16:04:57 [ait_physics] Howard debugs a servo board [lab_bench_electronics#0.work0, 22 min]
@@ -986,15 +976,16 @@
 16:09:08 [ait_physics] Amy *excited clap*
 16:09:12 [ait_physics] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
 16:09:17 [ait_physics] Amy: "My prefrontal cortex finds that compelling."
-16:11:08 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 7 min]
+16:09:21 [rest_amber_slice] Penny walks: serves a table (3.5 m)
+16:09:25 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 7 min]
 16:12:39 [ait_physics] Sheldon walks: argues with an equation (0.7 m)
 16:12:40 [ait_physics] Sheldon argues with an equation [off_whiteboard_wall#0.write, 38 min]
 16:14:55 [ait_physics] Amy walks: images neuron cultures at the bench (8.9 m)
 16:15:06 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work1, 53 min]
-16:18:08 [rest_amber_slice] Penny walks: plates cheesecake (12.5 m)
-16:18:22 [rest_amber_slice] Penny plates cheesecake [rest_cake_display#0.serve_slice, 4 min]
-16:22:22 [rest_amber_slice] Penny walks: enters orders (1.0 m)
-16:22:24 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
+16:16:25 [rest_amber_slice] Penny walks: enters orders (7.9 m)
+16:16:34 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
+16:22:34 [rest_amber_slice] Penny walks: serves a table (7.7 m)
+16:22:43 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 7 min]
 16:24:04 [ait_physics] -- conversation: Leonard, Howard, Raj on 'work' at AIT Physics: Sheldon's office + shared lab
 16:24:04 [ait_physics] Leonard: "Howard! Perfect timing, I need a sanity check."
 16:24:08 [ait_physics] Howard: "The rover drove straight for ten whole metres. Applause welcome."
@@ -1006,8 +997,7 @@
 16:25:09 [ait_physics] Raj borrows the optical table [lab_optical_table#0.observe, 37 min]
 16:26:57 [ait_physics] Howard walks: debugs a servo board (8.8 m)
 16:27:07 [ait_physics] Howard debugs a servo board [lab_bench_electronics#1.work0, 31 min]
-16:27:24 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
-16:27:42 [rest_amber_slice] Penny reflects: Today has mostly been me and my work. That is fine. Mostly.
+16:29:43 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 5 min]
 16:31:24 [ait_physics] -- conversation: Amy, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
 16:31:24 [ait_physics] Amy: "Greetings, Raj. I'm conducting a casual-conversation trial. You're in it."
 16:31:30 [ait_physics] Raj: "Oh my god, yes, exactly!"
@@ -1016,10 +1006,11 @@
 16:31:42 [ait_physics] Amy: "That released a measurable amount of dopamine."
 16:31:47 [ait_physics] Raj: "Wait, wait, I have a metaphor for this."
 16:31:51 [ait_physics] Amy: "I'll log this as a bonding event."
-16:33:24 [rest_amber_slice] Penny walks: picks up drinks (2.7 m)
-16:33:28 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.pour, 7 min]
-16:40:28 [rest_amber_slice] Penny walks: serves a table (8.3 m)
-16:40:38 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 8 min]
+16:34:43 [rest_amber_slice] Penny walks: takes an order (6.5 m)
+16:34:50 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 7 min]
+16:35:02 [rest_amber_slice] Penny reflects: Today has mostly been me and my work. That is fine. Mostly.
+16:41:50 [rest_amber_slice] Penny walks: serves a table (7.5 m)
+16:41:58 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 7 min]
 16:42:24 [ait_physics] -- conversation: Amy, Leonard on 'memory' at AIT Physics: Sheldon's office + shared lab
 16:42:24 [ait_physics] Amy: "Leonard! Best-friend status check: we're still best friends, correct?"
 16:42:24 [ait_physics] Amy *excited clap*
@@ -1030,8 +1021,8 @@
 16:42:44 [ait_physics] Amy: "As a scientist and your friend, I disagree."
 16:42:45 [ait_physics] Amy *gesture*
 16:42:49 [ait_physics] Leonard: "Alright, I'm gonna go before Sheldon finds me."
-16:48:38 [rest_amber_slice] Penny walks: takes an order (4.5 m)
-16:48:44 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 6 min]
+16:48:58 [rest_amber_slice] Penny walks: enters orders (14.0 m)
+16:49:13 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
 16:50:12 [ait_physics] -- conversation: Howard, Leonard, Raj on 'science' at AIT Physics: Sheldon's office + shared lab
 16:50:12 [ait_physics] Howard: "Leonard! Engineering update, very exciting, try to keep up."
 16:50:17 [ait_physics] Leonard: "Experimentalists do the real work. I'll say it."
@@ -1043,16 +1034,16 @@
 16:50:40 [ait_physics] Sheldon argues with an equation [off_whiteboard_wall#0.write, 23 min]
 16:50:40 [ait_physics] Leonard: "Okay, I should get back to it."
 16:50:40 [ait_physics] Leonard *glasses push*
-16:54:44 [rest_amber_slice] Penny walks: picks up drinks (8.8 m)
-16:54:54 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.pour, 7 min]
+16:56:13 [rest_amber_slice] Penny walks: serves a table (11.0 m)
+16:56:25 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 6 min]
 16:58:07 [ait_physics] Howard walks: rewires the rover (3.6 m)
 16:58:11 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 30 min]
 16:58:26 [ait_physics] Amy reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
 16:59:37 [ait_physics] Leonard runs the interferometer [lab_optical_table#0.align, 39 min]
-17:01:54 [rest_amber_slice] Penny walks: enters orders (2.7 m)
-17:01:58 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 10 min]
 17:02:09 [ait_physics] Raj walks: reduces telescope data at the bench (8.1 m)
 17:02:19 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#0.work0, 49 min]
+17:02:25 [rest_amber_slice] Penny walks: enters orders (11.0 m)
+17:02:37 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 10 min]
 17:04:12 [ait_physics] -- conversation: Howard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:04:12 [ait_physics] Howard: "Respectfully, my robot disagrees."
 17:04:12 [ait_physics] Howard *eyebrow waggle*
@@ -1065,8 +1056,7 @@
 17:04:35 [ait_physics] Amy: "Goodbye. I'm already looking forward to the debrief."
 17:08:06 [ait_physics] Amy walks: annotates results (4.4 m)
 17:08:14 [ait_physics] Amy annotates results [lab_stool#2.seat0, 17 min]
-17:11:58 [rest_amber_slice] Penny walks: takes an order (11.5 m)
-17:12:11 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 8 min]
+17:12:37 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
 17:13:04 [ait_physics] -- conversation: Leonard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:13:04 [ait_physics] Leonard: "Hey Amy, got a second?"
 17:13:04 [ait_physics] Leonard *gesture*
@@ -1078,24 +1068,24 @@
 17:20:04 [ait_physics] -- conversation: Leonard, Howard, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:20:04 [ait_physics] Leonard: "Hey. You look like you have news, Howard."
 17:20:08 [ait_physics] Howard: "I'll bring the new expansion tonight. Prepare."
-17:20:11 [rest_amber_slice] Penny walks: picks up drinks (10.0 m)
 17:20:13 [ait_physics] Leonard: "I saw that you rewired the rover. Everything okay?"
 17:20:13 [ait_physics] Leonard *gesture*
 17:20:18 [ait_physics] Raj: "Okay bye, this was lovely!"
-17:20:23 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.bartend, 4 min]
 17:20:24 [ait_physics] -- conversation: Amy, Raj on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:20:24 [ait_physics] Amy: "Greetings, Raj. I'm conducting a casual-conversation trial. You're in it."
 17:20:30 [ait_physics] Raj: "I can host next week! I'm planning a theme."
 17:20:34 [ait_physics] Amy: "Earlier, you reduced telescope data at the bench. I found that endearing."
+17:20:37 [rest_amber_slice] Penny walks: picks up drinks (2.7 m)
+17:20:40 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.pour, 7 min]
 17:20:41 [ait_physics] Raj: "See you later, space cowboy."
-17:24:23 [rest_amber_slice] Penny walks: serves a table (12.5 m)
-17:24:37 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 4 min]
 17:25:16 [ait_physics] Amy walks: images neuron cultures at the bench (4.4 m)
 17:25:22 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work1, 55 min]
 17:25:23 [ait_physics] Howard reflects: Note to self: Raj seemed busy earlier. Ask how it's going instead of talking about myself.
+17:27:40 [rest_amber_slice] Penny walks: takes an order (4.8 m)
+17:27:43 [rest_amber_slice] Penny goes through the kitchen door
+17:27:46 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 10 min]
 17:28:11 [ait_physics] Howard walks: debugs a servo board (5.0 m)
 17:28:17 [ait_physics] Howard debugs a servo board [lab_bench_electronics#1.work1, 36 min]
-17:28:37 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 4 min]
 17:30:00 [ait_physics] Leonard plan -> home: evening (floor4)
 17:30:00 [ait_physics] Leonard: "Sheldon, I'm heading out now. Want a ride?"
 17:30:00 [ait_physics] Leonard offers Sheldon a ride to floor4
@@ -1115,10 +1105,8 @@
 17:30:18 [ait_cafeteria] Leonard walks: heads out (car to 2311 building entrance + street (Pasadena)) (4.2 m)
 17:30:24 [ait_cafeteria] Leonard leaves by car -> street_exterior
 17:30:24 [ait_cafeteria] Sheldon leaves by car -> street_exterior (with Leonard)
-17:32:37 [rest_amber_slice] Penny walks: picks up drinks (11.3 m)
-17:32:50 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.pour, 5 min]
-17:37:50 [rest_amber_slice] Penny walks: enters orders (2.7 m)
-17:37:54 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
+17:37:46 [rest_amber_slice] Penny walks: serves a table (8.5 m)
+17:37:55 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 4 min]
 17:40:24 [street_exterior] Sheldon appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
 17:40:24 [street_exterior] Sheldon walks: heads out (door to 2311 lobby (ground floor)) (8.2 m)
 17:40:24 [street_exterior] Leonard appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
@@ -1141,19 +1129,20 @@
 17:41:44 [floor4] Sheldon goes through the 4A front door
 17:41:48 [floor4] Leonard sneaks a sit in Sheldon's spot [4a_couch#0.seat0, 8 min]
 17:41:52 [floor4] Sheldon checks his e-mail first [4a_desk_laptop#0.use0, 5 min]
+17:41:55 [rest_amber_slice] Penny walks: takes an order (8.5 m)
 17:42:04 [floor4] -- conversation: Leonard, Sheldon on 'plans' at apartment 4A
 17:42:04 [floor4] Leonard: "Oh, hi Sheldon. How's your day going so far?"
+17:42:04 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 6 min]
 17:42:08 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
 17:42:08 [floor4] Sheldon *spot claim*
 17:42:14 [floor4] Leonard: "That's... actually a good idea."
 17:42:18 [floor4] Sheldon: "This conversation has reached its natural conclusion."
-17:45:54 [rest_amber_slice] Penny walks: takes an order (7.5 m)
-17:46:00 [rest_amber_slice] Penny goes through the kitchen door
-17:46:03 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 5 min]
 17:46:52 [floor4] Sheldon walks: knocks on Penny's door, three times (10.0 m)
 17:46:58 [floor4] Sheldon goes through the 4A front door
 17:47:04 [floor4] Sheldon knocks on Penny's door, three times [4b_front_door#0.knock_spot_outside, 2 min]
 17:47:04 [floor4] Sheldon *knock knock penny*
+17:48:04 [rest_amber_slice] Penny walks: takes an order (6.0 m)
+17:48:11 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 6 min]
 17:49:04 [floor4] Sheldon walks: sits in his spot (5.3 m)
 17:49:04 [floor4] Sheldon goes through the 4B front door
 17:49:08 [floor4] Sheldon goes through the 4A front door
@@ -1164,9 +1153,6 @@
 17:49:21 [floor4] Leonard walks: knocks on Penny's door (5.1 m)
 17:49:22 [floor4] Leonard goes through the 4A front door
 17:49:27 [floor4] Leonard knocks on Penny's door [4b_front_door#0.knock_spot_outside, 3 min]
-17:51:03 [rest_amber_slice] Penny walks: enters orders (6.5 m)
-17:51:03 [rest_amber_slice] Penny goes through the kitchen door
-17:51:11 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
 17:51:19 [ait_physics] Raj walks: reduces telescope data at the bench (8.8 m)
 17:51:30 [ait_physics] Raj reduces telescope data at the bench [lab_bench_electronics#1.work0, 46 min]
 17:52:16 [ait_physics] -- conversation: Raj, Howard on 'memory' at AIT Physics: Sheldon's office + shared lab
@@ -1182,10 +1168,9 @@
 17:52:39 [floor4] Leonard unwinds on the couch [4a_couch#0.seat1, 29 min]
 17:52:39 [ait_physics] Howard: "Gotta go, the robot misses me."
 17:52:40 [ait_physics] Howard *eyebrow waggle*
-17:58:11 [rest_amber_slice] Penny walks: serves a table (11.0 m)
-17:58:24 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 4 min]
-18:02:24 [rest_amber_slice] Penny walks: takes an order (4.5 m)
-18:02:30 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 7 min]
+17:54:11 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 8 min]
+18:02:11 [rest_amber_slice] Penny walks: takes an order (6.0 m)
+18:02:18 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 9 min]
 18:04:17 [ait_physics] Howard walks: rewires the rover (5.0 m)
 18:04:23 [ait_physics] Howard rewires the rover [lab_rover#0.tinker, 36 min]
 18:08:12 [ait_physics] -- conversation: Howard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
@@ -1209,15 +1194,15 @@
 18:09:18 [floor4] Leonard: "I think the detector works. I'm scared to touch it."
 18:09:23 [floor4] Sheldon: "I have proven that the problem is hard. That counts as progress."
 18:09:29 [floor4] Leonard: "Alright, I'm gonna go before Sheldon finds me."
-18:09:30 [rest_amber_slice] Penny walks: enters orders (11.5 m)
-18:09:43 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
-18:16:43 [rest_amber_slice] Penny walks: takes an order (11.5 m)
-18:16:56 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 10 min]
+18:11:18 [rest_amber_slice] Penny walks: takes an order (6.0 m)
+18:11:25 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 8 min]
+18:19:25 [rest_amber_slice] Penny walks: serves a table (4.5 m)
+18:19:30 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 8 min]
 18:20:22 [ait_physics] Amy walks: images neuron cultures at the bench (4.3 m)
 18:20:28 [ait_physics] Amy images neuron cultures at the bench [lab_bench_electronics#0.work0, 46 min]
 18:21:43 [floor4] Leonard unwinds on the couch [4a_couch#0.seat1, 18 min]
-18:26:56 [rest_amber_slice] Penny walks: serves a table (4.5 m)
-18:27:02 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 7 min]
+18:27:30 [rest_amber_slice] Penny walks: takes an order (4.5 m)
+18:27:35 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 6 min]
 18:31:16 [ait_physics] -- conversation: Raj, Howard on 'memory' at AIT Physics: Sheldon's office + shared lab
 18:31:16 [ait_physics] Raj: "Howard! Oh, it's like a comet showing up right on schedule."
 18:31:21 [ait_physics] Howard: "Respectfully, my robot disagrees."
@@ -1230,8 +1215,8 @@
 18:31:39 [ait_physics] Howard: "See, that's why they give the hard stuff to engineers."
 18:31:44 [ait_physics] Raj: "I'll text you a star chart."
 18:31:45 [ait_physics] Raj *astronomy point*
-18:34:02 [rest_amber_slice] Penny walks: serves a table (3.0 m)
-18:34:06 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 7 min]
+18:33:35 [rest_amber_slice] Penny walks: serves a table (9.6 m)
+18:33:46 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 8 min]
 18:35:21 [floor4] Sheldon sits in his spot [4a_couch#0.seat0, 19 min]
 18:37:00 [ait_physics] Howard plan -> Friday dinner at The Amber Slice (rest_amber_slice)
 18:37:00 [ait_physics] Howard walks: heads out (door to AIT Cafeteria (Arroyo Institute of Technology)) (11.2 m)
@@ -1268,11 +1253,11 @@
 18:41:02 [floor4] Sheldon walks: heads out (stairs to 2311 lobby (ground floor)) (3.2 m)
 18:41:03 [floor4] Sheldon goes through the 4A front door
 18:41:06 [floor4] Sheldon leaves by stairs -> lobby
-18:41:06 [rest_amber_slice] Penny walks: serves a table (7.8 m)
 18:41:13 [floor4] Leonard goes through the 4A front door
-18:41:15 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 6 min]
 18:41:16 [floor4] Leonard leaves by stairs -> lobby (with Sheldon)
 18:41:16 [street_exterior] Bernadette leaves by sidewalk -> rest_amber_slice
+18:41:46 [rest_amber_slice] Penny walks: serves a table (4.5 m)
+18:41:51 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 6 min]
 18:42:06 [lobby] Sheldon appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 18:42:06 [lobby] Sheldon walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.5 m)
 18:42:13 [lobby] Sheldon goes through the glass door
@@ -1290,7 +1275,6 @@
 18:46:16 [rest_amber_slice] Bernadette appears at The Amber Slice (restaurant) (sidewalk from 2311 building entrance + street (Pasadena))
 18:46:16 [rest_amber_slice] Bernadette walks: waits to be seated (2.0 m)
 18:46:19 [rest_amber_slice] Bernadette waits to be seated [rest_host_stand#0.wait_to_be_seated, 2 min]
-18:47:15 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 6 min]
 18:47:21 [street_exterior] Howard appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
 18:47:21 [street_exterior] Howard walks: heads out (sidewalk to The Amber Slice (restaurant)) (12.2 m)
 18:47:23 [street_exterior] Raj appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
@@ -1304,343 +1288,299 @@
 18:47:36 [street_exterior] Raj leaves by sidewalk -> rest_amber_slice (with Howard)
 18:47:39 [rest_amber_slice] Leonard waits to be seated [rest_host_stand#0.wait_to_be_seated, 3 min]
 18:47:40 [rest_amber_slice] Sheldon reflects: Leonard keeps turning up in my day (roommate and driver; relies on him more than he admits). I should make real time for Leonard tonight.
+18:47:51 [rest_amber_slice] Penny walks: serves a table (4.3 m)
+18:47:56 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 6 min]
 18:48:19 [rest_amber_slice] Bernadette walks: has dinner in the booth (5.8 m)
 18:48:28 [rest_amber_slice] Bernadette has dinner in the booth [rest_booth#0.seat0, 66 min]
 18:48:29 [rest_amber_slice] Sheldon walks: has dinner in the booth (3.1 m)
 18:48:35 [rest_amber_slice] Sheldon has dinner in the booth [rest_booth#0.seat2, 57 min]
-18:49:08 [rest_amber_slice] -- conversation: Penny, Sheldon, Leonard on 'memory' at The Amber Slice (restaurant)
+18:49:08 [rest_amber_slice] -- conversation: Penny, Leonard on 'memory' at The Amber Slice (restaurant)
 18:49:08 [rest_amber_slice] Penny: "Hi hon. You look like you're overthinking something."
-18:49:13 [rest_amber_slice] Sheldon: "I'll allow it, with a footnote."
-18:49:17 [rest_amber_slice] Penny: "Ha! Totally called it."
-18:49:20 [rest_amber_slice] Leonard: "I'll drive. Sheldon, you're not touching the radio."
-18:49:20 [rest_amber_slice] Leonard *sigh shrug*
+18:49:13 [rest_amber_slice] Leonard: "I'll drive. Sheldon, you're not touching the radio."
+18:49:13 [rest_amber_slice] Leonard *glasses push*
+18:49:18 [rest_amber_slice] Penny: "Okay, so I noticed you waited to be seated. Spill."
 18:49:21 [rest_amber_slice] Leonard reflects: Sheldon keeps turning up in my day (roommate; exhausting best friend). I should make real time for Sheldon tonight.
-18:49:25 [rest_amber_slice] Penny: "Sweetie, I love you, but no."
-18:49:25 [rest_amber_slice] Penny *wine sip*
-18:49:29 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
+18:49:23 [rest_amber_slice] Leonard: "Okay, okay, fair point."
+18:49:26 [rest_amber_slice] Penny: "Sweetie, I love you, but no."
+18:49:26 [rest_amber_slice] Penny *hair flip*
+18:49:30 [rest_amber_slice] Leonard: "Talk later? Cool."
+18:49:30 [rest_amber_slice] Leonard *glasses push*
 18:50:23 [street_exterior] Amy appears at 2311 building entrance + street (Pasadena) (car from AIT Cafeteria (Arroyo Institute of Technology))
 18:50:23 [street_exterior] Amy walks: heads out (sidewalk to The Amber Slice (restaurant)) (12.2 m)
 18:50:38 [street_exterior] Amy leaves by sidewalk -> rest_amber_slice
 18:50:39 [rest_amber_slice] Leonard walks: has dinner in the booth (6.0 m)
 18:50:48 [rest_amber_slice] Leonard has dinner in the booth [rest_booth#0.seat1, 68 min]
-18:52:00 [rest_amber_slice] -- conversation: Sheldon, Bernadette on 'dinner' at The Amber Slice (restaurant)
-18:52:00 [rest_amber_slice] Sheldon: "Bernadette. You are 2 minutes off your usual position. I noticed."
-18:52:05 [rest_amber_slice] Bernadette: "Let's order quickly, I have plans to destroy you all at game night."
-18:52:11 [rest_amber_slice] Sheldon: "I'll have my usual. Do not improvise, Penny."
-18:52:16 [rest_amber_slice] Bernadette: "Nobody touch the bread before I say grace. Kidding! Mostly."
-18:52:21 [rest_amber_slice] Sheldon: "The booth acoustics are acceptable this evening."
-18:52:26 [rest_amber_slice] Bernadette: "Sure, if you want to be wrong."
-18:52:30 [rest_amber_slice] Sheldon: "Goodbye. I'll send a summary."
+18:52:00 [rest_amber_slice] -- conversation: Sheldon, Leonard, Bernadette on 'dinner' at The Amber Slice (restaurant)
+18:52:00 [rest_amber_slice] Sheldon: "Leonard. You are 2 minutes off your usual position. I noticed."
+18:52:05 [rest_amber_slice] Leonard: "Friday dinner here is the one tradition I actually like."
+18:52:10 [rest_amber_slice] Sheldon: "I'll have my usual. Do not improvise, Penny."
+18:52:15 [rest_amber_slice] Bernadette: "Nobody touch the bread before I say grace. Kidding! Mostly."
+18:52:20 [rest_amber_slice] Sheldon: "The booth acoustics are acceptable this evening."
+18:52:25 [rest_amber_slice] Leonard: "Penny's working, so tip like we mean it."
+18:52:30 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
 18:52:34 [rest_amber_slice] Howard appears at The Amber Slice (restaurant) (sidewalk from 2311 building entrance + street (Pasadena))
 18:52:34 [rest_amber_slice] Howard walks: waits to be seated (2.0 m)
 18:52:36 [rest_amber_slice] Raj appears at The Amber Slice (restaurant) (sidewalk from 2311 building entrance + street (Pasadena))
 18:52:36 [rest_amber_slice] Raj walks: waits to be seated (1.0 m)
 18:52:37 [rest_amber_slice] Howard waits to be seated [rest_host_stand#0.wait_to_be_seated, 2 min]
 18:52:38 [rest_amber_slice] Raj waits to be seated [rest_host_stand#0.wait_to_be_seated, 1 min]
-18:53:15 [rest_amber_slice] Penny walks: serves a table (7.8 m)
-18:53:24 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 7 min]
 18:53:38 [rest_amber_slice] Raj walks: has dinner in the booth (3.0 m)
 18:53:44 [rest_amber_slice] Raj has dinner in the booth [rest_booth#0.seat3, 62 min]
-18:54:04 [rest_amber_slice] -- conversation: Leonard, Howard, Raj on 'dinner' at The Amber Slice (restaurant)
-18:54:04 [rest_amber_slice] Leonard: "Howard! Perfect timing, I need a sanity check."
-18:54:08 [rest_amber_slice] Howard: "Penny, could you ask the chef to make it extra crispy? Like a heat shield."
-18:54:09 [rest_amber_slice] Howard *magic trick*
-18:54:15 [rest_amber_slice] Leonard: "Friday dinner here is the one tradition I actually like."
-18:54:20 [rest_amber_slice] Raj: "I'm ordering dessert first. Life is short, stars are long."
-18:54:25 [rest_amber_slice] Leonard: "Penny's working, so tip like we mean it."
-18:54:30 [rest_amber_slice] Howard: "Later, buddy."
-18:54:30 [rest_amber_slice] Howard *eyebrow waggle*
-18:54:53 [rest_amber_slice] Howard walks: has dinner in the booth (9.0 m)
-18:55:05 [rest_amber_slice] Howard has dinner in the booth [rest_booth#1.seat1, 61 min]
-18:55:05 [rest_amber_slice] Bernadette reflects: Sheldon keeps turning up in my day (friend she can handle). I should make real time for Sheldon tonight.
+18:53:56 [rest_amber_slice] Penny walks: serves a table (7.2 m)
+18:54:04 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 5 min]
+18:54:16 [rest_amber_slice] -- conversation: Raj, Sheldon, Leonard on 'dinner' at The Amber Slice (restaurant)
+18:54:16 [rest_amber_slice] Raj: "Sheldon, hi! Okay, I'll talk slower this time."
+18:54:20 [rest_amber_slice] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
+18:54:25 [rest_amber_slice] Raj: "I'm ordering dessert first. Life is short, stars are long."
+18:54:30 [rest_amber_slice] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+18:54:35 [rest_amber_slice] Raj: "This place is my favourite constellation of flavours."
+18:54:37 [rest_amber_slice] Howard walks: has dinner at a two-top (1.0 m)
+18:54:40 [rest_amber_slice] Sheldon: "Goodbye. I'll send a summary."
+18:54:41 [rest_amber_slice] Howard has dinner at a two-top [rest_table_2top#2.seat0, 59 min]
+18:54:45 [rest_amber_slice] Bernadette reflects: Sheldon keeps turning up in my day (friend she can handle). I should make real time for Sheldon tonight.
 18:55:38 [rest_amber_slice] Amy appears at The Amber Slice (restaurant) (sidewalk from 2311 building entrance + street (Pasadena))
 18:55:38 [rest_amber_slice] Amy walks: waits to be seated (2.0 m)
 18:55:41 [rest_amber_slice] Amy waits to be seated [rest_host_stand#0.wait_to_be_seated, 3 min]
 18:55:46 [rest_amber_slice] Amy reflects: I've talked with Sheldon a few time(s) today. That matters to me more than I'd say out loud.
-18:56:08 [rest_amber_slice] -- conversation: Penny, Amy on 'science' at The Amber Slice (restaurant)
+18:56:08 [rest_amber_slice] -- conversation: Penny, Sheldon, Howard on 'science' at The Amber Slice (restaurant)
 18:56:08 [rest_amber_slice] Penny: "Hey sweetie, what's up?"
 18:56:08 [rest_amber_slice] Penny *hair flip*
-18:56:11 [rest_amber_slice] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
-18:56:11 [rest_amber_slice] Amy *gesture*
-18:56:17 [rest_amber_slice] Penny: "Fine, you win this one."
-18:56:21 [rest_amber_slice] Amy: "I mapped a monkey's response to cheese. Very similar to Penny's."
-18:56:22 [rest_amber_slice] Penny reflects: Sheldon keeps turning up in my day (odd neighbour she protects). I should make real time for Sheldon tonight.
-18:56:26 [rest_amber_slice] Penny: "Wow. Okay. Moving on."
-18:56:30 [rest_amber_slice] Amy: "I'll log this as a bonding event."
-18:57:12 [rest_amber_slice] -- conversation: Howard, Sheldon, Bernadette on 'dinner' at The Amber Slice (restaurant)
-18:57:12 [rest_amber_slice] Howard: "Well, if it isn't Sheldon. Hold that thought, I'm about to be impressive."
-18:57:18 [rest_amber_slice] Sheldon: "Fascinating. Unhelpful, but fascinating."
-18:57:22 [rest_amber_slice] Howard: "I'll split the appetizer, but I get the strategic half."
-18:57:23 [rest_amber_slice] Howard reflects: I've talked with Raj 4 time(s) today. That matters to me more than I'd say out loud.
-18:57:27 [rest_amber_slice] Bernadette: "We are not doing that."
-18:57:31 [rest_amber_slice] Howard: "I've done harder things in a clean room wearing mittens."
-18:57:36 [rest_amber_slice] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-18:57:41 [rest_amber_slice] Howard: "Gotta go, the robot misses me."
-18:58:16 [rest_amber_slice] -- conversation: Raj, Sheldon, Bernadette on 'dinner' at The Amber Slice (restaurant)
-18:58:16 [rest_amber_slice] Raj: "Sheldon, hi! Okay, I'll talk slower this time."
-18:58:20 [rest_amber_slice] Sheldon: "Your reasoning has a hole you could drive a rover through."
-18:58:26 [rest_amber_slice] Raj: "This place is my favourite constellation of flavours."
-18:58:31 [rest_amber_slice] Bernadette: "Ha! Okay, that's funny."
-18:58:34 [rest_amber_slice] Raj: "Ha, cosmic."
-18:58:37 [rest_amber_slice] Sheldon: "I calculate a sixty-two percent chance you're joking."
-18:58:41 [rest_amber_slice] Amy walks: has dinner in the booth (5.0 m)
-18:58:42 [rest_amber_slice] Raj: "Okay bye, this was lovely!"
-18:58:49 [rest_amber_slice] Amy has dinner in the booth [rest_booth#1.seat2, 69 min]
-18:59:24 [rest_amber_slice] -- conversation: Amy, Sheldon, Leonard on 'science' at The Amber Slice (restaurant)
-18:59:24 [rest_amber_slice] Amy: "Sheldon. I have a hypothesis about your day."
-18:59:28 [rest_amber_slice] Sheldon: "String theory is not stuck. It's resting."
-18:59:33 [rest_amber_slice] Amy: "As a scientist and your friend, I disagree."
-18:59:37 [rest_amber_slice] Leonard: "The interferometer is basically a very expensive mood ring."
-18:59:43 [rest_amber_slice] Amy: "Goodbye. I'm already looking forward to the debrief."
-19:00:24 [rest_amber_slice] Penny walks: serves a table (7.8 m)
-19:00:33 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 8 min]
-19:08:04 [rest_amber_slice] -- conversation: Leonard, Bernadette on 'memory' at The Amber Slice (restaurant)
-19:08:04 [rest_amber_slice] Leonard: "Hey Bernadette, got a second?"
-19:08:07 [rest_amber_slice] Bernadette: "Honey, I've cultured nicer things than that idea."
-19:08:12 [rest_amber_slice] -- conversation: Howard, Penny, Amy on 'work' at The Amber Slice (restaurant)
-19:08:12 [rest_amber_slice] Howard: "Hey Penny, quick question, zero theory involved."
-19:08:12 [rest_amber_slice] Leonard: "Wait, earlier you had dinner in the booth? Huh."
-19:08:16 [rest_amber_slice] Penny: "I had a callback for a commercial. A yogurt commercial, but still."
-19:08:17 [rest_amber_slice] Penny *gesture*
-19:08:17 [rest_amber_slice] Bernadette: "Aww. No."
-19:08:20 [rest_amber_slice] Leonard: "Talk later? Cool."
-19:08:22 [rest_amber_slice] Howard: "The rover drove straight for ten whole metres. Applause welcome."
-19:08:28 [rest_amber_slice] Amy: "I'm borrowing this bench until someone in physics notices. So, indefinitely."
-19:08:34 [rest_amber_slice] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
-19:08:40 [rest_amber_slice] Penny: "Table six asked if the cheesecake was gluten-free. It's cheesecake."
-19:08:46 [rest_amber_slice] Howard: "And scene. Thank you, thank you."
-19:09:11 [rest_amber_slice] Penny walks: enters orders (7.9 m)
-19:09:20 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
-19:11:24 [rest_amber_slice] -- conversation: Amy, Raj, Bernadette on 'plans' at The Amber Slice (restaurant)
-19:11:24 [rest_amber_slice] Amy: "Hello, Raj. My amygdala registered your arrival as a positive event."
-19:11:29 [rest_amber_slice] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
-19:11:35 [rest_amber_slice] Amy: "Noted for my field journal."
-19:11:38 [rest_amber_slice] Bernadette: "Alright, I've got cultures to boss around."
-19:16:20 [rest_amber_slice] Penny walks: serves a table (11.0 m)
-19:16:33 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 5 min]
-19:17:00 [rest_amber_slice] -- conversation: Sheldon, Penny on 'plans' at The Amber Slice (restaurant)
-19:17:00 [rest_amber_slice] Sheldon: "Ah, Penny. I have prepared three topics, ranked by importance."
-19:17:05 [rest_amber_slice] Penny: "After work I'm coming over. Save me a spot that isn't Sheldon's."
-19:17:05 [rest_amber_slice] Penny *eye roll*
-19:17:11 [rest_amber_slice] Sheldon: "That is incorrect, but in an interesting way."
-19:17:16 [rest_amber_slice] Penny: "Okay, that's kind of adorable."
-19:17:16 [rest_amber_slice] Penny *eye roll*
-19:17:19 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
-19:19:12 [rest_amber_slice] -- conversation: Howard, Leonard, Raj on 'plans' at The Amber Slice (restaurant)
-19:19:12 [rest_amber_slice] Howard: "Leonard! Engineering update, very exciting, try to keep up."
-19:19:17 [rest_amber_slice] Leonard: "Okay, okay, fair point."
-19:19:20 [rest_amber_slice] Howard: "I'll bring the new expansion tonight. Prepare."
-19:19:25 [rest_amber_slice] Raj: "See you later, space cowboy."
-19:21:33 [rest_amber_slice] Penny walks: takes an order (5.5 m)
-19:21:40 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 7 min]
-19:22:20 [rest_amber_slice] -- conversation: Bernadette, Penny, Howard on 'work' at The Amber Slice (restaurant)
-19:22:20 [rest_amber_slice] Bernadette: "Oh, Penny, perfect. I need a second opinion that agrees with me."
-19:22:25 [rest_amber_slice] Penny: "Uh-huh. And in English?"
-19:22:29 [rest_amber_slice] Bernadette: "I got the quarterly numbers in early. Everyone's terrified of me. It's great."
-19:22:35 [rest_amber_slice] Howard: "Zing. I'll be here all week."
-19:22:39 [rest_amber_slice] Bernadette: "Okay! Bye! Do what I said."
-19:25:20 [rest_amber_slice] -- conversation: Bernadette, Sheldon on 'work' at The Amber Slice (restaurant)
-19:25:20 [rest_amber_slice] Bernadette: "Hiii Sheldon! Quick thing, and then you're going to do what I say."
-19:25:25 [rest_amber_slice] Sheldon: "My calculation is ninety-eight percent elegant and two percent Leonard's coffee stain."
-19:25:32 [rest_amber_slice] Bernadette: "My cultures are growing beautifully. That's a threat to someone, somewhere."
-19:25:39 [rest_amber_slice] Sheldon: "I have proven that the problem is hard. That counts as progress."
-19:25:44 [rest_amber_slice] Bernadette: "Byeee. Love you. Don't be late."
-19:27:04 [rest_amber_slice] -- conversation: Leonard, Sheldon, Penny on 'plans' at The Amber Slice (restaurant)
-19:27:04 [rest_amber_slice] Leonard: "Hey. You look like you have news, Sheldon."
-19:27:08 [rest_amber_slice] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
-19:27:14 [rest_amber_slice] Leonard: "Let's not make this a whole thing."
-19:27:18 [rest_amber_slice] Penny: "After work I'm coming over. Save me a spot that isn't Sheldon's."
-19:27:24 [rest_amber_slice] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
-19:27:29 [rest_amber_slice] Sheldon: "This conversation has reached its natural conclusion."
-19:28:16 [rest_amber_slice] -- conversation: Raj, Sheldon, Penny on 'work' at The Amber Slice (restaurant)
+18:56:11 [rest_amber_slice] Sheldon: "String theory is not stuck. It's resting."
+18:56:16 [rest_amber_slice] Penny: "So it's like... space, but smaller?"
+18:56:20 [rest_amber_slice] Howard: "I put a sensor on the coffee machine. It's sad data."
+18:56:24 [rest_amber_slice] -- conversation: Amy, Leonard, Raj on 'memory' at The Amber Slice (restaurant)
+18:56:24 [rest_amber_slice] Amy: "Leonard. I have a hypothesis about your day."
+18:56:24 [rest_amber_slice] Amy *gesture*
+18:56:25 [rest_amber_slice] Penny: "Wow. Okay. Moving on."
+18:56:25 [rest_amber_slice] Penny *gesture*
+18:56:28 [rest_amber_slice] Sheldon: "This conversation has reached its natural conclusion."
+18:56:28 [rest_amber_slice] Leonard: "Let's not make this a whole thing."
+18:56:32 [rest_amber_slice] Amy: "I observed that you had dinner in the booth. I've added it to my notes."
+18:56:38 [rest_amber_slice] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
+18:56:44 [rest_amber_slice] Amy: "As a scientist and your friend, I disagree."
+18:56:44 [rest_amber_slice] Amy *neuro lecture*
+18:56:48 [rest_amber_slice] Leonard: "Okay, I should get back to it."
+18:58:41 [rest_amber_slice] Amy walks: has dinner in the booth (9.0 m)
+18:58:42 [rest_amber_slice] Penny reflects: Sheldon keeps turning up in my day (odd neighbour she protects). I should make real time for Sheldon tonight.
+18:58:43 [rest_amber_slice] Howard reflects: Raj keeps turning up in my day (best friend). I should make real time for Raj tonight.
+18:58:54 [rest_amber_slice] Amy has dinner in the booth [rest_booth#1.seat1, 58 min]
+18:59:04 [rest_amber_slice] Penny walks: takes an order (5.5 m)
+18:59:10 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 5 min]
+19:01:00 [rest_amber_slice] -- conversation: Sheldon, Amy on 'science' at The Amber Slice (restaurant)
+19:01:00 [rest_amber_slice] Sheldon: "Ah, Amy. I have prepared three topics, ranked by importance."
+19:01:05 [rest_amber_slice] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
+19:01:11 [rest_amber_slice] Sheldon: "Engineering is just physics wearing a hard hat."
+19:01:16 [rest_amber_slice] Amy: "I'll log this as a bonding event."
+19:04:10 [rest_amber_slice] Penny walks: enters orders (6.5 m)
+19:04:10 [rest_amber_slice] Penny goes through the kitchen door
+19:04:17 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
+19:08:12 [rest_amber_slice] -- conversation: Howard, Raj on 'work' at The Amber Slice (restaurant)
+19:08:12 [rest_amber_slice] Howard: "Well, if it isn't Raj. Hold that thought, I'm about to be impressive."
+19:08:18 [rest_amber_slice] Raj: "I found a variable star that flickers like it's nervous. Relatable."
+19:08:23 [rest_amber_slice] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
+19:08:29 [rest_amber_slice] Raj: "My data finally reduced. It looks like a smudge, but a significant smudge."
+19:08:36 [rest_amber_slice] Howard: "The rover drove straight for ten whole metres. Applause welcome."
+19:08:41 [rest_amber_slice] Raj: "Wait, wait, I have a metaphor for this."
+19:08:46 [rest_amber_slice] Howard: "Later, buddy."
+19:09:17 [rest_amber_slice] Penny walks: serves a table (7.7 m)
+19:09:26 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 4 min]
+19:11:24 [rest_amber_slice] -- conversation: Amy, Penny, Bernadette on 'plans' at The Amber Slice (restaurant)
+19:11:24 [rest_amber_slice] Amy: "Hello, Penny. My amygdala registered your arrival as a positive event."
+19:11:30 [rest_amber_slice] Penny: "After work I'm coming over. Save me a spot that isn't Sheldon's."
+19:11:35 [rest_amber_slice] Amy: "My prefrontal cortex finds that compelling."
+19:11:40 [rest_amber_slice] Bernadette: "Alright, I've got cultures to boss around."
+19:13:26 [rest_amber_slice] Penny walks: plates cheesecake (8.9 m)
+19:13:36 [rest_amber_slice] Penny plates cheesecake [rest_cake_display#0.serve_slice, 5 min]
+19:18:36 [rest_amber_slice] Penny walks: takes an order (12.5 m)
+19:18:50 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 6 min]
+19:19:08 [rest_amber_slice] -- conversation: Penny, Leonard, Raj on 'dinner' at The Amber Slice (restaurant)
+19:19:08 [rest_amber_slice] Penny: "Leonard! Okay, talk to me, I need a break."
+19:19:12 [rest_amber_slice] Leonard: "Ha. Yeah, that tracks."
+19:19:15 [rest_amber_slice] Penny: "Fine, you win this one."
+19:19:16 [rest_amber_slice] Penny *eye roll*
+19:19:19 [rest_amber_slice] Raj: "Dude, that's the nicest thing anyone's said all week."
+19:19:24 [rest_amber_slice] Penny: "Ha! Totally called it."
+19:19:27 [rest_amber_slice] Leonard: "That's... actually a good idea."
+19:22:00 [rest_amber_slice] -- conversation: Sheldon, Leonard, Penny on 'science' at The Amber Slice (restaurant)
+19:22:00 [rest_amber_slice] Sheldon: "For the record, Leonard, I was about to start a conversation myself."
+19:22:05 [rest_amber_slice] Leonard: "The interferometer is basically a very expensive mood ring."
+19:22:11 [rest_amber_slice] Sheldon: "Your reasoning has a hole you could drive a rover through."
+19:22:16 [rest_amber_slice] Penny: "Okay, love you, bye."
+19:22:20 [rest_amber_slice] -- conversation: Bernadette, Sheldon, Leonard on 'work' at The Amber Slice (restaurant)
+19:22:20 [rest_amber_slice] Bernadette: "Hey Sheldon! Did you eat? You should eat."
+19:22:24 [rest_amber_slice] Sheldon: "My calculation is ninety-eight percent elegant and two percent Leonard's coffee stain."
+19:22:31 [rest_amber_slice] Bernadette: "Sure, if you want to be wrong."
+19:22:35 [rest_amber_slice] Leonard: "The laser drifted again, so I spent an hour realigning mirrors."
+19:22:40 [rest_amber_slice] Bernadette: "Okay! Bye! Do what I said."
+19:23:24 [rest_amber_slice] -- conversation: Amy, Leonard, Raj on 'plans' at The Amber Slice (restaurant)
+19:23:24 [rest_amber_slice] Amy: "Leonard! Best-friend status check: we're still best friends, correct?"
+19:23:30 [rest_amber_slice] Leonard: "I'll drive. Sheldon, you're not touching the radio."
+19:23:35 [rest_amber_slice] Amy: "Noted for my field journal."
+19:23:38 [rest_amber_slice] Raj: "Okay bye, this was lovely!"
+19:23:44 [rest_amber_slice] Raj reflects: Pattern: wherever I go today, Leonard is nearby. Coincidence, or I like it that way.
+19:24:12 [rest_amber_slice] -- conversation: Howard, Sheldon, Penny on 'memory' at The Amber Slice (restaurant)
+19:24:12 [rest_amber_slice] Howard: "Hey Sheldon, quick question, zero theory involved."
+19:24:16 [rest_amber_slice] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
+19:24:22 [rest_amber_slice] Howard: "Little bird told me you had dinner in the booth. The bird was me."
+19:24:28 [rest_amber_slice] Penny: "Uh-huh. And in English?"
+19:24:32 [rest_amber_slice] Howard: "I'll bring the new expansion tonight. Prepare."
+19:24:36 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
+19:25:02 [rest_amber_slice] Penny walks: serves a table (4.5 m)
+19:25:07 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 6 min]
+19:25:20 [rest_amber_slice] -- conversation: Bernadette, Raj on 'work' at The Amber Slice (restaurant)
+19:25:20 [rest_amber_slice] Bernadette: "Hiii Raj! Quick thing, and then you're going to do what I say."
+19:25:25 [rest_amber_slice] Raj: "Okay, now I'm emotional."
+19:25:29 [rest_amber_slice] Bernadette: "My cultures are growing beautifully. That's a threat to someone, somewhere."
+19:25:35 [rest_amber_slice] Raj: "Oh my god, yes, exactly!"
+19:25:38 [rest_amber_slice] Bernadette: "We are not doing that."
+19:28:16 [rest_amber_slice] -- conversation: Raj, Sheldon on 'work' at The Amber Slice (restaurant)
 19:28:16 [rest_amber_slice] Raj: "Namaste, Sheldon. Got a minute for a fun fact?"
-19:28:20 [rest_amber_slice] Sheldon: "Fascinating. Unhelpful, but fascinating."
-19:28:24 [rest_amber_slice] Raj reflects: Note to self: Leonard seemed busy earlier. Ask how it's going instead of talking about myself.
-19:28:25 [rest_amber_slice] Raj: "I found a variable star that flickers like it's nervous. Relatable."
-19:28:31 [rest_amber_slice] Penny: "Ha! Totally called it."
-19:28:31 [rest_amber_slice] Penny *eye roll*
-19:28:34 [rest_amber_slice] Raj: "My data finally reduced. It looks like a smudge, but a significant smudge."
-19:28:40 [rest_amber_slice] Sheldon: "Your reasoning has a hole you could drive a rover through."
-19:28:46 [rest_amber_slice] Raj: "I'll text you a star chart."
-19:29:10 [rest_amber_slice] Penny walks: serves a table (5.5 m)
-19:29:17 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 6 min]
-19:34:24 [rest_amber_slice] -- conversation: Amy, Sheldon, Leonard on 'dinner' at The Amber Slice (restaurant)
+19:28:20 [rest_amber_slice] Sheldon: "I have proven that the problem is hard. That counts as progress."
+19:28:26 [rest_amber_slice] Raj: "Ha, cosmic."
+19:28:29 [rest_amber_slice] Sheldon: "I'll allow it, with a footnote."
+19:28:33 [rest_amber_slice] Raj: "That's beautiful, like a binary star system."
+19:28:37 [rest_amber_slice] Sheldon: "Fascinating. Unhelpful, but fascinating."
+19:28:42 [rest_amber_slice] Raj: "See you later, space cowboy."
+19:31:07 [rest_amber_slice] Penny walks: enters orders (11.0 m)
+19:31:19 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
+19:33:20 [rest_amber_slice] Sheldon reflects: Pattern: wherever I go today, Amy is nearby. Coincidence, or I like it that way.
+19:33:21 [rest_amber_slice] Leonard reflects: I've talked with Sheldon 6 time(s) today. That matters to me more than I'd say out loud.
+19:34:24 [rest_amber_slice] -- conversation: Amy, Sheldon on 'dinner' at The Amber Slice (restaurant)
 19:34:24 [rest_amber_slice] Amy: "Greetings, Sheldon. I'm conducting a casual-conversation trial. You're in it."
 19:34:30 [rest_amber_slice] Sheldon: "I'll have my usual. Do not improvise, Penny."
 19:34:35 [rest_amber_slice] Amy: "Dining with friends on a Friday. Adolescent me would be stunned."
-19:34:40 [rest_amber_slice] Sheldon reflects: Pattern: wherever I go today, Leonard is nearby. Coincidence, or I like it that way.
-19:34:40 [rest_amber_slice] Leonard: "Ha. Yeah, that tracks."
-19:34:44 [rest_amber_slice] Amy: "Penny, as your best friend, I'll take the large slice."
-19:34:49 [rest_amber_slice] Sheldon: "The booth acoustics are acceptable this evening."
-19:34:54 [rest_amber_slice] Amy: "Farewell. This interaction was a success."
-19:35:17 [rest_amber_slice] Penny walks: takes an order (5.5 m)
-19:35:20 [rest_amber_slice] -- conversation: Bernadette, Leonard on 'memory' at The Amber Slice (restaurant)
-19:35:20 [rest_amber_slice] Bernadette: "Hey Leonard! Did you eat? You should eat."
-19:35:24 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 5 min]
-19:35:24 [rest_amber_slice] Leonard: "I'll drive. Sheldon, you're not touching the radio."
-19:35:29 [rest_amber_slice] Bernadette: "So, you had dinner in the booth? Interesting choice."
-19:35:34 [rest_amber_slice] Leonard: "Honestly? Same."
-19:35:37 [rest_amber_slice] Bernadette: "Sure, if you want to be wrong."
-19:38:41 [rest_amber_slice] Leonard reflects: Note to self: Penny seemed busy earlier. Ask how it's going instead of talking about myself.
-19:40:00 [rest_amber_slice] -- conversation: Sheldon, Howard on 'plans' at The Amber Slice (restaurant)
-19:40:00 [rest_amber_slice] Sheldon: "Technically this counts as our scheduled small talk, Howard."
-19:40:05 [rest_amber_slice] Howard: "Respectfully, my robot disagrees."
-19:40:09 [rest_amber_slice] Sheldon: "I'll allow it, with a footnote."
-19:40:13 [rest_amber_slice] Howard: "See, that's why they give the hard stuff to engineers."
-19:40:18 [rest_amber_slice] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-19:40:23 [rest_amber_slice] Howard: "Later, buddy."
-19:40:24 [rest_amber_slice] Penny walks: serves a table (3.5 m)
-19:40:28 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 4 min]
-19:44:08 [rest_amber_slice] -- conversation: Penny, Amy on 'memory' at The Amber Slice (restaurant)
-19:44:08 [rest_amber_slice] Penny: "Oh good, Amy, a normal human. Hi."
-19:44:12 [rest_amber_slice] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
-19:44:17 [rest_amber_slice] Penny: "Okay, so I noticed you had dinner in the booth. Spill."
-19:44:23 [rest_amber_slice] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
-19:44:28 [rest_amber_slice] Penny: "Alright, I'm out. Behave."
-19:44:28 [rest_amber_slice] Penny *hair flip*
-19:44:52 [rest_amber_slice] Penny walks: picks up drinks (5.2 m)
-19:44:58 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.pour, 5 min]
+19:34:40 [rest_amber_slice] Sheldon: "The booth acoustics are acceptable this evening."
+19:34:45 [rest_amber_slice] Amy: "Penny, as your best friend, I'll take the large slice."
+19:34:50 [rest_amber_slice] Sheldon: "I calculate a sixty-two percent chance you're joking."
+19:34:55 [rest_amber_slice] Amy: "Goodbye. I'm already looking forward to the debrief."
+19:38:19 [rest_amber_slice] Penny walks: takes an order (11.5 m)
+19:38:32 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 6 min]
+19:44:08 [rest_amber_slice] -- conversation: Penny, Bernadette, Amy on 'memory' at The Amber Slice (restaurant)
+19:44:08 [rest_amber_slice] Penny: "Oh good, Bernadette, a normal human. Hi."
+19:44:12 [rest_amber_slice] Bernadette: "Honey, I've cultured nicer things than that idea."
+19:44:17 [rest_amber_slice] Penny: "Okay, that's kind of adorable."
+19:44:21 [rest_amber_slice] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
+19:44:26 [rest_amber_slice] Penny: "Alright, I'm out. Behave."
+19:44:27 [rest_amber_slice] Penny *eye roll*
+19:44:51 [rest_amber_slice] Penny walks: serves a table (4.5 m)
+19:44:56 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 7 min]
 19:45:39 [rest_amber_slice] Sheldon has dinner in the booth [rest_booth#0.seat2, 47 min]
-19:46:12 [rest_amber_slice] -- conversation: Howard, Leonard, Raj on 'memory' at The Amber Slice (restaurant)
-19:46:12 [rest_amber_slice] Howard: "Well, if it isn't Leonard. Hold that thought, I'm about to be impressive."
-19:46:18 [rest_amber_slice] Leonard: "That's... actually a good idea."
-19:46:22 [rest_amber_slice] Howard: "Saw that you had dinner in the booth. Smooth."
-19:46:26 [rest_amber_slice] Raj: "I can host next week! I'm planning a theme."
-19:46:31 [rest_amber_slice] Howard: "Gotta go, the robot misses me."
-19:49:58 [rest_amber_slice] Penny walks: enters orders (2.7 m)
-19:50:02 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
-19:50:20 [rest_amber_slice] -- conversation: Bernadette, Howard, Raj on 'dinner' at The Amber Slice (restaurant)
-19:50:20 [rest_amber_slice] Bernadette: "Howard, sweetie! How are you? Good. Now listen."
-19:50:24 [rest_amber_slice] Howard: "Penny, could you ask the chef to make it extra crispy? Like a heat shield."
-19:50:31 [rest_amber_slice] Bernadette: "Nobody touch the bread before I say grace. Kidding! Mostly."
-19:50:36 [rest_amber_slice] Raj: "I'm ordering dessert first. Life is short, stars are long."
-19:50:41 [rest_amber_slice] Bernadette: "Alright, I've got cultures to boss around."
-19:53:16 [rest_amber_slice] -- conversation: Raj, Amy on 'dinner' at The Amber Slice (restaurant)
-19:53:16 [rest_amber_slice] Raj: "Amy! Oh, it's like a comet showing up right on schedule."
-19:53:20 [rest_amber_slice] -- conversation: Bernadette, Sheldon on 'work' at The Amber Slice (restaurant)
-19:53:20 [rest_amber_slice] Bernadette: "Oh, Sheldon, perfect. I need a second opinion that agrees with me."
-19:53:21 [rest_amber_slice] Amy: "My prefrontal cortex finds that compelling."
-19:53:25 [rest_amber_slice] Sheldon: "My calculation is ninety-eight percent elegant and two percent Leonard's coffee stain."
-19:53:25 [rest_amber_slice] Raj: "This place is my favourite constellation of flavours."
-19:53:31 [rest_amber_slice] Amy: "I'll log this as a bonding event."
-19:53:32 [rest_amber_slice] Bernadette: "Cute. Now do it properly."
-19:53:36 [rest_amber_slice] Sheldon: "I have proven that the problem is hard. That counts as progress."
-19:53:42 [rest_amber_slice] Bernadette: "Okay! Bye! Do what I said."
+19:49:00 [rest_amber_slice] -- conversation: Sheldon, Leonard, Bernadette on 'plans' at The Amber Slice (restaurant)
+19:49:00 [rest_amber_slice] Sheldon: "Technically this counts as our scheduled small talk, Leonard."
+19:49:05 [rest_amber_slice] Leonard: "Honestly? Same."
+19:49:08 [rest_amber_slice] Sheldon: "Your reasoning has a hole you could drive a rover through."
+19:49:14 [rest_amber_slice] Bernadette: "Cute. Now do it properly."
+19:49:17 [rest_amber_slice] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
+19:49:22 [rest_amber_slice] Leonard: "Alright, I'm gonna go before Sheldon finds me."
+19:51:56 [rest_amber_slice] Penny walks: enters orders (11.0 m)
+19:52:08 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
+19:53:16 [rest_amber_slice] -- conversation: Raj, Leonard, Howard on 'dinner' at The Amber Slice (restaurant)
+19:53:16 [rest_amber_slice] Raj: "Leonard! Oh, it's like a comet showing up right on schedule."
+19:53:21 [rest_amber_slice] Leonard: "Friday dinner here is the one tradition I actually like."
+19:53:26 [rest_amber_slice] Raj: "I'm ordering dessert first. Life is short, stars are long."
+19:53:32 [rest_amber_slice] Howard: "Gotta go, the robot misses me."
+19:53:58 [rest_amber_slice] Howard walks: has dinner in the booth (7.0 m)
+19:54:08 [rest_amber_slice] Howard has dinner in the booth [rest_booth#1.seat0, 64 min]
+19:54:24 [rest_amber_slice] -- conversation: Amy, Leonard, Howard on 'plans' at The Amber Slice (restaurant)
+19:54:24 [rest_amber_slice] Amy: "Leonard. I have a hypothesis about your day."
+19:54:26 [rest_amber_slice] Amy reflects: Penny keeps turning up in my day (best friend). I should make real time for Penny tonight.
+19:54:28 [rest_amber_slice] Leonard: "Okay, okay, fair point."
 19:54:30 [rest_amber_slice] Bernadette walks: has dinner at a two-top (5.8 m)
+19:54:32 [rest_amber_slice] Amy: "Interesting. Repeat it slower."
+19:54:35 [rest_amber_slice] Howard: "Ooh, now we're talking."
 19:54:39 [rest_amber_slice] Bernadette has dinner at a two-top [rest_table_2top#0.seat1, 45 min]
-19:55:12 [rest_amber_slice] -- conversation: Howard, Amy on 'dinner' at The Amber Slice (restaurant)
-19:55:12 [rest_amber_slice] Howard: "Hey Amy, quick question, zero theory involved."
-19:55:16 [rest_amber_slice] Amy: "Agreed. Wholeheartedly. Clinically."
-19:55:20 [rest_amber_slice] Howard: "I'll split the appetizer, but I get the strategic half."
-19:55:26 [rest_amber_slice] Amy: "Interesting. Repeat it slower."
-19:55:29 [rest_amber_slice] Howard: "Ooh, now we're talking."
-19:55:33 [rest_amber_slice] Amy: "Goodbye. I'm already looking forward to the debrief."
+19:54:39 [rest_amber_slice] Amy: "Agreed. Wholeheartedly. Clinically."
+19:54:43 [rest_amber_slice] Leonard: "Talk later? Cool."
 19:55:46 [rest_amber_slice] Raj walks: has dinner in the booth (4.0 m)
 19:55:53 [rest_amber_slice] Raj has dinner in the booth [rest_booth#0.seat0, 41 min]
-19:56:07 [rest_amber_slice] Howard walks: has dinner at a two-top (5.0 m)
-19:56:15 [rest_amber_slice] Howard has dinner at a two-top [rest_table_2top#1.seat0, 56 min]
-19:56:20 [rest_amber_slice] -- conversation: Bernadette, Amy on 'plans' at The Amber Slice (restaurant)
-19:56:20 [rest_amber_slice] Bernadette: "Hiii Amy! Quick thing, and then you're going to do what I say."
-19:56:25 [rest_amber_slice] Bernadette reflects: Pattern: wherever I go today, Howard is nearby. Coincidence, or I like it that way.
-19:56:25 [rest_amber_slice] Amy: "Noted for my field journal."
-19:56:26 [rest_amber_slice] Amy reflects: I've talked with Penny 4 time(s) today. That matters to me more than I'd say out loud.
-19:56:29 [rest_amber_slice] Bernadette: "Ha! Okay, that's funny."
-19:56:32 [rest_amber_slice] Amy: "That released a measurable amount of dopamine."
-19:56:37 [rest_amber_slice] Bernadette: "We are not doing that."
-19:56:40 [rest_amber_slice] Amy: "As a scientist and your friend, I disagree."
-19:57:02 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
+19:56:20 [rest_amber_slice] -- conversation: Bernadette, Howard, Raj on 'plans' at The Amber Slice (restaurant)
+19:56:20 [rest_amber_slice] Bernadette: "Howard, sweetie! How are you? Good. Now listen."
+19:56:24 [rest_amber_slice] Howard: "I've done harder things in a clean room wearing mittens."
+19:56:30 [rest_amber_slice] Bernadette: "Aww. No."
+19:56:32 [rest_amber_slice] Raj: "I can host next week! I'm planning a theme."
+19:56:37 [rest_amber_slice] Bernadette: "Ha! Okay, that's funny."
+19:56:40 [rest_amber_slice] Howard: "And scene. Thank you, thank you."
+19:56:56 [rest_amber_slice] Amy walks: has dinner in the booth (6.0 m)
+19:57:06 [rest_amber_slice] Amy has dinner in the booth [rest_booth#0.seat3, 55 min]
+19:57:08 [rest_amber_slice] Penny walks: serves a table (11.0 m)
+19:57:20 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 4 min]
 19:58:50 [rest_amber_slice] Leonard walks: has dinner at a two-top (6.0 m)
 19:58:59 [rest_amber_slice] Leonard has dinner at a two-top [rest_table_2top#1.seat1, 46 min]
-20:03:02 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 10 min]
-20:03:16 [rest_amber_slice] -- conversation: Raj, Sheldon on 'dinner' at The Amber Slice (restaurant)
+19:59:08 [rest_amber_slice] -- conversation: Penny, Sheldon, Leonard on 'dinner' at The Amber Slice (restaurant)
+19:59:08 [rest_amber_slice] Penny: "Hey sweetie, what's up?"
+19:59:08 [rest_amber_slice] Penny *hair flip*
+19:59:11 [rest_amber_slice] Sheldon: "That is incorrect, but in an interesting way."
+19:59:16 [rest_amber_slice] Penny: "Okay, nerds, who's getting what? And no, we don't have a 'theoretical special'."
+19:59:22 [rest_amber_slice] Penny reflects: I've talked with Sheldon 6 time(s) today. That matters to me more than I'd say out loud.
+19:59:22 [rest_amber_slice] Leonard: "Penny's working, so tip like we mean it."
+19:59:27 [rest_amber_slice] Penny: "If anyone sends food back, I'm telling everyone your middle names."
+19:59:32 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
+20:01:12 [rest_amber_slice] -- conversation: Howard, Sheldon, Penny on 'memory' at The Amber Slice (restaurant)
+20:01:12 [rest_amber_slice] Howard: "Sheldon! Engineering update, very exciting, try to keep up."
+20:01:17 [rest_amber_slice] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
+20:01:23 [rest_amber_slice] Howard: "Saw that you had dinner in the booth. Smooth."
+20:01:27 [rest_amber_slice] Penny: "After work I'm coming over. Save me a spot that isn't Sheldon's."
+20:01:33 [rest_amber_slice] Howard: "See, that's why they give the hard stuff to engineers."
+20:01:38 [rest_amber_slice] Sheldon: "Goodbye. I'll send a summary."
+20:02:03 [rest_amber_slice] Penny walks: enters orders (11.0 m)
+20:02:03 [rest_amber_slice] Howard reflects: I've talked with Raj 3 time(s) today. That matters to me more than I'd say out loud.
+20:02:15 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
+20:03:16 [rest_amber_slice] -- conversation: Raj, Sheldon, Amy on 'dinner' at The Amber Slice (restaurant)
 20:03:16 [rest_amber_slice] Raj: "Sheldon, hi! Okay, I'll talk slower this time."
-20:03:20 [rest_amber_slice] Sheldon: "I calculate a sixty-two percent chance you're joking."
-20:03:24 [rest_amber_slice] -- conversation: Amy, Leonard on 'plans' at The Amber Slice (restaurant)
-20:03:24 [rest_amber_slice] Amy: "Hello, Leonard. My amygdala registered your arrival as a positive event."
-20:03:25 [rest_amber_slice] Raj: "Okay, now I'm emotional."
-20:03:29 [rest_amber_slice] Sheldon: "That is incorrect, but in an interesting way."
-20:03:30 [rest_amber_slice] Leonard: "I'll drive. Sheldon, you're not touching the radio."
-20:03:34 [rest_amber_slice] Raj: "Oh my god, yes, exactly!"
-20:03:35 [rest_amber_slice] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
-20:03:37 [rest_amber_slice] Sheldon: "Fascinating. Unhelpful, but fascinating."
-20:03:41 [rest_amber_slice] Leonard: "We're doing The Amber Slice at quarter to seven, right?"
-20:03:41 [rest_amber_slice] Raj: "Okay bye, this was lovely!"
-20:03:46 [rest_amber_slice] Amy: "Farewell. This interaction was a success."
-20:04:20 [rest_amber_slice] -- conversation: Bernadette, Leonard on 'dinner' at The Amber Slice (restaurant)
-20:04:20 [rest_amber_slice] Bernadette: "Hey Leonard! Did you eat? You should eat."
-20:04:24 [rest_amber_slice] Leonard: "Penny's working, so tip like we mean it."
-20:04:28 [rest_amber_slice] Bernadette: "Let's order quickly, I have plans to destroy you all at game night."
-20:04:34 [rest_amber_slice] Leonard: "Friday dinner here is the one tradition I actually like."
-20:04:40 [rest_amber_slice] Bernadette: "Byeee. Love you. Don't be late."
-20:07:51 [rest_amber_slice] Amy walks: has dinner in the booth (3.0 m)
-20:07:57 [rest_amber_slice] Amy has dinner in the booth [rest_booth#0.seat1, 69 min]
-20:09:04 [rest_amber_slice] -- conversation: Leonard, Sheldon on 'memory' at The Amber Slice (restaurant)
-20:09:04 [rest_amber_slice] Leonard: "Sheldon! Perfect timing, I need a sanity check."
-20:09:08 [rest_amber_slice] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
-20:09:14 [rest_amber_slice] Leonard: "Wait, earlier you had dinner in the booth? Huh."
-20:09:19 [rest_amber_slice] Sheldon: "Your reasoning has a hole you could drive a rover through."
-20:09:24 [rest_amber_slice] Leonard: "Okay, okay, fair point."
-20:09:28 [rest_amber_slice] Sheldon: "This conversation has reached its natural conclusion."
-20:13:02 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
-20:17:04 [rest_amber_slice] -- conversation: Leonard, Howard on 'memory' at The Amber Slice (restaurant)
-20:17:04 [rest_amber_slice] Leonard: "Oh, hi Howard. How's your day going so far?"
-20:17:08 [rest_amber_slice] Howard: "I'll bring the new expansion tonight. Prepare."
-20:17:13 [rest_amber_slice] Leonard: "I saw that you had dinner at a two-top. Everything okay?"
-20:17:18 [rest_amber_slice] Howard: "And scene. Thank you, thank you."
-20:17:20 [rest_amber_slice] -- conversation: Bernadette, Raj on 'memory' at The Amber Slice (restaurant)
-20:17:20 [rest_amber_slice] Bernadette: "Raj, sweetie! How are you? Good. Now listen."
-20:17:23 [rest_amber_slice] Howard reflects: Pattern: wherever I go today, Raj is nearby. Coincidence, or I like it that way.
-20:17:24 [rest_amber_slice] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
-20:17:29 [rest_amber_slice] Bernadette: "I saw you had dinner in the booth. We'll talk about that."
-20:17:35 [rest_amber_slice] Raj: "Dude, that's the nicest thing anyone's said all week."
-20:17:40 [rest_amber_slice] Bernadette: "Sure, if you want to be wrong."
-20:17:44 [rest_amber_slice] Raj: "Wait, wait, I have a metaphor for this."
-20:17:48 [rest_amber_slice] Bernadette: "Alright, I've got cultures to boss around."
-20:18:02 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 10 min]
-20:18:24 [rest_amber_slice] -- conversation: Amy, Sheldon, Raj on 'work' at The Amber Slice (restaurant)
-20:18:24 [rest_amber_slice] Amy: "Sheldon. I have a hypothesis about your day."
-20:18:28 [rest_amber_slice] Sheldon: "My calculation is ninety-eight percent elegant and two percent Leonard's coffee stain."
-20:18:35 [rest_amber_slice] Amy: "The neurons I'm imaging fired in a pattern that resembled a smile."
-20:18:41 [rest_amber_slice] Raj: "I found a variable star that flickers like it's nervous. Relatable."
-20:18:47 [rest_amber_slice] Amy: "I'm borrowing this bench until someone in physics notices. So, indefinitely."
-20:18:53 [rest_amber_slice] Sheldon: "I have to go; my schedule is not a suggestion."
-20:23:12 [rest_amber_slice] -- conversation: Howard, Sheldon, Raj on 'plans' at The Amber Slice (restaurant)
-20:23:12 [rest_amber_slice] Howard: "Sheldon! Engineering update, very exciting, try to keep up."
-20:23:17 [rest_amber_slice] Sheldon: "I'll allow it, with a footnote."
-20:23:21 [rest_amber_slice] Howard: "Classic theorist move."
-20:23:24 [rest_amber_slice] Raj: "I can host next week! I'm planning a theme."
-20:23:29 [rest_amber_slice] Howard: "Zing. I'll be here all week."
-20:23:33 [rest_amber_slice] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-20:23:37 [rest_amber_slice] Howard: "Later, buddy."
-20:26:24 [rest_amber_slice] -- conversation: Amy, Howard, Bernadette on 'memory' at The Amber Slice (restaurant)
-20:26:24 [rest_amber_slice] Amy: "Howard! Best-friend status check: we're still best friends, correct?"
-20:26:29 [rest_amber_slice] Howard: "I've done harder things in a clean room wearing mittens."
-20:26:35 [rest_amber_slice] Amy: "Earlier, you had dinner at a two-top. I found that endearing."
-20:26:40 [rest_amber_slice] Bernadette: "Honey, I've cultured nicer things than that idea."
-20:26:45 [rest_amber_slice] Amy: "I'll log this as a bonding event."
+20:03:20 [rest_amber_slice] Sheldon: "Fascinating. Unhelpful, but fascinating."
+20:03:25 [rest_amber_slice] Raj: "This place is my favourite constellation of flavours."
+20:03:30 [rest_amber_slice] Amy: "As a scientist and your friend, I disagree."
+20:03:34 [rest_amber_slice] Raj: "Dude, that's the nicest thing anyone's said all week."
+20:03:39 [rest_amber_slice] Sheldon: "I'll have my usual. Do not improvise, Penny."
+20:03:44 [rest_amber_slice] Raj: "I'll text you a star chart."
+20:09:15 [rest_amber_slice] Penny walks: serves a table (11.0 m)
+20:09:25 [rest_amber_slice] Bernadette reflects: Pattern: wherever I go today, Sheldon is nearby. Coincidence, or I like it that way.
+20:09:27 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 7 min]
+20:10:20 [rest_amber_slice] -- conversation: Bernadette, Penny, Amy on 'dinner' at The Amber Slice (restaurant)
+20:10:20 [rest_amber_slice] Bernadette: "Oh, Penny, perfect. I need a second opinion that agrees with me."
+20:10:25 [rest_amber_slice] Penny: "Sweetie, I love you, but no."
+20:10:26 [rest_amber_slice] Penny *eye roll*
+20:10:29 [rest_amber_slice] Bernadette: "Let's order quickly, I have plans to destroy you all at game night."
+20:10:35 [rest_amber_slice] Amy: "That released a measurable amount of dopamine."
+20:10:40 [rest_amber_slice] Bernadette: "Nobody touch the bread before I say grace. Kidding! Mostly."
+20:10:45 [rest_amber_slice] Penny: "Gotta run, hon."
+20:16:27 [rest_amber_slice] Penny walks: serves a table (3.0 m)
+20:16:31 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 6 min]
+20:17:04 [rest_amber_slice] -- conversation: Leonard, Bernadette on 'memory' at The Amber Slice (restaurant)
+20:17:04 [rest_amber_slice] Leonard: "Bernadette! Perfect timing, I need a sanity check."
+20:17:08 [rest_amber_slice] Bernadette: "Sure, if you want to be wrong."
+20:17:12 [rest_amber_slice] Leonard: "Wait, earlier you had dinner at a two-top? Huh."
+20:17:17 [rest_amber_slice] Bernadette: "Alright, I've got cultures to boss around."
+20:21:04 [rest_amber_slice] -- conversation: Leonard, Howard, Amy on 'dinner' at The Amber Slice (restaurant)
+20:21:04 [rest_amber_slice] Leonard: "Hey. You look like you have news, Howard."
+20:21:08 [rest_amber_slice] Howard: "Penny, could you ask the chef to make it extra crispy? Like a heat shield."
+20:21:14 [rest_amber_slice] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+20:21:19 [rest_amber_slice] Amy: "Farewell. This interaction was a success."
+20:22:31 [rest_amber_slice] Penny walks: enters orders (14.0 m)
+20:22:46 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
 20:27:00 [rest_amber_slice] Sheldon plan -> game night in 4A (floor4)
 20:27:02 [rest_amber_slice] Sheldon walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (2.2 m)
 20:27:04 [rest_amber_slice] Sheldon goes through the glass door
 20:27:05 [rest_amber_slice] Sheldon leaves by sidewalk -> street_exterior
-20:28:02 [rest_amber_slice] Penny walks: picks up drinks (2.7 m)
-20:28:06 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.pour, 7 min]
-20:28:44 [rest_amber_slice] Raj reflects: Pattern: wherever I go today, Howard is nearby. Coincidence, or I like it that way.
 20:29:00 [rest_amber_slice] Howard plan -> game night in 4A (floor4)
 20:29:00 [rest_amber_slice] Bernadette plan -> game night in 4A (floor4)
-20:29:02 [rest_amber_slice] Howard walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (5.8 m)
+20:29:01 [rest_amber_slice] Leonard reflects: Pattern: wherever I go today, Sheldon is nearby. Coincidence, or I like it that way.
+20:29:02 [rest_amber_slice] Howard walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (5.7 m)
 20:29:02 [rest_amber_slice] Bernadette walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (3.0 m)
+20:29:04 [rest_amber_slice] Raj reflects: Note to self: Howard seemed busy earlier. Ask how it's going instead of talking about myself.
 20:29:05 [rest_amber_slice] Bernadette goes through the glass door
 20:29:06 [rest_amber_slice] Bernadette leaves by sidewalk -> street_exterior (with Sheldon)
 20:29:07 [rest_amber_slice] Howard goes through the glass door
-20:29:09 [rest_amber_slice] Howard leaves by sidewalk -> street_exterior (with Sheldon, Bernadette)
+20:29:08 [rest_amber_slice] Howard leaves by sidewalk -> street_exterior (with Sheldon, Bernadette)
+20:29:46 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
 20:30:00 [rest_amber_slice] Leonard plan -> game night in 4A (floor4)
 20:30:02 [rest_amber_slice] Leonard walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (7.8 m)
 20:30:10 [rest_amber_slice] Leonard goes through the glass door
 20:30:11 [rest_amber_slice] Leonard leaves by sidewalk -> street_exterior (with Bernadette, Howard)
 20:31:00 [rest_amber_slice] Amy plan -> game night in 4A (floor4)
-20:31:02 [rest_amber_slice] Amy walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (5.7 m)
-20:31:07 [rest_amber_slice] Amy goes through the glass door
-20:31:09 [rest_amber_slice] Amy leaves by sidewalk -> street_exterior (with Bernadette, Howard, Leonard)
+20:31:02 [rest_amber_slice] Amy walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (2.8 m)
+20:31:04 [rest_amber_slice] Amy goes through the glass door
+20:31:06 [rest_amber_slice] Amy leaves by sidewalk -> street_exterior (with Bernadette, Howard, Leonard)
 20:32:05 [street_exterior] Sheldon appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
 20:32:05 [street_exterior] Sheldon walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
 20:32:14 [street_exterior] Sheldon leaves by door -> lobby
@@ -1657,430 +1597,459 @@
 20:33:31 [floor4] Sheldon game night in his spot [4a_couch#0.seat0, 76 min]
 20:34:06 [street_exterior] Bernadette appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
 20:34:06 [street_exterior] Bernadette walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
-20:34:09 [street_exterior] Howard appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
-20:34:09 [street_exterior] Howard walks: heads out (door to 2311 lobby (ground floor)) (7.6 m)
+20:34:08 [street_exterior] Howard appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
+20:34:08 [street_exterior] Howard walks: heads out (door to 2311 lobby (ground floor)) (7.6 m)
 20:34:15 [street_exterior] Bernadette leaves by door -> lobby (with Sheldon)
-20:34:17 [street_exterior] Howard leaves by door -> lobby (with Sheldon, Bernadette)
+20:34:16 [street_exterior] Howard leaves by door -> lobby (with Sheldon, Bernadette)
 20:34:18 [lobby] Bernadette appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
 20:34:18 [lobby] Bernadette walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
-20:34:20 [lobby] Howard appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
-20:34:20 [lobby] Howard walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.0 m)
-20:34:25 [lobby] Bernadette leaves by stairs -> floor4 (with Sheldon)
-20:34:26 [lobby] Howard leaves by stairs -> floor4 (with Sheldon, Bernadette)
-20:35:06 [rest_amber_slice] Penny walks: takes an order (8.8 m)
+20:34:19 [lobby] Howard appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
+20:34:19 [lobby] Howard walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.0 m)
+20:34:25 [lobby] Howard leaves by stairs -> floor4 (with Sheldon)
+20:34:25 [lobby] Bernadette leaves by stairs -> floor4 (with Sheldon, Howard)
 20:35:11 [street_exterior] Leonard appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
 20:35:11 [street_exterior] Leonard walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
-20:35:16 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 7 min]
 20:35:20 [street_exterior] Leonard leaves by door -> lobby (with Bernadette, Howard)
-20:35:22 [rest_amber_slice] Penny reflects: Good day overall. Tonight with everyone, Sheldon included, is the part I was looking forward to.
 20:35:23 [lobby] Leonard appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
 20:35:23 [lobby] Leonard walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
+20:35:25 [floor4] Howard appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
+20:35:25 [floor4] Howard walks: heckles from a stool (8.6 m)
 20:35:25 [floor4] Bernadette appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-20:35:25 [floor4] Bernadette walks: plays to win from the armchair (7.6 m)
-20:35:26 [floor4] Howard appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-20:35:26 [floor4] Howard walks: heckles from a stool (11.9 m)
-20:35:27 [floor4] Bernadette goes through the 4A front door
-20:35:27 [floor4] Howard goes through the 4A front door
-20:35:30 [lobby] Leonard leaves by stairs -> floor4 (with Bernadette, Howard)
+20:35:25 [floor4] Bernadette walks: plays to win from the armchair (7.3 m)
+20:35:26 [floor4] Howard goes through the 4A front door
+20:35:26 [floor4] Bernadette goes through the 4A front door
+20:35:30 [lobby] Leonard leaves by stairs -> floor4 (with Howard, Bernadette)
 20:35:36 [floor4] Bernadette plays to win from the armchair [4a_armchair#0.seat0, 60 min]
-20:35:41 [floor4] Howard heckles from a stool [4a_bar_stool#1.seat0, 27 min]
-20:36:09 [street_exterior] Amy appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
-20:36:09 [street_exterior] Amy walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
-20:36:18 [street_exterior] Amy leaves by door -> lobby (with Bernadette, Howard, Leonard)
-20:36:21 [lobby] Amy appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
-20:36:21 [lobby] Amy walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
-20:36:28 [lobby] Amy leaves by stairs -> floor4 (with Bernadette, Howard, Leonard)
+20:35:37 [floor4] Howard heckles from a stool [4a_bar_stool#0.seat0, 31 min]
+20:35:40 [floor4] Sheldon reflects: Good day overall. Tonight with everyone, Amy included, is the part I was looking forward to.
+20:36:06 [street_exterior] Amy appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
+20:36:06 [street_exterior] Amy walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
+20:36:15 [street_exterior] Amy leaves by door -> lobby (with Bernadette, Howard, Leonard)
+20:36:18 [lobby] Amy appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
+20:36:18 [lobby] Amy walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
+20:36:25 [lobby] Amy leaves by stairs -> floor4 (with Howard, Bernadette, Leonard)
 20:36:30 [floor4] Leonard appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:36:30 [floor4] Leonard walks: boots up the console (5.6 m)
 20:36:31 [floor4] Leonard goes through the 4A front door
 20:36:37 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 3 min]
-20:37:28 [floor4] Amy appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-20:37:28 [floor4] Amy walks: sits beside Sheldon (8.2 m)
-20:37:30 [floor4] Amy goes through the 4A front door
-20:37:40 [floor4] Sheldon reflects: Leonard keeps turning up in my day (roommate and driver; relies on him more than he admits). I should make real time for Leonard tonight.
-20:37:40 [floor4] Amy sits beside Sheldon [4a_couch#0.seat2, 37 min]
+20:37:25 [floor4] Amy appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
+20:37:25 [floor4] Amy walks: takes notes at the island (8.6 m)
+20:37:27 [floor4] Amy goes through the 4A front door
+20:37:38 [floor4] Amy takes notes at the island [4a_kitchen_island#0.stool0, 18 min]
+20:37:46 [rest_amber_slice] Penny walks: picks up drinks (1.5 m)
+20:37:48 [rest_amber_slice] Penny picks up drinks [rest_bar_counter#0.bartend, 5 min]
 20:38:07 [street_exterior] Raj appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
 20:38:07 [street_exterior] Raj walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
 20:38:16 [street_exterior] Raj leaves by door -> lobby (with Leonard, Amy)
 20:38:19 [lobby] Raj appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
 20:38:19 [lobby] Raj walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
+20:38:24 [floor4] -- conversation: Amy, Sheldon, Bernadette on 'gamenight' at apartment 4A
+20:38:24 [floor4] Amy: "Hello, Sheldon. My amygdala registered your arrival as a positive event."
 20:38:26 [lobby] Raj leaves by stairs -> floor4 (with Leonard, Amy)
+20:38:30 [floor4] Sheldon: "I am not competitive. I simply prefer the outcome where I win."
+20:38:35 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
+20:38:41 [floor4] Bernadette: "Howard, sit. You're my partner and we are winning."
+20:38:46 [floor4] Amy: "Sheldon and I are an unbeatable dyad."
+20:38:50 [floor4] Sheldon: "This conversation has reached its natural conclusion."
 20:39:26 [floor4] Raj appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-20:39:26 [floor4] Raj walks: hosts snacks at the island (8.6 m)
+20:39:26 [floor4] Raj walks: hosts snacks at the island (12.2 m)
 20:39:28 [floor4] Raj goes through the 4A front door
 20:39:37 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 4 min]
-20:39:39 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool0, 31 min]
-20:39:41 [floor4] Leonard reflects: Pattern: wherever I go today, Sheldon is nearby. Coincidence, or I like it that way.
-20:42:16 [rest_amber_slice] Penny walks: serves a table (9.6 m)
-20:42:27 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 4 min]
-20:43:16 [floor4] -- conversation: Raj, Leonard, Bernadette on 'science' at apartment 4A
-20:43:16 [floor4] Raj: "Namaste, Leonard. Got a minute for a fun fact?"
-20:43:20 [floor4] Leonard: "Experimentalists do the real work. I'll say it."
-20:43:25 [floor4] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
-20:43:30 [floor4] Bernadette: "The bacteria in your kitchen sponge would astonish you. And not in a good way."
-20:43:37 [floor4] Raj: "Did you know some stars wander alone through the galaxy? Rogue stars. Like me before you guys."
-20:43:44 [floor4] Leonard: "The interferometer is basically a very expensive mood ring."
-20:43:45 [floor4] Leonard *glasses push*
-20:43:50 [floor4] Raj: "I'll text you a star chart."
-20:44:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
-20:46:04 [floor4] -- conversation: Leonard, Sheldon, Amy on 'gamenight' at apartment 4A
+20:39:43 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool1, 25 min]
+20:41:16 [floor4] -- conversation: Raj, Howard, Bernadette on 'gamenight' at apartment 4A
+20:41:16 [floor4] Raj: "Namaste, Howard. Got a minute for a fun fact?"
+20:41:20 [floor4] Howard: "Strategy tip: never trust a physicist with the dice."
+20:41:25 [floor4] Raj: "If I lose, I'm lying down on the floor for a while."
+20:41:30 [floor4] Bernadette: "Sweet reminder: I don't lose at games."
+20:41:35 [floor4] Raj: "I made samosa bites shaped like planets!"
+20:41:39 [floor4] Howard: "I made a new expansion deck. It's balanced. Totally balanced."
+20:41:45 [floor4] Raj: "Okay bye, this was lovely!"
+20:42:48 [rest_amber_slice] Penny walks: takes an order (6.0 m)
+20:42:52 [rest_amber_slice] Penny goes through the kitchen door
+20:42:55 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 6 min]
+20:43:37 [floor4] Leonard walks: plays co-op on the couch (7.7 m)
+20:43:48 [floor4] Leonard plays co-op on the couch [4a_couch#0.seat1, 63 min]
+20:46:04 [floor4] -- conversation: Leonard, Sheldon, Bernadette on 'gamenight' at apartment 4A
 20:46:04 [floor4] Leonard: "Hey Sheldon, got a second?"
-20:46:04 [floor4] Leonard *glasses push*
-20:46:07 [floor4] Sheldon: "I am not competitive. I simply prefer the outcome where I win."
-20:46:13 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
-20:46:19 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
-20:46:27 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 6 min]
-20:48:20 [floor4] -- conversation: Bernadette, Sheldon on 'gamenight' at apartment 4A
-20:48:20 [floor4] Bernadette: "Oh, Sheldon, perfect. I need a second opinion that agrees with me."
-20:48:25 [floor4] Sheldon: "The rules are on the whiteboard. Read them twice."
-20:48:30 [floor4] Bernadette: "Sweet reminder: I don't lose at games."
-20:48:35 [floor4] Sheldon: "I calculate a sixty-two percent chance you're joking."
-20:48:40 [floor4] Bernadette: "Okay! Bye! Do what I said."
-20:49:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
-20:50:16 [floor4] -- conversation: Raj, Sheldon, Howard on 'gamenight' at apartment 4A
-20:50:16 [floor4] Raj: "Sheldon! Oh, it's like a comet showing up right on schedule."
-20:50:21 [floor4] Sheldon: "Fascinating. Unhelpful, but fascinating."
-20:50:25 [floor4] Raj: "If I lose, I'm lying down on the floor for a while."
-20:50:30 [floor4] Howard: "Strategy tip: never trust a physicist with the dice."
-20:50:36 [floor4] Raj: "See you later, space cowboy."
-20:52:24 [floor4] -- conversation: Amy, Howard, Raj on 'gamenight' at apartment 4A
-20:52:24 [floor4] Amy: "Greetings, Howard. I'm conducting a casual-conversation trial. You're in it."
-20:52:27 [rest_amber_slice] Penny walks: takes an order (9.7 m)
-20:52:30 [floor4] Howard: "I made a new expansion deck. It's balanced. Totally balanced."
-20:52:36 [floor4] Amy: "Sheldon and I are an unbeatable dyad."
-20:52:38 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 9 min]
-20:52:40 [floor4] Raj: "I made samosa bites shaped like planets!"
-20:52:44 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
-20:52:50 [floor4] Howard: "See, that's why they give the hard stuff to engineers."
-20:52:55 [floor4] Amy: "Farewell. This interaction was a success."
-20:54:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 4 min]
-20:55:20 [floor4] -- conversation: Bernadette, Howard, Amy on 'gamenight' at apartment 4A
-20:55:20 [floor4] Bernadette: "Hiii Howard! Quick thing, and then you're going to do what I say."
-20:55:25 [floor4] Howard: "Respectfully, my robot disagrees."
-20:55:29 [floor4] Bernadette: "Howard, sit. You're my partner and we are winning."
-20:55:34 [floor4] Amy: "My prefrontal cortex finds that compelling."
-20:55:39 [floor4] Bernadette: "Byeee. Love you. Don't be late."
-20:58:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 3 min]
-21:01:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
-21:01:38 [rest_amber_slice] Penny walks: enters orders (11.5 m)
-21:01:51 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 10 min]
-21:02:43 [floor4] Howard walks: heckles from a stool (5.0 m)
-21:02:51 [floor4] Howard heckles from a stool [4a_bar_stool#0.seat0, 34 min]
-21:06:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 4 min]
-21:07:12 [floor4] -- conversation: Howard, Leonard on 'work' at apartment 4A
-21:07:12 [floor4] Howard: "Well, if it isn't Leonard. Hold that thought, I'm about to be impressive."
-21:07:18 [floor4] Leonard: "I think the detector works. I'm scared to touch it."
-21:07:18 [floor4] Leonard *sigh shrug*
+20:46:07 [floor4] Sheldon: "The rules are on the whiteboard. Read them twice."
+20:46:12 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
+20:46:19 [floor4] Bernadette: "Byeee. Love you. Don't be late."
+20:48:12 [floor4] -- conversation: Howard, Sheldon, Leonard on 'plans' at apartment 4A
+20:48:12 [floor4] Howard: "Well, if it isn't Sheldon. Hold that thought, I'm about to be impressive."
+20:48:18 [floor4] Sheldon: "I'll allow it, with a footnote."
+20:48:22 [floor4] Howard: "Zing. I'll be here all week."
+20:48:25 [floor4] Leonard: "I'll drive. Sheldon, you're not touching the radio."
+20:48:30 [floor4] Howard: "Respectfully, my robot disagrees."
+20:48:34 [floor4] Sheldon: "I calculate a sixty-two percent chance you're joking."
+20:48:55 [rest_amber_slice] Penny walks: plates cheesecake (7.5 m)
+20:48:55 [rest_amber_slice] Penny goes through the kitchen door
+20:49:03 [rest_amber_slice] Penny plates cheesecake [rest_cake_display#0.serve_slice, 5 min]
+20:51:04 [floor4] -- conversation: Leonard, Amy on 'gamenight' at apartment 4A
+20:51:04 [floor4] Leonard: "Oh, hi Amy. How's your day going so far?"
+20:51:06 [floor4] Amy reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
+20:51:08 [floor4] Amy: "My prefrontal cortex finds that compelling."
+20:51:13 [floor4] Leonard: "Who brought snacks? Raj, I love you."
+20:51:17 [floor4] Amy: "I'll log this as a bonding event."
+20:54:03 [rest_amber_slice] Penny walks: takes an order (12.5 m)
+20:54:12 [floor4] -- conversation: Howard, Amy on 'memory' at apartment 4A
+20:54:12 [floor4] Howard: "Hey Amy, quick question, zero theory involved."
+20:54:16 [floor4] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
+20:54:17 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 7 min]
+20:54:22 [floor4] Howard: "Little bird told me you took notes at the island. The bird was me."
+20:54:28 [floor4] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
+20:54:33 [floor4] Howard: "Classic theorist move."
+20:54:37 [floor4] Amy: "Noted for my field journal."
+20:54:40 [floor4] Howard: "Gotta go, the robot misses me."
+20:55:40 [floor4] Amy walks: sits beside Sheldon (3.0 m)
+20:55:46 [floor4] Amy sits beside Sheldon [4a_couch#0.seat2, 58 min]
+20:59:24 [floor4] -- conversation: Amy, Raj on 'science' at apartment 4A
+20:59:24 [floor4] Amy: "Raj! Best-friend status check: we're still best friends, correct?"
+20:59:29 [floor4] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
+20:59:35 [floor4] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
+20:59:41 [floor4] Raj: "Did you know some stars wander alone through the galaxy? Rogue stars. Like me before you guys."
+20:59:48 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
+21:01:17 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 5 min]
+21:04:47 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool1, 25 min]
+21:06:17 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 6 min]
+21:06:41 [floor4] Howard heckles from a stool [4a_bar_stool#0.seat0, 29 min]
+21:07:12 [floor4] -- conversation: Howard, Raj, Bernadette on 'work' at apartment 4A
+21:07:12 [floor4] Howard: "Raj! Engineering update, very exciting, try to keep up."
+21:07:17 [floor4] Raj: "I found a variable star that flickers like it's nervous. Relatable."
 21:07:23 [floor4] Howard reflects: Raj keeps turning up in my day (best friend). I should make real time for Raj tonight.
 21:07:23 [floor4] Howard: "The rover drove straight for ten whole metres. Applause welcome."
-21:07:28 [floor4] Leonard: "Okay, I should get back to it."
-21:10:14 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
-21:10:41 [floor4] Raj walks: hosts snacks at the island (5.0 m)
-21:10:49 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool1, 23 min]
-21:11:51 [rest_amber_slice] Penny walks: serves a table (10.1 m)
-21:12:03 [rest_amber_slice] Penny serves a table [rest_table_2top#3.serve, 6 min]
-21:13:04 [floor4] -- conversation: Leonard, Sheldon, Bernadette on 'memory' at apartment 4A
-21:13:04 [floor4] Leonard: "Hey. You look like you have news, Sheldon."
-21:13:08 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
-21:13:14 [floor4] Leonard: "Wait, earlier you game night in your spot? Huh."
-21:13:19 [floor4] Bernadette: "Aww. No."
-21:13:21 [floor4] Leonard: "Ha. Yeah, that tracks."
-21:13:22 [floor4] Leonard *sigh shrug*
-21:13:25 [floor4] Sheldon: "Your reasoning has a hole you could drive a rover through."
-21:13:30 [floor4] Leonard: "Talk later? Cool."
-21:13:30 [floor4] Leonard *glasses push*
-21:14:44 [floor4] Amy sits beside Sheldon [4a_couch#0.seat2, 56 min]
-21:15:14 [floor4] Leonard walks: plays co-op on the couch (7.7 m)
-21:15:25 [floor4] Leonard plays co-op on the couch [4a_couch#0.seat1, 62 min]
-21:17:04 [floor4] -- conversation: Leonard, Amy on 'science' at apartment 4A
-21:17:04 [floor4] Leonard: "Oh, hi Amy. How's your day going so far?"
-21:17:06 [floor4] Amy reflects: I've talked with Sheldon 5 time(s) today. That matters to me more than I'd say out loud.
-21:17:08 [floor4] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
-21:17:12 [floor4] -- conversation: Howard, Sheldon on 'plans' at apartment 4A
-21:17:12 [floor4] Howard: "Sheldon! Engineering update, very exciting, try to keep up."
-21:17:14 [floor4] Leonard: "Experimentalists do the real work. I'll say it."
-21:17:17 [floor4] Sheldon: "That is incorrect, but in an interesting way."
-21:17:19 [floor4] Amy: "I mapped a monkey's response to cheese. Very similar to Penny's."
-21:17:22 [floor4] Howard: "Ooh, now we're talking."
-21:17:24 [floor4] Leonard: "Alright, I'm gonna go before Sheldon finds me."
-21:17:25 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
-21:17:31 [floor4] Howard: "Classic theorist move."
-21:17:34 [floor4] Sheldon: "Goodbye. I'll send a summary."
-21:18:03 [rest_amber_slice] Penny walks: takes an order (9.7 m)
-21:18:14 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 7 min]
-21:18:20 [floor4] -- conversation: Bernadette, Raj on 'memory' at apartment 4A
-21:18:20 [floor4] Bernadette: "Raj, sweetie! How are you? Good. Now listen."
-21:18:24 [floor4] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
-21:18:25 [floor4] Bernadette reflects: Good day overall. Tonight with everyone, Howard included, is the part I was looking forward to.
-21:18:29 [floor4] Bernadette: "So, you hosted snacks at the island? Interesting choice."
-21:18:35 [floor4] Raj: "Oh my god, yes, exactly!"
-21:18:38 [floor4] Bernadette: "Alright, I've got cultures to boss around."
-21:20:24 [floor4] -- conversation: Amy, Sheldon, Howard on 'plans' at apartment 4A
-21:20:24 [floor4] Amy: "Hello, Sheldon. My amygdala registered your arrival as a positive event."
-21:20:30 [floor4] Sheldon: "I'll allow it, with a footnote."
-21:20:34 [floor4] Amy: "Interesting. Repeat it slower."
-21:20:37 [floor4] Howard: "I'll bring the new expansion tonight. Prepare."
-21:20:42 [floor4] Amy: "Agreed. Wholeheartedly. Clinically."
-21:20:46 [floor4] Sheldon: "I have to go; my schedule is not a suggestion."
-21:23:16 [floor4] -- conversation: Raj, Howard, Amy on 'gamenight' at apartment 4A
-21:23:16 [floor4] Raj: "Howard, hi! Okay, I'll talk slower this time."
-21:23:20 [floor4] Howard: "Zing. I'll be here all week."
-21:23:24 [floor4] Raj: "That's beautiful, like a binary star system."
-21:23:29 [floor4] Amy: "As a scientist and your friend, I disagree."
-21:23:33 [floor4] Raj: "Dude, that's the nicest thing anyone's said all week."
-21:23:38 [floor4] Howard: "Strategy tip: never trust a physicist with the dice."
-21:23:43 [floor4] Raj: "Okay bye, this was lovely!"
-21:24:44 [floor4] Raj reflects: Pattern: wherever I go today, Howard is nearby. Coincidence, or I like it that way.
-21:25:14 [rest_amber_slice] Penny walks: enters orders (11.5 m)
-21:25:27 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 7 min]
-21:27:20 [floor4] -- conversation: Bernadette, Howard, Amy on 'gamenight' at apartment 4A
-21:27:20 [floor4] Bernadette: "Hey Howard! Did you eat? You should eat."
-21:27:24 [floor4] Howard: "I made a new expansion deck. It's balanced. Totally balanced."
-21:27:30 [floor4] Bernadette: "Cute. Now do it properly."
-21:27:33 [floor4] Amy: "I'll log this as a bonding event."
-21:32:27 [rest_amber_slice] Penny walks: takes an order (11.5 m)
-21:32:40 [rest_amber_slice] Penny takes an order [rest_booth#0.take_order, 8 min]
-21:33:51 [floor4] Raj walks: hosts snacks at the island (5.0 m)
-21:33:59 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool0, 34 min]
+21:07:28 [floor4] Bernadette: "Okay! Bye! Do what I said."
+21:09:00 [floor4] -- conversation: Sheldon, Amy on 'gamenight' at apartment 4A
+21:09:00 [floor4] Sheldon: "For the record, Amy, I was about to start a conversation myself."
+21:09:05 [floor4] Amy: "Agreed. Wholeheartedly. Clinically."
+21:09:09 [floor4] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
+21:09:14 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
+21:09:20 [floor4] Sheldon: "That is incorrect, but in an interesting way."
+21:09:24 [floor4] Amy: "Farewell. This interaction was a success."
+21:12:17 [rest_amber_slice] Penny walks: enters orders (11.5 m)
+21:12:30 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 6 min]
+21:13:04 [floor4] -- conversation: Leonard, Bernadette on 'memory' at apartment 4A
+21:13:04 [floor4] Leonard: "Ha. Yeah, that tracks."
+21:13:05 [floor4] Bernadette reflects: Good day overall. Tonight with everyone, Howard included, is the part I was looking forward to.
+21:13:07 [floor4] Bernadette: "Cute. Now do it properly."
+21:13:11 [floor4] Leonard: "I saw that you played to win from the armchair. Everything okay?"
+21:13:16 [floor4] Bernadette: "We are not doing that."
+21:13:20 [floor4] Leonard: "Okay, okay, fair point."
+21:13:23 [floor4] Bernadette: "Ha! Okay, that's funny."
+21:13:27 [floor4] Leonard: "Okay, I should get back to it."
+21:17:04 [floor4] -- conversation: Leonard, Sheldon, Howard on 'science' at apartment 4A
+21:17:04 [floor4] Leonard: "Sheldon! Perfect timing, I need a sanity check."
+21:17:08 [floor4] Sheldon: "String theory is not stuck. It's resting."
+21:17:13 [floor4] Leonard: "Experimentalists do the real work. I'll say it."
+21:17:18 [floor4] Howard: "Theory is nice until you need it to survive launch vibrations."
+21:17:23 [floor4] Leonard: "Talk later? Cool."
+21:18:20 [floor4] -- conversation: Bernadette, Sheldon, Amy on 'memory' at apartment 4A
+21:18:20 [floor4] Bernadette: "Hiii Sheldon! Quick thing, and then you're going to do what I say."
+21:18:25 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
+21:18:30 [rest_amber_slice] Penny walks: serves a table (7.7 m)
+21:18:31 [floor4] Bernadette: "So, you game night in your spot? Interesting choice."
+21:18:36 [floor4] Amy: "Interesting. Repeat it slower."
+21:18:39 [rest_amber_slice] Penny serves a table [rest_table_2top#1.serve, 8 min]
+21:18:40 [floor4] Bernadette: "Honey, I've cultured nicer things than that idea."
+21:24:24 [floor4] -- conversation: Amy, Leonard, Howard on 'gamenight' at apartment 4A
+21:24:24 [floor4] Amy: "Hello, Leonard. My amygdala registered your arrival as a positive event."
+21:24:30 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
+21:24:36 [floor4] Amy: "Sheldon and I are an unbeatable dyad."
+21:24:40 [floor4] Howard: "Strategy tip: never trust a physicist with the dice."
+21:24:41 [floor4] Leonard reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
+21:24:46 [floor4] Amy: "As a scientist and your friend, I disagree."
+21:24:50 [floor4] Leonard: "That's... actually a good idea."
+21:24:54 [floor4] Amy: "I'll log this as a bonding event."
+21:25:16 [floor4] -- conversation: Raj, Amy on 'memory' at apartment 4A
+21:25:16 [floor4] Raj: "Amy! Oh, it's like a comet showing up right on schedule."
+21:25:21 [floor4] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
+21:25:26 [floor4] Raj: "Earlier, you sat beside Sheldon. That's so you."
+21:25:31 [floor4] Amy: "Noted for my field journal."
+21:26:39 [rest_amber_slice] Penny walks: serves a table (7.8 m)
+21:26:48 [rest_amber_slice] Penny serves a table [rest_table_2top#2.serve, 5 min]
+21:29:49 [floor4] Raj walks: hosts snacks at the island (5.0 m)
+21:29:57 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool0, 24 min]
+21:31:48 [rest_amber_slice] Penny walks: takes an order (8.5 m)
+21:31:57 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 7 min]
+21:32:00 [floor4] -- conversation: Sheldon, Raj on 'gamenight' at apartment 4A
+21:32:00 [floor4] Sheldon: "Ah, Raj. I have prepared three topics, ranked by importance."
+21:32:04 [floor4] Raj reflects: Howard keeps turning up in my day (best friend). I should make real time for Howard tonight.
+21:32:05 [floor4] Raj: "Wait, wait, I have a metaphor for this."
+21:32:09 [floor4] Sheldon: "I am not competitive. I simply prefer the outcome where I win."
+21:32:15 [floor4] Raj: "Oh my god, yes, exactly!"
+21:32:18 [floor4] Sheldon: "Goodbye. I'll send a summary."
+21:34:12 [floor4] -- conversation: Howard, Raj, Bernadette on 'gamenight' at apartment 4A
+21:34:12 [floor4] Howard: "Well, if it isn't Raj. Hold that thought, I'm about to be impressive."
+21:34:18 [floor4] Raj: "Ha, cosmic."
+21:34:20 [floor4] Howard: "I made a new expansion deck. It's balanced. Totally balanced."
+21:34:26 [floor4] Bernadette: "Aww. No."
+21:34:29 [floor4] Howard: "I've done harder things in a clean room wearing mittens."
+21:34:34 [floor4] Raj: "I'll text you a star chart."
 21:35:40 [floor4] Bernadette plays to win from the armchair [4a_armchair#0.seat0, 54 min]
-21:36:55 [floor4] Howard heckles from a stool [4a_bar_stool#0.seat0, 31 min]
-21:40:40 [rest_amber_slice] Penny walks: serves a table (4.5 m)
-21:40:46 [rest_amber_slice] Penny serves a table [rest_table_2top#0.serve, 6 min]
-21:42:20 [floor4] -- conversation: Bernadette, Sheldon, Leonard on 'gamenight' at apartment 4A
-21:42:20 [floor4] Bernadette: "Oh, Sheldon, perfect. I need a second opinion that agrees with me."
-21:42:25 [floor4] Sheldon: "I am not competitive. I simply prefer the outcome where I win."
-21:42:31 [floor4] Bernadette: "Sweet reminder: I don't lose at games."
-21:42:35 [floor4] Leonard: "Who brought snacks? Raj, I love you."
-21:42:39 [floor4] Bernadette: "Okay! Bye! Do what I said."
+21:35:43 [floor4] Howard walks: heckles from a stool (5.0 m)
+21:35:51 [floor4] Howard heckles from a stool [4a_bar_stool#1.seat0, 34 min]
+21:38:57 [rest_amber_slice] Penny walks: enters orders (6.5 m)
+21:38:57 [rest_amber_slice] Penny goes through the kitchen door
+21:39:04 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 5 min]
+21:43:00 [floor4] -- conversation: Sheldon, Leonard on 'gamenight' at apartment 4A
+21:43:00 [floor4] Sheldon: "Leonard. You are 7 minutes off your usual position. I noticed."
+21:43:05 [floor4] Leonard: "Let's not make this a whole thing."
+21:43:09 [floor4] Sheldon: "The rules are on the whiteboard. Read them twice."
+21:43:14 [floor4] Leonard: "Who brought snacks? Raj, I love you."
+21:43:18 [floor4] Sheldon: "I have to go; my schedule is not a suggestion."
+21:44:04 [rest_amber_slice] Penny enters orders [rest_server_station#0.enter_order, 8 min]
 21:46:00 [rest_amber_slice] Penny plan -> late game night in 4A (floor4)
-21:46:00 [rest_amber_slice] Penny walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (6.8 m)
-21:46:06 [rest_amber_slice] Penny goes through the glass door
-21:46:08 [rest_amber_slice] Penny leaves by sidewalk -> street_exterior
-21:46:16 [floor4] -- conversation: Raj, Sheldon, Leonard on 'memory' at apartment 4A
-21:46:16 [floor4] Raj: "Namaste, Sheldon. Got a minute for a fun fact?"
-21:46:20 [floor4] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-21:46:25 [floor4] Raj: "Earlier, you game night in your spot. That's so you."
-21:46:30 [floor4] Leonard: "I'll drive. Sheldon, you're not touching the radio."
-21:46:35 [floor4] Raj: "Ha, cosmic."
-21:46:38 [floor4] Sheldon: "This conversation has reached its natural conclusion."
-21:47:24 [floor4] -- conversation: Amy, Sheldon, Leonard on 'gamenight' at apartment 4A
-21:47:24 [floor4] Amy: "Sheldon! Best-friend status check: we're still best friends, correct?"
-21:47:30 [floor4] Sheldon: "The rules are on the whiteboard. Read them twice."
-21:47:34 [floor4] Amy: "Sheldon and I are an unbeatable dyad."
-21:47:39 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
-21:47:45 [floor4] Amy: "Farewell. This interaction was a success."
+21:46:00 [rest_amber_slice] Penny walks: heads out (sidewalk to 2311 building entrance + street (Pasadena)) (13.8 m)
+21:46:13 [rest_amber_slice] Penny goes through the glass door
+21:46:15 [rest_amber_slice] Penny leaves by sidewalk -> street_exterior
+21:46:16 [floor4] -- conversation: Raj, Leonard on 'memory' at apartment 4A
+21:46:16 [floor4] Raj: "Namaste, Leonard. Got a minute for a fun fact?"
+21:46:20 [floor4] -- conversation: Bernadette, Sheldon, Amy on 'memory' at apartment 4A
+21:46:20 [floor4] Bernadette: "Hey Sheldon! Did you eat? You should eat."
+21:46:20 [floor4] Leonard: "I'll drive. Sheldon, you're not touching the radio."
+21:46:24 [floor4] Sheldon: "Fascinating. Unhelpful, but fascinating."
+21:46:25 [floor4] Raj: "I noticed you played co-op on the couch, and I've been thinking about it all day!"
+21:46:28 [floor4] Bernadette: "I saw you game night in your spot. We'll talk about that."
+21:46:32 [floor4] Leonard: "Honestly? Same."
+21:46:34 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
+21:46:35 [floor4] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
+21:46:40 [floor4] Leonard: "Alright, I'm gonna go before Sheldon finds me."
+21:47:10 [floor4] Leonard plays co-op on the couch [4a_couch#0.seat1, 41 min]
 21:49:35 [floor4] Sheldon game night in his spot [4a_couch#0.seat0, 56 min]
-21:51:08 [street_exterior] Penny appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
-21:51:08 [street_exterior] Penny walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
-21:51:12 [floor4] -- conversation: Howard, Sheldon, Leonard on 'gamenight' at apartment 4A
-21:51:12 [floor4] Howard: "Hey Sheldon, quick question, zero theory involved."
-21:51:16 [floor4] Sheldon: "I calculate a sixty-two percent chance you're joking."
-21:51:17 [street_exterior] Penny leaves by door -> lobby
-21:51:20 [lobby] Penny appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
-21:51:20 [lobby] Penny walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
-21:51:21 [floor4] Leonard reflects: Good day overall. Tonight with everyone, Sheldon included, is the part I was looking forward to.
-21:51:22 [floor4] Howard: "See, that's why they give the hard stuff to engineers."
-21:51:27 [lobby] Penny leaves by stairs -> floor4
-21:51:27 [floor4] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
-21:51:32 [floor4] Howard: "I've done harder things in a clean room wearing mittens."
-21:51:37 [floor4] Sheldon: "Fascinating. Unhelpful, but fascinating."
-21:51:41 [floor4] Howard: "Gotta go, the robot misses me."
-21:52:27 [floor4] Penny appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
-21:52:27 [floor4] Penny walks: wanders (3.1 m)
-21:53:24 [floor4] -- conversation: Amy, Howard, Raj on 'gamenight' at apartment 4A
-21:53:24 [floor4] Amy: "Howard. I have a hypothesis about your day."
-21:53:28 [floor4] Howard: "Respectfully, my robot disagrees."
-21:53:32 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
-21:53:38 [floor4] Raj: "If I lose, I'm lying down on the floor for a while."
-21:53:43 [floor4] Amy: "Noted for my field journal."
-21:53:46 [floor4] Howard: "Ooh, now we're talking."
-21:53:50 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
-21:54:14 [floor4] Penny walks: wanders (3.6 m)
-21:55:37 [floor4] Penny walks: wanders (2.8 m)
-21:56:21 [floor4] Penny walks: wanders (1.4 m)
-21:59:35 [floor4] Penny walks: wanders (3.0 m)
-22:00:09 [floor4] Penny walks: wanders (5.0 m)
-22:02:15 [floor4] Penny walks: wanders (4.2 m)
-22:02:15 [floor4] Penny goes through the 4B front door
-22:03:16 [floor4] -- conversation: Raj, Bernadette on 'work' at apartment 4A
-22:03:16 [floor4] Raj: "Bernadette! Oh, it's like a comet showing up right on schedule."
-22:03:21 [floor4] Bernadette: "I got the quarterly numbers in early. Everyone's terrified of me. It's great."
-22:03:28 [floor4] Raj: "I found a variable star that flickers like it's nervous. Relatable."
-22:03:34 [floor4] Bernadette: "My cultures are growing beautifully. That's a threat to someone, somewhere."
-22:03:40 [floor4] Raj: "My data finally reduced. It looks like a smudge, but a significant smudge."
-22:03:46 [floor4] Bernadette: "Byeee. Love you. Don't be late."
-22:04:12 [floor4] Penny walks: wanders (3.2 m)
-22:05:40 [floor4] Sheldon reflects: I've talked with Amy a few time(s) today. That matters to me more than I'd say out loud.
-22:06:01 [floor4] Penny walks: wanders (2.8 m)
-22:07:16 [floor4] Penny walks: wanders (4.8 m)
-22:07:18 [floor4] Penny goes through the 4B front door
-22:07:57 [floor4] Howard walks: heckles from a stool (5.0 m)
-22:08:03 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool0, 24 min]
-22:08:05 [floor4] Howard heckles from a stool [4a_bar_stool#1.seat0, 35 min]
-22:08:18 [floor4] Penny walks: wanders (5.0 m)
-22:08:19 [floor4] Penny goes through the 4B front door
-22:08:24 [floor4] -- conversation: Amy, Bernadette on 'gamenight' at apartment 4A
-22:08:24 [floor4] Amy: "Hello, Bernadette. My amygdala registered your arrival as a positive event."
-22:08:30 [floor4] Bernadette: "Howard, sit. You're my partner and we are winning."
-22:08:35 [floor4] Amy: "Agreed. Wholeheartedly. Clinically."
-22:08:39 [floor4] Bernadette: "Sure, if you want to be wrong."
-22:08:43 [floor4] Amy: "My prefrontal cortex finds that compelling."
-22:09:44 [floor4] Penny walks: wanders (3.0 m)
-22:10:39 [floor4] Penny walks: wanders (2.0 m)
-22:10:39 [floor4] Penny goes through the 4B front door
-22:10:48 [floor4] Amy sits beside Sheldon [4a_couch#0.seat2, 51 min]
-22:11:48 [floor4] Penny walks: wanders (1.0 m)
-22:13:14 [floor4] Penny walks: wanders (4.2 m)
-22:14:00 [floor4] Penny walks: wanders (4.0 m)
-22:14:02 [floor4] Penny goes through the 4B front door
-22:14:42 [floor4] Penny walks: wanders (3.0 m)
-22:14:42 [floor4] Penny goes through the 4B front door
-22:16:33 [floor4] Penny walks: wanders (4.0 m)
-22:16:34 [floor4] Penny goes through the 4B front door
+21:49:40 [floor4] Sheldon reflects: Good day overall. Tonight with everyone, Amy included, is the part I was looking forward to.
+21:51:12 [floor4] -- conversation: Howard, Amy on 'gamenight' at apartment 4A
+21:51:12 [floor4] Howard: "Hey Amy, quick question, zero theory involved."
+21:51:15 [street_exterior] Penny appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
+21:51:15 [street_exterior] Penny walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
+21:51:16 [floor4] Amy: "That released a measurable amount of dopamine."
+21:51:21 [floor4] Howard: "Zing. I'll be here all week."
+21:51:23 [street_exterior] Penny leaves by door -> lobby
+21:51:25 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
+21:51:26 [lobby] Penny appears at 2311 lobby (ground floor) (door from 2311 building entrance + street (Pasadena))
+21:51:26 [lobby] Penny walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (5.8 m)
+21:51:30 [floor4] Howard: "Classic theorist move."
+21:51:33 [lobby] Penny leaves by stairs -> floor4
+21:51:34 [floor4] Amy: "My prefrontal cortex finds that compelling."
+21:51:38 [floor4] Howard: "Later, buddy."
+21:52:33 [floor4] Penny appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
+21:52:33 [floor4] Penny walks: wanders (3.9 m)
+21:52:35 [floor4] Penny goes through the 4B front door
+21:53:50 [floor4] Amy sits beside Sheldon [4a_couch#0.seat2, 44 min]
+21:54:01 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool0, 34 min]
+21:54:03 [floor4] Penny walks: wanders (1.0 m)
+21:55:04 [floor4] -- conversation: Leonard, Bernadette, Amy on 'gamenight' at apartment 4A
+21:55:04 [floor4] Leonard: "Hey. You look like you have news, Bernadette."
+21:55:08 [floor4] Bernadette: "Sweet reminder: I don't lose at games."
+21:55:13 [floor4] Leonard: "Ha. Yeah, that tracks."
+21:55:16 [floor4] Amy: "Agreed. Wholeheartedly. Clinically."
+21:55:20 [floor4] Leonard: "Okay, I should get back to it."
+21:55:47 [floor4] Penny walks: wanders (1.0 m)
+21:57:16 [floor4] Penny walks: wanders (2.0 m)
+21:58:41 [floor4] Penny walks: wanders (3.7 m)
+21:58:41 [floor4] Penny goes through the 4B front door
+22:00:24 [floor4] Penny walks: wanders (2.0 m)
+22:01:00 [floor4] -- conversation: Sheldon, Raj on 'memory' at apartment 4A
+22:01:00 [floor4] Sheldon: "Technically this counts as our scheduled small talk, Raj."
+22:01:05 [floor4] Raj: "I can host next week! I'm planning a theme."
+22:01:09 [floor4] Sheldon: "Earlier I observed you hosted snacks at the island. I have questions."
+22:01:15 [floor4] Raj: "See you later, space cowboy."
+22:01:26 [floor4] Penny walks: wanders (3.0 m)
+22:03:10 [floor4] Penny walks: wanders (1.0 m)
+22:04:03 [floor4] Penny walks: wanders (5.4 m)
+22:04:06 [floor4] Penny goes through the 4A front door
+22:04:53 [floor4] Penny walks: wanders (2.2 m)
+22:05:51 [floor4] Penny walks: wanders (3.2 m)
+22:06:37 [floor4] Penny walks: wanders (2.0 m)
+22:08:10 [floor4] Penny walks: wanders (2.2 m)
+22:08:24 [floor4] -- conversation: Amy, Raj on 'gamenight' at apartment 4A
+22:08:24 [floor4] Amy: "Greetings, Raj. I'm conducting a casual-conversation trial. You're in it."
+22:08:26 [floor4] Amy reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
+22:08:30 [floor4] Raj: "If I lose, I'm lying down on the floor for a while."
+22:08:35 [floor4] Amy: "Sheldon and I are an unbeatable dyad."
+22:08:39 [floor4] Raj: "I made samosa bites shaped like planets!"
+22:08:43 [floor4] Amy: "Farewell. This interaction was a success."
+22:09:16 [floor4] Penny walks: wanders (3.2 m)
+22:09:53 [floor4] Howard walks: heckles from a stool (5.0 m)
+22:10:01 [floor4] Howard heckles from a stool [4a_bar_stool#0.seat0, 29 min]
+22:10:10 [floor4] Penny walks: wanders (3.6 m)
+22:10:10 [floor4] Penny goes through the 4B front door
+22:10:12 [floor4] -- conversation: Howard, Sheldon, Leonard on 'gamenight' at apartment 4A
+22:10:12 [floor4] Howard: "Sheldon! Engineering update, very exciting, try to keep up."
+22:10:17 [floor4] Sheldon: "Your reasoning has a hole you could drive a rover through."
+22:10:22 [floor4] Howard: "Ooh, now we're talking."
+22:10:26 [floor4] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+22:10:31 [floor4] Howard: "See, that's why they give the hard stuff to engineers."
+22:10:36 [floor4] Sheldon: "This conversation has reached its natural conclusion."
+22:11:58 [floor4] Penny walks: wanders (1.4 m)
+22:13:38 [floor4] Penny walks: wanders (2.0 m)
+22:14:12 [floor4] -- conversation: Howard, Raj, Bernadette on 'science' at apartment 4A
+22:14:12 [floor4] Howard: "Respectfully, my robot disagrees."
+22:14:16 [floor4] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
+22:14:21 [floor4] Howard: "I put a sensor on the coffee machine. It's sad data."
+22:14:26 [floor4] Bernadette: "The bacteria in your kitchen sponge would astonish you. And not in a good way."
+22:14:32 [floor4] Howard: "Gotta go, the robot misses me."
+22:14:56 [floor4] Penny walks: wanders (4.1 m)
+22:16:42 [floor4] Penny walks: wanders (3.0 m)
+22:16:43 [floor4] Penny goes through the 4B front door
 22:17:00 [floor4] Amy plan -> nightcap at Penny's in 4B (floor4)
 22:17:02 [floor4] Amy walks: sits next to her bestie (14.0 m)
-22:17:04 [floor4] -- conversation: Leonard, Sheldon, Raj on 'gamenight' at apartment 4A
-22:17:04 [floor4] Leonard: "Hey. You look like you have news, Sheldon."
-22:17:08 [floor4] Penny walks: joins game night (12.0 m)
-22:17:08 [floor4] Sheldon: "That is incorrect, but in an interesting way."
+22:17:04 [floor4] -- conversation: Leonard, Raj on 'gamenight' at apartment 4A
+22:17:04 [floor4] Leonard: "Hey Raj, got a second?"
+22:17:07 [floor4] Raj: "Okay, now I'm emotional."
 22:17:08 [floor4] Amy goes through the 4A front door
-22:17:09 [floor4] Penny goes through the 4B front door
-22:17:13 [floor4] Leonard: "Let's not make this a whole thing."
+22:17:10 [floor4] Leonard: "Alright, teams. And Sheldon, you're not allowed to be on a team with yourself."
 22:17:13 [floor4] Amy goes through the 4B front door
-22:17:14 [floor4] Penny goes through the 4A front door
-22:17:17 [floor4] Raj: "I made samosa bites shaped like planets!"
+22:17:17 [floor4] Raj: "Wait, wait, I have a metaphor for this."
 22:17:21 [floor4] Amy sits next to her bestie [4b_couch#0.seat2, 58 min]
-22:17:21 [floor4] Leonard: "Honestly? Same."
-22:17:24 [floor4] Penny joins game night [4a_couch#0.seat2, 35 min]
-22:17:24 [floor4] Sheldon: "Your reasoning has a hole you could drive a rover through."
-22:17:30 [floor4] Leonard: "Okay, I should get back to it."
-22:17:58 [floor4] Leonard plays co-op on the couch [4a_couch#0.seat1, 45 min]
+22:17:21 [floor4] Leonard: "That's... actually a good idea."
+22:17:25 [floor4] Raj: "Dude, that's the nicest thing anyone's said all week."
+22:17:30 [floor4] Leonard: "Talk later? Cool."
 22:18:00 [floor4] Sheldon plan -> nightcap at Penny's in 4B (floor4)
-22:18:00 [floor4] Penny plan -> nightcap at Penny's in 4B (floor4)
 22:18:02 [floor4] Sheldon walks: claims the armchair at Penny's (9.2 m)
-22:18:02 [floor4] Penny walks: pours the wine (19.5 m)
-22:18:03 [floor4] Howard reflects: I've talked with Amy 6 time(s) today. That matters to me more than I'd say out loud.
 22:18:03 [floor4] Sheldon goes through the 4A front door
 22:18:07 [floor4] Sheldon goes through the 4B front door
-22:18:08 [floor4] Penny goes through the 4A front door
-22:18:12 [floor4] Penny goes through the 4B front door
 22:18:15 [floor4] Sheldon claims the armchair at Penny's [4b_armchair_patterned#0.seat0, 34 min]
-22:18:24 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
+22:18:40 [floor4] Penny plan -> nightcap at Penny's in 4B (floor4)
+22:18:40 [floor4] Penny walks: pours the wine (9.7 m)
+22:18:40 [floor4] Penny goes through the 4B front door
+22:18:51 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
 22:19:00 [floor4] Howard plan -> nightcap at Penny's in 4B (floor4)
 22:19:00 [floor4] Raj plan -> nightcap at Penny's in 4B (floor4)
-22:19:02 [floor4] Howard walks: perches at the kitchen bar (20.0 m)
+22:19:02 [floor4] Howard walks: perches at the kitchen bar (16.2 m)
 22:19:02 [floor4] Raj walks: nurses a wine on the armrest (18.2 m)
+22:19:08 [floor4] Howard goes through the 4A front door
 22:19:08 [floor4] Raj goes through the 4A front door
-22:19:12 [floor4] Howard goes through the 4A front door
+22:19:12 [floor4] Howard goes through the 4B front door
 22:19:13 [floor4] Raj goes through the 4B front door
-22:19:16 [floor4] Howard goes through the 4B front door
-22:19:26 [floor4] Howard perches at the kitchen bar [4b_bar_stool#1.seat0, 27 min]
+22:19:22 [floor4] Howard perches at the kitchen bar [4b_bar_stool#1.seat0, 26 min]
+22:19:23 [floor4] Howard reflects: Note to self: Raj seemed busy earlier. Ask how it's going instead of talking about myself.
 22:19:26 [floor4] Raj nurses a wine on the armrest [4b_couch#0.armrest_l, 26 min]
 22:21:08 [floor4] -- conversation: Penny, Howard, Raj on 'memory' at apartment 4B
 22:21:08 [floor4] Penny: "Howard! Okay, talk to me, I need a break."
-22:21:12 [floor4] Howard: "Classic theorist move."
-22:21:15 [floor4] Penny: "Not to be nosy, but you perched at the kitchen bar."
-22:21:20 [floor4] Raj: "I can host next week! I'm planning a theme."
-22:21:25 [floor4] Penny: "Sweetie, I love you, but no."
-22:21:25 [floor4] Penny *hair flip*
-22:21:29 [floor4] Howard: "I'll bring the new expansion tonight. Prepare."
-22:21:33 [floor4] Penny: "Gotta run, hon."
-22:21:34 [floor4] Penny *wine sip*
-22:22:00 [floor4] -- conversation: Sheldon, Howard, Amy on 'work' at apartment 4B
-22:22:00 [floor4] Sheldon: "For the record, Howard, I was about to start a conversation myself."
+22:21:12 [floor4] Howard: "I'll bring the new expansion tonight. Prepare."
+22:21:17 [floor4] Penny: "Not to be nosy, but you perched at the kitchen bar."
+22:21:17 [floor4] Penny *wine sip*
+22:21:22 [floor4] Raj: "That's beautiful, like a binary star system."
+22:21:26 [floor4] Penny: "Fine, you win this one."
+22:21:30 [floor4] Howard: "I've done harder things in a clean room wearing mittens."
+22:21:35 [floor4] Penny: "Okay, love you, bye."
+22:22:00 [floor4] -- conversation: Sheldon, Amy on 'work' at apartment 4B
+22:22:00 [floor4] Sheldon: "Ah, Amy. I have prepared three topics, ranked by importance."
 22:22:00 [floor4] Leonard plan -> nightcap at Penny's in 4B (floor4)
 22:22:00 [floor4] Bernadette plan -> nightcap at Penny's in 4B (floor4)
 22:22:02 [floor4] Leonard walks: nightcap on Penny's couch (14.0 m)
 22:22:02 [floor4] Bernadette walks: sits at the round table (17.2 m)
-22:22:05 [floor4] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
-22:22:06 [floor4] Amy reflects: Pattern: wherever I go today, Howard is nearby. Coincidence, or I like it that way.
+22:22:05 [floor4] Amy: "The neurons I'm imaging fired in a pattern that resembled a smile."
 22:22:07 [floor4] Leonard goes through the 4A front door
 22:22:07 [floor4] Bernadette goes through the 4A front door
-22:22:11 [floor4] Leonard goes through the 4B front door
 22:22:11 [floor4] Sheldon: "My calculation is ninety-eight percent elegant and two percent Leonard's coffee stain."
+22:22:11 [floor4] Leonard goes through the 4B front door
 22:22:12 [floor4] Bernadette goes through the 4B front door
 22:22:18 [floor4] Amy: "I'll log this as a bonding event."
 22:22:20 [floor4] Leonard nightcap on Penny's couch [4b_couch#0.seat1, 51 min]
-22:22:24 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
-22:22:24 [floor4] Raj reflects: I've talked with Howard 3 time(s) today. That matters to me more than I'd say out loud.
+22:22:24 [floor4] Raj reflects: I've talked with Howard 4 time(s) today. That matters to me more than I'd say out loud.
 22:22:25 [floor4] Bernadette sits at the round table [4b_dining_table_cluttered#0.chair0, 20 min]
 22:22:25 [floor4] Bernadette reflects: I've talked with Howard 3 time(s) today. That matters to me more than I'd say out loud.
+22:22:51 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
 22:23:20 [floor4] -- conversation: Bernadette, Sheldon, Leonard on 'memory' at apartment 4B
-22:23:20 [floor4] Bernadette: "Sheldon, sweetie! How are you? Good. Now listen."
-22:23:24 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
-22:23:30 [floor4] Bernadette: "I saw you claimed the armchair at Penny's. We'll talk about that."
-22:23:36 [floor4] Leonard: "Talk later? Cool."
-22:24:16 [floor4] -- conversation: Raj, Amy on 'memory' at apartment 4B
-22:24:16 [floor4] Raj: "Amy, hi! Okay, I'll talk slower this time."
-22:24:20 [floor4] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
-22:24:26 [floor4] Raj: "I noticed you sat next to your bestie, and I've been thinking about it all day!"
-22:24:32 [floor4] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
-22:24:38 [floor4] Raj: "Okay, now I'm emotional."
-22:24:41 [floor4] Amy: "Farewell. This interaction was a success."
-22:26:24 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 3 min]
-22:29:20 [floor4] -- conversation: Bernadette, Penny, Howard on 'work' at apartment 4B
-22:29:20 [floor4] Bernadette: "Hiii Penny! Quick thing, and then you're going to do what I say."
-22:29:24 [floor4] -- conversation: Amy, Leonard on 'science' at apartment 4B
-22:29:24 [floor4] Amy: "Leonard! Best-friend status check: we're still best friends, correct?"
-22:29:25 [floor4] Penny: "Table six asked if the cheesecake was gluten-free. It's cheesecake."
-22:29:26 [floor4] Penny *eye roll*
-22:29:30 [floor4] Leonard: "The interferometer is basically a very expensive mood ring."
-22:29:31 [floor4] Bernadette: "We are not doing that."
-22:29:35 [floor4] Howard: "The rover drove straight for ten whole metres. Applause welcome."
-22:29:35 [floor4] Amy: "Boredom is your brain asking for novelty. Mine is asking for Sheldon."
+22:23:20 [floor4] Bernadette: "Oh, Sheldon, perfect. I need a second opinion that agrees with me."
+22:23:25 [floor4] Sheldon: "Tonight: dinner, then game night. The schedule has been laminated."
+22:23:31 [floor4] Bernadette: "Sure, if you want to be wrong."
+22:23:35 [floor4] Leonard: "Let's not make this a whole thing."
+22:26:24 [floor4] -- conversation: Amy, Leonard, Penny on 'work' at apartment 4B
+22:26:24 [floor4] Amy: "Leonard. I have a hypothesis about your day."
+22:26:28 [floor4] Leonard: "I think the detector works. I'm scared to touch it."
+22:26:33 [floor4] Amy: "I'm borrowing this bench until someone in physics notices. So, indefinitely."
+22:26:40 [floor4] Penny: "I had a callback for a commercial. A yogurt commercial, but still."
+22:26:40 [floor4] Penny *eye roll*
+22:26:41 [floor4] Leonard reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
+22:26:42 [floor4] Penny reflects: Note to self: Leonard seemed busy earlier. Ask how it's going instead of talking about myself.
+22:26:45 [floor4] Amy: "Interesting. Repeat it slower."
+22:26:49 [floor4] Leonard: "Alright, I'm gonna go before Sheldon finds me."
+22:27:15 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
+22:29:20 [floor4] -- conversation: Bernadette, Penny, Amy on 'work' at apartment 4B
+22:29:20 [floor4] Bernadette: "Penny, sweetie! How are you? Good. Now listen."
+22:29:24 [floor4] Penny: "Table six asked if the cheesecake was gluten-free. It's cheesecake."
+22:29:25 [floor4] Penny *eye roll*
+22:29:30 [floor4] Bernadette: "I got the quarterly numbers in early. Everyone's terrified of me. It's great."
+22:29:37 [floor4] Amy: "Noted for my field journal."
 22:29:40 [floor4] Bernadette: "Alright, I've got cultures to boss around."
-22:29:41 [floor4] Leonard: "Experimentalists do the real work. I'll say it."
-22:29:46 [floor4] Amy: "That released a measurable amount of dopamine."
-22:30:06 [floor4] Penny walks: hosts a nightcap (15.5 m)
-22:30:26 [floor4] Penny hosts a nightcap [4b_couch#0.seat0, 38 min]
-22:30:42 [floor4] Penny reflects: Good day overall. Tonight with everyone, Howard included, is the part I was looking forward to.
-22:32:04 [floor4] -- conversation: Leonard, Penny, Howard on 'memory' at apartment 4B
-22:32:04 [floor4] Leonard: "Penny! Perfect timing, I need a sanity check."
-22:32:08 [floor4] Penny: "Wow. Okay. Moving on."
-22:32:12 [floor4] Leonard: "I saw that you hosted a nightcap. Everything okay?"
-22:32:17 [floor4] Howard: "Zing. I'll be here all week."
-22:32:20 [floor4] Leonard: "Alright, I'm gonna go before Sheldon finds me."
-22:36:20 [floor4] -- conversation: Bernadette, Raj, Amy on 'science' at apartment 4B
-22:36:20 [floor4] Bernadette: "Hey Raj! Did you eat? You should eat."
-22:36:24 [floor4] Raj: "There's a galaxy shaped like a sombrero. Science is fun."
-22:36:29 [floor4] Bernadette: "Microbes are just tiny co-workers who never complain."
-22:36:34 [floor4] Amy: "I mapped a monkey's response to cheese. Very similar to Penny's."
-22:36:40 [floor4] Bernadette: "Okay! Bye! Do what I said."
-22:41:08 [floor4] -- conversation: Penny, Sheldon, Amy on 'plans' at apartment 4B
-22:41:08 [floor4] Penny: "Hi hon. You look like you're overthinking something."
-22:41:13 [floor4] Sheldon: "I'll allow it, with a footnote."
-22:41:17 [floor4] Penny: "Uh-huh. And in English?"
-22:41:20 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
+22:30:12 [floor4] -- conversation: Howard, Amy on 'memory' at apartment 4B
+22:30:12 [floor4] Howard: "Well, if it isn't Amy. Hold that thought, I'm about to be impressive."
+22:30:18 [floor4] Amy: "Our relationship agreement allows for a seated dinner on Fridays."
+22:30:23 [floor4] Howard: "Saw that you sat next to your bestie. Smooth."
+22:30:28 [floor4] Amy: "Penny and I have scheduled spontaneous fun for Saturday."
+22:30:33 [floor4] Howard: "Classic theorist move."
+22:30:37 [floor4] Amy: "Agreed. Wholeheartedly. Clinically."
+22:30:41 [floor4] Howard: "And scene. Thank you, thank you."
+22:31:15 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
+22:35:15 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 3 min]
+22:38:04 [floor4] -- conversation: Leonard, Howard on 'memory' at apartment 4B
+22:38:04 [floor4] Leonard: "Oh, hi Howard. How's your day going so far?"
+22:38:08 [floor4] Howard: "Zing. I'll be here all week."
+22:38:12 [floor4] Leonard: "Wait, earlier you perched at the kitchen bar? Huh."
+22:38:15 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 5 min]
+22:38:17 [floor4] Howard: "See, that's why they give the hard stuff to engineers."
+22:38:22 [floor4] Leonard: "Honestly? Same."
+22:38:25 [floor4] Howard: "Ooh, now we're talking."
+22:38:28 [floor4] Leonard: "Okay, I should get back to it."
+22:41:16 [floor4] -- conversation: Raj, Sheldon, Bernadette on 'memory' at apartment 4B
+22:41:16 [floor4] Raj: "Sheldon, hi! Okay, I'll talk slower this time."
+22:41:20 [floor4] Sheldon: "I'll allow it, with a footnote."
+22:41:24 [floor4] Raj: "Earlier, you claimed the armchair at Penny's. That's so you."
+22:41:30 [floor4] Bernadette: "Ha! Okay, that's funny."
+22:41:33 [floor4] Raj: "Okay bye, this was lovely!"
 22:42:29 [floor4] Bernadette sits at the round table [4b_dining_table_cluttered#0.chair0, 34 min]
-22:45:30 [floor4] Raj nurses a wine on the armrest [4b_couch#0.armrest_l, 20 min]
-22:46:28 [floor4] Howard walks: perches at the kitchen bar (7.0 m)
-22:46:38 [floor4] Howard perches at the kitchen bar [4b_bar_stool#0.seat0, 30 min]
+22:43:15 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 5 min]
+22:45:12 [floor4] -- conversation: Howard, Sheldon, Bernadette on 'memory' at apartment 4B
+22:45:12 [floor4] Howard: "Sheldon! Engineering update, very exciting, try to keep up."
+22:45:17 [floor4] Sheldon: "I calculate a sixty-two percent chance you're joking."
+22:45:22 [floor4] Howard: "Little bird told me you claimed the armchair at Penny's. The bird was me."
+22:45:24 [floor4] -- conversation: Amy, Raj on 'work' at apartment 4B
+22:45:24 [floor4] Amy: "Raj! Best-friend status check: we're still best friends, correct?"
+22:45:28 [floor4] Bernadette: "Byeee. Love you. Don't be late."
+22:45:29 [floor4] Raj: "I found a variable star that flickers like it's nervous. Relatable."
+22:45:35 [floor4] Amy: "That released a measurable amount of dopamine."
+22:45:40 [floor4] Raj: "My data finally reduced. It looks like a smudge, but a significant smudge."
+22:45:46 [floor4] Amy: "The neurons I'm imaging fired in a pattern that resembled a smile."
+22:45:52 [floor4] Raj: "See you later, space cowboy."
+22:45:55 [floor4] Howard walks: perches at the kitchen bar (7.0 m)
+22:46:05 [floor4] Howard perches at the kitchen bar [4b_bar_stool#0.seat0, 21 min]
+22:46:21 [floor4] Raj nurses a wine on the armrest [4b_couch#0.armrest_l, 22 min]
+22:48:15 [floor4] Penny pours the wine [4b_kitchen_bar#0.pour_wine, 4 min]
 22:50:04 [floor4] -- conversation: Leonard, Sheldon, Raj on 'plans' at apartment 4B
-22:50:04 [floor4] Leonard: "Hey Sheldon, got a second?"
-22:50:07 [floor4] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
-22:50:12 [floor4] Leonard: "Okay, okay, fair point."
-22:50:15 [floor4] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
-22:50:21 [floor4] Leonard reflects: I've talked with Sheldon 8 time(s) today. That matters to me more than I'd say out loud.
-22:50:21 [floor4] Leonard: "That's... actually a good idea."
-22:50:24 [floor4] -- conversation: Amy, Howard on 'memory' at apartment 4B
-22:50:24 [floor4] Amy: "Greetings, Howard. I'm conducting a casual-conversation trial. You're in it."
-22:50:30 [floor4] Howard: "I'll bring the new expansion tonight. Prepare."
-22:50:35 [floor4] Amy: "I observed that you perched at the kitchen bar. I've added it to my notes."
-22:50:41 [floor4] Howard: "See, that's why they give the hard stuff to engineers."
-22:50:46 [floor4] Amy: "Interesting. Repeat it slower."
-22:50:50 [floor4] Howard: "And scene. Thank you, thank you."
+22:50:04 [floor4] Leonard: "Sheldon! Perfect timing, I need a sanity check."
+22:50:08 [floor4] -- conversation: Penny, Howard on 'work' at apartment 4B
+22:50:08 [floor4] Penny: "Hi hon. You look like you're overthinking something."
+22:50:08 [floor4] Sheldon: "Noted. I've filed that under 'Mildly Relevant'."
+22:50:13 [floor4] Howard: "The robot arm can pick up an egg now. Mostly without crushing it."
+22:50:13 [floor4] Leonard: "Okay, okay, fair point."
+22:50:17 [floor4] Raj: "I'll get a ride with Leonard. Unless I drive. I'll drive."
+22:50:18 [floor4] Penny: "Ha! Totally called it."
+22:50:22 [floor4] Howard: "Later, buddy."
+22:50:22 [floor4] Leonard: "That's... actually a good idea."
+22:52:15 [floor4] Penny walks: hosts a nightcap (15.5 m)
 22:52:19 [floor4] Sheldon claims the armchair at Penny's [4b_armchair_patterned#0.seat0, 47 min]
-22:54:00 [floor4] -- conversation: Sheldon, Howard, Bernadette on 'science' at apartment 4B
-22:54:00 [floor4] Sheldon: "Technically this counts as our scheduled small talk, Howard."
-22:54:05 [floor4] Howard: "Theory is nice until you need it to survive launch vibrations."
-22:54:11 [floor4] Sheldon: "String theory is not stuck. It's resting."
-22:54:15 [floor4] Bernadette: "The bacteria in your kitchen sponge would astonish you. And not in a good way."
-22:54:22 [floor4] Sheldon: "Goodbye. I'll send a summary."
-22:56:04 [floor4] -- conversation: Leonard, Bernadette, Amy on 'memory' at apartment 4B
-22:56:04 [floor4] Leonard: "Oh, hi Bernadette. How's your day going so far?"
-22:56:08 [floor4] Bernadette: "Ha! Okay, that's funny."
-22:56:12 [floor4] Leonard: "Wait, earlier you sat at the round table? Huh."
-22:56:17 [floor4] Amy: "I'll log this as a bonding event."
+22:52:34 [floor4] Penny hosts a nightcap [4b_couch#0.seat0, 34 min]
+22:53:04 [floor4] -- conversation: Leonard, Penny, Bernadette on 'memory' at apartment 4B
+22:53:04 [floor4] Leonard: "Hey Penny, got a second?"
+22:53:07 [floor4] Penny: "After work I'm coming over. Save me a spot that isn't Sheldon's."
+22:53:13 [floor4] Leonard: "I saw that you hosted a nightcap. Everything okay?"
+22:53:18 [floor4] Bernadette: "Honey, I've cultured nicer things than that idea."
+22:53:23 [floor4] Leonard: "I'm not saying you're wrong. I'm saying I'm tired."
+22:53:27 [floor4] Penny: "Uh-huh. And in English?"
+22:53:31 [floor4] Leonard: "Talk later? Cool."
+22:54:00 [floor4] -- conversation: Sheldon, Penny, Amy on 'science' at apartment 4B
+22:54:00 [floor4] Sheldon: "For the record, Penny, I was about to start a conversation myself."
+22:54:05 [floor4] Penny: "Explain it like I'm auditioning for a toothpaste ad."
+22:54:10 [floor4] Sheldon: "Engineering is just physics wearing a hard hat."
+22:54:15 [floor4] Amy: "I mapped a monkey's response to cheese. Very similar to Penny's."
+22:54:20 [floor4] Sheldon reflects: I've talked with Amy 1 time(s) today. That matters to me more than I'd say out loud.
+22:54:21 [floor4] Sheldon: "Goodbye. I'll send a summary."
+22:56:04 [floor4] -- conversation: Leonard, Amy on 'memory' at apartment 4B
+22:56:04 [floor4] Leonard: "Hey. You look like you have news, Amy."
+22:56:08 [floor4] Amy: "As a scientist and your friend, I disagree."
+22:56:12 [floor4] Leonard: "Wait, earlier you sat next to your bestie? Huh."
+22:56:17 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
 23:00:00 [floor4] Leonard plan -> bedtime (floor4)
 23:00:00 [floor4] Bernadette plan -> heads home with Howard (off-screen)
 23:00:00 [floor4] Amy plan -> heads home (off-screen)
@@ -2101,6 +2070,7 @@
 23:01:22 [street_exterior] Amy walks: walks to the car (6.7 m)
 23:01:23 [lobby] Bernadette goes through the glass door
 23:01:24 [lobby] Bernadette leaves by door -> street_exterior (with Amy)
+23:01:26 [street_exterior] Amy reflects: I've talked with Penny 3 time(s) today. That matters to me more than I'd say out loud.
 23:01:27 [street_exterior] Bernadette appears at 2311 building entrance + street (Pasadena) (door from 2311 lobby (ground floor))
 23:01:27 [street_exterior] Bernadette walks: walks to the car (7.6 m)
 23:01:30 [street_exterior] Amy drives off along LOS ROBLES AV
@@ -2123,7 +2093,6 @@
 23:03:19 [lobby] Howard appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 23:03:19 [lobby] Howard walks: heads out (door to 2311 building entrance + street (Pasadena)) (7.5 m)
 23:03:22 [lobby] Raj goes through the glass door
-23:03:23 [lobby] Howard reflects: I've talked with Amy 5 time(s) today. That matters to me more than I'd say out loud.
 23:03:23 [lobby] Raj leaves by door -> street_exterior (with Amy, Bernadette)
 23:03:26 [street_exterior] Raj appears at 2311 building entrance + street (Pasadena) (door from 2311 lobby (ground floor))
 23:03:26 [street_exterior] Raj walks: heads out (car to Raj's apartment) (5.7 m)
@@ -2134,11 +2103,10 @@
 23:03:33 [street_exterior] Raj leaves by car -> raj_apartment
 23:03:39 [street_exterior] Howard drives off along LOS ROBLES AV
 23:05:13 [floor4] Sheldon goes to bed
-23:08:30 [floor4] Penny hosts a nightcap [4b_couch#0.seat0, 46 min]
 23:10:00 [floor4] Penny plan -> home to 4B (floor4)
 23:10:02 [floor4] Penny walks: heads to bed (10.9 m)
-23:10:15 [floor4] Penny heads to bed [4b_bedroom_door#0.door, 0 min]
-23:10:16 [floor4] Penny goes to bed
+23:10:14 [floor4] Penny heads to bed [4b_bedroom_door#0.door, 0 min]
+23:10:15 [floor4] Penny goes to bed
 23:13:33 [raj_apartment] Raj appears at Raj's apartment (car from 2311 building entrance + street (Pasadena))
 23:13:33 [raj_apartment] Raj walks: winds down on the sofa (7.0 m)
 23:13:44 [raj_apartment] Raj winds down on the sofa [raj_sofa#0.seat1, 26 min]

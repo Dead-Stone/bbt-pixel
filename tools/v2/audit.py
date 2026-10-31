@@ -1,4 +1,4 @@
-"""Pixel-quality audit of a character's sprite frames (main sheet + sit sheet): every anim x dir x frame.
+"""Pixel-quality audit of a character's sprite frames (main sheet + sit sheet + walk sheet): every anim x dir x frame.
 Flags per frame
   hole    enclosed transparent pocket of <= HOLE_MAX px inside the silhouette (a tear, not a real gap)
   island  opaque 8-connected component detached from the main body
@@ -21,12 +21,12 @@ K4 = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 def frames_of(cid, src=None):
     base = src or os.path.join(ROOT, 'characters', cid)
     out = []
-    for suf in ('', '_sit'):
+    for suf in ('', '_sit', '_walk'):
         jp = os.path.join(base, f'chr_{cid}{suf}.json')
         if not os.path.exists(jp): continue
         J = json.load(open(jp)); sh = np.array(Image.open(os.path.join(base, f'chr_{cid}{suf}.png')).convert('RGBA'))
         for f in J['frames']:
-            r = f['frame']; out.append((f['filename'][len(f'chr_{cid}_'):], sh[r['y']:r['y'] + r['h'], r['x']:r['x'] + r['w']].copy()))
+            r = f['frame']; out.append((f['filename'][len(f'chr_{cid}_'):] if f['filename'].startswith(f'chr_{cid}_') else f['filename'], sh[r['y']:r['y'] + r['h'], r['x']:r['x'] + r['w']].copy()))
     return out
 
 def shift(a, dy, dx, fill):
@@ -145,6 +145,7 @@ def audit(cid, src=None):
         try: k = int(name.rsplit('_', 1)[1])
         except ValueError: k = -1
         deliberate = k in fid.get(anim, ()) or (k - 1) in fid.get(anim, ())
+        if k == 0: prev.pop(seq, None)      # a new sequence (the walk sheet repeats the main sheet's walk_<d> names)
         if anim in ('idle', 'walk') and seq in prev and not deliberate:      # (blink redraws the eyes on purpose)
             fl, m = head_flicker(prev[seq], im, hrd.get(seq.rsplit('_', 1)[-1], hr))
             if fl > FLICKER_MAX and m is not None: flm = m

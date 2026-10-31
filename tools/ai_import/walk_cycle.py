@@ -14,7 +14,8 @@ Front / back views (S, N) keep their least-lifted frame as PASS (legs already un
 NE / E / SE mirror NW / W / SW (build.mirror, pivot column 64 kept). The viewer advances one pose per half step
 (meta.walk_m_per_pose = stride / 2, world metres, side view 90.5 px per metre), so the planted foot stays put.
 
-python3 tools/ai_import/walk_cycle.py [cid ...]       (run after full.py; default: all 7)
+python3 tools/ai_import/walk_cycle.py [cid ...] [--force]   (run after full.py; default: all 7 except those whose walk sheet
+                                                       was imported by walk8.py from a drawn 8-frame walk)
 """
 import os, sys, json, numpy as np
 from PIL import Image
@@ -22,6 +23,8 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.pat
 sys.path.insert(0, HERE)
 from build import DIRS, MIRROR, mirror
 from full import _close_legs, _spread, _runs
+from convert import audit_fix
+from sheets import load_stills
 
 CH = ['sheldon', 'leonard', 'penny', 'howard', 'raj', 'bernadette', 'amy']
 SRC = ['S', 'SW', 'W', 'NW', 'N']
@@ -96,7 +99,7 @@ def stand_legs(f, idle):
     return out
 
 
-def cycle(d, W, idle):
+def cycle(d, W, idle, pal=None):
     side = d not in ('S', 'N')
     sc = [_spread(f) if side else lift(f) for f in W]
     A = int(np.argmax(sc)); B = max([(A + 4) % 8, (A + 3) % 8, (A + 5) % 8], key=lambda j: sc[j])
@@ -106,14 +109,15 @@ def cycle(d, W, idle):
     def pas(j):
         f = W[j]
         if side: f = stand_legs(f, idle)
-        return rise(f)
+        return audit_fix(rise(f), pal)      # the leg composite can leave specks / holes / thin outline (audit: 0 issues)
     return [W[A], pas(P1), W[B], pas(P2)], dict(stride=[A, B], pass_from=[P1, P2], spread=[int(_spread(x)) for x in (W[A], W[B])],
                                                pass_spread=[int(_spread(pas(P1))), int(_spread(pas(P2)))], idle_spread=int(sn))
 
 
 def build(cid):
     j, row = load(cid); per = {}
-    for d in SRC: per[d] = cycle(d, row(f'walk_{d}'), row(f'idle_{d}')[0])
+    pal = load_stills(cid)[1]
+    for d in SRC: per[d] = cycle(d, row(f'walk_{d}'), row(f'idle_{d}')[0], pal)
     cells, frames, tags = [], [], []
     for d in DIRS:
         fr, _ = per[MIRROR.get(d, d)]
@@ -136,6 +140,17 @@ def build(cid):
     return meta
 
 
+def has_walk8(cid):
+    """the character's walk sheet is a drawn 8-frame walk imported by walk8.py (refs_ai/chatgpt/<cid>/walk8_v*.png) --
+    never overwrite it with the synthesized 4-pose fallback"""
+    jp = os.path.join(ROOT, 'characters', cid, 'ai', f'chr_{cid}_walk.json')
+    try: return json.load(open(jp))['meta'].get('app', '').endswith('walk8.py')
+    except Exception: return False
+
+
 if __name__ == '__main__':
-    for cid in (sys.argv[1:] or CH):
+    force = '--force' in sys.argv; args = [a for a in sys.argv[1:] if a != '--force']
+    for cid in (args or CH):
+        if has_walk8(cid) and not force:
+            print(cid, 'skipped: its walk sheet is a drawn walk8 import (python3 tools/ai_import/walk8.py %s); --force to synthesize anyway' % cid); continue
         m = build(cid); print(cid, m['walk_m_per_pose'], {d: (v['stride'], v['pass_from'], v['spread'], v['pass_spread'], v['idle_spread']) for d, v in m['source'].items()})

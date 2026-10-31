@@ -74,7 +74,7 @@ PERSONAS = {
     interests=['acting', 'auditions', 'wine', 'fashion', 'her friends'],
     rel={'leonard': 'boyfriend across the hall', 'sheldon': 'odd neighbour she protects', 'amy': 'best friend (Amy insists)',
          'bernadette': 'close friend from work days', 'howard': 'friend; used to roll her eyes at him', 'raj': 'sweet friend who gets shy around women'},
-    home=('floor4', [5.5, 3.5]), emote='hair_flip', speed=0.9,
+    home=('floor4', [5.5, 3.5]), emote='hair_flip', speed=0.95,   # walk8: 0.354 m step, same cadence as before (~2.7 steps/s)
     routine=[
         B('06:55', 'floor4', 'sleeping in', social=0.0, leave='sleep_until'),
         B('08:30', 'floor4', 'slow morning in 4B', steps=[S('4b_kitchen_bar', ('pour_drink', 'perch'), lo=10, hi=20, label='drinks coffee at the kitchen bar')],

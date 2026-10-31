@@ -26,7 +26,7 @@ const CLIPS = [  // name, query, sim start, sim end, fps[, viewport w, h] (GIFs 
   ['clip_ait_cafeteria_lunch.gif', 'loc=ait_cafeteria&speed=8&talk=3', '12:00:02', '12:02:46', 8],
   ['clip_penny_walk_ai.gif', 'loc=floor4&view=all&follow=penny&zoom=3&speed=1&auto=0', '12:08:00', '12:08:14', 5, 380, 300],
   // walk close-ups at real time (speed 1, 10 fps): Penny / Sheldon from 4A through the hall (WALK_T0 / WALK_T1 override the window)
-  ['walk_closeup_penny.gif', 'loc=floor4&view=all&follow=penny&zoom=6&speed=1&auto=0', process.env.WALK_T0 || '22:18:00', process.env.WALK_T1 || '22:18:08', 10, 320, 280],
+  ['walk_closeup_penny.gif', 'loc=floor4&view=all&follow=penny&zoom=6&speed=1&auto=0', process.env.WALK_T0 || '22:18:40', process.env.WALK_T1 || '22:18:48.5', 10, 320, 280],
   ['walk_closeup_sheldon.gif', 'loc=floor4&view=all&follow=sheldon&zoom=6&speed=1&auto=0', process.env.WALK_T0 || '22:17:59', process.env.WALK_T1 || '22:18:07', 10, 320, 280],
   ['clip_sheldon_walk_ai.gif', 'loc=floor4&view=all&follow=sheldon&zoom=3&speed=1&auto=0', '17:44:44', '17:44:58', 5, 400, 320],
 ];
