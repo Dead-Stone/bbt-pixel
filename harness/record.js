@@ -15,13 +15,15 @@ const SHOTS = [
   ['shot_ait_cafeteria_lunch.png', 'loc=ait_cafeteria&t=12:02:21'],
   ['shot_amber_slice_dinner.png', 'loc=rest_amber_slice&t=18:58:34'],
   ['shot_ait_physics_morning.png', 'loc=ait_physics&t=08:23:31'],
+  ['shot_raj_sofa.png', 'loc=raj_apartment&t=07:23:00'],
 ];
-const CLIPS = [  // name, query, sim start, sim end, fps
-  ['clip_4A_evening.gif', 'loc=floor4&view=all&follow=sheldon&zoom=2.5&speed=4&talk=2', '17:46:40', '17:50:00', 10],
+const CLIPS = [  // name, query, sim start, sim end, fps[, viewport w, h] (GIFs stay under 4 MB)
+  ['clip_4A_evening.gif', 'loc=floor4&view=all&follow=sheldon&zoom=2.5&speed=4&talk=2', '17:46:40', '17:50:00', 8, 800, 480],
   ['clip_ait_physics_work.gif', 'loc=ait_physics&follow=howard&zoom=2.2&speed=3&talk=1.5', '09:37:50', '09:39:10', 10],
   ['clip_amber_slice_shift.gif', 'loc=rest_amber_slice&follow=penny&zoom=3&speed=3&auto=0', '15:08:50', '15:09:40', 10],
   ['clip_ait_cafeteria_lunch.gif', 'loc=ait_cafeteria&speed=8&talk=3', '12:00:02', '12:02:46', 8],
-  ['clip_penny_walk_ai.gif', 'loc=floor4&view=all&follow=penny&zoom=3&speed=1&auto=0', '12:08:00', '12:08:14', 8],
+  ['clip_penny_walk_ai.gif', 'loc=floor4&view=all&follow=penny&zoom=3&speed=1&auto=0', '12:08:00', '12:08:14', 8, 440, 360],
+  ['clip_sheldon_walk_ai.gif', 'loc=floor4&view=all&follow=sheldon&zoom=3&speed=1&auto=0', '17:46:52', '17:47:06', 8, 480, 400],
 ];
 const sec = s => { const [h, m, x] = s.split(':').map(Number); return h * 3600 + m * 60 + (x || 0); };
 
@@ -34,12 +36,15 @@ async function open(browser, q, w, h) {
 (async () => {
   const browser = await chromium.launch();
   for (const [name, q] of SHOTS) {
+    if (process.env.ONLY && !new RegExp(process.env.ONLY).test(name)) continue;
     const p = await open(browser, q + '&play=0&manual=1', 1440, 810);
     await p.evaluate(() => viewer.render(1.0)); await p.screenshot({path: path.join(OUT, name)});
     console.log('shot', name, p.errs.length ? p.errs : ''); await p.close();
   }
-  for (const [name, q, t0, t1, fps] of CLIPS) {
-    const dir = fs.mkdtempSync('/tmp/bbt_clip_'); const p = await open(browser, `${q}&t=${t0}&bare=1&manual=1`, 960, 560);
+  const only = process.env.ONLY ? new RegExp(process.env.ONLY) : null;
+  for (const [name, q, t0, t1, fps, w = 960, h = 560] of CLIPS) {
+    if (only && !only.test(name)) continue;
+    const dir = fs.mkdtempSync('/tmp/bbt_clip_'); const p = await open(browser, `${q}&t=${t0}&bare=1&manual=1`, w, h);
     let t = sec(t0), i = 0;
     while (t < sec(t1) && i < 400) {
       t = await p.evaluate(([dt, w]) => viewer.step(dt, w), [1 / fps, i / fps]);

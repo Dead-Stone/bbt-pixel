@@ -3,7 +3,10 @@
    the simulation log written by `python3 -m harness run`.
    URL params: loc, view (floor4: 4A|hall|4B|all), t (HH:MM[:SS] or seconds), speed, follow, play=0, auto=0, bare=1,
                zoom, log (path of the sim JSON), live=1 (poll the log while the simulation is running),
-               art=rig (ignore the AI-import idle/walk frames in characters/<cid>/ai/ and show the rig) */
+               art=rig (ignore the AI-import sheets in characters/<cid>/ai/ and show the old procedural rig)
+   Art: characters/<cid>/ai/chr_<cid>.png (tools/ai_import/full.py, from Mohan's ChatGPT sheets) drives walk, idle
+   (breathing + occasional think/phone/drink, eat at meals), talk, work and every emote; chr_<cid>_sit.png is the AI
+   sit. The rig sheet chr_<cid>.png is only drawn with ?art=rig (or for a character without an AI sheet). */
 const Q = new URLSearchParams(location.search);
 const ROOT = '../';                    // harness/
 const CHARS = '../../characters/';
@@ -49,8 +52,7 @@ async function loadChars(cid) {
     json(`${CHARS}${cid}/chr_${cid}_sit.json`).catch(() => null), img(`${CHARS}${cid}/chr_${cid}_sit.png`).catch(() => null)]);
   const tags = {}; for (const tg of atlas.meta.frameTags) tags[tg.name] = [tg.from, tg.to];
   const sitf = {}; if (sitj) for (const f of sitj.frames) sitf[f.dir] = f;
-  // optional AI-import sheet (tools/ai_import): its idle_<dir> / walk_<dir> loops replace the rig's where present;
-  // work / emotes / sit stay on the rig sheet until AI sheets for those exist
+  // AI-import sheet (tools/ai_import/full.py): replaces the rig for every standing / walking anim
   let ai = null;
   if (Q.get('art') !== 'rig') {
     const [aj, ais] = await Promise.all([json(`${CHARS}${cid}/ai/chr_${cid}.json`).catch(() => null), img(`${CHARS}${cid}/ai/chr_${cid}.png`).catch(() => null)]);
@@ -97,23 +99,36 @@ function agentAt(cid, t) {
   // stand: 'work' loop at job hooks (whiteboard/laptop/microscope/pipette/tray), 'talk' while speaking, emotes on top
   const st = {cid, loc: s.loc, x: s.pos[0], y: s.pos[1], dir: s.dir, anim: s.kind === 'sit' ? 'sit' : (s.act === 'work' ? 'work' : 'idle'), key: s.key, z: s.z || 0, hook: s.hook};
   if (s.kind !== 'sit') {
+    if (st.anim === 'idle') { const a = idleAct(cid, t, s); if (a) st.anim = a; }
     const sy = V.idx.saysBy[cid] || [], k = bsearch(sy, t, 't');
     if (k >= 0 && t < sy[k].t + sy[k].dur) st.anim = 'talk';
     const em = V.idx.emotes[cid]; const j = bsearch(em, t, 't');     // emote overlay (one-shot, brain-chosen)
     if (j >= 0) {
-      const e = em[j], ch = V.chars[cid], tag = emoteTag(ch, e.anim, st.dir);
+      const e = em[j], ch = V.chars[cid], src = ch.ai || ch, tag = emoteTag(src, e.anim, st.dir);
       if (tag) {
-        const n = tag[1] - tag[0] + 1; let tot = 0; for (let f = tag[0]; f <= tag[1]; f++) tot += ch.frames[f].duration / 1000;
+        let tot = 0; for (let f = tag[0]; f <= tag[1]; f++) tot += src.frames[f].duration / 1000;
         const dur = Math.max(1.6, tot);
         if (t < e.t + dur) {
           let acc = 0, f = tag[0], el = (t - e.t) * tot / dur;
-          while (f < tag[1] && acc + ch.frames[f].duration / 1000 <= el) { acc += ch.frames[f].duration / 1000; f++; }
+          while (f < tag[1] && acc + src.frames[f].duration / 1000 <= el) { acc += src.frames[f].duration / 1000; f++; }
           st.anim = 'emote'; st.frame = f; st.emoting = true; st.dir = tag.dir;
         }
       }
     }
   }
   return st;
+}
+// idle variety (AI art only): eat while the current activity is a meal, otherwise a deterministic per-agent dice roll
+// every 20 s slot -> ~35% of slots play 4.8 s of think / phone / drink before falling back to the breathing idle
+const MEAL = /\b(eat|eats|eating|lunch|dinner|breakfast|brunch|takeout|take-out|meal|food|snack|pizza|thai|burger|cheesecake)\b/i;
+function hash01(str) { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return ((h >>> 0) % 10000) / 10000; }
+function idleAct(cid, t, s) {
+  const ch = V.chars[cid]; if (!ch || !ch.ai) return null;
+  const E = V.idx.byAgent[cid], j = bsearch(E, t, 't');
+  for (let k = j; k >= 0 && E[k].t >= s.t0 - 1; k--) if (E[k].type === 'hook_start') { { const w = `${E[k].activity || ''} ${E[k].hook || ''}`; if (MEAL.test(w) && !/\b(queue|queues|cooks?|orders?|serves?)\b/i.test(w)) return 'act_eat'; } break; }
+  const slot = Math.floor(t / 20), r = hash01(`${cid}:${slot}`);
+  if (r >= 0.35 || t - slot * 20 > 4.8 || slot * 20 < s.t0) return null;
+  return ['act_think', 'act_phone', 'act_drink'][Math.floor(r / 0.35 * 3)];
 }
 function emoteTag(ch, anim, dir) {
   const order = [dir, 'SW', 'SE', 'S', 'NW', 'NE', 'W', 'E', 'N'];
@@ -123,8 +138,9 @@ function emoteTag(ch, anim, dir) {
 function frameOf(st, wall) {
   const ch = V.chars[st.cid];
   if (st.anim === 'sit' && ch.sit && ch.sitf[st.dir]) { const f = ch.sitf[st.dir]; return {img: ch.sit, fr: f.frame, pv: f.seat || f.pivot}; }   // seat anchor (butt) -> seat point at seat_z
-  if ((st.anim === 'idle' || st.anim === 'walk') && ch.ai && ch.ai.tags[`${st.anim}_${st.dir}`]) {   // AI-import art where it exists
-    const tg = ch.ai.tags[`${st.anim}_${st.dir}`], n = tg[1] - tg[0] + 1, fd = (ch.ai.frames[tg[0]].duration || 250) / 1000;
+  if (ch.ai) {   // AI-import art: walk / idle / act_* / talk / work / emotes
+    if (st.anim === 'emote') return {img: ch.ai.sheet, fr: ch.ai.frames[st.frame].frame, pv: [64, 116]};
+    const tg = ch.ai.tags[`${st.anim}_${st.dir}`] || ch.ai.tags[`idle_${st.dir}`], n = tg[1] - tg[0] + 1, fd = (ch.ai.frames[tg[0]].duration || 250) / 1000;
     const i = st.anim === 'walk' ? st.k % n : Math.floor(wall / fd + st.cid.length) % n;
     return {img: ch.ai.sheet, fr: ch.ai.frames[tg[0] + i].frame, pv: [64, 116]};
   }
