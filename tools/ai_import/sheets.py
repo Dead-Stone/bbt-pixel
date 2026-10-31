@@ -15,6 +15,8 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.pat
 SRC = os.path.join(ROOT, 'refs_ai', 'chatgpt')
 ROWS = ['S', 'SW', 'W', 'NW', 'N']
 NCOL = dict(idle_actions=6, signature=6, sit=2, walk=8, work=6)      # (sit before work: Howard works seated)
+# extra 4-frame sheets (optional per character): seated eating / writing, Howard's standing gadget tinkering
+NCOL_X = dict(sit_eat=4, sit_write=4, work_stand=4)
 KEY_M = {'howard': 140}          # stricter key where the outfit itself is magenta-ish (Howard's trousers)
 
 
@@ -54,7 +56,7 @@ def cut_sheet(cid, kind, km=None):
     rows = bands(fg.sum(1), 5, min_gap=6)
     out = {}
     for d, (y0, y1) in zip(ROWS, rows):
-        cols = bands(fg[y0:y1].sum(0), NCOL[kind], min_gap=4)
+        cols = bands(fg[y0:y1].sum(0), {**NCOL, **NCOL_X}[kind], min_gap=4)
         cells = []
         for x0, x1 in cols:
             mm = fg[y0:y1, x0:x1]
@@ -319,3 +321,40 @@ def convert(cid):
             out[kind][d] = fr
         if kind == 'idle_actions': pass
     return out, stills, pal
+
+
+def convert_extra(cid):
+    """the optional NCOL_X sheets present for cid -> {kind: {dir5: [128 frames]}}. Seated sheets: head-matched scale x the
+    sheet-family correction (same rule as sit.png), soles on 119, torso centre on x=64 (= the sit frames' convention, so
+    the seat anchor is measured the same way); work_stand: crown->sole = the still's height, head x on the still's"""
+    stills, pal = load_stills(cid)
+    kinds = [k for k in NCOL_X if os.path.exists(os.path.join(SRC, cid, f'{k}.png'))]
+    allsc = json.load(open(SCALES)); sc = allsc[cid]; th = (stills['S'][..., 3] > 0).any(1).sum()
+    out = {}
+    for kind in kinds:
+        cuts = cut_sheet(cid, kind)
+        if kind not in sc:
+            if kind.startswith('sit'):
+                hs = []
+                for d in ROWS:
+                    T, _ = head_template(stills[d])
+                    hs += [best_scale(c, T, 0.55 * th / c.shape[0], 1.6 * th / c.shape[0], 25) for c in cuts[d][:2]]
+                sc[kind] = dict(head=float(np.median(hs)), corr=sc['sit']['corr'], use=float(np.median(hs)) * sc['sit']['corr'])
+            else:
+                a, b = sheet_scales(cid, kind, cuts, stills); sc[kind] = dict(crown=a, head=b, use=a)
+            print(cid, kind, {k: round(v, 4) for k, v in sc[kind].items()}, flush=True)
+            allsc[cid] = sc; json.dump(allsc, open(SCALES, 'w'), indent=1, sort_keys=True)
+        mode = 'sit' if kind.startswith('sit') else 'stand'
+        out[kind] = {d: [frame128(c, sc[kind]['use'], stills[d], pal, mode) for c in cuts[d]] for d in ROWS}
+        if mode == 'sit':
+            # the head match is loose on seated sheets (+-20 %): lock the scale to the base sit frames instead (same
+            # seated height per facing, soles on 119, torso on x=64) so the base sit's seat anchor fits these frames too
+            base = np.array(Image.open(os.path.join(ROOT, 'characters', cid, f'chr_{cid}_sit.png')).convert('RGBA'))
+            hgt = lambda f: np.ptp(np.nonzero((f[..., 3] > 0).any(1))[0])
+            r = float(np.median([hgt(base[:, i * 128:(i + 1) * 128]) / np.median([hgt(f) for f in out[kind][d]]) for i, d in enumerate(ROWS)]))
+            if abs(r - 1) > 0.02:
+                sc[kind]['use_base_lock'] = sc[kind]['use'] * r
+                out[kind] = {d: [frame128(c, sc[kind]['use'] * r, stills[d], pal, mode) for c in cuts[d]] for d in ROWS}
+            print(cid, kind, 'base-lock ratio', round(r, 3), flush=True)
+            allsc[cid] = sc; json.dump(allsc, open(SCALES, 'w'), indent=1, sort_keys=True)
+    return out

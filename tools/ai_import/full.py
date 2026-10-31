@@ -11,7 +11,8 @@ Tags (8 dirs each; SE/E/NE mirror SW/W/NW about column 64):
   talk_<d>             talk gesture <-> neutral (idle_actions columns 1 / 5), 4 x 400 ms, loops while speaking
   work_<d>             work.png row (WORK_COLS), 300 ms; the drawn prop is stripped (sheets.strip_props) because
                        the env already draws the bench / whiteboard / table at the work hook
-  work_desk_<d>        Howard only: the seated laptop-desk frames WITH the desk + chair (no sim hook seats him for work)
+  work_<d> (Howard)    work_stand.png, standing gadget tinkering; work_desk_<d> = his seated laptop-desk frames (no sim hook seats him for work)
+  chr_<cid>_sit.png    row 0 = sit (sit.png variant 0); extra rows sit_eat (4 frames, all) and sit_write (Sheldon), same seat anchor
   <emote>_<d>          the rig's emote names, built from signature.png / idle_actions.png columns (EMOTES)
   gesture_<d>          generic talk gesture (all characters)
 """
@@ -27,7 +28,10 @@ NEUTRAL = 5
 # work.png columns used in the loop (frames that kept a piece of the drawn table / board after stripping are left out)
 WORK_COLS = dict(sheldon=[0, 1, 2, 3, 4], leonard=[0, 1, 2, 3, 4, 5], penny=[0, 1, 2, 5], howard=None,
                  raj=[0, 1, 2, 3, 4, 5], bernadette=[0, 1, 2, 3, 4, 5], amy=[0, 1, 2, 3, 4, 5])
-# Howard's work hooks are all standing (electronics bench, rover): he gets think <-> neutral instead of the seated laptop loop
+# directions whose work.png frames are unusable after prop stripping (Leonard's back views: head hidden behind the
+# shoulders / table plate left in his hands; Amy's S/SW/W: the microscope table is drawn through her legs) -> think/phone loop
+WORK_ALT = dict(leonard={'NW', 'N'}, amy={'S', 'SW', 'W'})
+# Howard's work hooks are all standing (electronics bench, rover): work = work_stand.png (gadget tinkering); work_desk keeps the seated laptop frames
 # emote -> [(sheet, column, ms), ...]
 S_, A_ = 'signature', 'idle_actions'
 EMOTES = dict(
@@ -42,6 +46,9 @@ EMOTES = dict(
     bernadette=dict(sweet_to_scary=[(S_, c, 330) for c in range(6)], hands_on_hips=[(S_, 4, 1500)]),
     amy=dict(neuro_lecture=[(S_, 1, 400), (S_, 2, 500), (S_, 3, 500), (S_, 2, 400)], excited_clap=[(A_, 1, 400), (S_, 1, 400), (A_, 1, 400)]),
 )
+
+# per-emote source direction swaps: Sheldon's S knock cells barely show the arm -> S plays the SW knock cells
+EMOTE_DIR = {('sheldon', 'knock_knock_penny'): {'S': 'SW'}}
 
 
 def head_lock(frames, extra=2):
@@ -66,6 +73,93 @@ def head_lock(frames, extra=2):
     return out
 
 
+def _h(f):
+    ys = np.nonzero((f[..., 3] > 0).any(1))[0]; return ys[-1] - ys[0]
+
+
+def _spread(f):
+    """leg spread: width of the bottom 15 rows"""
+    A = f[..., 3] > 0; y1 = np.nonzero(A.any(1))[0][-1]; xs = np.nonzero(A[y1 - 14:y1 + 1].any(0))[0]
+    return xs.max() - xs.min()
+
+
+def _torso(f):
+    return ST.torso_x(f[..., 3] > 0, 0.25, 0.45)
+
+
+def _rescale(f, k):
+    """nearest-neighbour rescale of the figure about its bottom-centre (soles stay on the cell's sole row)"""
+    A = f[..., 3] > 0; ys = np.nonzero(A.any(1))[0]; xs = np.nonzero(A.any(0))[0]
+    y0, y1, x0, x1 = ys[0], ys[-1] + 1, xs[0], xs[-1] + 1
+    cx = _torso(f); crop = Image.fromarray(f[y0:y1, x0:x1])
+    w, h = max(1, round((x1 - x0) * k)), max(1, round((y1 - y0) * k))
+    g = np.array(crop.resize((w, h), Image.NEAREST)); out = np.zeros_like(f)
+    nx0 = int(round(cx - (cx - x0) * k)); ny0 = y1 - h
+    out[ny0:y1, nx0:nx0 + w] = g
+    return out
+
+
+def _shift(f, dx):
+    return np.roll(f, int(dx), axis=1)
+
+
+def _runs(row):
+    xs = np.nonzero(row)[0]
+    if not len(xs): return []
+    br = np.nonzero(np.diff(xs) > 1)[0]
+    return [(int(a), int(b) + 1) for a, b in zip(np.r_[xs[0], xs[br + 1]], np.r_[xs[br], xs[-1]])]
+
+
+def _close_legs(f, D):
+    """passing pose from a stride frame: below the crotch the back and front leg runs are sheared towards each other,
+    0 px at the crotch -> D px at the soles (shoes keep their width; the right-hand leg is drawn first)"""
+    D = int(round(D))
+    if D <= 0: return f
+    A = f[..., 3] > 0; ys = np.nonzero(A.any(1))[0]; yb = ys[-1]; yt = ys[0]
+    yc = None; seen2 = False
+    for y in range(yb, yt + int((yb - yt) * 0.55), -1):      # lowest row (above the feet) where the legs are one run
+        n2 = len(_runs(A[y])) >= 2
+        if n2: seen2 = True
+        elif seen2: yc = y; break
+    if yc is None or yb - yc < 6: return f
+    out = f.copy(); out[yc + 1:yb + 1] = 0
+    for y in range(yc + 1, yb + 1):
+        r = _runs(A[y]); s = int(round(D * (y - yc) / (yb - yc)))
+        if len(r) < 2:
+            out[y] = f[y]; continue
+        mid = (r[0][1] + r[-1][0]) / 2.0
+        L = [q for q in r if (q[0] + q[1]) / 2 < mid]; R = [q for q in r if (q[0] + q[1]) / 2 >= mid]
+        for (a, b) in R: out[y, a - s:b - s] = np.where(f[y, a:b, 3:] > 0, f[y, a:b], out[y, a - s:b - s])
+        for (a, b) in L: out[y, a + s:b + s] = np.where(f[y, a:b, 3:] > 0, f[y, a:b], out[y, a + s:b + s])
+    return out
+
+
+def walk_row(out, d):
+    """walk.png row -> 8 walk frames, fixed for the viewer's distance-driven playback:
+    * scale: rows drawn bigger than the same direction's neutral pose (N/NW back views, up to +7 %) are scaled to the
+      neutral height, so walk -> idle (= neutral) never pops in size;
+    * passing pose: side-view (W/E) rows where ChatGPT drew every frame as a wide stride (legs never close, so the
+      figure scissor-glides) get their legs sheared together below the crotch with weights 0, .5, 1, .5, 0, .5, 1, .5
+      (contact, down, PASS, up, contact, ...) -- a real contact-pass-contact cycle in the same art.
+    Returns (frames, stride_px, pass_index)."""
+    W = [f.copy() for f in out['walk'][d]]; n = out[A_][d][NEUTRAL]
+    hw = float(np.median([_h(f) for f in W])); hn = _h(n)
+    if abs(hw / hn - 1) > 0.025: W = [_rescale(f, hn / hw) for f in W]
+    sp = [_spread(f) for f in W]; sn = _spread(n)
+    closure = (min(sp) - sn) / max(1e-6, max(sp) - sn)
+    if closure > 0.5 and d in ('W', 'SW'):
+        sh = [0, .5, 1, .5, 0, .5, 1, .5]
+        W = [_close_legs(f, a * max(0.0, (_spread(f) - sn - 2) / 2.0)) for f, a in zip(W, sh)]
+        sp = [_spread(f) for f in W]
+    stride = None
+    if d == 'W':   # feet centres of the widest (contact) frames, bottom 4 rows
+        A = W[int(np.argmax(sp))][..., 3] > 0; y1 = np.nonzero(A.any(1))[0][-1]
+        cols = np.nonzero(A[y1 - 3:y1 + 1].any(0))[0]; gaps = np.nonzero(np.diff(cols) > 1)[0]
+        if len(gaps): stride = float(cols[gaps[-1] + 1:].mean() - cols[:gaps[0] + 1].mean())
+        else: stride = float(max(sp) - 12)
+    return W, stride, int(np.argmin(sp))
+
+
 def build(cid, conv):
     out, stills, pal = conv
     od = os.path.join(ROOT, 'characters', cid, 'ai')
@@ -88,19 +182,30 @@ def build(cid, conv):
             tags.append(dict(name=f'{name}_{d}', **{'from': ids[0], 'to': ids[-1]}, direction='forward'))
 
     seq('stand', lambda d: [(stills[d], 250)])
-    seq('idle', lambda d: [(f, 250) for f in I.idle_frames(stills[d], eyes.get(d, []), base)])
-    seq('walk', lambda d: [(f, 100) for f in head_lock(out['walk'][d])])   # one head per row: no face boil
+    # idle = the action sheets' neutral pose (+1-px breath): same art, scale and proportions as walk / act_* / talk,
+    # so walk -> idle and idle -> act never swap drawing styles (the turnaround still stays as 'stand')
+    seq('idle', lambda d: [(out[A_][d][NEUTRAL], 1400), (I.breathe(out[A_][d][NEUTRAL]), 1100)])
+    WR = {d: walk_row(out, d) for d in ['S', 'SW', 'W', 'NW', 'N']}
+    seq('walk', lambda d: [(f, 100) for f in head_lock(WR[d][0])])   # one head per row: no face boil
     for a, c in ACT.items():
         seq(f'act_{a}', lambda d, c=c: [(out[A_][d][c], 600), (I.breathe(out[A_][d][c]), 600)])
     seq('talk', lambda d: [(out[A_][d][1], 400), (out[A_][d][NEUTRAL], 400), (I.breathe(out[A_][d][1]), 400), (out[A_][d][NEUTRAL], 400)])
     seq('gesture', lambda d: [(out[A_][d][1], 500), (out[A_][d][NEUTRAL], 200), (out[A_][d][1], 600)])
+    ph = lambda d: out[A_][d][ACT['phone']]; th = lambda d: out[A_][d][ACT['think']]
+    # think <-> phone loop: desk work (viewer: desk / laptop hooks) and the work directions whose drawn frames are unusable
+    desk = lambda d: [(th(d), 1300), (I.breathe(th(d)), 1000), (ph(d), 1300), (I.breathe(ph(d)), 1000)]
     if WORK_COLS[cid]:
-        seq('work', lambda d: [(out['work'][d][c], 300) for c in WORK_COLS[cid]])
-    else:
-        seq('work', lambda d: [(out[A_][d][0], 900), (I.breathe(out[A_][d][0]), 900), (out[A_][d][NEUTRAL], 700)])
+        seq('work', lambda d: desk(d) if d in WORK_ALT.get(cid, ()) else [(out['work'][d][c], 300) for c in WORK_COLS[cid]])
+    elif 'work_stand' in out:   # Howard: work_stand.png -- standing, tinkering with a handheld gadget (4 frames)
+        seq('work', lambda d: [(f, ms) for f, ms in zip(out['work_stand'][d], (450, 350, 450, 350))])
         seq('work_desk', lambda d: [(f, 300) for f in out['work'][d]])
+    else:   # Howard without work_stand.png: standing tinker loop (phone-sized gadget in hand, the odd explaining gesture)
+        seq('work', lambda d: [(ph(d), 900), (I.breathe(ph(d)), 700), (ph(d), 600), (out[A_][d][ACT['talk']], 700)])
+        seq('work_desk', lambda d: [(f, 300) for f in out['work'][d]])
+    seq('desk', desk)
     for em, spec in EMOTES[cid].items():
-        seq(em, lambda d, spec=spec: [(out[k][d][c], ms) for k, c, ms in spec])
+        sub = EMOTE_DIR.get((cid, em), {})
+        seq(em, lambda d, spec=spec, sub=sub: [(out[k][sub.get(d, d)][c], ms) for k, c, ms in spec])
 
     n = len(cells); rows = (n + 15) // 16
     sheet = np.zeros((rows * 128, 16 * 128, 4), np.uint8)
@@ -116,13 +221,18 @@ def build(cid, conv):
                      '(sheets.py). Work frames: the drawn prop (bench/whiteboard/table/telescope/microscope/door) is stripped and '
                      'the frame stays 128x128 -- the env already draws the furniture at every work hook.' % cid)
     meta.pop('source_walk', None)
+    # viewer walk playback: one 8-frame cycle = 2 steps = 2 x stride (px, side view, 90.5 px per world metre along W/E)
+    meta['walk_stride_px'] = round(WR['W'][1], 1)
+    meta['walk_m_per_frame'] = round(2 * WR['W'][1] / 8 / (64 * 2 ** 0.5), 4)
+    meta['walk_pass'] = {d: WR[MIRROR.get(d, d)][2] for d in DIRS}
     json.dump(dict(frames=frames, meta=meta), open(os.path.join(od, f'chr_{cid}.json'), 'w'), indent=1)
     # sit: variant 0 (upright, feet flat) of sit.png, seat anchor from the W frame
     sitf = {d: out['sit'][d][0] for d in ST.ORDER}
     sy = ST.seat_row(sitf['W'])
-    ST.write_sit(cid, sitf, sy)
+    extra = {k: out[k] for k in ('sit_eat', 'sit_write') if k in out}      # seated loops (sheets.convert_extra)
+    ST.write_sit(cid, sitf, sy, extra, dict(sit_eat=[500, 400, 650, 400], sit_write=[350, 300, 350, 300]))
     sj = os.path.join(ROOT, 'characters', cid, f'chr_{cid}_sit.json'); J = json.load(open(sj))
-    J['meta']['source'] = f'refs_ai/chatgpt/{cid}/sit.png (ChatGPT sit sheet, variant 1 of 2; tools/ai_import/sheets.py)'
+    J['meta']['source'] = f'refs_ai/chatgpt/{cid}/sit.png (ChatGPT sit sheet, variant 1 of 2) + rows ' + ', '.join(f'{k}.png' for k in extra) + ' (tools/ai_import/sheets.py)'
     json.dump(J, open(sj, 'w'), indent=1)
     return n, sy
 

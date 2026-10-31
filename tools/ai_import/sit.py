@@ -66,17 +66,27 @@ def sit_for(cid, pal, still):
     return out, sy
 
 
-def write_sit(cid, frames, sy):
+def write_sit(cid, frames, sy, extra=None, ms=None):
+    """extra: {anim: {dir5: [frames]}} -> extra rows (one row per anim frame, 8 dirs each), same seat anchor as the
+    base row (the extra sheets are scale-locked to it, sheets.convert_extra); frames carry anim / k / duration"""
     od = os.path.join(ROOT, 'characters', cid)
     full = {d: mirror(frames[MIRROR[d]]) if d in MIRROR else frames[d] for d in DIRS}
-    sheet = np.zeros((128, 128 * 8, 4), np.uint8); fr = []
-    for i, d in enumerate(DIRS):
-        sheet[:, i * 128:(i + 1) * 128] = full[d]
-        fr.append(dict(filename=f'chr_{cid}_sit_{d}_00', frame=dict(x=i * 128, y=0, w=128, h=128), pivot=[64, 116],
-                       seat=[64.0, float(sy)], dir=d))
+    rows = [('sit', 0, full, None)]
+    for an, fd in (extra or {}).items():
+        n = len(fd['S'])
+        for k in range(n):
+            rows.append((an, k, {d: mirror(fd[MIRROR[d]][k]) if d in MIRROR else fd[d][k] for d in DIRS}, (ms or {}).get(an, [400] * n)[k]))
+    sheet = np.zeros((128 * len(rows), 128 * 8, 4), np.uint8); fr = []
+    for r, (an, k, F, dur) in enumerate(rows):
+        for i, d in enumerate(DIRS):
+            sheet[r * 128:(r + 1) * 128, i * 128:(i + 1) * 128] = F[d]
+            e = dict(filename=f'chr_{cid}_{an}_{d}_{k:02d}', frame=dict(x=i * 128, y=r * 128, w=128, h=128), pivot=[64, 116],
+                     seat=[64.0, float(sy)], dir=d)
+            if an != 'sit': e.update(anim=an, k=k, duration=dur)
+            fr.append(e)
     Image.fromarray(sheet).save(os.path.join(od, f'chr_{cid}_sit.png'))
     json.dump(dict(frames=fr, meta=dict(app='bbt-pixel/tools/ai_import/sit.py', version='ai1', image=f'chr_{cid}_sit.png',
-                                        size=dict(w=1024, h=128), pivot=[64, 116], lift_units=0.0, seat_cm=SEAT_CM,
+                                        size=dict(w=1024, h=128 * len(rows)), pivot=[64, 116], lift_units=0.0, seat_cm=SEAT_CM,
                                         source=f'refs_ai/gen/{cid}_sit6.jpg (GenerateImage)',
                                         note='AI seated pose (tools/ai_import/sit.py): pivot = floor point under the hips; seat = butt '
                                              'contact point (place it on the seat surface, harness/seating.py); feet flat on the floor')),
