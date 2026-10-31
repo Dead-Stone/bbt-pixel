@@ -15,7 +15,8 @@ Meta: walk_m_per_pose = 2 steps / 8 frames, step = the W row's contact stride (f
 (side view), so the viewer advances one frame per walk_m_per_pose metres and the planted foot does not slide;
 contact / pass frames are measured (leg spread) and written so the viewer starts and settles on a passing frame.
 
-python3 tools/ai_import/walk8.py [cid ...]          (default: every cid with a refs_ai/chatgpt/<cid>/walk8_v*.png)
+python3 tools/ai_import/walk8.py [cid ...]          (default: every cid with a refs_ai/chatgpt/<cid>/walk8_v1.png)
+BASE / OVERRIDE: per character, the sheet version per direction (e.g. raj SW, NW from walk8_v2.png; the rest v1)
 Checks it prints per row: height range vs idle, torso-x drift, near-duplicate neighbours, contact / pass frames."""
 import os, sys, re, glob, json, numpy as np
 from PIL import Image
@@ -29,9 +30,67 @@ from convert import audit_fix
 ROWS = ['S', 'SW', 'W', 'NW', 'N']; PX_PER_M = 90.5; FRAME_MS = 100
 
 
+# approved sheet version per character (base) and per-direction overrides from a newer redo sheet (only the
+# directions the user approved from that redo; every other direction stays on the base version)
+BASE = {}                                   # cid -> 'vN' (default v1)
+OVERRIDE = {'raj': {'SW': 'v2', 'NW': 'v2'}, 'bernadette': {'W': 'v2'}, 'howard': {'N': 'v2'}}
+
+
+def sheet_path(cid, ver):
+    return os.path.join(SH.SRC, cid, f'walk8_{ver}.png')
+
+
 def source(cid):
-    fs = sorted(glob.glob(os.path.join(SH.SRC, cid, 'walk8_v*.png')), key=lambda p: int(re.findall(r'_v(\d+)', p)[-1]))
-    return fs[-1] if fs else None
+    p = sheet_path(cid, BASE.get(cid, 'v1'))
+    return p if os.path.exists(p) else None
+
+
+def versions(cid):
+    """-> {dir: 'vN'} the sheet version each direction is taken from"""
+    return {d: OVERRIDE.get(cid, {}).get(d, BASE.get(cid, 'v1')) for d in ROWS}
+
+
+def palette_match(fr, ref, bands=6, min_share=0.004):
+    """redo frames -> only the colours the reference (base row + idle, same direction) uses in the same height band
+    (top..sole split into `bands`): a colour the redo puts somewhere the base never has it (Howard N v2: shirt-back
+    highlights quantised to the trouser grey) is replaced by the nearest colour the base uses there. -> (frames, px changed)"""
+    def band_of(f):
+        A = f[..., 3] > 0; ys = np.nonzero(A.any(1))[0]; y0, y1 = ys[0], ys[-1] + 1
+        b = np.full(A.shape[0], -1); b[y0:y1] = np.minimum((np.arange(y1 - y0) * bands) // (y1 - y0), bands - 1); return A, b
+    allow = []
+    for i in range(bands):
+        cols, cnt = [], []
+        for f in ref:
+            A, b = band_of(f); px = f[..., :3][A & (b[:, None] == i)]
+            u, c = np.unique(px.reshape(-1, 3), axis=0, return_counts=True); cols.append(u); cnt.append(c)
+        u, inv = np.unique(np.concatenate(cols), axis=0, return_inverse=True); c = np.bincount(inv.ravel(), np.concatenate(cnt))
+        allow.append(u[c >= min_share * c.sum()].astype(int))
+    out, n = [], 0
+    for f in fr:
+        f = f.copy(); A, b = band_of(f)
+        for i in range(bands):
+            m = A & (b[:, None] == i); px = f[..., :3][m].astype(int)
+            ok = (px[:, None, :] == allow[i][None]).all(-1).any(1)
+            if (~ok).any():
+                bad = px[~ok]; j = ((bad[:, None, :] - allow[i][None]) ** 2).sum(-1).argmin(1)
+                px[~ok] = allow[i][j]; n += int((~ok).sum()); f[..., :3][m] = px.astype(np.uint8)
+        out.append(f)
+    return out, n
+
+
+def row_match(a, b):
+    """v1 row vs v2 row of the same direction after normalisation: median height, shoulder width (30 % down), head
+    width (8 % down) and mean colour of the body -- so a v1 <-> v2 turn does not pop"""
+    def m(fr):
+        hs, sw, hw, col = [], [], [], []
+        for f in fr:
+            A = f[..., 3] > 0; ys = np.nonzero(A.any(1))[0]; y0, h = ys[0], ys[-1] - ys[0]
+            w = lambda fy: int(np.ptp(np.nonzero(A[int(y0 + fy * h)])[0])) if A[int(y0 + fy * h)].any() else 0
+            hs.append(h); sw.append(w(0.30)); hw.append(w(0.08)); col.append(f[..., :3][A].mean(0))
+        return np.median(hs), np.median(sw), np.median(hw), np.mean(col, 0)
+    (h1, s1, w1, c1), (h2, s2, w2, c2) = m(a), m(b)
+    return dict(height=[float(h1), float(h2)], shoulder_w=[float(s1), float(s2)], head_w=[float(w1), float(w2)],
+                colour_delta=round(float(np.abs(c1 - c2).max()), 1))
 
 
 def idle_neutral(cid):
@@ -175,13 +234,25 @@ def fringe(fr, pal_rgb=None):
 
 
 def build(cid, path=None, only8=None):
-    """only8: directions forced to stay on the drawn 8 frames (None = gate decides)"""
+    """only8: directions forced to stay on the drawn 8 frames (None = gate decides). Directions in OVERRIDE[cid]
+    come from that redo sheet if its row passes the gate; otherwise they keep the base sheet's fallback."""
     path = path or source(cid)
     rows, extra, idle, pal, per_row = process(cid, path)
+    vers = versions(cid); base_v = BASE.get(cid, 'v1'); red = {}
+    for v in sorted(set(vers.values()) - {base_v}):
+        rv, ev, _, _, sv = process(cid, sheet_path(cid, v)); red[v] = (rv, ev, sv)
     sys.path.insert(0, HERE); import walk_cycle as WC
     j0, row0 = WC.load(cid)
     use, info = {}, {}
     for d in ROWS:
+        v = vers[d]; redo = None
+        if v != base_v:
+            rv, ev, sv = red[v]; rv[d], npm = palette_match(rv[d], rows[d] + [idle[d]])
+            rv[d] = [audit_fix(f, pal) for f in rv[d]]                 # re-snap specks the remap can leave
+            ok2, why2, A2, P2, sp2 = gate(d, rv[d], idle[d])
+            redo = dict(version=v, gate=('pass' if ok2 else 'fail'), why=why2, spread=sp2, match_base=row_match(rows[d], rv[d]),
+                        fringe=round(float(fringe(rv[d])), 4), row_scale=round(float(sv[d]), 4), palette_px_fixed=npm)
+            if ok2: rows[d], extra[d] = rv[d], ev[d]          # the redo row replaces the base row
         fr = rows[d]; ok, why, A, P, sp = gate(d, fr, idle[d])
         hs = [_h(f) for f in fr]; tx = [ST.torso_x(f[..., 3] > 0, 0.25, 0.45) for f in fr]
         rec = dict(height=[int(min(hs)), int(max(hs))], idle_height=int(_h(idle[d])), torso_x=[round(float(min(tx)), 1), round(float(max(tx)), 1)],
@@ -197,7 +268,9 @@ def build(cid, path=None, only8=None):
             else:
                 f4, cinfo = WC.cycle(d, row0(f'walk_{d}'), row0(f'idle_{d}')[0], pal)
                 use[d] = dict(mode='synth4', frames=f4, contact=[0, 2], passing=[1, 3], src='walk_cycle.py (chr_%s.json walk_%s)' % (cid, d))
-        rec.update(mode=use[d]['mode'], contact=use[d]['contact'], passing=use[d]['passing'], frames_from=use[d]['src'])
+        rec.update(mode=use[d]['mode'], contact=use[d]['contact'], passing=use[d]['passing'], frames_from=use[d]['src'],
+                   sheet=(redo['version'] if redo and redo['gate'] == 'pass' else base_v) if use[d]['mode'] != 'synth4' else 'main')
+        if redo: rec['redo'] = redo
         info[d] = rec
     # stride: W contact frames of the drawn sheet when W uses them, else the main sheet's measured stride
     if use['W']['mode'] != 'synth4':
@@ -222,6 +295,7 @@ def build(cid, path=None, only8=None):
                 frameTags=tags, frames_per_cycle={d: len(use[MIRROR.get(d, d)]['frames']) for d in DIRS}, steps_per_cycle=2, pivot=[64, 116],
                 row_scale={d: round(v, 4) for d, v in per_row.items()}, walk_stride_px=round(stride, 1),
                 walk_m_per_pose=mpp['W'], walk_m_per_pose_dir=mpp, pass_poses=pp, source=os.path.relpath(path, ROOT),
+                source_dir={d: os.path.relpath(sheet_path(cid, info[d]['sheet']), ROOT) if info[d]['sheet'] != 'main' else 'walk_cycle.py' for d in ROWS},
                 rows={d: {k: v for k, v in info[d].items()} for d in ROWS},
                 note='ChatGPT 8-frame walk (07_walk_8frame.txt) per direction where it passes the gate (walk8.gate); '
                      'pick4 = a stride/pass/stride/pass subset of the drawn frames; synth4 = walk_cycle.py fallback; NE/E/SE mirror NW/W/SW')
@@ -238,4 +312,5 @@ if __name__ == '__main__':
             r = info[d]
             print(f"  {d:2} {r['mode']:6} gate8 {r['gate_8']:4} frames {r['frames_from']} contact {r['contact']} pass {r['passing']} "
                   f"h {r['height']} idle {r['idle_height']} torso {r['torso_x']} spread {r['spread']} (idle {r['idle_spread']}) "
-                  f"fringe {r['fringe']} (idle {r['idle_fringe']}) {'; '.join(r['gate_8_why'])}")
+                  f"fringe {r['fringe']} (idle {r['idle_fringe']}) sheet {r['sheet']} {'; '.join(r['gate_8_why'])}")
+            if 'redo' in r: print(f"     redo {r['redo']}")

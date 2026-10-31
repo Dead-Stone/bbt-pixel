@@ -33,6 +33,11 @@ const CLIPS = [  // name, query, sim start, sim end, fps[, viewport w, h] (GIFs 
   ['walk8_cast_gamenight.gif', 'loc=floor4&view=all&zoom=1.8&pan=110,40&speed=1&auto=0', [
     ['20:33:23', '20:33:30'], ['20:35:24', '20:35:36'], ['20:36:29', '20:36:38'], ['20:37:24', '20:37:37'],
     ['20:39:25', '20:39:42'], ['21:52:32', '21:52:39']], null, 8, 640, 400],
+  // walk8_v2 redo rows at a 2x close-up (every art pixel = 2x2 screen pixels: zoom per location so the viewer's whole-pixel scale ds = 2): Raj SW turning
+  // NW (AIT physics), then Bernadette walking sideways (LOS ROBLES AV, E = the mirrored v2 W row); loc / follow / zoom per segment
+  ['walk8_v2_raj_bernadette.gif', 'view=all&speed=1&auto=0', [
+    ['12:00:02', '12:00:11', 'loc=ait_physics&follow=raj&zoom=12.5'],
+    ['18:41:03', '18:41:10', 'loc=street_exterior&follow=bernadette&zoom=13.5']], null, 8, 260, 260],
   ['clip_sheldon_walk_ai.gif', 'loc=floor4&view=all&follow=sheldon&zoom=3&speed=1&auto=0', '17:44:44', '17:44:58', 5, 400, 320],
 ];
 const sec = s => { const [h, m, x] = s.split(':').map(Number); return h * 3600 + m * 60 + (x || 0); };
