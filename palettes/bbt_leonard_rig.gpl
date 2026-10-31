@@ -2,11 +2,11 @@ GIMP Palette
 Name: bbt_leonard_rig
 Columns: 5
 #
-255 215 178	skin_hi
+255 222 189	skin_hi
 238 190 150	skin_base
-190 131 107	skin_sh
-148  86  75	skin_deep
- 81  42  38	skin_ol
+205 135 105	skin_sh
+167  91  73	skin_deep
+ 95  45  35	skin_ol
  76  59  46	hair_hi
  62  44  32	hair_base
  50  28  22	hair_sh
@@ -67,3 +67,13 @@ Columns: 5
  26  42 157	marker_sh
  12  16 122	marker_deep
   5   5  67	marker_ol
+255 253 248	eyew_hi
+246 244 238	eyew_base
+197 190 182	eyew_sh
+153 142 135	eyew_deep
+ 84  75  71	eyew_ol
+255 197 168	cheek_hi
+237 168 138	cheek_base
+190 111  96	cheek_sh
+147  69  66	cheek_deep
+ 81  34  35	cheek_ol

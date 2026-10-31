@@ -69,9 +69,9 @@
     0
    ],
    "fidget_frames": [
-    4,
     5,
-    6
+    6,
+    7
    ]
   },
   "walk": {
@@ -234,7 +234,7 @@
    "props"
   ],
   "gait": {
-   "arm": 10,
+   "arm": 18,
    "elbow": 16,
    "bob": 1.0,
    "hip_roll": 3.0,
@@ -247,17 +247,17 @@
    "rows": [
     {
      "side": "R",
-     "fingertip_vs_midthigh_px": -1.5,
-     "elbow_vs_waist_px": 2.5,
+     "fingertip_vs_midthigh_px": -1.9,
+     "elbow_vs_waist_px": 1.4,
      "upper_fore_ratio": 1.15,
-     "hand_px": 7.0
+     "hand_px": 6.7
     },
     {
      "side": "L",
-     "fingertip_vs_midthigh_px": -1.6,
-     "elbow_vs_waist_px": 2.3,
+     "fingertip_vs_midthigh_px": -2.0,
+     "elbow_vs_waist_px": 1.2,
      "upper_fore_ratio": 1.15,
-     "hand_px": 7.0
+     "hand_px": 6.7
     }
    ]
   }
