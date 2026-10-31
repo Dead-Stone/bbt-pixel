@@ -1,0 +1,58 @@
+GIMP Palette
+Name: bbt_raj_rig
+Columns: 5
+#
+203 153 115	skin_hi
+178 122  84	skin_base
+142  77  55	skin_sh
+110  45  36	skin_deep
+ 61  20  18	skin_ol
+ 41  34  34	hair_hi
+ 30  24  24	hair_base
+ 24  18  19	hair_sh
+ 19  13  14	hair_deep
+ 26  17  19	hair_ol
+255 252 243	shirt_hi
+238 234 224	shirt_base
+190 181 171	shirt_sh
+148 134 126	shirt_deep
+ 81  70  66	shirt_ol
+144 108  77	vest_hi
+124  84  54	vest_base
+ 99  52  35	vest_sh
+ 77  30  22	vest_deep
+ 42  13  11	vest_ol
+ 63  61  69	pants_hi
+ 48  48  56	pants_base
+ 37  36  45	pants_sh
+ 28  26  35	pants_deep
+ 20  18  26	pants_ol
+109  77  56	shoes_hi
+ 92  58  38	shoes_base
+ 74  35  24	shoes_sh
+ 57  19  15	shoes_deep
+ 31   8   7	shoes_ol
+ 54  42  37	eye_hi
+ 42  30  26	eye_base
+ 34  20  18	eye_sh
+ 26  13  13	eye_deep
+ 26  12  13	eye_ol
+173 119 108	lip_hi
+150  90  82	lip_base
+120  56  57	lip_sh
+ 93  38  45	lip_deep
+ 51  19  25	lip_ol
+ 36  30  29	brow_hi
+ 26  20  20	brow_base
+ 21  15  16	brow_sh
+ 16  11  12	brow_deep
+ 26  16  18	brow_ol
+ 34  27  27	lash_hi
+ 24  18  18	lash_base
+ 15  10  11	lash_deep
+ 26  15  18	lash_ol
+228  86  78	marker_hi
+200  40  40	marker_base
+160  15  33	marker_sh
+124   3  29	marker_deep
+ 68   0  18	marker_ol

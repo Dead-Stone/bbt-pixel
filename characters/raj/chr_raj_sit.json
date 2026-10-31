@@ -10,11 +10,11 @@
    },
    "pivot": [
     64,
-    108
+    116
    ],
    "seat": [
-    64,
-    84
+    64.0,
+    92.4
    ],
    "dir": "S"
   },
@@ -28,11 +28,11 @@
    },
    "pivot": [
     64,
-    104
+    116
    ],
    "seat": [
-    63.5,
-    82.2
+    64.1,
+    92.4
    ],
    "dir": "SW"
   },
@@ -46,11 +46,11 @@
    },
    "pivot": [
     64,
-    104
+    116
    ],
    "seat": [
-    63.0,
-    82.2
+    64.3,
+    92.5
    ],
    "dir": "W"
   },
@@ -64,11 +64,11 @@
    },
    "pivot": [
     64,
-    104
+    116
    ],
    "seat": [
-    62.2,
-    82.2
+    64.1,
+    92.4
    ],
    "dir": "NW"
   },
@@ -82,11 +82,11 @@
    },
    "pivot": [
     64,
-    128
+    116
    ],
    "seat": [
-    64,
-    98
+    64.0,
+    92.4
    ],
    "dir": "N"
   },
@@ -100,11 +100,11 @@
    },
    "pivot": [
     64,
-    104
+    116
    ],
    "seat": [
-    65.8,
-    82.2
+    63.9,
+    92.4
    ],
    "dir": "NE"
   },
@@ -118,11 +118,11 @@
    },
    "pivot": [
     64,
-    104
+    116
    ],
    "seat": [
-    65.0,
-    82.2
+    63.7,
+    92.5
    ],
    "dir": "E"
   },
@@ -136,18 +136,18 @@
    },
    "pivot": [
     64,
-    104
+    116
    ],
    "seat": [
-    64.5,
-    82.2
+    63.9,
+    92.4
    ],
    "dir": "SE"
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/v2/sit_v2.py",
-  "version": "v2",
+  "app": "bbt-pixel/tools/rig/build.py",
+  "version": "rig1",
   "image": "chr_raj_sit.png",
   "size": {
    "w": 1024,
@@ -155,9 +155,10 @@
   },
   "pivot": [
    64,
-   104
+   116
   ],
-  "lift_units": -8.42,
-  "note": "seated pose; pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py)"
+  "lift_units": 0.0,
+  "seat_cm": 43.6,
+  "note": "rig seated pose (tools/rig/motion.py sit): pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py); feet flat on the floor, seat height 44 cm"
  }
 }

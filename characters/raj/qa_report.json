@@ -1,6 +1,6 @@
 {
  "character": "raj",
- "generated": "2026-10-30 08:36 (America/Los_Angeles)",
+ "generated": "2026-10-30 17:59 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -13,7 +13,7 @@
  "head_top_spec_y": 24,
  "idle_S_head_top_y": 24,
  "idle_S_body_height_px": 92,
- "idle_S_lowest_px": 119,
+ "idle_S_lowest_px": 118,
  "head_top_within_2px_of_spec": true,
  "feet_on_pivot_line_idle": true,
  "palette_violations": 0,
@@ -70,16 +70,16 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 0,
-   "silhouette_identical": true
+   "pixels_differing_from_plain_flip": 866,
+   "silhouette_identical": false
   },
   "E": {
-   "pixels_differing_from_plain_flip": 0,
-   "silhouette_identical": true
+   "pixels_differing_from_plain_flip": 676,
+   "silhouette_identical": false
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 0,
-   "silhouette_identical": true
+   "pixels_differing_from_plain_flip": 825,
+   "silhouette_identical": false
   }
  },
  "decal_check": null,
