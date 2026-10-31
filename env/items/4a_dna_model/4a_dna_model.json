@@ -24,11 +24,11 @@
    "sprite": "item_4a_dna_model_SW.png",
    "pivot": [
     64,
-    142
+    164
    ],
    "canvas": [
     128,
-    142
+    164
    ],
    "footprint": [
     1,

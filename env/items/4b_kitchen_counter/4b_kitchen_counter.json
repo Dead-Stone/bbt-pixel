@@ -27,7 +27,7 @@
     250
    ],
    "canvas": [
-    256,
+    285,
     250
    ],
    "footprint": [
@@ -118,11 +118,11 @@
   "NW": {
    "sprite": "item_4b_kitchen_counter_NW.png",
    "pivot": [
-    64,
+    72,
     250
    ],
    "canvas": [
-    256,
+    264,
     250
    ],
    "footprint": [
@@ -217,7 +217,7 @@
     250
    ],
    "canvas": [
-    256,
+    263,
     250
    ],
    "footprint": [
@@ -308,11 +308,11 @@
   "SE": {
    "sprite": "item_4b_kitchen_counter_SE.png",
    "pivot": [
-    64,
+    94,
     250
    ],
    "canvas": [
-    256,
+    286,
     250
    ],
    "footprint": [

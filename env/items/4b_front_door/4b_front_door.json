@@ -149,11 +149,11 @@
      "sprite": "item_4b_front_door_SW_open_1.png",
      "pivot": [
       64,
-      208
+      212
      ],
      "canvas": [
       140,
-      208
+      212
      ],
      "footprint": [
       1,
@@ -165,11 +165,11 @@
      "sprite": "item_4b_front_door_SW_open_2.png",
      "pivot": [
       64,
-      208
+      212
      ],
      "canvas": [
       142,
-      208
+      212
      ],
      "footprint": [
       1,
@@ -675,11 +675,11 @@
      "sprite": "item_4b_front_door_SE_open_2.png",
      "pivot": [
       76,
-      208
+      212
      ],
      "canvas": [
       140,
-      208
+      212
      ],
      "footprint": [
       1,
@@ -691,11 +691,11 @@
      "sprite": "item_4b_front_door_SE_open.png",
      "pivot": [
       110,
-      208
+      212
      ],
      "canvas": [
       174,
-      208
+      212
      ],
      "footprint": [
       1,

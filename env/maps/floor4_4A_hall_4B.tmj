@@ -10,7 +10,7 @@
  "tileheight": 64,
  "infinite": false,
  "nextlayerid": 8,
- "nextobjectid": 189,
+ "nextobjectid": 188,
  "properties": [
   {
    "name": "px_per_m",
@@ -329,17 +329,17 @@
     4,
     4,
     4,
-    3,
-    3,
-    3,
-    3,
-    3,
-    2,
-    2,
+    1,
+    1,
     1,
     1,
     2,
     2,
+    2,
+    3,
+    3,
+    3,
+    3,
     5,
     6,
     6,
@@ -352,40 +352,40 @@
     4,
     4,
     4,
+    2,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
     3,
     3,
     3,
     3,
+    6,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6,
+    4,
+    4,
+    4,
+    4,
+    2,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
     3,
-    2,
-    2,
-    1,
-    1,
-    2,
-    2,
-    6,
-    5,
-    5,
-    5,
-    6,
-    6,
-    6,
-    6,
-    4,
-    4,
-    4,
-    4,
-    2,
-    1,
-    2,
-    2,
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    1,
+    3,
+    3,
+    3,
     5,
     5,
     6,
@@ -405,10 +405,10 @@
     2,
     2,
     1,
-    2,
-    1,
-    2,
-    1,
+    3,
+    3,
+    3,
+    3,
     5,
     5,
     6,
@@ -509,7 +509,7 @@
    "type": "objectgroup",
    "objects": [
     {
-     "id": 186,
+     "id": 185,
      "name": "4B",
      "type": "zone",
      "x": 0,
@@ -520,7 +520,7 @@
      "visible": true
     },
     {
-     "id": 187,
+     "id": 186,
      "name": "hall_4f",
      "type": "zone",
      "x": 512,
@@ -531,7 +531,7 @@
      "visible": true
     },
     {
-     "id": 188,
+     "id": 187,
      "name": "4A",
      "type": "zone",
      "x": 768,
@@ -643,7 +643,7 @@
     },
     {
      "id": 3,
-     "name": "wall_4b_backright_full_doorway",
+     "name": "wall_4b_backright_full",
      "type": "wall",
      "x": 64,
      "y": 0,
@@ -656,7 +656,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4b_backright_full_doorway.png"
+       "value": "../tiles/wall_4b_backright_full.png"
       },
       {
        "name": "runs_along",
@@ -731,7 +731,7 @@
     },
     {
      "id": 5,
-     "name": "wall_4b_backright_full_window",
+     "name": "wall_4b_backright_full",
      "type": "wall",
      "x": 128,
      "y": 0,
@@ -744,7 +744,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4b_backright_full_window.png"
+       "value": "../tiles/wall_4b_backright_full.png"
       },
       {
        "name": "runs_along",
@@ -819,7 +819,7 @@
     },
     {
      "id": 7,
-     "name": "wall_4b_backright_full_window",
+     "name": "wall_4b_backright_full",
      "type": "wall",
      "x": 192,
      "y": 0,
@@ -832,7 +832,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4b_backright_full_window.png"
+       "value": "../tiles/wall_4b_backright_full.png"
       },
       {
        "name": "runs_along",
@@ -907,7 +907,7 @@
     },
     {
      "id": 9,
-     "name": "wall_4b_backright_full",
+     "name": "wall_4b_backright_full_window",
      "type": "wall",
      "x": 256,
      "y": 0,
@@ -920,7 +920,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4b_backright_full.png"
+       "value": "../tiles/wall_4b_backright_full_window.png"
       },
       {
        "name": "runs_along",
@@ -995,7 +995,7 @@
     },
     {
      "id": 11,
-     "name": "wall_4b_backright_full",
+     "name": "wall_4b_backright_full_window",
      "type": "wall",
      "x": 320,
      "y": 0,
@@ -1008,7 +1008,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4b_backright_full.png"
+       "value": "../tiles/wall_4b_backright_full_window.png"
       },
       {
        "name": "runs_along",
@@ -1171,7 +1171,7 @@
     },
     {
      "id": 15,
-     "name": "wall_4b_backright_full",
+     "name": "wall_4b_backright_full_doorway",
      "type": "wall",
      "x": 448,
      "y": 0,
@@ -1184,7 +1184,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4b_backright_full.png"
+       "value": "../tiles/wall_4b_backright_full_doorway.png"
       },
       {
        "name": "runs_along",
@@ -1787,7 +1787,7 @@
     },
     {
      "id": 29,
-     "name": "wall_4a_backright_full",
+     "name": "wall_4a_backright_full_window",
      "type": "wall",
      "x": 960,
      "y": 0,
@@ -1800,7 +1800,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backright_full.png"
+       "value": "../tiles/wall_4a_backright_full_window.png"
       },
       {
        "name": "runs_along",
@@ -1875,7 +1875,7 @@
     },
     {
      "id": 31,
-     "name": "wall_4a_backright_full",
+     "name": "wall_4a_backright_full_window",
      "type": "wall",
      "x": 1024,
      "y": 0,
@@ -1888,7 +1888,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backright_full.png"
+       "value": "../tiles/wall_4a_backright_full_window.png"
       },
       {
        "name": "runs_along",
@@ -1963,7 +1963,7 @@
     },
     {
      "id": 33,
-     "name": "wall_4a_backright_full",
+     "name": "wall_4a_backright_full_window",
      "type": "wall",
      "x": 1088,
      "y": 0,
@@ -1976,7 +1976,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backright_full.png"
+       "value": "../tiles/wall_4a_backright_full_window.png"
       },
       {
        "name": "runs_along",
@@ -2051,7 +2051,7 @@
     },
     {
      "id": 35,
-     "name": "wall_4a_backright_full",
+     "name": "wall_4a_backright_full_doorway",
      "type": "wall",
      "x": 1152,
      "y": 0,
@@ -2064,7 +2064,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backright_full.png"
+       "value": "../tiles/wall_4a_backright_full_doorway.png"
       },
       {
        "name": "runs_along",
@@ -2315,7 +2315,7 @@
     },
     {
      "id": 41,
-     "name": "wall_4a_backright_full_window",
+     "name": "wall_4a_backright_full",
      "type": "wall",
      "x": 1344,
      "y": 0,
@@ -2328,7 +2328,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backright_full_window.png"
+       "value": "../tiles/wall_4a_backright_full.png"
       },
       {
        "name": "runs_along",
@@ -2403,7 +2403,7 @@
     },
     {
      "id": 43,
-     "name": "wall_4a_backright_full_window",
+     "name": "wall_4a_backright_full",
      "type": "wall",
      "x": 1408,
      "y": 0,
@@ -2416,7 +2416,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backright_full_window.png"
+       "value": "../tiles/wall_4a_backright_full.png"
       },
       {
        "name": "runs_along",
@@ -3063,7 +3063,7 @@
     },
     {
      "id": 58,
-     "name": "wall_hall_backleft_cutaway_doorway",
+     "name": "wall_hall_backleft_cutaway",
      "type": "wall",
      "x": 512,
      "y": 192,
@@ -3076,7 +3076,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_hall_backleft_cutaway_doorway.png"
+       "value": "../tiles/wall_hall_backleft_cutaway.png"
       },
       {
        "name": "runs_along",
@@ -3107,7 +3107,7 @@
     },
     {
      "id": 59,
-     "name": "wall_4a_backleft_cutaway_doorway",
+     "name": "wall_4a_backleft_cutaway",
      "type": "wall",
      "x": 768,
      "y": 192,
@@ -3120,7 +3120,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backleft_cutaway_doorway.png"
+       "value": "../tiles/wall_4a_backleft_cutaway.png"
       },
       {
        "name": "runs_along",
@@ -3239,7 +3239,7 @@
     },
     {
      "id": 62,
-     "name": "wall_hall_backleft_cutaway",
+     "name": "wall_hall_backleft_cutaway_doorway",
      "type": "wall",
      "x": 512,
      "y": 256,
@@ -3252,7 +3252,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_hall_backleft_cutaway.png"
+       "value": "../tiles/wall_hall_backleft_cutaway_doorway.png"
       },
       {
        "name": "runs_along",
@@ -3283,7 +3283,7 @@
     },
     {
      "id": 63,
-     "name": "wall_4a_backleft_cutaway",
+     "name": "wall_4a_backleft_cutaway_doorway",
      "type": "wall",
      "x": 768,
      "y": 256,
@@ -3296,7 +3296,7 @@
       {
        "name": "sprite",
        "type": "string",
-       "value": "../tiles/wall_4a_backleft_cutaway.png"
+       "value": "../tiles/wall_4a_backleft_cutaway_doorway.png"
       },
       {
        "name": "runs_along",
@@ -3911,147 +3911,9 @@
    "objects": [
     {
      "id": 77,
-     "name": "4a_fridge",
-     "type": "item",
-     "x": 768,
-     "y": 0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_fridge"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "closed"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 12.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_fridge/4a_fridge.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 13.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 79,
-     "name": "4a_kitchen_counter",
-     "type": "item",
-     "x": 832,
-     "y": 0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_kitchen_counter"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 13.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[3, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_kitchen_counter/4a_kitchen_counter.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 14.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 83,
      "name": "4a_bookcase_collectibles",
      "type": "item",
-     "x": 1024,
+     "x": 768,
      "y": 0,
      "width": 0,
      "height": 0,
@@ -4082,7 +3944,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 16.0
+       "value": 12.0
       },
       {
        "name": "world_y",
@@ -4107,7 +3969,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 17.0
+       "value": 13.0
       },
       {
        "name": "blocks_walk",
@@ -4117,10 +3979,10 @@
      ]
     },
     {
-     "id": 85,
-     "name": "4a_couch",
+     "id": 79,
+     "name": "4a_whiteboard",
      "type": "item",
-     "x": 1152,
+     "x": 896,
      "y": 0,
      "width": 0,
      "height": 0,
@@ -4131,7 +3993,7 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_couch"
+       "value": "4a_whiteboard"
       },
       {
        "name": "rot",
@@ -4141,7 +4003,7 @@
       {
        "name": "state",
        "type": "string",
-       "value": "default"
+       "value": "equations_a"
       },
       {
        "name": "z",
@@ -4151,7 +4013,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 18.0
+       "value": 14.0
       },
       {
        "name": "world_y",
@@ -4161,12 +4023,12 @@
       {
        "name": "footprint",
        "type": "string",
-       "value": "[3, 1]"
+       "value": "[1, 1]"
       },
       {
        "name": "manifest",
        "type": "string",
-       "value": "../items/4a_couch/4a_couch.json"
+       "value": "../items/4a_whiteboard/4a_whiteboard.json"
       },
       {
        "name": "zone",
@@ -4176,7 +4038,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 19.0
+       "value": 15.0
       },
       {
        "name": "blocks_walk",
@@ -4186,79 +4048,10 @@
      ]
     },
     {
-     "id": 90,
-     "name": "4a_flag_banner",
-     "type": "item",
-     "x": 1184.0,
-     "y": 0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_flag_banner"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 18.5
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[2, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_flag_banner/4a_flag_banner.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 19.4
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": false
-      }
-     ]
-    },
-    {
-     "id": 91,
+     "id": 82,
      "name": "4a_desk_laptop",
      "type": "item",
-     "x": 1344,
+     "x": 960,
      "y": 0,
      "width": 0,
      "height": 0,
@@ -4289,7 +4082,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 21.0
+       "value": 15.0
       },
       {
        "name": "world_y",
@@ -4314,7 +4107,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 22.0
+       "value": 16.0
       },
       {
        "name": "blocks_walk",
@@ -4324,10 +4117,10 @@
      ]
     },
     {
-     "id": 94,
+     "id": 85,
      "name": "4a_office_chair",
      "type": "item",
-     "x": 1408,
+     "x": 1024,
      "y": 64,
      "width": 0,
      "height": 0,
@@ -4358,7 +4151,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 22.0
+       "value": 16.0
       },
       {
        "name": "world_y",
@@ -4383,7 +4176,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 24.0
+       "value": 18.0
       },
       {
        "name": "blocks_walk",
@@ -4393,11 +4186,218 @@
      ]
     },
     {
-     "id": 96,
+     "id": 87,
+     "name": "4a_telescope",
+     "type": "item",
+     "x": 1088,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_telescope"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 17.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_telescope/4a_telescope.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 18.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 89,
+     "name": "4a_kitchen_counter",
+     "type": "item",
+     "x": 1216,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_kitchen_counter"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 19.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[3, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_kitchen_counter/4a_kitchen_counter.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 20.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 93,
+     "name": "4a_fridge",
+     "type": "item",
+     "x": 1408,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_fridge"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "closed"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 22.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_fridge/4a_fridge.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 23.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 95,
      "name": "4a_rug",
      "type": "item",
-     "x": 1152,
-     "y": 64,
+     "x": 832,
+     "y": 192,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -4427,12 +4427,12 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 18.0
+       "value": 13.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 1.0
+       "value": 3.0
       },
       {
        "name": "footprint",
@@ -4452,7 +4452,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 20.0
+       "value": 17.0
       },
       {
        "name": "blocks_walk",
@@ -4462,10 +4462,10 @@
      ]
     },
     {
-     "id": 97,
-     "name": "4a_coffee_table",
+     "id": 96,
+     "name": "4a_couch",
      "type": "item",
-     "x": 1152,
+     "x": 832,
      "y": 128,
      "width": 0,
      "height": 0,
@@ -4476,7 +4476,7 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_coffee_table"
+       "value": "4a_couch"
       },
       {
        "name": "rot",
@@ -4496,7 +4496,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 18.0
+       "value": 13.0
       },
       {
        "name": "world_y",
@@ -4506,12 +4506,12 @@
       {
        "name": "footprint",
        "type": "string",
-       "value": "[2, 1]"
+       "value": "[3, 1]"
       },
       {
        "name": "manifest",
        "type": "string",
-       "value": "../items/4a_coffee_table/4a_coffee_table.json"
+       "value": "../items/4a_couch/4a_couch.json"
       },
       {
        "name": "zone",
@@ -4521,7 +4521,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 21.0
+       "value": 16.0
       },
       {
        "name": "blocks_walk",
@@ -4531,11 +4531,11 @@
      ]
     },
     {
-     "id": 100,
-     "name": "4a_takeout_set",
+     "id": 101,
+     "name": "4a_floor_lamp",
      "type": "item",
-     "x": 1152,
-     "y": 128,
+     "x": 768,
+     "y": 192,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -4545,81 +4545,12 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_takeout_set"
+       "value": "4a_floor_lamp"
       },
       {
        "name": "rot",
        "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.45
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 18.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 2.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_takeout_set/4a_takeout_set.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 21.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": false
-      }
-     ]
-    },
-    {
-     "id": 102,
-     "name": "4a_tv_stand",
-     "type": "item",
-     "x": 1152,
-     "y": 256,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_tv_stand"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "NE"
+       "value": "SE"
       },
       {
        "name": "state",
@@ -4634,22 +4565,22 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 18.0
+       "value": 12.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 4.0
+       "value": 3.0
       },
       {
        "name": "footprint",
        "type": "string",
-       "value": "[2, 1]"
+       "value": "[1, 1]"
       },
       {
        "name": "manifest",
        "type": "string",
-       "value": "../items/4a_tv_stand/4a_tv_stand.json"
+       "value": "../items/4a_floor_lamp/4a_floor_lamp.json"
       },
       {
        "name": "zone",
@@ -4659,7 +4590,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 23.0
+       "value": 16.0
       },
       {
        "name": "blocks_walk",
@@ -4669,10 +4600,10 @@
      ]
     },
     {
-     "id": 105,
+     "id": 103,
      "name": "4a_armchair",
      "type": "item",
-     "x": 1344,
+     "x": 1088,
      "y": 128,
      "width": 0,
      "height": 0,
@@ -4703,7 +4634,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 21.0
+       "value": 17.0
       },
       {
        "name": "world_y",
@@ -4728,7 +4659,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 24.0
+       "value": 20.0
       },
       {
        "name": "blocks_walk",
@@ -4738,10 +4669,10 @@
      ]
     },
     {
-     "id": 107,
-     "name": "4a_telescope",
+     "id": 105,
+     "name": "4a_coffee_table",
      "type": "item",
-     "x": 1408,
+     "x": 896,
      "y": 192,
      "width": 0,
      "height": 0,
@@ -4752,7 +4683,7 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_telescope"
+       "value": "4a_coffee_table"
       },
       {
        "name": "rot",
@@ -4772,7 +4703,76 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 22.0
+       "value": 14.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_coffee_table/4a_coffee_table.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 18.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 108,
+     "name": "4a_takeout_set",
+     "type": "item",
+     "x": 896,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_takeout_set"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.45
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 14.0
       },
       {
        "name": "world_y",
@@ -4787,7 +4787,7 @@
       {
        "name": "manifest",
        "type": "string",
-       "value": "../items/4a_telescope/4a_telescope.json"
+       "value": "../items/4a_takeout_set/4a_takeout_set.json"
       },
       {
        "name": "zone",
@@ -4797,21 +4797,21 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 26.0
+       "value": 18.0
       },
       {
        "name": "blocks_walk",
        "type": "bool",
-       "value": true
+       "value": false
       }
      ]
     },
     {
-     "id": 109,
-     "name": "4a_whiteboard",
+     "id": 110,
+     "name": "4a_tv_stand",
      "type": "item",
-     "x": 1344,
-     "y": 320,
+     "x": 896,
+     "y": 448,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -4821,150 +4821,12 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_whiteboard"
+       "value": "4a_tv_stand"
       },
       {
        "name": "rot",
        "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "equations_a"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 21.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 5.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_whiteboard/4a_whiteboard.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 27.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 112,
-     "name": "4a_whiteboard",
-     "type": "item",
-     "x": 1408,
-     "y": 320,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_whiteboard"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "equations_b"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 22.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 5.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_whiteboard/4a_whiteboard.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 28.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 115,
-     "name": "4a_floor_lamp",
-     "type": "item",
-     "x": 1088,
-     "y": 64,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_floor_lamp"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "S"
+       "value": "NE"
       },
       {
        "name": "state",
@@ -4979,22 +4841,22 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 17.0
+       "value": 14.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 1.0
+       "value": 7.0
       },
       {
        "name": "footprint",
        "type": "string",
-       "value": "[1, 1]"
+       "value": "[2, 1]"
       },
       {
        "name": "manifest",
        "type": "string",
-       "value": "../items/4a_floor_lamp/4a_floor_lamp.json"
+       "value": "../items/4a_tv_stand/4a_tv_stand.json"
       },
       {
        "name": "zone",
@@ -5004,7 +4866,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 19.0
+       "value": 22.0
       },
       {
        "name": "blocks_walk",
@@ -5014,10 +4876,10 @@
      ]
     },
     {
-     "id": 117,
+     "id": 113,
      "name": "4a_kitchen_island",
      "type": "item",
-     "x": 832,
+     "x": 1216,
      "y": 128,
      "width": 0,
      "height": 0,
@@ -5048,7 +4910,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 13.0
+       "value": 19.0
       },
       {
        "name": "world_y",
@@ -5073,7 +4935,145 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 16.0
+       "value": 22.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 117,
+     "name": "4a_bar_stool",
+     "type": "item",
+     "x": 1216,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_bar_stool"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 19.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_bar_stool/4a_bar_stool.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 23.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 119,
+     "name": "4a_bar_stool",
+     "type": "item",
+     "x": 1280,
+     "y": 192,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_bar_stool"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 20.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_bar_stool/4a_bar_stool.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 24.0
       },
       {
        "name": "blocks_walk",
@@ -5084,147 +5084,9 @@
     },
     {
      "id": 121,
-     "name": "4a_bar_stool",
-     "type": "item",
-     "x": 832,
-     "y": 192,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_bar_stool"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 13.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_bar_stool/4a_bar_stool.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 17.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 123,
-     "name": "4a_bar_stool",
-     "type": "item",
-     "x": 896,
-     "y": 192,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_bar_stool"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 14.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4a_bar_stool/4a_bar_stool.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4A"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 18.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 125,
      "name": "4a_takeout_set",
      "type": "item",
-     "x": 896,
+     "x": 1280,
      "y": 128,
      "width": 0,
      "height": 0,
@@ -5255,7 +5117,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 14.0
+       "value": 20.0
       },
       {
        "name": "world_y",
@@ -5280,7 +5142,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 17.0
+       "value": 23.0
       },
       {
        "name": "blocks_walk",
@@ -5290,11 +5152,80 @@
      ]
     },
     {
-     "id": 127,
+     "id": 123,
+     "name": "4a_whiteboard",
+     "type": "item",
+     "x": 832,
+     "y": 384,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_whiteboard"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SE"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "equations_b"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 13.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 6.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4a_whiteboard/4a_whiteboard.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4A"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 20.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 126,
      "name": "4a_dna_model",
      "type": "item",
-     "x": 1280,
-     "y": 320,
+     "x": 1408,
+     "y": 384,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -5324,12 +5255,12 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 20.0
+       "value": 22.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 5.0
+       "value": 6.0
       },
       {
        "name": "footprint",
@@ -5349,7 +5280,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 26.0
+       "value": 29.0
       },
       {
        "name": "blocks_walk",
@@ -5359,11 +5290,11 @@
      ]
     },
     {
-     "id": 128,
+     "id": 127,
      "name": "4a_front_door",
      "type": "item",
      "x": 768,
-     "y": 192,
+     "y": 256,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -5398,7 +5329,7 @@
       {
        "name": "world_y",
        "type": "float",
-       "value": 3.0
+       "value": 4.0
       },
       {
        "name": "footprint",
@@ -5418,7 +5349,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 16.0
+       "value": 17.0
       },
       {
        "name": "blocks_walk",
@@ -5428,7 +5359,7 @@
      ]
     },
     {
-     "id": 132,
+     "id": 131,
      "name": "hall_elevator_broken",
      "type": "item",
      "x": 576,
@@ -5497,7 +5428,7 @@
      ]
     },
     {
-     "id": 135,
+     "id": 134,
      "name": "hall_stair_flight",
      "type": "item",
      "x": 640,
@@ -5566,7 +5497,7 @@
      ]
     },
     {
-     "id": 138,
+     "id": 137,
      "name": "hall_stair_rail",
      "type": "item",
      "x": 576,
@@ -5635,11 +5566,11 @@
      ]
     },
     {
-     "id": 139,
+     "id": 138,
      "name": "4b_front_door",
      "type": "item",
      "x": 512,
-     "y": 192,
+     "y": 256,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -5674,7 +5605,7 @@
       {
        "name": "world_y",
        "type": "float",
-       "value": 3.0
+       "value": 4.0
       },
       {
        "name": "footprint",
@@ -5694,7 +5625,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 12.0
+       "value": 13.0
       },
       {
        "name": "blocks_walk",
@@ -5704,79 +5635,10 @@
      ]
     },
     {
-     "id": 144,
-     "name": "4b_bedroom_door",
-     "type": "item",
-     "x": 64,
-     "y": 0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_bedroom_door"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "ajar"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 1.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4b_bedroom_door/4b_bedroom_door.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4B"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 2.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": false
-      }
-     ]
-    },
-    {
-     "id": 146,
+     "id": 143,
      "name": "4b_kitchen_counter",
      "type": "item",
-     "x": 256,
+     "x": 0,
      "y": 0,
      "width": 0,
      "height": 0,
@@ -5807,7 +5669,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 4.0
+       "value": 0.0
       },
       {
        "name": "world_y",
@@ -5832,7 +5694,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 5.0
+       "value": 1.0
       },
       {
        "name": "blocks_walk",
@@ -5842,11 +5704,11 @@
      ]
     },
     {
-     "id": 149,
+     "id": 146,
      "name": "4b_fridge",
      "type": "item",
-     "x": 448,
-     "y": 0,
+     "x": 0,
+     "y": 256,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -5861,7 +5723,7 @@
       {
        "name": "rot",
        "type": "string",
-       "value": "SW"
+       "value": "SE"
       },
       {
        "name": "state",
@@ -5876,12 +5738,12 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 7.0
+       "value": 0.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 0.0
+       "value": 4.0
       },
       {
        "name": "footprint",
@@ -5901,7 +5763,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 8.0
+       "value": 5.0
       },
       {
        "name": "blocks_walk",
@@ -5911,10 +5773,10 @@
      ]
     },
     {
-     "id": 151,
+     "id": 148,
      "name": "4b_kitchen_bar",
      "type": "item",
-     "x": 320,
+     "x": 64,
      "y": 128,
      "width": 0,
      "height": 0,
@@ -5945,7 +5807,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 5.0
+       "value": 1.0
       },
       {
        "name": "world_y",
@@ -5970,7 +5832,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 8.0
+       "value": 4.0
       },
       {
        "name": "blocks_walk",
@@ -5980,10 +5842,10 @@
      ]
     },
     {
-     "id": 156,
+     "id": 153,
      "name": "4b_bar_stool",
      "type": "item",
-     "x": 320,
+     "x": 64,
      "y": 192,
      "width": 0,
      "height": 0,
@@ -6013,35 +5875,35 @@
       },
       {
        "name": "world_x",
+       "type": "float",
+       "value": 1.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4b_bar_stool/4b_bar_stool.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4B"
+      },
+      {
+       "name": "sort_key",
        "type": "float",
        "value": 5.0
       },
       {
-       "name": "world_y",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4b_bar_stool/4b_bar_stool.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4B"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 9.0
-      },
-      {
        "name": "blocks_walk",
        "type": "bool",
        "value": true
@@ -6049,10 +5911,10 @@
      ]
     },
     {
-     "id": 158,
+     "id": 155,
      "name": "4b_bar_stool",
      "type": "item",
-     "x": 384,
+     "x": 128,
      "y": 192,
      "width": 0,
      "height": 0,
@@ -6083,7 +5945,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 6.0
+       "value": 2.0
       },
       {
        "name": "world_y",
@@ -6108,7 +5970,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 10.0
+       "value": 6.0
       },
       {
        "name": "blocks_walk",
@@ -6118,10 +5980,10 @@
      ]
     },
     {
-     "id": 160,
+     "id": 157,
      "name": "4b_wine_set",
      "type": "item",
-     "x": 384,
+     "x": 128,
      "y": 128,
      "width": 0,
      "height": 0,
@@ -6152,7 +6014,7 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 6.0
+       "value": 2.0
       },
       {
        "name": "world_y",
@@ -6177,144 +6039,6 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 9.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": false
-      }
-     ]
-    },
-    {
-     "id": 163,
-     "name": "4b_couch",
-     "type": "item",
-     "x": 0,
-     "y": 192,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_couch"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 3]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4b_couch/4b_couch.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4B"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 4.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 168,
-     "name": "4b_rug",
-     "type": "item",
-     "x": 64,
-     "y": 192,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_rug"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 1.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[2, 2]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4b_rug/4b_rug.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4B"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
        "value": 5.0
       },
       {
@@ -6325,149 +6049,11 @@
      ]
     },
     {
-     "id": 169,
-     "name": "4b_coffee_table",
-     "type": "item",
-     "x": 128,
-     "y": 192,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_coffee_table"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 2.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 2]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4b_coffee_table/4b_coffee_table.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4B"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 6.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 171,
-     "name": "4b_armchair_patterned",
-     "type": "item",
-     "x": 192,
-     "y": 64,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_armchair_patterned"
-      },
-      {
-       "name": "rot",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "state",
-       "type": "string",
-       "value": "default"
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "world_x",
-       "type": "float",
-       "value": 3.0
-      },
-      {
-       "name": "world_y",
-       "type": "float",
-       "value": 1.0
-      },
-      {
-       "name": "footprint",
-       "type": "string",
-       "value": "[1, 1]"
-      },
-      {
-       "name": "manifest",
-       "type": "string",
-       "value": "../items/4b_armchair_patterned/4b_armchair_patterned.json"
-      },
-      {
-       "name": "zone",
-       "type": "string",
-       "value": "4B"
-      },
-      {
-       "name": "sort_key",
-       "type": "float",
-       "value": 5.0
-      },
-      {
-       "name": "blocks_walk",
-       "type": "bool",
-       "value": true
-      }
-     ]
-    },
-    {
-     "id": 173,
+     "id": 160,
      "name": "4b_dining_table_cluttered",
      "type": "item",
-     "x": 192,
-     "y": 320,
+     "x": 256,
+     "y": 64,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -6497,12 +6083,12 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 3.0
+       "value": 4.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 5.0
+       "value": 1.0
       },
       {
        "name": "footprint",
@@ -6522,7 +6108,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 9.0
+       "value": 6.0
       },
       {
        "name": "blocks_walk",
@@ -6532,11 +6118,80 @@
      ]
     },
     {
-     "id": 176,
+     "id": 163,
+     "name": "4b_bedroom_door",
+     "type": "item",
+     "x": 448,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_bedroom_door"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "ajar"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 7.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4b_bedroom_door/4b_bedroom_door.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4B"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 8.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 165,
      "name": "4b_laundry_pile",
      "type": "item",
      "x": 384,
-     "y": 320,
+     "y": 64,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -6571,7 +6226,7 @@
       {
        "name": "world_y",
        "type": "float",
-       "value": 5.0
+       "value": 1.0
       },
       {
        "name": "footprint",
@@ -6591,6 +6246,282 @@
       {
        "name": "sort_key",
        "type": "float",
+       "value": 8.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 167,
+     "name": "4b_rug",
+     "type": "item",
+     "x": 192,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_rug"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 2]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4b_rug/4b_rug.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4B"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 9.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": false
+      }
+     ]
+    },
+    {
+     "id": 168,
+     "name": "4b_couch",
+     "type": "item",
+     "x": 192,
+     "y": 256,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_couch"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 3.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 4.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[3, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4b_couch/4b_couch.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4B"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 8.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 173,
+     "name": "4b_coffee_table",
+     "type": "item",
+     "x": 256,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_coffee_table"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 4.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[2, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4b_coffee_table/4b_coffee_table.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4B"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
+       "value": 10.0
+      },
+      {
+       "name": "blocks_walk",
+       "type": "bool",
+       "value": true
+      }
+     ]
+    },
+    {
+     "id": 175,
+     "name": "4b_armchair_patterned",
+     "type": "item",
+     "x": 384,
+     "y": 320,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_armchair_patterned"
+      },
+      {
+       "name": "rot",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "value": "default"
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "world_x",
+       "type": "float",
+       "value": 6.0
+      },
+      {
+       "name": "world_y",
+       "type": "float",
+       "value": 5.0
+      },
+      {
+       "name": "footprint",
+       "type": "string",
+       "value": "[1, 1]"
+      },
+      {
+       "name": "manifest",
+       "type": "string",
+       "value": "../items/4b_armchair_patterned/4b_armchair_patterned.json"
+      },
+      {
+       "name": "zone",
+       "type": "string",
+       "value": "4B"
+      },
+      {
+       "name": "sort_key",
+       "type": "float",
        "value": 12.0
       },
       {
@@ -6601,11 +6532,11 @@
      ]
     },
     {
-     "id": 178,
+     "id": 177,
      "name": "4b_floor_lamp",
      "type": "item",
-     "x": 0,
-     "y": 128,
+     "x": 384,
+     "y": 256,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -6620,7 +6551,7 @@
       {
        "name": "rot",
        "type": "string",
-       "value": "SE"
+       "value": "SW"
       },
       {
        "name": "state",
@@ -6635,12 +6566,12 @@
       {
        "name": "world_x",
        "type": "float",
-       "value": 0.0
+       "value": 6.0
       },
       {
        "name": "world_y",
        "type": "float",
-       "value": 2.0
+       "value": 4.0
       },
       {
        "name": "footprint",
@@ -6660,7 +6591,7 @@
       {
        "name": "sort_key",
        "type": "float",
-       "value": 3.0
+       "value": 11.0
       },
       {
        "name": "blocks_walk",
@@ -6670,7 +6601,7 @@
      ]
     },
     {
-     "id": 180,
+     "id": 179,
      "name": "4b_plant",
      "type": "item",
      "x": 64,
@@ -6752,245 +6683,9 @@
    "objects": [
     {
      "id": 78,
-     "name": "4a_fridge.use",
-     "type": "hook",
-     "x": 800.0,
-     "y": 83.2,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_fridge"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "use"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "use"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "open_fridge"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "food,drinks"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 80,
-     "name": "4a_kitchen_counter.cook",
-     "type": "hook",
-     "x": 947.2,
-     "y": 76.8,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_kitchen_counter"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "cook"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "cook"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "cook_stove"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 81,
-     "name": "4a_kitchen_counter.sink",
-     "type": "hook",
-     "x": 870.4,
-     "y": 76.8,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_kitchen_counter"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "sink"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "use"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "wash_dishes"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 82,
-     "name": "4a_kitchen_counter.counter",
-     "type": "hook",
-     "x": 998.4,
-     "y": 76.8,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_kitchen_counter"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "counter"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "pour_drink"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "pour_drink"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 84,
      "name": "4a_bookcase_collectibles.browse",
      "type": "hook",
-     "x": 1088.0,
+     "x": 832.0,
      "y": 80.0,
      "width": 0,
      "height": 0,
@@ -7046,11 +6741,11 @@
      ]
     },
     {
-     "id": 86,
-     "name": "4a_couch.seat0",
+     "id": 80,
+     "name": "4a_whiteboard.write",
      "type": "hook",
-     "x": 1194.24,
-     "y": 38.4,
+     "x": 928.0,
+     "y": 80.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -7060,86 +6755,27 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_couch"
+       "value": "4a_whiteboard"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "seat0"
+       "value": "write"
       },
       {
        "name": "hook_type",
        "type": "string",
-       "value": "sit"
+       "value": "write"
       },
       {
        "name": "facing",
        "type": "string",
-       "value": "SW"
+       "value": "NE"
       },
       {
        "name": "anim",
        "type": "string",
-       "value": "sit_couch"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "sheldons_spot"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": "sheldon"
-      }
-     ]
-    },
-    {
-     "id": 87,
-     "name": "4a_couch.seat1",
-     "type": "hook",
-     "x": 1248.0,
-     "y": 38.4,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_couch"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat1"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "sit"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_couch"
+       "value": "write_whiteboard"
       },
       {
        "name": "capacity",
@@ -7164,11 +6800,11 @@
      ]
     },
     {
-     "id": 88,
-     "name": "4a_couch.seat2",
+     "id": 81,
+     "name": "4a_whiteboard.look",
      "type": "hook",
-     "x": 1301.76,
-     "y": 38.4,
+     "x": 928.0,
+     "y": 108.8,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -7178,27 +6814,27 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_couch"
+       "value": "4a_whiteboard"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "seat2"
+       "value": "look"
       },
       {
        "name": "hook_type",
        "type": "string",
-       "value": "sit"
+       "value": "look"
       },
       {
        "name": "facing",
        "type": "string",
-       "value": "SW"
+       "value": "NE"
       },
       {
        "name": "anim",
        "type": "string",
-       "value": "sit_couch"
+       "value": "look_whiteboard"
       },
       {
        "name": "capacity",
@@ -7223,69 +6859,10 @@
      ]
     },
     {
-     "id": 89,
-     "name": "4a_couch.armrest_r",
-     "type": "hook",
-     "x": 1336.32,
-     "y": 35.2,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_couch"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "armrest_r"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "perch"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "perch_armrest"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 92,
+     "id": 83,
      "name": "4a_desk_laptop.use0",
      "type": "hook",
-     "x": 1379.2,
+     "x": 995.2,
      "y": 73.6,
      "width": 0,
      "height": 0,
@@ -7341,10 +6918,10 @@
      ]
     },
     {
-     "id": 93,
+     "id": 84,
      "name": "4a_desk_laptop.use1",
      "type": "hook",
-     "x": 1436.8,
+     "x": 1052.8,
      "y": 73.6,
      "width": 0,
      "height": 0,
@@ -7400,10 +6977,10 @@
      ]
     },
     {
-     "id": 95,
+     "id": 86,
      "name": "4a_office_chair.seat0",
      "type": "hook",
-     "x": 1440.0,
+     "x": 1056.0,
      "y": 92.8,
      "width": 0,
      "height": 0,
@@ -7459,11 +7036,11 @@
      ]
     },
     {
-     "id": 98,
-     "name": "4a_coffee_table.surface0",
+     "id": 88,
+     "name": "4a_telescope.look",
      "type": "hook",
-     "x": 1190.4,
-     "y": 160.0,
+     "x": 1120.0,
+     "y": 60.8,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -7473,189 +7050,12 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_coffee_table"
+       "value": "4a_telescope"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "surface0"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "place_item"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.45
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "takeout,drinks"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 99,
-     "name": "4a_coffee_table.surface1",
-     "type": "hook",
-     "x": 1241.6,
-     "y": 160.0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_coffee_table"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "surface1"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "place_item"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.45
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "takeout,drinks"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 101,
-     "name": "4a_takeout_set.pickup",
-     "type": "hook",
-     "x": 1184.0,
-     "y": 160.0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_takeout_set"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "pickup"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "pickup"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "eat_takeout"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.45
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "food"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 103,
-     "name": "4a_tv_stand.watch_target",
-     "type": "hook",
-     "x": 1216.0,
-     "y": 291.2,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_tv_stand"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "watch_target"
+       "value": "look"
       },
       {
        "name": "hook_type",
@@ -7670,66 +7070,7 @@
       {
        "name": "anim",
        "type": "string",
-       "value": ""
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.9
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "tv"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 104,
-     "name": "4a_tv_stand.game_console",
-     "type": "hook",
-     "x": 1193.6,
-     "y": 233.6,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_tv_stand"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "game_console"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "use"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "use_console"
+       "value": "look_telescope"
       },
       {
        "name": "capacity",
@@ -7744,7 +7085,7 @@
       {
        "name": "tags",
        "type": "string",
-       "value": "console"
+       "value": ""
       },
       {
        "name": "owner",
@@ -7754,10 +7095,541 @@
      ]
     },
     {
-     "id": 106,
+     "id": 90,
+     "name": "4a_kitchen_counter.cook",
+     "type": "hook",
+     "x": 1331.2,
+     "y": 76.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_kitchen_counter"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "cook"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "cook"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "cook_stove"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 91,
+     "name": "4a_kitchen_counter.sink",
+     "type": "hook",
+     "x": 1254.4,
+     "y": 76.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_kitchen_counter"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "sink"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "wash_dishes"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 92,
+     "name": "4a_kitchen_counter.counter",
+     "type": "hook",
+     "x": 1382.4,
+     "y": 76.8,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_kitchen_counter"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "counter"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "pour_drink"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "pour_drink"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 94,
+     "name": "4a_fridge.use",
+     "type": "hook",
+     "x": 1440.0,
+     "y": 83.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_fridge"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "open_fridge"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "food,drinks"
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 97,
+     "name": "4a_couch.seat0",
+     "type": "hook",
+     "x": 874.24,
+     "y": 166.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat0"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_couch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "sheldons_spot"
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": "sheldon"
+      }
+     ]
+    },
+    {
+     "id": 98,
+     "name": "4a_couch.seat1",
+     "type": "hook",
+     "x": 928.0,
+     "y": 166.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat1"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_couch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 99,
+     "name": "4a_couch.seat2",
+     "type": "hook",
+     "x": 981.76,
+     "y": 166.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat2"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_couch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 100,
+     "name": "4a_couch.armrest_r",
+     "type": "hook",
+     "x": 1016.32,
+     "y": 163.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "armrest_r"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "perch"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "perch_armrest"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 102,
+     "name": "4a_floor_lamp.switch",
+     "type": "hook",
+     "x": 828.8,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_floor_lamp"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "switch"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "use"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "use_switch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 104,
      "name": "4a_armchair.seat0",
      "type": "hook",
-     "x": 1376.0,
+     "x": 1120.0,
      "y": 167.68,
      "width": 0,
      "height": 0,
@@ -7813,11 +7685,11 @@
      ]
     },
     {
-     "id": 108,
-     "name": "4a_telescope.look",
+     "id": 106,
+     "name": "4a_coffee_table.surface0",
      "type": "hook",
-     "x": 1440.0,
-     "y": 252.8,
+     "x": 934.4,
+     "y": 224.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -7827,27 +7699,27 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_telescope"
+       "value": "4a_coffee_table"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "look"
+       "value": "surface0"
       },
       {
        "name": "hook_type",
        "type": "string",
-       "value": "look"
+       "value": "place_item"
       },
       {
        "name": "facing",
        "type": "string",
-       "value": "NE"
+       "value": "SW"
       },
       {
        "name": "anim",
        "type": "string",
-       "value": "look_telescope"
+       "value": ""
       },
       {
        "name": "capacity",
@@ -7857,12 +7729,12 @@
       {
        "name": "z",
        "type": "float",
-       "value": 0.0
+       "value": 0.45
       },
       {
        "name": "tags",
        "type": "string",
-       "value": ""
+       "value": "takeout,drinks"
       },
       {
        "name": "owner",
@@ -7872,11 +7744,11 @@
      ]
     },
     {
-     "id": 110,
-     "name": "4a_whiteboard.write",
+     "id": 107,
+     "name": "4a_coffee_table.surface1",
      "type": "hook",
-     "x": 1376.0,
-     "y": 400.0,
+     "x": 985.6,
+     "y": 224.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -7886,27 +7758,27 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_whiteboard"
+       "value": "4a_coffee_table"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "write"
+       "value": "surface1"
       },
       {
        "name": "hook_type",
        "type": "string",
-       "value": "write"
+       "value": "place_item"
       },
       {
        "name": "facing",
        "type": "string",
-       "value": "NE"
+       "value": "SW"
       },
       {
        "name": "anim",
        "type": "string",
-       "value": "write_whiteboard"
+       "value": ""
       },
       {
        "name": "capacity",
@@ -7916,12 +7788,71 @@
       {
        "name": "z",
        "type": "float",
-       "value": 0.0
+       "value": 0.45
       },
       {
        "name": "tags",
        "type": "string",
+       "value": "takeout,drinks"
+      },
+      {
+       "name": "owner",
+       "type": "string",
        "value": ""
+      }
+     ]
+    },
+    {
+     "id": 109,
+     "name": "4a_takeout_set.pickup",
+     "type": "hook",
+     "x": 928.0,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_takeout_set"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "pickup"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "pickup"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "eat_takeout"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.45
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "food"
       },
       {
        "name": "owner",
@@ -7932,10 +7863,10 @@
     },
     {
      "id": 111,
-     "name": "4a_whiteboard.look",
+     "name": "4a_tv_stand.watch_target",
      "type": "hook",
-     "x": 1376.0,
-     "y": 428.8,
+     "x": 960.0,
+     "y": 483.2,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -7945,12 +7876,12 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_whiteboard"
+       "value": "4a_tv_stand"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "look"
+       "value": "watch_target"
       },
       {
        "name": "hook_type",
@@ -7965,7 +7896,7 @@
       {
        "name": "anim",
        "type": "string",
-       "value": "look_whiteboard"
+       "value": ""
       },
       {
        "name": "capacity",
@@ -7975,12 +7906,12 @@
       {
        "name": "z",
        "type": "float",
-       "value": 0.0
+       "value": 0.9
       },
       {
        "name": "tags",
        "type": "string",
-       "value": ""
+       "value": "tv"
       },
       {
        "name": "owner",
@@ -7990,11 +7921,11 @@
      ]
     },
     {
-     "id": 113,
-     "name": "4a_whiteboard.write",
+     "id": 112,
+     "name": "4a_tv_stand.game_console",
      "type": "hook",
-     "x": 1440.0,
-     "y": 400.0,
+     "x": 937.6,
+     "y": 425.6,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -8004,27 +7935,27 @@
       {
        "name": "item_id",
        "type": "string",
-       "value": "4a_whiteboard"
+       "value": "4a_tv_stand"
       },
       {
        "name": "hook",
        "type": "string",
-       "value": "write"
+       "value": "game_console"
       },
       {
        "name": "hook_type",
        "type": "string",
-       "value": "write"
+       "value": "use"
       },
       {
        "name": "facing",
        "type": "string",
-       "value": "NE"
+       "value": "SW"
       },
       {
        "name": "anim",
        "type": "string",
-       "value": "write_whiteboard"
+       "value": "use_console"
       },
       {
        "name": "capacity",
@@ -8039,7 +7970,7 @@
       {
        "name": "tags",
        "type": "string",
-       "value": ""
+       "value": "console"
       },
       {
        "name": "owner",
@@ -8050,127 +7981,9 @@
     },
     {
      "id": 114,
-     "name": "4a_whiteboard.look",
-     "type": "hook",
-     "x": 1440.0,
-     "y": 428.8,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_whiteboard"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "look"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "look"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "look_whiteboard"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 116,
-     "name": "4a_floor_lamp.switch",
-     "type": "hook",
-     "x": 1140.36,
-     "y": 116.36,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_floor_lamp"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "switch"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "use"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "N"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "use_switch"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 118,
      "name": "4a_kitchen_island.stool0",
      "type": "hook",
-     "x": 864.0,
+     "x": 1248.0,
      "y": 224.0,
      "width": 0,
      "height": 0,
@@ -8226,10 +8039,10 @@
      ]
     },
     {
-     "id": 119,
+     "id": 115,
      "name": "4a_kitchen_island.stool1",
      "type": "hook",
-     "x": 928.0,
+     "x": 1312.0,
      "y": 224.0,
      "width": 0,
      "height": 0,
@@ -8285,10 +8098,10 @@
      ]
     },
     {
-     "id": 120,
+     "id": 116,
      "name": "4a_kitchen_island.surface0",
      "type": "hook",
-     "x": 896.0,
+     "x": 1280.0,
      "y": 160.0,
      "width": 0,
      "height": 0,
@@ -8344,128 +8157,128 @@
      ]
     },
     {
+     "id": 118,
+     "name": "4a_bar_stool.seat0",
+     "type": "hook",
+     "x": 1248.0,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_bar_stool"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat0"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "perch"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_stool"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.75
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 120,
+     "name": "4a_bar_stool.seat0",
+     "type": "hook",
+     "x": 1312.0,
+     "y": 224.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_bar_stool"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat0"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "perch"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_stool"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.75
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
      "id": 122,
-     "name": "4a_bar_stool.seat0",
-     "type": "hook",
-     "x": 864.0,
-     "y": 224.0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_bar_stool"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat0"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "perch"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_stool"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.75
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 124,
-     "name": "4a_bar_stool.seat0",
-     "type": "hook",
-     "x": 928.0,
-     "y": 224.0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4a_bar_stool"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat0"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "perch"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_stool"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.75
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 126,
      "name": "4a_takeout_set.pickup",
      "type": "hook",
-     "x": 928.0,
+     "x": 1312.0,
      "y": 160.0,
      "width": 0,
      "height": 0,
@@ -8521,11 +8334,129 @@
      ]
     },
     {
-     "id": 129,
+     "id": 124,
+     "name": "4a_whiteboard.write",
+     "type": "hook",
+     "x": 912.0,
+     "y": 416.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_whiteboard"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "write"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "write"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "write_whiteboard"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 125,
+     "name": "4a_whiteboard.look",
+     "type": "hook",
+     "x": 940.8,
+     "y": 416.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4a_whiteboard"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "look"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "look"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "look_whiteboard"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 128,
      "name": "4a_front_door.door",
      "type": "hook",
      "x": 803.2,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -8580,11 +8511,11 @@
      ]
     },
     {
-     "id": 130,
+     "id": 129,
      "name": "4a_front_door.knock_spot_inside",
      "type": "hook",
      "x": 806.4,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -8639,11 +8570,11 @@
      ]
     },
     {
-     "id": 131,
+     "id": 130,
      "name": "4a_front_door.knock_spot_outside",
      "type": "hook",
      "x": 739.2,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -8698,7 +8629,7 @@
      ]
     },
     {
-     "id": 133,
+     "id": 132,
      "name": "hall_elevator_broken.look",
      "type": "hook",
      "x": 640.0,
@@ -8757,7 +8688,7 @@
      ]
     },
     {
-     "id": 134,
+     "id": 133,
      "name": "hall_elevator_broken.call_button",
      "type": "hook",
      "x": 694.4,
@@ -8816,7 +8747,7 @@
      ]
     },
     {
-     "id": 136,
+     "id": 135,
      "name": "hall_stair_flight.climb_lane_down",
      "type": "hook",
      "x": 704.0,
@@ -8875,7 +8806,7 @@
      ]
     },
     {
-     "id": 137,
+     "id": 136,
      "name": "hall_stair_flight.climb_lane_up",
      "type": "hook",
      "x": 704.0,
@@ -8934,11 +8865,11 @@
      ]
     },
     {
-     "id": 140,
+     "id": 139,
      "name": "4b_front_door.door",
      "type": "hook",
      "x": 547.2,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -8993,11 +8924,11 @@
      ]
     },
     {
-     "id": 141,
+     "id": 140,
      "name": "4b_front_door.knock_spot_outside",
      "type": "hook",
      "x": 550.4,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -9052,11 +8983,11 @@
      ]
     },
     {
-     "id": 142,
+     "id": 141,
      "name": "4b_front_door.knock_spot_inside",
      "type": "hook",
      "x": 483.2,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -9111,11 +9042,11 @@
      ]
     },
     {
-     "id": 143,
+     "id": 142,
      "name": "4b_front_door.answer_spot",
      "type": "hook",
      "x": 486.4,
-     "y": 224.0,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -9170,69 +9101,10 @@
      ]
     },
     {
-     "id": 145,
-     "name": "4b_bedroom_door.door",
-     "type": "hook",
-     "x": 96.0,
-     "y": 35.2,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_bedroom_door"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "door"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "door"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "NE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "open_door"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 147,
+     "id": 144,
      "name": "4b_kitchen_counter.cook",
      "type": "hook",
-     "x": 371.2,
+     "x": 115.2,
      "y": 76.8,
      "width": 0,
      "height": 0,
@@ -9288,10 +9160,10 @@
      ]
     },
     {
-     "id": 148,
+     "id": 145,
      "name": "4b_kitchen_counter.sink",
      "type": "hook",
-     "x": 294.4,
+     "x": 38.4,
      "y": 76.8,
      "width": 0,
      "height": 0,
@@ -9347,11 +9219,11 @@
      ]
     },
     {
-     "id": 150,
+     "id": 147,
      "name": "4b_fridge.use",
      "type": "hook",
-     "x": 480.0,
-     "y": 83.2,
+     "x": 83.2,
+     "y": 288.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -9376,7 +9248,7 @@
       {
        "name": "facing",
        "type": "string",
-       "value": "NE"
+       "value": "NW"
       },
       {
        "name": "anim",
@@ -9406,10 +9278,10 @@
      ]
     },
     {
-     "id": 152,
+     "id": 149,
      "name": "4b_kitchen_bar.stool0",
      "type": "hook",
-     "x": 352.0,
+     "x": 96.0,
      "y": 224.0,
      "width": 0,
      "height": 0,
@@ -9465,10 +9337,10 @@
      ]
     },
     {
-     "id": 153,
+     "id": 150,
      "name": "4b_kitchen_bar.stool1",
      "type": "hook",
-     "x": 416.0,
+     "x": 160.0,
      "y": 224.0,
      "width": 0,
      "height": 0,
@@ -9524,10 +9396,10 @@
      ]
     },
     {
-     "id": 154,
+     "id": 151,
      "name": "4b_kitchen_bar.pour_wine",
      "type": "hook",
-     "x": 384.0,
+     "x": 128.0,
      "y": 105.6,
      "width": 0,
      "height": 0,
@@ -9583,10 +9455,10 @@
      ]
     },
     {
-     "id": 155,
+     "id": 152,
      "name": "4b_kitchen_bar.surface0",
      "type": "hook",
-     "x": 384.0,
+     "x": 128.0,
      "y": 160.0,
      "width": 0,
      "height": 0,
@@ -9642,10 +9514,10 @@
      ]
     },
     {
-     "id": 157,
+     "id": 154,
      "name": "4b_bar_stool.seat0",
      "type": "hook",
-     "x": 352.0,
+     "x": 96.0,
      "y": 224.0,
      "width": 0,
      "height": 0,
@@ -9701,10 +9573,10 @@
      ]
     },
     {
-     "id": 159,
+     "id": 156,
      "name": "4b_bar_stool.seat0",
      "type": "hook",
-     "x": 416.0,
+     "x": 160.0,
      "y": 224.0,
      "width": 0,
      "height": 0,
@@ -9760,10 +9632,10 @@
      ]
     },
     {
-     "id": 161,
+     "id": 158,
      "name": "4b_wine_set.wine_glass",
      "type": "hook",
-     "x": 422.4,
+     "x": 166.4,
      "y": 166.4,
      "width": 0,
      "height": 0,
@@ -9819,10 +9691,10 @@
      ]
     },
     {
-     "id": 162,
+     "id": 159,
      "name": "4b_wine_set.bottle",
      "type": "hook",
-     "x": 406.4,
+     "x": 150.4,
      "y": 153.6,
      "width": 0,
      "height": 0,
@@ -9878,365 +9750,11 @@
      ]
     },
     {
-     "id": 164,
-     "name": "4b_couch.seat0",
-     "type": "hook",
-     "x": 38.4,
-     "y": 341.76,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_couch"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat0"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "sit"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_couch"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 165,
-     "name": "4b_couch.seat1",
-     "type": "hook",
-     "x": 38.4,
-     "y": 288.0,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_couch"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat1"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "sit"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_couch"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 166,
-     "name": "4b_couch.seat2",
-     "type": "hook",
-     "x": 38.4,
-     "y": 234.24,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_couch"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat2"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "sit"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_couch"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "penny_spot"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 167,
-     "name": "4b_couch.armrest_l",
-     "type": "hook",
-     "x": 35.2,
-     "y": 376.32,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_couch"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "armrest_l"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "perch"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "perch_armrest"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 170,
-     "name": "4b_coffee_table.surface0",
-     "type": "hook",
-     "x": 160.0,
-     "y": 281.6,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_coffee_table"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "surface0"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "place_item"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SE"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.42
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": "drinks,magazines"
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 172,
-     "name": "4b_armchair_patterned.seat0",
-     "type": "hook",
-     "x": 224.0,
-     "y": 103.68,
-     "width": 0,
-     "height": 0,
-     "rotation": 0,
-     "visible": true,
-     "point": true,
-     "properties": [
-      {
-       "name": "item_id",
-       "type": "string",
-       "value": "4b_armchair_patterned"
-      },
-      {
-       "name": "hook",
-       "type": "string",
-       "value": "seat0"
-      },
-      {
-       "name": "hook_type",
-       "type": "string",
-       "value": "sit"
-      },
-      {
-       "name": "facing",
-       "type": "string",
-       "value": "SW"
-      },
-      {
-       "name": "anim",
-       "type": "string",
-       "value": "sit_chair"
-      },
-      {
-       "name": "capacity",
-       "type": "int",
-       "value": 1
-      },
-      {
-       "name": "z",
-       "type": "float",
-       "value": 0.0
-      },
-      {
-       "name": "tags",
-       "type": "string",
-       "value": ""
-      },
-      {
-       "name": "owner",
-       "type": "string",
-       "value": ""
-      }
-     ]
-    },
-    {
-     "id": 174,
+     "id": 161,
      "name": "4b_dining_table_cluttered.chair0",
      "type": "hook",
-     "x": 230.4,
-     "y": 368.0,
+     "x": 294.4,
+     "y": 112.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10291,11 +9809,11 @@
      ]
     },
     {
-     "id": 175,
+     "id": 162,
      "name": "4b_dining_table_cluttered.surface0",
      "type": "hook",
-     "x": 281.6,
-     "y": 409.6,
+     "x": 345.6,
+     "y": 153.6,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10350,11 +9868,70 @@
      ]
     },
     {
-     "id": 177,
+     "id": 164,
+     "name": "4b_bedroom_door.door",
+     "type": "hook",
+     "x": 480.0,
+     "y": 35.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_bedroom_door"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "NE"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "open_door"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 166,
      "name": "4b_laundry_pile.pickup",
      "type": "hook",
      "x": 416.0,
-     "y": 380.8,
+     "y": 124.8,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10409,11 +9986,365 @@
      ]
     },
     {
-     "id": 179,
+     "id": 169,
+     "name": "4b_couch.seat0",
+     "type": "hook",
+     "x": 234.24,
+     "y": 294.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat0"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_couch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 170,
+     "name": "4b_couch.seat1",
+     "type": "hook",
+     "x": 288.0,
+     "y": 294.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat1"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_couch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 171,
+     "name": "4b_couch.seat2",
+     "type": "hook",
+     "x": 341.76,
+     "y": 294.4,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat2"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_couch"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "penny_spot"
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 172,
+     "name": "4b_couch.armrest_l",
+     "type": "hook",
+     "x": 199.68,
+     "y": 291.2,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_couch"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "armrest_l"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "perch"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "perch_armrest"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 174,
+     "name": "4b_coffee_table.surface0",
+     "type": "hook",
+     "x": 294.4,
+     "y": 352.0,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_coffee_table"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "surface0"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "place_item"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.42
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": "drinks,magazines"
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 176,
+     "name": "4b_armchair_patterned.seat0",
+     "type": "hook",
+     "x": 416.0,
+     "y": 359.68,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "item_id",
+       "type": "string",
+       "value": "4b_armchair_patterned"
+      },
+      {
+       "name": "hook",
+       "type": "string",
+       "value": "seat0"
+      },
+      {
+       "name": "hook_type",
+       "type": "string",
+       "value": "sit"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "SW"
+      },
+      {
+       "name": "anim",
+       "type": "string",
+       "value": "sit_chair"
+      },
+      {
+       "name": "capacity",
+       "type": "int",
+       "value": 1
+      },
+      {
+       "name": "z",
+       "type": "float",
+       "value": 0.0
+      },
+      {
+       "name": "tags",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "id": 178,
      "name": "4b_floor_lamp.switch",
      "type": "hook",
-     "x": 60.8,
-     "y": 160.0,
+     "x": 416.0,
+     "y": 316.8,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10438,7 +10369,7 @@
       {
        "name": "facing",
        "type": "string",
-       "value": "NW"
+       "value": "NE"
       },
       {
        "name": "anim",
@@ -10480,11 +10411,11 @@
    "type": "objectgroup",
    "objects": [
     {
-     "id": 181,
+     "id": 180,
      "name": "sheldon",
      "type": "character",
-     "x": 1194.24,
-     "y": 38.4,
+     "x": 874.24,
+     "y": 166.4,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10509,10 +10440,10 @@
      ]
     },
     {
-     "id": 182,
+     "id": 181,
      "name": "leonard",
      "type": "character",
-     "x": 992.0,
+     "x": 928.0,
      "y": 92.8,
      "width": 0,
      "height": 0,
@@ -10538,11 +10469,11 @@
      ]
     },
     {
-     "id": 183,
+     "id": 182,
      "name": "penny",
      "type": "character",
-     "x": 288.0,
-     "y": 281.6,
+     "x": 352.0,
+     "y": 224.0,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10567,11 +10498,11 @@
      ]
     },
     {
-     "id": 184,
+     "id": 183,
      "name": "bernadette",
      "type": "character",
-     "x": 275.2,
-     "y": 326.4,
+     "x": 217.6,
+     "y": 409.6,
      "width": 0,
      "height": 0,
      "rotation": 0,
@@ -10596,11 +10527,11 @@
      ]
     },
     {
-     "id": 185,
+     "id": 184,
      "name": "amy",
      "type": "character",
      "x": 352.0,
-     "y": 320.0,
+     "y": 416.0,
      "width": 0,
      "height": 0,
      "rotation": 0,

@@ -152,11 +152,11 @@
      "sprite": "item_4a_front_door_SW_open.png",
      "pivot": [
       64,
-      208
+      212
      ],
      "canvas": [
       128,
-      208
+      212
      ],
      "footprint": [
       1,

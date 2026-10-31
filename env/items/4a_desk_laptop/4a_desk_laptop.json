@@ -24,11 +24,11 @@
   "SW": {
    "sprite": "item_4a_desk_laptop_SW.png",
    "pivot": [
-    128,
+    130,
     178
    ],
    "canvas": [
-    192,
+    194,
     178
    ],
    "footprint": [
@@ -116,11 +116,11 @@
     "on": {
      "sprite": "item_4a_desk_laptop_SW_on.png",
      "pivot": [
-      128,
+      130,
       178
      ],
      "canvas": [
-      192,
+      194,
       178
      ],
      "footprint": [
@@ -156,7 +156,7 @@
     178
    ],
    "canvas": [
-    192,
+    206,
     178
    ],
    "footprint": [
@@ -248,7 +248,7 @@
       178
      ],
      "canvas": [
-      192,
+      206,
       178
      ],
      "footprint": [
@@ -280,11 +280,11 @@
   "NE": {
    "sprite": "item_4a_desk_laptop_NE.png",
    "pivot": [
-    128,
+    140,
     178
    ],
    "canvas": [
-    192,
+    204,
     178
    ],
    "footprint": [
@@ -372,11 +372,11 @@
     "on": {
      "sprite": "item_4a_desk_laptop_NE_on.png",
      "pivot": [
-      128,
+      140,
       178
      ],
      "canvas": [
-      192,
+      204,
       178
      ],
      "footprint": [
@@ -412,7 +412,7 @@
     178
    ],
    "canvas": [
-    192,
+    194,
     178
    ],
    "footprint": [
@@ -504,7 +504,7 @@
       178
      ],
      "canvas": [
-      192,
+      194,
       178
      ],
      "footprint": [

@@ -25,11 +25,11 @@
    "sprite": "item_4b_fridge_SW.png",
    "pivot": [
     64,
-    180
+    193
    ],
    "canvas": [
     128,
-    180
+    193
    ],
    "footprint": [
     1,
@@ -70,12 +70,12 @@
     "open": {
      "sprite": "item_4b_fridge_SW_open.png",
      "pivot": [
-      64,
-      180
+      85,
+      198
      ],
      "canvas": [
-      128,
-      206
+      149,
+      224
      ],
      "footprint": [
       1,
@@ -89,11 +89,11 @@
    "sprite": "item_4b_fridge_NW.png",
    "pivot": [
     64,
-    180
+    191
    ],
    "canvas": [
     128,
-    180
+    191
    ],
    "footprint": [
     1,
@@ -135,11 +135,11 @@
      "sprite": "item_4b_fridge_NW_open.png",
      "pivot": [
       116,
-      180
+      191
      ],
      "canvas": [
       180,
-      180
+      191
      ],
      "footprint": [
       1,
@@ -153,11 +153,11 @@
    "sprite": "item_4b_fridge_NE.png",
    "pivot": [
     64,
-    180
+    191
    ],
    "canvas": [
     128,
-    180
+    191
    ],
    "footprint": [
     1,
@@ -199,11 +199,11 @@
      "sprite": "item_4b_fridge_NE_open.png",
      "pivot": [
       64,
-      204
+      228
      ],
      "canvas": [
-      128,
-      204
+      129,
+      228
      ],
      "footprint": [
       1,
@@ -217,11 +217,11 @@
    "sprite": "item_4b_fridge_SE.png",
    "pivot": [
     64,
-    180
+    193
    ],
    "canvas": [
     128,
-    180
+    193
    ],
    "footprint": [
     1,
@@ -263,11 +263,11 @@
      "sprite": "item_4b_fridge_SE_open.png",
      "pivot": [
       64,
-      180
+      193
      ],
      "canvas": [
       180,
-      180
+      193
      ],
      "footprint": [
       1,

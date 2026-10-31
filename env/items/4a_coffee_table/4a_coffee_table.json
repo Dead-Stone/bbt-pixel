@@ -24,11 +24,11 @@
    "sprite": "item_4a_coffee_table_SW.png",
    "pivot": [
     128,
-    126
+    130
    ],
    "canvas": [
-    192,
-    126
+    194,
+    130
    ],
    "footprint": [
     2,
@@ -108,12 +108,12 @@
   "NW": {
    "sprite": "item_4a_coffee_table_NW.png",
    "pivot": [
-    64,
-    126
+    66,
+    130
    ],
    "canvas": [
-    192,
-    126
+    194,
+    130
    ],
    "footprint": [
     1,
@@ -194,11 +194,11 @@
    "sprite": "item_4a_coffee_table_NE.png",
    "pivot": [
     128,
-    126
+    130
    ],
    "canvas": [
-    192,
-    126
+    194,
+    130
    ],
    "footprint": [
     2,
@@ -278,12 +278,12 @@
   "SE": {
    "sprite": "item_4a_coffee_table_SE.png",
    "pivot": [
-    64,
-    126
+    66,
+    130
    ],
    "canvas": [
-    192,
-    126
+    194,
+    130
    ],
    "footprint": [
     1,

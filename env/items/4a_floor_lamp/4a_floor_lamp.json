@@ -24,12 +24,12 @@
   "S": {
    "sprite": "item_4a_floor_lamp_S.png",
    "pivot": [
-    64,
-    174
+    85,
+    184
    ],
    "canvas": [
-    128,
-    174
+    149,
+    184
    ],
    "footprint": [
     1,
@@ -67,12 +67,12 @@
     "off": {
      "sprite": "item_4a_floor_lamp_S_off.png",
      "pivot": [
-      64,
-      174
+      85,
+      184
      ],
      "canvas": [
-      128,
-      174
+      149,
+      184
      ],
      "footprint": [
       1,
@@ -85,12 +85,12 @@
   "SW": {
    "sprite": "item_4a_floor_lamp_SW.png",
    "pivot": [
-    64,
-    174
+    85,
+    184
    ],
    "canvas": [
-    128,
-    174
+    149,
+    184
    ],
    "footprint": [
     1,
@@ -128,12 +128,12 @@
     "off": {
      "sprite": "item_4a_floor_lamp_SW_off.png",
      "pivot": [
-      64,
-      174
+      85,
+      184
      ],
      "canvas": [
-      128,
-      174
+      149,
+      184
      ],
      "footprint": [
       1,
@@ -146,12 +146,12 @@
   "W": {
    "sprite": "item_4a_floor_lamp_W.png",
    "pivot": [
-    64,
-    174
+    85,
+    184
    ],
    "canvas": [
-    128,
-    174
+    149,
+    184
    ],
    "footprint": [
     1,
@@ -189,12 +189,12 @@
     "off": {
      "sprite": "item_4a_floor_lamp_W_off.png",
      "pivot": [
-      64,
-      174
+      85,
+      184
      ],
      "canvas": [
-      128,
-      174
+      149,
+      184
      ],
      "footprint": [
       1,
@@ -208,11 +208,11 @@
    "sprite": "item_4a_floor_lamp_NW.png",
    "pivot": [
     64,
-    174
+    184
    ],
    "canvas": [
-    128,
-    174
+    148,
+    184
    ],
    "footprint": [
     1,
@@ -251,11 +251,11 @@
      "sprite": "item_4a_floor_lamp_NW_off.png",
      "pivot": [
       64,
-      174
+      184
      ],
      "canvas": [
-      128,
-      174
+      148,
+      184
      ],
      "footprint": [
       1,
@@ -268,12 +268,12 @@
   "N": {
    "sprite": "item_4a_floor_lamp_N.png",
    "pivot": [
-    64,
-    174
+    85,
+    184
    ],
    "canvas": [
-    128,
-    174
+    149,
+    184
    ],
    "footprint": [
     1,
@@ -311,12 +311,12 @@
     "off": {
      "sprite": "item_4a_floor_lamp_N_off.png",
      "pivot": [
-      64,
-      174
+      85,
+      184
      ],
      "canvas": [
-      128,
-      174
+      149,
+      184
      ],
      "footprint": [
       1,
@@ -329,12 +329,12 @@
   "NE": {
    "sprite": "item_4a_floor_lamp_NE.png",
    "pivot": [
-    64,
-    174
+    85,
+    184
    ],
    "canvas": [
-    128,
-    174
+    149,
+    184
    ],
    "footprint": [
     1,
@@ -372,12 +372,12 @@
     "off": {
      "sprite": "item_4a_floor_lamp_NE_off.png",
      "pivot": [
-      64,
-      174
+      85,
+      184
      ],
      "canvas": [
-      128,
-      174
+      149,
+      184
      ],
      "footprint": [
       1,
@@ -390,12 +390,12 @@
   "E": {
    "sprite": "item_4a_floor_lamp_E.png",
    "pivot": [
-    64,
-    174
+    85,
+    184
    ],
    "canvas": [
-    128,
-    174
+    149,
+    184
    ],
    "footprint": [
     1,
@@ -433,12 +433,12 @@
     "off": {
      "sprite": "item_4a_floor_lamp_E_off.png",
      "pivot": [
-      64,
-      174
+      85,
+      184
      ],
      "canvas": [
-      128,
-      174
+      149,
+      184
      ],
      "footprint": [
       1,
@@ -452,11 +452,11 @@
    "sprite": "item_4a_floor_lamp_SE.png",
    "pivot": [
     64,
-    174
+    184
    ],
    "canvas": [
-    128,
-    174
+    148,
+    184
    ],
    "footprint": [
     1,
@@ -495,11 +495,11 @@
      "sprite": "item_4a_floor_lamp_SE_off.png",
      "pivot": [
       64,
-      174
+      184
      ],
      "canvas": [
-      128,
-      174
+      148,
+      184
      ],
      "footprint": [
       1,

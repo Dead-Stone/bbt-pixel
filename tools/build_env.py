@@ -8,6 +8,12 @@ from iso_render import render, C, PAL, MAT, scr, dir_name, Xform
 import env_items as E
 import env_items_v2  # noqa: F401  (registers the Environment v2 items into E.ITEMS)
 from env_tex import hsh
+ENV_AI = os.environ.get('ENV_AI', '1') != '0'      # skin floor4 with the ChatGPT environment sheets (tools/env_ai)
+if ENV_AI:
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'env_ai'))
+    import skins as SK, floors_ai as FA
+    # the desk sprite (4A sheet #08) draws Sheldon's office chair itself; the (hidden) chair proxy's seat moves onto it
+    next(h for h in E.ITEMS['4a_office_chair']['hooks'] if h['id'] == 'seat0')['seat_off'] = [0.45, 0.25]
 
 ROOT = '/workspace/bbt-pixel'; ENV = f'{ROOT}/env'
 TPL = f'{ROOT}/templates'
@@ -97,6 +103,17 @@ WALLMAT = {
     'lobby':  dict(br='leather', bl='leather_dk', hi='wall_4a_hi', dk='leather_xdk', base='ink_2', base_hi='grey_dk', rail=None,
                    brick=('stair_wall_dk', 'ccf_booth_red')),
 }
+def _nearest(c):
+    return min(PAL, key=lambda n: sum((PAL[n][i] - c[i]) ** 2 * w for i, w in enumerate((0.3, 0.59, 0.11))))
+def ai_floor(k):
+    return SK.snap(FA.raw_tiles()[k].copy())
+if ENV_AI:   # wall colours sampled from the sheet's beige (4A/hall) and cream (4B) wall pieces
+    _wc = FA.wall_colours()
+    for _m, _n in (('4a', 'beige'), ('4b', 'cream'), ('hall', 'beige')):
+        _c = _wc[_n]; W = WALLMAT[_m]
+        W.update(br=_nearest(_c['face']), bl=_nearest(_c['face'] * 0.86), hi=_nearest(_c['hi']))
+        if _m != 'hall': W.update(base=_nearest(_c['base']), base_hi=_nearest(np.minimum(_c['base'] * 1.15, 255)))
+    WALLMAT['hall'].update(br=_nearest(_wc['beige']['face'] * 0.9), bl=_nearest(_wc['beige']['face'] * 0.76))
 def wall_piece(mat, side, mode='full', feature=None):
     """side 'br' (runs along +x, back-right) or 'bl' (runs along +y, back-left; mirrored shape).
     canvas 64x224 (full) / 64x48 (cutaway); anchor = canvas point of the segment's top floor vertex"""
@@ -217,8 +234,8 @@ def apply_glow(can, lights, minx, miny):
             k = tuple(int(v) for v in sub[r_, c_, :3])
             if k in m: sub[r_, c_, :3] = m[k]
     return Image.fromarray(a)
-LIGHTS4 = [dict(pos=(17.5, 1.5), r=1.7, kind='lamp', src='4a_floor_lamp'), dict(pos=(19.0, 3.25), r=1.35, kind='screen', src='4a_tv_stand'),
-           dict(pos=(21.6, 1.2), r=0.75, kind='screen', src='4a_desk_laptop'), dict(pos=(0.5, 2.5), r=1.6, kind='lamp', src='4b_floor_lamp')]
+LIGHTS4 = [dict(pos=(13.0, 3.3), r=1.6, kind='lamp', src='4a_floor_lamp'),
+           dict(pos=(16.0, 0.9), r=0.75, kind='screen', src='4a_desk_laptop'), dict(pos=(6.5, 4.6), r=1.5, kind='lamp', src='4b_floor_lamp')]
 
 # ---------------------------------------------------------------- items
 def item_rots(it): return ROTS[it['rotation_class']]
@@ -228,6 +245,7 @@ def rend(iid, rot, state=None):
     k = (iid, rot, state)
     if k not in CACHE:
         CACHE[k] = render(it['build'](state), *it['footprint'], rot, shadow=it['shadow'])
+        if ENV_AI and iid in SK.SKINS: CACHE[k] = SK.skin(iid, rot, state, CACHE[k])
     return CACHE[k]
 def slices(R):
     nfx, nfy = R['fp']; out = []
@@ -282,6 +300,7 @@ def export_items():
 
 # ---------------------------------------------------------------- map
 W_, H_ = 23, 8
+DOOR_Y = 4   # both apartment doors sit on this row, facing each other across the landing
 def zone(x): return '4B' if x < 8 else ('hall' if x < 12 else '4A')
 STAIRS = {(x, y) for x in (10, 11) for y in (5, 6, 7)}
 def floor_kind(x, y):
@@ -289,36 +308,38 @@ def floor_kind(x, y):
     z = zone(x); v = 'a' if hsh(x, y, 11) < 0.5 else 'b'
     if z == '4B': return f'floor_4b_wood_{v}'
     if z == 'hall': return 'floor_hall'
-    if 12 <= x <= 16 and y <= 1: return 'floor_4a_kitchen'
+    if 19 <= x <= 22 and y <= 3: return 'floor_4a_kitchen'
     return f'floor_4a_wood_{v}'
 def wmat(x): return {'4B': '4b', 'hall': 'hall', '4A': '4a'}[zone(x)]
 # placements: (item, origin x, y, rot, state, z, extra)
 PLACE = [
-    # ---- 4A (x 12..22)
-    ('4a_fridge', 12, 0, 'SW', 'closed', 0), ('4a_kitchen_counter', 13, 0, 'SW', None, 0),
-    ('4a_bookcase_collectibles', 16, 0, 'SW', None, 0), ('4a_couch', 18, 0, 'SW', None, 0),
-    ('4a_flag_banner', 18.5, 0, 'SW', None, 0), ('4a_desk_laptop', 21, 0, 'SW', 'on', 0),
-    ('4a_office_chair', 22, 1, 'NE', None, 0), ('4a_rug', 18, 1, 'SW', None, 0),
-    ('4a_coffee_table', 18, 2, 'SW', None, 0), ('4a_takeout_set', 18, 2, 'SW', None, 0.45),
-    ('4a_tv_stand', 18, 4, 'NE', 'on', 0), ('4a_armchair', 21, 2, 'SW', None, 0),
-    ('4a_telescope', 22, 3, 'SW', None, 0), ('4a_whiteboard', 21, 5, 'SW', 'equations_a', 0),
-    ('4a_whiteboard', 22, 5, 'SW', 'equations_b', 0), ('4a_floor_lamp', 17, 1, 'S', None, 0),
-    ('4a_kitchen_island', 13, 2, 'SW', None, 0), ('4a_bar_stool', 13, 3, 'SW', None, 0), ('4a_bar_stool', 14, 3, 'SW', None, 0),
-    ('4a_takeout_set', 14, 2, 'SW', None, 0.92), ('4a_dna_model', 20, 5, 'SW', None, 0),
-    ('4a_front_door', 12, 3, 'SE', 'closed', 0),
-    # ---- landing (x 8..11)
+    # Layout follows the real BBT set (docs/set_layout.md): camera = fourth wall (front, y=8); doors 4A/4B face each other on the landing.
+    # ---- 4A (x 12..22): back wall from the entry = long bookshelf behind the couch, Sheldon's desk + telescope at the big window,
+    #      hallway to bedrooms/bath, kitchen at the back-right with the island + stools; TV on the fourth wall facing the couch.
+    ('4a_bookcase_collectibles', 12, 0, 'SW', None, 0), ('4a_whiteboard', 14, 0, 'SW', 'equations_a', 0),
+    ('4a_desk_laptop', 15, 0, 'SW', 'on', 0), ('4a_office_chair', 16, 1, 'NE', None, 0), ('4a_telescope', 17, 0, 'SW', None, 0),
+    ('4a_kitchen_counter', 19, 0, 'SW', None, 0), ('4a_fridge', 22, 0, 'SW', 'closed', 0),
+    ('4a_rug', 13, 3, 'SW', None, 0), ('4a_couch', 13, 2, 'SW', None, 0), ('4a_floor_lamp', 12, 3, 'SE', None, 0),
+    ('4a_armchair', 17, 2, 'SW', None, 0), ('4a_coffee_table', 14, 3, 'SW', None, 0), ('4a_takeout_set', 14, 3, 'SW', None, 0.45),
+    ('4a_tv_stand', 14, 7, 'NE', 'on', 0),
+    ('4a_kitchen_island', 19, 2, 'SW', None, 0), ('4a_bar_stool', 19, 3, 'SW', None, 0), ('4a_bar_stool', 20, 3, 'SW', None, 0),
+    ('4a_takeout_set', 20, 2, 'SW', None, 0.92),
+    ('4a_whiteboard', 13, 6, 'SE', 'equations_b', 0), ('4a_dna_model', 22, 6, 'SW', None, 0),
+    ('4a_front_door', 12, DOOR_Y, 'SE', 'closed', 0),
+    # ---- landing (x 8..11): broken elevator on the back wall, stairwell at the front, 4B and 4A doors facing each other
     ('hall_elevator_broken', 9, 0, 'SW', None, 0), ('hall_stair_flight', 10, 5, 'SW', None, 0),
-    ('hall_stair_rail', 9, 5, 'NW', None, 0), ('4b_front_door', 8, 3, 'SE', 'closed', 0),
-    # ---- 4B (x 0..7)
-    ('4b_bedroom_door', 1, 0, 'SW', 'ajar', 0), ('4b_kitchen_counter', 4, 0, 'SW', None, 0), ('4b_fridge', 7, 0, 'SW', None, 0),
-    ('4b_kitchen_bar', 5, 2, 'SW', None, 0), ('4b_bar_stool', 5, 3, 'SW', None, 0), ('4b_bar_stool', 6, 3, 'SW', None, 0),
-    ('4b_wine_set', 6, 2, 'SW', None, 1.02), ('4b_couch', 0, 3, 'SE', None, 0), ('4b_rug', 1, 3, 'SW', None, 0),
-    ('4b_coffee_table', 2, 3, 'SE', None, 0), ('4b_armchair_patterned', 3, 1, 'SW', None, 0),
-    ('4b_dining_table_cluttered', 3, 5, 'SW', None, 0), ('4b_laundry_pile', 6, 5, 'SW', None, 0),
-    ('4b_floor_lamp', 0, 2, 'SE', None, 0), ('4b_plant', 1, 7, 'SW', None, 0),
+    ('hall_stair_rail', 9, 5, 'NW', None, 0), ('4b_front_door', 8, DOOR_Y, 'SE', 'closed', 0),
+    # ---- 4B (x 0..7): mirror of 4A - from the entry the back wall has the bedroom door then the big window with the round
+    #      dining table; kitchen at the far (left) end with the island + stools; couch faces the fourth wall (TV side).
+    ('4b_kitchen_counter', 0, 0, 'SW', None, 0), ('4b_fridge', 0, 4, 'SE', None, 0),
+    ('4b_kitchen_bar', 1, 2, 'SW', None, 0), ('4b_bar_stool', 1, 3, 'SW', None, 0), ('4b_bar_stool', 2, 3, 'SW', None, 0),
+    ('4b_wine_set', 2, 2, 'SW', None, 1.02), ('4b_dining_table_cluttered', 4, 1, 'SW', None, 0),
+    ('4b_bedroom_door', 7, 0, 'SW', 'ajar', 0), ('4b_laundry_pile', 6, 1, 'SW', None, 0),
+    ('4b_rug', 3, 5, 'SW', None, 0), ('4b_couch', 3, 4, 'SW', None, 0), ('4b_coffee_table', 4, 5, 'SW', None, 0),
+    ('4b_armchair_patterned', 6, 5, 'SW', None, 0), ('4b_floor_lamp', 6, 4, 'SW', None, 0), ('4b_plant', 1, 7, 'SW', None, 0),
 ]
-WINDOWS = {('y0', 21), ('y0', 22), ('y0', 2), ('y0', 3)}
-DOORWAYS = {('x8', 3), ('x12', 3), ('y0', 1)}
+WINDOWS = {('y0', 15), ('y0', 16), ('y0', 17), ('y0', 4), ('y0', 5)}
+DOORWAYS = {('x8', DOOR_Y), ('x12', DOOR_Y), ('y0', 7), ('y0', 18)}
 def walls_for(scene):
     """list of (kind 'br'/'bl', mode, line, index, mat)"""
     xr = {'combined': range(0, 23), '4A': range(12, 23), '4B': range(0, 8)}[scene]
@@ -329,14 +350,14 @@ def walls_for(scene):
         if (x, 7) not in STAIRS: out.append(('br', 'cut', 8, x, wmat(x), None))      # front cutaway
     for y in range(8):
         if scene in ('combined', '4B'): out.append(('bl', 'full', 0, y, '4b', None))
-        if scene == '4A': out.append(('bl', 'full', 12, y, '4a', 'doorway' if y == 3 else None))
-        if scene in ('combined', '4B'): out.append(('bl', 'cut', 8, y, '4b' if scene == '4B' else 'hall', 'doorway' if y == 3 else None))
-        if scene == 'combined': out.append(('bl', 'cut', 12, y, '4a', 'doorway' if y == 3 else None))
+        if scene == '4A': out.append(('bl', 'full', 12, y, '4a', 'doorway' if y == DOOR_Y else None))
+        if scene in ('combined', '4B'): out.append(('bl', 'cut', 8, y, '4b' if scene == '4B' else 'hall', 'doorway' if y == DOOR_Y else None))
+        if scene == 'combined': out.append(('bl', 'cut', 12, y, '4a', 'doorway' if y == DOOR_Y else None))
         if scene in ('combined', '4A'): out.append(('bl', 'cut', 23, y, '4a', None))
     return out
 
 def build_tiles():
-    for k, fn in FLOORS.items(): save(floor_tile(fn), f'{ENV}/tiles/{k}.png')
+    for k, fn in FLOORS.items(): save(fimg(k), f'{ENV}/tiles/{k}.png')
     meta = dict(floor={k: dict(sprite=f'{k}.png', size=[128, 64], anchor=[64, 0]) for k in FLOORS}, walls={})
     for mat in WALLMAT:
         for side in ('br', 'bl'):
@@ -357,7 +378,7 @@ def wimg(mat, side, mode, feat):
     return WCACHE[k]
 FCACHE = {}
 def fimg(k):
-    if k not in FCACHE: FCACHE[k] = floor_tile(FLOORS[k])
+    if k not in FCACHE: FCACHE[k] = ai_floor(k) if (ENV_AI and k in FA.raw_tiles()) else floor_tile(FLOORS[k])
     return FCACHE[k]
 
 # ---------------------------------------------------------------- characters
@@ -558,7 +579,7 @@ def scene_chars(scene):
     out = []
     if scene in ('combined', '4A'):
         e = seat_char('sheldon', '4a_couch', 'seat0'); e['hook'] = '4a_couch.seat0'; out.append(e)
-        out.append(dict(name='leonard', img=char_frame('leonard', 'idle', 'SW', 0), pos=(15.5, 1.45), anim='idle', dir='SW'))
+        out.append(dict(name='leonard', img=char_frame('leonard', 'idle', 'SW', 0), pos=(14.5, 1.45), anim='idle', dir='SW'))
     if scene in ('combined', '4B') and os.path.exists(f'{ROOT}/characters/penny/chr_penny.png'):
         out.append(dict(name='penny', img=char_frame('penny', 'idle', 'SW', 0), pos=PENNY_POS, anim='idle', dir='SW'))
         # v2 cast: Bernadette and Amy visiting Penny (girls' night)
@@ -566,9 +587,9 @@ def scene_chars(scene):
             if os.path.exists(f'{ROOT}/characters/{nm}/chr_{nm}.png'):
                 out.append(dict(name=nm, img=char_frame(nm, 'idle', d, 0), pos=pos, anim='idle', dir=d))
     return out
-PENNY_POS = (4.5, 4.4)
-BERNADETTE_POS = (4.3, 5.1)
-AMY_POS = (5.5, 5.0)
+PENNY_POS = (5.5, 3.5)
+BERNADETTE_POS = (3.4, 6.4)
+AMY_POS = (5.5, 6.5)
 
 def export_map():
     floor_names = list(FLOORS)
@@ -638,7 +659,7 @@ def export_map():
                       dict(item='hall_stair_flight', tile=[10, 7], connects=['hall_4f', 'floor3 (stub)'])],
                walls=[dict(zip(('side', 'mode', 'line', 'index', 'mat', 'feature'), w)) for w in walls_for('combined')],
                items=[dict(item=i, x=ox, y=oy, rot=r, state=st or E.ITEMS[i]['states'][0], z=z) for (i, ox, oy, r, st, z) in PLACE],
-               spawns={'sheldon': '4a_couch.seat0', 'leonard': [15.5, 1.45], 'penny': list(PENNY_POS), 'bernadette': list(BERNADETTE_POS), 'amy': list(AMY_POS)},
+               spawns={'sheldon': '4a_couch.seat0', 'leonard': [14.5, 1.45], 'penny': list(PENNY_POS), 'bernadette': list(BERNADETTE_POS), 'amy': list(AMY_POS)},
                sort=dict(rule='slice key = tile x+y+1 (+sort_bias*0.1); character key = feet x+y; seated = after seat slices; wall-mounted & full walls drawn before sorted pass; cutaway stubs keyed x+y+0.45/0.55'))
     json.dump(eng, open(f'{ENV}/maps/floor4_engine.json', 'w'), indent=1)
     return len(items), len(hooks)

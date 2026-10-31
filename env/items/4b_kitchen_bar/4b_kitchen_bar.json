@@ -24,11 +24,11 @@
    "sprite": "item_4b_kitchen_bar_SW.png",
    "pivot": [
     128,
-    168
+    178
    ],
    "canvas": [
     192,
-    168
+    178
    ],
    "footprint": [
     2,
@@ -160,12 +160,12 @@
   "NW": {
    "sprite": "item_4b_kitchen_bar_NW.png",
    "pivot": [
-    64,
-    168
+    75,
+    178
    ],
    "canvas": [
-    192,
-    168
+    203,
+    178
    ],
    "footprint": [
     1,
@@ -298,11 +298,11 @@
    "sprite": "item_4b_kitchen_bar_NE.png",
    "pivot": [
     128,
-    168
+    178
    ],
    "canvas": [
-    192,
-    168
+    203,
+    178
    ],
    "footprint": [
     2,
@@ -435,11 +435,11 @@
    "sprite": "item_4b_kitchen_bar_SE.png",
    "pivot": [
     64,
-    168
+    178
    ],
    "canvas": [
     192,
-    168
+    178
    ],
    "footprint": [
     1,

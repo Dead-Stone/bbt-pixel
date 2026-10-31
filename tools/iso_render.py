@@ -12,6 +12,9 @@ PAL = load_gpl(f'{ROOT}/palettes/bbt_master.gpl')
 # location sub-palette names in the gpl contain digits at the start; normalise aliases
 PAL.update({'turquoise': PAL['4b_turquoise'], 'orange': PAL['4b_orange'], 'purple': PAL['4b_purple'],
             'lime': PAL['4b_lime']})
+import os as _os
+if _os.path.exists(f'{ROOT}/palettes/bbt_env_ai.gpl'):      # shared env palette from the ChatGPT environment sheets (ai_NN)
+    PAL.update(load_gpl(f'{ROOT}/palettes/bbt_env_ai.gpl'))
 C = {k: np.array(v, np.uint8) for k, v in PAL.items()}
 
 MAT = {

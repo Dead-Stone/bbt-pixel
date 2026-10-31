@@ -67,12 +67,12 @@
   "SW": {
    "sprite": "item_4a_armchair_SW.png",
    "pivot": [
-    64,
-    124
+    76,
+    130
    ],
    "canvas": [
-    128,
-    124
+    140,
+    130
    ],
    "footprint": [
     1,
@@ -332,11 +332,11 @@
    "sprite": "item_4a_armchair_SE.png",
    "pivot": [
     64,
-    124
+    130
    ],
    "canvas": [
-    128,
-    124
+    140,
+    130
    ],
    "footprint": [
     1,

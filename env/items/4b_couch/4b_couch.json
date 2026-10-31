@@ -23,11 +23,11 @@
   "SW": {
    "sprite": "item_4b_couch_SW.png",
    "pivot": [
-    192,
+    193,
     180
    ],
    "canvas": [
-    256,
+    257,
     180
    ],
    "footprint": [
@@ -170,11 +170,11 @@
   "NW": {
    "sprite": "item_4b_couch_NW.png",
    "pivot": [
-    64,
+    67,
     180
    ],
    "canvas": [
-    256,
+    259,
     180
    ],
    "footprint": [
@@ -321,7 +321,7 @@
     180
    ],
    "canvas": [
-    256,
+    259,
     180
    ],
    "footprint": [
@@ -468,7 +468,7 @@
     180
    ],
    "canvas": [
-    256,
+    257,
     180
    ],
    "footprint": [

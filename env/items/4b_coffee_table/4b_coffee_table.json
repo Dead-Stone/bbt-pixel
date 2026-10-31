@@ -27,7 +27,7 @@
     128
    ],
    "canvas": [
-    192,
+    193,
     128
    ],
    "footprint": [
@@ -84,11 +84,11 @@
   "NW": {
    "sprite": "item_4b_coffee_table_NW.png",
    "pivot": [
-    64,
+    66,
     128
    ],
    "canvas": [
-    192,
+    194,
     128
    ],
    "footprint": [
@@ -149,7 +149,7 @@
     128
    ],
    "canvas": [
-    192,
+    194,
     128
    ],
    "footprint": [
@@ -206,11 +206,11 @@
   "SE": {
    "sprite": "item_4b_coffee_table_SE.png",
    "pivot": [
-    64,
+    66,
     128
    ],
    "canvas": [
-    192,
+    194,
     128
    ],
    "footprint": [

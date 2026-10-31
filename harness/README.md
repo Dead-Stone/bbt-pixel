@@ -170,6 +170,12 @@ Open `harness/viewer/index.html` through the server (it fetches JSON, so `file:/
   * `shot_amber_slice_shift.png`
 * `clip_4A_evening.gif`: follows Sheldon (zoom 2.5). He knocks on 4B, comes back, and reclaims his spot
   from Leonard.
+* `clip_4A_game_night_ai.gif`: follows Penny into 4A at game night, with all 7 characters on the couch,
+  armchair, and island stools (ChatGPT env art, show layout; see `docs/set_layout.md`).
+* `clip_4B_nightcap_ai.gif`: the nightcap in 4B (22:20), with all 7 characters on Penny's couch,
+  armchair, armrest, bar stool, and round table.
+* `env/renders/env_ai/`: viewer screenshots of 4A, 4B, and the hall, plus `before_after_floor4.png`.
+  The seat check is `env/renders/seat_contact_floor4.png`.
 * `clip_ait_physics_work.gif`: follows Howard (zoom 2.2) through work loops at the lab benches and a
   conversation with brain-chosen emotes (magic trick, neuro lecture, sigh and shrug...).
 * `clip_amber_slice_shift.gif`: follows Penny (zoom 3) at the bar, with the tray work loop.

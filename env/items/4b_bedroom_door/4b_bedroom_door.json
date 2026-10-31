@@ -26,11 +26,11 @@
    "sprite": "item_4b_bedroom_door_SW.png",
    "pivot": [
     64,
-    208
+    209
    ],
    "canvas": [
     128,
-    208
+    209
    ],
    "footprint": [
     1,
@@ -85,11 +85,11 @@
      "sprite": "item_4b_bedroom_door_SW_open.png",
      "pivot": [
       64,
-      208
+      212
      ],
      "canvas": [
       128,
-      208
+      212
      ],
      "footprint": [
       1,
@@ -257,11 +257,11 @@
    "sprite": "item_4b_bedroom_door_SE.png",
    "pivot": [
     64,
-    208
+    212
    ],
    "canvas": [
     128,
-    208
+    212
    ],
    "footprint": [
     1,

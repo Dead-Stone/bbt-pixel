@@ -24,11 +24,11 @@
    "sprite": "item_4a_kitchen_island_SW.png",
    "pivot": [
     128,
-    162
+    171
    ],
    "canvas": [
     192,
-    162
+    171
    ],
    "footprint": [
     2,
@@ -133,12 +133,12 @@
   "NW": {
    "sprite": "item_4a_kitchen_island_NW.png",
    "pivot": [
-    64,
-    162
+    68,
+    170
    ],
    "canvas": [
-    192,
-    162
+    196,
+    170
    ],
    "footprint": [
     1,
@@ -244,11 +244,11 @@
    "sprite": "item_4a_kitchen_island_NE.png",
    "pivot": [
     128,
-    162
+    170
    ],
    "canvas": [
-    192,
-    162
+    196,
+    170
    ],
    "footprint": [
     2,
@@ -354,11 +354,11 @@
    "sprite": "item_4a_kitchen_island_SE.png",
    "pivot": [
     64,
-    162
+    171
    ],
    "canvas": [
     192,
-    162
+    171
    ],
    "footprint": [
     1,

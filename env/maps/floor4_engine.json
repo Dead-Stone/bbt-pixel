@@ -43,17 +43,17 @@
    "floor_hall",
    "floor_hall",
    "floor_hall",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_wood_b",
-   "floor_4a_wood_b",
+   "floor_4a_wood_a",
+   "floor_4a_wood_a",
    "floor_4a_wood_a",
    "floor_4a_wood_a",
    "floor_4a_wood_b",
-   "floor_4a_wood_b"
+   "floor_4a_wood_b",
+   "floor_4a_wood_b",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen"
   ],
   [
    "floor_4b_wood_a",
@@ -68,17 +68,17 @@
    "floor_hall",
    "floor_hall",
    "floor_hall",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_kitchen",
-   "floor_4a_wood_b",
    "floor_4a_wood_b",
    "floor_4a_wood_a",
    "floor_4a_wood_a",
    "floor_4a_wood_b",
-   "floor_4a_wood_b"
+   "floor_4a_wood_b",
+   "floor_4a_wood_b",
+   "floor_4a_wood_b",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen"
   ],
   [
    "floor_4b_wood_b",
@@ -100,10 +100,10 @@
    "floor_4a_wood_a",
    "floor_4a_wood_a",
    "floor_4a_wood_a",
-   "floor_4a_wood_a",
-   "floor_4a_wood_b",
-   "floor_4a_wood_b",
-   "floor_4a_wood_a"
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen"
   ],
   [
    "floor_4b_wood_a",
@@ -125,10 +125,10 @@
    "floor_4a_wood_b",
    "floor_4a_wood_b",
    "floor_4a_wood_a",
-   "floor_4a_wood_b",
-   "floor_4a_wood_a",
-   "floor_4a_wood_b",
-   "floor_4a_wood_a"
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen",
+   "floor_4a_kitchen"
   ],
   [
    "floor_4b_wood_a",
@@ -233,11 +233,6 @@
  ],
  "walkable": [
   [
-   1,
-   1,
-   1,
-   1,
-   0,
    0,
    0,
    0,
@@ -245,13 +240,18 @@
    1,
    1,
    1,
+   1,
+   1,
+   1,
+   1,
+   1,
    0,
    0,
    0,
    0,
    0,
    0,
-   0,
+   1,
    0,
    0,
    0,
@@ -261,6 +261,9 @@
    1,
    1,
    1,
+   1,
+   0,
+   0,
    0,
    1,
    1,
@@ -271,55 +274,18 @@
    1,
    1,
    1,
-   1,
-   1,
-   1,
-   1,
-   0,
-   1,
-   1,
-   1,
-   1,
-   0
-  ],
-  [
-   0,
-   1,
-   1,
-   1,
-   1,
-   0,
    0,
    1,
    1,
    1,
    1,
    1,
-   1,
-   0,
-   0,
-   1,
-   1,
-   1,
-   0,
-   0,
-   1,
-   0,
    1
   ],
   [
-   0,
-   1,
-   0,
-   1,
    1,
    0,
    0,
-   1,
-   1,
-   1,
-   1,
-   1,
    1,
    0,
    0,
@@ -330,18 +296,21 @@
    1,
    1,
    1,
-   0
+   0,
+   0,
+   0,
+   1,
+   0,
+   1,
+   0,
+   0,
+   1,
+   1
   ],
   [
-   0,
    1,
    0,
-   1,
-   1,
-   1,
-   1,
-   1,
-   1,
+   0,
    1,
    1,
    1,
@@ -352,8 +321,14 @@
    1,
    1,
    0,
+   1,
+   0,
    0,
    1,
+   1,
+   1,
+   0,
+   0,
    1,
    1
   ],
@@ -363,11 +338,6 @@
    1,
    0,
    0,
-   1,
-   0,
-   1,
-   1,
-   0,
    0,
    0,
    1,
@@ -379,17 +349,22 @@
    1,
    1,
    1,
-   0,
-   0
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
   ],
   [
    1,
    1,
    1,
+   1,
    0,
    0,
-   1,
-   1,
+   0,
    1,
    1,
    0,
@@ -409,6 +384,31 @@
   ],
   [
    1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   1,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
    0,
    1,
    1,
@@ -422,8 +422,8 @@
    0,
    1,
    1,
-   1,
-   1,
+   0,
+   0,
    1,
    1,
    1,
@@ -491,7 +491,7 @@
    "line": 0,
    "index": 1,
    "mat": "4b",
-   "feature": "doorway"
+   "feature": null
   },
   {
    "side": "br",
@@ -507,7 +507,7 @@
    "line": 0,
    "index": 2,
    "mat": "4b",
-   "feature": "window"
+   "feature": null
   },
   {
    "side": "br",
@@ -523,7 +523,7 @@
    "line": 0,
    "index": 3,
    "mat": "4b",
-   "feature": "window"
+   "feature": null
   },
   {
    "side": "br",
@@ -539,7 +539,7 @@
    "line": 0,
    "index": 4,
    "mat": "4b",
-   "feature": null
+   "feature": "window"
   },
   {
    "side": "br",
@@ -555,7 +555,7 @@
    "line": 0,
    "index": 5,
    "mat": "4b",
-   "feature": null
+   "feature": "window"
   },
   {
    "side": "br",
@@ -587,7 +587,7 @@
    "line": 0,
    "index": 7,
    "mat": "4b",
-   "feature": null
+   "feature": "doorway"
   },
   {
    "side": "br",
@@ -699,7 +699,7 @@
    "line": 0,
    "index": 15,
    "mat": "4a",
-   "feature": null
+   "feature": "window"
   },
   {
    "side": "br",
@@ -715,7 +715,7 @@
    "line": 0,
    "index": 16,
    "mat": "4a",
-   "feature": null
+   "feature": "window"
   },
   {
    "side": "br",
@@ -731,7 +731,7 @@
    "line": 0,
    "index": 17,
    "mat": "4a",
-   "feature": null
+   "feature": "window"
   },
   {
    "side": "br",
@@ -747,7 +747,7 @@
    "line": 0,
    "index": 18,
    "mat": "4a",
-   "feature": null
+   "feature": "doorway"
   },
   {
    "side": "br",
@@ -795,7 +795,7 @@
    "line": 0,
    "index": 21,
    "mat": "4a",
-   "feature": "window"
+   "feature": null
   },
   {
    "side": "br",
@@ -811,7 +811,7 @@
    "line": 0,
    "index": 22,
    "mat": "4a",
-   "feature": "window"
+   "feature": null
   },
   {
    "side": "br",
@@ -931,7 +931,7 @@
    "line": 8,
    "index": 3,
    "mat": "hall",
-   "feature": "doorway"
+   "feature": null
   },
   {
    "side": "bl",
@@ -939,7 +939,7 @@
    "line": 12,
    "index": 3,
    "mat": "4a",
-   "feature": "doorway"
+   "feature": null
   },
   {
    "side": "bl",
@@ -963,7 +963,7 @@
    "line": 8,
    "index": 4,
    "mat": "hall",
-   "feature": null
+   "feature": "doorway"
   },
   {
    "side": "bl",
@@ -971,7 +971,7 @@
    "line": 12,
    "index": 4,
    "mat": "4a",
-   "feature": null
+   "feature": "doorway"
   },
   {
    "side": "bl",
@@ -1080,48 +1080,24 @@
  ],
  "items": [
   {
-   "item": "4a_fridge",
+   "item": "4a_bookcase_collectibles",
    "x": 12,
    "y": 0,
    "rot": "SW",
-   "state": "closed",
-   "z": 0
-  },
-  {
-   "item": "4a_kitchen_counter",
-   "x": 13,
-   "y": 0,
-   "rot": "SW",
    "state": "default",
    "z": 0
   },
   {
-   "item": "4a_bookcase_collectibles",
-   "x": 16,
+   "item": "4a_whiteboard",
+   "x": 14,
    "y": 0,
    "rot": "SW",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4a_couch",
-   "x": 18,
-   "y": 0,
-   "rot": "SW",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4a_flag_banner",
-   "x": 18.5,
-   "y": 0,
-   "rot": "SW",
-   "state": "default",
+   "state": "equations_a",
    "z": 0
   },
   {
    "item": "4a_desk_laptop",
-   "x": 21,
+   "x": 15,
    "y": 0,
    "rot": "SW",
    "state": "on",
@@ -1129,87 +1105,95 @@
   },
   {
    "item": "4a_office_chair",
-   "x": 22,
+   "x": 16,
    "y": 1,
    "rot": "NE",
    "state": "default",
    "z": 0
   },
   {
+   "item": "4a_telescope",
+   "x": 17,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4a_kitchen_counter",
+   "x": 19,
+   "y": 0,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4a_fridge",
+   "x": 22,
+   "y": 0,
+   "rot": "SW",
+   "state": "closed",
+   "z": 0
+  },
+  {
    "item": "4a_rug",
-   "x": 18,
-   "y": 1,
+   "x": 13,
+   "y": 3,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4a_couch",
+   "x": 13,
+   "y": 2,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4a_floor_lamp",
+   "x": 12,
+   "y": 3,
+   "rot": "SE",
+   "state": "on",
+   "z": 0
+  },
+  {
+   "item": "4a_armchair",
+   "x": 17,
+   "y": 2,
    "rot": "SW",
    "state": "default",
    "z": 0
   },
   {
    "item": "4a_coffee_table",
-   "x": 18,
-   "y": 2,
+   "x": 14,
+   "y": 3,
    "rot": "SW",
    "state": "default",
    "z": 0
   },
   {
    "item": "4a_takeout_set",
-   "x": 18,
-   "y": 2,
+   "x": 14,
+   "y": 3,
    "rot": "SW",
    "state": "default",
    "z": 0.45
   },
   {
    "item": "4a_tv_stand",
-   "x": 18,
-   "y": 4,
+   "x": 14,
+   "y": 7,
    "rot": "NE",
    "state": "on",
    "z": 0
   },
   {
-   "item": "4a_armchair",
-   "x": 21,
-   "y": 2,
-   "rot": "SW",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4a_telescope",
-   "x": 22,
-   "y": 3,
-   "rot": "SW",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4a_whiteboard",
-   "x": 21,
-   "y": 5,
-   "rot": "SW",
-   "state": "equations_a",
-   "z": 0
-  },
-  {
-   "item": "4a_whiteboard",
-   "x": 22,
-   "y": 5,
-   "rot": "SW",
-   "state": "equations_b",
-   "z": 0
-  },
-  {
-   "item": "4a_floor_lamp",
-   "x": 17,
-   "y": 1,
-   "rot": "S",
-   "state": "on",
-   "z": 0
-  },
-  {
    "item": "4a_kitchen_island",
-   "x": 13,
+   "x": 19,
    "y": 2,
    "rot": "SW",
    "state": "default",
@@ -1217,7 +1201,7 @@
   },
   {
    "item": "4a_bar_stool",
-   "x": 13,
+   "x": 19,
    "y": 3,
    "rot": "SW",
    "state": "default",
@@ -1225,7 +1209,7 @@
   },
   {
    "item": "4a_bar_stool",
-   "x": 14,
+   "x": 20,
    "y": 3,
    "rot": "SW",
    "state": "default",
@@ -1233,16 +1217,24 @@
   },
   {
    "item": "4a_takeout_set",
-   "x": 14,
+   "x": 20,
    "y": 2,
    "rot": "SW",
    "state": "default",
    "z": 0.92
   },
   {
+   "item": "4a_whiteboard",
+   "x": 13,
+   "y": 6,
+   "rot": "SE",
+   "state": "equations_b",
+   "z": 0
+  },
+  {
    "item": "4a_dna_model",
-   "x": 20,
-   "y": 5,
+   "x": 22,
+   "y": 6,
    "rot": "SW",
    "state": "default",
    "z": 0
@@ -1250,7 +1242,7 @@
   {
    "item": "4a_front_door",
    "x": 12,
-   "y": 3,
+   "y": 4,
    "rot": "SE",
    "state": "closed",
    "z": 0
@@ -1282,22 +1274,14 @@
   {
    "item": "4b_front_door",
    "x": 8,
-   "y": 3,
+   "y": 4,
    "rot": "SE",
    "state": "closed",
    "z": 0
   },
   {
-   "item": "4b_bedroom_door",
-   "x": 1,
-   "y": 0,
-   "rot": "SW",
-   "state": "ajar",
-   "z": 0
-  },
-  {
    "item": "4b_kitchen_counter",
-   "x": 4,
+   "x": 0,
    "y": 0,
    "rot": "SW",
    "state": "default",
@@ -1305,15 +1289,15 @@
   },
   {
    "item": "4b_fridge",
-   "x": 7,
-   "y": 0,
-   "rot": "SW",
+   "x": 0,
+   "y": 4,
+   "rot": "SE",
    "state": "closed",
    "z": 0
   },
   {
    "item": "4b_kitchen_bar",
-   "x": 5,
+   "x": 1,
    "y": 2,
    "rot": "SW",
    "state": "default",
@@ -1321,38 +1305,6 @@
   },
   {
    "item": "4b_bar_stool",
-   "x": 5,
-   "y": 3,
-   "rot": "SW",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4b_bar_stool",
-   "x": 6,
-   "y": 3,
-   "rot": "SW",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4b_wine_set",
-   "x": 6,
-   "y": 2,
-   "rot": "SW",
-   "state": "default",
-   "z": 1.02
-  },
-  {
-   "item": "4b_couch",
-   "x": 0,
-   "y": 3,
-   "rot": "SE",
-   "state": "default",
-   "z": 0
-  },
-  {
-   "item": "4b_rug",
    "x": 1,
    "y": 3,
    "rot": "SW",
@@ -1360,23 +1312,47 @@
    "z": 0
   },
   {
-   "item": "4b_coffee_table",
+   "item": "4b_bar_stool",
    "x": 2,
    "y": 3,
-   "rot": "SE",
+   "rot": "SW",
    "state": "default",
    "z": 0
   },
   {
-   "item": "4b_armchair_patterned",
-   "x": 3,
+   "item": "4b_wine_set",
+   "x": 2,
+   "y": 2,
+   "rot": "SW",
+   "state": "default",
+   "z": 1.02
+  },
+  {
+   "item": "4b_dining_table_cluttered",
+   "x": 4,
    "y": 1,
    "rot": "SW",
    "state": "default",
    "z": 0
   },
   {
-   "item": "4b_dining_table_cluttered",
+   "item": "4b_bedroom_door",
+   "x": 7,
+   "y": 0,
+   "rot": "SW",
+   "state": "ajar",
+   "z": 0
+  },
+  {
+   "item": "4b_laundry_pile",
+   "x": 6,
+   "y": 1,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4b_rug",
    "x": 3,
    "y": 5,
    "rot": "SW",
@@ -1384,7 +1360,23 @@
    "z": 0
   },
   {
-   "item": "4b_laundry_pile",
+   "item": "4b_couch",
+   "x": 3,
+   "y": 4,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4b_coffee_table",
+   "x": 4,
+   "y": 5,
+   "rot": "SW",
+   "state": "default",
+   "z": 0
+  },
+  {
+   "item": "4b_armchair_patterned",
    "x": 6,
    "y": 5,
    "rot": "SW",
@@ -1393,9 +1385,9 @@
   },
   {
    "item": "4b_floor_lamp",
-   "x": 0,
-   "y": 2,
-   "rot": "SE",
+   "x": 6,
+   "y": 4,
+   "rot": "SW",
    "state": "on",
    "z": 0
   },
@@ -1411,20 +1403,20 @@
  "spawns": {
   "sheldon": "4a_couch.seat0",
   "leonard": [
-   15.5,
+   14.5,
    1.45
   ],
   "penny": [
-   4.5,
-   4.4
+   5.5,
+   3.5
   ],
   "bernadette": [
-   4.3,
-   5.1
+   3.4,
+   6.4
   ],
   "amy": [
    5.5,
-   5.0
+   6.5
   ]
  },
  "sort": {

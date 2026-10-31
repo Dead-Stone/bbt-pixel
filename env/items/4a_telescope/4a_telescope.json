@@ -23,11 +23,11 @@
   "S": {
    "sprite": "item_4a_telescope_S.png",
    "pivot": [
-    64,
+    66,
     162
    ],
    "canvas": [
-    128,
+    130,
     162
    ],
    "footprint": [
@@ -67,11 +67,11 @@
   "SW": {
    "sprite": "item_4a_telescope_SW.png",
    "pivot": [
-    64,
+    84,
     162
    ],
    "canvas": [
-    128,
+    148,
     162
    ],
    "footprint": [
@@ -115,7 +115,7 @@
     162
    ],
    "canvas": [
-    128,
+    140,
     162
    ],
    "footprint": [
@@ -155,11 +155,11 @@
   "NW": {
    "sprite": "item_4a_telescope_NW.png",
    "pivot": [
-    64,
+    69,
     162
    ],
    "canvas": [
-    128,
+    133,
     162
    ],
    "footprint": [
@@ -247,7 +247,7 @@
     162
    ],
    "canvas": [
-    128,
+    134,
     162
    ],
    "footprint": [
@@ -287,11 +287,11 @@
   "E": {
    "sprite": "item_4a_telescope_E.png",
    "pivot": [
-    64,
+    78,
     162
    ],
    "canvas": [
-    128,
+    142,
     162
    ],
    "footprint": [
@@ -335,7 +335,7 @@
     162
    ],
    "canvas": [
-    128,
+    149,
     162
    ],
    "footprint": [

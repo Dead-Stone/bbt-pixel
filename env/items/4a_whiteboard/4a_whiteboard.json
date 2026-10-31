@@ -26,12 +26,12 @@
   "SW": {
    "sprite": "item_4a_whiteboard_SW.png",
    "pivot": [
-    64,
-    186
+    78,
+    193
    ],
    "canvas": [
-    128,
-    186
+    142,
+    193
    ],
    "footprint": [
     1,
@@ -94,12 +94,12 @@
     "equations_a": {
      "sprite": "item_4a_whiteboard_SW_equations_a.png",
      "pivot": [
-      64,
-      186
+      78,
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -110,12 +110,12 @@
     "equations_b": {
      "sprite": "item_4a_whiteboard_SW_equations_b.png",
      "pivot": [
-      64,
-      186
+      76,
+      193
      ],
      "canvas": [
-      128,
-      186
+      140,
+      193
      ],
      "footprint": [
       1,
@@ -126,12 +126,12 @@
     "equations_c": {
      "sprite": "item_4a_whiteboard_SW_equations_c.png",
      "pivot": [
-      64,
-      186
+      78,
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -145,11 +145,11 @@
    "sprite": "item_4a_whiteboard_NW.png",
    "pivot": [
     64,
-    186
+    193
    ],
    "canvas": [
-    128,
-    186
+    142,
+    193
    ],
    "footprint": [
     1,
@@ -213,11 +213,11 @@
      "sprite": "item_4a_whiteboard_NW_equations_a.png",
      "pivot": [
       64,
-      186
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -229,11 +229,11 @@
      "sprite": "item_4a_whiteboard_NW_equations_b.png",
      "pivot": [
       64,
-      186
+      193
      ],
      "canvas": [
-      128,
-      186
+      141,
+      193
      ],
      "footprint": [
       1,
@@ -245,11 +245,11 @@
      "sprite": "item_4a_whiteboard_NW_equations_c.png",
      "pivot": [
       64,
-      186
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -262,12 +262,12 @@
   "NE": {
    "sprite": "item_4a_whiteboard_NE.png",
    "pivot": [
-    64,
-    186
+    78,
+    193
    ],
    "canvas": [
-    128,
-    186
+    142,
+    193
    ],
    "footprint": [
     1,
@@ -330,12 +330,12 @@
     "equations_a": {
      "sprite": "item_4a_whiteboard_NE_equations_a.png",
      "pivot": [
-      64,
-      186
+      78,
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -346,12 +346,12 @@
     "equations_b": {
      "sprite": "item_4a_whiteboard_NE_equations_b.png",
      "pivot": [
-      64,
-      186
+      76,
+      193
      ],
      "canvas": [
-      128,
-      186
+      140,
+      193
      ],
      "footprint": [
       1,
@@ -362,12 +362,12 @@
     "equations_c": {
      "sprite": "item_4a_whiteboard_NE_equations_c.png",
      "pivot": [
-      64,
-      186
+      78,
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -381,11 +381,11 @@
    "sprite": "item_4a_whiteboard_SE.png",
    "pivot": [
     64,
-    186
+    193
    ],
    "canvas": [
-    128,
-    186
+    142,
+    193
    ],
    "footprint": [
     1,
@@ -449,11 +449,11 @@
      "sprite": "item_4a_whiteboard_SE_equations_a.png",
      "pivot": [
       64,
-      186
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,
@@ -465,11 +465,11 @@
      "sprite": "item_4a_whiteboard_SE_equations_b.png",
      "pivot": [
       64,
-      186
+      193
      ],
      "canvas": [
-      128,
-      186
+      141,
+      193
      ],
      "footprint": [
       1,
@@ -481,11 +481,11 @@
      "sprite": "item_4a_whiteboard_SE_equations_c.png",
      "pivot": [
       64,
-      186
+      193
      ],
      "canvas": [
-      128,
-      186
+      142,
+      193
      ],
      "footprint": [
       1,

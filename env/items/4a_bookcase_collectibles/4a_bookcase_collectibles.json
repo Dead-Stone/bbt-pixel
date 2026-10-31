@@ -23,11 +23,11 @@
   "SW": {
    "sprite": "item_4a_bookcase_collectibles_SW.png",
    "pivot": [
-    128,
+    140,
     246
    ],
    "canvas": [
-    192,
+    204,
     246
    ],
    "footprint": [
@@ -89,7 +89,7 @@
     246
    ],
    "canvas": [
-    192,
+    230,
     246
    ],
    "footprint": [
@@ -147,11 +147,11 @@
   "NE": {
    "sprite": "item_4a_bookcase_collectibles_NE.png",
    "pivot": [
-    128,
+    166,
     246
    ],
    "canvas": [
-    192,
+    230,
     246
    ],
    "footprint": [
@@ -213,7 +213,7 @@
     246
    ],
    "canvas": [
-    192,
+    204,
     246
    ],
    "footprint": [

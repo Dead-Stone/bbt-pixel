@@ -29,9 +29,9 @@ class Scene:
         for a, b in data.get('blocked_edges', []):
             self.blocked.add((tuple(a), tuple(b))); self.blocked.add((tuple(b), tuple(a)))
         if self.id == 'floor4':
-            # the 4B | hall | 4A partition walls (x = 8 and x = 12) are only passable through the front doors (y = 3)
+            # the 4B | hall | 4A partition walls (x = 8 and x = 12) are only passable through the front doors (y = 4, facing each other)
             for y in range(self.H):
-                if y == 3: continue
+                if y == 4: continue
                 for x in (8, 12):
                     self.blocked.add(((x - 1, y), (x, y))); self.blocked.add(((x, y), (x - 1, y)))
         self.hooks = {h['id']: h for h in data['hooks']}

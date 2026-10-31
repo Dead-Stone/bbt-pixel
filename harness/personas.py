@@ -39,6 +39,7 @@ PERSONAS = {
           S('4a_couch', 'sit', 'seat0', 15, 30, 'sits in his spot')], social=0.6),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=0.9),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_couch', 'sit', 'seat0', 40, 80, 'game night in his spot')], social=0.9),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_armchair_patterned', 'sit', 'seat0', 30, 60, 'claims the armchair at Penny\'s')], social=1.0),
         B('23:00', 'floor4', 'bedtime', steps=[S('4a_floor_lamp', 'use', lo=1, hi=2, label='switches off the lamp')], social=0.1, leave='sleep'),
     ]),
  'leonard': dict(
@@ -49,7 +50,7 @@ PERSONAS = {
     interests=['lasers', 'cello', 'comic books', 'Penny', 'video games'],
     rel={'sheldon': 'roommate; exhausting best friend', 'penny': 'girlfriend across the hall', 'howard': 'close friend',
          'raj': 'close friend', 'amy': "Sheldon's girlfriend; an ally", 'bernadette': "Howard's partner; friendly"},
-    home=('floor4', [15.5, 1.45]), emote='glasses_push', speed=1.35, drives=True,
+    home=('floor4', [14.5, 1.45]), emote='glasses_push', speed=1.35, drives=True,
     routine=[
         B('06:55', 'floor4', 'morning in 4A', steps=[S('4a_fridge', 'use', lo=2, hi=3, label='checks the fridge'), S('4a_kitchen_counter', 'cook', lo=10, hi=15, label='makes coffee and eggs')],
           loop=[S('4a_desk_laptop', 'use', lo=10, hi=20, label='reads papers on the laptop')], social=0.6),
@@ -62,6 +63,7 @@ PERSONAS = {
           loop=[S('4a_couch', 'sit', 'seat1', 15, 30, 'unwinds on the couch'), S('4a_fridge', 'use', lo=2, hi=4, label='grabs a drink')], social=0.8),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=0.9),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_tv_stand', 'use', 'game_console', 3, 5, 'boots up the console'), S('4a_couch', 'sit', 'seat1', 40, 80, 'plays co-op on the couch')], social=0.9),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_couch', 'sit', 'seat1', 30, 60, 'nightcap on Penny\'s couch')], social=1.0),
         B('23:00', 'floor4', 'bedtime', social=0.2, leave='sleep'),
     ]),
  'penny': dict(
@@ -72,7 +74,7 @@ PERSONAS = {
     interests=['acting', 'auditions', 'wine', 'fashion', 'her friends'],
     rel={'leonard': 'boyfriend across the hall', 'sheldon': 'odd neighbour she protects', 'amy': 'best friend (Amy insists)',
          'bernadette': 'close friend from work days', 'howard': 'friend; used to roll her eyes at him', 'raj': 'sweet friend who gets shy around women'},
-    home=('floor4', [4.5, 4.4]), emote='hair_flip', speed=1.35,
+    home=('floor4', [5.5, 3.5]), emote='hair_flip', speed=1.35,
     routine=[
         B('06:55', 'floor4', 'sleeping in', social=0.0, leave='sleep_until'),
         B('08:30', 'floor4', 'slow morning in 4B', steps=[S('4b_kitchen_bar', ('pour_drink', 'perch'), lo=10, hi=20, label='drinks coffee at the kitchen bar')],
@@ -85,6 +87,7 @@ PERSONAS = {
           S('rest_booth', 'work', 'take_order', 5, 10, 'takes an order'), S('rest_table_2top', 'work', lo=4, hi=8, label='serves a table'),
           S('rest_cake_display', 'work', lo=3, hi=6, label='plates cheesecake'), S('rest_bar_counter', ('use', 'work'), lo=4, hi=8, label='picks up drinks')], social=0.7),
         B('21:45', 'floor4', 'late game night in 4A', loop=[S('4a_couch', 'sit', lo=30, hi=60, label='joins game night'), S('4a_armchair', 'sit', lo=30, hi=60, label='joins game night')], social=0.9),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_kitchen_bar', 'pour_drink', lo=3, hi=5, label='pours the wine'), S('4b_couch', 'sit', 'seat0', 30, 60, 'hosts a nightcap')], social=1.0),
         B('23:10', 'floor4', 'home to 4B', steps=[S('4b_bedroom_door', 'door', lo=0, hi=0, label='heads to bed')], social=0.2, leave='sleep'),
     ]),
  'howard': dict(
@@ -104,6 +107,7 @@ PERSONAS = {
         B('13:00', 'ait_physics', 'afternoon build', loop=[S('lab_rover', 'work', lo=30, hi=50, label='rewires the rover'), S('lab_bench_electronics', 'work', lo=20, hi=40, label='debugs a servo board')], social=0.7),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=1.0),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_couch', 'sit', 'seat2', 40, 80, 'plays on the couch'), S('4a_bar_stool', 'perch', lo=20, hi=40, label='heckles from a stool')], social=1.0),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_bar_stool', 'perch', lo=20, hi=40, label='perches at the kitchen bar')], social=1.0),
         B('23:00', None, 'heads home', social=0.0, leave='street'),
     ]),
  'raj': dict(
@@ -126,6 +130,7 @@ PERSONAS = {
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=1.0),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_kitchen_island', 'perch', lo=20, hi=40, label='hosts snacks at the island'),
           S('4a_couch', 'sit', lo=30, hi=60, label='plays on the couch')], social=1.0),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_couch', 'perch', 'armrest_l', 20, 40, 'nurses a wine on the armrest')], social=1.0),
         B('23:00', 'raj_apartment', 'home for the night', loop=[S('raj_sofa', 'sit', lo=20, hi=40, label='winds down on the sofa')], social=0.2),
     ]),
  'bernadette': dict(
@@ -135,7 +140,7 @@ PERSONAS = {
     tics=['switches from sugary to stern mid-sentence', 'mentions germs or lab cultures', 'gives orders as if they were suggestions'],
     interests=['microbiology', 'promotions', 'Howard', 'girls\' nights', 'winning'],
     rel={'howard': 'husband', 'penny': 'close friend', 'amy': 'close friend', 'raj': "friend; Howard's shadow", 'sheldon': 'friend she can handle', 'leonard': 'friend'},
-    home=('floor4', [4.3, 5.1]), emote='sweet_to_scary', speed=1.3,
+    home=('floor4', [3.4, 6.4]), emote='sweet_to_scary', speed=1.3,
     routine=[
         B('06:55', 'floor4', 'girls\' sleepover morning in 4B', steps=[S('4b_kitchen_bar', ('perch', 'pour_drink'), lo=15, hi=25, label='has coffee at the kitchen bar')],
           loop=[S('4b_dining_table_cluttered', 'sit', lo=10, hi=20, label='checks her lab schedule')], social=0.9),
@@ -145,6 +150,7 @@ PERSONAS = {
         B('14:20', None, 'back to the pharma lab', social=0.0, leave='street'),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=1.0, arrive=('street_exterior', 'from_campus')),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_armchair', 'sit', lo=30, hi=60, label='plays to win from the armchair'), S('4a_kitchen_island', 'perch', lo=15, hi=30, label='keeps score at the island')], social=1.0),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_dining_table_cluttered', 'sit', lo=20, hi=40, label='sits at the round table')], social=1.0),
         B('23:00', None, 'heads home with Howard', social=0.0, leave='street'),
     ]),
  'amy': dict(
@@ -154,7 +160,7 @@ PERSONAS = {
     tics=['describes emotions in terms of brain regions or neurotransmitters', 'calls Penny her best friend at every chance', 'proposes experiments'],
     interests=['neuroscience', 'primate studies', 'harp', 'Sheldon', 'friendship'],
     rel={'sheldon': 'boyfriend', 'penny': 'best friend', 'bernadette': 'close friend', 'leonard': 'friend', 'howard': 'friend', 'raj': 'friend'},
-    home=('floor4', [5.5, 5.0]), emote='neuro_lecture', speed=1.25,
+    home=('floor4', [5.5, 6.5]), emote='neuro_lecture', speed=1.25,
     routine=[
         B('06:55', 'floor4', 'girls\' sleepover morning in 4B', steps=[S('4b_couch', 'sit', lo=20, hi=30, label='journals on the couch')],
           loop=[S('4b_armchair_patterned', 'sit', lo=10, hi=20, label='reviews slides in the armchair')], social=0.9),
@@ -165,6 +171,7 @@ PERSONAS = {
           S('lab_stool', 'sit', lo=15, hi=25, label='annotates results')], social=0.6),
         B('18:40', 'rest_amber_slice', 'Friday dinner at The Amber Slice', steps=DINNER, loop=DINNER_SIT, social=1.0),
         B('20:30', 'floor4', 'game night in 4A', loop=[S('4a_couch', 'sit', lo=30, hi=60, label='sits beside Sheldon'), S('4a_kitchen_island', 'perch', lo=15, hi=30, label='takes notes at the island')], social=1.0),
+        B('22:20', 'floor4', 'nightcap at Penny\'s in 4B', loop=[S('4b_couch', 'sit', 'seat2', 30, 60, 'sits next to her bestie')], social=1.0),
         B('23:00', None, 'heads home', social=0.0, leave='street'),
     ]),
 }
