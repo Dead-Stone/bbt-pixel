@@ -1,6 +1,6 @@
 {
  "character": "bernadette",
- "generated": "2026-10-30 16:00 (America/Los_Angeles)",
+ "generated": "2026-10-30 17:59 (America/Los_Angeles)",
  "frame": [
   128,
   128
@@ -11,9 +11,9 @@
  ],
  "body_height_spec_px": 81,
  "head_top_spec_y": 35,
- "idle_S_head_top_y": 35,
- "idle_S_body_height_px": 81,
- "idle_S_lowest_px": 119,
+ "idle_S_head_top_y": 36,
+ "idle_S_body_height_px": 80,
+ "idle_S_lowest_px": 117,
  "head_top_within_2px_of_spec": true,
  "feet_on_pivot_line_idle": true,
  "palette_violations": 0,
@@ -70,16 +70,16 @@
  },
  "mirror_check": {
   "NE": {
-   "pixels_differing_from_plain_flip": 0,
-   "silhouette_identical": true
+   "pixels_differing_from_plain_flip": 752,
+   "silhouette_identical": false
   },
   "E": {
-   "pixels_differing_from_plain_flip": 0,
-   "silhouette_identical": true
+   "pixels_differing_from_plain_flip": 634,
+   "silhouette_identical": false
   },
   "SE": {
-   "pixels_differing_from_plain_flip": 0,
-   "silhouette_identical": true
+   "pixels_differing_from_plain_flip": 709,
+   "silhouette_identical": false
   }
  },
  "decal_check": {

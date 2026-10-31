@@ -1,0 +1,84 @@
+GIMP Palette
+Name: bbt_bernadette_rig
+Columns: 5
+#
+255 223 196	skin_hi
+248 208 178	skin_base
+198 148 130	skin_sh
+154 101  93	skin_deep
+ 84  51  48	skin_ol
+255 230 162	hair_hi
+244 214 136	hair_base
+195 148  94	hair_sh
+151  97  64	hair_deep
+ 83  48  33	hair_ol
+255 253 248	blouse_hi
+246 244 238	blouse_base
+197 190 182	blouse_sh
+153 142 135	blouse_deep
+ 84  75  71	blouse_ol
+255 161 189	cardigan_hi
+240 132 172	cardigan_base
+192  91 137	cardigan_sh
+149  62 107	cardigan_deep
+ 82  31  59	cardigan_ol
+ 55  75 111	skirt_hi
+ 36  46  94	skirt_base
+ 22  26  75	skirt_sh
+ 13  13  58	skirt_deep
+  7   6  32	skirt_ol
+255 255 252	skirt_alt_hi
+240 240 236	skirt_alt_base
+192 190 181	skirt_alt_sh
+149 143 134	skirt_alt_deep
+ 82  76  70	skirt_alt_ol
+ 85  59  78	shoes_hi
+ 70  44  66	shoes_base
+ 56  31  53	shoes_sh
+ 43  22  41	shoes_deep
+ 26  12  24	shoes_ol
+103 152 184	eye_hi
+ 74 112 160	eye_base
+ 49  74 128	eye_sh
+ 32  46  99	eye_deep
+ 16  22  54	eye_ol
+250 157 161	lip_hi
+220 120 130	lip_base
+176  83 102	lip_sh
+136  56  80	lip_deep
+ 75  28  44	lip_ol
+223 187 126	brow_hi
+196 156  92	brow_base
+157 102  61	brow_sh
+122  63  40	brow_deep
+ 67  30  20	brow_ol
+ 85  60  49	lash_hi
+ 70  44  34	lash_base
+ 56  27  23	lash_sh
+ 43  15  15	lash_deep
+ 26   8   9	lash_ol
+109  70  72	frame_hi
+ 92  52  56	frame_base
+ 74  36  44	frame_sh
+ 57  25  34	frame_deep
+ 31  13  19	frame_ol
+238 251 255	lens_hi
+220 232 240	lens_base
+167 179 192	lens_sh
+123 132 149	lens_deep
+ 64  69  82	lens_ol
+246 251 255	pipette_hi
+226 230 236	pipette_base
+173 177 189	pipette_sh
+128 131 146	pipette_deep
+ 67  69  80	pipette_ol
+106 173 228	tip_hi
+ 70 120 200	tip_base
+ 41  73 160	tip_sh
+ 24  41 124	tip_deep
+ 11  18  68	tip_ol
+233 255 185	tube_hi
+200 226 150	tube_base
+174 181 108	tube_sh
+140 133  76	tube_deep
+ 77  69  39	tube_ol
