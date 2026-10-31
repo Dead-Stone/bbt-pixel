@@ -32,7 +32,7 @@ E / SE / NE are made by mirroring W / SW / NW in `tools/ai_import/build.py`, so 
 
 ```
 Using the attached character turnaround as the exact reference, create a pixel-art WALK CYCLE sprite sheet
-for ONE character: PENNY (blonde wavy hair past the shoulders, pink tank top, blue jeans, brown ankle boots).
+for ONE character: PENNY (blonde wavy hair past the shoulders, pink fitted top, blue jeans, brown ankle boots).
 
 Layout: a strict grid of 5 rows x 8 columns on a solid flat magenta (#FF00FF) background.
 - Row 1: facing the viewer (S)
@@ -51,12 +51,12 @@ labels, no border, no background other than flat magenta.
 ```
 
 Outfit lines for the other six (from the turnaround):
-- SHELDON: tall and thin, short neat brown hair, red superhero-logo t-shirt over a long-sleeve dark red shirt, khaki trousers, brown shoes
-- LEONARD: curly dark brown hair, black thick-rimmed glasses, green hoodie over a graphic t-shirt, brown trousers
-- HOWARD: dark bowl-cut hair, high-collar turtleneck with a belt buckle, tight coloured trousers
-- RAJ: neat black hair, sweater vest over a collared shirt, dark trousers
-- BERNADETTE: short (much shorter than the others), blonde wavy hair, glasses, cardigan over a blouse, skirt
-- AMY: long straight brown hair, glasses, cardigan over a blouse, long skirt, flat shoes
+- SHELDON: tall and thin, short neat brown hair, red t-shirt with a yellow lightning-bolt logo over a long-sleeve dark red shirt, khaki trousers, brown shoes
+- LEONARD: curly dark brown hair, black thick-rimmed glasses, green zip hoodie with a grey hood over an olive graphic t-shirt, brown trousers, white sneakers
+- HOWARD: dark bowl-cut hair, royal blue long-sleeve top, large silver belt buckle, tight magenta trousers, brown shoes
+- RAJ: swept black hair, brown sweater vest over a white collared shirt, dark grey trousers, brown shoes
+- BERNADETTE: the shortest of the cast, curly blonde hair, glasses, pink cardigan over a white collared blouse, navy polka-dot skirt, dark tights, dark shoes
+- AMY: long straight brown hair, glasses, purple cardigan over a patterned blouse, khaki pleated skirt, dark tights, dark shoes
 
 (Check each against the attached image before sending and correct it if the turnaround shows something else.)
 
