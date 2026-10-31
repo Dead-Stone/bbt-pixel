@@ -6,9 +6,9 @@ import sys
 
 OUTFIT = dict(
     sheldon='tall and thin, short neat brown hair, red t-shirt with a yellow lightning-bolt logo over a long-sleeve dark red shirt, khaki trousers, brown shoes',
-    leonard='curly dark brown hair, black thick-rimmed glasses, green zip hoodie with a grey hood over an olive graphic t-shirt, brown trousers, white sneakers',
+    leonard='curly dark brown hair, black thick-rimmed glasses, olive-green jacket with a grey hood over a dark olive graphic t-shirt, brown corduroy trousers, chunky WHITE SNEAKERS on both feet in every figure (no boots, no brown shoes)',
     penny='long wavy blonde hair, pink fitted top, blue jeans, brown ankle boots',
-    howard='dark bowl-cut hair, royal blue long-sleeve top, large silver belt buckle, tight magenta trousers, brown shoes',
+    howard='dark brown bowl-cut hair, royal blue turtleneck, large silver belt buckle, tight magenta trousers, brown shoes',
     raj='swept black hair, brown sweater vest over a white collared shirt, dark grey trousers, brown shoes',
     bernadette='short and petite, curly blonde hair, glasses, pink cardigan over a white collared blouse, navy polka-dot skirt, dark tights, dark shoes',
     amy='long straight brown hair, glasses, purple cardigan over a patterned blouse, khaki pleated skirt, dark tights, dark shoes')

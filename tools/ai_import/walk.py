@@ -23,7 +23,8 @@ GEN = os.path.join(ROOT, 'refs_ai', 'gen')
 # axis -- used for S / N where the generator draws both strides with the same foot forward.
 # The 8-frame loop holds each key pose for 2 frames (the viewer steps walk frames every 0.14 tiles).
 DEFAULT_POSES = {'S': [0, 1, ('flip', 0), 3], 'N': [0, 1, ('flip', 0), 3], 'SW': [0, 1, 2, 3], 'W': [0, 1, 2, 3], 'NW': [0, 1, 2, 3]}
-OVERRIDE = {'sheldon': {'SW': dict(poses=[0, 3, 2, 3]), 'W': dict(poses=[0, 3, 2, 3])},}          # {cid: {dir: dict(file=..., ncols=..., poses=[...])}} for strips that needed a fix
+OVERRIDE = {'sheldon': {'SW': dict(poses=[0, 3, 2, 3]), 'W': dict(poses=[0, 3, 2, 3])},
+            'leonard': {'S': dict(poses=[0, 1, 2, 3]), 'N': dict(poses=[0, 1, 3, 2])},}          # {cid: {dir: dict(file=..., ncols=..., poses=[...])}} for strips that needed a fix
 HIP = 0.64             # legs start below the hands (~62% down the figure in front/back views)
 
 
