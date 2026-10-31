@@ -122,6 +122,22 @@ The LLM writes plan intents, dialogue lines (one per turn, in persona, given pla
 the conversation so far) and reflections. Any HTTP or parse error falls back to the mock for that call. The
 run summary prints `N LLM calls (F failed -> mock fallback)`.
 
+### Character rig (rig1)
+
+All seven sprites are drawn by `tools/rig` from a skeleton plus separate body parts. The parts are head,
+neck, torso, pelvis, upper arm, forearm, hand, thigh, shin and foot, built as 3-D volumes, with hair,
+clothing and props as extra layers. They are ray-cast into 128x128 frames (pivot 64,116, 2:1 iso,
+100 px = 185 cm) and shaded with the per-character palette.
+
+* `skeleton.py` holds the proportions (body keys per character in `cast.py`) and IK.
+* `motion.py` holds the walk (contact/down/passing/up), breathing idle, IK sit, work, talk and emotes.
+* `parts.py` / `compose.py` hold the volumes and layers.
+* `render.py` holds the ray-cast, shading, outline and clean-up passes.
+* `python3 tools/rig/build.py <cid>` rebuilds a character's sheets and GIFs and prints armcheck.
+* `python3 tools/rig/compare.py <cid>` writes the old-vs-new sheet to `harness/renders/rigcheck/<cid>_compare.png`.
+* Credits: reference sources were used for measurements and timing only (see `tools/rig/REFERENCES.md`).
+  No third-party art is included.
+
 ## Viewer
 
 Open `harness/viewer/index.html` through the server (it fetches JSON, so `file://` does not work).

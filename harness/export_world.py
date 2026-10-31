@@ -18,7 +18,9 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 sys.path.insert(0, f'{ROOT}/tools')
 import build_env as B
 import rooms as RM
-import seating as SG
+import importlib.util as _ilu
+# tools/seating.py, loaded by path: under `python3 -m harness` the name `seating` is already harness/seating.py
+_sp = _ilu.spec_from_file_location('tools_seating', f'{ROOT}/tools/seating.py'); SG = _ilu.module_from_spec(_sp); _sp.loader.exec_module(SG)
 from iso_render import dir_name
 OUT = f'{HERE}/world'
 LOCS = ['ait_cafeteria', 'ait_physics', 'rest_amber_slice', 'street_exterior', 'lobby', 'raj_apartment']
@@ -112,7 +114,14 @@ def write(loc, bg, col, data):
     json.dump(data, open(f'{d}/scene.json', 'w'), indent=None, separators=(',', ':'))
     print(loc, bg.size, len(spr), 'sprites', len(data['hooks']), 'hooks')
 
-def main():
+def main(*a, **k):
+    prev = sys.modules.get('seating'); sys.modules['seating'] = SG   # build_env/rooms import `seating` lazily
+    try: return _main(*a, **k)
+    finally:
+        if prev is not None: sys.modules['seating'] = prev
+
+
+def _main():
     os.makedirs(OUT, exist_ok=True)
     wg = json.load(open(f'{ROOT}/env/world/world_graph.json'))
     nodes = {n['id']: n for n in wg['nodes']}
