@@ -1,0 +1,64 @@
+GIMP Palette
+Name: bbt_penny_rig
+Columns: 5
+#
+255 214 175	skin_hi
+246 196 152	skin_base
+197 135 108	skin_sh
+153  88  75	skin_deep
+ 84  43  38	skin_ol
+255 224 150	hair_hi
+236 200 118	hair_base
+189 135  79	hair_sh
+146  86  53	hair_deep
+ 80  41  26	hair_ol
+255 147 178	top_hi
+240 116 160	top_base
+192  77 128	top_sh
+149  51 100	top_deep
+ 82  25  56	top_ol
+ 94 144 179	denim_hi
+ 66 104 156	denim_base
+ 42  67 125	denim_sh
+ 26  41  97	denim_deep
+ 13  19  53	denim_ol
+142 100  69	boots_hi
+122  76  46	boots_base
+ 98  44  28	boots_sh
+ 76  23  17	boots_deep
+ 41  10   8	boots_ol
+ 92 140 116	eye_hi
+ 70 120 100	eye_base
+ 49  96  88	eye_sh
+ 34  74  74	eye_deep
+ 17  39  41	eye_ol
+243 153 152	lip_hi
+214 116 120	lip_base
+171  80  94	lip_sh
+133  54  74	lip_deep
+ 73  27  41	lip_ol
+203 166 112	brow_hi
+178 136  80	brow_base
+142  88  52	brow_sh
+110  53  33	brow_deep
+ 61  25  17	brow_ol
+ 85  60  49	lash_hi
+ 70  44  34	lash_base
+ 56  27  23	lash_sh
+ 43  15  15	lash_deep
+ 26   8   9	lash_ol
+203 209 214	tray_hi
+176 180 188	tray_base
+134 138 150	tray_sh
+ 99 101 117	tray_deep
+ 52  53  64	tray_ol
+232 250 255	glass_hi
+210 226 236	glass_base
+159 173 189	glass_sh
+117 127 146	glass_deep
+ 61  67  80	glass_ol
+173  65  81	wine_hi
+150  36  60	wine_base
+120  17  49	wine_sh
+ 93   6  40	wine_deep
+ 51   2  23	wine_ol

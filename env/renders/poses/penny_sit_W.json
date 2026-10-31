@@ -2,14 +2,14 @@
  "sprite": "penny_sit_W.png",
  "pivot": [
   64,
-  104
+  116
  ],
  "seat": [
-  61.9,
-  81.5
+  63.9,
+  92.9
  ],
  "dir": "W",
- "lift_units": -13.13,
- "version": "v2",
- "note": "v2 seated pose (tools/v2/sit_v2.py); pivot = floor point under the hips; seat = butt contact point"
+ "lift_units": 0.0,
+ "version": "rig1",
+ "note": "rig seated pose (tools/rig/motion.py sit): pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py); feet flat on the floor, seat height 43 cm"
 }

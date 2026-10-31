@@ -86,12 +86,12 @@ def audit_frame(im):
     res['outline'] = bad
     return res
 
-def head_flicker(a, b):
+def head_flicker(a, b, rows_n=None):
     """colour mismatches in the head (top HEAD_ROWS rows of the silhouette) after the best integer shift (|d| <= 2);
     shoulders are left out: swinging arms legitimately change them"""
     oa, ob = a[..., 3] > 0, b[..., 3] > 0
     if not oa.any() or not ob.any(): return 0, None
-    y0 = np.nonzero(oa.any(1))[0][0]; rows = slice(y0, y0 + HEAD_ROWS)
+    y0 = np.nonzero(oa.any(1))[0][0]; rows = slice(y0, y0 + (rows_n or HEAD_ROWS))
     ka = np.where(oa, a[..., :3].astype(int) @ [65536, 256, 1], -1)
     kb = np.where(ob, b[..., :3].astype(int) @ [65536, 256, 1], -1)
     best = None
@@ -110,13 +110,19 @@ COL = {'hole': (255, 0, 255), 'island': (255, 0, 0), 'speck': (0, 200, 255), 'sp
 FLICKER_MAX = 10
 HEAD_ROWS = 22
 
+def head_rows_of(cid, src=None):
+    """a sheet may declare its head height (crown -> chin) in meta.audit.head_rows; default HEAD_ROWS"""
+    jp = os.path.join(src or os.path.join(ROOT, 'characters', cid), f'chr_{cid}.json')
+    try: return int(json.load(open(jp))['meta'].get('audit', {}).get('head_rows') or HEAD_ROWS)
+    except Exception: return HEAD_ROWS
+
 def audit(cid, src=None):
-    fr = frames_of(cid, src); rows = []; prev = {}
+    fr = frames_of(cid, src); rows = []; prev = {}; hr = head_rows_of(cid, src)
     for name, im in fr:
         r = audit_frame(im); seq = name.rsplit('_', 1)[0]; anim = seq.rsplit('_', 1)[0]
         fl = 0; flm = np.zeros(im.shape[:2], bool)
         if anim in ('idle', 'walk') and seq in prev:      # (blink redraws the eyes on purpose)
-            fl, m = head_flicker(prev[seq], im)
+            fl, m = head_flicker(prev[seq], im, hr)
             if fl > FLICKER_MAX and m is not None: flm = m
         prev[seq] = im
         r['flicker'] = flm
