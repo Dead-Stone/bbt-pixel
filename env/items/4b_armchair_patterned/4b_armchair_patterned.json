@@ -23,12 +23,12 @@
   "S": {
    "sprite": "item_4b_armchair_patterned_S.png",
    "pivot": [
-    64,
-    124
+    69,
+    134
    ],
    "canvas": [
-    128,
-    124
+    133,
+    134
    ],
    "footprint": [
     1,
@@ -67,12 +67,12 @@
   "SW": {
    "sprite": "item_4b_armchair_patterned_SW.png",
    "pivot": [
-    64,
-    124
+    73,
+    128
    ],
    "canvas": [
-    128,
-    124
+    137,
+    128
    ],
    "footprint": [
     1,
@@ -111,12 +111,12 @@
   "W": {
    "sprite": "item_4b_armchair_patterned_W.png",
    "pivot": [
-    64,
-    124
+    70,
+    133
    ],
    "canvas": [
-    128,
-    124
+    134,
+    133
    ],
    "footprint": [
     1,
@@ -243,11 +243,11 @@
   "NE": {
    "sprite": "item_4b_armchair_patterned_NE.png",
    "pivot": [
-    64,
+    65,
     124
    ],
    "canvas": [
-    128,
+    129,
     124
    ],
    "footprint": [
@@ -288,11 +288,11 @@
    "sprite": "item_4b_armchair_patterned_E.png",
    "pivot": [
     64,
-    124
+    133
    ],
    "canvas": [
     128,
-    124
+    133
    ],
    "footprint": [
     1,
@@ -332,11 +332,11 @@
    "sprite": "item_4b_armchair_patterned_SE.png",
    "pivot": [
     64,
-    124
+    126
    ],
    "canvas": [
-    128,
-    124
+    137,
+    126
    ],
    "footprint": [
     1,

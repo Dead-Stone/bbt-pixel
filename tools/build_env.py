@@ -11,7 +11,7 @@ from env_tex import hsh
 ENV_AI = os.environ.get('ENV_AI', '1') != '0'      # skin floor4 with the ChatGPT environment sheets (tools/env_ai)
 if ENV_AI:
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'env_ai'))
-    import skins as SK, floors_ai as FA
+    import skins as SK, floors_ai as FA, walls_ai as WAI
 
 ROOT = '/workspace/bbt-pixel'; ENV = f'{ROOT}/env'
 TPL = f'{ROOT}/templates'
@@ -112,10 +112,41 @@ if ENV_AI:   # wall colours sampled from the sheet's beige (4A/hall) and cream (
         W.update(br=_nearest(_c['face']), bl=_nearest(_c['face'] * 0.86), hi=_nearest(_c['hi']))
         if _m != 'hall': W.update(base=_nearest(_c['base']), base_hi=_nearest(np.minimum(_c['base'] * 1.15, 255)))
     WALLMAT['hall'].update(br=_nearest(_wc['beige']['face'] * 0.9), bl=_nearest(_wc['beige']['face'] * 0.76))
+AI_WALLS = ('4a', '4b', 'hall')     # 4th-floor full walls textured from the approved fixups_v2 wall segments (walls_ai.py)
+def wall_mask(w):
+    """full-height wall mask in the br shape for a segment w px long (64 px per tile; same geometry as WALL_FULL)"""
+    m = np.zeros((w // 2 + 193, w), bool)
+    for c in range(w): m[c // 2:c // 2 + 193, c] = True
+    return m
+def ai_wall(mat, side, mask, feature=None, span=None, door_gap=None):
+    """sheet wall texture on a br-shaped mask (bl: mirrored afterwards).  door_gap=(t0,t1): transparent doorway (z < 2.1 m)
+    across that fraction of the segment; feature 'doorway' = the procedural dark doorway carve"""
+    M = WALLMAT[mat]
+    raw = WAI.face_map('window' if feature == 'window' else None, side, mask, C[M['br']], C, hsh, x_span=span)
+    sky = raw[..., 3] == 254
+    img = SK.snap(raw); img[sky, :3] = raw[sky, :3]; img[raw[..., 3] > 0, 3] = 255
+    W = mask.shape[1]
+    for c in range(W):
+        rows = np.where(mask[:, c])[0]
+        if not len(rows): continue
+        t = (c + 0.5) / W; bot = rows[-1]
+        for r in rows:
+            z = (bot - r + 0.5) / 64.0
+            if feature == 'doorway' and 0.1 <= t <= 0.9 and z < 2.1: img[r, c, :3] = C['ink_2']
+            if door_gap and door_gap[0] <= t <= door_gap[1] and z < 2.1: img[r, c, 3] = 0
+    if side == 'bl': img = img[:, ::-1].copy()
+    return img
 def wall_piece(mat, side, mode='full', feature=None):
     """side 'br' (runs along +x, back-right) or 'bl' (runs along +y, back-left; mirrored shape).
-    canvas 64x224 (full) / 64x48 (cutaway); anchor = canvas point of the segment's top floor vertex"""
+    canvas 64x224 (full) / 64x48 (cutaway); anchor = canvas point of the segment's top floor vertex.
+    feature ('window', i, n): tile i of an n-tile window run (the sheet window is spread over the run)"""
     M = WALLMAT[mat]
+    span = (0.12, 0.88)
+    if isinstance(feature, tuple):
+        feature, gi, gn = feature; span = (0.04 + 0.92 * gi / gn, 0.04 + 0.92 * (gi + 1) / gn)
+    elif feature == 'window': span = (0.04, 0.96)
+    if ENV_AI and mat in AI_WALLS and mode == 'full' and feature in (None, 'window', 'doorway'):
+        return ai_wall(mat, side, WALL_FULL, feature, span), ((0, 192) if side == 'br' else (64, 192))
     mask = (WALL_FULL if mode == 'full' else WALL_CUT).copy()
     Hc = mask.shape[0]; hface = 192 if mode == 'full' else 16
     img = np.zeros((Hc, 64, 4), np.uint8)
@@ -298,6 +329,7 @@ def export_items():
 
 # ---------------------------------------------------------------- map
 W_, H_ = 23, 8
+WALK_THROUGH = {'4a_floor_lamp'}   # slim base at the couch end; its tile is the only way behind the couch to the desk/whiteboard
 DOOR_Y = 4   # both apartment doors sit on this row, facing each other across the landing
 def zone(x): return '4B' if x < 8 else ('hall' if x < 12 else '4A')
 STAIRS = {(x, y) for x in (10, 11) for y in (5, 6, 7)}
@@ -342,8 +374,14 @@ def walls_for(scene):
     """list of (kind 'br'/'bl', mode, line, index, mat)"""
     xr = {'combined': range(0, 23), '4A': range(12, 23), '4B': range(0, 8)}[scene]
     out = []
+    def win(x):   # ('window', index in its run, run length): one sheet window spread across each run of window tiles
+        i = 0
+        while ('y0', x - i - 1) in WINDOWS: i += 1
+        n = i + 1
+        while ('y0', x - i + n) in WINDOWS: n += 1
+        return ('window', i, n)
     for x in xr:  # back wall y=0
-        f = 'window' if ('y0', x) in WINDOWS else ('doorway' if ('y0', x) in DOORWAYS else None)
+        f = win(x) if ('y0', x) in WINDOWS else ('doorway' if ('y0', x) in DOORWAYS else None)
         out.append(('br', 'full', 0, x, wmat(x), f))
         if (x, 7) not in STAIRS: out.append(('br', 'cut', 8, x, wmat(x), None))      # front cutaway
     for y in range(8):
@@ -396,7 +434,21 @@ def char_frame(cid, anim, d, k=0):
     f = fr[nm]; return sheet[f['y']:f['y']+f['h'], f['x']:f['x']+f['w']].copy()
 
 # ---------------------------------------------------------------- compositor
-DOOR_ANIM = {'4a_front_door'}   # doors with a drawn open state (refs_ai fixups_v1 #14); the viewer opens them on 'door' events
+PILLAR_PAD = 0.4                   # wall either side of a front door in the cutaway view (tiles)
+def door_pillars(scene):
+    """(wall line x, material) of the cut walls that carry an apartment door"""
+    return {'combined': [(8, 'hall'), (12, '4a')], '4B': [(8, '4b')], '4A': []}[scene]
+PCACHE = {}
+def pillar_img(mat):
+    if mat not in PCACHE:
+        L = 1 + 2 * PILLAR_PAD; W = int(round(L * 64))
+        g0, g1 = (PILLAR_PAD + 0.05) / L, (PILLAR_PAD + 0.95) / L
+        img = ai_wall(mat, 'bl', wall_mask(W), None, (0.1, 0.9), door_gap=(g0, g1))
+        for c in (0, W - 1):          # free ends: ink outline
+            rows = np.where(img[:, c, 3] > 0)[0]; img[rows, c, :3] = C['ink']
+        PCACHE[mat] = img
+    return PCACHE[mat]
+DOOR_ANIM = {'4a_front_door', '4b_front_door'}   # doors with a drawn open state (refs_ai fixups_v1 #14); the viewer opens them on 'door' events
 def compose(scene, chars=(), scale=1, labels=False, collect=None):
     xr = {'combined': (0, 23), '4A': (12, 23), '4B': (0, 8)}[scene]
     x0, x1 = xr
@@ -417,7 +469,9 @@ def compose(scene, chars=(), scale=1, labels=False, collect=None):
             if k:
                 sx, sy = scr(x, y); layers[1].append((0, fimg(k), sx - 64, sy))
     # walls
+    pillars = door_pillars(scene) if ENV_AI else []
     for side, mode, line, idx, mat, feat in walls_for(scene):
+        if mode == 'cut' and any(pl[0] == line and idx == DOOR_Y for pl in pillars): continue   # replaced by the door pillar
         img, anc = wimg(mat, side, mode, feat)
         if side == 'br': wx, wy = idx, line
         else: wx, wy = line, idx
@@ -428,31 +482,26 @@ def compose(scene, chars=(), scale=1, labels=False, collect=None):
             if side == 'br': key = wx + wy + 0.0 + 0.55        # in front of tile (x, 7) contents
             else: key = wx + wy + 0.45                           # between tiles (x-1,y) and (x,y)
             layers[5].append((key, img, sx - anc[0], sy - anc[1]))
+    for line, mat in pillars:   # cutaway: each apartment door sits in a full-height wall section (door + jambs + lintel)
+        y0, y1 = DOOR_Y - PILLAR_PAD, DOOR_Y + 1 + PILLAR_PAD
+        img = pillar_img(mat)
+        sx, sy = scr(line, y0); tlx, tly = sx - img.shape[1], sy - 192
+        for ty in range(int(math.floor(y0)), int(math.ceil(y1))):
+            sl = np.zeros_like(img)
+            for j in range(img.shape[1]):
+                if int(math.floor(y0 + (img.shape[1] - 1 - j + 0.5) / 64)) == ty: sl[:, j] = img[:, j]
+            if sl[..., 3].any(): layers[5].append((line + ty + 0.46, sl, tlx, tly))
     # items
     metas = []
     for (iid, ox, oy, rot, st, z) in PLACE:
         if not inside(int(ox)) and not (scene == '4B' and iid == '4b_front_door'): continue
         if scene == '4A' and iid == '4b_front_door': continue
-        if scene == '4B' and iid == '4b_front_door': pass
         it = E.ITEMS[iid]
         if it['rotation_class'] == 'R1': rot = 'SW'
         R = rend(iid, rot, st or it['states'][0])
         nfx, nfy = R['fp']
         cox = R['pivot'][0] - (nfx - nfy)*64; coy = R['pivot'][1] - (nfx + nfy)*32
         sx, sy = scr(ox, oy, z); tlx, tly = sx - cox, sy - coy
-        if scene == '4B' and iid == '4b_front_door':
-            # in the solo 4B render its wall (x=8) is a FRONT wall, drawn as a cutaway stub -> cut the door down to the
-            # same stub height (Sims-style cutaway door) so it sits in the doorway gap instead of standing free
-            stub = WALL_CUT.shape[0] - 32
-            for (tx, ty), im in slices(R):
-                im = im.copy(); h, w = im.shape[:2]
-                for c in range(w):
-                    X = tlx + c; wy = ox - (X - scr(ox, 0)[0]) / 64.0
-                    floor_sy = scr(ox, wy)[1]
-                    cut = int(round(floor_sy - stub - tly))
-                    if cut > 0: im[:min(cut, h), c, 3] = 0
-                layers[5].append((ox + tx + oy + ty + 1 + it['sort_bias']*0.1, im, tlx, tly))
-            continue
         if iid == 'hall_stair_flight': layers[0].append((0, R['img'], tlx, tly)); continue
         if it['layer'] == 'floor_decal': layers[2].append((0, R['img'], tlx, tly)); continue
         if it['mount'] == 'wall' and iid in ('4a_flag_banner', 'hall_elevator_broken'):
@@ -652,6 +701,7 @@ def export_map():
     for (iid, ox, oy, rot, st, z) in PLACE:
         it = E.ITEMS[iid]
         if not it['blocks_walk'] or z > 0 or it['layer'] == 'floor_decal' or it['mount'] == 'wall': continue
+        if iid in WALK_THROUGH: continue
         R = rend(iid, rot if it['rotation_class'] != 'R1' else 'SW', st or it['states'][0])
         for tx in range(R['fp'][0]):
             for ty in range(R['fp'][1]):
@@ -660,7 +710,7 @@ def export_map():
     eng = dict(id='floor4', size=[W_, H_], tile=[128, 64], px_per_m=64,
                zones={'4B': [0, 0, 8, 8], 'hall_4f': [8, 0, 4, 8], '4A': [12, 0, 11, 8]},
                floor=[[floor_kind(x, y) for x in range(W_)] for y in range(H_)], walkable=walk,
-               doors=[dict(item='4b_front_door', tile=[8, 3], connects=['hall_4f', '4B']), dict(item='4a_front_door', tile=[12, 3], connects=['hall_4f', '4A']),
+               doors=[dict(item='4b_front_door', tile=[8, DOOR_Y], connects=['hall_4f', '4B']), dict(item='4a_front_door', tile=[12, DOOR_Y], connects=['hall_4f', '4A']),
                       dict(item='hall_stair_flight', tile=[10, 7], connects=['hall_4f', 'floor3 (stub)'])],
                walls=[dict(zip(('side', 'mode', 'line', 'index', 'mat', 'feature'), w)) for w in walls_for('combined')],
                items=[dict(item=i, x=ox, y=oy, rot=r, state=st or E.ITEMS[i]['states'][0], z=z) for (i, ox, oy, r, st, z) in PLACE],

@@ -17,6 +17,7 @@ from scipy import ndimage as ndi
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 SL = f'{ROOT}/refs_ai/chatgpt/env/sliced'
 FW, A4, B4, FX = 'floors_walls_v1', '4A_furniture_v1', '4B_furniture_v1', 'fixups_v1'
+FV2 = 'fixups_v2'   # armchair L/R, wall segments (walls_ai.py), 4B door closed/open
 # fixups_v1 views per placed rotation: (sheet, idx, mirror).  Office chair: 00 front (faces SW), 01 back (faces NE);
 # dining chair: 05 faces SW, 06 faces SE, 07 back (faces NW)
 OCH = {'SW': (FX, 0, 0), 'SE': (FX, 0, 1), 'NE': (FX, 1, 0), 'NW': (FX, 1, 1)}
@@ -27,13 +28,14 @@ GPL = f'{ROOT}/palettes/bbt_env_ai.gpl'
 #   opts: hcap (max height vs proxy, default 1.12), fit 'diamond'|'proxy'|'quad', hide (invisible proxy),
 #         views {rot: (sheet, idx, mirror)} (explicit per-rotation sprite, e.g. a drawn back view instead of the synthesised one),
 #         fit_h k (real-height rule: sprite height = k x proxy height, i.e. the item's real height at 64 px/m + its footprint),
-#         chairs [(pos, facing, height_px)] (standalone dining chairs drawn behind the table at those canonical points)
+#         chairs [(pos, facing, height_px[, 'front'])] (standalone dining chairs at those canonical points: behind the table,
+#         or over it for 'front' chairs), noshadow (no proxy contact shadow: doors, the desk whose old chair left a patch)
 SKINS = {
     '4a_couch':                 dict(parts=[(A4, 0)]),
     '4a_armchair':              dict(parts=[(A4, 2)]),
     '4a_coffee_table':          dict(parts=[(A4, 4)]),
     '4a_tv_stand':              dict(parts=[(A4, 5)], views={'NE': (FX, 8, 0), 'NW': (FX, 8, 1)}),   # back view drawn (fixups #08)
-    '4a_desk_laptop':           dict(parts=[(A4, '08_nochair')], hcap=1.6),  # sheet #08 with its merged chair removed (tools/env_ai/desk_nochair.py)
+    '4a_desk_laptop':           dict(parts=[(A4, '08_nochair')], hcap=1.6, noshadow=True),  # sheet #08 with its merged chair removed (tools/env_ai/desk_nochair.py)
     '4a_office_chair':          dict(views=OCH, fit_h=1.0),                  # separate chair in front of the desk (fixups #00/#01)
     '4a_kitchen_counter':       dict(parts=[(A4, 23, 0, 2), (A4, 22, 2, 1)]),   # sink counter (2 tiles) + stove (cook hook)
     '4a_kitchen_island':        dict(parts=[(A4, 17)]),
@@ -46,11 +48,11 @@ SKINS = {
     '4a_dna_model':             dict(parts=[(A4, 28)], hcap=1.6),
     '4a_takeout_set':           dict(parts=[(A4, 29)], scale=0.32),
     '4a_rug':                   dict(parts=[(A4, 31)], fit='flat'),
-    '4a_front_door':            dict(states={'closed': [(FX, '13_door')], 'open': [(FX, '14_door')]}, fit='proxy', slope=-0.47, frame='closed'),   # fixups #13/#14 trimmed to door + casing (door_trim.py)
+    '4a_front_door':            dict(states={'closed': [(FX, '13_door')], 'open': [(FX, '14_door')]}, fit='proxy', slope=-0.47, frame='closed', noshadow=True),   # fixups #13/#14 trimmed to door + casing (door_trim.py)
     '4b_couch':                 dict(parts=[(B4, 0)]),
     '4b_coffee_table':          dict(parts=[(B4, 2)]),
     '4b_dining_table_cluttered': dict(parts=[(B4, 4)], at='surface0', width=130,
-                                      chairs=[((0.6, 0.75), (0, 1), 96), ((1.55, 0.62), (0, 1), 96)]),   # chair0 (Bernadette) + a spare
+                                      chairs=[((0.6, 0.75), (0, 1), 96), ((1.0, 2.1), (0, -1), 96, 'front')]),   # chair0 (Bernadette) + a spare facing the table from the front
     '4b_floor_lamp':            dict(parts=[(FX, 4)], fit_h=1.0),          # fixups #04
     '4b_kitchen_counter':       dict(parts=[(B4, 7)]),
     '4b_fridge':                dict(parts=[(B4, 8)]),
@@ -58,7 +60,8 @@ SKINS = {
     '4b_bar_stool':             dict(parts=[(A4, 20)], hcap=1.25),
     '4b_laundry_pile':          dict(parts=[(B4, 11)], scale=0.55),
     '4b_rug':                   dict(parts=[(B4, 19)], fit='flat'),
-    '4b_front_door':            dict(states={'closed': [(FW, 27)], 'open': [(FW, 28)]}, fit='proxy'),
+    '4b_front_door':            dict(states={'closed': [(FV2, '06_door')], 'open': [(FV2, '07_door')]}, fit='proxy', slope=-0.47, frame='closed', noshadow=True),   # fixups_v2 #06/#07 (door_trim.main_4b: x-wall diagonal, '4B' plate re-drawn)
+    '4b_armchair_patterned':    dict(views={'SW': (FV2, 0, 0), 'SE': (FV2, 1, 0)}, parts=[(FV2, 0)], hcap=1.25),   # fixups_v2 #00 (faces SW) / #01 (faces SE)
     '4b_bedroom_door':          dict(states={'closed': [(FW, 29)], 'ajar': [(FW, 30)], 'open': [(FW, 30)]}, fit='proxy'),
     'hall_elevator_broken':     dict(parts=[(FW, 31)], fit='proxy'),
     'hall_stair_flight':        dict(parts=[(FX, 17)], views={'SW': (FX, 17, 1), 'NE': (FX, 17, 1), 'SE': (FX, 17, 0), 'NW': (FX, 17, 0)}, fit='quad'),
@@ -146,6 +149,8 @@ def build_palette(n=96):
     px = [clean(*k)[..., :3][clean(*k)[..., 3] > 0] for k in all_sources()]
     px += [t[..., :3][t[..., 3] > 0] for t in floors_ai.raw_tiles().values()]
     px += [w for w in floors_ai.wall_samples()]
+    import walls_ai
+    px += walls_ai.palette_samples()
     allp = np.concatenate([p.reshape(-1, 3) for p in px]).astype(np.uint8)
     im = Image.fromarray(allp.reshape(1, -1, 3))
     q = im.quantize(colors=n, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
@@ -327,18 +332,19 @@ def skin(iid, rot, state, R):
     img[y0:y0 + h, x0:x0 + w][mm] = r[mm]
     # contact shadow from the proxy (under the sprite only)
     sh = pad(R['img']); shm = (sh[..., 3] > 0) & (sh[..., 3] < 255) & (img[..., 3] == 0)
+    if spec.get('noshadow'): shm[:] = False
     img[shm] = sh[shm]
     if spec.get('chairs'):     # standalone dining chairs (fixups #05-#07) behind the table at canonical points, facing it
         from iso_render import dir_name
         X = R['xf']; topx = R['pivot'][0] + padL - (nfx - nfy) * 64; topy = R['pivot'][1] + padT - (nfx + nfy) * 32
-        for (cp, cf, chh) in sorted(spec['chairs'], key=lambda c: X.fwd(*c[0])[0] + X.fwd(*c[0])[1]):
+        for (cp, cf, chh, *fl) in sorted(spec['chairs'], key=lambda c: X.fwd(*c[0])[0] + X.fwd(*c[0])[1]):
             hx_, hy_ = X.fwd(*cp); vx, vy = X.vec(*cf); d = dir_name(round(vx, 6), round(vy, 6))
             c = _view(DCH.get(d, DCH['SW']))
             c = snap(_resize(c, chh / c.shape[0])); ch_, cw_ = c.shape[:2]
             sx_, sy_ = topx + (hx_ - hy_) * 64, topy + (hx_ + hy_) * 32 + 16
             cx0, cy0 = int(sx_ - cw_ / 2), int(sy_ - ch_)
             if cx0 >= 0 and cy0 >= 0 and cx0 + cw_ <= img.shape[1] and cy0 + ch_ <= img.shape[0]:
-                sub = img[cy0:cy0 + ch_, cx0:cx0 + cw_]; m = (c[..., 3] > 0) & (sub[..., 3] < 255)
+                sub = img[cy0:cy0 + ch_, cx0:cx0 + cw_]; m = (c[..., 3] > 0) & ((sub[..., 3] < 255) | ('front' in fl))
                 sub[m] = c[m]
     newop = img[..., 3] == 255
     pop = pad(op, False)

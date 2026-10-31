@@ -16,7 +16,6 @@
 06:55:01 [floor4] Bernadette walks: has coffee at the kitchen bar (14.6 m)
 06:55:01 [floor4] Amy walks: journals on the couch (3.0 m)
 06:55:02 [raj_apartment] Raj logs the last of the night sky [raj_telescope_big#0.look, 17 min]
-06:55:03 [floor4] Leonard goes through the 4A front door
 06:55:05 [floor4] Amy journals on the couch [4b_couch#0.seat0, 22 min]
 06:55:11 [floor4] Sheldon eats cereal at the island [4a_kitchen_island#0.stool1, 18 min]
 06:55:13 [floor4] Bernadette has coffee at the kitchen bar [4b_kitchen_bar#0.pour_wine, 25 min]
@@ -31,12 +30,10 @@
 07:02:40 [floor4] Bernadette: "Aww. No."
 07:02:42 [floor4] Amy: "Goodbye. I'm already looking forward to the debrief."
 07:09:16 [floor4] Leonard walks: reads papers on the laptop (16.3 m)
-07:09:23 [floor4] Leonard goes through the 4A front door
 07:09:29 [floor4] Leonard reads papers on the laptop [4a_desk_laptop#0.use0, 18 min]
 07:12:02 [raj_apartment] Raj walks: cooks breakfast (5.6 m)
 07:12:07 [raj_apartment] Raj cooks breakfast [raj_kitchenette#0.cook, 10 min]
 07:13:12 [floor4] Sheldon walks: revises equations on the whiteboard (14.4 m)
-07:13:19 [floor4] Sheldon goes through the 4A front door
 07:13:24 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#0.write, 10 min]
 07:17:04 [floor4] -- conversation: Leonard, Sheldon on 'memory' at apartment 4A
 07:17:04 [floor4] Leonard: "Sheldon! Perfect timing, I need a sanity check."
@@ -58,7 +55,6 @@
 07:22:07 [raj_apartment] Raj walks: reads on the sofa (1.5 m)
 07:22:11 [raj_apartment] Raj reads on the sofa [raj_sofa#0.seat0, 13 min]
 07:23:24 [floor4] Sheldon walks: revises equations on the whiteboard (7.9 m)
-07:23:26 [floor4] Sheldon goes through the 4A front door
 07:23:31 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#1.write, 17 min]
 07:27:29 [floor4] Leonard walks: reads papers on the laptop (0.4 m)
 07:27:30 [floor4] Leonard reads papers on the laptop [4a_desk_laptop#0.use1, 10 min]
@@ -79,6 +75,7 @@
 07:46:15 [floor4] Amy reviews slides in the armchair [4b_armchair_patterned#0.seat0, 17 min]
 07:48:00 [floor4] Bernadette plan -> work at the pharma lab (off-screen)
 07:48:02 [floor4] Bernadette walks: heads out (stairs to 2311 lobby (ground floor)) (11.0 m)
+07:48:07 [floor4] Bernadette goes through the 4B front door
 07:48:11 [floor4] Bernadette leaves by stairs -> lobby
 07:49:11 [lobby] Bernadette appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 07:49:11 [lobby] Bernadette walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)
@@ -97,12 +94,12 @@
 07:50:18 [floor4] Sheldon: "Goodbye. I'll send a summary."
 07:50:18 [floor4] Sheldon *gesture*
 07:50:43 [floor4] Sheldon walks: revises equations on the whiteboard (7.9 m)
-07:50:45 [floor4] Sheldon goes through the 4A front door
 07:50:50 [floor4] Sheldon revises equations on the whiteboard [4a_whiteboard#0.write, 17 min]
 07:53:15 [raj_apartment] Raj walks: reads on the sofa (7.5 m)
 07:53:22 [raj_apartment] Raj reads on the sofa [raj_sofa#0.seat2, 12 min]
 07:54:00 [floor4] Amy plan -> borrowed lab bench: neuron imaging (ait_physics)
 07:54:01 [floor4] Amy walks: heads out (stairs to 2311 lobby (ground floor)) (7.0 m)
+07:54:03 [floor4] Amy goes through the 4B front door
 07:54:07 [floor4] Amy leaves by stairs -> lobby
 07:55:07 [lobby] Amy appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 07:55:07 [lobby] Amy walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)
@@ -132,11 +129,11 @@
 08:08:00 [floor4] Leonard offers Sheldon a ride to ait_physics
 08:08:00 [floor4] Leonard walks: heads out (stairs to 2311 lobby (ground floor)) (8.1 m)
 08:08:03 [floor4] Sheldon: "Leaving early. Unscheduled, but the alternative is the bus. Agreed."
-08:08:03 [floor4] Leonard goes through the 4A front door
+08:08:04 [floor4] Leonard goes through the 4A front door
 08:08:07 [floor4] Leonard leaves by stairs -> lobby
 08:08:11 [floor4] Sheldon plan -> office hours: string-theory calculations (ait_physics)
 08:08:11 [floor4] Sheldon walks: heads out (stairs to 2311 lobby (ground floor)) (7.0 m)
-08:08:13 [floor4] Sheldon goes through the 4A front door
+08:08:14 [floor4] Sheldon goes through the 4A front door
 08:08:17 [floor4] Sheldon leaves by stairs -> lobby (with Leonard)
 08:09:07 [lobby] Leonard appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 08:09:07 [lobby] Leonard walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)
@@ -334,6 +331,8 @@
 10:51:36 [ait_physics] Howard programs the robot arm [lab_robot_arm#0.program, 30 min]
 11:00:00 [floor4] Penny plan -> borrowing food from 4A (floor4)
 11:00:01 [floor4] Penny walks: raids the 4A fridge (24.6 m)
+11:00:06 [floor4] Penny goes through the 4B front door
+11:00:09 [floor4] Penny goes through the 4A front door
 11:00:20 [floor4] Penny raids the 4A fridge [4a_fridge#0.use, 5 min]
 11:03:04 [ait_physics] -- conversation: Leonard, Howard, Raj on 'science' at AIT Physics: Sheldon's office + shared lab
 11:03:04 [ait_physics] Leonard: "Hey Howard, got a second?"
@@ -488,6 +487,8 @@
 12:06:55 [ait_cafeteria] Amy grabs a tray [cafe_food_line#0.take_tray, 2 min]
 12:08:00 [floor4] Penny plan -> chores in 4B (floor4)
 12:08:01 [floor4] Penny walks: watches TV (17.4 m)
+12:08:04 [floor4] Penny goes through the 4A front door
+12:08:07 [floor4] Penny goes through the 4B front door
 12:08:15 [floor4] Penny watches TV [4b_couch#0.seat0, 30 min]
 12:08:55 [ait_cafeteria] Amy walks: eats lunch at the long table (1.6 m)
 12:08:59 [ait_cafeteria] Amy eats lunch at the long table [cafe_table_long#0.seat0, 34 min]
@@ -772,6 +773,7 @@
 14:25:27 [ait_physics] Amy: "That released a measurable amount of dopamine."
 14:27:00 [floor4] Penny plan -> waitress shift at The Amber Slice (rest_amber_slice)
 14:27:02 [floor4] Penny walks: heads out (stairs to 2311 lobby (ground floor)) (8.0 m)
+14:27:05 [floor4] Penny goes through the 4B front door
 14:27:08 [floor4] Penny leaves by stairs -> lobby
 14:28:08 [lobby] Penny appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 14:28:08 [lobby] Penny walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)
@@ -1078,7 +1080,8 @@
 17:41:38 [floor4] Leonard walks: sneaks a sit in Sheldon's spot (3.8 m)
 17:41:39 [floor4] Sheldon appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 17:41:39 [floor4] Sheldon walks: checks his e-mail first (8.0 m)
-17:41:41 [floor4] Sheldon goes through the 4A front door
+17:41:39 [floor4] Leonard goes through the 4A front door
+17:41:40 [floor4] Sheldon goes through the 4A front door
 17:41:42 [floor4] Leonard sneaks a sit in Sheldon's spot [4a_couch#0.seat0, 13 min]
 17:41:46 [floor4] Sheldon checks his e-mail first [4a_desk_laptop#0.use0, 3 min]
 17:42:04 [floor4] -- conversation: Leonard, Sheldon on 'plans' at apartment 4A
@@ -1088,24 +1091,28 @@
 17:42:13 [floor4] Leonard: "Okay, okay, fair point."
 17:42:16 [floor4] Sheldon: "This conversation has reached its natural conclusion."
 17:44:46 [floor4] Sheldon walks: knocks on Penny's door, three times (10.0 m)
-17:44:49 [floor4] Sheldon goes through the 4A front door
+17:44:50 [floor4] Sheldon goes through the 4A front door
 17:44:55 [floor4] Sheldon knocks on Penny's door, three times [4b_front_door#0.knock_spot_outside, 1 min]
 17:44:55 [floor4] Sheldon *knock knock penny*
 17:45:55 [floor4] Sheldon walks: sits in his spot (5.3 m)
+17:45:55 [floor4] Sheldon goes through the 4B front door
+17:45:57 [floor4] Sheldon goes through the 4A front door
 17:46:01 [floor4] Sheldon: "Pardon me. That cushion is assigned to me by precedent, posture and a very detailed diagram."
 17:46:01 [floor4] Sheldon reclaims 4a_couch#0.seat0 from Leonard
 17:46:01 [floor4] Sheldon sits in his spot [4a_couch#0.seat0, 21 min]
 17:46:01 [floor4] Leonard reflects: Sheldon keeps turning up in my day (roommate; exhausting best friend). I should make real time for Sheldon tonight.
 17:46:04 [floor4] Leonard: "Okay, okay. It's all yours."
 17:46:09 [floor4] Leonard walks: knocks on Penny's door (5.3 m)
+17:46:09 [floor4] Leonard goes through the 4A front door
 17:46:13 [floor4] Leonard knocks on Penny's door [4b_front_door#0.knock_spot_outside, 3 min]
 17:46:43 [rest_amber_slice] Penny walks: takes an order (7.5 m)
 17:46:47 [rest_amber_slice] Penny goes through the kitchen door
 17:46:49 [rest_amber_slice] Penny takes an order [rest_booth#1.take_order, 9 min]
 17:49:13 [floor4] Leonard walks: grabs a drink (16.5 m)
+17:49:13 [floor4] Leonard goes through the 4B front door
+17:49:15 [floor4] Leonard goes through the 4A front door
 17:49:26 [floor4] Leonard grabs a drink [4a_fridge#0.use, 2 min]
 17:51:26 [floor4] Leonard walks: unwinds on the couch (16.8 m)
-17:51:35 [floor4] Leonard goes through the 4A front door
 17:51:41 [floor4] Leonard unwinds on the couch [4a_couch#0.seat1, 25 min]
 17:52:16 [ait_physics] -- conversation: Raj, Howard, Amy on 'memory' at AIT Physics: Sheldon's office + shared lab
 17:52:16 [ait_physics] Raj: "Namaste, Howard. Got a minute for a fun fact?"
@@ -1187,9 +1194,10 @@
 18:41:00 [street_exterior] Bernadette appears at 2311 building entrance + street (Pasadena) (arrives)
 18:41:01 [floor4] Sheldon walks: heads out (stairs to 2311 lobby (ground floor)) (3.4 m)
 18:41:01 [street_exterior] Bernadette walks: heads out (sidewalk to The Amber Slice (restaurant)) (12.8 m)
+18:41:01 [floor4] Sheldon goes through the 4A front door
 18:41:02 [floor4] Leonard walks: heads out (stairs to 2311 lobby (ground floor)) (7.0 m)
 18:41:04 [floor4] Sheldon leaves by stairs -> lobby
-18:41:04 [floor4] Leonard goes through the 4A front door
+18:41:05 [floor4] Leonard goes through the 4A front door
 18:41:08 [floor4] Leonard leaves by stairs -> lobby (with Sheldon)
 18:41:11 [street_exterior] Bernadette leaves by sidewalk -> rest_amber_slice
 18:42:04 [lobby] Sheldon appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
@@ -1550,6 +1558,7 @@
 20:33:07 [rest_amber_slice] Raj leaves by sidewalk -> street_exterior (with Amy)
 20:33:20 [floor4] Sheldon appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:33:20 [floor4] Sheldon walks: game night in his spot (3.8 m)
+20:33:21 [floor4] Sheldon goes through the 4A front door
 20:33:25 [floor4] Sheldon game night in his spot [4a_couch#0.seat0, 62 min]
 20:34:04 [street_exterior] Howard appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
 20:34:04 [street_exterior] Howard walks: heads out (door to 2311 lobby (ground floor)) (7.4 m)
@@ -1571,8 +1580,10 @@
 20:35:18 [lobby] Leonard leaves by stairs -> floor4 (with Sheldon, Howard, Bernadette)
 20:35:18 [floor4] Howard appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:35:18 [floor4] Howard walks: heckles from a stool (8.8 m)
+20:35:19 [floor4] Howard goes through the 4A front door
 20:35:20 [floor4] Bernadette appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:35:20 [floor4] Bernadette walks: plays to win from the armchair (7.3 m)
+20:35:21 [floor4] Bernadette goes through the 4A front door
 20:35:26 [floor4] Howard heckles from a stool [4a_bar_stool#0.seat0, 26 min]
 20:35:27 [floor4] Bernadette plays to win from the armchair [4a_armchair#0.seat0, 33 min]
 20:36:07 [street_exterior] Amy appears at 2311 building entrance + street (Pasadena) (sidewalk from The Amber Slice (restaurant))
@@ -1582,11 +1593,12 @@
 20:36:16 [lobby] Amy walks: heads out (stairs to 4th floor: 4A (the guys), hall, 4B (Penny)) (6.2 m)
 20:36:18 [floor4] Leonard appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:36:18 [floor4] Leonard walks: plays co-op on the couch (7.3 m)
-20:36:20 [floor4] Leonard goes through the 4A front door
+20:36:19 [floor4] Leonard goes through the 4A front door
 20:36:21 [lobby] Amy leaves by stairs -> floor4 (with Howard, Bernadette, Leonard)
 20:36:26 [floor4] Leonard plays co-op on the couch [4a_couch#0.seat1, 57 min]
 20:37:21 [floor4] Amy appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:37:21 [floor4] Amy walks: sits beside Sheldon (8.3 m)
+20:37:22 [floor4] Amy goes through the 4A front door
 20:37:30 [floor4] Amy sits beside Sheldon [4a_couch#0.seat2, 55 min]
 20:37:40 [floor4] Sheldon reflects: Amy keeps turning up in my day (girlfriend; intellectual equal). I should make real time for Amy tonight.
 20:37:47 [rest_amber_slice] Penny walks: enters orders (11.5 m)
@@ -1606,6 +1618,7 @@
 20:38:49 [floor4] Leonard: "Talk later? Cool."
 20:39:21 [floor4] Raj appears at the 4th-floor hall (stairs from 2311 lobby (ground floor))
 20:39:21 [floor4] Raj walks: hosts snacks at the island (12.3 m)
+20:39:22 [floor4] Raj goes through the 4A front door
 20:39:32 [floor4] Raj hosts snacks at the island [4a_kitchen_island#0.stool1, 35 min]
 20:39:44 [floor4] Raj reflects: Note to self: Sheldon seemed busy earlier. Ask how it's going instead of talking about myself.
 20:43:16 [floor4] -- conversation: Raj, Bernadette on 'science' at apartment 4A
@@ -1713,7 +1726,6 @@
 21:32:32 [floor4] Amy walks: takes notes at the island (3.0 m)
 21:32:36 [floor4] Amy takes notes at the island [4a_kitchen_island#0.stool0, 17 min]
 21:33:28 [floor4] Leonard walks: boots up the console (8.0 m)
-21:33:30 [floor4] Leonard goes through the 4A front door
 21:33:34 [floor4] Leonard boots up the console [4a_tv_stand#0.game_console, 5 min]
 21:35:27 [floor4] Sheldon game night in his spot [4a_couch#0.seat0, 70 min]
 21:36:37 [rest_amber_slice] Penny walks: serves a table (3.0 m)
@@ -1764,7 +1776,6 @@
 21:47:44 [floor4] Amy: "That released a measurable amount of dopamine."
 21:49:34 [floor4] Leonard walks: plays co-op on the couch (8.0 m)
 21:49:35 [floor4] Raj walks: plays on the couch (7.4 m)
-21:49:36 [floor4] Leonard goes through the 4A front door
 21:49:38 [floor4] Amy takes notes at the island [4a_kitchen_island#0.stool0, 16 min]
 21:49:42 [floor4] Leonard plays co-op on the couch [4a_couch#0.seat1, 70 min]
 21:49:43 [floor4] Raj plays on the couch [4a_couch#0.seat2, 59 min]
@@ -1786,6 +1797,7 @@
 21:53:42 [floor4] Amy: "I've studied everyone's tells. Leonard blinks when he bluffs."
 21:53:46 [floor4] Penny walks: joins game night (9.4 m)
 21:53:48 [floor4] Raj: "Dude, that's the nicest thing anyone's said all week."
+21:53:48 [floor4] Penny goes through the 4A front door
 21:53:53 [floor4] Amy: "Farewell. This interaction was a success."
 21:53:54 [floor4] Penny joins game night [4a_armchair#0.seat0, 34 min]
 21:55:04 [floor4] -- conversation: Leonard, Sheldon, Penny on 'gamenight' at apartment 4A
@@ -1831,6 +1843,8 @@
 22:14:36 [floor4] Howard: "Later, buddy."
 22:17:00 [floor4] Amy plan -> nightcap at Penny's in 4B (floor4)
 22:17:01 [floor4] Amy walks: sits next to her bestie (14.4 m)
+22:17:05 [floor4] Amy goes through the 4A front door
+22:17:09 [floor4] Amy goes through the 4B front door
 22:17:15 [floor4] Amy sits next to her bestie [4b_couch#0.seat2, 54 min]
 22:17:37 [floor4] Bernadette walks: keeps score at the island (5.0 m)
 22:17:42 [floor4] Bernadette keeps score at the island [4a_kitchen_island#0.stool0, 22 min]
@@ -1838,12 +1852,20 @@
 22:18:00 [floor4] Penny plan -> nightcap at Penny's in 4B (floor4)
 22:18:01 [floor4] Sheldon walks: claims the armchair at Penny's (9.4 m)
 22:18:01 [floor4] Penny walks: hosts a nightcap (17.4 m)
+22:18:01 [floor4] Sheldon goes through the 4A front door
+22:18:04 [floor4] Penny goes through the 4A front door
+22:18:05 [floor4] Sheldon goes through the 4B front door
+22:18:07 [floor4] Penny goes through the 4B front door
 22:18:10 [floor4] Sheldon claims the armchair at Penny's [4b_armchair_patterned#0.seat0, 38 min]
 22:18:15 [floor4] Penny hosts a nightcap [4b_couch#0.seat0, 33 min]
 22:19:00 [floor4] Howard plan -> nightcap at Penny's in 4B (floor4)
 22:19:00 [floor4] Raj plan -> nightcap at Penny's in 4B (floor4)
 22:19:01 [floor4] Howard walks: perches at the kitchen bar (27.0 m)
 22:19:02 [floor4] Raj walks: nurses a wine on the armrest (18.0 m)
+22:19:06 [floor4] Raj goes through the 4A front door
+22:19:07 [floor4] Howard goes through the 4A front door
+22:19:09 [floor4] Raj goes through the 4B front door
+22:19:10 [floor4] Howard goes through the 4B front door
 22:19:18 [floor4] Raj nurses a wine on the armrest [4b_couch#0.armrest_l, 30 min]
 22:19:22 [floor4] Howard perches at the kitchen bar [4b_bar_stool#0.seat0, 26 min]
 22:19:23 [floor4] Howard reflects: Note to self: Amy seemed busy earlier. Ask how it's going instead of talking about myself.
@@ -1869,7 +1891,10 @@
 22:22:01 [floor4] Leonard reflects: I've talked with Sheldon 6 time(s) today. That matters to me more than I'd say out loud.
 22:22:01 [floor4] Bernadette walks: sits at the round table (18.4 m)
 22:22:02 [floor4] Leonard walks: nightcap on Penny's couch (14.0 m)
-22:22:04 [floor4] Leonard goes through the 4A front door
+22:22:05 [floor4] Leonard goes through the 4A front door
+22:22:05 [floor4] Bernadette goes through the 4A front door
+22:22:08 [floor4] Leonard goes through the 4B front door
+22:22:08 [floor4] Bernadette goes through the 4B front door
 22:22:15 [floor4] Leonard nightcap on Penny's couch [4b_couch#0.seat1, 54 min]
 22:22:18 [floor4] Bernadette sits at the round table [4b_dining_table_cluttered#0.chair0, 26 min]
 22:23:20 [floor4] -- conversation: Bernadette, Sheldon, Leonard on 'memory' at apartment 4B
@@ -1985,6 +2010,8 @@
 23:00:02 [floor4] Bernadette walks: heads out (stairs to 2311 lobby (ground floor)) (11.0 m)
 23:00:02 [floor4] Amy walks: heads out (stairs to 2311 lobby (ground floor)) (7.0 m)
 23:00:04 [floor4] Raj reflects: Howard keeps turning up in my day (best friend). I should make real time for Howard tonight.
+23:00:04 [floor4] Amy goes through the 4B front door
+23:00:07 [floor4] Bernadette goes through the 4B front door
 23:00:08 [floor4] Amy leaves by stairs -> lobby
 23:00:11 [floor4] Bernadette leaves by stairs -> lobby (with Amy)
 23:01:08 [lobby] Amy appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
@@ -2005,10 +2032,14 @@
 23:02:00 [floor4] Raj plan -> home for the night (raj_apartment)
 23:02:01 [floor4] Howard walks: heads out (stairs to 2311 lobby (ground floor)) (16.0 m)
 23:02:02 [floor4] Raj walks: heads out (stairs to 2311 lobby (ground floor)) (11.0 m)
+23:02:07 [floor4] Raj goes through the 4B front door
+23:02:10 [floor4] Howard goes through the 4B front door
 23:02:11 [floor4] Raj leaves by stairs -> lobby (with Amy, Bernadette)
 23:02:13 [floor4] Howard leaves by stairs -> lobby (with Amy, Bernadette, Raj)
 23:03:00 [floor4] Sheldon plan -> bedtime (floor4)
 23:03:01 [floor4] Sheldon walks: switches off the lamp (9.1 m)
+23:03:03 [floor4] Sheldon goes through the 4B front door
+23:03:07 [floor4] Sheldon goes through the 4A front door
 23:03:09 [floor4] Sheldon switches off the lamp [4a_floor_lamp#0.switch, 2 min]
 23:03:11 [lobby] Raj appears at 2311 lobby (ground floor) (stairs from 4th floor: 4A (the guys), hall, 4B (Penny))
 23:03:11 [lobby] Raj walks: heads out (door to 2311 building entrance + street (Pasadena)) (6.8 m)

@@ -20,7 +20,7 @@ const SHOTS = [
 const CLIPS = [  // name, query, sim start, sim end, fps[, viewport w, h] (GIFs stay under 4 MB)
   ['clip_4A_evening.gif', 'loc=floor4&view=all&follow=sheldon&zoom=2.5&speed=4&talk=2', '17:44:40', '17:47:40', 6, 760, 460],
   ['clip_4A_game_night_ai.gif', 'loc=floor4&view=all&follow=penny&zoom=2.2&speed=4&talk=2', '21:53:00', '21:55:00', 6, 760, 460],
-  ['clip_4B_nightcap_ai.gif', 'loc=floor4&view=all&follow=penny&zoom=2.2&speed=4&talk=2', '22:19:30', '22:23:30', 8, 800, 480],
+  ['clip_4B_nightcap_ai.gif', 'loc=floor4&view=all&follow=sheldon&zoom=2.2&speed=4&talk=2', '22:17:50', '22:20:50', 8, 800, 480],
   ['clip_ait_physics_work.gif', 'loc=ait_physics&follow=howard&zoom=2.2&speed=3&talk=1.5', '09:37:50', '09:39:10', 10],
   ['clip_amber_slice_shift.gif', 'loc=rest_amber_slice&follow=penny&zoom=3&speed=3&auto=0', '15:08:50', '15:09:40', 10],
   ['clip_ait_cafeteria_lunch.gif', 'loc=ait_cafeteria&speed=8&talk=3', '12:00:02', '12:02:46', 8],

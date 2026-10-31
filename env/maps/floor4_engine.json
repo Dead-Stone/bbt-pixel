@@ -320,7 +320,7 @@
    1,
    1,
    1,
-   0,
+   1,
    1,
    0,
    0,
@@ -438,7 +438,7 @@
    "item": "4b_front_door",
    "tile": [
     8,
-    3
+    4
    ],
    "connects": [
     "hall_4f",
@@ -449,7 +449,7 @@
    "item": "4a_front_door",
    "tile": [
     12,
-    3
+    4
    ],
    "connects": [
     "hall_4f",
@@ -539,7 +539,11 @@
    "line": 0,
    "index": 4,
    "mat": "4b",
-   "feature": "window"
+   "feature": [
+    "window",
+    0,
+    2
+   ]
   },
   {
    "side": "br",
@@ -555,7 +559,11 @@
    "line": 0,
    "index": 5,
    "mat": "4b",
-   "feature": "window"
+   "feature": [
+    "window",
+    1,
+    2
+   ]
   },
   {
    "side": "br",
@@ -699,7 +707,11 @@
    "line": 0,
    "index": 15,
    "mat": "4a",
-   "feature": "window"
+   "feature": [
+    "window",
+    0,
+    3
+   ]
   },
   {
    "side": "br",
@@ -715,7 +727,11 @@
    "line": 0,
    "index": 16,
    "mat": "4a",
-   "feature": "window"
+   "feature": [
+    "window",
+    1,
+    3
+   ]
   },
   {
    "side": "br",
@@ -731,7 +747,11 @@
    "line": 0,
    "index": 17,
    "mat": "4a",
-   "feature": "window"
+   "feature": [
+    "window",
+    2,
+    3
+   ]
   },
   {
    "side": "br",

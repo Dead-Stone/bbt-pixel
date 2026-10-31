@@ -12,12 +12,15 @@ D = f'{ROOT}/refs_ai/chatgpt/env/sliced/fixups_v1'
 CUT = {13: 27, 14: 22}
 K = 0.47                          # the sheet's wall slope (px down per px right)
 PK = {13: K, 14: -0.26}           # slope of the plaque's door leaf (closed: in the wall plane; open: the swung leaf)            # outer edge of the left casing on each piece; right casing ends at x=118 on both
-def unmirror_plaque(a, k):
+def unmirror_plaque(a, k, strict=False):
     """mirror the piece, then copy the gold number plaque back unmirrored, each column shifted so it follows the new slope"""
     H, W = a.shape[:2]; r, g, b = [a[..., i].astype(int) for i in range(3)]
     gold = (a[..., 3] > 0) & (r > 170) & (g > 120) & (b < 110) & (r - b > 90)
+    if strict: gold = (a[..., 3] > 0) & (r > 200) & (g > 150) & (b < 140) & (r - b > 90)   # 4B: brighter brass; wood highlights pass the loose test
     lab, n = ndi.label(gold); best = None
-    for i in range(1, n + 1):
+    if strict:
+        sz = ndi.sum(gold, lab, range(1, n + 1)); best = (0, 1 + int(np.argmax(sz)))
+    for i in (range(1, n + 1) if not strict else ()):
         ys, xs = np.where(lab == i)
         if len(ys) < 40: continue
         if best is None or ys.mean() < best[0]: best = (ys.mean(), i)
@@ -42,7 +45,28 @@ def match_casing(a, ref):
     im = im.resize((max(1, round(W * sx)), max(1, round(H * sy))), Image.LANCZOS)
     b = np.array(im); b[..., 3] = np.where(b[..., 3] > 110, 255, 0)
     return b
+D2 = f'{ROOT}/refs_ai/chatgpt/env/sliced/fixups_v2'
+CUT2 = {6: (48, 164, 58), 7: (45, 164, 56)}      # door 4B (fixups_v2): casing left/right outer edge, casing top at the left edge
+def plaque_slope(a):
+    """slope of the gold plaque's top edge (the leaf plane): least-squares over its columns"""
+    r, g, b = [a[..., i].astype(int) for i in range(3)]
+    gold = (a[..., 3] > 0) & (r > 200) & (g > 150) & (b < 140) & (r - b > 90)
+    lab, n = ndi.label(gold); sz = ndi.sum(gold, lab, range(1, n + 1)); m = lab == (1 + int(np.argmax(sz)))
+    xs = [x for x in range(a.shape[1]) if m[:, x].any()]; xs = xs[2:-2]
+    tops = [np.where(m[:, x])[0][0] for x in xs]
+    return float(np.polyfit(xs, tops, 1)[0])
+def main_4b():
+    for n, (xl, xr, yt) in CUT2.items():
+        a = np.array(Image.open(f'{D2}/{n:02d}.png').convert('RGBA')); H, W = a.shape[:2]
+        yy, xx = np.mgrid[:H, :W]
+        keep = (xx >= xl) & (xx <= xr) & (yy >= yt + 0.47 * (xx - xl))
+        a[~keep] = 0
+        ys, xs = np.where(a[..., 3] > 0); a = a[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+        k = plaque_slope(a); a = unmirror_plaque(a, k, strict=True)
+        if n == 7: a = match_casing(a, f'{D2}/06_door.png')
+        Image.fromarray(a).save(f'{D2}/{n:02d}_door.png'); print('4B', n, 'plaque slope %.2f' % k, a.shape)
 def main():
+    main_4b()
     for n, xl in CUT.items():
         a = np.array(Image.open(f'{D}/{n}.png').convert('RGBA')); H, W = a.shape[:2]
         yy, xx = np.mgrid[:H, :W]

@@ -292,8 +292,14 @@ function render(wall) {
   const opened = new Set((V.doorEv || []).filter(e => e.loc === V.loc && t >= e.t - 1 && t <= e.t + 2).map(e => e.item));
   const showS = s => !s.hook || (s.hook.startsWith('door:') ? (s.hook.endsWith(':open') === opened.has(s.hook.split(':')[1])) : seated.has(s.hook));
   const L = sc.sprites.filter(showS).map(s => ({k: s.key, s}));
+  // walking through a front door: draw the walker over the door leaf + the wall pillar around it (both sides of the doorway)
+  const dz = V.loc === 'floor4' ? (sc.doors || []).filter(d => d.item.endsWith('_front_door')) : [];
   for (const st of here) {
-    const k = st.key != null ? st.key : st.x + st.y + 0.01;
+    let k = st.key != null ? st.key : st.x + st.y + 0.01;
+    if (st.key == null && st.anim !== 'sit') for (const d of dz) {
+      const [dx, dy] = d.tile;
+      if (Math.abs(st.x - dx) < 1.0 && Math.abs(st.y - (dy + 0.5)) < 0.6) k = Math.max(k, dx + dy + 1.52);
+    }
     if (st.anim !== 'sit') L.push({k: k - 0.001, shadow: st});
     L.push({k, ch: st});
   }
