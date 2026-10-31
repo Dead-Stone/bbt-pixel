@@ -1,3 +1,5 @@
 .venv/
 __pycache__/
 *.pyc
+# walk refs with no stated license (local only)
+refs_ai/walk_refs/local/
