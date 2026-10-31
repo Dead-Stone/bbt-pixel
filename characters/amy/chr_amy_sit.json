@@ -143,6 +143,678 @@
     97.0
    ],
    "dir": "SE"
+  },
+  {
+   "filename": "chr_amy_sit_eat_S_00",
+   "frame": {
+    "x": 0,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "S",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_SW_00",
+   "frame": {
+    "x": 128,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SW",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_W_00",
+   "frame": {
+    "x": 256,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "W",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_NW_00",
+   "frame": {
+    "x": 384,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NW",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_N_00",
+   "frame": {
+    "x": 512,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "N",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_NE_00",
+   "frame": {
+    "x": 640,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NE",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_E_00",
+   "frame": {
+    "x": 768,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "E",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_SE_00",
+   "frame": {
+    "x": 896,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SE",
+   "anim": "sit_eat",
+   "k": 0,
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_sit_eat_S_01",
+   "frame": {
+    "x": 0,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "S",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_SW_01",
+   "frame": {
+    "x": 128,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SW",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_W_01",
+   "frame": {
+    "x": 256,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "W",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_NW_01",
+   "frame": {
+    "x": 384,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NW",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_N_01",
+   "frame": {
+    "x": 512,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "N",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_NE_01",
+   "frame": {
+    "x": 640,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NE",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_E_01",
+   "frame": {
+    "x": 768,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "E",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SE",
+   "anim": "sit_eat",
+   "k": 1,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_S_02",
+   "frame": {
+    "x": 0,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "S",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_SW_02",
+   "frame": {
+    "x": 128,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SW",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_W_02",
+   "frame": {
+    "x": 256,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "W",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_NW_02",
+   "frame": {
+    "x": 384,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NW",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_N_02",
+   "frame": {
+    "x": 512,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "N",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_NE_02",
+   "frame": {
+    "x": 640,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NE",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_E_02",
+   "frame": {
+    "x": 768,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "E",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_SE_02",
+   "frame": {
+    "x": 896,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SE",
+   "anim": "sit_eat",
+   "k": 2,
+   "duration": 650
+  },
+  {
+   "filename": "chr_amy_sit_eat_S_03",
+   "frame": {
+    "x": 0,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "S",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_SW_03",
+   "frame": {
+    "x": 128,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SW",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_W_03",
+   "frame": {
+    "x": 256,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "W",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_NW_03",
+   "frame": {
+    "x": 384,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NW",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_N_03",
+   "frame": {
+    "x": 512,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "N",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_NE_03",
+   "frame": {
+    "x": 640,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "NE",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_E_03",
+   "frame": {
+    "x": 768,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "E",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_sit_eat_SE_03",
+   "frame": {
+    "x": 896,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "pivot": [
+    64,
+    116
+   ],
+   "seat": [
+    64.0,
+    97.0
+   ],
+   "dir": "SE",
+   "anim": "sit_eat",
+   "k": 3,
+   "duration": 400
   }
  ],
  "meta": {
@@ -151,7 +823,7 @@
   "image": "chr_amy_sit.png",
   "size": {
    "w": 1024,
-   "h": 128
+   "h": 640
   },
   "pivot": [
    64,
@@ -159,7 +831,7 @@
   ],
   "lift_units": 0.0,
   "seat_cm": 43,
-  "source": "refs_ai/chatgpt/amy/sit.png (ChatGPT sit sheet, variant 1 of 2; tools/ai_import/sheets.py)",
+  "source": "refs_ai/chatgpt/amy/sit.png (ChatGPT sit sheet, variant 1 of 2) + rows sit_eat.png (tools/ai_import/sheets.py)",
   "note": "AI seated pose (tools/ai_import/sit.py): pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py); feet flat on the floor"
  }
 }

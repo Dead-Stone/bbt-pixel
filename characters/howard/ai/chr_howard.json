@@ -196,7 +196,7 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_S_01",
@@ -218,145 +218,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_S_02",
-   "frame": {
-    "x": 1280,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_S_03",
-   "frame": {
-    "x": 1408,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_S_04",
-   "frame": {
-    "x": 1536,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_S_05",
-   "frame": {
-    "x": 1664,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_S_06",
-   "frame": {
-    "x": 1792,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_S_07",
-   "frame": {
-    "x": 1920,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_SW_00",
    "frame": {
-    "x": 0,
-    "y": 128,
+    "x": 1280,
+    "y": 0,
     "w": 128,
     "h": 128
    },
@@ -372,13 +240,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_SW_01",
    "frame": {
-    "x": 128,
-    "y": 128,
+    "x": 1408,
+    "y": 0,
     "w": 128,
     "h": 128
    },
@@ -394,145 +262,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SW_02",
-   "frame": {
-    "x": 256,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SW_03",
-   "frame": {
-    "x": 384,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SW_04",
-   "frame": {
-    "x": 512,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SW_05",
-   "frame": {
-    "x": 640,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SW_06",
-   "frame": {
-    "x": 768,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SW_07",
-   "frame": {
-    "x": 896,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_W_00",
    "frame": {
-    "x": 1024,
-    "y": 128,
+    "x": 1536,
+    "y": 0,
     "w": 128,
     "h": 128
    },
@@ -548,101 +284,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_W_01",
    "frame": {
-    "x": 1152,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_W_02",
-   "frame": {
-    "x": 1280,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_W_03",
-   "frame": {
-    "x": 1408,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_W_04",
-   "frame": {
-    "x": 1536,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_W_05",
-   "frame": {
     "x": 1664,
-    "y": 128,
+    "y": 0,
     "w": 128,
     "h": 128
    },
@@ -658,57 +306,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_W_06",
-   "frame": {
-    "x": 1792,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_W_07",
-   "frame": {
-    "x": 1920,
-    "y": 128,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_NW_00",
    "frame": {
-    "x": 0,
-    "y": 256,
+    "x": 1792,
+    "y": 0,
     "w": 128,
     "h": 128
    },
@@ -724,13 +328,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_NW_01",
    "frame": {
-    "x": 128,
-    "y": 256,
+    "x": 1920,
+    "y": 0,
     "w": 128,
     "h": 128
    },
@@ -746,145 +350,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NW_02",
-   "frame": {
-    "x": 256,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NW_03",
-   "frame": {
-    "x": 384,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NW_04",
-   "frame": {
-    "x": 512,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NW_05",
-   "frame": {
-    "x": 640,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NW_06",
-   "frame": {
-    "x": 768,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NW_07",
-   "frame": {
-    "x": 896,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_N_00",
    "frame": {
-    "x": 1024,
-    "y": 256,
+    "x": 0,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -900,13 +372,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_N_01",
    "frame": {
-    "x": 1152,
-    "y": 256,
+    "x": 128,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -922,145 +394,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_N_02",
-   "frame": {
-    "x": 1280,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_N_03",
-   "frame": {
-    "x": 1408,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_N_04",
-   "frame": {
-    "x": 1536,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_N_05",
-   "frame": {
-    "x": 1664,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_N_06",
-   "frame": {
-    "x": 1792,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_N_07",
-   "frame": {
-    "x": 1920,
-    "y": 256,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_NE_00",
    "frame": {
-    "x": 0,
-    "y": 384,
+    "x": 256,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1076,57 +416,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_NE_01",
    "frame": {
-    "x": 128,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NE_02",
-   "frame": {
-    "x": 256,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NE_03",
-   "frame": {
     "x": 384,
-    "y": 384,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1142,101 +438,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NE_04",
-   "frame": {
-    "x": 512,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NE_05",
-   "frame": {
-    "x": 640,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NE_06",
-   "frame": {
-    "x": 768,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_NE_07",
-   "frame": {
-    "x": 896,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_E_00",
    "frame": {
-    "x": 1024,
-    "y": 384,
+    "x": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1252,13 +460,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_E_01",
    "frame": {
-    "x": 1152,
-    "y": 384,
+    "x": 640,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1274,145 +482,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_E_02",
-   "frame": {
-    "x": 1280,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_E_03",
-   "frame": {
-    "x": 1408,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_E_04",
-   "frame": {
-    "x": 1536,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_E_05",
-   "frame": {
-    "x": 1664,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_E_06",
-   "frame": {
-    "x": 1792,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_E_07",
-   "frame": {
-    "x": 1920,
-    "y": 384,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_idle_SE_00",
    "frame": {
-    "x": 0,
-    "y": 512,
+    "x": 768,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1428,145 +504,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1400
   },
   {
    "filename": "chr_howard_idle_SE_01",
    "frame": {
-    "x": 128,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SE_02",
-   "frame": {
-    "x": 256,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SE_03",
-   "frame": {
-    "x": 384,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SE_04",
-   "frame": {
-    "x": 512,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SE_05",
-   "frame": {
-    "x": 640,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SE_06",
-   "frame": {
-    "x": 768,
-    "y": 512,
-    "w": 128,
-    "h": 128
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 128,
-    "h": 128
-   },
-   "sourceSize": {
-    "w": 128,
-    "h": 128
-   },
-   "duration": 250
-  },
-  {
-   "filename": "chr_howard_idle_SE_07",
-   "frame": {
     "x": 896,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1582,13 +526,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 1100
   },
   {
    "filename": "chr_howard_walk_S_00",
    "frame": {
     "x": 1024,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1610,7 +554,7 @@
    "filename": "chr_howard_walk_S_01",
    "frame": {
     "x": 1152,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1632,7 +576,7 @@
    "filename": "chr_howard_walk_S_02",
    "frame": {
     "x": 1280,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1654,7 +598,7 @@
    "filename": "chr_howard_walk_S_03",
    "frame": {
     "x": 1408,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1676,7 +620,7 @@
    "filename": "chr_howard_walk_S_04",
    "frame": {
     "x": 1536,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1698,7 +642,7 @@
    "filename": "chr_howard_walk_S_05",
    "frame": {
     "x": 1664,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1720,7 +664,7 @@
    "filename": "chr_howard_walk_S_06",
    "frame": {
     "x": 1792,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1742,7 +686,7 @@
    "filename": "chr_howard_walk_S_07",
    "frame": {
     "x": 1920,
-    "y": 512,
+    "y": 128,
     "w": 128,
     "h": 128
    },
@@ -1764,7 +708,7 @@
    "filename": "chr_howard_walk_SW_00",
    "frame": {
     "x": 0,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1786,7 +730,7 @@
    "filename": "chr_howard_walk_SW_01",
    "frame": {
     "x": 128,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1808,7 +752,7 @@
    "filename": "chr_howard_walk_SW_02",
    "frame": {
     "x": 256,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1830,7 +774,7 @@
    "filename": "chr_howard_walk_SW_03",
    "frame": {
     "x": 384,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1852,7 +796,7 @@
    "filename": "chr_howard_walk_SW_04",
    "frame": {
     "x": 512,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1874,7 +818,7 @@
    "filename": "chr_howard_walk_SW_05",
    "frame": {
     "x": 640,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1896,7 +840,7 @@
    "filename": "chr_howard_walk_SW_06",
    "frame": {
     "x": 768,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1918,7 +862,7 @@
    "filename": "chr_howard_walk_SW_07",
    "frame": {
     "x": 896,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1940,7 +884,7 @@
    "filename": "chr_howard_walk_W_00",
    "frame": {
     "x": 1024,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1962,7 +906,7 @@
    "filename": "chr_howard_walk_W_01",
    "frame": {
     "x": 1152,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -1984,7 +928,7 @@
    "filename": "chr_howard_walk_W_02",
    "frame": {
     "x": 1280,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -2006,7 +950,7 @@
    "filename": "chr_howard_walk_W_03",
    "frame": {
     "x": 1408,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -2028,7 +972,7 @@
    "filename": "chr_howard_walk_W_04",
    "frame": {
     "x": 1536,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -2050,7 +994,7 @@
    "filename": "chr_howard_walk_W_05",
    "frame": {
     "x": 1664,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -2072,7 +1016,7 @@
    "filename": "chr_howard_walk_W_06",
    "frame": {
     "x": 1792,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -2094,7 +1038,7 @@
    "filename": "chr_howard_walk_W_07",
    "frame": {
     "x": 1920,
-    "y": 640,
+    "y": 256,
     "w": 128,
     "h": 128
    },
@@ -2116,7 +1060,7 @@
    "filename": "chr_howard_walk_NW_00",
    "frame": {
     "x": 0,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2138,7 +1082,7 @@
    "filename": "chr_howard_walk_NW_01",
    "frame": {
     "x": 128,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2160,7 +1104,7 @@
    "filename": "chr_howard_walk_NW_02",
    "frame": {
     "x": 256,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2182,7 +1126,7 @@
    "filename": "chr_howard_walk_NW_03",
    "frame": {
     "x": 384,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2204,7 +1148,7 @@
    "filename": "chr_howard_walk_NW_04",
    "frame": {
     "x": 512,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2226,7 +1170,7 @@
    "filename": "chr_howard_walk_NW_05",
    "frame": {
     "x": 640,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2248,7 +1192,7 @@
    "filename": "chr_howard_walk_NW_06",
    "frame": {
     "x": 768,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2270,7 +1214,7 @@
    "filename": "chr_howard_walk_NW_07",
    "frame": {
     "x": 896,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2292,7 +1236,7 @@
    "filename": "chr_howard_walk_N_00",
    "frame": {
     "x": 1024,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2314,7 +1258,7 @@
    "filename": "chr_howard_walk_N_01",
    "frame": {
     "x": 1152,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2336,7 +1280,7 @@
    "filename": "chr_howard_walk_N_02",
    "frame": {
     "x": 1280,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2358,7 +1302,7 @@
    "filename": "chr_howard_walk_N_03",
    "frame": {
     "x": 1408,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2380,7 +1324,7 @@
    "filename": "chr_howard_walk_N_04",
    "frame": {
     "x": 1536,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2402,7 +1346,7 @@
    "filename": "chr_howard_walk_N_05",
    "frame": {
     "x": 1664,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2424,7 +1368,7 @@
    "filename": "chr_howard_walk_N_06",
    "frame": {
     "x": 1792,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2446,7 +1390,7 @@
    "filename": "chr_howard_walk_N_07",
    "frame": {
     "x": 1920,
-    "y": 768,
+    "y": 384,
     "w": 128,
     "h": 128
    },
@@ -2468,7 +1412,7 @@
    "filename": "chr_howard_walk_NE_00",
    "frame": {
     "x": 0,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2490,7 +1434,7 @@
    "filename": "chr_howard_walk_NE_01",
    "frame": {
     "x": 128,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2512,7 +1456,7 @@
    "filename": "chr_howard_walk_NE_02",
    "frame": {
     "x": 256,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2534,7 +1478,7 @@
    "filename": "chr_howard_walk_NE_03",
    "frame": {
     "x": 384,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2556,7 +1500,7 @@
    "filename": "chr_howard_walk_NE_04",
    "frame": {
     "x": 512,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2578,7 +1522,7 @@
    "filename": "chr_howard_walk_NE_05",
    "frame": {
     "x": 640,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2600,7 +1544,7 @@
    "filename": "chr_howard_walk_NE_06",
    "frame": {
     "x": 768,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2622,7 +1566,7 @@
    "filename": "chr_howard_walk_NE_07",
    "frame": {
     "x": 896,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2644,7 +1588,7 @@
    "filename": "chr_howard_walk_E_00",
    "frame": {
     "x": 1024,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2666,7 +1610,7 @@
    "filename": "chr_howard_walk_E_01",
    "frame": {
     "x": 1152,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2688,7 +1632,7 @@
    "filename": "chr_howard_walk_E_02",
    "frame": {
     "x": 1280,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2710,7 +1654,7 @@
    "filename": "chr_howard_walk_E_03",
    "frame": {
     "x": 1408,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2732,7 +1676,7 @@
    "filename": "chr_howard_walk_E_04",
    "frame": {
     "x": 1536,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2754,7 +1698,7 @@
    "filename": "chr_howard_walk_E_05",
    "frame": {
     "x": 1664,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2776,7 +1720,7 @@
    "filename": "chr_howard_walk_E_06",
    "frame": {
     "x": 1792,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2798,7 +1742,7 @@
    "filename": "chr_howard_walk_E_07",
    "frame": {
     "x": 1920,
-    "y": 896,
+    "y": 512,
     "w": 128,
     "h": 128
    },
@@ -2820,7 +1764,7 @@
    "filename": "chr_howard_walk_SE_00",
    "frame": {
     "x": 0,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2842,7 +1786,7 @@
    "filename": "chr_howard_walk_SE_01",
    "frame": {
     "x": 128,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2864,7 +1808,7 @@
    "filename": "chr_howard_walk_SE_02",
    "frame": {
     "x": 256,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2886,7 +1830,7 @@
    "filename": "chr_howard_walk_SE_03",
    "frame": {
     "x": 384,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2908,7 +1852,7 @@
    "filename": "chr_howard_walk_SE_04",
    "frame": {
     "x": 512,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2930,7 +1874,7 @@
    "filename": "chr_howard_walk_SE_05",
    "frame": {
     "x": 640,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2952,7 +1896,7 @@
    "filename": "chr_howard_walk_SE_06",
    "frame": {
     "x": 768,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2974,7 +1918,7 @@
    "filename": "chr_howard_walk_SE_07",
    "frame": {
     "x": 896,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -2996,7 +1940,7 @@
    "filename": "chr_howard_act_think_S_00",
    "frame": {
     "x": 1024,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3018,7 +1962,7 @@
    "filename": "chr_howard_act_think_S_01",
    "frame": {
     "x": 1152,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3040,7 +1984,7 @@
    "filename": "chr_howard_act_think_SW_00",
    "frame": {
     "x": 1280,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3062,7 +2006,7 @@
    "filename": "chr_howard_act_think_SW_01",
    "frame": {
     "x": 1408,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3084,7 +2028,7 @@
    "filename": "chr_howard_act_think_W_00",
    "frame": {
     "x": 1536,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3106,7 +2050,7 @@
    "filename": "chr_howard_act_think_W_01",
    "frame": {
     "x": 1664,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3128,7 +2072,7 @@
    "filename": "chr_howard_act_think_NW_00",
    "frame": {
     "x": 1792,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3150,7 +2094,7 @@
    "filename": "chr_howard_act_think_NW_01",
    "frame": {
     "x": 1920,
-    "y": 1024,
+    "y": 640,
     "w": 128,
     "h": 128
    },
@@ -3172,7 +2116,7 @@
    "filename": "chr_howard_act_think_N_00",
    "frame": {
     "x": 0,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3194,7 +2138,7 @@
    "filename": "chr_howard_act_think_N_01",
    "frame": {
     "x": 128,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3216,7 +2160,7 @@
    "filename": "chr_howard_act_think_NE_00",
    "frame": {
     "x": 256,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3238,7 +2182,7 @@
    "filename": "chr_howard_act_think_NE_01",
    "frame": {
     "x": 384,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3260,7 +2204,7 @@
    "filename": "chr_howard_act_think_E_00",
    "frame": {
     "x": 512,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3282,7 +2226,7 @@
    "filename": "chr_howard_act_think_E_01",
    "frame": {
     "x": 640,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3304,7 +2248,7 @@
    "filename": "chr_howard_act_think_SE_00",
    "frame": {
     "x": 768,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3326,7 +2270,7 @@
    "filename": "chr_howard_act_think_SE_01",
    "frame": {
     "x": 896,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3348,7 +2292,7 @@
    "filename": "chr_howard_act_talk_S_00",
    "frame": {
     "x": 1024,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3370,7 +2314,7 @@
    "filename": "chr_howard_act_talk_S_01",
    "frame": {
     "x": 1152,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3392,7 +2336,7 @@
    "filename": "chr_howard_act_talk_SW_00",
    "frame": {
     "x": 1280,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3414,7 +2358,7 @@
    "filename": "chr_howard_act_talk_SW_01",
    "frame": {
     "x": 1408,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3436,7 +2380,7 @@
    "filename": "chr_howard_act_talk_W_00",
    "frame": {
     "x": 1536,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3458,7 +2402,7 @@
    "filename": "chr_howard_act_talk_W_01",
    "frame": {
     "x": 1664,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3480,7 +2424,7 @@
    "filename": "chr_howard_act_talk_NW_00",
    "frame": {
     "x": 1792,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3502,7 +2446,7 @@
    "filename": "chr_howard_act_talk_NW_01",
    "frame": {
     "x": 1920,
-    "y": 1152,
+    "y": 768,
     "w": 128,
     "h": 128
    },
@@ -3524,7 +2468,7 @@
    "filename": "chr_howard_act_talk_N_00",
    "frame": {
     "x": 0,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3546,7 +2490,7 @@
    "filename": "chr_howard_act_talk_N_01",
    "frame": {
     "x": 128,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3568,7 +2512,7 @@
    "filename": "chr_howard_act_talk_NE_00",
    "frame": {
     "x": 256,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3590,7 +2534,7 @@
    "filename": "chr_howard_act_talk_NE_01",
    "frame": {
     "x": 384,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3612,7 +2556,7 @@
    "filename": "chr_howard_act_talk_E_00",
    "frame": {
     "x": 512,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3634,7 +2578,7 @@
    "filename": "chr_howard_act_talk_E_01",
    "frame": {
     "x": 640,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3656,7 +2600,7 @@
    "filename": "chr_howard_act_talk_SE_00",
    "frame": {
     "x": 768,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3678,7 +2622,7 @@
    "filename": "chr_howard_act_talk_SE_01",
    "frame": {
     "x": 896,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3700,7 +2644,7 @@
    "filename": "chr_howard_act_eat_S_00",
    "frame": {
     "x": 1024,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3722,7 +2666,7 @@
    "filename": "chr_howard_act_eat_S_01",
    "frame": {
     "x": 1152,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3744,7 +2688,7 @@
    "filename": "chr_howard_act_eat_SW_00",
    "frame": {
     "x": 1280,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3766,7 +2710,7 @@
    "filename": "chr_howard_act_eat_SW_01",
    "frame": {
     "x": 1408,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3788,7 +2732,7 @@
    "filename": "chr_howard_act_eat_W_00",
    "frame": {
     "x": 1536,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3810,7 +2754,7 @@
    "filename": "chr_howard_act_eat_W_01",
    "frame": {
     "x": 1664,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3832,7 +2776,7 @@
    "filename": "chr_howard_act_eat_NW_00",
    "frame": {
     "x": 1792,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3854,7 +2798,7 @@
    "filename": "chr_howard_act_eat_NW_01",
    "frame": {
     "x": 1920,
-    "y": 1280,
+    "y": 896,
     "w": 128,
     "h": 128
    },
@@ -3876,7 +2820,7 @@
    "filename": "chr_howard_act_eat_N_00",
    "frame": {
     "x": 0,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -3898,7 +2842,7 @@
    "filename": "chr_howard_act_eat_N_01",
    "frame": {
     "x": 128,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -3920,7 +2864,7 @@
    "filename": "chr_howard_act_eat_NE_00",
    "frame": {
     "x": 256,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -3942,7 +2886,7 @@
    "filename": "chr_howard_act_eat_NE_01",
    "frame": {
     "x": 384,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -3964,7 +2908,7 @@
    "filename": "chr_howard_act_eat_E_00",
    "frame": {
     "x": 512,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -3986,7 +2930,7 @@
    "filename": "chr_howard_act_eat_E_01",
    "frame": {
     "x": 640,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4008,7 +2952,7 @@
    "filename": "chr_howard_act_eat_SE_00",
    "frame": {
     "x": 768,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4030,7 +2974,7 @@
    "filename": "chr_howard_act_eat_SE_01",
    "frame": {
     "x": 896,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4052,7 +2996,7 @@
    "filename": "chr_howard_act_drink_S_00",
    "frame": {
     "x": 1024,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4074,7 +3018,7 @@
    "filename": "chr_howard_act_drink_S_01",
    "frame": {
     "x": 1152,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4096,7 +3040,7 @@
    "filename": "chr_howard_act_drink_SW_00",
    "frame": {
     "x": 1280,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4118,7 +3062,7 @@
    "filename": "chr_howard_act_drink_SW_01",
    "frame": {
     "x": 1408,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4140,7 +3084,7 @@
    "filename": "chr_howard_act_drink_W_00",
    "frame": {
     "x": 1536,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4162,7 +3106,7 @@
    "filename": "chr_howard_act_drink_W_01",
    "frame": {
     "x": 1664,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4184,7 +3128,7 @@
    "filename": "chr_howard_act_drink_NW_00",
    "frame": {
     "x": 1792,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4206,7 +3150,7 @@
    "filename": "chr_howard_act_drink_NW_01",
    "frame": {
     "x": 1920,
-    "y": 1408,
+    "y": 1024,
     "w": 128,
     "h": 128
    },
@@ -4228,7 +3172,7 @@
    "filename": "chr_howard_act_drink_N_00",
    "frame": {
     "x": 0,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4250,7 +3194,7 @@
    "filename": "chr_howard_act_drink_N_01",
    "frame": {
     "x": 128,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4272,7 +3216,7 @@
    "filename": "chr_howard_act_drink_NE_00",
    "frame": {
     "x": 256,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4294,7 +3238,7 @@
    "filename": "chr_howard_act_drink_NE_01",
    "frame": {
     "x": 384,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4316,7 +3260,7 @@
    "filename": "chr_howard_act_drink_E_00",
    "frame": {
     "x": 512,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4338,7 +3282,7 @@
    "filename": "chr_howard_act_drink_E_01",
    "frame": {
     "x": 640,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4360,7 +3304,7 @@
    "filename": "chr_howard_act_drink_SE_00",
    "frame": {
     "x": 768,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4382,7 +3326,7 @@
    "filename": "chr_howard_act_drink_SE_01",
    "frame": {
     "x": 896,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4404,7 +3348,7 @@
    "filename": "chr_howard_act_phone_S_00",
    "frame": {
     "x": 1024,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4426,7 +3370,7 @@
    "filename": "chr_howard_act_phone_S_01",
    "frame": {
     "x": 1152,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4448,7 +3392,7 @@
    "filename": "chr_howard_act_phone_SW_00",
    "frame": {
     "x": 1280,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4470,7 +3414,7 @@
    "filename": "chr_howard_act_phone_SW_01",
    "frame": {
     "x": 1408,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4492,7 +3436,7 @@
    "filename": "chr_howard_act_phone_W_00",
    "frame": {
     "x": 1536,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4514,7 +3458,7 @@
    "filename": "chr_howard_act_phone_W_01",
    "frame": {
     "x": 1664,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4536,7 +3480,7 @@
    "filename": "chr_howard_act_phone_NW_00",
    "frame": {
     "x": 1792,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4558,7 +3502,7 @@
    "filename": "chr_howard_act_phone_NW_01",
    "frame": {
     "x": 1920,
-    "y": 1536,
+    "y": 1152,
     "w": 128,
     "h": 128
    },
@@ -4580,7 +3524,7 @@
    "filename": "chr_howard_act_phone_N_00",
    "frame": {
     "x": 0,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4602,7 +3546,7 @@
    "filename": "chr_howard_act_phone_N_01",
    "frame": {
     "x": 128,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4624,7 +3568,7 @@
    "filename": "chr_howard_act_phone_NE_00",
    "frame": {
     "x": 256,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4646,7 +3590,7 @@
    "filename": "chr_howard_act_phone_NE_01",
    "frame": {
     "x": 384,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4668,7 +3612,7 @@
    "filename": "chr_howard_act_phone_E_00",
    "frame": {
     "x": 512,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4690,7 +3634,7 @@
    "filename": "chr_howard_act_phone_E_01",
    "frame": {
     "x": 640,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4712,7 +3656,7 @@
    "filename": "chr_howard_act_phone_SE_00",
    "frame": {
     "x": 768,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4734,7 +3678,7 @@
    "filename": "chr_howard_act_phone_SE_01",
    "frame": {
     "x": 896,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4756,7 +3700,7 @@
    "filename": "chr_howard_talk_S_00",
    "frame": {
     "x": 1024,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4778,7 +3722,7 @@
    "filename": "chr_howard_talk_S_01",
    "frame": {
     "x": 1152,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4800,7 +3744,7 @@
    "filename": "chr_howard_talk_S_02",
    "frame": {
     "x": 1280,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4822,7 +3766,7 @@
    "filename": "chr_howard_talk_S_03",
    "frame": {
     "x": 1408,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4844,7 +3788,7 @@
    "filename": "chr_howard_talk_SW_00",
    "frame": {
     "x": 1536,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4866,7 +3810,7 @@
    "filename": "chr_howard_talk_SW_01",
    "frame": {
     "x": 1664,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4888,7 +3832,7 @@
    "filename": "chr_howard_talk_SW_02",
    "frame": {
     "x": 1792,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4910,7 +3854,7 @@
    "filename": "chr_howard_talk_SW_03",
    "frame": {
     "x": 1920,
-    "y": 1664,
+    "y": 1280,
     "w": 128,
     "h": 128
    },
@@ -4932,7 +3876,7 @@
    "filename": "chr_howard_talk_W_00",
    "frame": {
     "x": 0,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -4954,7 +3898,7 @@
    "filename": "chr_howard_talk_W_01",
    "frame": {
     "x": 128,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -4976,7 +3920,7 @@
    "filename": "chr_howard_talk_W_02",
    "frame": {
     "x": 256,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -4998,7 +3942,7 @@
    "filename": "chr_howard_talk_W_03",
    "frame": {
     "x": 384,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5020,7 +3964,7 @@
    "filename": "chr_howard_talk_NW_00",
    "frame": {
     "x": 512,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5042,7 +3986,7 @@
    "filename": "chr_howard_talk_NW_01",
    "frame": {
     "x": 640,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5064,7 +4008,7 @@
    "filename": "chr_howard_talk_NW_02",
    "frame": {
     "x": 768,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5086,7 +4030,7 @@
    "filename": "chr_howard_talk_NW_03",
    "frame": {
     "x": 896,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5108,7 +4052,7 @@
    "filename": "chr_howard_talk_N_00",
    "frame": {
     "x": 1024,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5130,7 +4074,7 @@
    "filename": "chr_howard_talk_N_01",
    "frame": {
     "x": 1152,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5152,7 +4096,7 @@
    "filename": "chr_howard_talk_N_02",
    "frame": {
     "x": 1280,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5174,7 +4118,7 @@
    "filename": "chr_howard_talk_N_03",
    "frame": {
     "x": 1408,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5196,7 +4140,7 @@
    "filename": "chr_howard_talk_NE_00",
    "frame": {
     "x": 1536,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5218,7 +4162,7 @@
    "filename": "chr_howard_talk_NE_01",
    "frame": {
     "x": 1664,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5240,7 +4184,7 @@
    "filename": "chr_howard_talk_NE_02",
    "frame": {
     "x": 1792,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5262,7 +4206,7 @@
    "filename": "chr_howard_talk_NE_03",
    "frame": {
     "x": 1920,
-    "y": 1792,
+    "y": 1408,
     "w": 128,
     "h": 128
    },
@@ -5284,7 +4228,7 @@
    "filename": "chr_howard_talk_E_00",
    "frame": {
     "x": 0,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5306,7 +4250,7 @@
    "filename": "chr_howard_talk_E_01",
    "frame": {
     "x": 128,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5328,7 +4272,7 @@
    "filename": "chr_howard_talk_E_02",
    "frame": {
     "x": 256,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5350,7 +4294,7 @@
    "filename": "chr_howard_talk_E_03",
    "frame": {
     "x": 384,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5372,7 +4316,7 @@
    "filename": "chr_howard_talk_SE_00",
    "frame": {
     "x": 512,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5394,7 +4338,7 @@
    "filename": "chr_howard_talk_SE_01",
    "frame": {
     "x": 640,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5416,7 +4360,7 @@
    "filename": "chr_howard_talk_SE_02",
    "frame": {
     "x": 768,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5438,7 +4382,7 @@
    "filename": "chr_howard_talk_SE_03",
    "frame": {
     "x": 896,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5460,7 +4404,7 @@
    "filename": "chr_howard_gesture_S_00",
    "frame": {
     "x": 1024,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5482,7 +4426,7 @@
    "filename": "chr_howard_gesture_S_01",
    "frame": {
     "x": 1152,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5504,7 +4448,7 @@
    "filename": "chr_howard_gesture_S_02",
    "frame": {
     "x": 1280,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5526,7 +4470,7 @@
    "filename": "chr_howard_gesture_SW_00",
    "frame": {
     "x": 1408,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5548,7 +4492,7 @@
    "filename": "chr_howard_gesture_SW_01",
    "frame": {
     "x": 1536,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5570,7 +4514,7 @@
    "filename": "chr_howard_gesture_SW_02",
    "frame": {
     "x": 1664,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5592,7 +4536,7 @@
    "filename": "chr_howard_gesture_W_00",
    "frame": {
     "x": 1792,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5614,7 +4558,7 @@
    "filename": "chr_howard_gesture_W_01",
    "frame": {
     "x": 1920,
-    "y": 1920,
+    "y": 1536,
     "w": 128,
     "h": 128
    },
@@ -5636,7 +4580,7 @@
    "filename": "chr_howard_gesture_W_02",
    "frame": {
     "x": 0,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5658,7 +4602,7 @@
    "filename": "chr_howard_gesture_NW_00",
    "frame": {
     "x": 128,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5680,7 +4624,7 @@
    "filename": "chr_howard_gesture_NW_01",
    "frame": {
     "x": 256,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5702,7 +4646,7 @@
    "filename": "chr_howard_gesture_NW_02",
    "frame": {
     "x": 384,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5724,7 +4668,7 @@
    "filename": "chr_howard_gesture_N_00",
    "frame": {
     "x": 512,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5746,7 +4690,7 @@
    "filename": "chr_howard_gesture_N_01",
    "frame": {
     "x": 640,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5768,7 +4712,7 @@
    "filename": "chr_howard_gesture_N_02",
    "frame": {
     "x": 768,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5790,7 +4734,7 @@
    "filename": "chr_howard_gesture_NE_00",
    "frame": {
     "x": 896,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5812,7 +4756,7 @@
    "filename": "chr_howard_gesture_NE_01",
    "frame": {
     "x": 1024,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5834,7 +4778,7 @@
    "filename": "chr_howard_gesture_NE_02",
    "frame": {
     "x": 1152,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5856,7 +4800,7 @@
    "filename": "chr_howard_gesture_E_00",
    "frame": {
     "x": 1280,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5878,7 +4822,7 @@
    "filename": "chr_howard_gesture_E_01",
    "frame": {
     "x": 1408,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5900,7 +4844,7 @@
    "filename": "chr_howard_gesture_E_02",
    "frame": {
     "x": 1536,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5922,7 +4866,7 @@
    "filename": "chr_howard_gesture_SE_00",
    "frame": {
     "x": 1664,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5944,7 +4888,7 @@
    "filename": "chr_howard_gesture_SE_01",
    "frame": {
     "x": 1792,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5966,7 +4910,7 @@
    "filename": "chr_howard_gesture_SE_02",
    "frame": {
     "x": 1920,
-    "y": 2048,
+    "y": 1664,
     "w": 128,
     "h": 128
    },
@@ -5988,7 +4932,7 @@
    "filename": "chr_howard_work_S_00",
    "frame": {
     "x": 0,
-    "y": 2176,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6004,13 +4948,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_S_01",
    "frame": {
     "x": 128,
-    "y": 2176,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6026,13 +4970,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_S_02",
    "frame": {
     "x": 256,
-    "y": 2176,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6048,13 +4992,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_S_03",
+   "frame": {
+    "x": 384,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_SW_00",
    "frame": {
-    "x": 384,
-    "y": 2176,
+    "x": 512,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6070,13 +5036,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_SW_01",
    "frame": {
-    "x": 512,
-    "y": 2176,
+    "x": 640,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6092,13 +5058,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_SW_02",
    "frame": {
-    "x": 640,
-    "y": 2176,
+    "x": 768,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6114,13 +5080,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_SW_03",
+   "frame": {
+    "x": 896,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_W_00",
    "frame": {
-    "x": 768,
-    "y": 2176,
+    "x": 1024,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6136,13 +5124,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_W_01",
    "frame": {
-    "x": 896,
-    "y": 2176,
+    "x": 1152,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6158,13 +5146,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_W_02",
    "frame": {
-    "x": 1024,
-    "y": 2176,
+    "x": 1280,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6180,13 +5168,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_W_03",
+   "frame": {
+    "x": 1408,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_NW_00",
    "frame": {
-    "x": 1152,
-    "y": 2176,
+    "x": 1536,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6202,13 +5212,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_NW_01",
    "frame": {
-    "x": 1280,
-    "y": 2176,
+    "x": 1664,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6224,13 +5234,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_NW_02",
    "frame": {
-    "x": 1408,
-    "y": 2176,
+    "x": 1792,
+    "y": 1792,
     "w": 128,
     "h": 128
    },
@@ -6246,13 +5256,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_NW_03",
+   "frame": {
+    "x": 1920,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_N_00",
    "frame": {
-    "x": 1536,
-    "y": 2176,
+    "x": 0,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6268,13 +5300,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_N_01",
    "frame": {
-    "x": 1664,
-    "y": 2176,
+    "x": 128,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6290,13 +5322,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_N_02",
    "frame": {
-    "x": 1792,
-    "y": 2176,
+    "x": 256,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6312,13 +5344,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_N_03",
+   "frame": {
+    "x": 384,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_NE_00",
    "frame": {
-    "x": 1920,
-    "y": 2176,
+    "x": 512,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6334,13 +5388,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_NE_01",
    "frame": {
-    "x": 0,
-    "y": 2304,
+    "x": 640,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6356,13 +5410,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_NE_02",
    "frame": {
-    "x": 128,
-    "y": 2304,
+    "x": 768,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6378,13 +5432,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_NE_03",
+   "frame": {
+    "x": 896,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_E_00",
    "frame": {
-    "x": 256,
-    "y": 2304,
+    "x": 1024,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6400,13 +5476,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_E_01",
    "frame": {
-    "x": 384,
-    "y": 2304,
+    "x": 1152,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6422,13 +5498,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_E_02",
    "frame": {
-    "x": 512,
-    "y": 2304,
+    "x": 1280,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6444,13 +5520,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_E_03",
+   "frame": {
+    "x": 1408,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_SE_00",
    "frame": {
-    "x": 640,
-    "y": 2304,
+    "x": 1536,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6466,13 +5564,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 450
   },
   {
    "filename": "chr_howard_work_SE_01",
    "frame": {
-    "x": 768,
-    "y": 2304,
+    "x": 1664,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6488,13 +5586,13 @@
     "w": 128,
     "h": 128
    },
-   "duration": 900
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_SE_02",
    "frame": {
-    "x": 896,
-    "y": 2304,
+    "x": 1792,
+    "y": 1920,
     "w": 128,
     "h": 128
    },
@@ -6510,13 +5608,35 @@
     "w": 128,
     "h": 128
    },
-   "duration": 700
+   "duration": 450
+  },
+  {
+   "filename": "chr_howard_work_SE_03",
+   "frame": {
+    "x": 1920,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 350
   },
   {
    "filename": "chr_howard_work_desk_S_00",
    "frame": {
-    "x": 1024,
-    "y": 2304,
+    "x": 0,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6537,8 +5657,8 @@
   {
    "filename": "chr_howard_work_desk_S_01",
    "frame": {
-    "x": 1152,
-    "y": 2304,
+    "x": 128,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6559,8 +5679,8 @@
   {
    "filename": "chr_howard_work_desk_S_02",
    "frame": {
-    "x": 1280,
-    "y": 2304,
+    "x": 256,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6581,8 +5701,8 @@
   {
    "filename": "chr_howard_work_desk_S_03",
    "frame": {
-    "x": 1408,
-    "y": 2304,
+    "x": 384,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6603,8 +5723,8 @@
   {
    "filename": "chr_howard_work_desk_S_04",
    "frame": {
-    "x": 1536,
-    "y": 2304,
+    "x": 512,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6625,8 +5745,8 @@
   {
    "filename": "chr_howard_work_desk_S_05",
    "frame": {
-    "x": 1664,
-    "y": 2304,
+    "x": 640,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6647,8 +5767,8 @@
   {
    "filename": "chr_howard_work_desk_SW_00",
    "frame": {
-    "x": 1792,
-    "y": 2304,
+    "x": 768,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6669,8 +5789,8 @@
   {
    "filename": "chr_howard_work_desk_SW_01",
    "frame": {
-    "x": 1920,
-    "y": 2304,
+    "x": 896,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6691,8 +5811,8 @@
   {
    "filename": "chr_howard_work_desk_SW_02",
    "frame": {
-    "x": 0,
-    "y": 2432,
+    "x": 1024,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6713,8 +5833,8 @@
   {
    "filename": "chr_howard_work_desk_SW_03",
    "frame": {
-    "x": 128,
-    "y": 2432,
+    "x": 1152,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6735,8 +5855,8 @@
   {
    "filename": "chr_howard_work_desk_SW_04",
    "frame": {
-    "x": 256,
-    "y": 2432,
+    "x": 1280,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6757,8 +5877,8 @@
   {
    "filename": "chr_howard_work_desk_SW_05",
    "frame": {
-    "x": 384,
-    "y": 2432,
+    "x": 1408,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6779,8 +5899,8 @@
   {
    "filename": "chr_howard_work_desk_W_00",
    "frame": {
-    "x": 512,
-    "y": 2432,
+    "x": 1536,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6801,8 +5921,8 @@
   {
    "filename": "chr_howard_work_desk_W_01",
    "frame": {
-    "x": 640,
-    "y": 2432,
+    "x": 1664,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6823,8 +5943,8 @@
   {
    "filename": "chr_howard_work_desk_W_02",
    "frame": {
-    "x": 768,
-    "y": 2432,
+    "x": 1792,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6845,8 +5965,8 @@
   {
    "filename": "chr_howard_work_desk_W_03",
    "frame": {
-    "x": 896,
-    "y": 2432,
+    "x": 1920,
+    "y": 2048,
     "w": 128,
     "h": 128
    },
@@ -6867,8 +5987,8 @@
   {
    "filename": "chr_howard_work_desk_W_04",
    "frame": {
-    "x": 1024,
-    "y": 2432,
+    "x": 0,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -6889,8 +6009,8 @@
   {
    "filename": "chr_howard_work_desk_W_05",
    "frame": {
-    "x": 1152,
-    "y": 2432,
+    "x": 128,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -6911,8 +6031,8 @@
   {
    "filename": "chr_howard_work_desk_NW_00",
    "frame": {
-    "x": 1280,
-    "y": 2432,
+    "x": 256,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -6933,8 +6053,8 @@
   {
    "filename": "chr_howard_work_desk_NW_01",
    "frame": {
-    "x": 1408,
-    "y": 2432,
+    "x": 384,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -6955,8 +6075,8 @@
   {
    "filename": "chr_howard_work_desk_NW_02",
    "frame": {
-    "x": 1536,
-    "y": 2432,
+    "x": 512,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -6977,8 +6097,8 @@
   {
    "filename": "chr_howard_work_desk_NW_03",
    "frame": {
-    "x": 1664,
-    "y": 2432,
+    "x": 640,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -6999,8 +6119,8 @@
   {
    "filename": "chr_howard_work_desk_NW_04",
    "frame": {
-    "x": 1792,
-    "y": 2432,
+    "x": 768,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7021,8 +6141,8 @@
   {
    "filename": "chr_howard_work_desk_NW_05",
    "frame": {
-    "x": 1920,
-    "y": 2432,
+    "x": 896,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7043,8 +6163,8 @@
   {
    "filename": "chr_howard_work_desk_N_00",
    "frame": {
-    "x": 0,
-    "y": 2560,
+    "x": 1024,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7065,8 +6185,8 @@
   {
    "filename": "chr_howard_work_desk_N_01",
    "frame": {
-    "x": 128,
-    "y": 2560,
+    "x": 1152,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7087,8 +6207,8 @@
   {
    "filename": "chr_howard_work_desk_N_02",
    "frame": {
-    "x": 256,
-    "y": 2560,
+    "x": 1280,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7109,8 +6229,8 @@
   {
    "filename": "chr_howard_work_desk_N_03",
    "frame": {
-    "x": 384,
-    "y": 2560,
+    "x": 1408,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7131,8 +6251,8 @@
   {
    "filename": "chr_howard_work_desk_N_04",
    "frame": {
-    "x": 512,
-    "y": 2560,
+    "x": 1536,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7153,8 +6273,8 @@
   {
    "filename": "chr_howard_work_desk_N_05",
    "frame": {
-    "x": 640,
-    "y": 2560,
+    "x": 1664,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7175,8 +6295,8 @@
   {
    "filename": "chr_howard_work_desk_NE_00",
    "frame": {
-    "x": 768,
-    "y": 2560,
+    "x": 1792,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7197,8 +6317,8 @@
   {
    "filename": "chr_howard_work_desk_NE_01",
    "frame": {
-    "x": 896,
-    "y": 2560,
+    "x": 1920,
+    "y": 2176,
     "w": 128,
     "h": 128
    },
@@ -7219,8 +6339,8 @@
   {
    "filename": "chr_howard_work_desk_NE_02",
    "frame": {
-    "x": 1024,
-    "y": 2560,
+    "x": 0,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7241,8 +6361,8 @@
   {
    "filename": "chr_howard_work_desk_NE_03",
    "frame": {
-    "x": 1152,
-    "y": 2560,
+    "x": 128,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7263,8 +6383,8 @@
   {
    "filename": "chr_howard_work_desk_NE_04",
    "frame": {
-    "x": 1280,
-    "y": 2560,
+    "x": 256,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7285,8 +6405,8 @@
   {
    "filename": "chr_howard_work_desk_NE_05",
    "frame": {
-    "x": 1408,
-    "y": 2560,
+    "x": 384,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7307,8 +6427,8 @@
   {
    "filename": "chr_howard_work_desk_E_00",
    "frame": {
-    "x": 1536,
-    "y": 2560,
+    "x": 512,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7329,8 +6449,8 @@
   {
    "filename": "chr_howard_work_desk_E_01",
    "frame": {
-    "x": 1664,
-    "y": 2560,
+    "x": 640,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7351,8 +6471,8 @@
   {
    "filename": "chr_howard_work_desk_E_02",
    "frame": {
-    "x": 1792,
-    "y": 2560,
+    "x": 768,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7373,8 +6493,8 @@
   {
    "filename": "chr_howard_work_desk_E_03",
    "frame": {
-    "x": 1920,
-    "y": 2560,
+    "x": 896,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7395,8 +6515,8 @@
   {
    "filename": "chr_howard_work_desk_E_04",
    "frame": {
-    "x": 0,
-    "y": 2688,
+    "x": 1024,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7417,8 +6537,8 @@
   {
    "filename": "chr_howard_work_desk_E_05",
    "frame": {
-    "x": 128,
-    "y": 2688,
+    "x": 1152,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7439,8 +6559,8 @@
   {
    "filename": "chr_howard_work_desk_SE_00",
    "frame": {
-    "x": 256,
-    "y": 2688,
+    "x": 1280,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7461,8 +6581,8 @@
   {
    "filename": "chr_howard_work_desk_SE_01",
    "frame": {
-    "x": 384,
-    "y": 2688,
+    "x": 1408,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7483,8 +6603,8 @@
   {
    "filename": "chr_howard_work_desk_SE_02",
    "frame": {
-    "x": 512,
-    "y": 2688,
+    "x": 1536,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7505,8 +6625,8 @@
   {
    "filename": "chr_howard_work_desk_SE_03",
    "frame": {
-    "x": 640,
-    "y": 2688,
+    "x": 1664,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7527,8 +6647,8 @@
   {
    "filename": "chr_howard_work_desk_SE_04",
    "frame": {
-    "x": 768,
-    "y": 2688,
+    "x": 1792,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7549,8 +6669,8 @@
   {
    "filename": "chr_howard_work_desk_SE_05",
    "frame": {
-    "x": 896,
-    "y": 2688,
+    "x": 1920,
+    "y": 2304,
     "w": 128,
     "h": 128
    },
@@ -7569,9 +6689,713 @@
    "duration": 300
   },
   {
-   "filename": "chr_howard_magic_trick_S_00",
+   "filename": "chr_howard_desk_S_00",
+   "frame": {
+    "x": 0,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_S_01",
+   "frame": {
+    "x": 128,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_S_02",
+   "frame": {
+    "x": 256,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_S_03",
+   "frame": {
+    "x": 384,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_SW_00",
+   "frame": {
+    "x": 512,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_SW_01",
+   "frame": {
+    "x": 640,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_SW_02",
+   "frame": {
+    "x": 768,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_SW_03",
+   "frame": {
+    "x": 896,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_W_00",
    "frame": {
     "x": 1024,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_W_01",
+   "frame": {
+    "x": 1152,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_W_02",
+   "frame": {
+    "x": 1280,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_W_03",
+   "frame": {
+    "x": 1408,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_NW_00",
+   "frame": {
+    "x": 1536,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_NW_01",
+   "frame": {
+    "x": 1664,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_NW_02",
+   "frame": {
+    "x": 1792,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_NW_03",
+   "frame": {
+    "x": 1920,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_N_00",
+   "frame": {
+    "x": 0,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_N_01",
+   "frame": {
+    "x": 128,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_N_02",
+   "frame": {
+    "x": 256,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_N_03",
+   "frame": {
+    "x": 384,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_NE_00",
+   "frame": {
+    "x": 512,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_NE_01",
+   "frame": {
+    "x": 640,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_NE_02",
+   "frame": {
+    "x": 768,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_NE_03",
+   "frame": {
+    "x": 896,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_E_00",
+   "frame": {
+    "x": 1024,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_E_01",
+   "frame": {
+    "x": 1152,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_E_02",
+   "frame": {
+    "x": 1280,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_E_03",
+   "frame": {
+    "x": 1408,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_SE_00",
+   "frame": {
+    "x": 1536,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_SE_01",
+   "frame": {
+    "x": 1664,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_desk_SE_02",
+   "frame": {
+    "x": 1792,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1300
+  },
+  {
+   "filename": "chr_howard_desk_SE_03",
+   "frame": {
+    "x": 1920,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 1000
+  },
+  {
+   "filename": "chr_howard_magic_trick_S_00",
+   "frame": {
+    "x": 0,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7593,7 +7417,7 @@
   {
    "filename": "chr_howard_magic_trick_S_01",
    "frame": {
-    "x": 1152,
+    "x": 128,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7615,7 +7439,7 @@
   {
    "filename": "chr_howard_magic_trick_S_02",
    "frame": {
-    "x": 1280,
+    "x": 256,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7637,7 +7461,7 @@
   {
    "filename": "chr_howard_magic_trick_S_03",
    "frame": {
-    "x": 1408,
+    "x": 384,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7659,7 +7483,7 @@
   {
    "filename": "chr_howard_magic_trick_S_04",
    "frame": {
-    "x": 1536,
+    "x": 512,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7681,7 +7505,7 @@
   {
    "filename": "chr_howard_magic_trick_S_05",
    "frame": {
-    "x": 1664,
+    "x": 640,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7703,7 +7527,7 @@
   {
    "filename": "chr_howard_magic_trick_SW_00",
    "frame": {
-    "x": 1792,
+    "x": 768,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7725,7 +7549,7 @@
   {
    "filename": "chr_howard_magic_trick_SW_01",
    "frame": {
-    "x": 1920,
+    "x": 896,
     "y": 2688,
     "w": 128,
     "h": 128
@@ -7747,8 +7571,8 @@
   {
    "filename": "chr_howard_magic_trick_SW_02",
    "frame": {
-    "x": 0,
-    "y": 2816,
+    "x": 1024,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7769,8 +7593,8 @@
   {
    "filename": "chr_howard_magic_trick_SW_03",
    "frame": {
-    "x": 128,
-    "y": 2816,
+    "x": 1152,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7791,8 +7615,8 @@
   {
    "filename": "chr_howard_magic_trick_SW_04",
    "frame": {
-    "x": 256,
-    "y": 2816,
+    "x": 1280,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7813,8 +7637,8 @@
   {
    "filename": "chr_howard_magic_trick_SW_05",
    "frame": {
-    "x": 384,
-    "y": 2816,
+    "x": 1408,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7835,8 +7659,8 @@
   {
    "filename": "chr_howard_magic_trick_W_00",
    "frame": {
-    "x": 512,
-    "y": 2816,
+    "x": 1536,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7857,8 +7681,8 @@
   {
    "filename": "chr_howard_magic_trick_W_01",
    "frame": {
-    "x": 640,
-    "y": 2816,
+    "x": 1664,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7879,8 +7703,8 @@
   {
    "filename": "chr_howard_magic_trick_W_02",
    "frame": {
-    "x": 768,
-    "y": 2816,
+    "x": 1792,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7901,8 +7725,8 @@
   {
    "filename": "chr_howard_magic_trick_W_03",
    "frame": {
-    "x": 896,
-    "y": 2816,
+    "x": 1920,
+    "y": 2688,
     "w": 128,
     "h": 128
    },
@@ -7923,7 +7747,7 @@
   {
    "filename": "chr_howard_magic_trick_W_04",
    "frame": {
-    "x": 1024,
+    "x": 0,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -7945,7 +7769,7 @@
   {
    "filename": "chr_howard_magic_trick_W_05",
    "frame": {
-    "x": 1152,
+    "x": 128,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -7967,7 +7791,7 @@
   {
    "filename": "chr_howard_magic_trick_NW_00",
    "frame": {
-    "x": 1280,
+    "x": 256,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -7989,7 +7813,7 @@
   {
    "filename": "chr_howard_magic_trick_NW_01",
    "frame": {
-    "x": 1408,
+    "x": 384,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -8011,7 +7835,7 @@
   {
    "filename": "chr_howard_magic_trick_NW_02",
    "frame": {
-    "x": 1536,
+    "x": 512,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -8033,7 +7857,7 @@
   {
    "filename": "chr_howard_magic_trick_NW_03",
    "frame": {
-    "x": 1664,
+    "x": 640,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -8055,7 +7879,7 @@
   {
    "filename": "chr_howard_magic_trick_NW_04",
    "frame": {
-    "x": 1792,
+    "x": 768,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -8077,7 +7901,7 @@
   {
    "filename": "chr_howard_magic_trick_NW_05",
    "frame": {
-    "x": 1920,
+    "x": 896,
     "y": 2816,
     "w": 128,
     "h": 128
@@ -8099,8 +7923,8 @@
   {
    "filename": "chr_howard_magic_trick_N_00",
    "frame": {
-    "x": 0,
-    "y": 2944,
+    "x": 1024,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8121,8 +7945,8 @@
   {
    "filename": "chr_howard_magic_trick_N_01",
    "frame": {
-    "x": 128,
-    "y": 2944,
+    "x": 1152,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8143,8 +7967,8 @@
   {
    "filename": "chr_howard_magic_trick_N_02",
    "frame": {
-    "x": 256,
-    "y": 2944,
+    "x": 1280,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8165,8 +7989,8 @@
   {
    "filename": "chr_howard_magic_trick_N_03",
    "frame": {
-    "x": 384,
-    "y": 2944,
+    "x": 1408,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8187,8 +8011,8 @@
   {
    "filename": "chr_howard_magic_trick_N_04",
    "frame": {
-    "x": 512,
-    "y": 2944,
+    "x": 1536,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8209,8 +8033,8 @@
   {
    "filename": "chr_howard_magic_trick_N_05",
    "frame": {
-    "x": 640,
-    "y": 2944,
+    "x": 1664,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8231,8 +8055,8 @@
   {
    "filename": "chr_howard_magic_trick_NE_00",
    "frame": {
-    "x": 768,
-    "y": 2944,
+    "x": 1792,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8253,8 +8077,8 @@
   {
    "filename": "chr_howard_magic_trick_NE_01",
    "frame": {
-    "x": 896,
-    "y": 2944,
+    "x": 1920,
+    "y": 2816,
     "w": 128,
     "h": 128
    },
@@ -8275,7 +8099,7 @@
   {
    "filename": "chr_howard_magic_trick_NE_02",
    "frame": {
-    "x": 1024,
+    "x": 0,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8297,7 +8121,7 @@
   {
    "filename": "chr_howard_magic_trick_NE_03",
    "frame": {
-    "x": 1152,
+    "x": 128,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8319,7 +8143,7 @@
   {
    "filename": "chr_howard_magic_trick_NE_04",
    "frame": {
-    "x": 1280,
+    "x": 256,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8341,7 +8165,7 @@
   {
    "filename": "chr_howard_magic_trick_NE_05",
    "frame": {
-    "x": 1408,
+    "x": 384,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8363,7 +8187,7 @@
   {
    "filename": "chr_howard_magic_trick_E_00",
    "frame": {
-    "x": 1536,
+    "x": 512,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8385,7 +8209,7 @@
   {
    "filename": "chr_howard_magic_trick_E_01",
    "frame": {
-    "x": 1664,
+    "x": 640,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8407,7 +8231,7 @@
   {
    "filename": "chr_howard_magic_trick_E_02",
    "frame": {
-    "x": 1792,
+    "x": 768,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8429,7 +8253,7 @@
   {
    "filename": "chr_howard_magic_trick_E_03",
    "frame": {
-    "x": 1920,
+    "x": 896,
     "y": 2944,
     "w": 128,
     "h": 128
@@ -8451,8 +8275,8 @@
   {
    "filename": "chr_howard_magic_trick_E_04",
    "frame": {
-    "x": 0,
-    "y": 3072,
+    "x": 1024,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8473,8 +8297,8 @@
   {
    "filename": "chr_howard_magic_trick_E_05",
    "frame": {
-    "x": 128,
-    "y": 3072,
+    "x": 1152,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8495,8 +8319,8 @@
   {
    "filename": "chr_howard_magic_trick_SE_00",
    "frame": {
-    "x": 256,
-    "y": 3072,
+    "x": 1280,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8517,8 +8341,8 @@
   {
    "filename": "chr_howard_magic_trick_SE_01",
    "frame": {
-    "x": 384,
-    "y": 3072,
+    "x": 1408,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8539,8 +8363,8 @@
   {
    "filename": "chr_howard_magic_trick_SE_02",
    "frame": {
-    "x": 512,
-    "y": 3072,
+    "x": 1536,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8561,8 +8385,8 @@
   {
    "filename": "chr_howard_magic_trick_SE_03",
    "frame": {
-    "x": 640,
-    "y": 3072,
+    "x": 1664,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8583,8 +8407,8 @@
   {
    "filename": "chr_howard_magic_trick_SE_04",
    "frame": {
-    "x": 768,
-    "y": 3072,
+    "x": 1792,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8605,8 +8429,8 @@
   {
    "filename": "chr_howard_magic_trick_SE_05",
    "frame": {
-    "x": 896,
-    "y": 3072,
+    "x": 1920,
+    "y": 2944,
     "w": 128,
     "h": 128
    },
@@ -8627,7 +8451,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_S_00",
    "frame": {
-    "x": 1024,
+    "x": 0,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8649,7 +8473,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_S_01",
    "frame": {
-    "x": 1152,
+    "x": 128,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8671,7 +8495,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_S_02",
    "frame": {
-    "x": 1280,
+    "x": 256,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8693,7 +8517,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_S_03",
    "frame": {
-    "x": 1408,
+    "x": 384,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8715,7 +8539,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SW_00",
    "frame": {
-    "x": 1536,
+    "x": 512,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8737,7 +8561,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SW_01",
    "frame": {
-    "x": 1664,
+    "x": 640,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8759,7 +8583,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SW_02",
    "frame": {
-    "x": 1792,
+    "x": 768,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8781,7 +8605,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SW_03",
    "frame": {
-    "x": 1920,
+    "x": 896,
     "y": 3072,
     "w": 128,
     "h": 128
@@ -8803,8 +8627,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_W_00",
    "frame": {
-    "x": 0,
-    "y": 3200,
+    "x": 1024,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8825,8 +8649,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_W_01",
    "frame": {
-    "x": 128,
-    "y": 3200,
+    "x": 1152,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8847,8 +8671,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_W_02",
    "frame": {
-    "x": 256,
-    "y": 3200,
+    "x": 1280,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8869,8 +8693,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_W_03",
    "frame": {
-    "x": 384,
-    "y": 3200,
+    "x": 1408,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8891,8 +8715,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NW_00",
    "frame": {
-    "x": 512,
-    "y": 3200,
+    "x": 1536,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8913,8 +8737,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NW_01",
    "frame": {
-    "x": 640,
-    "y": 3200,
+    "x": 1664,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8935,8 +8759,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NW_02",
    "frame": {
-    "x": 768,
-    "y": 3200,
+    "x": 1792,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8957,8 +8781,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NW_03",
    "frame": {
-    "x": 896,
-    "y": 3200,
+    "x": 1920,
+    "y": 3072,
     "w": 128,
     "h": 128
    },
@@ -8979,7 +8803,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_N_00",
    "frame": {
-    "x": 1024,
+    "x": 0,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9001,7 +8825,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_N_01",
    "frame": {
-    "x": 1152,
+    "x": 128,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9023,7 +8847,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_N_02",
    "frame": {
-    "x": 1280,
+    "x": 256,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9045,7 +8869,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_N_03",
    "frame": {
-    "x": 1408,
+    "x": 384,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9067,7 +8891,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NE_00",
    "frame": {
-    "x": 1536,
+    "x": 512,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9089,7 +8913,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NE_01",
    "frame": {
-    "x": 1664,
+    "x": 640,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9111,7 +8935,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NE_02",
    "frame": {
-    "x": 1792,
+    "x": 768,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9133,7 +8957,7 @@
   {
    "filename": "chr_howard_eyebrow_waggle_NE_03",
    "frame": {
-    "x": 1920,
+    "x": 896,
     "y": 3200,
     "w": 128,
     "h": 128
@@ -9155,8 +8979,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_E_00",
    "frame": {
-    "x": 0,
-    "y": 3328,
+    "x": 1024,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9177,8 +9001,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_E_01",
    "frame": {
-    "x": 128,
-    "y": 3328,
+    "x": 1152,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9199,8 +9023,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_E_02",
    "frame": {
-    "x": 256,
-    "y": 3328,
+    "x": 1280,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9221,8 +9045,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_E_03",
    "frame": {
-    "x": 384,
-    "y": 3328,
+    "x": 1408,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9243,8 +9067,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SE_00",
    "frame": {
-    "x": 512,
-    "y": 3328,
+    "x": 1536,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9265,8 +9089,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SE_01",
    "frame": {
-    "x": 640,
-    "y": 3328,
+    "x": 1664,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9287,8 +9111,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SE_02",
    "frame": {
-    "x": 768,
-    "y": 3328,
+    "x": 1792,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9309,8 +9133,8 @@
   {
    "filename": "chr_howard_eyebrow_waggle_SE_03",
    "frame": {
-    "x": 896,
-    "y": 3328,
+    "x": 1920,
+    "y": 3200,
     "w": 128,
     "h": 128
    },
@@ -9336,7 +9160,7 @@
   "format": "RGBA8888",
   "size": {
    "w": 2048,
-   "h": 3456
+   "h": 3328
   },
   "scale": "1",
   "pivot": [
@@ -9395,625 +9219,673 @@
    {
     "name": "idle_S",
     "from": 8,
-    "to": 15,
+    "to": 9,
     "direction": "forward"
    },
    {
     "name": "idle_SW",
-    "from": 16,
-    "to": 23,
+    "from": 10,
+    "to": 11,
     "direction": "forward"
    },
    {
     "name": "idle_W",
+    "from": 12,
+    "to": 13,
+    "direction": "forward"
+   },
+   {
+    "name": "idle_NW",
+    "from": 14,
+    "to": 15,
+    "direction": "forward"
+   },
+   {
+    "name": "idle_N",
+    "from": 16,
+    "to": 17,
+    "direction": "forward"
+   },
+   {
+    "name": "idle_NE",
+    "from": 18,
+    "to": 19,
+    "direction": "forward"
+   },
+   {
+    "name": "idle_E",
+    "from": 20,
+    "to": 21,
+    "direction": "forward"
+   },
+   {
+    "name": "idle_SE",
+    "from": 22,
+    "to": 23,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_S",
     "from": 24,
     "to": 31,
     "direction": "forward"
    },
    {
-    "name": "idle_NW",
+    "name": "walk_SW",
     "from": 32,
     "to": 39,
     "direction": "forward"
    },
    {
-    "name": "idle_N",
+    "name": "walk_W",
     "from": 40,
     "to": 47,
     "direction": "forward"
    },
    {
-    "name": "idle_NE",
+    "name": "walk_NW",
     "from": 48,
     "to": 55,
     "direction": "forward"
    },
    {
-    "name": "idle_E",
+    "name": "walk_N",
     "from": 56,
     "to": 63,
     "direction": "forward"
    },
    {
-    "name": "idle_SE",
+    "name": "walk_NE",
     "from": 64,
     "to": 71,
     "direction": "forward"
    },
    {
-    "name": "walk_S",
+    "name": "walk_E",
     "from": 72,
     "to": 79,
     "direction": "forward"
    },
    {
-    "name": "walk_SW",
+    "name": "walk_SE",
     "from": 80,
     "to": 87,
     "direction": "forward"
    },
    {
-    "name": "walk_W",
+    "name": "act_think_S",
     "from": 88,
+    "to": 89,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_SW",
+    "from": 90,
+    "to": 91,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_W",
+    "from": 92,
+    "to": 93,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_NW",
+    "from": 94,
     "to": 95,
     "direction": "forward"
    },
    {
-    "name": "walk_NW",
+    "name": "act_think_N",
     "from": 96,
+    "to": 97,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_NE",
+    "from": 98,
+    "to": 99,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_E",
+    "from": 100,
+    "to": 101,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_SE",
+    "from": 102,
     "to": 103,
     "direction": "forward"
    },
    {
-    "name": "walk_N",
+    "name": "act_talk_S",
     "from": 104,
+    "to": 105,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_SW",
+    "from": 106,
+    "to": 107,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_W",
+    "from": 108,
+    "to": 109,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_NW",
+    "from": 110,
     "to": 111,
     "direction": "forward"
    },
    {
-    "name": "walk_NE",
+    "name": "act_talk_N",
     "from": 112,
+    "to": 113,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_NE",
+    "from": 114,
+    "to": 115,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_E",
+    "from": 116,
+    "to": 117,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_SE",
+    "from": 118,
     "to": 119,
     "direction": "forward"
    },
    {
-    "name": "walk_E",
+    "name": "act_eat_S",
     "from": 120,
+    "to": 121,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_SW",
+    "from": 122,
+    "to": 123,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_W",
+    "from": 124,
+    "to": 125,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_NW",
+    "from": 126,
     "to": 127,
     "direction": "forward"
    },
    {
-    "name": "walk_SE",
+    "name": "act_eat_N",
     "from": 128,
+    "to": 129,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_NE",
+    "from": 130,
+    "to": 131,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_E",
+    "from": 132,
+    "to": 133,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_SE",
+    "from": 134,
     "to": 135,
     "direction": "forward"
    },
    {
-    "name": "act_think_S",
+    "name": "act_drink_S",
     "from": 136,
     "to": 137,
     "direction": "forward"
    },
    {
-    "name": "act_think_SW",
+    "name": "act_drink_SW",
     "from": 138,
     "to": 139,
     "direction": "forward"
    },
    {
-    "name": "act_think_W",
+    "name": "act_drink_W",
     "from": 140,
     "to": 141,
     "direction": "forward"
    },
    {
-    "name": "act_think_NW",
+    "name": "act_drink_NW",
     "from": 142,
     "to": 143,
     "direction": "forward"
    },
    {
-    "name": "act_think_N",
+    "name": "act_drink_N",
     "from": 144,
     "to": 145,
     "direction": "forward"
    },
    {
-    "name": "act_think_NE",
+    "name": "act_drink_NE",
     "from": 146,
     "to": 147,
     "direction": "forward"
    },
    {
-    "name": "act_think_E",
+    "name": "act_drink_E",
     "from": 148,
     "to": 149,
     "direction": "forward"
    },
    {
-    "name": "act_think_SE",
+    "name": "act_drink_SE",
     "from": 150,
     "to": 151,
     "direction": "forward"
    },
    {
-    "name": "act_talk_S",
+    "name": "act_phone_S",
     "from": 152,
     "to": 153,
     "direction": "forward"
    },
    {
-    "name": "act_talk_SW",
+    "name": "act_phone_SW",
     "from": 154,
     "to": 155,
     "direction": "forward"
    },
    {
-    "name": "act_talk_W",
+    "name": "act_phone_W",
     "from": 156,
     "to": 157,
     "direction": "forward"
    },
    {
-    "name": "act_talk_NW",
+    "name": "act_phone_NW",
     "from": 158,
     "to": 159,
     "direction": "forward"
    },
    {
-    "name": "act_talk_N",
+    "name": "act_phone_N",
     "from": 160,
     "to": 161,
     "direction": "forward"
    },
    {
-    "name": "act_talk_NE",
+    "name": "act_phone_NE",
     "from": 162,
     "to": 163,
     "direction": "forward"
    },
    {
-    "name": "act_talk_E",
+    "name": "act_phone_E",
     "from": 164,
     "to": 165,
     "direction": "forward"
    },
    {
-    "name": "act_talk_SE",
+    "name": "act_phone_SE",
     "from": 166,
     "to": 167,
     "direction": "forward"
    },
    {
-    "name": "act_eat_S",
+    "name": "talk_S",
     "from": 168,
-    "to": 169,
-    "direction": "forward"
-   },
-   {
-    "name": "act_eat_SW",
-    "from": 170,
     "to": 171,
     "direction": "forward"
    },
    {
-    "name": "act_eat_W",
+    "name": "talk_SW",
     "from": 172,
-    "to": 173,
-    "direction": "forward"
-   },
-   {
-    "name": "act_eat_NW",
-    "from": 174,
     "to": 175,
     "direction": "forward"
    },
    {
-    "name": "act_eat_N",
+    "name": "talk_W",
     "from": 176,
-    "to": 177,
-    "direction": "forward"
-   },
-   {
-    "name": "act_eat_NE",
-    "from": 178,
     "to": 179,
     "direction": "forward"
    },
    {
-    "name": "act_eat_E",
+    "name": "talk_NW",
     "from": 180,
-    "to": 181,
-    "direction": "forward"
-   },
-   {
-    "name": "act_eat_SE",
-    "from": 182,
     "to": 183,
     "direction": "forward"
    },
    {
-    "name": "act_drink_S",
+    "name": "talk_N",
     "from": 184,
-    "to": 185,
-    "direction": "forward"
-   },
-   {
-    "name": "act_drink_SW",
-    "from": 186,
     "to": 187,
     "direction": "forward"
    },
    {
-    "name": "act_drink_W",
+    "name": "talk_NE",
     "from": 188,
-    "to": 189,
-    "direction": "forward"
-   },
-   {
-    "name": "act_drink_NW",
-    "from": 190,
     "to": 191,
     "direction": "forward"
    },
    {
-    "name": "act_drink_N",
+    "name": "talk_E",
     "from": 192,
-    "to": 193,
-    "direction": "forward"
-   },
-   {
-    "name": "act_drink_NE",
-    "from": 194,
     "to": 195,
     "direction": "forward"
    },
    {
-    "name": "act_drink_E",
+    "name": "talk_SE",
     "from": 196,
-    "to": 197,
-    "direction": "forward"
-   },
-   {
-    "name": "act_drink_SE",
-    "from": 198,
     "to": 199,
     "direction": "forward"
    },
    {
-    "name": "act_phone_S",
+    "name": "gesture_S",
     "from": 200,
-    "to": 201,
+    "to": 202,
     "direction": "forward"
    },
    {
-    "name": "act_phone_SW",
-    "from": 202,
-    "to": 203,
-    "direction": "forward"
-   },
-   {
-    "name": "act_phone_W",
-    "from": 204,
+    "name": "gesture_SW",
+    "from": 203,
     "to": 205,
     "direction": "forward"
    },
    {
-    "name": "act_phone_NW",
+    "name": "gesture_W",
     "from": 206,
-    "to": 207,
+    "to": 208,
     "direction": "forward"
    },
    {
-    "name": "act_phone_N",
-    "from": 208,
-    "to": 209,
-    "direction": "forward"
-   },
-   {
-    "name": "act_phone_NE",
-    "from": 210,
+    "name": "gesture_NW",
+    "from": 209,
     "to": 211,
     "direction": "forward"
    },
    {
-    "name": "act_phone_E",
+    "name": "gesture_N",
     "from": 212,
-    "to": 213,
+    "to": 214,
     "direction": "forward"
    },
    {
-    "name": "act_phone_SE",
-    "from": 214,
-    "to": 215,
+    "name": "gesture_NE",
+    "from": 215,
+    "to": 217,
     "direction": "forward"
    },
    {
-    "name": "talk_S",
-    "from": 216,
-    "to": 219,
+    "name": "gesture_E",
+    "from": 218,
+    "to": 220,
     "direction": "forward"
    },
    {
-    "name": "talk_SW",
-    "from": 220,
+    "name": "gesture_SE",
+    "from": 221,
     "to": 223,
     "direction": "forward"
    },
    {
-    "name": "talk_W",
+    "name": "work_S",
     "from": 224,
     "to": 227,
     "direction": "forward"
    },
    {
-    "name": "talk_NW",
+    "name": "work_SW",
     "from": 228,
     "to": 231,
     "direction": "forward"
    },
    {
-    "name": "talk_N",
+    "name": "work_W",
     "from": 232,
     "to": 235,
     "direction": "forward"
    },
    {
-    "name": "talk_NE",
+    "name": "work_NW",
     "from": 236,
     "to": 239,
     "direction": "forward"
    },
    {
-    "name": "talk_E",
+    "name": "work_N",
     "from": 240,
     "to": 243,
     "direction": "forward"
    },
    {
-    "name": "talk_SE",
+    "name": "work_NE",
     "from": 244,
     "to": 247,
     "direction": "forward"
    },
    {
-    "name": "gesture_S",
-    "from": 248,
-    "to": 250,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_SW",
-    "from": 251,
-    "to": 253,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_W",
-    "from": 254,
-    "to": 256,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_NW",
-    "from": 257,
-    "to": 259,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_N",
-    "from": 260,
-    "to": 262,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_NE",
-    "from": 263,
-    "to": 265,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_E",
-    "from": 266,
-    "to": 268,
-    "direction": "forward"
-   },
-   {
-    "name": "gesture_SE",
-    "from": 269,
-    "to": 271,
-    "direction": "forward"
-   },
-   {
-    "name": "work_S",
-    "from": 272,
-    "to": 274,
-    "direction": "forward"
-   },
-   {
-    "name": "work_SW",
-    "from": 275,
-    "to": 277,
-    "direction": "forward"
-   },
-   {
-    "name": "work_W",
-    "from": 278,
-    "to": 280,
-    "direction": "forward"
-   },
-   {
-    "name": "work_NW",
-    "from": 281,
-    "to": 283,
-    "direction": "forward"
-   },
-   {
-    "name": "work_N",
-    "from": 284,
-    "to": 286,
-    "direction": "forward"
-   },
-   {
-    "name": "work_NE",
-    "from": 287,
-    "to": 289,
-    "direction": "forward"
-   },
-   {
     "name": "work_E",
-    "from": 290,
-    "to": 292,
+    "from": 248,
+    "to": 251,
     "direction": "forward"
    },
    {
     "name": "work_SE",
-    "from": 293,
-    "to": 295,
+    "from": 252,
+    "to": 255,
     "direction": "forward"
    },
    {
     "name": "work_desk_S",
-    "from": 296,
-    "to": 301,
+    "from": 256,
+    "to": 261,
     "direction": "forward"
    },
    {
     "name": "work_desk_SW",
-    "from": 302,
-    "to": 307,
+    "from": 262,
+    "to": 267,
     "direction": "forward"
    },
    {
     "name": "work_desk_W",
-    "from": 308,
-    "to": 313,
+    "from": 268,
+    "to": 273,
     "direction": "forward"
    },
    {
     "name": "work_desk_NW",
-    "from": 314,
-    "to": 319,
+    "from": 274,
+    "to": 279,
     "direction": "forward"
    },
    {
     "name": "work_desk_N",
-    "from": 320,
-    "to": 325,
+    "from": 280,
+    "to": 285,
     "direction": "forward"
    },
    {
     "name": "work_desk_NE",
-    "from": 326,
-    "to": 331,
+    "from": 286,
+    "to": 291,
     "direction": "forward"
    },
    {
     "name": "work_desk_E",
-    "from": 332,
-    "to": 337,
+    "from": 292,
+    "to": 297,
     "direction": "forward"
    },
    {
     "name": "work_desk_SE",
-    "from": 338,
-    "to": 343,
+    "from": 298,
+    "to": 303,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_S",
+    "from": 304,
+    "to": 307,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_SW",
+    "from": 308,
+    "to": 311,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_W",
+    "from": 312,
+    "to": 315,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_NW",
+    "from": 316,
+    "to": 319,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_N",
+    "from": 320,
+    "to": 323,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_NE",
+    "from": 324,
+    "to": 327,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_E",
+    "from": 328,
+    "to": 331,
+    "direction": "forward"
+   },
+   {
+    "name": "desk_SE",
+    "from": 332,
+    "to": 335,
     "direction": "forward"
    },
    {
     "name": "magic_trick_S",
-    "from": 344,
-    "to": 349,
+    "from": 336,
+    "to": 341,
     "direction": "forward"
    },
    {
     "name": "magic_trick_SW",
-    "from": 350,
-    "to": 355,
+    "from": 342,
+    "to": 347,
     "direction": "forward"
    },
    {
     "name": "magic_trick_W",
-    "from": 356,
-    "to": 361,
+    "from": 348,
+    "to": 353,
     "direction": "forward"
    },
    {
     "name": "magic_trick_NW",
-    "from": 362,
-    "to": 367,
+    "from": 354,
+    "to": 359,
     "direction": "forward"
    },
    {
     "name": "magic_trick_N",
-    "from": 368,
-    "to": 373,
+    "from": 360,
+    "to": 365,
     "direction": "forward"
    },
    {
     "name": "magic_trick_NE",
-    "from": 374,
-    "to": 379,
+    "from": 366,
+    "to": 371,
     "direction": "forward"
    },
    {
     "name": "magic_trick_E",
-    "from": 380,
-    "to": 385,
+    "from": 372,
+    "to": 377,
     "direction": "forward"
    },
    {
     "name": "magic_trick_SE",
-    "from": 386,
-    "to": 391,
+    "from": 378,
+    "to": 383,
     "direction": "forward"
    },
    {
     "name": "eyebrow_waggle_S",
+    "from": 384,
+    "to": 387,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_SW",
+    "from": 388,
+    "to": 391,
+    "direction": "forward"
+   },
+   {
+    "name": "eyebrow_waggle_W",
     "from": 392,
     "to": 395,
     "direction": "forward"
    },
    {
-    "name": "eyebrow_waggle_SW",
+    "name": "eyebrow_waggle_NW",
     "from": 396,
     "to": 399,
     "direction": "forward"
    },
    {
-    "name": "eyebrow_waggle_W",
+    "name": "eyebrow_waggle_N",
     "from": 400,
     "to": 403,
     "direction": "forward"
    },
    {
-    "name": "eyebrow_waggle_NW",
+    "name": "eyebrow_waggle_NE",
     "from": 404,
     "to": 407,
     "direction": "forward"
    },
    {
-    "name": "eyebrow_waggle_N",
+    "name": "eyebrow_waggle_E",
     "from": 408,
     "to": 411,
     "direction": "forward"
    },
    {
-    "name": "eyebrow_waggle_NE",
+    "name": "eyebrow_waggle_SE",
     "from": 412,
     "to": 415,
-    "direction": "forward"
-   },
-   {
-    "name": "eyebrow_waggle_E",
-    "from": 416,
-    "to": 419,
-    "direction": "forward"
-   },
-   {
-    "name": "eyebrow_waggle_SE",
-    "from": 420,
-    "to": 423,
     "direction": "forward"
    }
   ],
@@ -10065,6 +9937,18 @@
     "head": 0.421632787974608,
     "use": 0.46039653842014877
    }
+  },
+  "walk_stride_px": 29.0,
+  "walk_m_per_frame": 0.0801,
+  "walk_pass": {
+   "S": 2,
+   "SW": 7,
+   "W": 7,
+   "NW": 2,
+   "N": 6,
+   "NE": 2,
+   "E": 7,
+   "SE": 7
   }
  }
 }
