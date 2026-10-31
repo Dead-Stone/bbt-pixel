@@ -24,12 +24,14 @@ GEN = os.path.join(ROOT, 'refs_ai', 'gen')
 # The 8-frame loop holds each key pose for 2 frames (the viewer steps walk frames every 0.14 tiles).
 DEFAULT_POSES = {'S': [0, 1, ('flip', 0), 3], 'N': [0, 1, ('flip', 0), 3], 'SW': [0, 1, 2, 3], 'W': [0, 1, 2, 3], 'NW': [0, 1, 2, 3]}
 OVERRIDE = {'sheldon': {'SW': dict(poses=[0, 3, 2, 3]), 'W': dict(poses=[0, 3, 2, 3])},
-            'leonard': {'S': dict(poses=[0, 1, 2, 3]), 'N': dict(poses=[0, 1, 3, 2])},}          # {cid: {dir: dict(file=..., ncols=..., poses=[...])}} for strips that needed a fix
+            'leonard': {'S': dict(poses=[0, 1, 2, 3]), 'N': dict(poses=[0, 1, 3, 2])},
+            'howard': {'S': dict(poses=[0, 1, 2, 3]), 'N': dict(poses=[0, 1, 2, 3]), 'SW': dict(poses=[0, 3, 2, 3]), 'NW': dict(poses=[0, 3, 2, 3])},}          # {cid: {dir: dict(file=..., ncols=..., poses=[...])}} for strips that needed a fix
+KEY_M = {'howard': 140}  # stricter magenta key where the outfit is magenta-ish
 HIP = 0.64             # legs start below the hands (~62% down the figure in front/back views)
 
 
 def source(cid, d):
-    o = dict(file=f'{cid}_walk4_{d}.jpg', nrows=1, row=0, ncols=4, poses=DEFAULT_POSES[d])
+    o = dict(file=f'{cid}_walk4_{d}.jpg', nrows=1, row=0, ncols=4, poses=DEFAULT_POSES[d], km=KEY_M.get(cid, 70))
     o.update(OVERRIDE.get(cid, {}).get(d, {}))
     return o
 
@@ -50,10 +52,11 @@ def legflip(c):
     return P[:, xs.min():xs.max() + 1]
 
 
-def cut_strip(path, nrows, row, ncols=8):
+def cut_strip(path, nrows, row, ncols=8, km=70):
+    """km: magenta-key threshold (min(r,b)-g); raised for outfits that are themselves magenta-ish (Howard's trousers)"""
     rgb = np.array(Image.open(path).convert('RGB'))
     m, g = S.magenta_score(rgb)
-    fg = ~((m > 70) & (g < 150))                   # a bit looser than the PNG turnaround: JPEG ringing
+    fg = ~((m > km) & (g < 150))                   # a bit looser than the PNG turnaround: JPEG ringing
     fg = ndi.binary_opening(fg, np.ones((2, 2)))
     lab, nl = ndi.label(fg); sz = np.bincount(lab.ravel()); sz[0] = 0
     fg = np.isin(lab, np.nonzero(sz >= 60)[0])
@@ -65,7 +68,7 @@ def cut_strip(path, nrows, row, ncols=8):
         mm = fg[y0:y1, x0:x1]
         l2, n2 = ndi.label(mm, np.ones((3, 3))); s2 = np.bincount(l2.ravel()); s2[0] = 0
         mm = (s2 >= max(60, 0.01 * s2.max()))[l2]
-        mm = ndi.binary_fill_holes(mm) & mm | (ndi.binary_fill_holes(mm) & ~((m[y0:y1, x0:x1] > 70) & (g[y0:y1, x0:x1] < 150)))
+        mm = ndi.binary_fill_holes(mm) & mm | (ndi.binary_fill_holes(mm) & ~((m[y0:y1, x0:x1] > km) & (g[y0:y1, x0:x1] < 150)))
         ys, xs = np.nonzero(mm)
         b = (ys.min(), ys.max() + 1, xs.min(), xs.max() + 1)
         sub = rgb[y0:y1, x0:x1][b[0]:b[1], b[2]:b[3]]
@@ -138,7 +141,7 @@ def walk_for(cid, pal, views):
     for d in DEFAULT_POSES:
         src = source(cid, d); p = os.path.join(GEN, src['file'])
         if not os.path.exists(p): return {}
-        cuts = cut_strip(p, src['nrows'], src['row'], src['ncols'])
+        cuts = cut_strip(p, src['nrows'], src['row'], src['ncols'], src.get('km', 70))
         keys = [legflip(cuts[q[1]]) if isinstance(q, tuple) else cuts[q] for q in src['poses']]
         conv = head_lock(convert_strip(cid, keys, pal, views[d]))
         conv = [CV.audit_fix(f, pal) for f in conv]
