@@ -16,7 +16,7 @@ SRC = os.path.join(ROOT, 'refs_ai', 'chatgpt')
 ROWS = ['S', 'SW', 'W', 'NW', 'N']
 NCOL = dict(idle_actions=6, signature=6, sit=2, walk=8, work=6)      # (sit before work: Howard works seated)
 # extra 4-frame sheets (optional per character): seated eating / writing, Howard's standing gadget tinkering
-NCOL_X = dict(sit_eat=4, sit_write=4, work_stand=4)
+NCOL_X = dict(sit_eat=4, sit_write=4, work_stand=4, cook_stir=4)
 KEY_M = {'howard': 140}          # stricter key where the outfit itself is magenta-ish (Howard's trousers)
 
 
@@ -349,7 +349,7 @@ def convert_extra(cid):
         if mode == 'sit':
             # the head match is loose on seated sheets (+-20 %): lock the scale to the base sit frames instead (same
             # seated height per facing, soles on 119, torso on x=64) so the base sit's seat anchor fits these frames too
-            base = np.array(Image.open(os.path.join(ROOT, 'characters', cid, f'chr_{cid}_sit.png')).convert('RGBA'))
+            base = np.array(Image.open(os.path.join(ROOT, 'characters', cid, f'chr_{cid}_sit.png')).convert('RGBA'))[:128]   # row 0 = base sit (extra rows below)
             hgt = lambda f: np.ptp(np.nonzero((f[..., 3] > 0).any(1))[0])
             r = float(np.median([hgt(base[:, i * 128:(i + 1) * 128]) / np.median([hgt(f) for f in out[kind][d]]) for i, d in enumerate(ROWS)]))
             if abs(r - 1) > 0.02:

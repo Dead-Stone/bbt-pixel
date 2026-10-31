@@ -187,6 +187,8 @@ def build(cid, conv):
     seq('idle', lambda d: [(out[A_][d][NEUTRAL], 1400), (I.breathe(out[A_][d][NEUTRAL]), 1100)])
     WR = {d: walk_row(out, d) for d in ['S', 'SW', 'W', 'NW', 'N']}
     seq('walk', lambda d: [(f, 100) for f in head_lock(WR[d][0])])   # one head per row: no face boil
+    if 'cook_stir' in out:      # cook_stir.png (Raj): standing at the stove stirring with a wooden spoon -- viewer plays it for cooking
+        seq('cook', lambda d: [(f, ms) for f, ms in zip(out['cook_stir'][d], (320, 260, 320, 260))])
     for a, c in ACT.items():
         seq(f'act_{a}', lambda d, c=c: [(out[A_][d][c], 600), (I.breathe(out[A_][d][c]), 600)])
     seq('talk', lambda d: [(out[A_][d][1], 400), (out[A_][d][NEUTRAL], 400), (I.breathe(out[A_][d][1]), 400), (out[A_][d][NEUTRAL], 400)])
