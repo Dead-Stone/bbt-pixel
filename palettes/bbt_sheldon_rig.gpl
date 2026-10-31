@@ -2,11 +2,11 @@ GIMP Palette
 Name: bbt_sheldon_rig
 Columns: 5
 #
-255 219 186	skin_hi
+255 226 196	skin_hi
 242 198 162	skin_base
-194 139 117	skin_sh
-150  93  82	skin_deep
- 82  46  42	skin_ol
+208 144 117	skin_sh
+169 100  83	skin_deep
+ 97  50  41	skin_ol
 137 103  72	hair_hi
 118  80  50	hair_base
  94  49  32	hair_sh
@@ -62,3 +62,13 @@ Columns: 5
  31  30  37	marker_sh
  23  22  29	marker_deep
  20  19  26	marker_ol
+255 253 248	eyew_hi
+246 244 238	eyew_base
+197 190 182	eyew_sh
+153 142 135	eyew_deep
+ 84  75  71	eyew_ol
+255 199 173	cheek_hi
+240 173 146	cheek_base
+192 115 103	cheek_sh
+149  73  72	cheek_deep
+ 82  37  38	cheek_ol

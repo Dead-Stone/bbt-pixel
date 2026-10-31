@@ -2,9 +2,9 @@
  "palette_violations": 0,
  "head_top_min": 2,
  "head_top_max": 18,
- "idle_S_head_top": 17,
+ "idle_S_head_top": 16,
  "lowest_px_min": 113,
- "lowest_px_max": 122,
+ "lowest_px_max": 123,
  "frames": 456,
  "sheet": [
   2048,
