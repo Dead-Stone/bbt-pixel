@@ -2,11 +2,11 @@ GIMP Palette
 Name: bbt_raj_rig
 Columns: 5
 #
-203 153 115	skin_hi
+199 160 125	skin_hi
 178 122  84	skin_base
-142  77  55	skin_sh
-110  45  36	skin_deep
- 61  20  18	skin_ol
+153  77  50	skin_sh
+125  45  29	skin_deep
+ 71  20  12	skin_ol
  41  34  34	hair_hi
  30  24  24	hair_base
  24  18  19	hair_sh
@@ -56,3 +56,13 @@ Columns: 5
 160  15  33	marker_sh
 124   3  29	marker_deep
  68   0  18	marker_ol
+255 253 248	eyew_hi
+246 244 238	eyew_base
+197 190 182	eyew_sh
+153 142 135	eyew_deep
+ 84  75  71	eyew_ol
+221 154 124	cheek_hi
+194 119  90	cheek_base
+155  72  59	cheek_sh
+120  39  38	cheek_deep
+ 66  19  21	cheek_ol

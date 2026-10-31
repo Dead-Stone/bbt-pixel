@@ -1,8 +1,8 @@
 {
  "palette_violations": 0,
- "head_top_min": 1,
+ "head_top_min": 2,
  "head_top_max": 26,
- "idle_S_head_top": 24,
+ "idle_S_head_top": 23,
  "lowest_px_min": 113,
  "lowest_px_max": 122,
  "frames": 352,
@@ -14,5 +14,5 @@
   0,
   255
  ],
- "seconds": 27
+ "seconds": 26
 }
