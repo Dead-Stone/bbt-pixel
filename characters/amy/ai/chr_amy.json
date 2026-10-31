@@ -2991,16 +2991,5296 @@
     "h": 128
    },
    "duration": 100
+  },
+  {
+   "filename": "chr_amy_act_think_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1024,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_think_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1152,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_talk_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1280,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_eat_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1408,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_drink_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_SW_00",
+   "frame": {
+    "x": 1280,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_SW_01",
+   "frame": {
+    "x": 1408,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_NW_00",
+   "frame": {
+    "x": 1792,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_NW_01",
+   "frame": {
+    "x": 1920,
+    "y": 1536,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_N_00",
+   "frame": {
+    "x": 0,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_N_01",
+   "frame": {
+    "x": 128,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_NE_00",
+   "frame": {
+    "x": 256,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_NE_01",
+   "frame": {
+    "x": 384,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_E_00",
+   "frame": {
+    "x": 512,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_E_01",
+   "frame": {
+    "x": 640,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_SE_00",
+   "frame": {
+    "x": 768,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_act_phone_SE_01",
+   "frame": {
+    "x": 896,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_talk_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_S_03",
+   "frame": {
+    "x": 1408,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SW_00",
+   "frame": {
+    "x": 1536,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SW_01",
+   "frame": {
+    "x": 1664,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SW_02",
+   "frame": {
+    "x": 1792,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SW_03",
+   "frame": {
+    "x": 1920,
+    "y": 1664,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_W_00",
+   "frame": {
+    "x": 0,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_W_01",
+   "frame": {
+    "x": 128,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_W_02",
+   "frame": {
+    "x": 256,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_W_03",
+   "frame": {
+    "x": 384,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NW_00",
+   "frame": {
+    "x": 512,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NW_01",
+   "frame": {
+    "x": 640,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NW_02",
+   "frame": {
+    "x": 768,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NW_03",
+   "frame": {
+    "x": 896,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_N_00",
+   "frame": {
+    "x": 1024,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_N_01",
+   "frame": {
+    "x": 1152,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_N_02",
+   "frame": {
+    "x": 1280,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_N_03",
+   "frame": {
+    "x": 1408,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NE_00",
+   "frame": {
+    "x": 1536,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NE_01",
+   "frame": {
+    "x": 1664,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NE_02",
+   "frame": {
+    "x": 1792,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_NE_03",
+   "frame": {
+    "x": 1920,
+    "y": 1792,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_E_00",
+   "frame": {
+    "x": 0,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_E_01",
+   "frame": {
+    "x": 128,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_E_02",
+   "frame": {
+    "x": 256,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_E_03",
+   "frame": {
+    "x": 384,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SE_00",
+   "frame": {
+    "x": 512,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SE_01",
+   "frame": {
+    "x": 640,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SE_02",
+   "frame": {
+    "x": 768,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_talk_SE_03",
+   "frame": {
+    "x": 896,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_gesture_S_00",
+   "frame": {
+    "x": 1024,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_S_01",
+   "frame": {
+    "x": 1152,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_S_02",
+   "frame": {
+    "x": 1280,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_SW_00",
+   "frame": {
+    "x": 1408,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_SW_01",
+   "frame": {
+    "x": 1536,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_SW_02",
+   "frame": {
+    "x": 1664,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_W_00",
+   "frame": {
+    "x": 1792,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_W_01",
+   "frame": {
+    "x": 1920,
+    "y": 1920,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_W_02",
+   "frame": {
+    "x": 0,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_NW_00",
+   "frame": {
+    "x": 128,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_NW_01",
+   "frame": {
+    "x": 256,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_NW_02",
+   "frame": {
+    "x": 384,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_N_00",
+   "frame": {
+    "x": 512,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_N_01",
+   "frame": {
+    "x": 640,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_N_02",
+   "frame": {
+    "x": 768,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_NE_00",
+   "frame": {
+    "x": 896,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_NE_01",
+   "frame": {
+    "x": 1024,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_NE_02",
+   "frame": {
+    "x": 1152,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_E_00",
+   "frame": {
+    "x": 1280,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_E_01",
+   "frame": {
+    "x": 1408,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_E_02",
+   "frame": {
+    "x": 1536,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_gesture_SE_00",
+   "frame": {
+    "x": 1664,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_gesture_SE_01",
+   "frame": {
+    "x": 1792,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 200
+  },
+  {
+   "filename": "chr_amy_gesture_SE_02",
+   "frame": {
+    "x": 1920,
+    "y": 2048,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 600
+  },
+  {
+   "filename": "chr_amy_work_S_00",
+   "frame": {
+    "x": 0,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_S_01",
+   "frame": {
+    "x": 128,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_S_02",
+   "frame": {
+    "x": 256,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_S_03",
+   "frame": {
+    "x": 384,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_S_04",
+   "frame": {
+    "x": 512,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_S_05",
+   "frame": {
+    "x": 640,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SW_00",
+   "frame": {
+    "x": 768,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SW_01",
+   "frame": {
+    "x": 896,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SW_02",
+   "frame": {
+    "x": 1024,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SW_03",
+   "frame": {
+    "x": 1152,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SW_04",
+   "frame": {
+    "x": 1280,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SW_05",
+   "frame": {
+    "x": 1408,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_W_00",
+   "frame": {
+    "x": 1536,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_W_01",
+   "frame": {
+    "x": 1664,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_W_02",
+   "frame": {
+    "x": 1792,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_W_03",
+   "frame": {
+    "x": 1920,
+    "y": 2176,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_W_04",
+   "frame": {
+    "x": 0,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_W_05",
+   "frame": {
+    "x": 128,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NW_00",
+   "frame": {
+    "x": 256,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NW_01",
+   "frame": {
+    "x": 384,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NW_02",
+   "frame": {
+    "x": 512,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NW_03",
+   "frame": {
+    "x": 640,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NW_04",
+   "frame": {
+    "x": 768,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NW_05",
+   "frame": {
+    "x": 896,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_N_00",
+   "frame": {
+    "x": 1024,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_N_01",
+   "frame": {
+    "x": 1152,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_N_02",
+   "frame": {
+    "x": 1280,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_N_03",
+   "frame": {
+    "x": 1408,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_N_04",
+   "frame": {
+    "x": 1536,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_N_05",
+   "frame": {
+    "x": 1664,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NE_00",
+   "frame": {
+    "x": 1792,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NE_01",
+   "frame": {
+    "x": 1920,
+    "y": 2304,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NE_02",
+   "frame": {
+    "x": 0,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NE_03",
+   "frame": {
+    "x": 128,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NE_04",
+   "frame": {
+    "x": 256,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_NE_05",
+   "frame": {
+    "x": 384,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_E_00",
+   "frame": {
+    "x": 512,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_E_01",
+   "frame": {
+    "x": 640,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_E_02",
+   "frame": {
+    "x": 768,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_E_03",
+   "frame": {
+    "x": 896,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_E_04",
+   "frame": {
+    "x": 1024,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_E_05",
+   "frame": {
+    "x": 1152,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SE_00",
+   "frame": {
+    "x": 1280,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SE_01",
+   "frame": {
+    "x": 1408,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SE_02",
+   "frame": {
+    "x": 1536,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SE_03",
+   "frame": {
+    "x": 1664,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SE_04",
+   "frame": {
+    "x": 1792,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_work_SE_05",
+   "frame": {
+    "x": 1920,
+    "y": 2432,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 300
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_S_00",
+   "frame": {
+    "x": 0,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_S_01",
+   "frame": {
+    "x": 128,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_S_02",
+   "frame": {
+    "x": 256,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_S_03",
+   "frame": {
+    "x": 384,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SW_00",
+   "frame": {
+    "x": 512,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SW_01",
+   "frame": {
+    "x": 640,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SW_02",
+   "frame": {
+    "x": 768,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SW_03",
+   "frame": {
+    "x": 896,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_W_00",
+   "frame": {
+    "x": 1024,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_W_01",
+   "frame": {
+    "x": 1152,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_W_02",
+   "frame": {
+    "x": 1280,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_W_03",
+   "frame": {
+    "x": 1408,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NW_00",
+   "frame": {
+    "x": 1536,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NW_01",
+   "frame": {
+    "x": 1664,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NW_02",
+   "frame": {
+    "x": 1792,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NW_03",
+   "frame": {
+    "x": 1920,
+    "y": 2560,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_N_00",
+   "frame": {
+    "x": 0,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_N_01",
+   "frame": {
+    "x": 128,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_N_02",
+   "frame": {
+    "x": 256,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_N_03",
+   "frame": {
+    "x": 384,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NE_00",
+   "frame": {
+    "x": 512,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NE_01",
+   "frame": {
+    "x": 640,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NE_02",
+   "frame": {
+    "x": 768,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_NE_03",
+   "frame": {
+    "x": 896,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_E_00",
+   "frame": {
+    "x": 1024,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_E_01",
+   "frame": {
+    "x": 1152,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_E_02",
+   "frame": {
+    "x": 1280,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_E_03",
+   "frame": {
+    "x": 1408,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SE_00",
+   "frame": {
+    "x": 1536,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SE_01",
+   "frame": {
+    "x": 1664,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SE_02",
+   "frame": {
+    "x": 1792,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 500
+  },
+  {
+   "filename": "chr_amy_neuro_lecture_SE_03",
+   "frame": {
+    "x": 1920,
+    "y": 2688,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_S_00",
+   "frame": {
+    "x": 0,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_S_01",
+   "frame": {
+    "x": 128,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_S_02",
+   "frame": {
+    "x": 256,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_SW_00",
+   "frame": {
+    "x": 384,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_SW_01",
+   "frame": {
+    "x": 512,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_SW_02",
+   "frame": {
+    "x": 640,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_W_00",
+   "frame": {
+    "x": 768,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_W_01",
+   "frame": {
+    "x": 896,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_W_02",
+   "frame": {
+    "x": 1024,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_NW_00",
+   "frame": {
+    "x": 1152,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_NW_01",
+   "frame": {
+    "x": 1280,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_NW_02",
+   "frame": {
+    "x": 1408,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_N_00",
+   "frame": {
+    "x": 1536,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_N_01",
+   "frame": {
+    "x": 1664,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_N_02",
+   "frame": {
+    "x": 1792,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_NE_00",
+   "frame": {
+    "x": 1920,
+    "y": 2816,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_NE_01",
+   "frame": {
+    "x": 0,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_NE_02",
+   "frame": {
+    "x": 128,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_E_00",
+   "frame": {
+    "x": 256,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_E_01",
+   "frame": {
+    "x": 384,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_E_02",
+   "frame": {
+    "x": 512,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_SE_00",
+   "frame": {
+    "x": 640,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_SE_01",
+   "frame": {
+    "x": 768,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
+  },
+  {
+   "filename": "chr_amy_excited_clap_SE_02",
+   "frame": {
+    "x": 896,
+    "y": 2944,
+    "w": 128,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 128,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 128,
+    "h": 128
+   },
+   "duration": 400
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/ai_import/build.py",
-  "version": "ai1",
+  "app": "bbt-pixel/tools/ai_import/full.py",
+  "version": "ai2",
   "image": "chr_amy.png",
   "format": "RGBA8888",
   "size": {
    "w": 2048,
-   "h": 1152
+   "h": 3072
   },
   "scale": "1",
   "pivot": [
@@ -3151,6 +8431,486 @@
     "from": 128,
     "to": 135,
     "direction": "forward"
+   },
+   {
+    "name": "act_think_S",
+    "from": 136,
+    "to": 137,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_SW",
+    "from": 138,
+    "to": 139,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_W",
+    "from": 140,
+    "to": 141,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_NW",
+    "from": 142,
+    "to": 143,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_N",
+    "from": 144,
+    "to": 145,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_NE",
+    "from": 146,
+    "to": 147,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_E",
+    "from": 148,
+    "to": 149,
+    "direction": "forward"
+   },
+   {
+    "name": "act_think_SE",
+    "from": 150,
+    "to": 151,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_S",
+    "from": 152,
+    "to": 153,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_SW",
+    "from": 154,
+    "to": 155,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_W",
+    "from": 156,
+    "to": 157,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_NW",
+    "from": 158,
+    "to": 159,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_N",
+    "from": 160,
+    "to": 161,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_NE",
+    "from": 162,
+    "to": 163,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_E",
+    "from": 164,
+    "to": 165,
+    "direction": "forward"
+   },
+   {
+    "name": "act_talk_SE",
+    "from": 166,
+    "to": 167,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_S",
+    "from": 168,
+    "to": 169,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_SW",
+    "from": 170,
+    "to": 171,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_W",
+    "from": 172,
+    "to": 173,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_NW",
+    "from": 174,
+    "to": 175,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_N",
+    "from": 176,
+    "to": 177,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_NE",
+    "from": 178,
+    "to": 179,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_E",
+    "from": 180,
+    "to": 181,
+    "direction": "forward"
+   },
+   {
+    "name": "act_eat_SE",
+    "from": 182,
+    "to": 183,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_S",
+    "from": 184,
+    "to": 185,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_SW",
+    "from": 186,
+    "to": 187,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_W",
+    "from": 188,
+    "to": 189,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_NW",
+    "from": 190,
+    "to": 191,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_N",
+    "from": 192,
+    "to": 193,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_NE",
+    "from": 194,
+    "to": 195,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_E",
+    "from": 196,
+    "to": 197,
+    "direction": "forward"
+   },
+   {
+    "name": "act_drink_SE",
+    "from": 198,
+    "to": 199,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_S",
+    "from": 200,
+    "to": 201,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_SW",
+    "from": 202,
+    "to": 203,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_W",
+    "from": 204,
+    "to": 205,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_NW",
+    "from": 206,
+    "to": 207,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_N",
+    "from": 208,
+    "to": 209,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_NE",
+    "from": 210,
+    "to": 211,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_E",
+    "from": 212,
+    "to": 213,
+    "direction": "forward"
+   },
+   {
+    "name": "act_phone_SE",
+    "from": 214,
+    "to": 215,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_S",
+    "from": 216,
+    "to": 219,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_SW",
+    "from": 220,
+    "to": 223,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_W",
+    "from": 224,
+    "to": 227,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_NW",
+    "from": 228,
+    "to": 231,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_N",
+    "from": 232,
+    "to": 235,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_NE",
+    "from": 236,
+    "to": 239,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_E",
+    "from": 240,
+    "to": 243,
+    "direction": "forward"
+   },
+   {
+    "name": "talk_SE",
+    "from": 244,
+    "to": 247,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_S",
+    "from": 248,
+    "to": 250,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_SW",
+    "from": 251,
+    "to": 253,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_W",
+    "from": 254,
+    "to": 256,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_NW",
+    "from": 257,
+    "to": 259,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_N",
+    "from": 260,
+    "to": 262,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_NE",
+    "from": 263,
+    "to": 265,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_E",
+    "from": 266,
+    "to": 268,
+    "direction": "forward"
+   },
+   {
+    "name": "gesture_SE",
+    "from": 269,
+    "to": 271,
+    "direction": "forward"
+   },
+   {
+    "name": "work_S",
+    "from": 272,
+    "to": 277,
+    "direction": "forward"
+   },
+   {
+    "name": "work_SW",
+    "from": 278,
+    "to": 283,
+    "direction": "forward"
+   },
+   {
+    "name": "work_W",
+    "from": 284,
+    "to": 289,
+    "direction": "forward"
+   },
+   {
+    "name": "work_NW",
+    "from": 290,
+    "to": 295,
+    "direction": "forward"
+   },
+   {
+    "name": "work_N",
+    "from": 296,
+    "to": 301,
+    "direction": "forward"
+   },
+   {
+    "name": "work_NE",
+    "from": 302,
+    "to": 307,
+    "direction": "forward"
+   },
+   {
+    "name": "work_E",
+    "from": 308,
+    "to": 313,
+    "direction": "forward"
+   },
+   {
+    "name": "work_SE",
+    "from": 314,
+    "to": 319,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_S",
+    "from": 320,
+    "to": 323,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_SW",
+    "from": 324,
+    "to": 327,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_W",
+    "from": 328,
+    "to": 331,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_NW",
+    "from": 332,
+    "to": 335,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_N",
+    "from": 336,
+    "to": 339,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_NE",
+    "from": 340,
+    "to": 343,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_E",
+    "from": 344,
+    "to": 347,
+    "direction": "forward"
+   },
+   {
+    "name": "neuro_lecture_SE",
+    "from": 348,
+    "to": 351,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_S",
+    "from": 352,
+    "to": 354,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_SW",
+    "from": 355,
+    "to": 357,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_W",
+    "from": 358,
+    "to": 360,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_NW",
+    "from": 361,
+    "to": 363,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_N",
+    "from": 364,
+    "to": 366,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_NE",
+    "from": 367,
+    "to": 369,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_E",
+    "from": 370,
+    "to": 372,
+    "direction": "forward"
+   },
+   {
+    "name": "excited_clap_SE",
+    "from": 373,
+    "to": 375,
+    "direction": "forward"
    }
   ],
   "source": "refs_ai/chatgpt_penny_1.png (ChatGPT cast turnaround, row Amy)",
@@ -3173,7 +8933,34 @@
    },
    "fidget_why": "idle frame 7 is the blink (eyes repainted on purpose)"
   },
-  "note": "stand = the converted still; idle = 1-px breath + blink (tools/ai_import/idle.py); walk = 4 generated key poses per direction, each held 2 frames (tools/ai_import/walk.py)",
-  "source_walk": "refs_ai/gen/amy_walk4_<dir>.jpg (GenerateImage, turnaround as reference)"
+  "note": "stand = turnaround still; idle = breath + blink; walk/act_*/talk/gesture/work/emotes = ChatGPT action sheets, one shared palette (bbt_amy_ai.gpl), heights normalised to the turnaround by crown/head matching (sheets.py). Work frames: the drawn prop (bench/whiteboard/table/telescope/microscope/door) is stripped and the frame stays 128x128 -- the env already draws the furniture at every work hook.",
+  "source_actions": "refs_ai/chatgpt/amy/{idle_actions,signature,sit,walk,work}.png (ChatGPT sprite sheets; rows S, SW, W, NW, N on magenta) via tools/ai_import/sheets.py",
+  "scales": {
+   "idle_actions": {
+    "crown": 0.41187511673473254,
+    "head": 0.3800369924613271,
+    "use": 0.41187511673473254
+   },
+   "signature": {
+    "crown": 0.4118479201338356,
+    "head": 0.41732351769468007,
+    "use": 0.4118479201338356
+   },
+   "sit": {
+    "corr": 1.0643159161687659,
+    "head": 0.3403524831318394,
+    "use": 0.3622425649047781
+   },
+   "walk": {
+    "crown": 0.5284644959478464,
+    "head": 0.5057776133552218,
+    "use": 0.5284644959478464
+   },
+   "work": {
+    "crown": 0.4857820241728134,
+    "head": 0.43443975842550864,
+    "use": 0.4857820241728134
+   }
+  }
  }
 }

@@ -14,7 +14,7 @@
    ],
    "seat": [
     64.0,
-    93.6
+    97.0
    ],
    "dir": "S"
   },
@@ -31,8 +31,8 @@
     116
    ],
    "seat": [
-    63.9,
-    93.5
+    64.0,
+    97.0
    ],
    "dir": "SW"
   },
@@ -49,8 +49,8 @@
     116
    ],
    "seat": [
-    63.5,
-    93.5
+    64.0,
+    97.0
    ],
    "dir": "W"
   },
@@ -67,8 +67,8 @@
     116
    ],
    "seat": [
-    63.9,
-    93.5
+    64.0,
+    97.0
    ],
    "dir": "NW"
   },
@@ -86,7 +86,7 @@
    ],
    "seat": [
     64.0,
-    93.5
+    97.0
    ],
    "dir": "N"
   },
@@ -103,8 +103,8 @@
     116
    ],
    "seat": [
-    64.1,
-    93.5
+    64.0,
+    97.0
    ],
    "dir": "NE"
   },
@@ -121,8 +121,8 @@
     116
    ],
    "seat": [
-    64.5,
-    93.5
+    64.0,
+    97.0
    ],
    "dir": "E"
   },
@@ -139,15 +139,15 @@
     116
    ],
    "seat": [
-    64.1,
-    93.5
+    64.0,
+    97.0
    ],
    "dir": "SE"
   }
  ],
  "meta": {
-  "app": "bbt-pixel/tools/rig/build.py",
-  "version": "rig1",
+  "app": "bbt-pixel/tools/ai_import/sit.py",
+  "version": "ai1",
   "image": "chr_amy_sit.png",
   "size": {
    "w": 1024,
@@ -158,7 +158,8 @@
    116
   ],
   "lift_units": 0.0,
-  "seat_cm": 41.6,
-  "note": "rig seated pose (tools/rig/motion.py sit): pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py); feet flat on the floor, seat height 42 cm"
+  "seat_cm": 43,
+  "source": "refs_ai/chatgpt/amy/sit.png (ChatGPT sit sheet, variant 1 of 2; tools/ai_import/sheets.py)",
+  "note": "AI seated pose (tools/ai_import/sit.py): pivot = floor point under the hips; seat = butt contact point (place it on the seat surface, harness/seating.py); feet flat on the floor"
  }
 }
