@@ -32,10 +32,14 @@ def sit_frames(cid):
     if cid not in _SIT:
         j = json.load(open(f'{ROOT}/characters/{cid}/chr_{cid}_sit.json'))
         sheet = np.array(Image.open(f'{ROOT}/characters/{cid}/chr_{cid}_sit.png').convert('RGBA'))
-        fr = {}
+        fr = {}; alt = {}
         for f in j['frames']:
             x, y, w, h = (f['frame'][k] for k in 'xywh')
-            fr[f['dir']] = dict(img=sheet[y:y + h, x:x + w], seat=tuple(f['seat']), pivot=tuple(f['pivot']))
+            e = dict(img=sheet[y:y + h, x:x + w], seat=tuple(f['seat']), pivot=tuple(f['pivot']))
+            if f.get('anim', 'sit') == 'sit': fr[f['dir']] = e
+            else: alt.setdefault(f['dir'], []).append(e)      # sit_eat / sit_write rows: only widen the occluder mask
+        for d, L in alt.items():
+            if d in fr: fr[d]['alt'] = L
         _SIT[cid] = fr
     return _SIT[cid]
 def sit_sprite(cid, d):
@@ -89,11 +93,10 @@ def sitter_mask(sp, cids=CAST):
     """union of every cast member's sit frame at this seat: (bool mask, screen x0, y0)"""
     sx, sy = scr(sp['seat'][0], sp['seat'][1], sp['seat_z'])
     m = np.zeros((128, 128), bool); ax0 = ay0 = None
-    for c in cids:
-        img, (ax, ay) = sit_sprite(c, sp['sit_dir'])
+    for c, img, (ax, ay) in [(c, e['img'], e['seat']) for c in cids for F in [sit_frames(c)[sp['sit_dir']]] for e in [F] + F.get('alt', [])]:
         dx, dy = int(round(sx - ax)), int(round(sy - ay))
         if ax0 is None: ax0, ay0 = dx, dy
-        sh = np.zeros_like(m); a = img[..., 3] > 0
+        a = img[..., 3] > 0
         ox, oy = dx - ax0, dy - ay0
         ys, xs = np.nonzero(a); ys = ys + oy; xs = xs + ox
         ok = (ys >= 0) & (ys < 128) & (xs >= 0) & (xs < 128); m[ys[ok], xs[ok]] = True

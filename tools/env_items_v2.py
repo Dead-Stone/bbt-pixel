@@ -951,7 +951,7 @@ def ufo_lamp(state='on'):
             cyl(0.5, 0.5, 0.3, 1.46, 1.5, 'lamp' if on else 'metal', n=16)]
 
 @item('raj_buttercup_chair', RAJ, (1, 1), 0.95, 'R4', 'P1', notes='swivel bucket "buttercup" chair on a chrome pedestal',
-      hooks=[H('seat0', 'sit', (0.5, 0.55), (0, 1), 'sit_chair', approach=(0, 1))])
+      hooks=[dict(H('seat0', 'sit', (0.5, 0.55), (0, 1), 'sit_chair', approach=(0, 1)), seat_off=[0, -0.1])])   # back into the bucket
 def buttercup(state='default'):
     P = [cyl(0.5, 0.5, 0.28, 0, 0.03, 'chrome', n=12), cyl(0.5, 0.5, 0.04, 0.03, 0.32, 'chrome', n=6)]
     P.append(cyl(0.5, 0.5, 0.34, 0.32, 0.46, 'mustard', n=16))
@@ -961,7 +961,8 @@ def buttercup(state='default'):
     return P
 
 @item('raj_dining_round', RAJ, (2, 2), 0.95, 'R1', 'P1', notes='round walnut dining table with four metallic chairs (built in); holds the glowing-crystal display',
-      hooks=[H(f'seat{i}', 'sit', (1 + 0.78*math.cos(a), 1 + 0.78*math.sin(a)), (-math.cos(a), -math.sin(a)), 'sit_chair_eat', approach=(int(1 + 0.78*math.cos(a)), int(1 + 0.78*math.sin(a))))
+      hooks=[dict(H(f'seat{i}', 'sit', (1 + 0.78*math.cos(a), 1 + 0.78*math.sin(a)), (-math.cos(a), -math.sin(a)), 'sit_chair_eat', approach=(int(1 + 0.78*math.cos(a)), int(1 + 0.78*math.sin(a)))),
+                  seat_off=[0.08*math.cos(a), 0.08*math.sin(a)])      # hips back against the chair's backrest
              for i, a in enumerate((math.pi/2, 0.0, -math.pi/2, math.pi))] + [H('centre', 'place_item', (1.0, 1.0), (0, 1), z=0.75)])
 def raj_dining(state='default'):
     P = [cyl(1.0, 1.0, 0.3, 0, 0.04, 'wood_dk', n=12), cyl(1.0, 1.0, 0.07, 0.04, 0.72, 'wood_dk', n=8), cyl(1.0, 1.0, 0.6, 0.72, 0.76, 'wood', n=20)]

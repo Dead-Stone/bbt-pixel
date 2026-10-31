@@ -11,7 +11,10 @@ from seating import seat_place          # shared with sim (key, z) so the sheet 
 
 def load_char(cid):
     j = json.load(open(f'{ROOT}/characters/{cid}/chr_{cid}_sit.json'))
-    return Image.open(f'{ROOT}/characters/{cid}/chr_{cid}_sit.png').convert('RGBA'), {f['dir']: f for f in j['frames']}
+    fr = {f['dir']: f for f in j['frames'] if f.get('anim', 'sit') == 'sit'}
+    for f in j['frames']:      # SIT_ANIM=sit_eat|sit_write: draw that loop's frame 1 where the character has it
+        if f.get('anim') == os.environ.get('SIT_ANIM') and f.get('k') == 1: fr[f['dir']] = f
+    return Image.open(f'{ROOT}/characters/{cid}/chr_{cid}_sit.png').convert('RGBA'), fr
 CH = {c: load_char(c) for c in CIDS}
 
 def render(loc, occupants):

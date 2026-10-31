@@ -237,7 +237,7 @@ def desk_4a(state='on'):
     return P
 
 @item('4a_office_chair', '4A', (1, 1), 1.05, 'R4', 'P2',
-      hooks=[H('seat0', 'sit', (0.5, 0.55), (0, 1), 'sit_desk', approach=(0, 1))])
+      hooks=[dict(H('seat0', 'sit', (0.5, 0.55), (0, 1), 'sit_desk', approach=(0, 1)), seat_off=[0, -0.15])])   # hips against the backrest
 def office_chair(state='default'):
     P = [cyl(0.5, 0.5, 0.3, 0.02, 0.06, 'dark', n=5), cyl(0.5, 0.5, 0.035, 0.06, 0.42, 'metal')]
     P.append(box(0.22, 0.24, 0.42, 0.78, 0.8, 0.5, 'black'))

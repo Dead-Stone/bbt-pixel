@@ -545,6 +545,11 @@ def seat_place4(iid, hook_id, idx=0):
     import seating as SG
     x, y, fac = world_hook(iid, hook_id, idx)
     hd = next(h for h in E.ITEMS[iid]['hooks'] if h['id'] == hook_id)
+    if hd.get('seat_off'):     # canonical offset -> world: rotate by the angle between canonical and placed facing
+        import math
+        V = dict(S=(1, 1), SW=(0, 1), W=(-1, 1), NW=(-1, 0), N=(-1, -1), NE=(0, -1), E=(1, -1), SE=(1, 0))
+        a = math.atan2(*V[fac][::-1]) - math.atan2(hd['facing'][1], hd['facing'][0]); ox, oy = hd['seat_off']
+        hd = dict(hd, seat_off=[ox * math.cos(a) - oy * math.sin(a), ox * math.sin(a) + oy * math.cos(a)])
     return SG.place(dict(pos=[x, y], z=hd.get('z', 0.0), facing=fac, type=hd['type']), geo4(), hd)
 def seat_char(cid, iid, hook_id, idx=0):
     import seating as SG
