@@ -45,6 +45,13 @@ const CLIPS = [  // name, query, sim start, sim end, fps[, viewport w, h] (GIFs 
     ['12:08:05', '12:08:12', 'loc=floor4&follow=penny&zoom=15.7'],
     ['17:40:46', '17:40:52', 'loc=lobby&follow=sheldon&zoom=7.9'],
     ['08:19:54', '08:20:01', 'loc=ait_physics&follow=sheldon&zoom=12.5']], null, 8, 240, 240],
+  // walk_xs 8-pose cycle (X, T, |, T, X, T, |, T at 8 poses/s): same Penny / Sheldon segments as walk_xs_penny_sheldon,
+  // at game scale; tools/ai_import/gif_3x.py then makes walk8_smooth_penny_sheldon.gif = this clip + a 3x nearest blow-up beside it
+  ['walk8_smooth_1x.gif', 'view=all&speed=1&auto=0', [
+    ['21:51:35', '21:51:42', 'loc=lobby&follow=penny&zoom=3.94'],
+    ['12:08:05', '12:08:12', 'loc=floor4&follow=penny&zoom=8.47'],
+    ['17:40:46', '17:40:52', 'loc=lobby&follow=sheldon&zoom=3.94'],
+    ['08:19:54', '08:20:01', 'loc=ait_physics&follow=sheldon&zoom=6.6']], null, 8, 140, 240],
   ['clip_sheldon_walk_ai.gif', 'loc=floor4&view=all&follow=sheldon&zoom=3&speed=1&auto=0', '17:44:44', '17:44:58', 5, 400, 320],
 ];
 const sec = s => { const [h, m, x] = s.split(':').map(Number); return h * 3600 + m * 60 + (x || 0); };

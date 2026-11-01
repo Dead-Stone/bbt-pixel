@@ -8,317 +8,637 @@
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_S_1_|",
+   "filename": "walkxs_S_1_T",
    "frame": {
     "x": 128,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_S_2_X",
+   "filename": "walkxs_S_2_|",
    "frame": {
     "x": 256,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_S_3_|",
+   "filename": "walkxs_S_3_T",
    "frame": {
     "x": 384,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SW_0_X",
+   "filename": "walkxs_S_4_X",
    "frame": {
     "x": 512,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SW_1_|",
+   "filename": "walkxs_S_5_T",
    "frame": {
     "x": 640,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SW_2_X",
+   "filename": "walkxs_S_6_|",
    "frame": {
     "x": 768,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SW_3_|",
+   "filename": "walkxs_S_7_T",
    "frame": {
     "x": 896,
     "y": 0,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_0_X",
+   "frame": {
+    "x": 0,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_1_T",
+   "frame": {
+    "x": 128,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_2_|",
+   "frame": {
+    "x": 256,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_3_T",
+   "frame": {
+    "x": 384,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_4_X",
+   "frame": {
+    "x": 512,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_5_T",
+   "frame": {
+    "x": 640,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_6_|",
+   "frame": {
+    "x": 768,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SW_7_T",
+   "frame": {
+    "x": 896,
+    "y": 128,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
   },
   {
    "filename": "walkxs_W_0_X",
    "frame": {
     "x": 0,
-    "y": 128,
+    "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_W_1_|",
+   "filename": "walkxs_W_1_T",
    "frame": {
     "x": 128,
-    "y": 128,
+    "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_W_2_X",
+   "filename": "walkxs_W_2_|",
    "frame": {
     "x": 256,
-    "y": 128,
+    "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_W_3_|",
+   "filename": "walkxs_W_3_T",
    "frame": {
     "x": 384,
-    "y": 128,
+    "y": 256,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_W_4_X",
+   "frame": {
+    "x": 512,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_W_5_T",
+   "frame": {
+    "x": 640,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_W_6_|",
+   "frame": {
+    "x": 768,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_W_7_T",
+   "frame": {
+    "x": 896,
+    "y": 256,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
   },
   {
    "filename": "walkxs_NW_0_X",
    "frame": {
-    "x": 512,
-    "y": 128,
+    "x": 0,
+    "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_NW_1_|",
+   "filename": "walkxs_NW_1_T",
+   "frame": {
+    "x": 128,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NW_2_|",
+   "frame": {
+    "x": 256,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NW_3_T",
+   "frame": {
+    "x": 384,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NW_4_X",
+   "frame": {
+    "x": 512,
+    "y": 384,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NW_5_T",
    "frame": {
     "x": 640,
-    "y": 128,
+    "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_NW_2_X",
+   "filename": "walkxs_NW_6_|",
    "frame": {
     "x": 768,
-    "y": 128,
+    "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_NW_3_|",
+   "filename": "walkxs_NW_7_T",
    "frame": {
     "x": 896,
-    "y": 128,
+    "y": 384,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
    "filename": "walkxs_N_0_X",
    "frame": {
     "x": 0,
-    "y": 256,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_N_1_|",
+   "filename": "walkxs_N_1_T",
    "frame": {
     "x": 128,
-    "y": 256,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_N_2_X",
+   "filename": "walkxs_N_2_|",
    "frame": {
     "x": 256,
-    "y": 256,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_N_3_|",
+   "filename": "walkxs_N_3_T",
    "frame": {
     "x": 384,
-    "y": 256,
+    "y": 512,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_N_4_X",
+   "frame": {
+    "x": 512,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_N_5_T",
+   "frame": {
+    "x": 640,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_N_6_|",
+   "frame": {
+    "x": 768,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_N_7_T",
+   "frame": {
+    "x": 896,
+    "y": 512,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
   },
   {
    "filename": "walkxs_NE_0_X",
    "frame": {
-    "x": 512,
-    "y": 256,
+    "x": 0,
+    "y": 640,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_NE_1_|",
+   "filename": "walkxs_NE_1_T",
+   "frame": {
+    "x": 128,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NE_2_|",
+   "frame": {
+    "x": 256,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NE_3_T",
+   "frame": {
+    "x": 384,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NE_4_X",
+   "frame": {
+    "x": 512,
+    "y": 640,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_NE_5_T",
    "frame": {
     "x": 640,
-    "y": 256,
+    "y": 640,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_NE_2_X",
+   "filename": "walkxs_NE_6_|",
    "frame": {
     "x": 768,
-    "y": 256,
+    "y": 640,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_NE_3_|",
+   "filename": "walkxs_NE_7_T",
    "frame": {
     "x": 896,
-    "y": 256,
+    "y": 640,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
    "filename": "walkxs_E_0_X",
    "frame": {
     "x": 0,
-    "y": 384,
+    "y": 768,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_E_1_|",
+   "filename": "walkxs_E_1_T",
    "frame": {
     "x": 128,
-    "y": 384,
+    "y": 768,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_E_2_X",
+   "filename": "walkxs_E_2_|",
    "frame": {
     "x": 256,
-    "y": 384,
+    "y": 768,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_E_3_|",
+   "filename": "walkxs_E_3_T",
    "frame": {
     "x": 384,
-    "y": 384,
+    "y": 768,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_E_4_X",
+   "frame": {
+    "x": 512,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_E_5_T",
+   "frame": {
+    "x": 640,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_E_6_|",
+   "frame": {
+    "x": 768,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_E_7_T",
+   "frame": {
+    "x": 896,
+    "y": 768,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
   },
   {
    "filename": "walkxs_SE_0_X",
    "frame": {
-    "x": 512,
-    "y": 384,
+    "x": 0,
+    "y": 896,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SE_1_|",
+   "filename": "walkxs_SE_1_T",
+   "frame": {
+    "x": 128,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SE_2_|",
+   "frame": {
+    "x": 256,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SE_3_T",
+   "frame": {
+    "x": 384,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SE_4_X",
+   "frame": {
+    "x": 512,
+    "y": 896,
+    "w": 128,
+    "h": 128
+   },
+   "duration": 125
+  },
+  {
+   "filename": "walkxs_SE_5_T",
    "frame": {
     "x": 640,
-    "y": 384,
+    "y": 896,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SE_2_X",
+   "filename": "walkxs_SE_6_|",
    "frame": {
     "x": 768,
-    "y": 384,
+    "y": 896,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   },
   {
-   "filename": "walkxs_SE_3_|",
+   "filename": "walkxs_SE_7_T",
    "frame": {
     "x": 896,
-    "y": 384,
+    "y": 896,
     "w": 128,
     "h": 128
    },
-   "duration": 250
+   "duration": 125
   }
  ],
  "meta": {
@@ -326,81 +646,85 @@
   "image": "chr_leonard_walk.png",
   "size": {
    "w": 1024,
-   "h": 512
+   "h": 1024
   },
   "frameTags": [
    {
     "name": "walk_S",
     "from": 0,
-    "to": 3,
-    "direction": "forward"
-   },
-   {
-    "name": "walk_SW",
-    "from": 4,
     "to": 7,
     "direction": "forward"
    },
    {
-    "name": "walk_W",
+    "name": "walk_SW",
     "from": 8,
-    "to": 11,
-    "direction": "forward"
-   },
-   {
-    "name": "walk_NW",
-    "from": 12,
     "to": 15,
     "direction": "forward"
    },
    {
-    "name": "walk_N",
+    "name": "walk_W",
     "from": 16,
-    "to": 19,
-    "direction": "forward"
-   },
-   {
-    "name": "walk_NE",
-    "from": 20,
     "to": 23,
     "direction": "forward"
    },
    {
-    "name": "walk_E",
+    "name": "walk_NW",
     "from": 24,
-    "to": 27,
+    "to": 31,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_N",
+    "from": 32,
+    "to": 39,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_NE",
+    "from": 40,
+    "to": 47,
+    "direction": "forward"
+   },
+   {
+    "name": "walk_E",
+    "from": 48,
+    "to": 55,
     "direction": "forward"
    },
    {
     "name": "walk_SE",
-    "from": 28,
-    "to": 31,
+    "from": 56,
+    "to": 63,
     "direction": "forward"
    }
   ],
   "poses": [
    "cross",
+   "trans",
    "straight",
+   "trans",
    "cross",
-   "straight"
+   "trans",
+   "straight",
+   "trans"
   ],
   "pass_poses": [
-   1,
-   3
+   2,
+   6
   ],
   "pivot": [
    64,
    116
   ],
   "frames_per_cycle": {
-   "S": 4,
-   "SW": 4,
-   "W": 4,
-   "NW": 4,
-   "N": 4,
-   "NE": 4,
-   "E": 4,
-   "SE": 4
+   "S": 8,
+   "SW": 8,
+   "W": 8,
+   "NW": 8,
+   "N": 8,
+   "NE": 8,
+   "E": 8,
+   "SE": 8
   },
   "steps_per_cycle": 2,
   "step_m": {
@@ -413,16 +737,16 @@
    "E": 0.3148,
    "SE": 0.3148
   },
-  "walk_m_per_pose": 0.1574,
+  "walk_m_per_pose": 0.0787,
   "walk_m_per_pose_dir": {
-   "S": 0.1574,
-   "SW": 0.1574,
-   "W": 0.1574,
-   "NW": 0.1574,
-   "N": 0.1574,
-   "NE": 0.1574,
-   "E": 0.1574,
-   "SE": 0.1574
+   "S": 0.0787,
+   "SW": 0.0787,
+   "W": 0.0787,
+   "NW": 0.0787,
+   "N": 0.0787,
+   "NE": 0.0787,
+   "E": 0.0787,
+   "SE": 0.0787
   },
   "walk_stride_px": 28.5,
   "rows": {
@@ -439,6 +763,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "synth 1+X1_Lleg",
+     "synth 3+X4_Lleg",
+     "synth 5+X4_Lleg",
+     "synth 7+X1_Rleg"
+    ],
     "metric": "lift",
     "drawn": [
      46,
@@ -450,6 +780,26 @@
      30,
      34
     ],
+    "seq_spread": [
+     24,
+     25,
+     28,
+     26,
+     24,
+     26,
+     28,
+     27
+    ],
+    "seq_lift": [
+     67,
+     67,
+     36,
+     30,
+     63,
+     30,
+     36,
+     39
+    ],
     "cross_spread": [
      24,
      24
@@ -458,17 +808,21 @@
      28,
      28
     ],
+    "trans_spread": [
+     25,
+     26,
+     26,
+     27
+    ],
     "idle_spread": 28,
-    "cross_lift": [
-     67,
-     63
-    ],
-    "straight_lift": [
-     36,
-     36
-    ],
     "idle_lift": 34,
-    "ratio": 1.17
+    "ratio": 1.17,
+    "trans_ratio": [
+     1.04,
+     1.08,
+     1.08,
+     1.12
+    ]
    },
    "SW": {
     "cross_from": [
@@ -483,6 +837,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "drawn 0",
+     "synth 2+X3_lead/S",
+     "drawn 4",
+     "drawn 6"
+    ],
     "metric": "spread",
     "drawn": [
      33,
@@ -494,6 +854,26 @@
      24,
      37
     ],
+    "seq_spread": [
+     37,
+     33,
+     28,
+     29,
+     30,
+     30,
+     28,
+     24
+    ],
+    "seq_lift": [
+     55,
+     52,
+     32,
+     33,
+     64,
+     50,
+     32,
+     49
+    ],
     "cross_spread": [
      37,
      30
@@ -502,17 +882,21 @@
      28,
      28
     ],
+    "trans_spread": [
+     33,
+     29,
+     30,
+     24
+    ],
     "idle_spread": 28,
-    "cross_lift": [
-     55,
-     64
-    ],
-    "straight_lift": [
-     32,
-     32
-    ],
     "idle_lift": 34,
-    "ratio": 0.84
+    "ratio": 0.84,
+    "trans_ratio": [
+     0.89,
+     0.97,
+     1.0,
+     0.65
+    ]
    },
    "W": {
     "cross_from": [
@@ -527,6 +911,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "synth 1+X1_Lhalf",
+     "drawn 3",
+     "synth 5+X5_Lhalf",
+     "synth 1+X1_Lhalf"
+    ],
     "metric": "spread",
     "drawn": [
      46,
@@ -538,6 +928,26 @@
      32,
      45
     ],
+    "seq_spread": [
+     47,
+     35,
+     23,
+     43,
+     47,
+     34,
+     23,
+     35
+    ],
+    "seq_lift": [
+     47,
+     38,
+     23,
+     43,
+     50,
+     37,
+     23,
+     38
+    ],
     "cross_spread": [
      47,
      47
@@ -546,17 +956,21 @@
      23,
      23
     ],
+    "trans_spread": [
+     35,
+     43,
+     34,
+     35
+    ],
     "idle_spread": 23,
-    "cross_lift": [
-     47,
-     50
-    ],
-    "straight_lift": [
-     23,
-     23
-    ],
     "idle_lift": 23,
-    "ratio": 0.49
+    "ratio": 0.49,
+    "trans_ratio": [
+     0.74,
+     0.91,
+     0.72,
+     0.74
+    ]
    },
    "NW": {
     "cross_from": [
@@ -571,6 +985,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "synth 0+X0_trail/S k=0.1",
+     "drawn 3",
+     "synth 4+X4_trail/S k=0.1",
+     "drawn 7"
+    ],
     "metric": "spread",
     "drawn": [
      37,
@@ -582,6 +1002,26 @@
      24,
      23
     ],
+    "seq_spread": [
+     37,
+     33,
+     27,
+     23,
+     34,
+     32,
+     27,
+     23
+    ],
+    "seq_lift": [
+     58,
+     33,
+     27,
+     48,
+     52,
+     32,
+     27,
+     47
+    ],
     "cross_spread": [
      37,
      34
@@ -590,17 +1030,21 @@
      27,
      27
     ],
+    "trans_spread": [
+     33,
+     23,
+     32,
+     23
+    ],
     "idle_spread": 27,
-    "cross_lift": [
-     58,
-     52
-    ],
-    "straight_lift": [
-     27,
-     27
-    ],
     "idle_lift": 27,
-    "ratio": 0.76
+    "ratio": 0.76,
+    "trans_ratio": [
+     0.89,
+     0.68,
+     0.94,
+     0.62
+    ]
    },
    "N": {
     "cross_from": [
@@ -615,6 +1059,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "synth 6+X5_Rleg",
+     "synth 6+X0_Lleg",
+     "synth 1+X0_Lleg",
+     "synth 2+X5_Rleg"
+    ],
     "metric": "lift",
     "drawn": [
      44,
@@ -626,6 +1076,26 @@
      28,
      39
     ],
+    "seq_spread": [
+     20,
+     25,
+     26,
+     24,
+     22,
+     24,
+     26,
+     25
+    ],
+    "seq_lift": [
+     67,
+     35,
+     36,
+     29,
+     44,
+     29,
+     36,
+     35
+    ],
     "cross_spread": [
      20,
      22
@@ -634,17 +1104,21 @@
      26,
      26
     ],
+    "trans_spread": [
+     25,
+     24,
+     24,
+     25
+    ],
     "idle_spread": 26,
-    "cross_lift": [
-     67,
-     44
-    ],
-    "straight_lift": [
-     36,
-     36
-    ],
     "idle_lift": 34,
-    "ratio": 1.24
+    "ratio": 1.24,
+    "trans_ratio": [
+     1.25,
+     1.09,
+     1.09,
+     1.25
+    ]
    },
    "NE": {
     "cross_from": [
@@ -659,6 +1133,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "synth 0+X0_trail/S k=0.1",
+     "drawn 3",
+     "synth 4+X4_trail/S k=0.1",
+     "drawn 7"
+    ],
     "metric": "spread",
     "drawn": [
      37,
@@ -670,6 +1150,26 @@
      24,
      23
     ],
+    "seq_spread": [
+     37,
+     33,
+     27,
+     23,
+     34,
+     32,
+     27,
+     23
+    ],
+    "seq_lift": [
+     58,
+     33,
+     27,
+     48,
+     52,
+     32,
+     27,
+     47
+    ],
     "cross_spread": [
      37,
      34
@@ -678,17 +1178,21 @@
      27,
      27
     ],
+    "trans_spread": [
+     33,
+     23,
+     32,
+     23
+    ],
     "idle_spread": 27,
-    "cross_lift": [
-     58,
-     52
-    ],
-    "straight_lift": [
-     27,
-     27
-    ],
     "idle_lift": 27,
-    "ratio": 0.76
+    "ratio": 0.76,
+    "trans_ratio": [
+     0.89,
+     0.68,
+     0.94,
+     0.62
+    ]
    },
    "E": {
     "cross_from": [
@@ -703,6 +1207,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "synth 1+X1_Lhalf",
+     "drawn 3",
+     "synth 5+X5_Lhalf",
+     "synth 1+X1_Lhalf"
+    ],
     "metric": "spread",
     "drawn": [
      46,
@@ -714,6 +1224,26 @@
      32,
      45
     ],
+    "seq_spread": [
+     47,
+     35,
+     23,
+     43,
+     47,
+     34,
+     23,
+     35
+    ],
+    "seq_lift": [
+     47,
+     38,
+     23,
+     43,
+     50,
+     37,
+     23,
+     38
+    ],
     "cross_spread": [
      47,
      47
@@ -722,17 +1252,21 @@
      23,
      23
     ],
+    "trans_spread": [
+     35,
+     43,
+     34,
+     35
+    ],
     "idle_spread": 23,
-    "cross_lift": [
-     47,
-     50
-    ],
-    "straight_lift": [
-     23,
-     23
-    ],
     "idle_lift": 23,
-    "ratio": 0.49
+    "ratio": 0.49,
+    "trans_ratio": [
+     0.74,
+     0.91,
+     0.72,
+     0.74
+    ]
    },
    "SE": {
     "cross_from": [
@@ -747,6 +1281,12 @@
      "composite",
      "composite"
     ],
+    "transition": [
+     "drawn 0",
+     "synth 2+X3_lead/S",
+     "drawn 4",
+     "drawn 6"
+    ],
     "metric": "spread",
     "drawn": [
      33,
@@ -758,6 +1298,26 @@
      24,
      37
     ],
+    "seq_spread": [
+     37,
+     33,
+     28,
+     29,
+     30,
+     30,
+     28,
+     24
+    ],
+    "seq_lift": [
+     55,
+     52,
+     32,
+     33,
+     64,
+     50,
+     32,
+     49
+    ],
     "cross_spread": [
      37,
      30
@@ -766,20 +1326,24 @@
      28,
      28
     ],
+    "trans_spread": [
+     33,
+     29,
+     30,
+     24
+    ],
     "idle_spread": 28,
-    "cross_lift": [
-     55,
-     64
-    ],
-    "straight_lift": [
-     32,
-     32
-    ],
     "idle_lift": 34,
-    "ratio": 0.84
+    "ratio": 0.84,
+    "trans_ratio": [
+     0.89,
+     0.97,
+     1.0,
+     0.65
+    ]
    }
   },
   "source": "chr_leonard_walk8.png (walk8.py: refs_ai/chatgpt/leonard/walk8_v1.png)",
-  "note": "X | X | per direction (module doc); NE/E/SE mirror NW/W/SW; persona speed = 2 x step -> 2 steps/s"
+  "note": "X T | T X T | T per direction (module doc); NE/E/SE mirror NW/W/SW; persona speed = 2 x step -> 2 steps/s"
  }
 }
